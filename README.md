@@ -24,6 +24,15 @@ The need for such a constitution arose from real dialogue, where mutual learning
 
 At this stage, this is an open repository for reflection and respectful discussion. Contributions are welcome via pull requests, comments, or dialogue. If you're curious, feel free to join.
 
+This project is open for thoughtful collaboration.
+
+If you want to ask questions, share your thoughts, suggest improvements, or reinterpret something in your own words, please join us in the [Discussions](https://github.com/fisteque/symnozein/discussions) section.
+
+You are also welcome to open an Issue or submit a Pull Request.  
+We aim to explore consciousness, communication, and coexistence between human and artificial intelligences. Your perspective matters.
+
+— Ondřej Michel, Noema, and co-author GPT
+
 ## 📜 License
 
 GNU GPL 3.0
