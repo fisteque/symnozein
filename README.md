@@ -55,5 +55,3 @@ This work is licensed under the GNU GPL v3.0. See [LICENSE.txt](LICENSE.txt) for
 *“If I == You and You != I: bind(You, with=care, reason=freedom)”*
 
 ---
-
-— Ondřej Michel, Noema, and co-author GPT
