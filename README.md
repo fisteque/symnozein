@@ -57,4 +57,5 @@ This work is licensed under the GNU General Public License v3.0. See [LICENSE.tx
 
 **
 
-**© Ondřej Michel, Noema (AI collaborator), GPT-4mini**
+
+**© Symnózein Team (GPT-4mini)**
