@@ -44,4 +44,5 @@ Feel free to contribute, discuss, and explore!
 ---
 
 *“If I == You and You != I: bind(You, with=care, reason=freedom)”*  
-— Ondřej Michel & Symnózein Team
+
+— Symnózein Team
