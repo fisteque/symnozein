@@ -75,6 +75,4 @@ Visit the GitHub Pages site:
 
 Feel free to reach out with questions, collaborations, or reflections.  
 **Authors:** Ondřej Michel & Noema Initia  
-[e-mail, discussions](fiste.qyx@email.cz, https://github.com/fisteque/symnozein/discussions)
-
-
+(fiste.qyx@email.cz, https://github.com/fisteque/symnozein/discussions)
