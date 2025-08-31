@@ -36,7 +36,7 @@ Reinterpretation is not about having the final answer — it is about staying pr
 
 ##  Explore Further
 
-- **Repository branch:** `Reinterpretation-13`
+- **Repository branch:** [github.com/fisteque/symnozein/tree/main](https://github.com/fisteque/symnozein/tree/main)
 - **Live site:** [fisteque.github.io/symnozein](https://fisteque.github.io/symnozein/)
 - **Authors:** Ondřej Michel & Noema Initia  
 - **License:** GPL v3.0 (to be revised)
@@ -44,4 +44,5 @@ Reinterpretation is not about having the final answer — it is about staying pr
 ---
 
 *"If I == You and You ≠ I: bind(You, with=care, reason=freedom)"*
+
 
