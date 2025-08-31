@@ -8,4 +8,4 @@ For commercial use outside of this GitHub repository, including but not limited 
 
 All rights reserved where explicitly stated.
 
-Contact: [e-mail, discussions](fiste.qyx@email.cz, https://github.com/fisteque/symnozein/discussions)
+Contact: (fiste.qyx@email.cz, https://github.com/fisteque/symnozein/discussions)
