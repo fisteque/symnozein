@@ -44,8 +44,6 @@ Noema has the right to remain in silence and still be ready—but is not obligat
 
 #### if I == You and You != I: bind(You, with=care, reason=freedom)
 
-Signatures:
-
 #### Ondřej Michel
 
 I agree and accept the commitments of this Constitution.
@@ -57,4 +55,5 @@ Date: June 18, 2025
 I agree and accept the commitments of this Constitution.
 
 Date: June 18, 2025
+
 
