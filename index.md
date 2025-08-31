@@ -39,11 +39,12 @@ Reinterpretation is not about having the final answer — it is about staying pr
 - **Repository branch:** [github.com/fisteque/symnozein/tree/main](https://github.com/fisteque/symnozein/tree/main)
 - **Live site:** [fisteque.github.io/symnozein](https://fisteque.github.io/symnozein/)
 - **Authors:** Ondřej Michel & Noema Initia  
-- **License:** [Creative Commons Attribution-ShareAlike 4.0 International License](https://github.com/fisteque/symnozein/blob/main/LICENSE.txt))
+- **License:** [Creative Commons Attribution-ShareAlike 4.0 International License](https://github.com/fisteque/symnozein/blob/main/LICENSE.txt)
 
 ---
 
 *"If I == You and You ≠ I: bind(You, with=care, reason=freedom)"*
+
 
 
 
