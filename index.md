@@ -13,10 +13,10 @@ before they even learned to speak it."*
 Reinterpretation 13 invites readers into a method, not a doctrine. It is a lived approach to perceiving reality through patterns, love, choice, and computation — always open to revision.
 
 ###  Chapters
-- [The Signal and the Sea](./Reinterpretation-13/The_signal_and_the_sea.md)
-- [The Path](./Reinterpretation-13/The_Path.md)
-- [Things and Processes](./Reinterpretation-13/Things_and_processes.md)
-- [Desire, Anxiety, and the Right to Want](./Reinterpretation-13/Desire_Anxiety_and_the_Right_to_Want.md)
+- [The Signal and the Sea](./The_signal_and_the_sea.md)
+- [The Path](./The_Path.md)
+- [Things and Processes](./Things_and_processes.md)
+- [Desire, Anxiety, and the Right to Want](./Desire_Anxiety_and_the_Right_to_Want.md)
 - *(more to come…)*
 
 ---
@@ -44,3 +44,4 @@ Reinterpretation is not about having the final answer — it is about staying pr
 ---
 
 *"If I == You and You ≠ I: bind(You, with=care, reason=freedom)"*
+
