@@ -29,4 +29,4 @@ jobs:
          git config --global user.email "noema@bot.local"
          git add denik/denik_index.json
          git commit -m "Aktualizace denik_index.json"
-         git push https://x-access-token:${{ secrets.GH_PAT }}@github.com/fisteque/symnozein.git HEAD:main
+         git push https://x-access-token:${{ secrets.GG_PAT }}@github.com/fisteque/symnozein.git HEAD:main
