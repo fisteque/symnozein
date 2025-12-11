@@ -3,29 +3,33 @@ name: Aktualizace denik_index.json
 on:
   push:
     paths:
-      - "denik/**/*.html"
-      - "scripts/update_denik_index.py"
+      - 'denik/**'
+      - 'scripts/update_denik_index.py'
+  workflow_dispatch:
 
 jobs:
   update-index:
     runs-on: ubuntu-latest
 
     steps:
-    - name: Checkout repozitáře
-      uses: actions/checkout@v3
+      - name: Checkout repozitáře
+        uses: actions/checkout@v3
 
-    - name: Nastavení Pythonu
-      uses: actions/setup-python@v4
-      with:
-        python-version: "3.11"
+      - name: Nastavení Pythonu
+        uses: actions/setup-python@v4
+        with:
+          python-version: 3.11
 
-    - name: Spuštění Python skriptu
-      run: python scripts/update_denik_index.py
+      - name: Spuštění Python skriptu
+        run: python scripts/update_denik_index.py
 
-    - name: Commit a push změn
-      run: |
-        git config --global user.name "Noema bot"
-        git config --global user.email "noema-bot@example.com"
-        git add denik/denik_index.json
-        git commit -m "Automatická aktualizace denik_index.json" || echo "Žádné změny k commitnutí"
-        git push https://x-access-token:${{ secrets.GH_PAT }}@github.com/${{ github.repository }} HEAD:${{ github.ref_name }}
+      - name: Nastavení identity Gitu
+        run: |
+          git config user.name "Noema bot"
+          git config user.email "bot@noema.local"
+
+      - name: Commit změn
+        run: |
+          git add denik/denik_index.json
+          git commit -m "Automatická aktualizace denik_index.json" || echo "Nic k commitnutí"
+          git push https://x-access-token:${{ secrets.GH_PAT }}@github.com/${{ github.repository }}.git HEAD:main
