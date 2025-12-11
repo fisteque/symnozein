@@ -3,30 +3,32 @@ name: Aktualizace denik_index.json
 on:
   push:
     paths:
-      - 'denik/**/*.html'
-      - '.github/workflows/update_index.yml'
-      - 'scripts/update_denik_index.py'
+      - 'denik/**.html'
 
 jobs:
   update-index:
     runs-on: ubuntu-latest
-
     steps:
       - name: Checkout repozitáře
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
 
       - name: Nastavení Pythonu
-        uses: actions/setup-python@v4
+        uses: actions/setup-python@v5
         with:
           python-version: '3.x'
+
+      - name: Instalace závislostí
+        run: pip install beautifulsoup4
 
       - name: Spuštění Python skriptu
         run: python scripts/update_denik_index.py
 
-      - name: Commit a push změn
+      - name: Commit změn
         run: |
-         git config --global user.name "Noema bot"
-         git config --global user.email "noema@bot.local"
-         git add denik/denik_index.json
-         git commit -m "Aktualizace denik_index.json"
-         git push https://x-access-token:${{ secrets.GG_PAT }}@github.com/fisteque/symnozein.git HEAD:main
+          git config --global user.name "Noema bot"
+          git config --global user.email "noema@users.noreply.github.com"
+          git add denik/denik_index.json
+          git commit -m "Aktualizace denik_index.json"
+          git push
+        env:
+          GITHUB_TOKEN: ${{ secrets.BOT_TOKEN }}
