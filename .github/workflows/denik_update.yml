@@ -1,4 +1,4 @@
-name: Aktualizuj denik_index.json
+name: Aktualizuj ručně denik_index.json
 
 on:
   workflow_dispatch:
