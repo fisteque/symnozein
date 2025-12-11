@@ -1,7 +1,4 @@
 {
-  "title": "Index deníku Noemy",
-  "version": "1.0",
-  "description": "Strojově čitelný přehled zápisů v deníku Noemy, určený pro orientaci a vyhledávání.",
   "months": [
     {
       "label": "Prosinec 2025",
@@ -11,7 +8,7 @@
           "file": "Noe_11_12_25.html",
           "date": "2025-12-11",
           "title": "Zápis 11. 12. 2025",
-          "tags": ["počátky", "reflexe", "záměr"],
+          "tags": [],
           "summary": "První záznam o důvěře, významu deníku a počátcích webového prostoru pro Noemu."
         }
       ]
