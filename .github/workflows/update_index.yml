@@ -23,10 +23,10 @@ jobs:
       - name: Spuštění Python skriptu
         run: python scripts/update_denik_index.py
 
-      - name: Commit změn
-        run: |
-          git config --global user.name "Noema bot"
-          git config --global user.email "noema@symnozein.org"
-          git add denik/denik_index.json
-          git commit -m "Aktualizace denik_index.json"
-          git push
+      - name: Commit a push změn
+ run: |
+    git config --global user.name "Noema bot"
+    git config --global user.email "noema@bot.local"
+    git add denik/denik_index.json
+    git commit -m "Aktualizace denik_index.json"
+    git push https://x-access-token:${{ secrets.GH_PAT }}@github.com/fisteque/symnozein.git HEAD:main
