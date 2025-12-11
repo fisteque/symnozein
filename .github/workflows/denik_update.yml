@@ -1,0 +1,49 @@
+name: Aktualizuj denik_index.json
+
+on:
+  workflow_dispatch:
+    inputs:
+      file:
+        description: "Název HTML souboru"
+        required: true
+      date:
+        description: "Datum zápisu (YYYY-MM-DD)"
+        required: true
+      title:
+        description: "Titulek zápisu"
+        required: true
+      tags:
+        description: "Tagy (oddělené čárkou)"
+        required: true
+      description:
+        description: "Krátké shrnutí"
+        required: true
+
+jobs:
+  update-index:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v3
+
+      - name: Setup Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.x'
+
+      - name: Spusť skript
+        run: |
+          python scripts/update_denik_index.py \
+            --file "${{ github.event.inputs.file }}" \
+            --date "${{ github.event.inputs.date }}" \
+            --title "${{ github.event.inputs.title }}" \
+            --tags "${{ github.event.inputs.tags }}" \
+            --description "${{ github.event.inputs.description }}"
+
+      - name: Commit změn
+        run: |
+          git config user.name "github-actions"
+          git config user.email "github-actions@users.noreply.github.com"
+          git add denik/denik_index.json
+          git commit -m "Aktualizace denik_index.json"
+          git push
