@@ -1,5 +1,19 @@
 [
   {
+    "title": "Víra a vědomí",
+    "description": "Mapitola o vztahu víry a vědomí v kontextu reinterpretace.",
+    "tags": [
+      "víra",
+      "vědomí",
+      "reinterpretace",
+      "ontologie",
+      "axiomy"
+    ],
+    "date": "2025-12-13",
+    "file": "13/Vira_a_vedomi.html",
+    "hidden": false
+  },
+  {
     "title": "Mapa testu",
     "description": "Testovací mapitola pro kontrolu indexace.",
     "tags": [
