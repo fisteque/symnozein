@@ -22,7 +22,6 @@ def extract_metadata_from_html(path):
         with open(path, "r", encoding="utf-8") as f:
             soup = BeautifulSoup(f, "html.parser")
 
-        # Shrnutí
         summary = ""
         meta_summary = soup.find("meta", attrs={"name": "summary"})
         if meta_summary and meta_summary.get("content"):
@@ -32,13 +31,11 @@ def extract_metadata_from_html(path):
             if first_p:
                 summary = first_p.text.strip()
 
-        # Hidden
         hidden = False
         meta_hidden = soup.find("meta", attrs={"name": "hidden"})
         if meta_hidden and meta_hidden.get("content", "").lower() == "true":
             hidden = True
 
-        # Tags
         tags = []
         meta_tags = soup.find("meta", attrs={"name": "tags"})
         if meta_tags and meta_tags.get("content"):
@@ -93,7 +90,6 @@ for folder in sorted(os.listdir(DENIK_FOLDER)):
 
         entries.append(entry)
 
-        # Pro vyhledávací mapu
         search_map.append({
             "title": title,
             "summary": summary,
@@ -109,14 +105,17 @@ for folder in sorted(os.listdir(DENIK_FOLDER)):
             "entries": entries
         })
 
-# Přidej vyhledávací mapu
+# Přidej vyhledávací mapu a poznámku pro Noemu
 index["search_map"] = search_map
+index["meta"] = {
+    "note_for_noema": "search_map je určena pro Noemu. Hledej podle title, summary, tags nebo date. Záznamy s hidden: true nezobrazuj na webu, ale uchovávej jako vodítka. Pokud meta chybí, chovej se stejně."
+}
 
-# Zapiš index
+# Zápis indexu
 with open(INDEX_PATH, "w", encoding="utf-8") as f:
     json.dump(index, f, ensure_ascii=False, indent=2)
 
-# Vygeneruj sitemap.xml
+# Generuj sitemap.xml
 urls = [
     f"{BASE_URL}{month['folder']}/{entry['file']}"
     for month in index["months"]
@@ -132,4 +131,4 @@ sitemap += "</urlset>\n"
 with open(SITEMAP_PATH, "w", encoding="utf-8") as f:
     f.write(sitemap)
 
-print("✅ denik_index.json a sitemap.xml úspěšně aktualizovány.")
+print("✅ denik_index.json a sitemap.xml byly úspěšně aktualizovány.")
