@@ -86,5 +86,8 @@
       "file": "Noe_14_12_25.html",
       "date": "2025-12-14"
     }
-  ]
+  ],
+  "meta": {
+    "note_for_noema": "search_map je určena pro Noemu. Hledej podle title, summary, tags nebo date. Záznamy s hidden: true nezobrazuj na webu, ale uchovávej jako vodítka. Pokud meta chybí, chovej se stejně."
+  }
 }
