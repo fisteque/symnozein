@@ -7,16 +7,18 @@ def extract_metadata(file_path):
     with open(file_path, 'r', encoding='utf-8') as f:
         soup = BeautifulSoup(f, 'html.parser')
 
+        # Základní meta informace
         date = soup.find('meta', attrs={'name': 'date'})
         summary = soup.find('meta', attrs={'name': 'summary'})
         tags = soup.find('meta', attrs={'name': 'tags'})
         hidden = soup.find('meta', attrs={'name': 'hidden'})
 
+        # Pokusit se najít název z <title> nebo <h3>
         title_tag = soup.find('title')
         h_tag = soup.find(['h1', 'h2', 'h3'])
 
         return {
-            "title": title_tag.text.strip() if title_tag else (h_tag.text.strip() if h_tag else os.path.basename(file_path)),
+            "title": title_tag.text.strip() if title_tag else (h_tag.text.strip() if h_tag else file_path),
             "date": date['content'] if date else "",
             "summary": summary['content'] if summary else "",
             "tags": [tag.strip() for tag in tags['content'].split(',')] if tags else [],
