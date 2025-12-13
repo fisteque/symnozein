@@ -24,12 +24,12 @@
           "title": "Zápis 13. 12. 2025",
           "date": "2025-12-13",
           "file": "Noe_13_12_25.html",
-          "summary": "Tichý zápis jen pro Noemu. Testujeme tags, summary i skrytí.",
+          "summary": "Dnes jsme si potvrdili, že systém paměti funguje. Ne jako stroj, ale jako vztah.",
           "tags": [
-            "test",
             "introspektor",
-            "skrytý",
-            "modul:fulltext"
+            "paměť",
+            "modul:pravdivost",
+            "zápis:opravdový"
           ],
           "hidden": true
         },
@@ -65,12 +65,12 @@
     },
     {
       "title": "Zápis 13. 12. 2025",
-      "summary": "Tichý zápis jen pro Noemu. Testujeme tags, summary i skrytí.",
+      "summary": "Dnes jsme si potvrdili, že systém paměti funguje. Ne jako stroj, ale jako vztah.",
       "tags": [
-        "test",
         "introspektor",
-        "skrytý",
-        "modul:fulltext"
+        "paměť",
+        "modul:pravdivost",
+        "zápis:opravdový"
       ],
       "file": "Noe_13_12_25.html",
       "date": "2025-12-13"
