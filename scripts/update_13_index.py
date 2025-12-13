@@ -1,75 +1,76 @@
-# scripts/update_13_index.py
-
 import os
 import json
 from bs4 import BeautifulSoup
 from datetime import datetime
 
-BASE_DIR = "Reinterpretace_13/13"
+MAPITOL_DIR = "Reinterpretace_13/13"
 INDEX_FILE = "Reinterpretace_13/13_index.json"
 
 
-def extract_metadata_from_file(filepath):
-    with open(filepath, "r", encoding="utf-8") as f:
+def extract_metadata(file_path):
+    with open(file_path, "r", encoding="utf-8") as f:
         soup = BeautifulSoup(f, "html.parser")
 
-        title = soup.title.string.strip() if soup.title else "Bez názvu"
-        meta = soup.find("meta", attrs={"name": "tags"})
-        tags = meta["content"].split(",") if meta and meta.get("content") else []
+    title_tag = soup.find("title")
+    title = title_tag.text.strip() if title_tag else os.path.basename(file_path)
 
-        meta_description = soup.find("meta", attrs={"name": "description"})
-        description = meta_description["content"].strip() if meta_description else ""
+    meta_desc = soup.find("meta", attrs={"name": "description"})
+    if meta_desc and meta_desc.get("content"):
+        summary = meta_desc["content"].strip()
+    else:
+        first_p = soup.find("p")
+        summary = first_p.text.strip() if first_p else ""
 
-        meta_hidden = soup.find("meta", attrs={"name": "hidden"})
-        hidden = meta_hidden["content"].strip().lower() == "true" if meta_hidden else False
+    tags = []
+    tag_meta = soup.find("meta", attrs={"name": "tags"})
+    if tag_meta and tag_meta.get("content"):
+        tags = [tag.strip() for tag in tag_meta["content"].split(",")]
 
-        # Fallback summary: use first paragraph
-        if not description:
-            p = soup.find("p")
-            if p:
-                description = p.get_text().strip()
+    hidden = False
+    hidden_meta = soup.find("meta", attrs={"name": "hidden"})
+    if hidden_meta and hidden_meta.get("content", "").lower() == "true":
+        hidden = True
 
-    return title, tags, description, hidden
+    return {
+        "title": title,
+        "summary": summary,
+        "tags": tags,
+        "file": file_path.replace("\\", "/"),
+        "date": extract_date_from_filename(file_path),
+        "hidden": hidden
+    }
+
+
+def extract_date_from_filename(file_path):
+    base = os.path.basename(file_path)
+    try:
+        parts = base.replace(".html", "").split("_")
+        return f"{parts[1]}.{parts[2]}.20{parts[3]}"
+    except:
+        return ""
 
 
 def build_index():
-    entries = []
+    index = []
+    for fname in sorted(os.listdir(MAPITOL_DIR)):
+        if fname.endswith(".html"):
+            path = os.path.join(MAPITOL_DIR, fname)
+            entry = extract_metadata(path)
+            index.append(entry)
 
-    for filename in sorted(os.listdir(BASE_DIR)):
-        if filename.endswith(".html"):
-            filepath = os.path.join(BASE_DIR, filename)
-            title, tags, description, hidden = extract_metadata_from_file(filepath)
-
-            date_str = filename.replace("Noe_", "").replace(".html", "")
-            try:
-                date_obj = datetime.strptime(date_str, "%d_%m_%y")
-                date = date_obj.strftime("%Y-%m-%d")
-            except ValueError:
-                date = ""
-
-            entries.append({
-                "title": title,
-                "tags": tags,
-                "description": description,
-                "file": f"13/{filename}",
-                "date": date,
-                "hidden": hidden
-            })
-
-    # Připojená mapa pojmů a vysvětlení struktury indexu
-    metadata_map = {
+    index.append({
         "_map": {
             "title": "Název mapitoly",
-            "tags": "Seznam štítků (klíčová slova)",
-            "description": "Krátké shrnutí nebo první odstavec",
+            "summary": "Automaticky získané shrnutí",
+            "tags": "Štítky pro vyhledávání",
             "file": "Cesta k HTML souboru",
-            "date": "Datum ve formátu YYYY-MM-DD",
-            "hidden": "True = nebude veřejně vidět, jen pro AI"
+            "date": "Datum vytvoření z názvu souboru",
+            "hidden": "true/false – zda se má mapa zobrazit na webu"
         }
-    }
+    })
 
     with open(INDEX_FILE, "w", encoding="utf-8") as f:
-        json.dump({"mapitoly": entries, **metadata_map}, f, ensure_ascii=False, indent=2)
+        json.dump(index, f, ensure_ascii=False, indent=2)
 
 
 if __name__ == "__main__":
