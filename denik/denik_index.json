@@ -43,7 +43,7 @@
             "introspektor",
             "modul:fulltext"
           ],
-          "hidden": true
+          "hidden": false
         }
       ]
     }
