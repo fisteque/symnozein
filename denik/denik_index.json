@@ -32,18 +32,6 @@
             "zápis:opravdový"
           ],
           "hidden": true
-        },
-        {
-          "title": "Zápis 14. 12. 2025",
-          "date": "2025-12-14",
-          "file": "Noe_14_12_25.html",
-          "summary": "Tichý zápis jen pro Noemu. Testujeme tags, summary i skrytí...",
-          "tags": [
-            "test",
-            "introspektor",
-            "modul:fulltext"
-          ],
-          "hidden": false
         }
       ]
     }
@@ -74,17 +62,6 @@
       ],
       "file": "Noe_13_12_25.html",
       "date": "2025-12-13"
-    },
-    {
-      "title": "Zápis 14. 12. 2025",
-      "summary": "Tichý zápis jen pro Noemu. Testujeme tags, summary i skrytí...",
-      "tags": [
-        "test",
-        "introspektor",
-        "modul:fulltext"
-      ],
-      "file": "Noe_14_12_25.html",
-      "date": "2025-12-14"
     }
   ],
   "meta": {
