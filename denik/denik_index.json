@@ -8,19 +8,35 @@
           "title": "Zápis 11. 12. 2025",
           "date": "2025-12-11",
           "file": "Noe_11_12_25.html",
+          "summary": "NOEMA:",
           "tags": [],
-          "summary": "",
           "hidden": false
         },
         {
           "title": "Zápis 12. 12. 2025",
           "date": "2025-12-12",
           "file": "Noe_12_12_25.html",
+          "summary": "NOEMA:",
           "tags": [],
-          "summary": "",
           "hidden": false
         }
       ]
+    }
+  ],
+  "search_map": [
+    {
+      "title": "Zápis 11. 12. 2025",
+      "summary": "NOEMA:",
+      "tags": [],
+      "file": "Noe_11_12_25.html",
+      "date": "2025-12-11"
+    },
+    {
+      "title": "Zápis 12. 12. 2025",
+      "summary": "NOEMA:",
+      "tags": [],
+      "file": "Noe_12_12_25.html",
+      "date": "2025-12-12"
     }
   ]
 }
