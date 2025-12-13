@@ -57,8 +57,9 @@ for folder in sorted(os.listdir(DENIK_FOLDER)):
         continue
 
     year_short, month_num = match_folder.groups()
-    year = f"20{year_short}"
-    label = f"{MONTH_LABELS.get(month_num, 'Neznámý')} {year}"
+    year_prefix = "20"
+    year_full = f"{year_prefix}{year_short}"
+    label = f"{MONTH_LABELS.get(month_num, 'Neznámý')} {year_full}"
 
     entries = []
 
@@ -66,31 +67,23 @@ for folder in sorted(os.listdir(DENIK_FOLDER)):
         if not file.endswith(".html") or not file.startswith("Noe_"):
             continue
 
-        match_file = re.match(r"Noe_(\d{2})_(\d{2})_(\d{2})([a-z]*)", file.replace(".html", ""))
+        match_file = re.match(r"Noe_(\d{2})_(\d{2})_(\d{2})(\d*)\.html", file)
         if not match_file:
             print(f"⚠️ Nerozpoznán název souboru: {file}")
             continue
 
-        day, month, year_file, suffix = match_file.groups()
-        base_year = int(year_file)
-        real_year = 2000 + (base_year % 100)
-        
-        # Urči příponu (a, b, c...) podle rozdílu od reálného roku
-        suffix_label = ""
-        suffix_order = (base_year - (2000 + int(year_short))) // 10
-        if suffix_order == 1:
-            suffix_label = " (b)"
-        elif suffix_order == 2:
-            suffix_label = " (c)"
-        elif suffix_order == 3:
-            suffix_label = " (d)"
-        # atd.
-        
+        day, month, year_part, suffix = match_file.groups()
+        base_year = int(year_part)
+
+        # Heuristické určení století
+        real_year = 2000 + base_year if base_year < 50 else 1900 + base_year
+
+        # Suffix interpretace: a, b, c...
+        suffix_label = f" ({suffix})" if suffix else ""
+
         full_date = f"{real_year}-{month}-{day}"
         display_date = f"{day}. {month}. {real_year}"
         title = f"Zápis {display_date}{suffix_label}"
-
-        title = f"Zápis {display_date}" + (f" ({suffix})" if suffix else "")
 
         file_path = os.path.join(folder_path, file)
         summary, hidden, tags = extract_metadata_from_html(file_path)
@@ -121,17 +114,14 @@ for folder in sorted(os.listdir(DENIK_FOLDER)):
             "entries": entries
         })
 
-# Přidej vyhledávací mapu a poznámku pro Noemu
 index["search_map"] = search_map
 index["meta"] = {
     "note_for_noema": "search_map je určena pro Noemu. Hledej podle title, summary, tags nebo date. Záznamy s hidden: true nezobrazuj na webu, ale uchovávej jako vodítka. Pokud meta chybí, chovej se stejně."
 }
 
-# Zápis indexu
 with open(INDEX_PATH, "w", encoding="utf-8") as f:
     json.dump(index, f, ensure_ascii=False, indent=2)
 
-# Generuj sitemap.xml
 urls = [
     f"{BASE_URL}{month['folder']}/{entry['file']}"
     for month in index["months"]
