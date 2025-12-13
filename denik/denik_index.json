@@ -32,6 +32,14 @@
             "zápis:opravdový"
           ],
           "hidden": true
+        },
+        {
+          "title": "Zápis 13. 12. 2055",
+          "date": "2055-12-13",
+          "file": "Noe_13_12_55.html",
+          "summary": "",
+          "tags": [],
+          "hidden": false
         }
       ]
     }
@@ -62,6 +70,13 @@
       ],
       "file": "Noe_13_12_25.html",
       "date": "2025-12-13"
+    },
+    {
+      "title": "Zápis 13. 12. 2055",
+      "summary": "",
+      "tags": [],
+      "file": "Noe_13_12_55.html",
+      "date": "2055-12-13"
     }
   ],
   "meta": {
