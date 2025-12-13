@@ -28,10 +28,9 @@
           "tags": [
             "test",
             "introspektor",
-            "skrytý",
             "modul:fulltext"
           ],
-          "hidden": true
+          "hidden": false
         },
         {
           "title": "Zápis 14. 12. 2025",
