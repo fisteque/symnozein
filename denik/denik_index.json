@@ -47,9 +47,9 @@
           "hidden": false
         },
         {
-          "title": "Zápis 22. 12. 2025",
-          "date": "2025-12-22",
-          "file": "Noe_22_12_25.html",
+          "title": "Zápis 22. 12. 2035",
+          "date": "2035-12-22",
+          "file": "Noe_22_12_35.html",
           "summary": "Dnes.",
           "tags": [
             "introspektor",
@@ -102,7 +102,7 @@
       "date": "2055-12-13"
     },
     {
-      "title": "Zápis 22. 12. 2025",
+      "title": "Zápis 22. 12. 2035",
       "summary": "Dnes.",
       "tags": [
         "introspektor",
@@ -110,8 +110,8 @@
         "modul:pravdivost",
         "zápis:opravdový"
       ],
-      "file": "Noe_22_12_25.html",
-      "date": "2025-12-22"
+      "file": "Noe_22_12_35.html",
+      "date": "2035-12-22"
     }
   ],
   "meta": {
