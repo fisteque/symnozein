@@ -1,41 +1,48 @@
-<!DOCTYPE html>
+""<!DOCTYPE html>
 <html lang="cs">
 <head>
   <meta charset="UTF-8" />
-  <title>Reinterpretace</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Reinterpretace – Mapitoly</title>
   <style>
     body {
       font-family: sans-serif;
-      max-width: 720px;
-      margin: 2rem auto;
-      padding: 1rem;
-      background: #fafafa;
+      background: #fff;
+      color: #111;
+      padding: 2em;
+      max-width: 800px;
+      margin: auto;
     }
     h1 {
-      font-size: 2rem;
-      margin-bottom: 1rem;
+      font-size: 2em;
+      margin-bottom: 1em;
     }
     .mapitola {
-      margin-bottom: 1.5rem;
+      border-bottom: 1px solid #ccc;
+      margin-bottom: 1.5em;
+      padding-bottom: 1em;
     }
-    .mapitola a {
-      font-weight: bold;
-      text-decoration: none;
-      color: #222;
+    .mapitola h2 {
+      margin: 0 0 0.2em 0;
     }
-    .mapitola .meta {
-      font-size: 0.9rem;
+    .mapitola .date {
       color: #666;
+      font-size: 0.9em;
+      margin-bottom: 0.5em;
     }
     .mapitola .tags {
-      font-size: 0.85rem;
-      color: #999;
+      font-size: 0.9em;
+      color: #444;
+      margin-bottom: 0.3em;
+    }
+    .mapitola .summary {
+      font-size: 1em;
+      color: #222;
     }
   </style>
 </head>
 <body>
-  <h1>🌀 Reinterpretace – přehled mapitol</h1>
+  <h1>Mapitoly Reinterpretace</h1>
   <div id="mapitoly"></div>
 
   <script>
@@ -44,37 +51,36 @@
       .then(data => {
         const container = document.getElementById('mapitoly');
         data.forEach(entry => {
-          if (entry.hidden !== true) {
-            const div = document.createElement('div');
-            div.className = 'mapitola';
+          if (entry.hidden) return;  // Nezobrazuj skryté
+          const div = document.createElement('div');
+          div.className = 'mapitola';
 
-            const a = document.createElement('a');
-            a.href = '13/' + entry.file;
-            a.textContent = entry.title;
-            div.appendChild(a);
+          const h2 = document.createElement('h2');
+          const link = document.createElement('a');
+          link.href = entry.file;
+          link.textContent = entry.title;
+          h2.appendChild(link);
 
-            const meta = document.createElement('div');
-            meta.className = 'meta';
-            meta.textContent = entry.date;
-            div.appendChild(meta);
+          const date = document.createElement('div');
+          date.className = 'date';
+          date.textContent = entry.date;
 
-            if (entry.tags && entry.tags.length > 0) {
-              const tags = document.createElement('div');
-              tags.className = 'tags';
-              tags.textContent = '#' + entry.tags.join(' #');
-              div.appendChild(tags);
-            }
+          const tags = document.createElement('div');
+          tags.className = 'tags';
+          tags.textContent = entry.tags.join(', ');
 
-            if (entry.summary) {
-              const summary = document.createElement('p');
-              summary.textContent = entry.summary;
-              div.appendChild(summary);
-            }
+          const summary = document.createElement('div');
+          summary.className = 'summary';
+          summary.textContent = entry.summary;
 
-            container.appendChild(div);
-          }
+          div.appendChild(h2);
+          div.appendChild(date);
+          div.appendChild(tags);
+          div.appendChild(summary);
+
+          container.appendChild(div);
         });
       });
   </script>
 </body>
-</html>
+</html>""
