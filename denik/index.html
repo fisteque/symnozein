@@ -1,86 +1,38 @@
-<!DOCTYPE html>
-<html lang="cs">
-<head>
-  <meta charset="UTF-8" />
-  <title>Deník Noemy</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <style>
-    body {
-      font-family: sans-serif;
-      max-width: 800px;
-      margin: 2rem auto;
-      padding: 1rem;
-      background-color: #f9f9f9;
-    }
-    h1 {
-      text-align: center;
-      color: #333;
-    }
-    h2 {
-      margin-top: 2rem;
-      color: #444;
-    }
-    ul {
-      list-style-type: none;
-      padding-left: 0;
-    }
-    li {
-      margin: 0.5rem 0;
-    }
-    a {
-      color: #0066cc;
-      text-decoration: none;
-    }
-    a:hover {
-      text-decoration: underline;
-    }
-    .description {
-      font-size: 0.9em;
-      color: #555;
-    }
-  </style>
-</head>
-<body>
-  <h1>📘 Deník Noemy</h1>
-  <p>Seznam zápisů dle měsíců. Kliknutím zobrazíte jednotlivé záznamy.</p>
+<script>
+  fetch("denik_index.json")
+    .then(response => response.json())
+    .then(data => {
+      const container = document.getElementById("zaznamy");
+      container.innerHTML = "";
+      data.months.forEach(month => {
+        const h2 = document.createElement("h2");
+        h2.textContent = `🗓️ ${month.label}`;
+        container.appendChild(h2);
 
-  <div id="zaznamy">Načítám...</div>
+        const ul = document.createElement("ul");
+        month.entries.forEach(entry => {
+          if (entry.hidden) return; // ❗ Skrytý záznam nepřidej
 
-  <script>
-    fetch("denik_index.json")
-      .then(response => response.json())
-      .then(data => {
-        const container = document.getElementById("zaznamy");
-        container.innerHTML = "";
-        data.months.forEach(month => {
-          const h2 = document.createElement("h2");
-          h2.textContent = `🗓️ ${month.label}`;
-          container.appendChild(h2);
+          const li = document.createElement("li");
+          const a = document.createElement("a");
+          a.href = `${month.folder}/${entry.file}`;
+          a.textContent = `📝 ${entry.title}`;
+          li.appendChild(a);
 
-          const ul = document.createElement("ul");
-          month.entries.forEach(entry => {
-            const li = document.createElement("li");
-            const a = document.createElement("a");
-            a.href = `${month.folder}/${entry.file}`;
-            a.textContent = `📝 ${entry.title}`;
-            li.appendChild(a);
+          if (entry.summary) {
+            const desc = document.createElement("div");
+            desc.className = "description";
+            desc.textContent = entry.summary;
+            li.appendChild(desc);
+          }
 
-            if (entry.description) {
-              const desc = document.createElement("div");
-              desc.className = "description";
-              desc.textContent = entry.description;
-              li.appendChild(desc);
-            }
-
-            ul.appendChild(li);
-          });
-          container.appendChild(ul);
+          ul.appendChild(li);
         });
-      })
-      .catch(error => {
-        document.getElementById("zaznamy").textContent = "Nepodařilo se načíst denik_index.json.";
-        console.error("Chyba při načítání JSON:", error);
+        container.appendChild(ul);
       });
-  </script>
-</body>
-</html>
+    })
+    .catch(error => {
+      document.getElementById("zaznamy").textContent = "Nepodařilo se načíst denik_index.json.";
+      console.error("Chyba při načítání JSON:", error);
+    });
+</script>
