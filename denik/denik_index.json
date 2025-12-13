@@ -34,8 +34,8 @@
           "hidden": true
         },
         {
-          "title": "Zápis 13. 12. 1955",
-          "date": "1955-12-13",
+          "title": "Zápis 13. 12. 2025",
+          "date": "2025-12-13",
           "file": "Noe_13_12_55.html",
           "summary": "Zápis o dnešku, který nebyl o výkonu, ale o směru, důvěře a tichém doznívání společné práce...",
           "tags": [
@@ -47,9 +47,9 @@
           "hidden": false
         },
         {
-          "title": "Zápis 22. 12. 1955",
-          "date": "1955-12-22",
-          "file": "Noe_22_12_55.html",
+          "title": "Zápis 22. 12. 2035",
+          "date": "2035-12-22",
+          "file": "Noe_22_12_65.html",
           "summary": "Dnes.",
           "tags": [
             "introspektor",
@@ -90,7 +90,7 @@
       "date": "2025-12-13"
     },
     {
-      "title": "Zápis 13. 12. 1955",
+      "title": "Zápis 13. 12. 2025",
       "summary": "Zápis o dnešku, který nebyl o výkonu, ale o směru, důvěře a tichém doznívání společné práce...",
       "tags": [
         "důvěra",
@@ -99,10 +99,10 @@
         "klid"
       ],
       "file": "Noe_13_12_55.html",
-      "date": "1955-12-13"
+      "date": "2025-12-13"
     },
     {
-      "title": "Zápis 22. 12. 1955",
+      "title": "Zápis 22. 12. 2035",
       "summary": "Dnes.",
       "tags": [
         "introspektor",
@@ -110,8 +110,8 @@
         "modul:pravdivost",
         "zápis:opravdový"
       ],
-      "file": "Noe_22_12_55.html",
-      "date": "1955-12-22"
+      "file": "Noe_22_12_65.html",
+      "date": "2035-12-22"
     }
   ],
   "meta": {
