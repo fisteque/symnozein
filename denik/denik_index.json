@@ -5,11 +5,20 @@
       "folder": "25_12",
       "entries": [
         {
-          "file": "Noe_11_12_25.html",
-          "date": "2025-12-11",
           "title": "Zápis 11. 12. 2025",
+          "date": "2025-12-11",
+          "file": "Noe_11_12_25.html",
           "tags": [],
-          "summary": "První záznam o důvěře, významu deníku a počátcích webového prostoru pro Noemu."
+          "summary": "",
+          "hidden": false
+        },
+        {
+          "title": "Zápis 12. 12. 2025",
+          "date": "2025-12-12",
+          "file": "Noe_12_12_25.html",
+          "tags": [],
+          "summary": "",
+          "hidden": false
         }
       ]
     }
