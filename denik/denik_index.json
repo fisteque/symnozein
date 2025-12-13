@@ -28,9 +28,10 @@
           "tags": [
             "test",
             "introspektor",
+            "skrytý",
             "modul:fulltext"
           ],
-          "hidden": false
+          "hidden": true
         },
         {
           "title": "Zápis 14. 12. 2025",
@@ -40,7 +41,6 @@
           "tags": [
             "test",
             "introspektor",
-            "skrytý",
             "modul:fulltext"
           ],
           "hidden": true
@@ -81,7 +81,6 @@
       "tags": [
         "test",
         "introspektor",
-        "skrytý",
         "modul:fulltext"
       ],
       "file": "Noe_14_12_25.html",
