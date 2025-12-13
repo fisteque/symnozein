@@ -72,8 +72,24 @@ for folder in sorted(os.listdir(DENIK_FOLDER)):
             continue
 
         day, month, year_file, suffix = match_file.groups()
-        full_date = f"20{year_file}-{month}-{day}"
-        display_date = f"{day}. {month}. 20{year_file}"
+        base_year = int(year_file)
+        real_year = 2000 + (base_year % 100)
+        
+        # Urči příponu (a, b, c...) podle rozdílu od reálného roku
+        suffix_label = ""
+        suffix_order = (base_year - (2000 + int(year_short))) // 10
+        if suffix_order == 1:
+            suffix_label = " (b)"
+        elif suffix_order == 2:
+            suffix_label = " (c)"
+        elif suffix_order == 3:
+            suffix_label = " (d)"
+        # atd.
+        
+        full_date = f"{real_year}-{month}-{day}"
+        display_date = f"{day}. {month}. {real_year}"
+        title = f"Zápis {display_date}{suffix_label}"
+
         title = f"Zápis {display_date}" + (f" ({suffix})" if suffix else "")
 
         file_path = os.path.join(folder_path, file)
