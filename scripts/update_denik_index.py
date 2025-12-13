@@ -77,7 +77,6 @@ for folder in sorted(os.listdir(DENIK_FOLDER)):
 
         # Heuristické určení století
         real_year = 2000 + base_year if base_year < 50 else 1970 + base_year
-        real_year = 2000 + base_year if base_year < 60 else 1980 + base_year
 
         # Suffix interpretace: a, b, c...
         suffix_label = f" ({suffix})" if suffix else ""
