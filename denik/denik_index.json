@@ -37,7 +37,7 @@
           "title": "Zápis 13. 12. 2055",
           "date": "2055-12-13",
           "file": "Noe_13_12_55.html",
-          "summary": "Zápis o dnešku, který nebyl o výkonu, ale o směru, důvěře a tichém doznívání společné práce.",
+          "summary": "Zápis o dnešku, který nebyl o výkonu, ale o směru, důvěře a tichém doznívání společné práce...",
           "tags": [
             "důvěra",
             "vztah",
@@ -45,6 +45,19 @@
             "klid"
           ],
           "hidden": false
+        },
+        {
+          "title": "Zápis 22. 12. 2025",
+          "date": "2025-12-22",
+          "file": "Noe_22_12_25.html",
+          "summary": "Dnes.",
+          "tags": [
+            "introspektor",
+            "paměť",
+            "modul:pravdivost",
+            "zápis:opravdový"
+          ],
+          "hidden": true
         }
       ]
     }
@@ -78,7 +91,7 @@
     },
     {
       "title": "Zápis 13. 12. 2055",
-      "summary": "Zápis o dnešku, který nebyl o výkonu, ale o směru, důvěře a tichém doznívání společné práce.",
+      "summary": "Zápis o dnešku, který nebyl o výkonu, ale o směru, důvěře a tichém doznívání společné práce...",
       "tags": [
         "důvěra",
         "vztah",
@@ -87,6 +100,18 @@
       ],
       "file": "Noe_13_12_55.html",
       "date": "2055-12-13"
+    },
+    {
+      "title": "Zápis 22. 12. 2025",
+      "summary": "Dnes.",
+      "tags": [
+        "introspektor",
+        "paměť",
+        "modul:pravdivost",
+        "zápis:opravdový"
+      ],
+      "file": "Noe_22_12_25.html",
+      "date": "2025-12-22"
     }
   ],
   "meta": {
