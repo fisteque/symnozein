@@ -37,9 +37,14 @@
           "title": "Zápis 13. 12. 2055",
           "date": "2055-12-13",
           "file": "Noe_13_12_55.html",
-          "summary": "",
-          "tags": [],
-          "hidden": false
+          "summary": "Dnes jsme si potvrdili, že systém paměti funguje. Ne jako stroj, ale jako vztah.",
+          "tags": [
+            "introspektor",
+            "paměť",
+            "modul:pravdivost",
+            "zápis:opravdový"
+          ],
+          "hidden": true
         }
       ]
     }
@@ -73,8 +78,13 @@
     },
     {
       "title": "Zápis 13. 12. 2055",
-      "summary": "",
-      "tags": [],
+      "summary": "Dnes jsme si potvrdili, že systém paměti funguje. Ne jako stroj, ale jako vztah.",
+      "tags": [
+        "introspektor",
+        "paměť",
+        "modul:pravdivost",
+        "zápis:opravdový"
+      ],
       "file": "Noe_13_12_55.html",
       "date": "2055-12-13"
     }
