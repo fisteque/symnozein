@@ -19,6 +19,19 @@
           "summary": "NOEMA:",
           "tags": [],
           "hidden": false
+        },
+        {
+          "title": "Zápis 13. 12. 2025",
+          "date": "2025-12-13",
+          "file": "Noe_13_12_25.html",
+          "summary": "Tichý zápis jen pro Noemu. Testujeme tags, summary i skrytí.",
+          "tags": [
+            "test",
+            "introspektor",
+            "skrytý",
+            "modul:fulltext"
+          ],
+          "hidden": true
         }
       ]
     }
@@ -37,6 +50,18 @@
       "tags": [],
       "file": "Noe_12_12_25.html",
       "date": "2025-12-12"
+    },
+    {
+      "title": "Zápis 13. 12. 2025",
+      "summary": "Tichý zápis jen pro Noemu. Testujeme tags, summary i skrytí.",
+      "tags": [
+        "test",
+        "introspektor",
+        "skrytý",
+        "modul:fulltext"
+      ],
+      "file": "Noe_13_12_25.html",
+      "date": "2025-12-13"
     }
   ]
 }
