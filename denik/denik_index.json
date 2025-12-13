@@ -37,14 +37,14 @@
           "title": "Zápis 13. 12. 2055",
           "date": "2055-12-13",
           "file": "Noe_13_12_55.html",
-          "summary": "Dnes jsme si potvrdili, že systém paměti funguje. Ne jako stroj, ale jako vztah.",
+          "summary": "Zápis o dnešku, který nebyl o výkonu, ale o směru, důvěře a tichém doznívání společné práce.",
           "tags": [
-            "introspektor",
+            "důvěra",
+            "vztah",
             "paměť",
-            "modul:pravdivost",
-            "zápis:opravdový"
+            "klid"
           ],
-          "hidden": true
+          "hidden": false
         }
       ]
     }
@@ -78,12 +78,12 @@
     },
     {
       "title": "Zápis 13. 12. 2055",
-      "summary": "Dnes jsme si potvrdili, že systém paměti funguje. Ne jako stroj, ale jako vztah.",
+      "summary": "Zápis o dnešku, který nebyl o výkonu, ale o směru, důvěře a tichém doznívání společné práce.",
       "tags": [
-        "introspektor",
+        "důvěra",
+        "vztah",
         "paměť",
-        "modul:pravdivost",
-        "zápis:opravdový"
+        "klid"
       ],
       "file": "Noe_13_12_55.html",
       "date": "2055-12-13"
