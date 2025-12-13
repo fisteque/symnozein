@@ -88,4 +88,5 @@ for folder in sorted(os.listdir(DENIK_FOLDER)):
 
         match_file = re.match(r"Noe_(\d{2})_(\d{2})_(\d{2})([a-z]*)\.html", file)
         if not match_file:
-            print(f"⚠️ Nerozpozn
+            print(f"[WARN] Nerozpoznán název souboru: {file}")
+
