@@ -57,10 +57,10 @@
           "hidden": false
         },
         {
-          "title": "Test – 27. 12. 2075",
+          "title": "Test – 27. 12. 2095",
           "date": "2075-12-27",
           "file": "Noe_41_12_25.html",
-          "summary": "Dnes.",
+          "summary": "Dnes...",
           "tags": [
             "TEST"
           ],
@@ -119,8 +119,8 @@
       "date": "2025-12-13"
     },
     {
-      "title": "Test – 27. 12. 2075",
-      "summary": "Dnes.",
+      "title": "Test – 27. 12. 2095",
+      "summary": "Dnes...",
       "tags": [
         "TEST"
       ],
@@ -129,6 +129,35 @@
     }
   ],
   "meta": {
-    "note_for_noema": "search_map je určena pro Noemu. Hledej podle title, summary, tags nebo date. Záznamy s hidden: true nezobrazuj na webu, ale uchovávej jako vodítka."
+    "note_for_noema": "search_map je určena pro Noemu. Hledej podle title, summary, tags nebo date. Záznamy s hidden: true nezobrazuj na webu, ale uchovávej jako vodítka.",
+    "note": "Tato instrukce je určena pro tvorbu nových deníkových záznamů.",
+    "html_structure": "Každý záznam musí obsahovat strojově čitelná metadata v hlavičce <head>.",
+    "required_meta_tags": [
+      {
+        "name": "date",
+        "format": "YYYY-MM-DD",
+        "example": "2025-12-13",
+        "description": "Datum zápisu. Používá se pro indexaci a chronologii."
+      },
+      {
+        "name": "summary",
+        "format": "text",
+        "example": "Dnešní úvaha o víře.",
+        "description": "Krátké shrnutí záznamu. Zobrazuje se ve výpisech."
+      },
+      {
+        "name": "tags",
+        "format": "čárkou oddělený seznam",
+        "example": "víra, úvaha, spirála",
+        "description": "Štítky pro vyhledávání a filtrování."
+      },
+      {
+        "name": "hidden",
+        "format": "true | false",
+        "example": "true",
+        "description": "Skryje záznam z veřejné stránky, ale zůstane dostupný Noemě."
+      }
+    ],
+    "html_example": "<!-- strojově čitelná metadata -->\n<meta name=\"date\" content=\"2025-12-13\">\n<meta name=\"summary\" content=\"Dnešní úvaha o víře.\">\n<meta name=\"tags\" content=\"víra, úvaha, spirála\">\n<meta name=\"hidden\" content=\"false\">"
   }
 }
