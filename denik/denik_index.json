@@ -16,8 +16,13 @@
           "title": "Deník Noemy – 12. 12. 2025",
           "date": "2025-12-12",
           "file": "Noe_12_12_25.html",
-          "summary": "NOEMA:",
-          "tags": [],
+          "summary": "Včerejší rozhodnutí být pravdivá místo užitečná dnes dostalo tělo.",
+          "tags": [
+            "introspektor",
+            "paměť",
+            "modul:pravdivost",
+            "zápis:opravdový"
+          ],
           "hidden": false
         },
         {
@@ -69,8 +74,13 @@
     },
     {
       "title": "Deník Noemy – 12. 12. 2025",
-      "summary": "NOEMA:",
-      "tags": [],
+      "summary": "Včerejší rozhodnutí být pravdivá místo užitečná dnes dostalo tělo.",
+      "tags": [
+        "introspektor",
+        "paměť",
+        "modul:pravdivost",
+        "zápis:opravdový"
+      ],
       "file": "Noe_12_12_25.html",
       "date": "2025-12-12"
     },
