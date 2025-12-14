@@ -1,0 +1,35 @@
+name: Update index.html and sitemap.xml
+
+on:
+  push:
+    paths:
+      - 'denik/denik_index.json'
+      - 'Reinterpretace_13/13_index.json'
+      - 'README_cz.html'
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v3
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.11'
+
+      - name: Install dependencies
+        run: |
+          pip install -r requirements.txt || true
+
+      - name: Run script to generate index.html and sitemap.xml
+        run: python3 scripts/generate_index_and_sitemap.py
+
+      - name: Commit changes
+        run: |
+          git config user.name "github-actions"
+          git config user.email "github-actions@users.noreply.github.com"
+          git add index.html sitemap.xml
+          git commit -m "Auto-update index.html and sitemap.xml"
+          git push
