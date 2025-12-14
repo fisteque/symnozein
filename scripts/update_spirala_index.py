@@ -40,7 +40,7 @@ def extract_metadata(filepath):
         }
 
 def update_index_and_sitemap():
-    index = []
+    entries = []
     urls = []
 
     for root, _, files in os.walk(SPIRALA_DIR):
@@ -48,15 +48,16 @@ def update_index_and_sitemap():
             if filename.endswith(".html"):
                 filepath = os.path.join(root, filename)
                 entry = extract_metadata(filepath)
-                index.append(entry)
+                entries.append(entry)
 
                 if not entry["hidden"]:
                     urls.append(BASE_URL + filename)
 
-    index.sort(key=lambda x: x.get("date", ""), reverse=True)
+    entries.sort(key=lambda x: x.get("date", ""), reverse=True)
 
+    # ✅ Zapiš jako objekt s klíčem "entries"
     with open(INDEX_FILE, "w", encoding="utf-8") as f:
-        json.dump(index, f, ensure_ascii=False, indent=2)
+        json.dump({"entries": entries}, f, ensure_ascii=False, indent=2)
 
     generate_sitemap(urls)
 
