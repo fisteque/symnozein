@@ -150,6 +150,7 @@ index["meta"] = {
         "Hledej podle title, summary, tags nebo date. "
         "Záznamy s hidden: true nezobrazuj na webu, "
         "ale uchovávej jako vodítka."
+    ),
     "note": "Tato instrukce je určena pro tvorbu nových deníkových záznamů.",
     "html_structure": "Každý záznam musí obsahovat strojově čitelná metadata v hlavičce <head>.",
     "required_meta_tags": [
@@ -183,7 +184,6 @@ index["meta"] = {
 <meta name="summary" content="Dnešní úvaha o víře.">
 <meta name="tags" content="víra, úvaha, spirála">
 <meta name="hidden" content="false">"""
-     )
 }
 
 # 💾 Zápis indexu
