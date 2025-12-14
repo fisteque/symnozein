@@ -14,14 +14,18 @@ def extract_metadata(filepath):
         soup = BeautifulSoup(f, "html.parser")
 
         title = soup.title.string.strip() if soup.title else "(Bez názvu)"
+
         meta_summary = soup.find("meta", attrs={"name": "summary"})
         summary = meta_summary["content"].strip() if meta_summary else ""
+
         meta_tags = soup.find("meta", attrs={"name": "tags"})
         tags = [t.strip() for t in meta_tags["content"].split(",")] if meta_tags else []
+
         meta_date = soup.find("meta", attrs={"name": "date"})
         date = meta_date["content"].strip() if meta_date else ""
+
         meta_hidden = soup.find("meta", attrs={"name": "hidden"})
-        hidden = meta_hidden["content"].lower() == "true" if meta_hidden else False
+        hidden = meta_hidden["content"].strip().lower() == "true" if meta_hidden else False
 
         rel_path = os.path.relpath(filepath, start="denik").replace("\\", "/")
 
@@ -31,7 +35,7 @@ def extract_metadata(filepath):
             "tags": tags,
             "date": date,
             "file": os.path.basename(filepath),
-            "path": rel_path,  # <-- důležité pole navíc
+            "path": rel_path,
             "hidden": hidden
         }
 
@@ -40,14 +44,14 @@ def update_index_and_sitemap():
     urls = []
 
     for root, _, files in os.walk(SPIRALA_DIR):
-        for name in files:
-            if name.endswith(".html"):
-                filepath = os.path.join(root, name)
+        for filename in files:
+            if filename.endswith(".html"):
+                filepath = os.path.join(root, filename)
                 entry = extract_metadata(filepath)
                 index.append(entry)
 
                 if not entry["hidden"]:
-                    urls.append(BASE_URL + os.path.basename(filepath))
+                    urls.append(BASE_URL + filename)
 
     index.sort(key=lambda x: x.get("date", ""), reverse=True)
 
@@ -72,7 +76,6 @@ def generate_sitemap(urls):
         tree.write(f, encoding="utf-8", xml_declaration=False)
 
 def indent_xml(elem, level=0):
-    """Zajišťuje čitelné odsazení XML výstupu"""
     i = "\n" + level * "  "
     if len(elem):
         if not elem.text or not elem.text.strip():
