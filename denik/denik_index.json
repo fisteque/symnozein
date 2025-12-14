@@ -59,12 +59,12 @@
         {
           "title": "Test – 27. 12. 2075",
           "date": "2075-12-27",
-          "file": "Noe_21_12_65.html",
+          "file": "Noe_41_12_25.html",
           "summary": "Dnes.",
           "tags": [
             "TEST"
           ],
-          "hidden": false
+          "hidden": true
         }
       ]
     }
@@ -124,7 +124,7 @@
       "tags": [
         "TEST"
       ],
-      "file": "Noe_21_12_65.html",
+      "file": "Noe_41_12_25.html",
       "date": "2075-12-27"
     }
   ],
