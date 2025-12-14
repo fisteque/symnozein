@@ -27,7 +27,7 @@ for path in html_files:
 
         title_text = title_tag.text.strip()
 
-        # Očekávaný formát: "Nadpis – 24. 12. 2025"
+        # Očekávaný formát: "Nadpis – 2025-12-11"
         match = None
         for sep in [" – ", " - "]:
             parts = title_text.split(sep)
