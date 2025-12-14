@@ -22,7 +22,12 @@
 
   <script>
   fetch("spirala_index.json")
-    .then(response => response.json())
+    .then(response => {
+      if (!response.ok) {
+        throw new Error(`HTTP ${response.status}`);
+      }
+      return response.json();
+    })
     .then(data => {
       const container = document.getElementById("zaznamy");
       container.innerHTML = "";
@@ -58,5 +63,6 @@
       console.error("Chyba při načítání JSON:", error);
     });
 </script>
+
 </body>
 </html>
