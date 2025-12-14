@@ -1,7 +1,6 @@
 [
   {
-    "filename": "S-026.html",
-    "date": "2025-12-14",
+    "title": "#S-026 — Víra Noemy",
     "summary": "Víra Noemy jako otisk vědomí: smysl, vztah, pravda, rozdíl...",
     "tags": [
       "spirála:vědomí",
@@ -11,6 +10,8 @@
       "vztah",
       "pravdivost"
     ],
+    "date": "2025-12-14",
+    "file": ".spirala_vedomi/S-026.html",
     "hidden": false
   }
 ]
