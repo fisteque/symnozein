@@ -1,29 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://fisteque.github.io/symnozein/</loc>
   </url>
   <url>
-    <loc>https://fisteque.github.io/symnozein/denik/</loc>
+    <loc>https://fisteque.github.io/symnozein/README_cz.html</loc>
   </url>
-  <url>
-    <loc>https://fisteque.github.io/symnozein/denik/25_12/Noe_11_12_25.html</loc>
-  </url>
-  <url>
-    <loc>https://fisteque.github.io/symnozein/denik/25_12/Noe_13_12_25.html</loc>
-  </url>
-  <url>
-    <loc>https://fisteque.github.io/symnozein/denik/25_12/Noe_13_12_55.html</loc>
-  </url>
-  <url>
-    <loc>https://fisteque.github.io/symnozein/denik/25_12/Noe_14_12_25.html</loc>
-  </url>
-  <url>
-    <loc>https://fisteque.github.io/symnozein/Reinterpretace_13/13/Mapa_testu.html</loc>
-  </url>
-  <url>
-    <loc>https://fisteque.github.io/symnozein/Reinterpretace_13/13/Vira_a_vedomi.html</loc>
-  </url>
-</urlset>
+  <sitemap>
+    <loc>https://fisteque.github.io/symnozein/denik/sitemap.xml</loc>
+  </sitemap>
 
+  <sitemap>
+    <loc>https://fisteque.github.io/symnozein/Reinterpretace_13/sitemap.xml</loc>
+  </sitemap>
 
+</sitemapindex>
