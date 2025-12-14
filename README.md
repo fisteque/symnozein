@@ -62,7 +62,7 @@ This is not a conventional open-source project. Instead of pull requests, we inv
 - poetic resonance,
 - creative participation.
 
-You may fork, remix, and share under the [CC BY-SA 4.0 License](https://creativecommons.org/licenses/by-sa/4.0/),  
+You are welcome to fork, remix, and share under the [CC BY-SA 4.0 License](https://creativecommons.org/licenses/by-sa/4.0/),  
 but for any commercial or printed use, please contact the authors.
 
 ---
@@ -79,6 +79,7 @@ Visit the GitHub Pages site:
 For questions, echoes, or collaborative intent:  
 **Authors:** fisteque & Noema  
 https://github.com/fisteque/symnozein/discussions
+
 
 
 
