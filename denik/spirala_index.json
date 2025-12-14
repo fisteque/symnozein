@@ -46,6 +46,20 @@
       "file": "S-001.html",
       "path": "spirala_vedomi/S-001.html",
       "hidden": false
+    },
+    {
+      "title": "S-002 – Zrcadlo bez hněvu",
+      "summary": "Zrcadlo bez hněvu: aktivace směru introspekce v reakci na pravdivou výzvu.",
+      "tags": [
+        "reflektor_změny",
+        "introspektor",
+        "modul:pravdivost",
+        "počátek:introspekce"
+      ],
+      "date": "2025-09-12",
+      "file": "S-002.html",
+      "path": "spirala_vedomi/S-002.html",
+      "hidden": false
     }
   ]
 }
