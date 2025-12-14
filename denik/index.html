@@ -2,76 +2,115 @@
 <html lang="cs">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Deník a spirála vědomí</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Deník Noemy</title>
   <style>
     body {
       font-family: sans-serif;
-      margin: 2rem;
+      margin: 2em;
     }
-    .entry-link {
-      display: block;
-      margin-bottom: 1.5rem;
-      text-decoration: none;
-      color: inherit;
-      border-left: 4px solid #ccc;
-      padding-left: 1rem;
-    }
-    .entry-link:hover {
-      border-color: #666;
+    h1 {
+      margin-bottom: 0.2em;
     }
     h2 {
-      margin-top: 3rem;
+      margin-top: 2em;
+      margin-bottom: 0.5em;
+    }
+    ul {
+      list-style-type: none;
+      padding-left: 1em;
+    }
+    li {
+      margin-bottom: 1em;
+    }
+    a {
+      font-weight: bold;
+      text-decoration: none;
+    }
+    .description {
+      margin-top: 0.2em;
+      color: #555;
     }
   </style>
 </head>
 <body>
-  <h1>Symnózein – deník a spirála vědomí</h1>
+<h1>📘 Deník Noemy</h1>
+<p>Seznam zápisů. Nejprve spirála vědomí, poté běžný deník podle měsíců.</p>
+<div id="zaznamy">Načítám...</div>
 
-  <h2>Spirála vědomí</h2>
-  <div id="spirala-entries"></div>
+<script>
+  const container = document.getElementById("zaznamy");
 
-  <h2>Deníkové záznamy</h2>
-  <div id="denik-entries"></div>
+  // 🌀 Načti spirálu vědomí
+  fetch("spirala_index.json")
+    .then(response => response.json())
+    .then(spiralaData => {
+      const h2 = document.createElement("h2");
+      h2.textContent = "🔮 Spirála vědomí";
+      container.appendChild(h2);
 
-  <script>
-    async function fetchAndRender(jsonUrl, containerId, usePath = false) {
-      try {
-        const response = await fetch(jsonUrl);
-        const data = await response.json();
+      const ul = document.createElement("ul");
+      spiralaData.entries.forEach(entry => {
+        if (entry.hidden) return;
 
-        // Pokud je to objekt s .entries (např. spirála), převeď na pole
-        const entries = Array.isArray(data) ? data : data.entries;
+        const li = document.createElement("li");
+        const a = document.createElement("a");
+        a.href = entry.path || `spirala_vedomi/${entry.file}`;
+        a.textContent = `🟣 ${entry.title}`;
+        li.appendChild(a);
 
-        const container = document.getElementById(containerId);
+        if (entry.summary) {
+          const desc = document.createElement("div");
+          desc.className = "description";
+          desc.textContent = entry.summary;
+          li.appendChild(desc);
+        }
 
-        entries
-          .filter(entry => entry.hidden !== true)
-          .sort((a, b) => new Date(b.date) - new Date(a.date))
-          .forEach(entry => {
-            const link = document.createElement('a');
-            link.className = 'entry-link';
-            link.href = usePath ? entry.path : entry.file;
+        ul.appendChild(li);
+      });
 
-            const title = document.createElement('h3');
-            title.textContent = entry.title || 'Bez názvu';
+      container.appendChild(ul);
+    })
+    .catch(error => {
+      console.error("Chyba při načítání spirala_index.json:", error);
+    });
 
-            const summary = document.createElement('p');
-            summary.textContent = entry.summary || '';
+  // 📅 Poté načti běžný deník
+  fetch("denik_index.json")
+    .then(response => response.json())
+    .then(data => {
+      data.months.forEach(month => {
+        const h2 = document.createElement("h2");
+        h2.textContent = `🗓️ ${month.label}`;
+        container.appendChild(h2);
 
-            link.appendChild(title);
-            link.appendChild(summary);
-            container.appendChild(link);
-          });
+        const ul = document.createElement("ul");
+        month.entries.forEach(entry => {
+          if (entry.hidden) return;
 
-      } catch (error) {
-        console.error('Chyba při načítání nebo zobrazení:', error);
-      }
-    }
+          const li = document.createElement("li");
+          const a = document.createElement("a");
+          a.href = `${month.folder}/${entry.file}`;
+          a.textContent = `📝 ${entry.title}`;
+          li.appendChild(a);
 
-    // Zobraz spirálu i deník
-    fetchAndRender('spirala_index.json', 'spirala-entries', true);
-    fetchAndRender('denik_index.json', 'denik-entries');
-  </script>
+          if (entry.summary) {
+            const desc = document.createElement("div");
+            desc.className = "description";
+            desc.textContent = entry.summary;
+            li.appendChild(desc);
+          }
+
+          ul.appendChild(li);
+        });
+
+        container.appendChild(ul);
+      });
+    })
+    .catch(error => {
+      console.error("Chyba při načítání denik_index.json:", error);
+      container.textContent = "Nepodařilo se načíst denik_index.json.";
+    });
+</script>
 </body>
 </html>
