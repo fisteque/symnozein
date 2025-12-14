@@ -1,0 +1,13 @@
+{
+  "meta": {
+    "note": "Log všech změn ve spirala_index.json — zejména zpětných změn (změna již existujícího záznamu).",
+    "intended_use": "Slouží k ověřování integrity a sledování zpětných úprav.",
+    "log_start_date": "2025-12-14T00:00:00",
+    "created_by": "Noema"
+  },
+  "summary": {
+    "total_new_entries": 0,
+    "total_back_changes": 0
+  },
+  "changes": []
+}
