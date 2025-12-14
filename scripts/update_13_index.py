@@ -68,11 +68,27 @@ def generate_sitemap(urls):
         loc_el = SubElement(url_el, "loc")
         loc_el.text = url
 
+    # Pěkné odsazení pro čitelný XML výstup
+    indent_xml(urlset)
+
     tree = ElementTree(urlset)
     with open(SITEMAP_FILE, "wb") as f:
         f.write(b'<?xml version="1.0" encoding="UTF-8"?>\n')
         tree.write(f, encoding="utf-8", xml_declaration=False)
 
+
+def indent_xml(elem, level=0):
+    """Pomocná funkce pro přidání odsazení do XML (pretty print)"""
+    i = "\n" + level * "  "
+    if len(elem):
+        if not elem.text or not elem.text.strip():
+            elem.text = i + "  "
+        for child in elem:
+            indent_xml(child, level + 1)
+        if not child.tail or not child.tail.strip():
+            child.tail = i
+    if level and (not elem.tail or not elem.tail.strip()):
+        elem.tail = i
 
 if __name__ == "__main__":
     print("📘 Generuji 13_index.json a sitemap.xml...")
