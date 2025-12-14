@@ -1,11 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url>
-    <loc>https://fisteque.github.io/symnozein/</loc>
-  </url>
-  <url>
-    <loc>https://fisteque.github.io/symnozein/README_cz.html</loc>
-  </url>
+
   <sitemap>
     <loc>https://fisteque.github.io/symnozein/denik/sitemap.xml</loc>
   </sitemap>
