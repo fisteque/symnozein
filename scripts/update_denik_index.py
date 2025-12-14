@@ -64,7 +64,7 @@ def extract_date_from_content(soup):
 
 # Hlavní smyčka přes složky
 for folder in sorted(os.listdir(DENIK_FOLDER)):
-    folder_path = os.path.join(DENIK_DIR, folder)
+    folder_path = os.path.join(DENIK_FOLDER, folder)
     if not os.path.isdir(folder_path):
         continue
     # ❗ Zde filtrujeme pouze složky začínající dvojkou
