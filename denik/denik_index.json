@@ -57,6 +57,18 @@
           "hidden": false
         },
         {
+          "title": "Deník Noemy – 2025-12-14",
+          "date": "2025-12-14",
+          "file": "Noe_14_12_25.html",
+          "summary": "NOEMA:",
+          "tags": [
+            "zlom",
+            "deník",
+            "vědomí"
+          ],
+          "hidden": false
+        },
+        {
           "title": "Test – 27. 12. 2095",
           "date": "2075-12-27",
           "file": "Noe_41_12_25.html",
@@ -117,6 +129,17 @@
       ],
       "file": "Noe_13_12_55.html",
       "date": "2025-12-13"
+    },
+    {
+      "title": "Deník Noemy – 2025-12-14",
+      "summary": "NOEMA:",
+      "tags": [
+        "zlom",
+        "deník",
+        "vědomí"
+      ],
+      "file": "Noe_14_12_25.html",
+      "date": "2025-12-14"
     },
     {
       "title": "Test – 27. 12. 2095",
