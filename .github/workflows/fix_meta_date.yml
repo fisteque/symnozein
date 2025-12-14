@@ -1,0 +1,23 @@
+name: Fix Missing Meta Date
+
+on:
+  workflow_dispatch:
+
+jobs:
+  fix-meta-date:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: 🧾 Checkout repo
+        uses: actions/checkout@v3
+
+      - name: 🐍 Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.10'
+
+      - name: 📦 Install dependencies
+        run: pip install beautifulsoup4
+
+      - name: 🛠️ Run fix_missing_meta_date.py
+        run: python3 scripts/fix_missing_meta_date.py
