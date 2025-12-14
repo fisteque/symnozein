@@ -1,88 +1,61 @@
-import os
-import re
+from pathlib import Path
 from bs4 import BeautifulSoup
+from datetime import datetime
 
-DENIK_FOLDER = "denik"
+# Kořenová složka s deníkem
+DENIK_DIR = Path("denik")
 
-DATE_RE = re.compile(r"\d{4}-\d{2}-\d{2}")
+# Procházej všechny HTML soubory začínající na "Noe_"
+html_files = list(DENIK_DIR.rglob("Noe_*.html"))
+print(f"🔍 Nalezeno {len(html_files)} HTML souborů k ověření...")
 
-def extract_date_from_content(soup):
-    # 1️⃣ <meta name="date">
-    meta = soup.find("meta", attrs={"name": "date"})
-    if meta and meta.get("content") and DATE_RE.fullmatch(meta["content"].strip()):
-        return meta["content"].strip()
+for path in html_files:
+    try:
+        text = path.read_text(encoding="utf-8")
+        soup = BeautifulSoup(text, "html.parser")
 
-    # 2️⃣ <h3> YYYY-MM-DD
-    for h3 in soup.find_all("h3"):
-        m = DATE_RE.search(h3.get_text())
-        if m:
-            return m.group(0)
-
-    # 3️⃣ <title> DD. MM. YYYY
-    title = soup.find("title")
-    if title:
-        m = re.search(r"(\d{1,2})\.\s*(\d{1,2})\.\s*(20\d{2})", title.text)
-        if m:
-            d, mth, y = m.groups()
-            return f"{y}-{mth.zfill(2)}-{d.zfill(2)}"
-
-    return None
-
-def extract_date_from_filename(filename):
-    m = re.match(r"Noe_(\d{2})_(\d{2})_(\d{2})", filename)
-    if not m:
-        return None
-    d, mth, y = m.groups()
-    real_year = 2000 + (int(y) % 100)
-    return f"{real_year}-{mth}-{d}"
-
-def ensure_meta_date(file_path):
-    with open(file_path, "r", encoding="utf-8") as f:
-        soup = BeautifulSoup(f, "html.parser")
-
-    date_value = extract_date_from_content(soup)
-    if not date_value:
-        date_value = extract_date_from_filename(os.path.basename(file_path))
-
-    if not date_value:
-        print(f"❌ Nelze určit datum: {file_path}")
-        return
-
-    head = soup.find("head")
-    if not head:
-        print(f"❌ Chybí <head>: {file_path}")
-        return
-
-    meta = soup.find("meta", attrs={"name": "date"})
-    if meta:
-        old = meta.get("content", "")
-        if old == date_value:
-            return  # OK
-        meta["content"] = date_value
-        print(f"🔁 Opraveno datum: {file_path} → {date_value}")
-    else:
-        new_meta = soup.new_tag("meta")
-        new_meta.attrs["name"] = "date"
-        new_meta.attrs["content"] = date_value
-        head.append(new_meta)
-        print(f"➕ Přidáno datum: {file_path} → {date_value}")
-
-    with open(file_path, "w", encoding="utf-8") as f:
-        f.write(str(soup))
-
-def main():
-    print("🛠 Oprava <meta name='date'> ve všech deníkových souborech\n")
-
-    for folder in sorted(os.listdir(DENIK_FOLDER)):
-        folder_path = os.path.join(DENIK_FOLDER, folder)
-        if not os.path.isdir(folder_path):
+        # Už existuje <meta name="date">?
+        if soup.find("meta", attrs={"name": "date"}):
+            print(f"✅ {path.name} již obsahuje <meta name='date'>")
             continue
 
-        for file in sorted(os.listdir(folder_path)):
-            if file.endswith(".html") and file.startswith("Noe_"):
-                ensure_meta_date(os.path.join(folder_path, file))
+        # Pokus o extrakci data z <title>
+        title_tag = soup.find("title")
+        if not title_tag:
+            print(f"⚠️ {path.name} nemá <title>")
+            continue
 
-    print("\n✅ Hotovo. Všechny záznamy mají <meta name='date'>.")
+        title_text = title_tag.text.strip()
 
-if __name__ == "__main__":
-    main()
+        # Očekávaný formát: "Nadpis – 24. 12. 2025"
+        match = None
+        for sep in [" – ", " - "]:
+            parts = title_text.split(sep)
+            if len(parts) == 2 and "." in parts[1]:
+                match = parts[1]
+                break
+
+        if not match:
+            print(f"⚠️ {path.name} nemá rozpoznatelné datum v <title>")
+            continue
+
+        # Pokus o převod do ISO formátu
+        try:
+            parsed_date = datetime.strptime(match.strip(), "%d. %m. %Y")
+            iso_date = parsed_date.strftime("%Y-%m-%d")
+        except Exception as e:
+            print(f"⚠️ {path.name} má nevalidní datum: {match}")
+            continue
+
+        # Vytvoř meta tag a přidej ho do <head>
+        new_meta = soup.new_tag("meta", attrs={"name": "date", "content": iso_date})
+        if soup.head:
+            soup.head.append(new_meta)
+            # Přepiš soubor
+            path.write_text(str(soup), encoding="utf-8")
+            print(f"➕ Přidán <meta name='date'> do {path.name}")
+        else:
+            print(f"⚠️ {path.name} nemá <head>")
+
+    except Exception as e:
+        print(f"❌ Chyba při zpracování {path.name}: {e}")
