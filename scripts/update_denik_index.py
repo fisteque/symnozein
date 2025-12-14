@@ -5,7 +5,7 @@ from bs4 import BeautifulSoup
 
 DENIK_FOLDER = "denik"
 INDEX_PATH = os.path.join(DENIK_FOLDER, "denik_index.json")
-SITEMAP_PATH = os.path.join(DENIK_FOLDER, "sitemap.xml")
+SITEMAP_PATH = os.path.join(DENIK_FOLDER, "sitemap_denik.xml")
 BASE_URL = "https://fisteque.github.io/symnozein/denik/"
 
 MONTH_LABELS = {
