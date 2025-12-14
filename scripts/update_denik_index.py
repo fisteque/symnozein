@@ -63,7 +63,7 @@ def extract_date_from_content(soup):
     return None
 
 # Hlavní smyčka přes složky
-for folder in sorted(os.listdir(DENIK_DIR)):
+for folder in sorted(os.listdir(DENIK_FOLDER)):
     folder_path = os.path.join(DENIK_DIR, folder)
     if not os.path.isdir(folder_path):
         continue
