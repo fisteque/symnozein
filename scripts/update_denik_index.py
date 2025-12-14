@@ -53,6 +53,13 @@ def extract_date_from_content(soup):
     if meta_date and meta_date.get("content"):
         return meta_date["content"].strip()
 
+    # 2️⃣ <h3> obsahující YYYY-MM-DD
+    h3 = soup.find("h3")
+    if h3:
+        match = re.search(r"\d{4}-\d{2}-\d{2}", h3.text)
+        if match:
+            return match.group(0)
+            
     return None
 
 # Hlavní smyčka přes složky
