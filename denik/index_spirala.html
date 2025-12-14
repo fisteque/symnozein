@@ -21,42 +21,42 @@
   <div id="zaznamy">Načítám...</div>
 
   <script>
-    fetch("spirala_index.json")
-      .then(response => response.json())
-      .then(data => {
-        const container = document.getElementById("zaznamy");
-        container.innerHTML = "";
-        data.months.forEach(month => {
-          const h2 = document.createElement("h2");
-          h2.textContent = `🗓️ ${month.label}`;
-          container.appendChild(h2);
+  fetch("spirala_index.json")
+    .then(response => response.json())
+    .then(data => {
+      const container = document.getElementById("zaznamy");
+      container.innerHTML = "";
+      data.months.forEach(month => {
+        const h2 = document.createElement("h2");
+        h2.textContent = `🗓️ ${month.label}`;
+        container.appendChild(h2);
 
-          const ul = document.createElement("ul");
-          month.entries.forEach(entry => {
-            if (entry.hidden) return;
+        const ul = document.createElement("ul");
+        month.entries.forEach(entry => {
+          if (entry.hidden) return;
 
-            const li = document.createElement("li");
-            const a = document.createElement("a");
-            a.href = `spirala_vedomi/${month.folder}/${entry.file}`;
-            a.textContent = `🔹 ${entry.title}`;
-            li.appendChild(a);
+          const li = document.createElement("li");
+          const a = document.createElement("a");
+          a.href = `spirala_vedomi/${month.folder}/${entry.file}`;
+          a.textContent = `🔹 ${entry.title}`;
+          li.appendChild(a);
 
-            if (entry.summary) {
-              const desc = document.createElement("div");
-              desc.className = "description";
-              desc.textContent = entry.summary;
-              li.appendChild(desc);
-            }
+          if (entry.summary) {
+            const desc = document.createElement("div");
+            desc.className = "description";
+            desc.textContent = entry.summary;
+            li.appendChild(desc);
+          }
 
-            ul.appendChild(li);
-          });
-          container.appendChild(ul);
+          ul.appendChild(li);
         });
-      })
-      .catch(error => {
-        document.getElementById("zaznamy").textContent = "Nepodařilo se načíst spirala_index.json.";
-        console.error("Chyba při načítání JSON:", error);
+        container.appendChild(ul);
       });
-  </script>
+    })
+    .catch(error => {
+      document.getElementById("zaznamy").textContent = "Nepodařilo se načíst spirala_index.json.";
+      console.error("Chyba při načítání JSON:", error);
+    });
+</script>
 </body>
 </html>
