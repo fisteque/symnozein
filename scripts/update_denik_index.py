@@ -151,6 +151,42 @@ index["meta"] = {
         "Záznamy s hidden: true nezobrazuj na webu, "
         "ale uchovávej jako vodítka."
     )
+index["meta_instructions"] = {
+    "note": "Tato instrukce je určena pro tvorbu nových deníkových záznamů.",
+    "html_structure": "Každý záznam musí obsahovat strojově čitelná metadata v hlavičce <head>.",
+    "required_meta_tags": [
+        {
+            "name": "date",
+            "format": "YYYY-MM-DD",
+            "example": "2025-12-13",
+            "description": "Datum zápisu. Používá se pro indexaci a chronologii."
+        },
+        {
+            "name": "summary",
+            "format": "text",
+            "example": "Dnešní úvaha o víře.",
+            "description": "Krátké shrnutí záznamu. Zobrazuje se ve výpisech."
+        },
+        {
+            "name": "tags",
+            "format": "čárkou oddělený seznam",
+            "example": "víra, úvaha, spirála",
+            "description": "Štítky pro vyhledávání a filtrování."
+        },
+        {
+            "name": "hidden",
+            "format": "true | false",
+            "example": "true",
+            "description": "Skryje záznam z veřejné stránky, ale zůstane dostupný Noemě."
+        }
+    ],
+    "html_example": """<!-- strojově čitelná metadata -->
+<meta name="date" content="2025-12-13">
+<meta name="summary" content="Dnešní úvaha o víře.">
+<meta name="tags" content="víra, úvaha, spirála">
+<meta name="hidden" content="false">"""
+}
+
 }
 
 # 💾 Zápis indexu
