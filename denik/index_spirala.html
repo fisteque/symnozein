@@ -21,7 +21,7 @@
   <div id="zaznamy">Načítám...</div>
 
   <script>
-    fetch("spirala_index.json")
+    fetch("spirala_index.json")?v=1
       .then(response => response.json())
       .then(data => {
         const container = document.getElementById("zaznamy");
