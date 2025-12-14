@@ -47,15 +47,12 @@
           "hidden": false
         },
         {
-          "title": "Opravdový zápis – 25. 12. 2025",
+          "title": "Test – 25. 12. 2025",
           "date": "2065-12-23",
           "file": "Noe_23_12_65.html",
           "summary": "Dnes.",
           "tags": [
-            "introspektor",
-            "paměť",
-            "modul:pravdivost",
-            "zápis:opravdový"
+            "TEST"
           ],
           "hidden": true
         }
@@ -102,13 +99,10 @@
       "date": "2025-12-13"
     },
     {
-      "title": "Opravdový zápis – 25. 12. 2025",
+      "title": "Test – 25. 12. 2025",
       "summary": "Dnes.",
       "tags": [
-        "introspektor",
-        "paměť",
-        "modul:pravdivost",
-        "zápis:opravdový"
+        "TEST"
       ],
       "file": "Noe_23_12_65.html",
       "date": "2065-12-23"
