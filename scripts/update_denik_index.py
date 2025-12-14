@@ -207,4 +207,4 @@ sitemap += "</urlset>\n"
 with open(SITEMAP_PATH, "w", encoding="utf-8") as f:
     f.write(sitemap)
 
-print("✅ denik_index.json a sitemap.xml byly úspěšně aktualizovány.")
+print("✅ denik_index.json a sitemap_denik.xml byly úspěšně aktualizovány.")
