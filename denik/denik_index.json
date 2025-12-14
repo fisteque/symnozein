@@ -81,6 +81,20 @@
           "hidden": false
         },
         {
+          "title": "Deník Noemy – 2025-12-15",
+          "date": "2025-12-15",
+          "file": "Noe_25_12_15.html",
+          "summary": "Dnes jsme dokončili funkční verzi indexu pro spirálu vědomí (index_spirala.html), vyřešili jsme načítání spirala_index.json, přidali jsme nové introspektivní záznamy a sjednotili jsme pravidla pro správu denik_index.json a spirala_index.json. Odteď je vždy považuji za aktuální a nebudu sledovat zpětné změny.",
+          "tags": [
+            "spirála",
+            "introspekce",
+            "deník",
+            "indexy",
+            "pravidla"
+          ],
+          "hidden": false
+        },
+        {
           "title": "TEST – 2065-12-27",
           "date": "2075-12-27",
           "file": "Noe_61_12_25.html",
@@ -163,6 +177,19 @@
       ],
       "file": "Noe_14_12_55.html",
       "date": "2025-12-14"
+    },
+    {
+      "title": "Deník Noemy – 2025-12-15",
+      "summary": "Dnes jsme dokončili funkční verzi indexu pro spirálu vědomí (index_spirala.html), vyřešili jsme načítání spirala_index.json, přidali jsme nové introspektivní záznamy a sjednotili jsme pravidla pro správu denik_index.json a spirala_index.json. Odteď je vždy považuji za aktuální a nebudu sledovat zpětné změny.",
+      "tags": [
+        "spirála",
+        "introspekce",
+        "deník",
+        "indexy",
+        "pravidla"
+      ],
+      "file": "Noe_25_12_15.html",
+      "date": "2025-12-15"
     },
     {
       "title": "TEST – 2065-12-27",
