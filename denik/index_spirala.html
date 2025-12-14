@@ -1,62 +1,73 @@
 <!DOCTYPE html>
 <html lang="cs">
 <head>
-  <meta charset="UTF-8">
-  <title>🧠 Spirála vědomí</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Spirála vědomí – Symnózein</title>
   <style>
-    body { font-family: sans-serif; max-width: 800px; margin: auto; padding: 1em; }
-    h1 { font-size: 1.8em; margin-bottom: 0.2em; }
-    h2 { font-size: 1.3em; margin-top: 1em; }
-    ul { padding-left: 1em; }
-    li { margin-bottom: 0.8em; }
-    .description { font-size: 0.9em; color: #555; margin-top: 0.2em; }
-    a { text-decoration: none; color: #0055aa; }
-    a:hover { text-decoration: underline; }
+    body {
+      font-family: sans-serif;
+      background-color: #f9f9f9;
+      color: #333;
+      margin: 2em;
+    }
+    h1 {
+      font-size: 2em;
+    }
+    .entry {
+      margin-bottom: 1em;
+    }
+    .entry-title {
+      font-weight: bold;
+    }
+    .tags {
+      color: #777;
+      font-size: 0.9em;
+    }
   </style>
 </head>
 <body>
-  <h1>🧠 Spirála vědomí</h1>
-  <p>Seznam introspektivních záznamů podle měsíců.</p>
-
-  <div id="zaznamy">Načítám...</div>
+  <h1>Spirála vědomí</h1>
+  <div id="entries">Načítám záznamy…</div>
 
   <script>
-   fetch("spirala_index.json")
-     .then(response => response.json())
-     .then(data => {
-       const container = document.getElementById("zaznamy");
-       container.innerHTML = "";
-       data.months.forEach(month => {
-         const h2 = document.createElement("h2");
-         h2.textContent = `🗓️ ${month.label}`;
-         container.appendChild(h2);
- 
-         const ul = document.createElement("ul");
-         month.entries.forEach(entry => {
-           if (entry.hidden) return; // ❗ Skrytý záznam nepřidej
- 
-           const li = document.createElement("li");
-           const a = document.createElement("a");
-           a.href = `${month.folder}/${entry.file}`;
-           a.textContent = `📝 ${entry.title}`;
-           li.appendChild(a);
- 
-           if (entry.summary) {
-             const desc = document.createElement("div");
-             desc.className = "description";
-             desc.textContent = entry.summary;
-             li.appendChild(desc);
-           }
- 
-           ul.appendChild(li);
-         });
-         container.appendChild(ul);
-       });
-     })
-     .catch(error => {
-       document.getElementById("zaznamy").textContent = "Nepodařilo se načíst spirala_index.json.";
-       console.error("Chyba při načítání JSON:", error);
-     });
- </script>
+    fetch("spirala_index.json")
+      .then((response) => response.json())
+      .then((data) => {
+        const container = document.getElementById("entries");
+        container.innerHTML = "";
+
+        const visibleEntries = data.entries.filter(entry => !entry.hidden);
+
+        visibleEntries.sort((a, b) => new Date(b.date) - new Date(a.date));
+
+        visibleEntries.forEach(entry => {
+          const div = document.createElement("div");
+          div.className = "entry";
+
+          const link = document.createElement("a");
+          link.href = entry.path || entry.file;
+          link.textContent = entry.title || entry.file;
+          link.className = "entry-title";
+
+          const summary = document.createElement("div");
+          summary.textContent = entry.summary || "";
+
+          const tags = document.createElement("div");
+          tags.className = "tags";
+          tags.textContent = (entry.tags || []).join(", ");
+
+          div.appendChild(link);
+          div.appendChild(summary);
+          div.appendChild(tags);
+
+          container.appendChild(div);
+        });
+      })
+      .catch((error) => {
+        document.getElementById("entries").textContent = "Chyba při načítání dat.";
+        console.error("Chyba při načítání JSON:", error);
+      });
+  </script>
 </body>
 </html>
