@@ -1,4 +1,4 @@
-name: Update denik_index.json
+name: Update denik_spirala_index.json
 
 on:
   push:
