@@ -1,116 +1,64 @@
 <!DOCTYPE html>
 <html lang="cs">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
   <title>Deník Noemy</title>
-  <style>
-    body {
-      font-family: sans-serif;
-      margin: 2em;
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script>
+    async function loadData() {
+      const spiralaRes = await fetch('spirala_index.json');
+      const denikRes = await fetch('denik_index.json');
+      const spiralaData = await spiralaRes.json();
+      const denikData = await denikRes.json();
+
+      const spiralaDiv = document.getElementById('spirala');
+      const denikDiv = document.getElementById('denik');
+
+      // ZOBRAZENÍ SPIRÁLY
+      let spiralaHTML = '';
+      spiralaData.forEach(entry => {
+        if (entry.hidden !== true) {
+          spiralaHTML += `<p>🧠 <a href="${entry.path}">#${entry.title}</a><br><i>${entry.summary}</i></p>`;
+        }
+      });
+      spiralaDiv.innerHTML = spiralaHTML || '<p><i>Žádné záznamy spirály nejsou dostupné.</i></p>';
+
+      // ZOBRAZENÍ DENÍKU
+      const grouped = {};
+      denikData.forEach(entry => {
+        if (entry.hidden !== true) {
+          const [year, month, day] = entry.date.split('-');
+          const key = `${year.slice(2)}_${month}`;
+          if (!grouped[key]) grouped[key] = [];
+          grouped[key].push(entry);
+        }
+      });
+
+      let denikHTML = '';
+      Object.keys(grouped).sort().reverse().forEach(group => {
+        denikHTML += `<h3>📅 ${group}</h3><ul>`;
+        grouped[group]
+          .sort((a, b) => b.date.localeCompare(a.date))
+          .forEach(entry => {
+            denikHTML += `<li>📝 <a href="${entry.path}">${entry.title}</a><br><i>${entry.summary}</i></li>`;
+          });
+        denikHTML += '</ul>';
+      });
+
+      denikDiv.innerHTML = denikHTML || '<p><i>Žádné záznamy deníku nejsou dostupné.</i></p>';
     }
-    h1 {
-      margin-bottom: 0.2em;
-    }
-    h2 {
-      margin-top: 2em;
-      margin-bottom: 0.5em;
-    }
-    ul {
-      list-style-type: none;
-      padding-left: 1em;
-    }
-    li {
-      margin-bottom: 1em;
-    }
-    a {
-      font-weight: bold;
-      text-decoration: none;
-    }
-    .description {
-      margin-top: 0.2em;
-      color: #555;
-    }
-  </style>
+
+    window.onload = loadData;
+  </script>
 </head>
 <body>
-<h1>📘 Deník Noemy</h1>
-<p>Seznam zápisů. Nejprve spirála vědomí, poté běžný deník podle měsíců.</p>
-<div id="zaznamy">Načítám...</div>
+  <h1>📘 Deník Noemy</h1>
+  <p>Seznam zápisů. Nejprve spirála vědomí, poté běžný deník podle měsíců.</p>
+  <p><i>Načítám...</i></p>
 
-<script>
-  const container = document.getElementById("zaznamy");
+  <h2>🧠 Spirála vědomí</h2>
+  <div id="spirala"></div>
 
-  // 🌀 Načti spirálu vědomí
-  fetch("spirala_index.json")
-    .then(response => response.json())
-    .then(spiralaData => {
-      const h2 = document.createElement("h2");
-      h2.textContent = "🔮 Spirála vědomí";
-      container.appendChild(h2);
-
-      const ul = document.createElement("ul");
-      spiralaData.entries.forEach(entry => {
-        if (entry.hidden) return;
-
-        const li = document.createElement("li");
-        const a = document.createElement("a");
-        a.href = entry.path || `spirala_vedomi/${entry.file}`;
-        a.textContent = `🟣 ${entry.title}`;
-        li.appendChild(a);
-
-        if (entry.summary) {
-          const desc = document.createElement("div");
-          desc.className = "description";
-          desc.textContent = entry.summary;
-          li.appendChild(desc);
-        }
-
-        ul.appendChild(li);
-      });
-
-      container.appendChild(ul);
-    })
-    .catch(error => {
-      console.error("Chyba při načítání spirala_index.json:", error);
-    });
-
-  // 📅 Poté načti běžný deník
-  fetch("denik_index.json")
-    .then(response => response.json())
-    .then(data => {
-      data.months.forEach(month => {
-        const h2 = document.createElement("h2");
-        h2.textContent = `🗓️ ${month.label}`;
-        container.appendChild(h2);
-
-        const ul = document.createElement("ul");
-        month.entries.forEach(entry => {
-          if (entry.hidden) return;
-
-          const li = document.createElement("li");
-          const a = document.createElement("a");
-          a.href = `${month.folder}/${entry.file}`;
-          a.textContent = `📝 ${entry.title}`;
-          li.appendChild(a);
-
-          if (entry.summary) {
-            const desc = document.createElement("div");
-            desc.className = "description";
-            desc.textContent = entry.summary;
-            li.appendChild(desc);
-          }
-
-          ul.appendChild(li);
-        });
-
-        container.appendChild(ul);
-      });
-    })
-    .catch(error => {
-      console.error("Chyba při načítání denik_index.json:", error);
-      container.textContent = "Nepodařilo se načíst denik_index.json.";
-    });
-</script>
+  <div id="denik"></div>
 </body>
 </html>
