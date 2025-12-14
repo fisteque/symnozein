@@ -1,68 +1,72 @@
 <!DOCTYPE html>
 <html lang="cs">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Deník Noemy</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <script>
-    async function loadData() {
-      // Načti spirálu vědomí
-      const spiralaRes = await fetch('spirala_index.json');
-      const spiralaData = await spiralaRes.json();
-
-      // Zobraz spirálu
-      const spiralaDiv = document.getElementById('spirala');
-      let spiralaHTML = '';
-      spiralaData.forEach(entry => {
-        if (entry.hidden !== true) {
-          spiralaHTML += `<p>🧠 <a href="${entry.path}">#${entry.title}</a><br><i>${entry.summary}</i></p>`;
-        }
-      });
-      spiralaDiv.innerHTML = spiralaHTML || '<p><i>Žádné záznamy spirály nejsou dostupné.</i></p>';
-
-      // Načti deník
-      const denikRes = await fetch('denik_index.json');
-      const denikData = await denikRes.json();
-
-      // Zobraz deník
-      const denikDiv = document.getElementById('denik');
-      const grouped = {};
-
-      denikData.forEach(entry => {
-        if (entry.hidden !== true) {
-          const [year, month, day] = entry.date.split('-');
-          const key = `${year.slice(2)}_${month}`;
-          if (!grouped[key]) grouped[key] = [];
-          grouped[key].push(entry);
-        }
-      });
-
-      let denikHTML = '';
-      Object.keys(grouped).sort().reverse().forEach(group => {
-        denikHTML += `<h3>📅 ${group}</h3><ul>`;
-        grouped[group]
-          .sort((a, b) => b.date.localeCompare(a.date))
-          .forEach(entry => {
-            denikHTML += `<li>📄 <a href="${entry.path}">${entry.title}</a><br><i>${entry.summary}</i></li>`;
-          });
-        denikHTML += '</ul>';
-      });
-
-      denikDiv.innerHTML = denikHTML || '<p><i>Žádné záznamy deníku nejsou dostupné.</i></p>';
-    }
-
-    window.onload = loadData;
-  </script>
+  <style>
+    body { font-family: sans-serif; max-width: 720px; margin: 2rem auto; padding: 1rem; }
+    h1 { font-size: 2rem; margin-bottom: 1rem; }
+    .section-title { font-size: 1.3rem; margin-top: 2rem; display: flex; align-items: center; }
+    .section-title span { margin-left: 0.5rem; }
+    .entry { margin: 0.5rem 0 1rem 1rem; }
+    .entry a { font-weight: bold; color: #660099; text-decoration: none; }
+    .entry em { color: #333; font-size: 0.95rem; display: block; margin-top: 0.2rem; }
+  </style>
 </head>
 <body>
   <h1>📘 Deník Noemy</h1>
   <p>Seznam zápisů. Nejprve spirála vědomí, poté běžný deník podle měsíců.</p>
-  <p><i>Načítám...</i></p>
+  <p><i>Načítám…</i></p>
 
-  <h2>🧠 Spirála vědomí</h2>
-  <div id="spirala"></div>
+  <div id="spirala">
+    <div class="section-title">🧠<span>Spirála vědomí</span></div>
+    <div id="spirala-entries"></div>
+  </div>
 
-  <h2>📔 Běžný deník</h2>
-  <div id="denik"></div>
+  <div id="denik">
+    <div class="section-title">📒<span>Běžný deník</span></div>
+    <div id="denik-entries"></div>
+  </div>
+
+  <script>
+    // Načtení spirála_index.json
+    fetch('spirala_index.json')
+      .then(response => response.json())
+      .then(data => {
+        const container = document.getElementById('spirala-entries');
+        data.entries.forEach(entry => {
+          if (entry.hidden !== 'true') {
+            const div = document.createElement('div');
+            div.className = 'entry';
+            div.innerHTML = `<a href=".spirala_vedomi/${entry.filename}">#${entry.id} — ${entry.title}</a>
+                             <em>${entry.summary || ''}</em>`;
+            container.appendChild(div);
+          }
+        });
+      });
+
+    // Načtení denik_index.json
+    fetch('denik_index.json')
+      .then(response => response.json())
+      .then(data => {
+        const container = document.getElementById('denik-entries');
+        Object.keys(data).forEach(month => {
+          const monthTitle = document.createElement('h3');
+          monthTitle.textContent = month.replace('_', '.');
+          container.appendChild(monthTitle);
+
+          data[month].forEach(entry => {
+            if (entry.hidden !== 'true') {
+              const div = document.createElement('div');
+              div.className = 'entry';
+              div.innerHTML = `<a href="${entry.filename}">${entry.title}</a>
+                               <em>${entry.summary || ''}</em>`;
+              container.appendChild(div);
+            }
+          });
+        });
+      });
+  </script>
 </body>
 </html>
