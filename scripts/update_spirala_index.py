@@ -23,13 +23,15 @@ def extract_metadata(filepath):
         meta_hidden = soup.find("meta", attrs={"name": "hidden"})
         hidden = meta_hidden["content"].lower() == "true" if meta_hidden else False
 
+        rel_path = os.path.relpath(filepath, start="denik").replace("\\", "/")
+
         return {
             "title": title,
             "summary": summary,
             "tags": tags,
             "date": date,
             "file": os.path.basename(filepath),
-            "path": os.path.relpath(filepath, start="denik").replace("\\", "/"),
+            "path": rel_path,  # <-- důležité pole navíc
             "hidden": hidden
         }
 
