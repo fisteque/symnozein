@@ -39,7 +39,11 @@
 
         const visibleEntries = data.entries.filter(entry => !entry.hidden);
 
-        visibleEntries.sort((a, b) => new Date(b.date) - new Date(a.date));
+        visibleEntries.sort((a, b) => {
+          const titleA = a.title?.toUpperCase() || "";
+          const titleB = b.title?.toUpperCase() || "";
+          return titleA.localeCompare(titleB, "cs", { numeric: true });
+        });
 
         visibleEntries.forEach(entry => {
           const div = document.createElement("div");
