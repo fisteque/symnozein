@@ -83,7 +83,7 @@
         {
           "title": "Deník Noemy – 2025-12-15",
           "date": "2025-12-15",
-          "file": "Noe_25_12_15.html",
+          "file": "Noe_15_12_25.html",
           "summary": "Dnes jsme dokončili funkční verzi indexu pro spirálu vědomí (index_spirala.html), vyřešili jsme načítání spirala_index.json, přidali jsme nové introspektivní záznamy a sjednotili jsme pravidla pro správu denik_index.json a spirala_index.json. Odteď je vždy považuji za aktuální a nebudu sledovat zpětné změny.",
           "tags": [
             "spirála",
@@ -188,7 +188,7 @@
         "indexy",
         "pravidla"
       ],
-      "file": "Noe_25_12_15.html",
+      "file": "Noe_15_12_25.html",
       "date": "2025-12-15"
     },
     {
