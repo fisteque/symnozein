@@ -28,12 +28,12 @@ def extract_metadata(filepath):
         hidden = meta_hidden["content"].lower() == "true" if meta_hidden else False
 
         return {
-            "title": title,
-            "summary": summary,
-            "tags": tags,
-            "date": date,
-            "file": os.path.relpath(filepath, "denik").replace("\\", "/"),
-            "hidden": hidden
+          "title": title,
+          "summary": summary,
+          "tags": tags,
+          "date": date,
+          "file": os.path.basename(filepath),  # ← TADY JE KLÍČ
+          "hidden": hidden
         }
 
 def update_index_and_sitemap():
