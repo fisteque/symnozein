@@ -2,10 +2,12 @@ name: Update index.html and sitemap.xml
 
 on:
   push:
+    branches: [main]
     paths:
+      - 'README_cz.html'
       - 'denik/denik_index.json'
       - 'Reinterpretace_13/13_index.json'
-      - 'README_cz.html'
+
 
 jobs:
   build:
