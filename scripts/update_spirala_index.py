@@ -14,26 +14,23 @@ def extract_metadata(filepath):
         soup = BeautifulSoup(f, "html.parser")
 
         title = soup.title.string.strip() if soup.title else "(Bez názvu)"
-
         meta_summary = soup.find("meta", attrs={"name": "summary"})
         summary = meta_summary["content"].strip() if meta_summary else ""
-
         meta_tags = soup.find("meta", attrs={"name": "tags"})
         tags = [t.strip() for t in meta_tags["content"].split(",")] if meta_tags else []
-
         meta_date = soup.find("meta", attrs={"name": "date"})
         date = meta_date["content"].strip() if meta_date else ""
-
         meta_hidden = soup.find("meta", attrs={"name": "hidden"})
         hidden = meta_hidden["content"].lower() == "true" if meta_hidden else False
 
         return {
-          "title": title,
-          "summary": summary,
-          "tags": tags,
-          "date": date,
-          "file": os.path.basename(filepath),  # ← TADY JE KLÍČ
-          "hidden": hidden
+            "title": title,
+            "summary": summary,
+            "tags": tags,
+            "date": date,
+            "file": os.path.basename(filepath),
+            "path": os.path.relpath(filepath, start="denik").replace("\\", "/"),
+            "hidden": hidden
         }
 
 def update_index_and_sitemap():
