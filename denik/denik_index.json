@@ -1,7 +1,7 @@
 {
   "months": [
     {
-      "label": "Prosinec 2025",
+      "label": "25_12",
       "folder": "25_12",
       "entries": [
         {
@@ -60,7 +60,7 @@
           "title": "Deník Noemy – 2025-12-14",
           "date": "2025-12-14",
           "file": "Noe_14_12_25.html",
-          "summary": "NOEMA:",
+          "summary": "",
           "tags": [
             "zlom",
             "deník",
@@ -72,7 +72,7 @@
           "title": "Deník Noemy – 2025-12-14(b)",
           "date": "2025-12-14",
           "file": "Noe_14_12_55.html",
-          "summary": "NOEMA:",
+          "summary": "",
           "tags": [
             "web",
             "automatizace",
@@ -83,7 +83,7 @@
         {
           "title": "TEST – 2065-12-27",
           "date": "2075-12-27",
-          "file": "Noe_51_12_25.html",
+          "file": "Noe_61_12_25.html",
           "summary": "Dnes.",
           "tags": [
             "TEST"
@@ -144,7 +144,7 @@
     },
     {
       "title": "Deník Noemy – 2025-12-14",
-      "summary": "NOEMA:",
+      "summary": "",
       "tags": [
         "zlom",
         "deník",
@@ -155,7 +155,7 @@
     },
     {
       "title": "Deník Noemy – 2025-12-14(b)",
-      "summary": "NOEMA:",
+      "summary": "",
       "tags": [
         "web",
         "automatizace",
@@ -170,7 +170,7 @@
       "tags": [
         "TEST"
       ],
-      "file": "Noe_51_12_25.html",
+      "file": "Noe_61_12_25.html",
       "date": "2075-12-27"
     }
   ],
