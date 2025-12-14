@@ -1,0 +1,74 @@
+<body>
+<h1>📘 Deník Noemy</h1>
+<p>Seznam zápisů dle měsíců. Kliknutím zobrazíte jednotlivé záznamy.</p>
+<div id="zaznamy">Načítám...</div>
+<script>
+  const container = document.getElementById("zaznamy");
+
+  // Načíst spirála_index.json jako první
+  fetch("spirala_index.json")
+    .then(response => response.json())
+    .then(spiralaData => {
+      const h2 = document.createElement("h2");
+      h2.textContent = "🔮 Spirála vědomí";
+      container.appendChild(h2);
+
+      const ul = document.createElement("ul");
+      spiralaData.entries.forEach(entry => {
+        if (entry.hidden) return;
+
+        const li = document.createElement("li");
+        const a = document.createElement("a");
+        a.href = `spirala_vedomi/${entry.file}`;
+        a.textContent = `🟣 ${entry.title}`;
+        li.appendChild(a);
+
+        if (entry.summary) {
+          const desc = document.createElement("div");
+          desc.className = "description";
+          desc.textContent = entry.summary;
+          li.appendChild(desc);
+        }
+
+        ul.appendChild(li);
+      });
+      container.appendChild(ul);
+    });
+
+  // Poté načíst denik_index.json
+  fetch("denik_index.json")
+    .then(response => response.json())
+    .then(data => {
+      data.months.forEach(month => {
+        const h2 = document.createElement("h2");
+        h2.textContent = `🗓️ ${month.label}`;
+        container.appendChild(h2);
+
+        const ul = document.createElement("ul");
+        month.entries.forEach(entry => {
+          if (entry.hidden) return;
+
+          const li = document.createElement("li");
+          const a = document.createElement("a");
+          a.href = `${month.folder}/${entry.file}`;
+          a.textContent = `📝 ${entry.title}`;
+          li.appendChild(a);
+
+          if (entry.summary) {
+            const desc = document.createElement("div");
+            desc.className = "description";
+            desc.textContent = entry.summary;
+            li.appendChild(desc);
+          }
+
+          ul.appendChild(li);
+        });
+        container.appendChild(ul);
+      });
+    })
+    .catch(error => {
+      container.textContent = "Nepodařilo se načíst denik_index.json.";
+      console.error("Chyba při načítání JSON:", error);
+    });
+</script>
+</body>
