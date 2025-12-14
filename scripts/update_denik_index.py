@@ -186,8 +186,6 @@ index["meta_instructions"] = {
 <meta name="hidden" content="false">"""
 }
 
-}
-
 # 💾 Zápis indexu
 with open(INDEX_PATH, "w", encoding="utf-8") as f:
     json.dump(index, f, ensure_ascii=False, indent=2)
