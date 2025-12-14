@@ -4,10 +4,10 @@ from bs4 import BeautifulSoup
 from datetime import datetime
 from xml.etree.ElementTree import Element, SubElement, ElementTree
 
-SPIRALA_DIR = "denik/.spirala_vedomi"
+SPIRALA_DIR = "denik/spirala_vedomi"
 INDEX_FILE = "denik/spirala_index.json"
 SITEMAP_FILE = "denik/sitemap_spirala.xml"
-BASE_URL = "https://fisteque.github.io/symnozein/denik/.spirala_vedomi/"
+BASE_URL = "https://fisteque.github.io/symnozein/denik/spirala_vedomi/"
 
 def extract_metadata(filepath):
     with open(filepath, "r", encoding="utf-8") as f:
