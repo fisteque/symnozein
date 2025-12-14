@@ -5,7 +5,7 @@ on:
     branches:
       - main
     paths:
-      - 'denik/.spirala_vedomi/**'
+      - 'denik/spirala_vedomi/**'
       - '.github/workflows/update_spirala_index.yml'
       - 'scripts/update_spirala_index.py'
 
