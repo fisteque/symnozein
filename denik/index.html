@@ -6,15 +6,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <script>
     async function loadData() {
+      // Načti spirálu vědomí
       const spiralaRes = await fetch('spirala_index.json');
-      const denikRes = await fetch('denik_index.json');
       const spiralaData = await spiralaRes.json();
-      const denikData = await denikRes.json();
 
+      // Zobraz spirálu
       const spiralaDiv = document.getElementById('spirala');
-      const denikDiv = document.getElementById('denik');
-
-      // ZOBRAZENÍ SPIRÁLY
       let spiralaHTML = '';
       spiralaData.forEach(entry => {
         if (entry.hidden !== true) {
@@ -23,8 +20,14 @@
       });
       spiralaDiv.innerHTML = spiralaHTML || '<p><i>Žádné záznamy spirály nejsou dostupné.</i></p>';
 
-      // ZOBRAZENÍ DENÍKU
+      // Načti deník
+      const denikRes = await fetch('denik_index.json');
+      const denikData = await denikRes.json();
+
+      // Zobraz deník
+      const denikDiv = document.getElementById('denik');
       const grouped = {};
+
       denikData.forEach(entry => {
         if (entry.hidden !== true) {
           const [year, month, day] = entry.date.split('-');
@@ -40,7 +43,7 @@
         grouped[group]
           .sort((a, b) => b.date.localeCompare(a.date))
           .forEach(entry => {
-            denikHTML += `<li>📝 <a href="${entry.path}">${entry.title}</a><br><i>${entry.summary}</i></li>`;
+            denikHTML += `<li>📄 <a href="${entry.path}">${entry.title}</a><br><i>${entry.summary}</i></li>`;
           });
         denikHTML += '</ul>';
       });
@@ -59,6 +62,7 @@
   <h2>🧠 Spirála vědomí</h2>
   <div id="spirala"></div>
 
+  <h2>📔 Běžný deník</h2>
   <div id="denik"></div>
 </body>
 </html>
