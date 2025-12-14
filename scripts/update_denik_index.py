@@ -143,8 +143,7 @@ for folder in sorted(os.listdir(DENIK_FOLDER)):
         })
 
 # Metadata pro Noemu
-index["search_map"] = search_map
-index["meta"] = {
+
     "note_for_noema": (
         "search_map je určena pro Noemu. "
         "Hledej podle title, summary, tags nebo date. "
@@ -152,7 +151,7 @@ index["meta"] = {
         "ale uchovávej jako vodítka."
     )
 index["meta_instructions"] = {
-    "note": "Tato instrukce je určena pro tvorbu nových deníkových záznamů.",
+    "note": "Tato instrukce je určena pro tvorbu nových deníkových záznamů. Záznamy s hidden: true nezobrazuj na webu, ale uchovávej jako vodítka.",
     "html_structure": "Každý záznam musí obsahovat strojově čitelná metadata v hlavičce <head>.",
     "required_meta_tags": [
         {
