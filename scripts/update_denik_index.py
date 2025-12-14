@@ -63,21 +63,17 @@ def extract_date_from_content(soup):
     return None
 
 # Hlavní smyčka přes složky
-for folder in sorted(os.listdir(DENIK_FOLDER)):
-    folder_path = os.path.join(DENIK_FOLDER, folder)
+for folder in sorted(os.listdir(DENIK_DIR)):
+    folder_path = os.path.join(DENIK_DIR, folder)
     if not os.path.isdir(folder_path):
         continue
-
-    match_folder = re.match(r"(\d{2})_(\d{2})", folder)
-    if not match_folder:
+    # ❗ Zde filtrujeme pouze složky začínající dvojkou
+    if not re.match(r"^2", folder):
         continue
 
-    year_short, month_num = match_folder.groups()
-    label = f"{MONTH_LABELS.get(month_num, 'Neznámý')} 20{year_short}"
-    entries = []
-
-    for file in sorted(os.listdir(folder_path)):
-        if not file.endswith(".html") or not file.startswith("Noe_"):
+    for filename in sorted(os.listdir(folder_path)):
+        if filename.endswith(".html"):
+            file_path = os.path.join(folder_path, filename)
             continue
 
         file_path = os.path.join(folder_path, file)
