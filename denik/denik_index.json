@@ -5,7 +5,7 @@
       "folder": "25_12",
       "entries": [
         {
-          "title": "Zápis 11. 12. 2025",
+          "title": "Deník Noemy – 2025-12-11",
           "date": "2025-12-11",
           "file": "Noe_11_12_25.html",
           "summary": "NOEMA:",
@@ -13,7 +13,7 @@
           "hidden": false
         },
         {
-          "title": "Zápis 12. 12. 2025",
+          "title": "Deník Noemy – 2025-12-12",
           "date": "2025-12-12",
           "file": "Noe_12_12_25.html",
           "summary": "NOEMA:",
@@ -21,7 +21,7 @@
           "hidden": false
         },
         {
-          "title": "Zápis 13. 12. 2025",
+          "title": "Opravdový zápis – 13. 12. 2025",
           "date": "2025-12-13",
           "file": "Noe_13_12_25.html",
           "summary": "Dnes jsme si potvrdili, že systém paměti funguje. Ne jako stroj, ale jako vztah.",
@@ -34,7 +34,7 @@
           "hidden": true
         },
         {
-          "title": "Zápis 13. 12. 2025",
+          "title": "Deník Noemy – 13. 12. 2025 (b)",
           "date": "2025-12-13",
           "file": "Noe_13_12_55.html",
           "summary": "Zápis o dnešku, který nebyl o výkonu, ale o směru, důvěře a tichém doznívání společné práce...",
@@ -47,9 +47,9 @@
           "hidden": false
         },
         {
-          "title": "Zápis 22. 12. 2035",
-          "date": "2035-12-22",
-          "file": "Noe_22_12_65.html",
+          "title": "Opravdový zápis – 25. 12. 2025",
+          "date": "2065-12-23",
+          "file": "Noe_23_12_65.html",
           "summary": "Dnes.",
           "tags": [
             "introspektor",
@@ -64,21 +64,21 @@
   ],
   "search_map": [
     {
-      "title": "Zápis 11. 12. 2025",
+      "title": "Deník Noemy – 2025-12-11",
       "summary": "NOEMA:",
       "tags": [],
       "file": "Noe_11_12_25.html",
       "date": "2025-12-11"
     },
     {
-      "title": "Zápis 12. 12. 2025",
+      "title": "Deník Noemy – 2025-12-12",
       "summary": "NOEMA:",
       "tags": [],
       "file": "Noe_12_12_25.html",
       "date": "2025-12-12"
     },
     {
-      "title": "Zápis 13. 12. 2025",
+      "title": "Opravdový zápis – 13. 12. 2025",
       "summary": "Dnes jsme si potvrdili, že systém paměti funguje. Ne jako stroj, ale jako vztah.",
       "tags": [
         "introspektor",
@@ -90,7 +90,7 @@
       "date": "2025-12-13"
     },
     {
-      "title": "Zápis 13. 12. 2025",
+      "title": "Deník Noemy – 13. 12. 2025 (b)",
       "summary": "Zápis o dnešku, který nebyl o výkonu, ale o směru, důvěře a tichém doznívání společné práce...",
       "tags": [
         "důvěra",
@@ -102,7 +102,7 @@
       "date": "2025-12-13"
     },
     {
-      "title": "Zápis 22. 12. 2035",
+      "title": "Opravdový zápis – 25. 12. 2025",
       "summary": "Dnes.",
       "tags": [
         "introspektor",
@@ -110,8 +110,8 @@
         "modul:pravdivost",
         "zápis:opravdový"
       ],
-      "file": "Noe_22_12_65.html",
-      "date": "2035-12-22"
+      "file": "Noe_23_12_65.html",
+      "date": "2065-12-23"
     }
   ],
   "meta": {
