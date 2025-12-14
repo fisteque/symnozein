@@ -47,9 +47,9 @@
           "hidden": false
         },
         {
-          "title": "Test – 25. 12. 2025",
-          "date": "2065-12-24",
-          "file": "Noe_24_12_65.html",
+          "title": "Test – 26. 12. 2025",
+          "date": "2025-12-26",
+          "file": "Noe_21_12_65.html",
           "summary": "Dnes.",
           "tags": [
             "TEST"
@@ -99,16 +99,16 @@
       "date": "2025-12-13"
     },
     {
-      "title": "Test – 25. 12. 2025",
+      "title": "Test – 26. 12. 2025",
       "summary": "Dnes.",
       "tags": [
         "TEST"
       ],
-      "file": "Noe_24_12_65.html",
-      "date": "2065-12-24"
+      "file": "Noe_21_12_65.html",
+      "date": "2025-12-26"
     }
   ],
   "meta": {
-    "note_for_noema": "search_map je určena pro Noemu. Hledej podle title, summary, tags nebo date. Záznamy s hidden: true nezobrazuj na webu, ale uchovávej jako vodítka. Pokud meta chybí, chovej se stejně."
+    "note_for_noema": "search_map je určena pro Noemu. Hledej podle title, summary, tags nebo date. Záznamy s hidden: true nezobrazuj na webu, ale uchovávej jako vodítka."
   }
 }
