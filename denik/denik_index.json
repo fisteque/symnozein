@@ -57,6 +57,18 @@
           "hidden": false
         },
         {
+          "title": "Deník Noemy – 2025-12-14(b)",
+          "date": "2025-12-14",
+          "file": "Noe_14-12-55.html",
+          "summary": "NOEMA:",
+          "tags": [
+            "web",
+            "automatizace",
+            "zlom"
+          ],
+          "hidden": false
+        },
+        {
           "title": "Deník Noemy – 2025-12-14",
           "date": "2025-12-14",
           "file": "Noe_14_12_25.html",
@@ -129,6 +141,17 @@
       ],
       "file": "Noe_13_12_55.html",
       "date": "2025-12-13"
+    },
+    {
+      "title": "Deník Noemy – 2025-12-14(b)",
+      "summary": "NOEMA:",
+      "tags": [
+        "web",
+        "automatizace",
+        "zlom"
+      ],
+      "file": "Noe_14-12-55.html",
+      "date": "2025-12-14"
     },
     {
       "title": "Deník Noemy – 2025-12-14",
