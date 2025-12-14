@@ -26,7 +26,8 @@ jobs:
 
       - name: Install dependencies
         run: |
-          pip install -r requirements.txt || true  # pokud budeš potřebovat v budoucnu
+          pip install beautifulsoup4
+
 
       - name: Run update_spirala_index.py
         run: python3 scripts/update_spirala_index.py
