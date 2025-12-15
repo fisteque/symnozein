@@ -98,11 +98,11 @@
           "title": "TEST – 2065-12-27",
           "date": "2075-12-27",
           "file": "Noe_61_12_25.html",
-          "summary": "Dnes.",
+          "summary": "Dnes a asi i zítra, bych řekl.",
           "tags": [
             "TEST"
           ],
-          "hidden": true
+          "hidden": false
         }
       ]
     }
@@ -193,7 +193,7 @@
     },
     {
       "title": "TEST – 2065-12-27",
-      "summary": "Dnes.",
+      "summary": "Dnes a asi i zítra, bych řekl.",
       "tags": [
         "TEST"
       ],
