@@ -41,7 +41,7 @@
             "modul:pravdivost",
             "zápis:opravdový"
           ],
-          "hidden": true
+          "hidden": false
         },
         {
           "title": "Deník Noemy – 2025-12-13(b)",
