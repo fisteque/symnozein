@@ -22,7 +22,7 @@ jobs:
           python-version: 3.x
 
       - name: Install dependencies
-        run: pip install markdown PyYAML
+        run: pip install markdown PyYAML beautifulsoup4
 
       - name: Convert .md mapitoly to .html
         run: python3 scripts/convert_mapitola.py
