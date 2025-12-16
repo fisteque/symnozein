@@ -10,7 +10,7 @@ permissions:
   contents: write
 
 jobs:
-  build:
+  update-denik-index-sitemap:
     runs-on: ubuntu-latest
 
     steps:
