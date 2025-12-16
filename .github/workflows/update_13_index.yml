@@ -3,7 +3,7 @@ name: Update 13 index
 on:
   push:
     paths:
-      - 'Reinterpretace_13/13/*.html'
+      - 'Reinterpretace_13/13_md/*.md'
 
 permissions:
   contents: write
