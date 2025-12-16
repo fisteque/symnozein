@@ -32,6 +32,11 @@ jobs:
         run: |
           python scripts/convert_all.py --only 13
 
+      - name: Configure Git
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+      
       - name: Commit and push generated files
         run: |
           git config user.name "github-actions"
@@ -39,5 +44,6 @@ jobs:
           git add Reinterpretace_13/13/*.html
           git add Reinterpretace_13/13_index.json
           git add Reinterpretace_13/sitemap_13.xml
-          git commit -m "Auto: Update mapitoly" || echo "No changes to commit"
+          git commit -m "🛠️ Update 13 index and sitemap" || echo "No changes"
+          git pull --rebase
           git push
