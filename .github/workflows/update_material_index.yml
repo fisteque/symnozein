@@ -5,15 +5,16 @@ on:
     paths:
       - 'Reinterpretace_13/material_md/**/*.md'
       - 'Reinterpretace_13/templates/template.html'
+      - '.github/workflows/update_13_index.yml'
       - 'scripts/update_material_index.py'
       - 'scripts/convert_all.py'
 
-
+permissions:
+      contents: write
+      
 jobs:
   build:
     runs-on: ubuntu-latest
-    permissions:
-      contents: write
 
     steps:
       - name: Checkout repository
