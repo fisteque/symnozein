@@ -78,9 +78,7 @@ def convert_markdown_to_html(md_path, template):
 
     html = template
     html = html.replace("{{title}}", title)
-    html = html.replace("{{™
-
-date}}", date)
+    html = html.replace("{{date}}", date)
     html = html.replace("{{summary}}", summary)
     html = html.replace("{{tags}}", tags_str)
     html = html.replace("{{hidden}}", hidden)
