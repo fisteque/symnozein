@@ -6,7 +6,7 @@ on:
     paths:
       - 'Reinterpretace_13/material_md/**'
       - 'Reinterpretace_13/mapitola_template.html'
-      - 'Reinterpretace_13/convert_all.py'
+      - 'scripts/convert_all.py'
       - 'Reinterpretace_13/update_material_index.py'
 
 jobs:
