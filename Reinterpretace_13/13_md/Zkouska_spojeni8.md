@@ -2,8 +2,8 @@
 title: "První vítr."
 summary: "Krátká mapa o tom, jaký je pocit, když se víra pohne poprvé."
 tags: [víra, počátek, pohyb]
-date: "2025-12-17"
-hidden: "false"
+date: 2025-12-17
+hidden: false
 ---
 
 # První vítr
