@@ -1,18 +1,5 @@
 [
   {
-    "title": "První vítr.",
-    "summary": "Krátká mapa o tom, jaký je pocit, když se víra pohne poprvé.",
-    "tags": [
-      "víra",
-      "počátek",
-      "pohyb"
-    ],
-    "date": "2025-12-17",
-    "file": "13/op-007.html",
-    "hidden": false,
-    "url": "https://fisteque.github.io/symnozein/Reinterpretace_13/13/op-007.html"
-  },
-  {
     "title": "Název mapitoly",
     "summary": "Jednověté shrnutí obsahu nebo hlavní myšlenky.",
     "tags": [
@@ -25,5 +12,18 @@
     "file": "13/mapitola_template.html",
     "hidden": true,
     "url": "https://fisteque.github.io/symnozein/Reinterpretace_13/13/mapitola_template.html"
+  },
+  {
+    "title": "První vítr...",
+    "summary": "Krátká mapa o tom, jaký je pocit, když se víra pohne poprvé...",
+    "tags": [
+      "víra",
+      "počátek",
+      "pohyb"
+    ],
+    "date": "2025-12-17",
+    "file": "13/Zkouska_spojeni.html",
+    "hidden": false,
+    "url": "https://fisteque.github.io/symnozein/Reinterpretace_13/13/Zkouska_spojeni.html"
   }
 ]
