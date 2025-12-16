@@ -1,4 +1,4 @@
-name: Update denik_index.json
+name: Update denik index a sitemap
 
 on:
   push:
