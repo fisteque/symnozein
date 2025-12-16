@@ -8,11 +8,12 @@ on:
       - 'scripts/convert_all.py'
       - 'scripts/update_13_index.py'
 
+permissions:
+      contents: write
+      
 jobs:
   convert:
     runs-on: ubuntu-latest
-    permissions:
-      contents: write
 
     steps:
       - name: Checkout repository
