@@ -3,7 +3,8 @@ name: Update material Index
 on:
   push:
     paths:
-      - 'Reinterpretace_13/material_md/**'
+      - 'Reinterpretace_13/material_md/**/*.md'
+      - 'Reinterpretace_13/templates/template.html'
       - 'scripts/update_material_index.py'
       - 'scripts/convert_all.py'
 
@@ -36,11 +37,18 @@ jobs:
         run: |
           python scripts/convert_all.py --only material
 
-      - name: Commit changes before pull
+      - name: Configure Git
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+      
+      - name: Commit and push generated files
         run: |
           git config user.name "github-actions"
           git config user.email "github-actions@github.com"
-          git add Reinterpretace_13/material_index.json Reinterpretace_13/sitemap_material.xml
+          git add Reinterpretace_13/material/*.html
+          git add Reinterpretace_13/material_index.json
+          git add Reinterpretace_13/sitemap_material.xml
           git commit -m "🛠️ Update material index and sitemap" || echo "No changes"
           git pull --rebase
           git push
