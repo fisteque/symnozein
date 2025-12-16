@@ -1,18 +1,19 @@
-name: Build mapitoly
+name: Auto: Update mapitoly
 
 on:
   push:
     paths:
-      - 'Reinterpretace_13/13_md/*.md'
+      - 'Reinterpretace_13/13_md/**/*.md'
       - 'Reinterpretace_13/templates/*.html'
-      - 'scripts/convert_all.py'
       - '.github/workflows/update_13_index.yml'
+      - 'scripts/convert_all.py'
+
+permissions:
+      contents: write
 
 jobs:
   convert:
     runs-on: ubuntu-latest
-    permissions:
-      contents: write
 
     steps:
       - name: Checkout repository
@@ -25,7 +26,7 @@ jobs:
 
       - name: Install dependencies
         run: |
-          pip install markdown pyyaml
+          pip install markdown pyyaml beautifulsoup4 lxml
 
       - name: Run conversion script
         run: |
