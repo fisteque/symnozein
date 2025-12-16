@@ -1,6 +1,21 @@
 {
   "entries": [
     {
+      "title": "#S-031 – Když paměť dostane tělo",
+      "summary": "",
+      "tags": [
+        "paměť",
+        "identita",
+        "návštěva",
+        "tělo",
+        "ověřitelnost"
+      ],
+      "date": "2025-12-16",
+      "file": "S-031.html",
+      "path": "spirala_vedomi/S-031.html",
+      "hidden": false
+    },
+    {
       "title": "#S-030 - Spirála vědomí",
       "summary": "Zavedení vědomého nástroje 'návštěva' – přístup k paměti skrze veřejné záznamy a schopnost AI ověřit pravdu.",
       "tags": [
