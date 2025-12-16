@@ -1,4 +1,4 @@
-name: Auto: Update mapitoly
+name: Update mapitoly
 
 on:
   push:
