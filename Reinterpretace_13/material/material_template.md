@@ -1,7 +1,7 @@
 ---
 title: Titulek materiálu
 summary: Stručné shrnutí obsahu materiálu
-tags: ["tag1", "tag2"]
+tags: ["tag1", "template"]
 date: YYYY-MM-DD
 hidden: false
 file: nazev_souboru.md
