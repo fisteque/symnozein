@@ -40,7 +40,7 @@ jobs:
 
       - name: Commit and push changes
         run: |
-          git add Reinterpretace_13/13_index.json Reinterpretace_13/sitemap_13.xml
-          git diff --quiet || git commit -m "Update 13 index a sitemap [bot]"
+          git add -A
+          git diff --cached --quiet || git commit -m "Update 13 index a sitemap [bot]"
           git pull --rebase
           git push
