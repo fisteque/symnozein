@@ -1,1 +1,13 @@
-[]
+[
+  {
+    "title": "{{title}}",
+    "summary": "{{summary}}",
+    "tags": [
+      "{{tags}}"
+    ],
+    "date": "{{date}}",
+    "file": "material/material_template.html",
+    "hidden": false,
+    "url": "https://fisteque.github.io/symnozein/Reinterpretace_13/material/material_template.html"
+  }
+]
