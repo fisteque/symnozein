@@ -9,6 +9,11 @@ INDEX_FILE = "Reinterpretace_13/13_index.json"
 SITEMAP_FILE = "Reinterpretace_13/sitemap_13.xml"
 BASE_URL = "https://fisteque.github.io/symnozein/Reinterpretace_13/"
 
+def get_meta_content(soup, name):
+    tag = soup.find("meta", attrs={"name": name})
+    if tag and tag.has_attr("content"):
+        return tag["content"].strip()
+    return ""
 
 def extract_metadata(filepath):
     with open(filepath, "r", encoding="utf-8") as f:
@@ -16,17 +21,12 @@ def extract_metadata(filepath):
 
         title = soup.title.string.strip() if soup.title else "(Bez názvu)"
 
-        meta_summary = soup.find("meta", attrs={"name": "summary"})
-        summary = meta_summary["content"].strip() if meta_summary else ""
+        summary = get_meta_content(soup, "summary")
+        tags_raw = get_meta_content(soup, "tags")
+        tags = [t.strip() for t in tags_raw.split(",")] if tags_raw else []
 
-        meta_tags = soup.find("meta", attrs={"name": "tags"})
-        tags = [t.strip() for t in meta_tags["content"].split(",")] if meta_tags else []
-
-        meta_date = soup.find("meta", attrs={"name": "date"})
-        date = meta_date["content"].strip() if meta_date else ""
-
-        meta_hidden = soup.find("meta", attrs={"name": "hidden"})
-        hidden = meta_hidden["content"].lower() == "true" if meta_hidden else False
+        date = get_meta_content(soup, "date")
+        hidden = get_meta_content(soup, "hidden").lower() == "true"
 
         rel_path = os.path.relpath(filepath, "Reinterpretace_13").replace("\\", "/")
         url = BASE_URL + rel_path
@@ -40,7 +40,6 @@ def extract_metadata(filepath):
             "hidden": hidden,
             "url": url
         }
-
 
 def update_index_and_sitemap():
     index = []
