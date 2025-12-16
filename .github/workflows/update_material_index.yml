@@ -3,7 +3,7 @@ name: Update material_index.json and sitemap_material.xml
 on:
   push:
     paths:
-      - 'Reinterpretace_13/material/*.html'
+      - 'Reinterpretace_13/material_md/*.html'
       
 permissions:
       contents: write
