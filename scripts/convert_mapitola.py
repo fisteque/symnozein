@@ -37,7 +37,7 @@ def convert_markdown_to_html(md_path, template):
         "title": metadata.get("title", ""),
         "summary": metadata.get("summary", ""),
         "tags": tags,
-        "date": metadata.get("date", ""),
+        "date": str(metadata.get("date", "")),  # <-- Tady je oprava
         "hidden": str(metadata.get("hidden", False)).lower(),
         "body": html_body
     }
