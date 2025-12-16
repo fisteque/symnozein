@@ -36,9 +36,10 @@ jobs:
         run: |
           git config --global user.name "github-actions[bot]"
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
-
+      
       - name: Commit and push changes
         run: |
           git add denik/spirala_index.json denik/sitemap_spirala.xml
           git commit -m "Update spirála index a sitemap [bot]" || echo "No changes to commit"
+          git pull --rebase
           git push
