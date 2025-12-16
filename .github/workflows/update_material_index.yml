@@ -1,34 +1,41 @@
-name: Update material index
+name: Update material index and sitemap
 
 on:
   push:
     paths:
-      - "Reinterpretace_13/material/*.md"
+      - "Reinterpretace_13/material/**.md"
+      - ".github/workflows/update_material_index.yml"
       - "scripts/update_material_index.py"
 
 jobs:
-  update-index:
+  build:
     runs-on: ubuntu-latest
+
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
+        with:
+          persist-credentials: false
 
       - name: Set up Python
-        uses: actions/setup-python@v4
+        uses: actions/setup-python@v5
         with:
-          python-version: '3.x'
+          python-version: "3.x"
 
       - name: Install dependencies
-        run: |
-          pip install pyyaml
+        run: pip install pyyaml
 
-      - name: Run script
+      - name: Run update_material_index.py
         run: python3 scripts/update_material_index.py
 
-      - name: Commit and push changes
+      - name: Commit changes
         run: |
-          git config user.name "github-actions[bot]"
-          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git config user.name "github-actions"
+          git config user.email "github-actions@github.com"
           git add Reinterpretace_13/material_index.json Reinterpretace_13/sitemap_material.xml
           git diff --quiet && git diff --staged --quiet || git commit -m "Automatická aktualizace material indexu [bot]"
-          git push
+
+      - name: Push changes
+        uses: ad-m/github-push-action@v0.6.0
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
