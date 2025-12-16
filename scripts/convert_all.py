@@ -57,23 +57,27 @@ def process_target(key):
     print(f"\n🔄 Zpracovávám složku: {key}")
     template = load_template(target["template_path"])
 
+    input_files = [f for f in os.listdir(target["input_dir"]) if f.endswith(".md")]
+    if not input_files:
+        print(f"⚠️ Ve složce {target['input_dir']} nejsou žádné .md soubory. Přeskakuji mazání a generování.")
+        return
+
     os.makedirs(target["output_dir"], exist_ok=True)
     for file in os.listdir(target["output_dir"]):
         if file.endswith(".html") and file != os.path.basename(target["template_path"]):
             os.remove(os.path.join(target["output_dir"], file))
     print(f"🧹 Vyčištěno: {target['output_dir']}")
 
-    for filename in os.listdir(target["input_dir"]):
-        if filename.endswith(".md"):
-            md_path = os.path.join(target["input_dir"], filename)
-            try:
-                html_content, output_filename = convert_markdown_to_html(md_path, template)
-                output_path = os.path.join(target["output_dir"], output_filename)
-                with open(output_path, "w", encoding="utf-8") as f:
-                    f.write(html_content)
-                print(f"✅ Vygenerováno: {output_filename}")
-            except Exception as e:
-                print(f"⚠️ Chyba při zpracování {filename}: {e}")
+    for filename in input_files:
+        md_path = os.path.join(target["input_dir"], filename)
+        try:
+            html_content, output_filename = convert_markdown_to_html(md_path, template)
+            output_path = os.path.join(target["output_dir"], output_filename)
+            with open(output_path, "w", encoding="utf-8") as f:
+                f.write(html_content)
+            print(f"✅ Vygenerováno: {output_filename}")
+        except Exception as e:
+            print(f"⚠️ Chyba při zpracování {filename}: {e}")
 
 def main():
     if len(sys.argv) == 3 and sys.argv[1] == "--only":
@@ -84,7 +88,7 @@ def main():
             print(f"❌ Neznámý target: {key}")
             sys.exit(1)
     else:
-        print("❌ Použití: python convert_all2.py --only [13|material]")
+        print("❌ Použití: python convert_all.py --only [13|material]")
         sys.exit(1)
 
 if __name__ == "__main__":
