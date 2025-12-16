@@ -3,7 +3,7 @@ name: Update mapitoly a index
 on:
   push:
     paths:
-      - 'Reinterpretace_13/md/**'
+      - 'Reinterpretace_13/13_md/**'
       - 'Reinterpretace_13/mapitola_template.html'
       - 'scripts/convert_all.py'
       - 'scripts/update_13_index.py'
