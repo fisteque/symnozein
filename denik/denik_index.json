@@ -116,7 +116,7 @@
           "tags": [
             "TEST"
           ],
-          "hidden": false
+          "hidden": true
         }
       ]
     }
