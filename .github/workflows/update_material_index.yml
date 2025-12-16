@@ -3,11 +3,8 @@ name: Update material_index.json and sitemap_material.xml
 on:
   push:
     paths:
-      - 'Reinterpretace_13/material_md/**'
-      - 'scripts/convert_all.py'
-      - 'Reinterpretace_13/templates/mapitola_template.html'
-      - 'scripts/update_material_index.py'
-
+      - 'Reinterpretace_13/material/*.html'
+      
 permissions:
       contents: write
 
