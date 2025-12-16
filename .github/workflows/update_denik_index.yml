@@ -3,7 +3,7 @@ name: Update denik index a sitemap
 on:
   push:
     paths:
-      - 'denik/2*/*.html'
+      - 'denik/**/*.html'
 
 permissions:
   contents: write
