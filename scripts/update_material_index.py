@@ -6,12 +6,12 @@ from pathlib import Path
 from xml.etree.ElementTree import Element, SubElement, ElementTree
 
 # Nastavení cest
-md_dir = Path("Reinterpretace_13/material/md")
+md_dir = Path("Reinterpretace_13/material/")
 index_file = Path("Reinterpretace_13/material_index.json")
 sitemap_file = Path("Reinterpretace_13/sitemap_material.xml")
 
 # Výchozí adresa pro sitemap odkazy
-base_url = "https://fisteque.github.io/symnozein/Reinterpretace_13/material/md/"
+base_url = "https://fisteque.github.io/symnozein/Reinterpretace_13/material/"
 
 # Načítání všech .md souborů
 entries = []
