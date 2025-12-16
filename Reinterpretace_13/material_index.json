@@ -1,16 +1,5 @@
 [
   {
-    "title": "Titulek materiálu",
-    "summary": "Stručné shrnutí obsahu materiálu",
-    "tags": [
-      "tag1",
-      "template"
-    ],
-    "date": "YYYY-MM-DD",
-    "hidden": false,
-    "file": "material_template.md"
-  },
-  {
     "title": "První materiál...",
     "summary": "Ukázkový materiál pro složku `material/`",
     "tags": [
