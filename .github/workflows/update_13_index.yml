@@ -45,4 +45,5 @@ jobs:
         run: |
           git add denik/spirala_index.json denik/sitemap_spirala.xml
           git commit -m "Update spirála index a sitemap [bot]" || echo "No changes to commit"
+          git pull --rebase
           git push
