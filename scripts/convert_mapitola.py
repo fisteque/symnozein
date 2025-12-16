@@ -2,7 +2,7 @@ import os
 import markdown
 import yaml
 
-TEMPLATE_PATH = "Reinterpretace_13/13/mapitola_template.html"
+TEMPLATE_PATH = "Reinterpretace_13/mapitola_template.html"
 INPUT_DIR = "Reinterpretace_13/md"
 OUTPUT_DIR = "Reinterpretace_13/13"
 
