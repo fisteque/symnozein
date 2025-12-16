@@ -2,7 +2,7 @@ import os
 import markdown
 import yaml
 
-TEMPLATE_PATH = "Reinterpretace_13/mapitola_template.html"
+TEMPLATE_PATH = "Reinterpretace_13/13/mapitola_template.html"
 INPUT_DIR = "Reinterpretace_13/md"
 OUTPUT_DIR = "Reinterpretace_13/13"
 
@@ -14,7 +14,6 @@ def convert_markdown_to_html(md_path, template):
     with open(md_path, "r", encoding="utf-8") as f:
         content = f.read()
 
-    # Oddělit YAML hlavičku
     if content.startswith("---"):
         parts = content.split("---", 2)
         if len(parts) >= 3:
@@ -27,22 +26,19 @@ def convert_markdown_to_html(md_path, template):
     metadata = yaml.safe_load(yaml_block)
     html_body = markdown.markdown(markdown_text)
 
-    # Převod seznamu tagů do čárkami odděleného řetězce
     tags = metadata.get("tags", [])
     if isinstance(tags, list):
         tags = ", ".join(tags)
 
-    # Výchozí hodnoty pro případ chybějících polí
     context = {
         "title": metadata.get("title", ""),
         "summary": metadata.get("summary", ""),
         "tags": tags,
-        "date": str(metadata.get("date", "")),  # <-- Tady je oprava
+        "date": str(metadata.get("date", "")),
         "hidden": str(metadata.get("hidden", False)).lower(),
         "body": html_body
     }
 
-    # Vložení dat do šablony
     html_output = template
     for key, value in context.items():
         html_output = html_output.replace(f"{{{{{key}}}}}", value)
@@ -53,6 +49,12 @@ def main():
     template = load_template()
     os.makedirs(OUTPUT_DIR, exist_ok=True)
 
+    # 🧹 Smazat všechny .html kromě šablony
+    for file in os.listdir(OUTPUT_DIR):
+        if file.endswith(".html") and file != "mapitola_template.html":
+            os.remove(os.path.join(OUTPUT_DIR, file))
+
+    # 🔁 Vygenerovat .html pro každý .md
     for filename in os.listdir(INPUT_DIR):
         if filename.endswith(".md"):
             md_path = os.path.join(INPUT_DIR, filename)
