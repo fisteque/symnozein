@@ -33,10 +33,13 @@ jobs:
       - name: Update material_index.json and sitemap_material.xml
         run: python scripts/update_material_index.py
 
+      - name: Configure Git
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+      
       - name: Commit and push changes
         run: |
-          git config user.name "github-actions[bot]"
-          git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add Reinterpretace_13/material_index.json Reinterpretace_13/sitemap_material.xml Reinterpretace_13/material/
-          git commit -m "🗂 Update material index and sitemap [auto]" || echo "No changes to commit"
+          git add denik/spirala_index.json denik/sitemap_spirala.xml
+          git commit -m "Update spirála index a sitemap [bot]" || echo "No changes to commit"
           git push
