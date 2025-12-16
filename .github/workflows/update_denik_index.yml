@@ -38,7 +38,7 @@ jobs:
       
       - name: Commit and push changes
         run: |
-          git add denik/spirala_index.json denik/sitemap_spirala.xml
-          git commit -m "Update spirála index a sitemap [bot]" || echo "No changes to commit"
+          git add denik/denik_index.json denik/sitemap_denik.xml
+          git diff --quiet || git commit -m "Update denik index a sitemap [bot]"
           git pull --rebase
           git push
