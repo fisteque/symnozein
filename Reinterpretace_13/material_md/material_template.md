@@ -1,5 +1,5 @@
 ---
-title: Titulek materiálu
+title: Titulek materiálu2
 summary: Stručné shrnutí obsahu materiálu
 tags: ["tag1", "template"]
 date: YYYY-MM-DD
