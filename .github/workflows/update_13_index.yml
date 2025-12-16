@@ -9,8 +9,10 @@ on:
       - 'scripts/update_13_index.py'
 
 jobs:
-  build:
+  convert:
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
 
     steps:
       - name: Checkout repository
