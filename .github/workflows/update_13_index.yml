@@ -33,7 +33,7 @@ jobs:
 
       - name: Run convert_mapitola.py
         run: |
-          python3 scripts/convert_mapitola.py
+          python3 scripts/convert_all.py
 
       - name: Run update_13_index.py
         run: |
