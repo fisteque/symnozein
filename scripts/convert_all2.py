@@ -1,19 +1,20 @@
 import os
+import sys
 import markdown
 import yaml
 
-TARGETS = [
-    {
+TARGETS = {
+    "13": {
         "input_dir": "Reinterpretace_13/13_md",
         "output_dir": "Reinterpretace_13/13",
         "template_path": "Reinterpretace_13/mapitola_template.html"
     },
-    {
+    "material": {
         "input_dir": "Reinterpretace_13/material_md",
         "output_dir": "Reinterpretace_13/material",
         "template_path": "Reinterpretace_13/mapitola_template.html"
     }
-]
+}
 
 def load_template(template_path):
     with open(template_path, "r", encoding="utf-8") as f:
@@ -51,29 +52,40 @@ def convert_markdown_to_html(md_path, template):
     output_filename = os.path.splitext(os.path.basename(md_path))[0] + ".html"
     return html_content, output_filename
 
+def process_target(key):
+    target = TARGETS[key]
+    print(f"\n🔄 Zpracovávám složku: {key}")
+    template = load_template(target["template_path"])
+
+    os.makedirs(target["output_dir"], exist_ok=True)
+    for file in os.listdir(target["output_dir"]):
+        if file.endswith(".html") and file != os.path.basename(target["template_path"]):
+            os.remove(os.path.join(target["output_dir"], file))
+    print(f"🧹 Vyčištěno: {target['output_dir']}")
+
+    for filename in os.listdir(target["input_dir"]):
+        if filename.endswith(".md"):
+            md_path = os.path.join(target["input_dir"], filename)
+            try:
+                html_content, output_filename = convert_markdown_to_html(md_path, template)
+                output_path = os.path.join(target["output_dir"], output_filename)
+                with open(output_path, "w", encoding="utf-8") as f:
+                    f.write(html_content)
+                print(f"✅ Vygenerováno: {output_filename}")
+            except Exception as e:
+                print(f"⚠️ Chyba při zpracování {filename}: {e}")
+
 def main():
-    for target in TARGETS:
-        template = load_template(target["template_path"])
-        os.makedirs(target["output_dir"], exist_ok=True)
-
-        # 🔁 Mazání přesunuto sem – jednorázově pro každý target
-        existing_files = os.listdir(target["output_dir"])
-        for file in existing_files:
-            if file.endswith(".html") and file != os.path.basename(target["template_path"]):
-                os.remove(os.path.join(target["output_dir"], file))
-
-        # ✅ Převod všech .md → .html
-        for filename in os.listdir(target["input_dir"]):
-            if filename.endswith(".md"):
-                md_path = os.path.join(target["input_dir"], filename)
-                try:
-                    html_content, output_filename = convert_markdown_to_html(md_path, template)
-                    output_path = os.path.join(target["output_dir"], output_filename)
-                    with open(output_path, "w", encoding="utf-8") as f:
-                        f.write(html_content)
-                    print(f"✅ Vygenerováno: {output_filename}")
-                except Exception as e:
-                    print(f"⚠️ Chyba při zpracování {filename}: {e}")
+    if len(sys.argv) == 3 and sys.argv[1] == "--only":
+        key = sys.argv[2]
+        if key in TARGETS:
+            process_target(key)
+        else:
+            print(f"❌ Neznámý target: {key}")
+            sys.exit(1)
+    else:
+        print("❌ Použití: python convert_all2.py --only [13|material]")
+        sys.exit(1)
 
 if __name__ == "__main__":
     main()
