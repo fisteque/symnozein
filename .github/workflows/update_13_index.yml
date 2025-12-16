@@ -5,7 +5,7 @@ on:
     paths:
       - 'Reinterpretace_13/md/**'
       - 'Reinterpretace_13/mapitola_template.html'
-      - 'scripts/convert_mapitola.py'
+      - 'scripts/convert_all.py'
       - 'scripts/update_13_index.py'
 
 jobs:
