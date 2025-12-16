@@ -5,6 +5,8 @@ on:
     paths:
       - 'Reinterpretace_13/material_md/**'
       - 'scripts/update_material_index.py'
+      - 'scripts/convert_all.py'
+
 
 jobs:
   build:
