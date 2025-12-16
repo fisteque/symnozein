@@ -3,7 +3,7 @@ name: Update spirála index and sitemap
 on:
   push:
     paths:
-      - 'denik/spirala_vedomi/**'
+      - 'denik/spirala_vedomi/*.html'
 
 permissions:
   contents: write
@@ -37,6 +37,6 @@ jobs:
       - name: Commit and push changes
         run: |
           git add denik/spirala_index.json denik/sitemap_spirala.xml
-          git commit -m "Update spirála index a sitemap [bot]" || echo "No changes to commit"
+          git diff --quiet || git commit -m "Update spirála index a sitemap [bot]"
           git pull --rebase
           git push
