@@ -40,4 +40,6 @@ jobs:
           git add Reinterpretace_13/13_index.json
           git add Reinterpretace_13/sitemap_13.xml
           git commit -m "Auto: Update mapitoly" || echo "No changes to commit"
+          git add .nojekyll
+          git commit -m "Disable Jekyll build"
           git push
