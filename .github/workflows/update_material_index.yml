@@ -7,7 +7,7 @@ on:
       - 'Reinterpretace_13/material_md/**'
       - 'Reinterpretace_13/mapitola_template.html'
       - 'scripts/convert_all.py'
-      - 'Reinterpretace_13/update_material_index.py'
+      - 'scripts/update_material_index.py'
 
 jobs:
   build:
@@ -26,10 +26,10 @@ jobs:
         run: pip install pyyaml markdown
 
       - name: Convert markdown to HTML
-        run: python Reinterpretace_13/convert_all.py
+        run: python scripts/convert_all.py
 
       - name: Update material index and sitemap
-        run: python Reinterpretace_13/update_material_index.py
+        run: python scripts/update_material_index.py
 
       - name: Commit changes
         run: |
