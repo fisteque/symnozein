@@ -8,8 +8,11 @@ on:
       - 'scripts/update_material_index.py'
 
 jobs:
-  build:
+  convert:
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
     steps:
       - name: Checkout repo
         uses: actions/checkout@v3
@@ -20,7 +23,9 @@ jobs:
           python-version: '3.x'
 
       - name: Install dependencies
-        run: pip install markdown beautifulsoup4 lxml
+        run: |
+          pip install markdown pyyaml beautifulsoup4 lxml
+
 
       - name: Convert .md to .html
         run: python scripts/convert_all.py
