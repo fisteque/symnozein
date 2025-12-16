@@ -1,9 +1,9 @@
-name: Aktualizace indexu materiálů
+name: Update material index
 
 on:
   push:
     paths:
-      - "Reinterpretace_13/material/md/**"
+      - "Reinterpretace_13/material/*.md"
       - "scripts/update_material_index.py"
 
 jobs:
