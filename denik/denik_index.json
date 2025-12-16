@@ -109,14 +109,14 @@
           "hidden": false
         },
         {
-          "title": "TEST – 2065-12-27",
-          "date": "2075-12-27",
-          "file": "Noe_61_12_25.html",
+          "title": "TEST denik",
+          "date": "2065-12-27",
+          "file": "Noe_41_12_25.html",
           "summary": "Dnes a asi i zítra, bych řekl.",
           "tags": [
             "TEST"
           ],
-          "hidden": true
+          "hidden": false
         }
       ]
     }
@@ -219,13 +219,13 @@
       "date": "2025-12-15"
     },
     {
-      "title": "TEST – 2065-12-27",
+      "title": "TEST denik",
       "summary": "Dnes a asi i zítra, bych řekl.",
       "tags": [
         "TEST"
       ],
-      "file": "Noe_61_12_25.html",
-      "date": "2075-12-27"
+      "file": "Noe_41_12_25.html",
+      "date": "2065-12-27"
     }
   ],
   "meta": {
