@@ -1,21 +1,6 @@
 [
   {
     "title": "Víra a vědomí",
-    "summary": "Mapitola o vztahu víry a vědomí v kontextu reinterpretace.",
-    "tags": [
-      "víra",
-      "vědomí",
-      "reinterpretace",
-      "ontologie",
-      "axiomy"
-    ],
-    "date": "2025-12-13",
-    "file": "13/D-001.html",
-    "hidden": false,
-    "url": "https://fisteque.github.io/symnozein/Reinterpretace_13/13/D-001.html"
-  },
-  {
-    "title": "Víra a vědomí",
     "summary": "",
     "tags": [
       "víra",
@@ -28,6 +13,21 @@
     "file": "13/Vira_a_vedomi.html",
     "hidden": false,
     "url": "https://fisteque.github.io/symnozein/Reinterpretace_13/13/Vira_a_vedomi.html"
+  },
+  {
+    "title": "Víra a vědomí",
+    "summary": "Mapitola o vztahu víry a vědomí v kontextu reinterpretace.",
+    "tags": [
+      "víra",
+      "vědomí",
+      "reinterpretace",
+      "ontologie",
+      "axiomy"
+    ],
+    "date": "",
+    "file": "13/E-001.html",
+    "hidden": false,
+    "url": "https://fisteque.github.io/symnozein/Reinterpretace_13/13/E-001.html"
   },
   {
     "title": "Test",
