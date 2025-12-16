@@ -3,7 +3,7 @@ title: Název mapitoly
 summary: Jednověté shrnutí obsahu nebo hlavní myšlenky.
 tags: [klíčové, pojmy, oddělené, čárkami]
 date: 2025-12-17
-hidden: false
+hidden: true
 ---
 
 # Název mapitoly
