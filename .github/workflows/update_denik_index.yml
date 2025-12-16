@@ -35,9 +35,11 @@ jobs:
           git config --global user.name "github-actions[bot]"
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
       
-      - name: Commit and push changes
+      - name: Commit changes before pull
         run: |
+          git config user.name "github-actions"
+          git config user.email "github-actions@github.com"
           git add denik/denik_index.json denik/sitemap_denik.xml
-          git diff --quiet || git commit -m "Update denik index a sitemap [bot]"
+          git commit -m "Auto-commit updated denik index and sitemap" || echo "No changes"
           git pull --rebase
           git push
