@@ -4,7 +4,7 @@ import yaml
 
 TARGETS = [
     {
-        "input_dir": "Reinterpretace_13/md",
+        "input_dir": "Reinterpretace_13/13_md",
         "output_dir": "Reinterpretace_13/13",
         "template_path": "Reinterpretace_13/mapitola_template.html"
     },
