@@ -1,46 +1,42 @@
-name: Update 13 index
+name: Build mapitoly
 
 on:
   push:
     paths:
       - 'Reinterpretace_13/13_md/*.md'
-
-permissions:
-  contents: write
+      - 'Reinterpretace_13/templates/*.html'
+      - 'scripts/convert_all.py'
+      - '.github/workflows/update_13_index.yml'
 
 jobs:
-  update-13:
+  convert:
     runs-on: ubuntu-latest
-
-    concurrency:
-      group: update-13
-      cancel-in-progress: true
+    permissions:
+      contents: write
 
     steps:
-      - name: Checkout repo
+      - name: Checkout repository
         uses: actions/checkout@v4
 
       - name: Set up Python
         uses: actions/setup-python@v5
         with:
-          python-version: 3.x
-          
+          python-version: '3.x'
+
       - name: Install dependencies
         run: |
-          python -m pip install --upgrade pip
-          pip install markdown PyYAML beautifulsoup4 lxml
+          pip install markdown pyyaml
 
-      - name: Convert .md to .html
-        run: python3 scripts/convert_all.py --only 13
-        
-      - name: Configure Git
+      - name: Run conversion script
         run: |
-          git config --global user.name "github-actions[bot]"
-          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          python scripts/convert_all.py --only 13
 
-      - name: Commit and push changes
+      - name: Commit and push generated files
         run: |
-          git add -A
-          git diff --cached --quiet || git commit -m "Update 13 index a sitemap [bot]"
-          git pull --rebase
+          git config user.name "github-actions"
+          git config user.email "github-actions@github.com"
+          git add Reinterpretace_13/13/*.html
+          git add Reinterpretace_13/13_index.json
+          git add Reinterpretace_13/sitemap_13.xml
+          git commit -m "Auto: Update mapitoly" || echo "No changes to commit"
           git push
