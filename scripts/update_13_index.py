@@ -1,66 +1,99 @@
 import os
 import json
-import re
+from bs4 import BeautifulSoup
 from datetime import datetime
 from xml.etree.ElementTree import Element, SubElement, ElementTree
 
-MAPITOL_DIR = 'Reinterpretace_13/13'
-OUTPUT_INDEX = 'Reinterpretace_13/13_index.json'
-OUTPUT_SITEMAP = 'Reinterpretace_13/sitemap_13.xml'
-BASE_URL = 'https://fisteque.github.io/symnozein/Reinterpretace_13/13/'
+MAPITOLA_DIR = "Reinterpretace_13/13"
+INDEX_FILE = "Reinterpretace_13/13_index.json"
+SITEMAP_FILE = "Reinterpretace_13/sitemap_13.xml"
+BASE_URL = "https://fisteque.github.io/symnozein/Reinterpretace_13/"
 
-def extract_meta(content, name):
-    match = re.search(rf'<meta\s+name="{re.escape(name)}"\s+content="(.*?)"', content, re.IGNORECASE)
-    return match.group(1).strip() if match else None
 
-def parse_tags(tag_string):
-    return [tag.strip() for tag in tag_string.split(',')] if tag_string else []
+def extract_metadata(filepath):
+    with open(filepath, "r", encoding="utf-8") as f:
+        soup = BeautifulSoup(f, "html.parser")
 
-def main():
-    index_data = []
-    urlset = Element('urlset', xmlns="http://www.sitemaps.org/schemas/sitemap/0.9")
+        title = soup.title.string.strip() if soup.title else "(Bez názvu)"
 
-    for filename in sorted(os.listdir(MAPITOL_DIR)):
-        if not filename.endswith('.html'):
-            continue
+        meta_summary = soup.find("meta", attrs={"name": "summary"})
+        summary = meta_summary["content"].strip() if meta_summary else ""
 
-        filepath = os.path.join(MAPITOL_DIR, filename)
-        with open(filepath, 'r', encoding='utf-8') as f:
-            content = f.read()
+        meta_tags = soup.find("meta", attrs={"name": "tags"})
+        tags = [t.strip() for t in meta_tags["content"].split(",")] if meta_tags else []
 
-        title = extract_meta(content, 'title') or ''
-        summary = extract_meta(content, 'summary') or ''
-        tags = parse_tags(extract_meta(content, 'tags'))
-        date = extract_meta(content, 'date') or ''
-        hidden = extract_meta(content, 'hidden') == 'true'
-        url = BASE_URL + filename
+        meta_date = soup.find("meta", attrs={"name": "date"})
+        date = meta_date["content"].strip() if meta_date else ""
 
-        index_data.append({
-            'file': filename,
-            'title': title,
-            'summary': summary,
-            'tags': tags,
-            'date': date,
-            'hidden': hidden,
-            'url': url
-        })
+        meta_hidden = soup.find("meta", attrs={"name": "hidden"})
+        hidden = meta_hidden["content"].lower() == "true" if meta_hidden else False
 
-        if not hidden:
-            url_el = SubElement(urlset, 'url')
-            loc_el = SubElement(url_el, 'loc')
-            loc_el.text = url
-            lastmod_el = SubElement(url_el, 'lastmod')
-            lastmod_el.text = datetime.today().strftime('%Y-%m-%d')
+        rel_path = os.path.relpath(filepath, "Reinterpretace_13").replace("\\", "/")
+        url = BASE_URL + rel_path
 
-    # Uložit JSON index
-    with open(OUTPUT_INDEX, 'w', encoding='utf-8') as f:
-        json.dump(index_data, f, indent=2, ensure_ascii=False)
+        return {
+            "title": title,
+            "summary": summary,
+            "tags": tags,
+            "date": date,
+            "file": rel_path,
+            "hidden": hidden,
+            "url": url
+        }
 
-    # Uložit XML sitemap
+
+def update_index_and_sitemap():
+    index = []
+    urls = []
+
+    for root, _, files in os.walk(MAPITOLA_DIR):
+        for name in files:
+            if name.endswith(".html"):
+                filepath = os.path.join(root, name)
+                entry = extract_metadata(filepath)
+                index.append(entry)
+
+                if not entry["hidden"]:
+                    urls.append(entry["url"])
+
+    index.sort(key=lambda x: x.get("date", ""), reverse=True)
+
+    with open(INDEX_FILE, "w", encoding="utf-8") as f:
+        json.dump(index, f, ensure_ascii=False, indent=2)
+
+    generate_sitemap(urls)
+
+
+def generate_sitemap(urls):
+    urlset = Element("urlset", xmlns="http://www.sitemaps.org/schemas/sitemap/0.9")
+
+    for url in urls:
+        url_el = SubElement(urlset, "url")
+        loc_el = SubElement(url_el, "loc")
+        loc_el.text = url
+
+    indent_xml(urlset)
     tree = ElementTree(urlset)
-    tree.write(OUTPUT_SITEMAP, encoding='utf-8', xml_declaration=True)
 
-    print(f'✅ Vygenerováno: {OUTPUT_INDEX} a {OUTPUT_SITEMAP}')
+    with open(SITEMAP_FILE, "wb") as f:
+        f.write(b'<?xml version="1.0" encoding="UTF-8"?>\n')
+        tree.write(f, encoding="utf-8", xml_declaration=False)
 
-if __name__ == '__main__':
-    main()
+
+def indent_xml(elem, level=0):
+    i = "\n" + level * "  "
+    if len(elem):
+        if not elem.text or not elem.text.strip():
+            elem.text = i + "  "
+        for child in elem:
+            indent_xml(child, level + 1)
+        if not child.tail or not child.tail.strip():
+            child.tail = i
+    if level and (not elem.tail or not elem.tail.strip()):
+        elem.tail = i
+
+
+if __name__ == "__main__":
+    print("📘 Generuji 13_index.json a sitemap_13.xml...")
+    update_index_and_sitemap()
+    print("✅ Hotovo.")
