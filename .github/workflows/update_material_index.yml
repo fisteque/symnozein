@@ -28,7 +28,7 @@ jobs:
 
 
       - name: Convert .md to .html
-        run: python scripts/convert_all.py
+        run: python3 scripts/convert_all.py --only material
 
       - name: Update material_index.json and sitemap_material.xml
         run: python scripts/update_material_index.py
