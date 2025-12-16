@@ -26,7 +26,8 @@ jobs:
       run: pip install pyyaml markdown
 
     - name: Convert .md → .html
-      run: python convert_all.py
+      run: python Reinterpretace_13/convert_all.py
+
 
     - name: Commit and push changes
       run: |
