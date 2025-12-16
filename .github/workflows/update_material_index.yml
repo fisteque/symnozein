@@ -10,8 +10,10 @@ on:
       - 'scripts/update_material_index.py'
 
 jobs:
-  build:
+  convert:
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
 
     steps:
       - name: Checkout repo
