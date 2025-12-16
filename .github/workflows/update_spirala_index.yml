@@ -2,12 +2,8 @@ name: Update spirála index and sitemap
 
 on:
   push:
-    branches:
-      - main
     paths:
       - 'denik/spirala_vedomi/**'
-      - '.github/workflows/update_spirala_index.yml'
-      - 'scripts/update_spirala_index.py'
 
 permissions:
   contents: write
