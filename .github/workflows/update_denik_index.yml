@@ -4,8 +4,7 @@ on:
   push:
     paths:
       - 'denik/**/*.html'
-    paths-ignore:
-      - 'denik/spirala_vedomi/**'
+      - '!denik/spirala_vedomi/**'
 
 permissions:
   contents: write
