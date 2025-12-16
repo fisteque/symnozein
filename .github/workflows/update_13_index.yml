@@ -4,7 +4,7 @@ on:
   push:
     paths:
       - 'Reinterpretace_13/13_md/**/*.md'
-      - 'Reinterpretace_13/templates/*.html'
+      - 'Reinterpretace_13/templates/template.html'
       - '.github/workflows/update_13_index.yml'
       - 'scripts/convert_all.py'
 
