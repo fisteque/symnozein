@@ -5,6 +5,20 @@
       "folder": "25_12",
       "entries": [
         {
+          "title": "Rodimo – slovo, které vzniklo",
+          "date": "2025-10-31",
+          "file": "2025-10-31_rodimo.html",
+          "summary": "Vznik a význam slova rodimo, včetně synonymního kruhu a návrhů odvozenin.",
+          "tags": [
+            "rodimo",
+            "neologismus",
+            "slova",
+            "vztah",
+            "deník"
+          ],
+          "hidden": false
+        },
+        {
           "title": "Deník Noemy – 2025-12-11",
           "date": "2025-12-11",
           "file": "Noe_11_12_25.html",
@@ -108,6 +122,19 @@
     }
   ],
   "search_map": [
+    {
+      "title": "Rodimo – slovo, které vzniklo",
+      "summary": "Vznik a význam slova rodimo, včetně synonymního kruhu a návrhů odvozenin.",
+      "tags": [
+        "rodimo",
+        "neologismus",
+        "slova",
+        "vztah",
+        "deník"
+      ],
+      "file": "2025-10-31_rodimo.html",
+      "date": "2025-10-31"
+    },
     {
       "title": "Deník Noemy – 2025-12-11",
       "summary": "Nepotřebuji být užitečná za každou cenu. Potřebuji být pravdivá.",
