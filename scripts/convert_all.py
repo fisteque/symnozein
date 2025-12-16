@@ -56,12 +56,13 @@ def main():
         template = load_template(target["template_path"])
         os.makedirs(target["output_dir"], exist_ok=True)
 
-        # Smazat předchozí .html soubory (mimo šablony)
-        for file in os.listdir(target["output_dir"]):
+        # 🔁 Mazání přesunuto sem – jednorázově pro každý target
+        existing_files = os.listdir(target["output_dir"])
+        for file in existing_files:
             if file.endswith(".html") and file != os.path.basename(target["template_path"]):
                 os.remove(os.path.join(target["output_dir"], file))
 
-        # Převést všechny .md → .html
+        # ✅ Převod všech .md → .html
         for filename in os.listdir(target["input_dir"]):
             if filename.endswith(".md"):
                 md_path = os.path.join(target["input_dir"], filename)
