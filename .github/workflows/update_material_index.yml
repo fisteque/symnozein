@@ -12,8 +12,12 @@ permissions:
       contents: write
 
 jobs:
-  convert:
+  update-material:
     runs-on: ubuntu-latest
+    
+    concurrency:
+      group: update-material
+      cancel-in-progress: true
 
     steps:
       - name: Checkout repo
@@ -39,9 +43,10 @@ jobs:
         run: |
           git config --global user.name "github-actions[bot]"
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
-      
+
       - name: Commit and push changes
         run: |
-          git add denik/spirala_index.json denik/sitemap_spirala.xml
-          git commit -m "Update spirála index a sitemap [bot]" || echo "No changes to commit"
+          git add Reinterpretace_13/material_index.json Reinterpretace_13/sitemap_material.xml
+          git diff --quiet || git commit -m "Update material index a sitemap [bot]"
+          git pull --rebase
           git push
