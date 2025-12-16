@@ -2,6 +2,7 @@ import os
 import sys
 import markdown
 import yaml
+from datetime import datetime
 
 TARGETS = {
     "13": {
@@ -30,6 +31,15 @@ def parse_markdown_with_yaml(md_text):
             return metadata, markdown_text.strip()
     return {}, md_text.strip()
 
+def validate_date(date_str):
+    try:
+        # Převede datum na formát RRRR-MM-DD
+        dt = datetime.fromisoformat(date_str)
+        return dt.strftime("%Y-%m-%d")
+    except Exception:
+        print(f"⚠️ Neplatné datum: '{date_str}'. Používám prázdné.")
+        return ""
+
 def convert_markdown_to_html(md_path, template):
     with open(md_path, "r", encoding="utf-8") as f:
         md_text = f.read()
@@ -37,7 +47,8 @@ def convert_markdown_to_html(md_path, template):
     html_body = markdown.markdown(markdown_body)
 
     title = metadata.get("title", "Bez názvu")
-    date = metadata.get("date", "")
+    date_raw = metadata.get("date", "")
+    date = validate_date(str(date_raw)) if date_raw else ""
     summary = metadata.get("summary", "")
     tags = metadata.get("tags", [])
 
