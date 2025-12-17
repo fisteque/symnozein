@@ -43,7 +43,7 @@ jobs:
           git config user.name "github-actions"
           git config user.email "github-actions@github.com"
           git add Reinterpretace_13/*.html
-          git add Reinterpretace_13/13_index.json
+          git add Reinterpretace_13/13/13_index.json
           git add Reinterpretace_13/sitemap_13.xml
           git commit -m "🛠️ Update 13 index and sitemap" || echo "No changes"
           git pull --rebase
