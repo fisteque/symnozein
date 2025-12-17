@@ -1,95 +1,117 @@
 import os
+import sys
+import markdown
 import yaml
+from datetime import datetime, date as date_type
 import json
-from datetime import datetime
-from xml.etree.ElementTree import Element, SubElement, tostring
-from xml.dom import minidom
 
-INPUT_DIR = "Reinterpretace_13/material"
-INDEX_PATH = "Reinterpretace_13/material_index.json"
-SITEMAP_PATH = "Reinterpretace_13/sitemap_material.xml"
-URL_PREFIX = "https://fisteque.github.io/symnozein/Reinterpretace_13/material/"
+TARGETS = {
+    "material": {
+        "input_dir": "Reinterpretace_13/material_md",
+        "output_dir": "Reinterpretace_13/material",
+        "template_path": "Reinterpretace_13/templates/template.html",
+        "index_path": "Reinterpretace_13/material_index.json",
+        "sitemap_path": "Reinterpretace_13/sitemap_material.xml",
+        "url_prefix": "https://fisteque.github.io/symnozein/Reinterpretace_13/material/"
+    },
+}
 
-def parse_metadata(filepath):
-    with open(filepath, "r", encoding="utf-8") as f:
+def normalize_date(value):
+    if value is None:
+        return ""
+    if isinstance(value, str):
+        return value
+    if isinstance(value, datetime):
+        return value.date().isoformat()
+    if isinstance(value, date_type):
+        return value.isoformat()
+    return ""
+
+def load_metadata(md_file):
+    with open(md_file, 'r', encoding='utf-8') as f:
         lines = f.readlines()
 
-    if lines[0].strip() != "---":
-        return {}, "".join(lines)
+    if lines[0].strip() != '---':
+        return {}, ''.join(lines)
 
-    yaml_lines = []
-    for line in lines[1:]:
-        if line.strip() == "---":
+    meta_lines = []
+    i = 1
+    while i < len(lines):
+        if lines[i].strip() == '---':
             break
-        yaml_lines.append(line)
+        meta_lines.append(lines[i])
+        i += 1
 
-    try:
-        metadata = yaml.safe_load("".join(yaml_lines)) or {}
-    except yaml.YAMLError:
-        metadata = {}
+    metadata = yaml.safe_load(''.join(meta_lines))
+    content = ''.join(lines[i+1:])
+    return metadata, content
 
-    return metadata, "".join(lines)
+def process_target(target_name):
+    if target_name not in TARGETS:
+        print(f"Unknown target: {target_name}")
+        return
 
-def build_index():
-    entries = []
+    config = TARGETS[target_name]
+    input_dir = config['input_dir']
+    output_dir = config['output_dir']
+    index_path = config['index_path']
+    sitemap_path = config['sitemap_path']
+    url_prefix = config['url_prefix']
+    template = ""
 
-    for filename in os.listdir(INPUT_DIR):
-        if not filename.endswith(".md"):
-            continue
+    if config['template_path'] and os.path.exists(config['template_path']):
+        with open(config['template_path'], 'r', encoding='utf-8') as f:
+            template = f.read()
 
-        filepath = os.path.join(INPUT_DIR, filename)
-        metadata, content = parse_metadata(filepath)
+    index = []
+    sitemap_urls = []
 
-        title = metadata.get("title", filename)
-        summary = metadata.get("summary", "")
-        tags = metadata.get("tags", [])
-        date = metadata.get("date", "")
-        hidden = metadata.get("hidden", False)
+    for filename in os.listdir(input_dir):
+        if filename.endswith('.md'):
+            filepath = os.path.join(input_dir, filename)
+            metadata, content = load_metadata(filepath)
 
-        entries.append({
-            "file": filename,
-            "title": title,
-            "summary": summary,
-            "tags": tags,
-            "date": date,
-            "hidden": hidden
-        })
+            hidden = metadata.get('hidden', False)
 
-    entries.sort(key=lambda x: x["date"], reverse=True)
+            base_name = os.path.splitext(filename)[0]
+            html_filename = base_name + '.html'
+            html_url = url_prefix + html_filename
 
-    with open(INDEX_PATH, "w", encoding="utf-8") as f:
-        json.dump(entries, f, indent=2, ensure_ascii=False)
+            index_entry = {
+                "title": metadata.get("title", base_name),
+                "file": html_filename,
+                "date": normalize_date(metadata.get("date")),
+                "summary": metadata.get("summary", ""),
+                "tags": metadata.get("tags", []),
+                "hidden": hidden
+            }
+            index.append(index_entry)
 
-    print(f"Index uložen do {INDEX_PATH}")
-    return entries
+            if not hidden:
+                sitemap_urls.append(html_url)
 
-def build_sitemap(entries):
-    urlset = Element("urlset", xmlns="http://www.sitemaps.org/schemas/sitemap/0.9")
+            # Render HTML
+            html_body = markdown.markdown(content, extensions=['extra', 'codehilite', 'toc'])
+            final_html = template.replace("{{ content }}", html_body)
+            for key, value in metadata.items():
+                final_html = final_html.replace(f"{{{{ {key} }}}}", str(value))
 
-    for entry in entries:
-        if entry.get("hidden"):
-            continue
+            output_path = os.path.join(output_dir, html_filename)
+            with open(output_path, 'w', encoding='utf-8') as f:
+                f.write(final_html)
 
-        url = SubElement(urlset, "url")
-        loc = SubElement(url, "loc")
-        loc.text = URL_PREFIX + entry["file"]
+    with open(index_path, 'w', encoding='utf-8') as f:
+        json.dump(index, f, indent=2, ensure_ascii=False)
 
-        if entry.get("date"):
-            lastmod = SubElement(url, "lastmod")
-            try:
-                d = datetime.strptime(entry["date"], "%Y-%m-%d")
-                lastmod.text = d.date().isoformat()
-            except ValueError:
-                pass  # ignore malformed dates
+    with open(sitemap_path, 'w', encoding='utf-8') as f:
+        f.write('<?xml version="1.0" encoding="UTF-8"?>\n')
+        f.write('<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n')
+        for url in sitemap_urls:
+            f.write(f"  <url><loc>{url}</loc></url>\n")
+        f.write('</urlset>')
 
-    raw_xml = tostring(urlset, encoding="utf-8")
-    pretty_xml = minidom.parseString(raw_xml).toprettyxml(indent="  ")
-
-    with open(SITEMAP_PATH, "w", encoding="utf-8") as f:
-        f.write(pretty_xml)
-
-    print(f"Sitemap uložena do {SITEMAP_PATH}")
+def main():
+    process_target("material")
 
 if __name__ == "__main__":
-    entries = build_index()
-    build_sitemap(entries)
+    main()
