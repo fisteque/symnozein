@@ -1,42 +1,51 @@
-name: Update Deník Index and Sitemap
+name: Update Denik Index and Sitemap
 
 on:
   push:
     paths:
-      - '25_12_md/**.md'
-      - '26_01_md/**.md'
-      - '26_02_md/**.md'
-      - 'scripts/convert_denik.py'
+      - 'denik/**/*.md'
+      - 'denik/templates/template.html'
+      - '.github/workflows/update_denik_index.yml'
       - 'scripts/update_denik_index.py'
+      - 'scripts/convert_denik.py'
+      - ! 'denik/spirala_vedomi_md/*.md'
 
+permissions:
+      contents: write
+      
 jobs:
   convert:
     runs-on: ubuntu-latest
-    permissions:
-      contents: write
 
     steps:
-      - uses: actions/checkout@v3
+      - name: Checkout repository
+        uses: actions/checkout@v4
 
       - name: Set up Python
-        uses: actions/setup-python@v4
+        uses: actions/setup-python@v5
         with:
           python-version: '3.x'
 
       - name: Install dependencies
         run: |
-          pip install markdown pyyaml
+          pip install markdown pyyaml beautifulsoup4 lxml
 
-      - name: Convert MD to HTML
-        run: python scripts/convert_denik.py
+      - name: Run Denik Converter
+        run: |
+          python3 scripts/convert_denik.py
 
-      - name: Update denik_index.json and sitemap_denik.xml
-        run: python scripts/update_denik_index.py
-
-      - name: Commit and push changes
+      - name: Configure Git
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+      
+      - name: Commit and push generated files
         run: |
           git config user.name "github-actions"
           git config user.email "github-actions@github.com"
-          git add .
-          git commit -m "Update denik index and sitemap"
+          git add denik/**/*.html
+          git add denik/denik_index.json
+          git add denik/sitemap_denik.xml
+          git commit -m "🛠️ Update denik index and sitemap" || echo "No changes"
+          git pull --rebase
           git push
