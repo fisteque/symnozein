@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Spirála vědomí</title>
+  <title>🧠 Spirála vědomí</title>
   <style>
     body {
       font-family: system-ui, sans-serif;
@@ -12,81 +12,79 @@
     }
     h1 {
       font-size: 2em;
+      margin-bottom: 0.2em;
+    }
+    h2 {
+      margin-top: 1.5em;
+    }
+    ul {
+      list-style: none;
+      padding-left: 0;
+    }
+    li {
       margin-bottom: 1em;
     }
-    .entry {
-      margin-bottom: 1.2em;
-      padding-bottom: 1em;
-      border-bottom: 1px solid #ddd;
-    }
-    .entry-title {
-      font-weight: bold;
-    }
-    .entry-meta {
-      color: #666;
-      font-size: 0.9em;
-    }
     a {
+      font-weight: bold;
       color: #0077cc;
       text-decoration: none;
     }
     a:hover {
       text-decoration: underline;
     }
+    .description {
+      font-size: 0.9em;
+      color: #555;
+      margin-top: 0.2em;
+    }
   </style>
 </head>
 <body>
-  <h1>Spirála vědomí</h1>
-  <div id="content">Načítání…</div>
+  <h1>🧠 Spirála vědomí</h1>
+  <p>Seznam introspektivních záznamů dle témat.</p>
+
+  <div id="zaznamy">Načítám...</div>
+  <h2><a href="index_denik.html">📘 Zpět do deníku</a></h2>
 
   <script>
-  const INDEX_JSON_PATH = "denik/spirala_index.json";
+    fetch("denik/spirala_index.json")
+      .then(response => response.json())
+      .then(data => {
+        const container = document.getElementById("zaznamy");
+        container.innerHTML = "";
 
-  fetch(INDEX_JSON_PATH)
-    .then(response => {
-      if (!response.ok) {
-        throw new Error(`HTTP error! Status: ${response.status}`);
-      }
-      return response.json();
-    })
-    .then(data => {
-      const container = document.getElementById("content");
-      container.innerHTML = "";
+        data.months.forEach(month => {
+          const h2 = document.createElement("h2");
+          h2.textContent = `🧩 ${month.label}`;
+          container.appendChild(h2);
 
-      data.months.forEach(month => {
-        const monthHeading = document.createElement("h2");
-        monthHeading.textContent = month.label;
-        container.appendChild(monthHeading);
+          const ul = document.createElement("ul");
+          month.entries.forEach(entry => {
+            if (entry.hidden) return;
 
-        month.entries.forEach(entry => {
-          if (entry.hidden) return;
+            const li = document.createElement("li");
+            const a = document.createElement("a");
+            a.href = `denik/${month.folder}/${entry.file}`;
+            a.textContent = entry.title;
+            li.appendChild(a);
 
-          const div = document.createElement("div");
-          div.className = "entry";
+            if (entry.summary) {
+              const desc = document.createElement("div");
+              desc.className = "description";
+              desc.textContent = entry.summary;
+              li.appendChild(desc);
+            }
 
-          const a = document.createElement("a");
-          a.href = `denik/${month.folder}/${entry.file}`;
-          a.textContent = entry.title || entry.file;
-          a.className = "entry-title";
+            ul.appendChild(li);
+          });
 
-          const meta = document.createElement("div");
-          meta.className = "entry-meta";
-          meta.textContent = `${entry.date} — ${entry.summary}`;
-
-          div.appendChild(a);
-          div.appendChild(document.createElement("br"));
-          div.appendChild(meta);
-
-          container.appendChild(div);
+          container.appendChild(ul);
         });
+      })
+      .catch(error => {
+        document.getElementById("zaznamy").textContent = "Nepodařilo se načíst spirala_index.json.";
+        console.error("Chyba při načítání JSON:", error);
       });
-    })
-    .catch(err => {
-      document.getElementById("content").textContent =
-        "Chyba při načítání spirala_index.json.";
-      console.error("Načtení JSON selhalo:", err);
-    });
-</script>
-
+  </script>
 </body>
 </html>
