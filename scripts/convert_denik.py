@@ -1,27 +1,26 @@
 import os
-import sys
 import markdown
 import yaml
-from datetime import datetime, date as date_type
 import json
+from datetime import datetime, date as date_type
 
-TEMPLATE_PATH = "denik/templates/template.html"
-INDEX_PATH = "denik/denik_index.json"
-SITEMAP_PATH = "denik/sitemap_denik.xml"
-URL_ROOT = "https://fisteque.github.io/symnozein/denik/"
-
-PERIODS = {
+# Cílové složky deníku
+TARGETS = {
     "25_12": {
         "input_dir": "denik/25_12_md",
         "output_dir": "denik/25_12",
-        "url_prefix": URL_ROOT + "25_12/"
+        "template_path": "denik/templates/template.html",
     },
     "26_01": {
         "input_dir": "denik/26_01_md",
         "output_dir": "denik/26_01",
-        "url_prefix": URL_ROOT + "26_01/"
+        "template_path": "denik/templates/template.html",
     }
 }
+
+INDEX_PATH = "denik_index.json"
+SITEMAP_PATH = "sitemap_denik.xml"
+URL_PREFIX = "https://fisteque.github.io/symnozein/denik"
 
 def normalize_date(value):
     if value is None:
@@ -37,93 +36,113 @@ def normalize_date(value):
 def load_metadata(md_file):
     with open(md_file, 'r', encoding='utf-8') as f:
         lines = f.readlines()
+
     if not lines or lines[0].strip() != '---':
         return {}, ''.join(lines)
-    meta_lines, i = [], 1
-    while i < len(lines) and lines[i].strip() != '---':
+
+    meta_lines = []
+    i = 1
+    while i < len(lines):
+        if lines[i].strip() == '---':
+            break
         meta_lines.append(lines[i])
         i += 1
+
     metadata = yaml.safe_load(''.join(meta_lines))
     content = ''.join(lines[i+1:])
-    return metadata or {}, content
+    return metadata, content
 
-def find_metadata_for_html(html_filename, input_dir):
-    base_name = os.path.splitext(html_filename)[0]
-    md_path = os.path.join(input_dir, base_name + ".md")
-    if os.path.exists(md_path):
-        metadata, _ = load_metadata(md_path)
-        return metadata
-    else:
-        return {
-            "title": base_name,
-            "summary": "",
-            "tags": [],
-            "date": "",
-            "hidden": False
-        }
-
-def process_period(period_key):
-    config = PERIODS[period_key]
-    input_dir = config['input_dir']
-    output_dir = config['output_dir']
-    url_prefix = config['url_prefix']
-
+def main():
     index_entries = []
     sitemap_urls = []
 
-    if not os.path.exists(output_dir):
-        print(f"Složka neexistuje: {output_dir}")
-        return [], []
+    for period_key, config in TARGETS.items():
+        input_dir = config["input_dir"]
+        output_dir = config["output_dir"]
+        template = ""
 
-    for filename in os.listdir(output_dir):
-        if not filename.endswith(".html"):
-            continue
+        if os.path.exists(config["template_path"]):
+            with open(config["template_path"], 'r', encoding='utf-8') as f:
+                template = f.read()
 
-        metadata = find_metadata_for_html(filename, input_dir)
-        hidden = metadata.get("hidden", False)
-        html_url = url_prefix + filename
+        os.makedirs(output_dir, exist_ok=True)
 
-        index_entry = {
-            "title": metadata.get("title", filename),
-            "file": filename,
-            "date": normalize_date(metadata.get("date")),
-            "summary": metadata.get("summary", ""),
-            "tags": metadata.get("tags", []),
-            "hidden": hidden
-        }
-        index_entries.append(index_entry)
+        # 1. PŘEVOD .md → .html
+        for filename in os.listdir(input_dir):
+            if not filename.endswith('.md'):
+                continue
 
-        if not hidden:
-            sitemap_urls.append(html_url)
+            filepath = os.path.join(input_dir, filename)
+            metadata, content = load_metadata(filepath)
 
-    return index_entries, sitemap_urls
+            base_name = os.path.splitext(filename)[0]
+            html_filename = base_name + ".html"
+            output_path = os.path.join(output_dir, html_filename)
+            url = f"{URL_PREFIX}/{period_key}/{html_filename}"
+            hidden = metadata.get("hidden", False)
 
-def main():
-    args = sys.argv[1:]
-    selected_periods = list(PERIODS.keys())
+            # HTML render
+            html_body = markdown.markdown(content, extensions=['extra', 'codehilite', 'toc'])
+            final_html = template.replace("{{ content }}", html_body)
+            for key, value in metadata.items():
+                final_html = final_html.replace(f"{{{{ {key} }}}}", str(value))
 
-    if len(args) == 2 and args[0] == "--only":
-        if args[1] in PERIODS:
-            selected_periods = [args[1]]
-        else:
-            print(f"Neznámé období: {args[1]}")
-            sys.exit(1)
+            with open(output_path, 'w', encoding='utf-8') as f:
+                f.write(final_html)
 
-    all_index = []
-    all_urls = []
+        # 2. PRŮCHOD CELÉ .html SLOŽKY → zápis do indexu/sitemap
+        for filename in os.listdir(output_dir):
+            if not filename.endswith('.html'):
+                continue
 
-    for period_key in selected_periods:
-        index_entries, urls = process_period(period_key)
-        all_index.extend(index_entries)
-        all_urls.extend(urls)
+            filepath = os.path.join(output_dir, filename)
+            url = f"{URL_PREFIX}/{period_key}/{filename}"
+            hidden = False
+            metadata = {
+                "title": os.path.splitext(filename)[0],
+                "summary": "",
+                "tags": [],
+                "date": "",
+            }
 
+            with open(filepath, 'r', encoding='utf-8') as f:
+                lines = f.readlines()
+                for line in lines:
+                    if '<meta name="title"' in line:
+                        metadata["title"] = line.split('content="')[1].split('"')[0]
+                    elif '<meta name="summary"' in line:
+                        metadata["summary"] = line.split('content="')[1].split('"')[0]
+                    elif '<meta name="tags"' in line:
+                        raw = line.split('content="')[1].split('"')[0]
+                        metadata["tags"] = [tag.strip() for tag in raw.split(',')]
+                    elif '<meta name="date"' in line:
+                        metadata["date"] = line.split('content="')[1].split('"')[0]
+                    elif '<meta name="hidden"' in line:
+                        value = line.split('content="')[1].split('"')[0].lower()
+                        hidden = value == "true"
+
+            index_entries.append({
+                "title": metadata["title"],
+                "file": filename,
+                "date": normalize_date(metadata["date"]),
+                "summary": metadata["summary"],
+                "tags": metadata["tags"],
+                "hidden": hidden,
+                "folder": period_key
+            })
+
+            if not hidden:
+                sitemap_urls.append(url)
+
+    # Zápis JSON indexu
     with open(INDEX_PATH, 'w', encoding='utf-8') as f:
-        json.dump(all_index, f, indent=2, ensure_ascii=False)
+        json.dump(index_entries, f, indent=2, ensure_ascii=False)
 
+    # Zápis sitemap
     with open(SITEMAP_PATH, 'w', encoding='utf-8') as f:
         f.write('<?xml version="1.0" encoding="UTF-8"?>\n')
         f.write('<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n')
-        for url in all_urls:
+        for url in sitemap_urls:
             f.write(f"  <url><loc>{url}</loc></url>\n")
         f.write('</urlset>\n')
 
