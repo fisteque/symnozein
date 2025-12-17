@@ -33,7 +33,6 @@ def convert_md_to_html():
         with open(os.path.join(INPUT_MD_DIR, filename), 'r', encoding='utf-8') as f:
             raw = f.read()
 
-        # Rozdělit YAML + obsah
         if raw.startswith('---'):
             parts = raw.split('---', 2)
             metadata = yaml.safe_load(parts[1])
@@ -61,14 +60,24 @@ def extract_metadata_from_html(folder):
 
         def get_meta(name):
             tag = soup.find("meta", attrs={"name": name})
-            return tag["content"] if tag else ""
+            return tag["content"].strip() if tag else ""
+
+        summary = get_meta("summary")
+        title = get_meta("title")
+        if not title:
+            # Odvodíme titulek ze jména souboru, např. "S-011.html" → "S-011"
+            base_title = filename.replace(".html", "")
+            if summary:
+                title = f"{base_title} – {summary}"
+            else:
+                title = base_title
 
         entry = {
-            "title": get_meta("title"),
-            "summary": get_meta("summary"),
+            "title": title,
+            "summary": summary,
             "tags": get_meta("tags").split(", ") if get_meta("tags") else [],
             "date": get_meta("date"),
-            "hidden": get_meta("hidden").strip().lower() == "true",
+            "hidden": get_meta("hidden").lower() == "true",
             "file": filename
         }
         entries.append(entry)
