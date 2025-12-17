@@ -40,47 +40,47 @@
   <div id="content">Načítání…</div>
 
   <script>
-    const INDEX_JSON_PATH = "denik/spirala_index.json"; // ✅ Opravená cesta
+  const INDEX_JSON_PATH = "denik/spirala_index.json"; // ✅ správná relativní cesta
 
-    fetch(INDEX_JSON_PATH)
-      .then(response => response.json())
-      .then(data => {
-        const container = document.getElementById("content");
-        container.innerHTML = "";
+  fetch(INDEX_JSON_PATH)
+    .then(response => response.json())
+    .then(data => {
+      const container = document.getElementById("content");
+      container.innerHTML = "";
 
-        data.months.forEach(month => {
-          const monthHeading = document.createElement("h2");
-          monthHeading.textContent = month.label;
-          container.appendChild(monthHeading);
+      data.months.forEach(month => {
+        const monthHeading = document.createElement("h2");
+        monthHeading.textContent = month.label;
+        container.appendChild(monthHeading);
 
-          month.entries.forEach(entry => {
-            if (entry.hidden) return; // přeskočit skryté záznamy
+        month.entries.forEach(entry => {
+          if (entry.hidden) return;
 
-            const div = document.createElement("div");
-            div.className = "entry";
+          const div = document.createElement("div");
+          div.className = "entry";
 
-            const a = document.createElement("a");
-            a.href = `denik/${month.folder}/${entry.file}`;
-            a.textContent = entry.title || entry.file;
-            a.className = "entry-title";
+          const a = document.createElement("a");
+          a.href = `denik/${month.folder}/${entry.file}`;
+          a.textContent = entry.title || entry.file;
+          a.className = "entry-title";
 
-            const meta = document.createElement("div");
-            meta.className = "entry-meta";
-            meta.textContent = `${entry.date} — ${entry.summary}`;
+          const meta = document.createElement("div");
+          meta.className = "entry-meta";
+          meta.textContent = `${entry.date} — ${entry.summary}`;
 
-            div.appendChild(a);
-            div.appendChild(document.createElement("br"));
-            div.appendChild(meta);
+          div.appendChild(a);
+          div.appendChild(document.createElement("br"));
+          div.appendChild(meta);
 
-            container.appendChild(div);
-          });
+          container.appendChild(div);
         });
-      })
-      .catch(err => {
-        document.getElementById("content").textContent =
-          "Chyba při načítání spirála_index.json.";
-        console.error(err);
       });
-  </script>
+    })
+    .catch(err => {
+      document.getElementById("content").textContent =
+        "Chyba při načítání spirala_index.json.";
+      console.error(err);
+    });
+</script>
 </body>
 </html>
