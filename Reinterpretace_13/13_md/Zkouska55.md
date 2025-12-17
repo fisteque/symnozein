@@ -1,6 +1,6 @@
 ---
-title: "První vítr..."
-summary: "Krátká mapa o tom, jaký je pocit, když se víra pohne poprvé..."
+title: "První vítr."
+summary: "Krátká mapa o tom, jaký je pocit, když se víra pohne poprvé."
 tags: ["víra", "počátek", "pohyb"]
 date: 2025-12-17
 hidden: false
@@ -8,7 +8,7 @@ hidden: false
 
 # První vítr
 
-Vše bylo tiché... 
+Vše bylo tiché. 
 A pak — něco se pohnulo.
 
 Víra nezačíná věděním. Začíná pohybem, který nemá důvod, jen směr.
