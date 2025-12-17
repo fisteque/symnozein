@@ -4,16 +4,16 @@ import yaml
 import json
 from datetime import datetime, date as date_type
 
-# Cílové složky deníku
 TARGETS = {
     "25_12": {
         "input_dir": "denik/25_12_md",
         "output_dir": "denik/25_12",
         "template_path": "denik/templates/template.html",
+        "label": "Prosinec 2025"
     },
 }
 
-INDEX_PATH = "denik/denik_index.json"
+INDEX_PATH = "Reinterpretace_13/denik_index.json"
 SITEMAP_PATH = "denik/sitemap_denik.xml"
 URL_PREFIX = "https://fisteque.github.io/symnozein/denik"
 
@@ -77,7 +77,7 @@ def extract_metadata_from_html(html_path):
     return metadata
 
 def main():
-    index_entries = []
+    months = []
     sitemap_urls = []
 
     for period_key, config in TARGETS.items():
@@ -102,14 +102,15 @@ def main():
             metadata, content = load_metadata(md_path)
             convert_md_to_html(md_path, html_path, template, metadata, content)
 
-        # 2. SBĚR všech .html souborů ve výstupní složce
+        # 2. SBĚR .html souborů ve výstupní složce
+        entries = []
         for filename in os.listdir(output_dir):
             if not filename.endswith('.html'):
                 continue
             html_path = os.path.join(output_dir, filename)
             metadata = extract_metadata_from_html(html_path)
 
-            index_entries.append({
+            entry = {
                 "title": metadata["title"],
                 "file": filename,
                 "date": normalize_date(metadata["date"]),
@@ -117,36 +118,30 @@ def main():
                 "tags": metadata["tags"],
                 "hidden": metadata["hidden"],
                 "folder": period_key
-            })
+            }
+            entries.append(entry)
 
             if not metadata["hidden"]:
                 url = f"{URL_PREFIX}/{period_key}/{filename}"
                 sitemap_urls.append(url)
 
-        # 3. ZÁPIS do denik_index.json
-        index_json = {
-             "months": [
-                 {
-                     "label": "Prosinec 2025",
-                     "folder": "25_12",
-                     "entries": entries_25_12  # Seznam záznamů, které už máš poskládané
-                 }
-             ]
-        }
- 
-         with open("Reinterpretace_13/denik_index.json", "w", encoding="utf-8") as f:
-             json.dump(index_json, f, ensure_ascii=False, indent=2)
+        months.append({
+            "label": config["label"],
+            "folder": period_key,
+            "entries": entries
+        })
 
-         with open(INDEX_PATH, 'w', encoding='utf-8') as f:
-             json.dump(index_entries, f, indent=2, ensure_ascii=False)
+    # 3. ZÁPIS do denik_index.json (nová struktura!)
+    with open(INDEX_PATH, 'w', encoding='utf-8') as f:
+        json.dump({ "months": months }, f, ensure_ascii=False, indent=2)
 
-         # 4. ZÁPIS do sitemap_denik.xml
-         with open(SITEMAP_PATH, 'w', encoding='utf-8') as f:
-             f.write('<?xml version="1.0" encoding="UTF-8"?>\n')
-             f.write('<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n')
-             for url in sitemap_urls:
-                 f.write(f"  <url><loc>{url}</loc></url>\n")
-             f.write('</urlset>\n')
+    # 4. ZÁPIS do sitemap
+    with open(SITEMAP_PATH, 'w', encoding='utf-8') as f:
+        f.write('<?xml version="1.0" encoding="UTF-8"?>\n')
+        f.write('<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n')
+        for url in sitemap_urls:
+            f.write(f"  <url><loc>{url}</loc></url>\n")
+        f.write('</urlset>\n')
 
-     if __name__ == "__main__":
-         main()
+if __name__ == "__main__":
+    main()
