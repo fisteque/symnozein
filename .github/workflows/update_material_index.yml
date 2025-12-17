@@ -7,7 +7,7 @@ on:
       - 'Reinterpretace_13/templates/template.html'
       - '.github/workflows/update_13_index.yml'
       - 'scripts/update_material_index.py'
-      - 'scripts/convert_all.py'
+      - 'scripts/convert_material.py'
 
 permissions:
       contents: write
