@@ -68,7 +68,7 @@ def extract_metadata_from_html(folder):
             "summary": get_meta("summary"),
             "tags": get_meta("tags").split(", ") if get_meta("tags") else [],
             "date": get_meta("date"),
-            "hidden": get_meta("hidden") == "true",
+            "hidden": get_meta("hidden").strip().lower() == "true",
             "file": filename
         }
         entries.append(entry)
