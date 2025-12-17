@@ -11,11 +11,6 @@ TARGETS = {
         "output_dir": "denik/25_12",
         "template_path": "denik/templates/template.html",
     },
-    "26_01": {
-        "input_dir": "denik/26_01_md",
-        "output_dir": "denik/26_01",
-        "template_path": "denik/templates/template.html",
-    }
 }
 
 INDEX_PATH = "denik/denik_index.json"
