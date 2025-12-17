@@ -2,146 +2,103 @@ import os
 import markdown
 import yaml
 import json
-from datetime import datetime, date as date_type
+from bs4 import BeautifulSoup
 
-TARGETS = {
-    "25_12": {
-        "input_dir": "denik/25_12_md",
-        "output_dir": "denik/25_12",
-        "template_path": "denik/templates/template.html",
-        "label": "Prosinec 2025"
-    },
-}
-
+INPUT_MD_DIR = "denik/25_12_md"
+OUTPUT_HTML_DIR = "denik/25_12"
+TEMPLATE_PATH = "template.html"
 INDEX_PATH = "Reinterpretace_13/denik_index.json"
-SITEMAP_PATH = "denik/sitemap_denik.xml"
-URL_PREFIX = "https://fisteque.github.io/symnozein/denik"
+SITEMAP_PATH = "Reinterpretace_13/sitemap_denik.xml"
+FOLDER_NAME = "25_12"
 
-def normalize_date(value):
-    if value is None:
-        return ""
-    if isinstance(value, str):
-        return value
-    if isinstance(value, datetime):
-        return value.date().isoformat()
-    if isinstance(value, date_type):
-        return value.isoformat()
-    return ""
+def load_template():
+    with open(TEMPLATE_PATH, 'r', encoding='utf-8') as f:
+        return f.read()
 
-def load_metadata(md_file):
-    with open(md_file, 'r', encoding='utf-8') as f:
-        lines = f.readlines()
-    if not lines or lines[0].strip() != '---':
-        return {}, ''.join(lines)
-    meta_lines = []
-    i = 1
-    while i < len(lines):
-        if lines[i].strip() == '---':
-            break
-        meta_lines.append(lines[i])
-        i += 1
-    metadata = yaml.safe_load(''.join(meta_lines))
-    content = ''.join(lines[i+1:])
-    return metadata or {}, content
+def render_html(template, metadata, content):
+    html = template
+    for key in ['title', 'summary', 'tags', 'date', 'hidden']:
+        value = metadata.get(key, "")
+        if isinstance(value, list):
+            value = ", ".join(value)
+        html = html.replace(f"{{{{ {key} }}}}", str(value))
+    html = html.replace("{{ content }}", content)
+    return html
 
-def convert_md_to_html(md_path, html_path, template, metadata, content):
-    html_body = markdown.markdown(content, extensions=['extra', 'codehilite', 'toc'])
-    html_full = template.replace("{{ content }}", html_body)
-    for key, value in metadata.items():
-        html_full = html_full.replace(f"{{{{ {key} }}}}", str(value))
-    with open(html_path, 'w', encoding='utf-8') as f:
-        f.write(html_full)
+def convert_md_to_html():
+    template = load_template()
+    for filename in os.listdir(INPUT_MD_DIR):
+        if not filename.endswith(".md"):
+            continue
+        with open(os.path.join(INPUT_MD_DIR, filename), 'r', encoding='utf-8') as f:
+            raw = f.read()
 
-def extract_metadata_from_html(html_path):
-    metadata = {
-        "title": os.path.splitext(os.path.basename(html_path))[0],
-        "summary": "",
-        "tags": [],
-        "date": "",
-        "hidden": False
-    }
-    with open(html_path, 'r', encoding='utf-8') as f:
-        for line in f:
-            if '<meta name="title"' in line:
-                metadata["title"] = line.split('content="')[1].split('"')[0]
-            elif '<meta name="summary"' in line:
-                metadata["summary"] = line.split('content="')[1].split('"')[0]
-            elif '<meta name="tags"' in line:
-                raw = line.split('content="')[1].split('"')[0]
-                metadata["tags"] = [tag.strip() for tag in raw.split(',')]
-            elif '<meta name="date"' in line:
-                metadata["date"] = line.split('content="')[1].split('"')[0]
-            elif '<meta name="hidden"' in line:
-                value = line.split('content="')[1].split('"')[0].lower()
-                metadata["hidden"] = (value == "true")
-    return metadata
+        # Rozdělit YAML + obsah
+        if raw.startswith('---'):
+            parts = raw.split('---', 2)
+            metadata = yaml.safe_load(parts[1])
+            markdown_content = parts[2].strip()
+        else:
+            metadata = {}
+            markdown_content = raw
 
-def main():
-    months = []
-    sitemap_urls = []
+        html_content = markdown.markdown(markdown_content)
+        rendered = render_html(template, metadata, html_content)
 
-    for period_key, config in TARGETS.items():
-        input_dir = config["input_dir"]
-        output_dir = config["output_dir"]
-        template = ""
+        out_filename = filename.replace('.md', '.html')
+        out_path = os.path.join(OUTPUT_HTML_DIR, out_filename)
+        with open(out_path, 'w', encoding='utf-8') as f:
+            f.write(rendered)
 
-        if os.path.exists(config["template_path"]):
-            with open(config["template_path"], 'r', encoding='utf-8') as f:
-                template = f.read()
+def extract_metadata_from_html(folder):
+    entries = []
+    for filename in sorted(os.listdir(folder)):
+        if not filename.endswith(".html"):
+            continue
+        filepath = os.path.join(folder, filename)
+        with open(filepath, 'r', encoding='utf-8') as f:
+            soup = BeautifulSoup(f, "html.parser")
 
-        os.makedirs(output_dir, exist_ok=True)
+        def get_meta(name):
+            tag = soup.find("meta", attrs={"name": name})
+            return tag["content"] if tag else ""
 
-        # 1. PŘEVOD .md souborů → .html
-        for filename in os.listdir(input_dir):
-            if not filename.endswith('.md'):
-                continue
-            base = os.path.splitext(filename)[0]
-            md_path = os.path.join(input_dir, filename)
-            html_path = os.path.join(output_dir, base + ".html")
+        entry = {
+            "title": get_meta("title"),
+            "summary": get_meta("summary"),
+            "tags": get_meta("tags").split(", ") if get_meta("tags") else [],
+            "date": get_meta("date"),
+            "hidden": get_meta("hidden") == "true",
+            "file": filename
+        }
+        entries.append(entry)
+    return entries
 
-            metadata, content = load_metadata(md_path)
-            convert_md_to_html(md_path, html_path, template, metadata, content)
+def generate_index_json(entries):
+    months = [{
+        "label": "Prosinec 2025",
+        "folder": FOLDER_NAME,
+        "entries": entries
+    }]
+    with open(INDEX_PATH, "w", encoding="utf-8") as f:
+        json.dump({"months": months}, f, ensure_ascii=False, indent=2)
 
-        # 2. SBĚR .html souborů ve výstupní složce
-        entries = []
-        for filename in os.listdir(output_dir):
-            if not filename.endswith('.html'):
-                continue
-            html_path = os.path.join(output_dir, filename)
-            metadata = extract_metadata_from_html(html_path)
-
-            entry = {
-                "title": metadata["title"],
-                "file": filename,
-                "date": normalize_date(metadata["date"]),
-                "summary": metadata["summary"],
-                "tags": metadata["tags"],
-                "hidden": metadata["hidden"],
-                "folder": period_key
-            }
-            entries.append(entry)
-
-            if not metadata["hidden"]:
-                url = f"{URL_PREFIX}/{period_key}/{filename}"
-                sitemap_urls.append(url)
-
-        months.append({
-            "label": config["label"],
-            "folder": period_key,
-            "entries": entries
-        })
-
-    # 3. ZÁPIS do denik_index.json (nová struktura!)
-    with open(INDEX_PATH, 'w', encoding='utf-8') as f:
-        json.dump({ "months": months }, f, ensure_ascii=False, indent=2)
-
-    # 4. ZÁPIS do sitemap
+def generate_sitemap(entries):
+    url_prefix = "https://fisteque.github.io/symnozein/denik/25_12/"
     with open(SITEMAP_PATH, 'w', encoding='utf-8') as f:
         f.write('<?xml version="1.0" encoding="UTF-8"?>\n')
         f.write('<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n')
-        for url in sitemap_urls:
-            f.write(f"  <url><loc>{url}</loc></url>\n")
+        for entry in entries:
+            if not entry["hidden"]:
+                url = url_prefix + entry["file"]
+                f.write(f'  <url><loc>{url}</loc></url>\n')
         f.write('</urlset>\n')
+
+def main():
+    convert_md_to_html()
+    entries = extract_metadata_from_html(OUTPUT_HTML_DIR)
+    generate_index_json(entries)
+    generate_sitemap(entries)
 
 if __name__ == "__main__":
     main()
