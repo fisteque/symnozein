@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Materiály – Reinterpretace</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      background: #fff;
+      color: #111;
+      padding: 2em;
+      max-width: 800px;
+      margin: auto;
+    }
+    h1 {
+      font-size: 2em;
+      margin-bottom: 1em;
+    }
+    .material {
+      border-bottom: 1px solid #ccc;
+      margin-bottom: 1.5em;
+      padding-bottom: 1em;
+    }
+    .material h2 {
+      margin: 0 0 0.2em 0;
+    }
+    .material .date {
+      color: #666;
+      font-size: 0.9em;
+      margin-bottom: 0.5em;
+    }
+    .material .tags {
+      font-size: 0.9em;
+      color: #444;
+      margin-bottom: 0.3em;
+    }
+    .material .summary {
+      font-size: 1em;
+      color: #222;
+    }
+  </style>
+</head>
+<body>
+  <h1>Materiály Reinterpretace</h1>
+  <div id="materialy"></div>
+
+  <script>
+    fetch('material_index.json')
+      .then(response => response.json())
+      .then(data => {
+        const container = document.getElementById('materialy');
+        data.forEach(entry => {
+          if (entry.hidden) return;  // Nezobrazuj skryté
+          const div = document.createElement('div');
+          div.className = 'material';
+
+          const h2 = document.createElement('h2');
+          const link = document.createElement('a');
+          link.href = 'material/' + entry.file;
+          link.textContent = entry.title;
+          h2.appendChild(link);
+
+          const date = document.createElement('div');
+          date.className = 'date';
+          date.textContent = entry.date;
+
+          const tags = document.createElement('div');
+          tags.className = 'tags';
+          tags.textContent = entry.tags.join(', ');
+
+          const summary = document.createElement('div');
+          summary.className = 'summary';
+          summary.textContent = entry.summary;
+
+          div.appendChild(h2);
+          div.appendChild(date);
+          div.appendChild(tags);
+          div.appendChild(summary);
+
+          container.appendChild(div);
+        });
+      });
+  </script>
+</body>
+</html>
