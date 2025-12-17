@@ -9,7 +9,7 @@ TARGETS = {
     "13": {
         "input_dir": "Reinterpretace_13/13_md",
         "output_dir": "Reinterpretace_13/13",
-        "template_path": "Reinterpretace_13/templates/mapitola_template.html",
+        "template_path": "Reinterpretace_13/templates/template.html",
         "index_path": "Reinterpretace_13/13_index.json",
         "sitemap_path": "Reinterpretace_13/sitemap_13.xml",
         "url_prefix": "https://fisteque.github.io/symnozein/Reinterpretace_13/13/"
