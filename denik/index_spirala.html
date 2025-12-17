@@ -40,10 +40,15 @@
   <div id="content">Načítání…</div>
 
   <script>
-  const INDEX_JSON_PATH = "denik/spirala_index.json"; // ✅ správná relativní cesta
+  const INDEX_JSON_PATH = "denik/spirala_index.json";
 
   fetch(INDEX_JSON_PATH)
-    .then(response => response.json())
+    .then(response => {
+      if (!response.ok) {
+        throw new Error(`HTTP error! Status: ${response.status}`);
+      }
+      return response.json();
+    })
     .then(data => {
       const container = document.getElementById("content");
       container.innerHTML = "";
@@ -79,8 +84,9 @@
     .catch(err => {
       document.getElementById("content").textContent =
         "Chyba při načítání spirala_index.json.";
-      console.error(err);
+      console.error("Načtení JSON selhalo:", err);
     });
 </script>
+
 </body>
 </html>
