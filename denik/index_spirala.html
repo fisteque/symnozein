@@ -31,7 +31,7 @@
   <div id="entries">Načítám záznamy…</div>
 
   <script>
-    fetch("spirala_index.json")
+    fetch("denik/spirala_index.json")
       .then((response) => response.json())
       .then((data) => {
         const container = document.getElementById("entries");
