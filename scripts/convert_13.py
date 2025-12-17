@@ -80,7 +80,7 @@ def process_target(target_name):
             if not hidden:
                 sitemap_urls.append(html_url)
 
-            if target_name != "material":
+            if target_name != "13":
                 # Render HTML only for non-material targets
                 html_body = markdown.markdown(content, extensions=['extra', 'codehilite', 'toc'])
                 final_html = template.replace("{{ content }}", html_body)
