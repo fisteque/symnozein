@@ -68,7 +68,7 @@ def extract_metadata_from_html(folder):
             # Odvodíme titulek ze jména souboru, např. "S-011.html" → "S-011"
             base_title = filename.replace(".html", "")
             if summary:
-                title = f"{base_title} – {summary}"
+                title = f"{base_title} – <title>"
             else:
                 title = base_title
 
