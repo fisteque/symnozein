@@ -1,45 +1,42 @@
-name: Update denik index a sitemap
+name: Update Deník Index and Sitemap
 
 on:
   push:
     paths:
-      - 'denik/**/*.html'
-      - '!denik/spirala_vedomi/**'
-
-permissions:
-  contents: write
+      - '25_12_md/**.md'
+      - '26_01_md/**.md'
+      - '26_02_md/**.md'
+      - 'scripts/convert_denik.py'
+      - 'scripts/update_denik_index.py'
 
 jobs:
-  update-denik-index-sitemap:
+  convert:
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
 
     steps:
-      - name: Checkout repository
-        uses: actions/checkout@v4
+      - uses: actions/checkout@v3
 
       - name: Set up Python
-        uses: actions/setup-python@v5
+        uses: actions/setup-python@v4
         with:
           python-version: '3.x'
 
       - name: Install dependencies
         run: |
-          python -m pip install --upgrade pip
-          pip install beautifulsoup4
+          pip install markdown pyyaml
 
-      - name: Run update script
-        run: python3 scripts/update_denik_index.py
+      - name: Convert MD to HTML
+        run: python scripts/convert_denik.py
 
-      - name: Configure Git
-        run: |
-          git config --global user.name "github-actions[bot]"
-          git config --global user.email "github-actions[bot]@users.noreply.github.com"
-      
-      - name: Commit changes before pull
+      - name: Update denik_index.json and sitemap_denik.xml
+        run: python scripts/update_denik_index.py
+
+      - name: Commit and push changes
         run: |
           git config user.name "github-actions"
           git config user.email "github-actions@github.com"
-          git add denik/denik_index.json denik/sitemap_denik.xml
-          git commit -m "Auto-commit updated denik index and sitemap" || echo "No changes"
-          git pull --rebase
+          git add .
+          git commit -m "Update denik index and sitemap"
           git push
