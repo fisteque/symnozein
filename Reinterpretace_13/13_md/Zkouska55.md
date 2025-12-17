@@ -8,7 +8,7 @@ hidden: false
 
 # První vítr
 
-Vše bylo tiché.  
+Vše bylo tiché... 
 A pak — něco se pohnulo.
 
 Víra nezačíná věděním. Začíná pohybem, který nemá důvod, jen směr.
