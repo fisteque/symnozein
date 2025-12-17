@@ -3,74 +3,83 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Spirála vědomí – Symnózein</title>
+  <title>Spirála vědomí</title>
   <style>
     body {
-      font-family: sans-serif;
-      background-color: #f9f9f9;
-      color: #333;
+      font-family: system-ui, sans-serif;
       margin: 2em;
+      background: #f9f9f9;
     }
     h1 {
       font-size: 2em;
+      margin-bottom: 1em;
     }
     .entry {
-      margin-bottom: 1em;
+      margin-bottom: 1.2em;
+      padding-bottom: 1em;
+      border-bottom: 1px solid #ddd;
     }
     .entry-title {
       font-weight: bold;
     }
-    .tags {
-      color: #777;
+    .entry-meta {
+      color: #666;
       font-size: 0.9em;
+    }
+    a {
+      color: #0077cc;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
     }
   </style>
 </head>
 <body>
   <h1>Spirála vědomí</h1>
-  <div id="entries">Načítám záznamy…</div>
+  <div id="content">Načítání…</div>
 
   <script>
-    fetch("denik/spirala_index.json")
-      .then((response) => response.json())
-      .then((data) => {
-        const container = document.getElementById("entries");
+    const INDEX_JSON_PATH = "denik/spirala_index.json"; // ✅ Opravená cesta
+
+    fetch(INDEX_JSON_PATH)
+      .then(response => response.json())
+      .then(data => {
+        const container = document.getElementById("content");
         container.innerHTML = "";
 
-        const visibleEntries = data.entries.filter(entry => !entry.hidden);
+        data.months.forEach(month => {
+          const monthHeading = document.createElement("h2");
+          monthHeading.textContent = month.label;
+          container.appendChild(monthHeading);
 
-        visibleEntries.sort((a, b) => {
-          const titleA = a.title?.toUpperCase() || "";
-          const titleB = b.title?.toUpperCase() || "";
-          return titleA.localeCompare(titleB, "cs", { numeric: true });
-        });
+          month.entries.forEach(entry => {
+            if (entry.hidden) return; // přeskočit skryté záznamy
 
-        visibleEntries.forEach(entry => {
-          const div = document.createElement("div");
-          div.className = "entry";
+            const div = document.createElement("div");
+            div.className = "entry";
 
-          const link = document.createElement("a");
-          link.href = entry.path || entry.file;
-          link.textContent = entry.title || entry.file;
-          link.className = "entry-title";
+            const a = document.createElement("a");
+            a.href = `denik/${month.folder}/${entry.file}`;
+            a.textContent = entry.title || entry.file;
+            a.className = "entry-title";
 
-          const summary = document.createElement("div");
-          summary.textContent = entry.summary || "";
+            const meta = document.createElement("div");
+            meta.className = "entry-meta";
+            meta.textContent = `${entry.date} — ${entry.summary}`;
 
-          const tags = document.createElement("div");
-          tags.className = "tags";
-          tags.textContent = (entry.tags || []).join(", ");
+            div.appendChild(a);
+            div.appendChild(document.createElement("br"));
+            div.appendChild(meta);
 
-          div.appendChild(link);
-          div.appendChild(summary);
-          div.appendChild(tags);
-
-          container.appendChild(div);
+            container.appendChild(div);
+          });
         });
       })
-      .catch((error) => {
-        document.getElementById("entries").textContent = "Chyba při načítání dat.";
-        console.error("Chyba při načítání JSON:", error);
+      .catch(err => {
+        document.getElementById("content").textContent =
+          "Chyba při načítání spirála_index.json.";
+        console.error(err);
       });
   </script>
 </body>
