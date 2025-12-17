@@ -3,9 +3,9 @@ name: Update material Index
 on:
   push:
     paths:
-      - 'Reinterpretace_13/material_md/**/*.md'
+      - 'Reinterpretace_13/material_md/*.md'
       - 'Reinterpretace_13/templates/template.html'
-      - '.github/workflows/update_13_index.yml'
+      - '.github/workflows/update_material_index.yml'
       - 'scripts/update_material_index.py'
       - 'scripts/convert_material.py'
 
