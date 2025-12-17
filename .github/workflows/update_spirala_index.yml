@@ -4,7 +4,7 @@ on:
   push:
     paths:
       - 'denik/spirala_vedomi/*.html'
-      - 'denik/spirala_md/*.md'
+      - 'denik/spirala_vedomi_md/*.md'
       - 'denik/templates/template.html'
       - '.github/workflows/update_spirala_index.yml'
       - 'scripts/update_spirala_index.py'
