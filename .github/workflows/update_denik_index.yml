@@ -3,7 +3,7 @@ name: Update Denik Index and Sitemap
 on:
   push:
     paths:
-      - 'denik/**/*.md'
+      - 'denik/25_12_md/*.md'
       - 'denik/templates/template.html'
       - '.github/workflows/update_denik_index.yml'
       - 'scripts/update_denik_index.py'
@@ -43,7 +43,7 @@ jobs:
         run: |
           git config user.name "github-actions"
           git config user.email "github-actions@github.com"
-          git add denik/**/*.html
+          git add denik/25_12/*.html
           git add denik/denik_index.json
           git add denik/sitemap_denik.xml
           git commit -m "🛠️ Update denik index and sitemap" || echo "No changes"
