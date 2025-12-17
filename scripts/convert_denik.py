@@ -6,9 +6,9 @@ from bs4 import BeautifulSoup
 
 INPUT_MD_DIR = "denik/25_12_md"
 OUTPUT_HTML_DIR = "denik/25_12"
-TEMPLATE_PATH = "template.html"
-INDEX_PATH = "Reinterpretace_13/denik_index.json"
-SITEMAP_PATH = "Reinterpretace_13/sitemap_denik.xml"
+TEMPLATE_PATH = "denik/templates/template.html"
+INDEX_PATH = "denik/denik_index.json"
+SITEMAP_PATH = "denik/sitemap_denik.xml"
 FOLDER_NAME = "25_12"
 
 def load_template():
