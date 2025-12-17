@@ -76,7 +76,7 @@ def extract_metadata_from_html(folder):
 
 def generate_index_json(entries):
     months = [{
-        "label": "Prosinec 2025",
+        "label": "Spirála",
         "folder": FOLDER_NAME,
         "entries": entries
     }]
@@ -84,7 +84,7 @@ def generate_index_json(entries):
         json.dump({"months": months}, f, ensure_ascii=False, indent=2)
 
 def generate_sitemap(entries):
-    url_prefix = "https://fisteque.github.io/symnozein/denik/25_12/"
+    url_prefix = "https://fisteque.github.io/symnozein/denik/spirala_vedomi/"
     with open(SITEMAP_PATH, 'w', encoding='utf-8') as f:
         f.write('<?xml version="1.0" encoding="UTF-8"?>\n')
         f.write('<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n')
