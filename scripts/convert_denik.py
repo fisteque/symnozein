@@ -62,7 +62,7 @@ def find_metadata_for_html(html_filename, input_dir):
             "hidden": False
         }
 
-def process_period(period_key, template):
+def process_period(period_key):
     config = PERIODS[period_key]
     input_dir = config['input_dir']
     output_dir = config['output_dir']
@@ -70,6 +70,10 @@ def process_period(period_key, template):
 
     index_entries = []
     sitemap_urls = []
+
+    if not os.path.exists(output_dir):
+        print(f"Složka neexistuje: {output_dir}")
+        return [], []
 
     for filename in os.listdir(output_dir):
         if not filename.endswith(".html"):
@@ -105,14 +109,11 @@ def main():
             print(f"Neznámé období: {args[1]}")
             sys.exit(1)
 
-    with open(TEMPLATE_PATH, 'r', encoding='utf-8') as f:
-        template = f.read()
-
     all_index = []
     all_urls = []
 
     for period_key in selected_periods:
-        index_entries, urls = process_period(period_key, template)
+        index_entries, urls = process_period(period_key)
         all_index.extend(index_entries)
         all_urls.extend(urls)
 
