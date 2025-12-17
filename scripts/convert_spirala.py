@@ -73,7 +73,7 @@ def extract_metadata_from_html(folder):
                 title = base_title
 
         entry = {
-            "title": <title>,
+            "title": title,
             "summary": summary,
             "tags": get_meta("tags").split(", ") if get_meta("tags") else [],
             "date": get_meta("date"),
