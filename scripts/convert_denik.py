@@ -14,7 +14,7 @@ CZECH_MONTHS = {
 TEMPLATE_PATH = "denik/templates/template.html"
 INDEX_PATH = "denik/denik_index.json"
 SITEMAP_PATH = "denik/sitemap_denik.xml"
-FOLDERS = ["25_10", "25_12", "26_01"]  # přidej další podle potřeby
+FOLDERS = ["25_10", "25_12"]  # přidej další podle potřeby
 
 def load_template():
     with open(TEMPLATE_PATH, 'r', encoding='utf-8') as f:
