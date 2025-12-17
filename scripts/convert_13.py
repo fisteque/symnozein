@@ -16,6 +16,17 @@ TARGETS = {
     },
 }
 
+def normalize_date(value):
+    if value is None:
+        return ""
+    if isinstance(value, str):
+        return value
+    if isinstance(value, datetime):
+        return value.date().isoformat()
+    if isinstance(value, date_type):
+        return value.isoformat()
+    return ""
+
 def load_metadata(md_file):
     with open(md_file, 'r', encoding='utf-8') as f:
         lines = f.readlines()
@@ -70,7 +81,7 @@ def process_target(target_name):
             index_entry = {
                 "title": metadata.get("title", base_name),
                 "file": html_filename,
-                "date": metadata.get("date", ""),
+                "date": normalize_date(metadata.get("date")),
                 "summary": metadata.get("summary", ""),
                 "tags": metadata.get("tags", []),
                 "hidden": hidden
