@@ -123,17 +123,30 @@ def main():
                 url = f"{URL_PREFIX}/{period_key}/{filename}"
                 sitemap_urls.append(url)
 
-    # 3. ZÁPIS do denik_index.json
-    with open(INDEX_PATH, 'w', encoding='utf-8') as f:
-        json.dump(index_entries, f, indent=2, ensure_ascii=False)
+        # 3. ZÁPIS do denik_index.json
+        index_json = {
+             "months": [
+                 {
+                     "label": "Prosinec 2025",
+                     "folder": "25_12",
+                     "entries": entries_25_12  # Seznam záznamů, které už máš poskládané
+                 }
+             ]
+        }
+ 
+         with open("Reinterpretace_13/denik_index.json", "w", encoding="utf-8") as f:
+             json.dump(index_json, f, ensure_ascii=False, indent=2)
 
-    # 4. ZÁPIS do sitemap_denik.xml
-    with open(SITEMAP_PATH, 'w', encoding='utf-8') as f:
-        f.write('<?xml version="1.0" encoding="UTF-8"?>\n')
-        f.write('<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n')
-        for url in sitemap_urls:
-            f.write(f"  <url><loc>{url}</loc></url>\n")
-        f.write('</urlset>\n')
+         with open(INDEX_PATH, 'w', encoding='utf-8') as f:
+             json.dump(index_entries, f, indent=2, ensure_ascii=False)
 
-if __name__ == "__main__":
-    main()
+         # 4. ZÁPIS do sitemap_denik.xml
+         with open(SITEMAP_PATH, 'w', encoding='utf-8') as f:
+             f.write('<?xml version="1.0" encoding="UTF-8"?>\n')
+             f.write('<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n')
+             for url in sitemap_urls:
+                 f.write(f"  <url><loc>{url}</loc></url>\n")
+             f.write('</urlset>\n')
+
+     if __name__ == "__main__":
+         main()
