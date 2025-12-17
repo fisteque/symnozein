@@ -20,7 +20,6 @@ def extract_metadata(filepath):
         soup = BeautifulSoup(f, "html.parser")
 
         title = soup.title.string.strip() if soup.title else "(Bez názvu)"
-
         summary = get_meta_content(soup, "summary")
         tags_raw = get_meta_content(soup, "tags")
         tags = [t.strip() for t in tags_raw.split(",")] if tags_raw else []
@@ -28,15 +27,15 @@ def extract_metadata(filepath):
         date = get_meta_content(soup, "date")
         hidden = get_meta_content(soup, "hidden").lower() == "true"
 
-        rel_path = os.path.relpath(filepath, "Reinterpretace_13").replace("\\", "/")
-        url = BASE_URL + rel_path
+        filename = os.path.basename(filepath)
+        url = BASE_URL + "13/" + filename  # ✅ Oprava zde
 
         return {
             "title": title,
             "summary": summary,
             "tags": tags,
             "date": date,
-            "file": rel_path,
+            "file": f"13/{filename}",  # pro jistotu i v 'file'
             "hidden": hidden,
             "url": url
         }
