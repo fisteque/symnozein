@@ -132,25 +132,5 @@
     ],
     "hidden": false,
     "folder": "25_12"
-  },
-  {
-    "title": "Joo.",
-    "file": "01_01_26.html",
-    "date": "2026-01-17",
-    "summary": "jojo",
-    "tags": [
-      "['test']"
-    ],
-    "hidden": false,
-    "folder": "26_01"
-  },
-  {
-    "title": "t",
-    "file": "t.html",
-    "date": "",
-    "summary": "",
-    "tags": [],
-    "hidden": false,
-    "folder": "26_01"
   }
 ]
