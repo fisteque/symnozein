@@ -3,6 +3,13 @@ import markdown
 import yaml
 import json
 from bs4 import BeautifulSoup
+import datetime
+
+CZECH_MONTHS = {
+    "01": "ledna", "02": "února", "03": "března", "04": "dubna",
+    "05": "května", "06": "června", "07": "července", "08": "srpna",
+    "09": "září", "10": "října", "11": "listopadu", "12": "prosince"
+}
 
 INPUT_MD_DIR = "denik/25_12_md"
 OUTPUT_HTML_DIR = "denik/25_12"
@@ -50,6 +57,7 @@ def convert_md_to_html():
         with open(out_path, 'w', encoding='utf-8') as f:
             f.write(rendered)
 
+
 def extract_metadata_from_html(folder):
     entries = []
     for filename in sorted(os.listdir(folder)):
@@ -63,11 +71,24 @@ def extract_metadata_from_html(folder):
             tag = soup.find("meta", attrs={"name": name})
             return tag["content"] if tag else ""
 
+        date_str = get_meta("date")
+        title = get_meta("title")
+
+        # Pokud title chybí, vygeneruj z datumu
+        if not title and date_str:
+            try:
+                dt = datetime.datetime.strptime(date_str, "%Y-%m-%d")
+                day = dt.day
+                month = CZECH_MONTHS[date_str[5:7]]
+                title = f"{day}. {month} {dt.year}"
+            except Exception:
+                title = ""  # fallback pokud selže
+
         entry = {
-            "title": get_meta("title"),
+            "title": title,
             "summary": get_meta("summary"),
             "tags": get_meta("tags").split(", ") if get_meta("tags") else [],
-            "date": get_meta("date"),
+            "date": date_str,
             "hidden": get_meta("hidden").strip().lower() == "true",
             "file": filename
         }
