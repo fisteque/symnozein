@@ -4,7 +4,7 @@ summary: Ukázkový materiál pro složku `material/`
 tags: ["materiál", "test", "strukturální"]
 date: 2025-12-16
 hidden: false
-file: prvni_materialek43.md
+file: prvni_material.md
 ---
 
 # První materiál
