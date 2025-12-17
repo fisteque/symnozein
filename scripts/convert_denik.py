@@ -21,7 +21,6 @@ PERIODS = {
         "output_dir": "denik/26_01",
         "url_prefix": URL_ROOT + "26_01/"
     }
-    # další období můžeš přidat tady
 }
 
 def normalize_date(value):
@@ -38,21 +37,30 @@ def normalize_date(value):
 def load_metadata(md_file):
     with open(md_file, 'r', encoding='utf-8') as f:
         lines = f.readlines()
-
-    if lines[0].strip() != '---':
+    if not lines or lines[0].strip() != '---':
         return {}, ''.join(lines)
-
-    meta_lines = []
-    i = 1
-    while i < len(lines):
-        if lines[i].strip() == '---':
-            break
+    meta_lines, i = [], 1
+    while i < len(lines) and lines[i].strip() != '---':
         meta_lines.append(lines[i])
         i += 1
-
     metadata = yaml.safe_load(''.join(meta_lines))
     content = ''.join(lines[i+1:])
-    return metadata, content
+    return metadata or {}, content
+
+def find_metadata_for_html(html_filename, input_dir):
+    base_name = os.path.splitext(html_filename)[0]
+    md_path = os.path.join(input_dir, base_name + ".md")
+    if os.path.exists(md_path):
+        metadata, _ = load_metadata(md_path)
+        return metadata
+    else:
+        return {
+            "title": base_name,
+            "summary": "",
+            "tags": [],
+            "date": "",
+            "hidden": False
+        }
 
 def process_period(period_key, template):
     config = PERIODS[period_key]
@@ -63,44 +71,32 @@ def process_period(period_key, template):
     index_entries = []
     sitemap_urls = []
 
-    for filename in os.listdir(input_dir):
-        if filename.endswith('.md'):
-            filepath = os.path.join(input_dir, filename)
-            metadata, content = load_metadata(filepath)
+    for filename in os.listdir(output_dir):
+        if not filename.endswith(".html"):
+            continue
 
-            hidden = metadata.get('hidden', False)
-            base_name = os.path.splitext(filename)[0]
-            html_filename = base_name + '.html'
-            html_url = url_prefix + html_filename
+        metadata = find_metadata_for_html(filename, input_dir)
+        hidden = metadata.get("hidden", False)
+        html_url = url_prefix + filename
 
-            index_entry = {
-                "title": metadata.get("title", base_name),
-                "file": html_filename,
-                "date": normalize_date(metadata.get("date")),
-                "summary": metadata.get("summary", ""),
-                "tags": metadata.get("tags", []),
-                "hidden": hidden
-            }
-            index_entries.append(index_entry)
+        index_entry = {
+            "title": metadata.get("title", filename),
+            "file": filename,
+            "date": normalize_date(metadata.get("date")),
+            "summary": metadata.get("summary", ""),
+            "tags": metadata.get("tags", []),
+            "hidden": hidden
+        }
+        index_entries.append(index_entry)
 
-            if not hidden:
-                sitemap_urls.append(html_url)
-
-            # Render HTML
-            html_body = markdown.markdown(content, extensions=['extra', 'codehilite', 'toc'])
-            final_html = template.replace("{{ content }}", html_body)
-            for key, value in metadata.items():
-                final_html = final_html.replace(f"{{{{ {key} }}}}", str(value))
-
-            output_path = os.path.join(output_dir, html_filename)
-            with open(output_path, 'w', encoding='utf-8') as f:
-                f.write(final_html)
+        if not hidden:
+            sitemap_urls.append(html_url)
 
     return index_entries, sitemap_urls
 
 def main():
     args = sys.argv[1:]
-    selected_periods = list(PERIODS.keys())  # default: all
+    selected_periods = list(PERIODS.keys())
 
     if len(args) == 2 and args[0] == "--only":
         if args[1] in PERIODS:
@@ -120,11 +116,9 @@ def main():
         all_index.extend(index_entries)
         all_urls.extend(urls)
 
-    # Uložení denik_index.json
     with open(INDEX_PATH, 'w', encoding='utf-8') as f:
         json.dump(all_index, f, indent=2, ensure_ascii=False)
 
-    # Uložení sitemap
     with open(SITEMAP_PATH, 'w', encoding='utf-8') as f:
         f.write('<?xml version="1.0" encoding="UTF-8"?>\n')
         f.write('<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n')
