@@ -3,6 +3,7 @@ name: Update Denik Index and Sitemap
 on:
   push:
     paths:
+      - 'denik/25_12/**/*.html'
       - 'denik/25_12_md/*.md'
       - 'denik/templates/template.html'
       - '.github/workflows/update_denik_index.yml'
