@@ -58,26 +58,29 @@ def extract_metadata_from_html(folder):
         with open(filepath, 'r', encoding='utf-8') as f:
             soup = BeautifulSoup(f, "html.parser")
 
+        # title ze <title>
+        title_tag = soup.find("title")
+        title = title_tag.text.strip() if title_tag else filename.replace(".html", "")
+
+        # summary z <meta name="summary">
+        summary_tag = soup.find("meta", attrs={"name": "summary"})
+        summary = summary_tag["content"].strip() if summary_tag else ""
+
+        # ostatní
         def get_meta(name):
             tag = soup.find("meta", attrs={"name": name})
             return tag["content"].strip() if tag else ""
 
-        summary = get_meta("summary")
-        title = get_meta("title")
-        if not title:
-            # Odvodíme titulek ze jména souboru, např. "S-011.html" → "S-011"
-            base_title = filename.replace(".html", "")
-            if summary:
-                title = f"{base_title}"
-            else:
-                title = base_title
+        tags = get_meta("tags").split(", ") if get_meta("tags") else []
+        date = get_meta("date")
+        hidden = get_meta("hidden").lower() == "true" if get_meta("hidden") else False
 
         entry = {
             "title": title,
             "summary": summary,
-            "tags": get_meta("tags").split(", ") if get_meta("tags") else [],
-            "date": get_meta("date"),
-            "hidden": get_meta("hidden").lower() == "true",
+            "tags": tags,
+            "date": date,
+            "hidden": hidden,
             "file": filename
         }
         entries.append(entry)
