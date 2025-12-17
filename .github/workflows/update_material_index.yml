@@ -36,7 +36,7 @@ jobs:
       
       - name: Run conversion script
         run: |
-          python scripts/convert_all.py --only material
+          python scripts/convert_material.py
 
       - name: Configure Git
         run: |
