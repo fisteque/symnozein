@@ -14,14 +14,6 @@ TARGETS = {
         "sitemap_path": "Reinterpretace_13/sitemap_13.xml",
         "url_prefix": "https://fisteque.github.io/symnozein/Reinterpretace_13/13/"
     },
-    "material": {
-        "input_dir": "Reinterpretace_13/material",
-        "output_dir": "Reinterpretace_13/material",
-        "template_path": "Reinterpretace_13/templates/mapitola_template.html",
-        "index_path": "Reinterpretace_13/material_index.json",
-        "sitemap_path": "Reinterpretace_13/sitemap_material.xml",
-        "url_prefix": "https://fisteque.github.io/symnozein/Reinterpretace_13/material/"
-    }
 }
 
 def load_metadata(md_file):
