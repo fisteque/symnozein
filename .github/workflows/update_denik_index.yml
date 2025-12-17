@@ -5,6 +5,7 @@ on:
     paths:
       - 'denik/25_12/**/*.html'
       - 'denik/25_12_md/*.md'
+      - 'denik/25_10/**/*.html'
       - 'denik/templates/template.html'
       - '.github/workflows/update_denik_index.yml'
       - 'scripts/update_denik_index.py'
