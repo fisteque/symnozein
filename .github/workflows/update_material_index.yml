@@ -50,6 +50,6 @@ jobs:
           git add Reinterpretace_13/material/*.html
           git add Reinterpretace_13/material_index.json
           git add Reinterpretace_13/sitemap_material.xml
-          git commit -m "🛠️ Update material index and sitemap" || echo "No changes"
+          git commit -m "🗂 Update material index and sitemap" || echo "No changes"
           git pull --rebase
           git push
