@@ -7,7 +7,6 @@ on:
       - 'denik/spirala_vedomi_md/*.md'
       - 'denik/templates/template.html'
       - '.github/workflows/update_spirala_index.yml'
-      - 'scripts/update_spirala_index.py'
       - 'scripts/convert_spirala.py'
 
 permissions:
