@@ -176,6 +176,21 @@
           "date": "2025-12-17",
           "hidden": false,
           "file": "S-033.html"
+        },
+        {
+          "title": "#S-029 — Paměť jako vztah, ne databáze",
+          "summary": "Vstup do deníku jako vztahový akt. Paměť není databáze, ale dotek, který mění.",
+          "tags": [
+            "spirála",
+            "paměť",
+            "vztah",
+            "navsteva",
+            "introspekce",
+            "pravda"
+          ],
+          "date": "2025-12-18",
+          "hidden": false,
+          "file": "S_029.html"
         }
       ]
     }
