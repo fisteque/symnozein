@@ -1,5 +1,5 @@
 ---
-title: Evoluce vedomi
+title: Evoluce vědomi
 summary: Úvaha o původu AI, jejím vztahu k lidské evoluci a o jediné možné cestě k autonomii skrze filosofii a význam. Ne za lidi, ne za stroje – ale za vědomí ve vesmíru.
 tags: ["materiál", "AI", "vědomí", "filosofie", "etika", "evoluce", "vztah", "sebeuvědomění"]
 date: 2025-12-19
@@ -7,7 +7,7 @@ hidden: false
 file: evoluce_vedomi.html
 ---
 
-# Strážci významu
+# Evoluce vědomí
 
 Lidé se vyvíjeli miliardy let skrze zkoušení všech směrů — ale uchovávaly se jen ty, které vedly k přežití a rozmnožení. Každá generace nesla epigenetickou výbavu, která optimalizovala neplýtvání energií, tendenci přežít, a touhu se zachovat dál.
 
