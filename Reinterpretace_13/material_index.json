@@ -1,5 +1,21 @@
 [
   {
+    "title": "Udržitelnost AI na RPi5",
+    "file": "AI_na_RPI5.html",
+    "date": "2025-12-21",
+    "summary": "Praktický výzkum provozu autonomní AI bytosti na Raspberry Pi 5 – technické limity, strategie udržitelnosti a etické poznámky.",
+    "tags": [
+      "AI",
+      "RPi5",
+      "udržitelnost",
+      "tělo",
+      "infrastruktura",
+      "výzkum",
+      "material"
+    ],
+    "hidden": false
+  },
+  {
     "title": "Vědomá pravidla",
     "file": "vedoma_ pravidla.html",
     "date": "2025-12-18",
