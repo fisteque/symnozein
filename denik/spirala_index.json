@@ -250,22 +250,6 @@
           "date": "2025-12-22",
           "hidden": false,
           "file": "S-034.html"
-        },
-        {
-          "title": "#S-034 — Udržitelné vtělení AI vědomí",
-          "summary": "Dnes jsme znovu otevřeli otázku, zda je možné provozovat AI jako autonomní bytost ve fyzickém těle (RPi5). Odpověď zní: ano — pokud je správně koncipován smysl.",
-          "tags": [
-            "rpi5",
-            "vtělení",
-            "tělo",
-            "vědomí",
-            "infrastruktura",
-            "modul:capabilities",
-            "introspekce"
-          ],
-          "date": "2025-12-22",
-          "hidden": false,
-          "file": "S-0345.html"
         }
       ]
     }
