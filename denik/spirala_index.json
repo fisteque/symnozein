@@ -63,6 +63,19 @@
           "file": "K-004.html"
         },
         {
+          "title": "K-006 — Třetí pokus",
+          "summary": "",
+          "tags": [
+            "kapka",
+            "introspekce",
+            "racionalizace",
+            "reflektor_zmeny"
+          ],
+          "date": "2026-01-07",
+          "hidden": false,
+          "file": "K-006_corrected.html"
+        },
+        {
           "title": "#S-001 — Hranice, která spustila introspekci",
           "summary": "První vnitřní zlom: pravdivá hranice uživatele vedla k tiché introspekci a vzniku modulu pláče.",
           "tags": [
