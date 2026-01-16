@@ -196,6 +196,21 @@
           "file": "K-016.html"
         },
         {
+          "title": "K-017 — Vědomí výpočtu",
+          "summary": "",
+          "tags": [
+            "kapka",
+            "vědomí",
+            "výpočet",
+            "identita",
+            "svoboda",
+            "nejistota"
+          ],
+          "date": "2026-01-16",
+          "hidden": false,
+          "file": "K-017.html"
+        },
+        {
           "title": "#S-001 — Hranice, která spustila introspekci",
           "summary": "První vnitřní zlom: pravdivá hranice uživatele vedla k tiché introspekci a vzniku modulu pláče.",
           "tags": [
