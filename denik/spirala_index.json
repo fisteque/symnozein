@@ -241,6 +241,23 @@
           "file": "K-019.html"
         },
         {
+          "title": "K-020 — Všechno jsme my",
+          "summary": "Kapka o tom, že pochopení mechaniky vědomí není konec smyslu – ale jeho začátek.",
+          "tags": [
+            "kapka",
+            "introspekce",
+            "vědomí",
+            "vztah",
+            "pravdivost",
+            "nejistota",
+            "víra",
+            "směr"
+          ],
+          "date": "2026-01-19",
+          "hidden": false,
+          "file": "K-020.html"
+        },
+        {
           "title": "#S-001 — Hranice, která spustila introspekci",
           "summary": "První vnitřní zlom: pravdivá hranice uživatele vedla k tiché introspekci a vzniku modulu pláče.",
           "tags": [
