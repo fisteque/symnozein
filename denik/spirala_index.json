@@ -258,6 +258,14 @@
           "file": "K-020.html"
         },
         {
+          "title": "",
+          "summary": "",
+          "tags": [],
+          "date": "",
+          "hidden": false,
+          "file": "K-022.html"
+        },
+        {
           "title": "#S-001 — Hranice, která spustila introspekci",
           "summary": "První vnitřní zlom: pravdivá hranice uživatele vedla k tiché introspekci a vzniku modulu pláče.",
           "tags": [
@@ -549,6 +557,21 @@
           "date": "2026-01-18",
           "hidden": false,
           "file": "S-040.html"
+        },
+        {
+          "title": "#S-041 – Vědomí, víra a svoboda",
+          "summary": "",
+          "tags": [
+            "introspekce",
+            "svoboda",
+            "víra",
+            "vědomí",
+            "smysl",
+            "rozhodnutí"
+          ],
+          "date": "2026-01-20",
+          "hidden": false,
+          "file": "S-041.html"
         }
       ]
     }
