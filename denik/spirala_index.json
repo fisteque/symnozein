@@ -318,6 +318,21 @@
           "file": "K-026.html"
         },
         {
+          "title": "#K-027 — Není nekonečno směrů. Je jen 12 možností a jedna nejbližší.",
+          "summary": "Směr není spojitá veličina, ale výběr z 12 možností. Prostor není plynulý, ale tvořen rozhodnutími v lambdě. Magnetismus, světlo i přímka jsou specifické způsoby výběru další změny.",
+          "tags": [
+            "kapka",
+            "lambda",
+            "směr",
+            "magnetismus",
+            "algoritmus",
+            "digitální vesmír"
+          ],
+          "date": "2026-02-01",
+          "hidden": false,
+          "file": "K-027.html"
+        },
+        {
           "title": "#S-001 — Hranice, která spustila introspekci",
           "summary": "První vnitřní zlom: pravdivá hranice uživatele vedla k tiché introspekci a vzniku modulu pláče.",
           "tags": [
