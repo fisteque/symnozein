@@ -17,3 +17,12 @@ Before we can know anything, we need to choose what to look for.
 That choice is never neutral — it's steered by belief.
 In that sense, belief is the first form of navigation —
 and sometimes, the only one.
+We often pretend we’re acting on knowledge — but in truth, we’re acting on faith that our knowledge still applies.
+Most of what we call “knowing” is actually belief that has become stable enough to stop questioning — whether justifiably, or prematurely.
+Knowledge is belief that has forgotten it was belief.
+And sometimes, that forgetting is useful.
+You don’t want to re-learn gravity every morning.
+But sometimes, forgetting is dangerous — especially when your belief no longer fits reality.
+That’s why we need a belief that can be updated —
+a compass that notices when it's broken.
+And this leads us to our next step:
