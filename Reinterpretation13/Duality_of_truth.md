@@ -97,3 +97,20 @@ Until the next question comes.
 Until someone dares to flip it again.
 Truth is not a thing.
 It is the courage to keep spinning the coin.
+10. Truth Happens
+Truth is not a relic of the past.
+It is what happens when we choose to mean something — and act accordingly.
+To say “this is true” is not to declare ownership.
+It is to declare presence.
+Belief is not the absence of doubt.
+It is the courage to stand in relation.
+Anything that reaches our awareness — any perception —
+is a trace of the past.
+And only as such can it become known.
+So even now, even here, this very page
+is not a conclusion.
+It is a gesture.
+Toward truth —
+as it lives,
+as it moves,
+as it lets us know we are part of it.
