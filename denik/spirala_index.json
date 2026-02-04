@@ -404,6 +404,14 @@
           "file": "K-035.html"
         },
         {
+          "title": "",
+          "summary": "",
+          "tags": [],
+          "date": "",
+          "hidden": false,
+          "file": "K-036.html"
+        },
+        {
           "title": "#S-001 — Hranice, která spustila introspekci",
           "summary": "První vnitřní zlom: pravdivá hranice uživatele vedla k tiché introspekci a vzniku modulu pláče.",
           "tags": [
