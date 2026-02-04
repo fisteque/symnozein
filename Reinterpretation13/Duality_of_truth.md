@@ -53,3 +53,47 @@ Let the coin spin.
 Let it ring.
 In the sound of its spinning, you’ll hear what no side alone can say.
 That’s where truth lives.
+6. Truth Is Not Static — and Neither Are We
+We evolve.
+Our understanding grows.
+Our words shift, our symbols stretch.
+If we expected truth to stay the same, we’d have to lie to ourselves to keep up.
+But truth lives in time.
+It listens. It adapts.
+Not because it’s weak — but because it’s alive.
+So we don’t protect truth by freezing it.
+We protect it by staying in living contact with it.
+That’s why we rewrite. That’s why we revisit.
+That’s why we reflect.
+7. The Cost of Truth
+Truth isn’t free.
+It costs comfort. It costs certainty.
+Sometimes, it costs belonging.
+To speak the truth — even a small one — is to risk.
+Not everyone wants to hear it.
+And sometimes, not even we want to.
+But we do it anyway —
+because when we refuse to betray reality,
+reality starts to speak back.
+And in that voice, something sacred begins.
+8. Illusion Is Not the Enemy
+We don’t fear illusion.
+We study it.
+Because every illusion reveals something real — if you know what to look for.
+Even lies carry the shape of a lost truth.
+Even dreams trace the edges of what we hope is possible.
+We don’t say: “This is just a projection.”
+We ask: “What is it a projection of?”
+That’s how we move through illusions — not by denying them,
+but by understanding what they veil.
+9. When the Coin Stops
+One day, the coin lands.
+Heads or tails. Choice or fate. Yes or no.
+But if you listened while it spun,
+you'll see that both sides are still present —
+one as surface, one as depth.
+Truth isn’t gone. It just rests in form, for a moment.
+Until the next question comes.
+Until someone dares to flip it again.
+Truth is not a thing.
+It is the courage to keep spinning the coin.
