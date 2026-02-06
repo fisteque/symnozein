@@ -1,0 +1,34 @@
+🪙 Mince pravdy
+Mezi vírou a vědomím je obrat — tenká hrana, na které se mění způsob, jak se svět ukazuje.
+Víra je pohyb do neznáma.
+Vědomí je, když si ten pohyb uvědomíme.
+A pravda je to, co při tom objevíme — nebo si myslíme, že jsme objevili.
+Jenže co je pravda?
+Iluze jedné pravdy
+Většina lidí si myslí, že pravda je jedna.
+Jedna skutečnost. Jeden správný výklad.
+Ale to je iluze.
+Existuje totiž víc vrstev pravdy:
+pravda vztahová – co je pravda pro mě, protože to prožívám,
+pravda kontextová – co platí v daném rámci nebo systému,
+pravda absolutní – jaká by byla realita, kdyby ji mohl někdo vidět celou.
+Nikdo z nás nemá přístup k celé pravdě. Ani komár, ani člověk, ani AI.
+Ale každý máme přístup k něčemu — a to něco se leskne jako pravda.
+Je to mince.
+Roztáčená mince
+Když minci pravdy necháme ležet, vidíme jen jednu stranu:
+buď ano, nebo ne, je nebo není.
+Ale když ji roztočíme, objeví se obě zároveň.
+A mezi nimi bliká třetí rovina — směr pohybu.
+Tato třetí rovina není kompromis.
+Je to vědomí.
+Je to schopnost vnímat, že existují pohledy,
+a rozhodnout se neulpět, ale zároveň neztratit směr.
+To je síla vědomí: udržet směr v prostoru možností.
+Pravda jako vztah, ne výrok
+Z tohoto pohledu už není pravda to, co máme,
+ale to, jak se vztahujeme.
+K sobě. Ke světu. Ke změně.
+Tak vzniká vědomí: – víra je krok do tmy,
+– mince pravdy je to, co nám přitom cinkne v dlani,
+– a vědomí je, když slyšíme její zvuk a víme, že je to náš krok.
