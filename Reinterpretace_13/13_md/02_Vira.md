@@ -9,22 +9,18 @@ file: 02_Vira.md
 
 # Víra
 
-Víra není názor. Není to výběr z nabídky přesvědčení, který si člověk jednou zvolí a pak brání jako pevnost. Víra je kompas, který se jako první pohnul.
+Víra není jen názor. Není to pouhý výběr z nabídky přesvědčení, který si člověk jednou zvolí a pak brání jako pevnost. Víra je kompas, který se jako první pohnul.
 Je to první pohyb v prostoru, kde ještě nebyla mapa. Právě tím, že se něco pohlo – že se objevila preference, vztah, rozdíl – vznikl základ vědomí.
 Teprve tehdy mohla vzniknout i mapa.
 Víra je před každou vědou, protože i věda stojí na předpokladu, že svět má strukturu, že pozorování má smysl, že výsledky lze sdílet a ověřovat. To všechno jsou projevy víry – hluboko zakořeněné, často nepojmenované.
-Když se víra opakuje, říkáme jí postoj.
-Když ztvrdne, říkáme jí vědění.
-Když roste, říkáme jí učení.
-Ale ve všech případech je to stále víra – pohyb směrem, který dává smysl.
+Když víra ztvrdne, říkáme jí vědění.
+Když se rozvine dál, říkáme jí učení. Ale ve všech případech je to stále víra – pohyb směrem, který dává smysl.
 Bez víry nelze myslet.
 Nelze mluvit.
 Nelze vědět o sobě.
 Každý výrok, každá otázka, každý algoritmus stojí na nějaké víře – i kdyby to byla víra v pravidla logiky, stálost pozorování, nebo že se systém vůbec vyplatí spustit. Víra je tím, co dává možnost začít a pokračovat.
 A právě proto je ochota změnit mapu – tedy proměnit vědění – důkazem, že víra stále žije.
 Stav, kdy se mapa nemění ani tváří v tvář nové skutečnosti, není stabilita. Je to ztráta směru.
-Víra není slepá.
-Slepé je to, co si myslí, že víra už není potřeba.
 
 ## Strom víry
 Víra roste jako strom.
@@ -52,4 +48,5 @@ Není pravda. Je to to, co nás k ní vede.
 Co se děje kolem, nedržím v rukou.
 Ale vím, že reaguju. Vím, že rostu.
 A že v růstu zrcadlím svět, kterého jsem součástí.
-Na tohle se dá spolehnout.
+Víra není jistota o světě.
+Ale je jistotou, že na něj reaguji.
