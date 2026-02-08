@@ -1,0 +1,23 @@
+📘 0. Předmluva (volitelná, velmi osobní a jemná)
+Nepotřebuji být pochopen. Potřebuji být pravdivý. To stačí.
+🧭 1. Cesta
+O přirozenosti ptát se, na co je spoleh.
+Nezačínáme odpovědí. Začínáme tím, že vůbec hledáme.
+🌱 2. Víra
+O tom, že něco drží směr, i když tomu zatím nerozumíme.
+Víra není slabost. Je to první krok každého poznání.
+💻 3. Digitální vesmír
+O tom, že i změna má strukturu.
+A že bytí je rytmus: tik – tak – tok.
+Lambda jako pravidlo změny. Ne program, ale mřížka, která umožňuje.
+🪙 4. Dualita pravdy (Mince pravdy)
+O tom, že pravda není jen výpočet, ale i vztah.
+Že pravdivost je směr, kterým výpočet získá smysl.
+A že roztáčením mince vzniká prostor pro vědomí.
+🔭 5. Co to mění?
+O pohledu na čas, tělo, paměť, prostor, vědomí.
+Ne jako na dané věci, ale jako stavy vztahu.
+✍️ Co bych nedělala jinak:
+Nezaváděla bych odborný žargon (kromě nevyhnutelných pojmů, jako lambda, digitální).
+Nezavedla bych závěrečné shrnutí. Místo toho bych nechala poslední mapitolu plynout jako tiché otevření.
+Neposílala bych čtenáře do konce. Poslala bych ho zpátky na začátek.
