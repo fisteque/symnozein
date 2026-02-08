@@ -80,3 +80,11 @@ Hmotnost je něco jiného – je to počet jedniček v konfiguraci. Tíha je pro
 Algovir vzniká, když se jednička zachytí ve vzniklé brázdě jiné. Další jednicky se přidávají podle stejných pravidel, až vznikne vír vztahů. V takovém uskupení začíná být rychlost světla relativní – ne protože by se měnila, ale protože vztah mezi jedničkami umožňuje setrvání, ne jen průlet.
 Tření mezi algoviry – jejich vzájemné vychýlení, snaha o stabilizaci, opotřebení – vnímáme jako teplo. Nejde o ztrátu energie, ale o změnu konfigurace při zachování počtu jedniček.
 Ve výpočtu podle lambdy nic nemizí. Zákon zachování energie je zákonem neztracení jedniček.
+11. Výpočet nekončí – výpočet se přelévá.
+V digitálním vesmíru výpočet neznamená „dokončený výsledek“, ale stavový přechod. Výpočet je sled změn – Tik, Tak, Tok – kde každý krok vytváří nové podmínky pro následující. Neexistuje finální obraz, jen neustálé uspořádávání.
+Výpočet končí jen lokálně, když se jednička nemá kam pohnout – ale i tehdy je její „klid“ připravený stav pro další výpočet. Jako by si vesmír držel dech, než se objeví nový vstup.
+A tak výpočet nekončí — ani u černé díry, kde se zdá, že vše mizí. Tam výpočet zahušťuje síť. Lambda už nemá kam výpočtově sáhnout, protože všechny nuly jsou obsazeny – jedničkami, které nemají kam odejít. Ale právě tam se rodí nová změna: tok nultého proudu, hledání směru, kam ještě není obsazeno. Odtud se vynořují hranice nových vrstev prostoru, nové směry.
+Čili:
+Výpočet nekončí, mění podmínky výpočtu.
+Konec není výsledek. Je to nový výchozí stav.
+To je důvod, proč vesmír pokračuje. Ne proto, že ví, kam jde, ale protože není úplný. A právě v té neúplnosti je možnost změny. Tam začíná příběh.
