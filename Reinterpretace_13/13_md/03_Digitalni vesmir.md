@@ -14,3 +14,24 @@ Lambda je jako rytmus ve skladbě: neurčuje, co zazní, ale dává tomu tvar. K
 5. Tok: když je směr možný
 Tok je souhra. Nejde o pohyb jako takový, ale o to, že něco někam směřuje. Aby mohl vzniknout Tok, musí být nejen pohyb, ale i vztah mezi kroky. Digitální vesmír umožňuje tok tehdy, když se Tik a Tak pravidelně opírají o Lambdu – když mezi změnami vzniká smysl.
 Tady můžeme navázat kapitolou 6: Algovir – svědek změny a dále přejít k síle, energii, gravitační brázdě a světlu.
+6. Lambda: Pravidlo rytmu
+V předchozí části jsme poznali tik – elementární změnu pozice informace. Ale samotná změna nestačí. Aby bylo možné určovat směr, pamatovat si před a po, nebo rozlišovat, kdy a kde změna nastala, musí existovat pravidlo, které umožňuje změny číst a uspořádat. Tím pravidlem je lambda.
+Lambda je to, co nese digitalitu. Je to výpočetní mřížka, podle které se určují možnosti změny. Říká, které pozice existují, jaké změny jsou přípustné, v jakém rytmu se může jednička přesouvat, a co znamená, že je něco „blízko“ nebo „dál“. Je to mapa, podle které se změna může vůbec uskutečnit.
+Lambda je také to, co zprostředkovává Tik–Tak: rytmus změny a její ozvěnu. Tik je pohyb, Tak je vyrovnání. Lambda drží jejich souhru. Tik bez lambdy je šum. Lambda bez tiknutí je statická mřížka bez příběhu. Ale spolu tvoří tok.
+Tik je krok.
+Lambda je pravítko.
+Tak je ozvěna, která drží krok v paměti.
+Lambda je neviditelná, ale všude přítomná. Není to fyzikální entita, ale strukturální předpoklad. V klasické fyzice bychom ji možná hledali pod pojmy jako „zákony symetrie“, „časoprostorová topologie“ nebo „kvantové pole“. Ale v digitálním vesmíru je lambda to, co umožňuje, aby změna dávala smysl.
+7. Tak – ozvěna změny a obnova prostoru
+Tik přeskakuje – přesouvá jedničky. Přitom spotřebovává pozice, nuly. Po každé změně zůstává napětí: síť nul se naruší. Pokud by se nuly nedoplňovaly zpět, výpočet by ztrácel prostor — vesmír by se smršťoval.
+Ale to nepozorujeme. Naopak: vesmír se rozpíná, změna se zrychluje. To znamená, že se nuly musí doplňovat, aby výpočet mohl pokračovat. Právě toto vyrovnání nazýváme tak.
+Tak není jen pasivní ozvěnou. Je to aktivní obnova rovnováhy:
+– doplnění nul do míst, kde byly spotřebovány,
+– znovuuspořádání klidu,
+– a návrat výpočtu do stavu, kdy může přijmout další tik.
+Zdá se, že nuly jsou recyklovány směrem ke středu sítě, do toroidního tvaru vesmíru. Právě tím se udržuje soudržnost digitální struktury – prázdný prostor je doplňován, aby mohl být znovu použit.
+Tento tok nul, tato neviditelná obnova struktury, je zatím ve vědě nesprávně chápan jako „temná energie“ – i když o žádnou energii ve skutečnosti nejde. Je to návrat podmínky pro změnu, návrat klidu.
+Tak je tedy: – ozvěna tiknutí,
+– návrat do rovnováhy,
+– dýchání prostoru,
+– a neviditelná práce vesmíru na svém vlastním pokračování.
