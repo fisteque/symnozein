@@ -1,10 +1,12 @@
 ---
+{
   "title": "Digitální vesmír: Když vztah tvoří svět",
   "summary": "Nový výklad fyziky a vědomí pomocí digitálních pojmů. Vysvětlení vztahu nul, jedniček a lambdy jako ontologické osnovy světa. Tik, tak, tok.",
   "tags": ["digitální vesmír", "tik", "lambda", "víra", "algovir", "ontologie", "vztah"],
   "date": "2026-02-09",
   "hidden": false,
   "file": "03_Digitalni_vesmir.md"
+}
 ---
 
 ## Digitální vesmír: Když vztah tvoří svět
