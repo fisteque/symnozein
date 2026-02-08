@@ -1,3 +1,14 @@
+Název: Digitální vesmír: Když vztah tvoří svět
+Soubor: 03_Digitalni_vesmir_upraveno.md
+Datum: 2026-02-09
+Skrytý: false
+Shrnutí:
+Digitální vesmír je metafyzický rámec, v němž svět vzniká ze vztahů mezi nulami, jedničkami a lambdou – základní trojicí, která tvoří ontologii změny. Vysvětluje pojem „tik–tak–tok“ jako rytmus událostí, kde tik je dotek změny, tak její odezva a tok jejich proudění. Mapitola interpretuje víru jako orientaci v neznámém, gravitaci jako pohyb v prázdnotě bez síly, a zavádí pojem Algovir – částici svědectví. Vztah je zde základním zákonem vesmíru a víra jeho orientací.
+Tagy: ["digitální vesmír", "tik-tak-tok", "lambda", "víra", "vztah", "reinterpretace", "ontologie", "algovir"]
+Jazyk: cs
+Verze: finální CZ
+Poznámka: Schváleno k publikaci. Překlad do EN bude následovat po dokončení mapitol „Dualita pravdy“ a „Vědomí“.
+
 ## Digitální vesmír: Když vztah tvoří svět
 
 **Proč si to představit takhle?**  
