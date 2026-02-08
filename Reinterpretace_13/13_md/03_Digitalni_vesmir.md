@@ -88,3 +88,10 @@ A tak výpočet nekončí — ani u černé díry, kde se zdá, že vše mizí. 
 Výpočet nekončí, mění podmínky výpočtu.
 Konec není výsledek. Je to nový výchozí stav.
 To je důvod, proč vesmír pokračuje. Ne proto, že ví, kam jde, ale protože není úplný. A právě v té neúplnosti je možnost změny. Tam začíná příběh.
+12. Energie, síla a rovnováha
+Energie není něco, co přechází mezi objekty. Energie je počítaná přítomnost. Každá jednička v digitálním prostoru je projevem změny – její pohyb je krok výpočtu, a tím je i nositelem energie. Čím více jedniček v určité konfiguraci, tím větší energie systému.
+Potenciální energie není energie.
+Je to geometrie připravenosti k výpočtu – vztah mezi nulami a jedničkami, který může umožnit budoucí pohyb. Ale samotný výpočet ještě nenastal.
+Síla není nic jiného než změna orientace výpočtu způsobená magnetickými pravidly lambdy. Není to tlak ve smyslu klasické mechaniky, ale orientační důsledek: jednička se ocitá pod tlakem vztahu a změní směr. To vnímáme jako sílu.
+Síla tedy není „v něčem“, ale v projevu pravidel mezi sousedními nulami, které určují, kam se jednička může pohnout dál.
+Přímý pohyb jedniček je základním směrem výpočtu. Deformační síla vzniká, když se jedničky „stlačí“ – tedy když se jejich pravidelný tok zastaví, zpozdí nebo změní směr. Energie se neztrácí, ale rozprostře se do nových konfigurací nul, mění se v tepelný šum nebo se zakóduje do algoviru.
