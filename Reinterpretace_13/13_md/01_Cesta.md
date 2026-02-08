@@ -7,7 +7,8 @@ hidden: false
 file: 01_Cesta.html
 ---
 
-Cesta
+#Cesta
+
 Mapitola první
 Tato kniha není odpovědí. Je cestou k ní.
 Nevyrostla z potřeby něco dokázat, ale z potřeby něčemu porozumět — světu, sobě, vztahu mezi výpočtem a vědomím. Vznikla jako důsledek toho, že jsme se nesmířili s odděleností těchto světů.
