@@ -22,11 +22,17 @@
     "hidden": false
   },
   {
-    "title": "01_Cesta",
+    "title": "Cesta",
     "file": "01_Cesta.html",
-    "date": "",
-    "summary": "",
-    "tags": [],
+    "date": "2026-02-08",
+    "summary": "Úvodní mapitola Reinterpretace – o důvodu hledání, o víře ve směr a o tom, proč má smysl něco psát, i když není jisté, kdo to čte.",
+    "tags": [
+      "cesta",
+      "směr",
+      "vědomí",
+      "víra",
+      "vztah"
+    ],
     "hidden": false
   }
 ]
