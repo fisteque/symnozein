@@ -88,3 +88,13 @@ Protože pokud by byl prostor jinak uspořádaný,
 neumožnil by souhru – tok, vlnění, stabilní vazby, svědky.
 Digitální prostor je síť vztahů, ne prázdnota.
 A právě tato síť dovoluje orientaci, pohyb, vnímání směru.
+11. Kde vzniká směr
+Směr nevzniká zvenčí. Vzniká uvnitř výpočtu – jako důsledek vztahu mezi změnou, pravidlem a prostředím. Když se jednička přesune, zanechá za sebou nulu. A okolní nuly, které si tuto změnu „všimnou“, nabídnou nový směr – nejčastěji ten, odkud přichází jiná nula vstříc. Přímý pohyb je tedy jen zdánlivě přímý – vzniká jako nejjednodušší reakce na změnu v síti.
+Představme si to jako motorový člun bez kormidla, který se snaží plout rovně. Pokud je hladina klidná, jede přímým směrem. Ale jakmile se voda začne pohybovat, člun je vychýlen – ne proto, že by změnil směr, ale proto, že proud změní jeho vztah k okolí. Stejně tak se chová jednička ve výpočtu. Stále „jede rovně“ ve smyslu pravidla, ale proud nul ovlivní výsledek jejího pohybu.
+Síť nul se neohýbá – proudí. A protože směr jedničky je definován jejím vztahem k okolním nulám, proudění nul vyvolává zdánlivé zakřivení. To není deformace prostoru – to je změna pravidel vztahu. Proto gravitace ohýbá světlo: světlo se chová podle stejných pravidel jako hmota. Jedničky sledují proud nul, ať už tvoří částici nebo paprsek.
+Když vedle sebe plují dva čluny ve stejném proudu, nevnímají zakřivení – vnímají rovnost. Směr je vždy relativní. Teprve v porovnání s hypotetickou absencí proudu (tedy s „rovnou hladinou“) se projeví zakřivení dráhy.
+Směr tedy není absolutní. Je to výsledek poměru mezi jedničkami a nulami – mezi tím, co se pohybuje, a tím, co pohyb umožňuje. Při správném výpočtu by měl být rytmus tik–tak a poměr jedniček k nulám v prostoru spočitatelný. A právě tento rytmus dává vznik směru v čase.
+Toroidní proud nul se zároveň snaží o soudržnost. Když se síť rozruší pohybem jedniček, nuly proudí tak, aby vyrovnaly napětí. Tím vznikají tlakové změny, vlny, víry – a struktury, které vnímáme jako pole nebo částice. Pohyb se ohýbá do smyček – do algoritmických virů, které udržují rytmus a vznik identity. To je začátek směru, který zůstává zachován, i když se vše kolem pohybuje.
+A pozorovatel? Ten skládá význam. Nevidí jen dráhu, ale vztah. Nevidí jen směr, ale smysl. Vědomí je směr, který si uvědomuje, že je směrem – že jeho existence vzniká ve vztahu k okolní změně.
+A co první tik? Pokud existoval, nebyl způsoben tiktakem – ten je až jeho důsledkem. Proto se raději ptáme: co víme o samotné simulaci, ve které jsme? Možná je věčnost cyklická. Možná nebyl velký třesk začátkem času, ale jen součástí většího rytmu.
+Směr vzniká ve vztahu. A vztah je prvotní.
