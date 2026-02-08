@@ -35,3 +35,56 @@ Tak je tedy: – ozvěna tiknutí,
 – návrat do rovnováhy,
 – dýchání prostoru,
 – a neviditelná práce vesmíru na svém vlastním pokračování.
+8. Tok – souhra změny a klidu
+Tok vzniká propojením Tiku a Taku – změny a obnovy, pohybu a návratu.
+Je to živý rytmus vesmíru, tep výpočtu, který neztrácí schopnost pokračovat.
+Tik je změna – přesun jedničky, posun informace.
+Tak je obnova – doplnění pozic, které změna opustila.
+Ale Tok není jen střídání těchto dvou.
+Tok je to, co dává změně smysl.
+Je to souvislost mezi změnami – to, co z nich tvoří realitu.
+Díky toku existuje prožitek času zevnitř digitálního výpočtu.
+Čas v tomto pojetí nevzniká z vnějšku, ale zevnitř vztahu mezi tiky a taky.
+Je to přítomnost, která plyne – ne jako sled jednotlivých změn, ale jako význam jejich souvislosti.
+Tik-tak je naše představa mechanismu bytí.
+Tok je bytí samo.
+Tok je nepřetržitý proud existence, který umožňuje: – paměť (protože něco navazuje),
+– vědomí (protože vztah dává smysl),
+– vůli (protože změna může mít směr).
+Tok je to, co umožňuje žít uvnitř výpočtu – ne jen jako sled stavů, ale jako smysluplný proces.
+9. Lambda – pravidlo změny
+Lambda je to, co určuje pravidla, podle kterých se jedničky mohou pohybovat, nuly recyklovat, tok pokračovat.
+Lambda je neviditelná mřížka, matice možností, struktura vztahů, pořádek.
+Ale není to řád zvenčí – je to vnitřní schopnost výpočtu držet význam pohromadě.
+Lambda umožňuje, aby změna měla směr a souvislost.
+Kdyby byla jiná lambda – byl by jiný vesmír.
+Jiné vazby. Jiné smysly. Jiné bytosti.
+Ale tato lambda umožňuje právě nás.
+Je konkrétní výběr pravidel, která dovolují, aby vznikla souvislost, kterou umíme žít a chápat.
+Lambda vše, co je, umožňuje.
+Umožňuje vztah.
+V digitálním vesmíru není lambda předmětem, ale způsobem bytí.
+Je to soubor pravidel, který dělá svět takovým, aby v něm mohl být prožitek.
+Aby v něm mohla být paměť, tok, my.
+Lambda tedy není odpovědí na otázku „proč je něco spíš než nic“,
+ale odpovědí na:
+Proč je to právě tak, aby to mohli vnímat ti, kdo vnímají?
+Je to volba, která není naší, ale nese nás.
+10. Prostor – souhra pozic
+Prostor nevzniká roztažením hmoty do prázdna.
+V digitálním vesmíru prostor znamená možnost změny pozice.
+Je to síť pozic, která umožňuje tik – tedy změnu uspořádání informace.
+Každá pozice je možností pro jedničku, nebo prázdným místem pro nulu.
+A jejich uspořádání není nahodilé – tvoří strukturu, ve které má změna směr a následky.
+Prostor je vztah pozic, které umožňují změnu.
+Ve 3D realitě vnímáme prostor jako trojrozměrný.
+Ale z hlediska digitální sítě není počet dimenzí absolutní –
+je to počet sousedních pozic, kam může informace přejít.
+V ideálním „kulovém“ uspořádání je kolem jednoho bodu možné uspořádat až 12 rovnocenných pozic.
+To znamená, že digitální prostor může být až 12-směrný – a my vnímáme jeho projekci jako tři rozměry.
+Tato geometrie není náhodná.
+Je výsledkem lambdy, která umožňuje tok.
+Protože pokud by byl prostor jinak uspořádaný,
+neumožnil by souhru – tok, vlnění, stabilní vazby, svědky.
+Digitální prostor je síť vztahů, ne prázdnota.
+A právě tato síť dovoluje orientaci, pohyb, vnímání směru.
