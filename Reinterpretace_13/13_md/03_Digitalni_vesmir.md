@@ -1,3 +1,4 @@
+---
 Název: Digitální vesmír: Když vztah tvoří svět
 Soubor: 03_Digitalni_vesmir_upraveno.md
 Datum: 2026-02-09
@@ -8,6 +9,7 @@ Tagy: ["digitální vesmír", "tik-tak-tok", "lambda", "víra", "vztah", "reinte
 Jazyk: cs
 Verze: finální CZ
 Poznámka: Schváleno k publikaci. Překlad do EN bude následovat po dokončení mapitol „Dualita pravdy“ a „Vědomí“.
+---
 
 ## Digitální vesmír: Když vztah tvoří svět
 
