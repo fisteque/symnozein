@@ -41,3 +41,35 @@ tik–tak–tok
 A může být v souladu s pravdou.
 Ne jako dokonalý obraz,
 ale jako mapa, kterou lze překreslit.
+6. Pravidla změny
+Tik–tak je binární střídání, ale samo o sobě nevysvětluje, jak se změna šíří.
+Aby mohla změna probíhat, musí existovat pravidla. Tato pravidla nemusíme znát – ale věříme, že jsou.
+Možná každý tik spočítá jednu jedničku podle jejího „rodného čísla“.
+Možná probíhá výpočet ve vlně nul, podle jejich relativních souřadnic.
+Možná je fáze sama složená z kroků – a každý krok z dalších kroků.
+Hledáme základní binaritu, protože věříme, že nějaká existuje.
+Máme směr, který dává smysl.
+A to stačí.
+7. Podprostor a tok informací
+Pokud má podprostor kapacitu jen pro jeden tik – tedy pro tolik informací, kolik je právě jedniček v prostoru –
+pak je spouštěčem dalšího tiku právě jeho naplnění.
+Při každém tiku jednička letí přímo na nejbližší volnou nulu.
+Její předchozí pozice je přitom odeslána do podprostoru.
+Ten může být chápán jako paměť nebo zásobník výsledků,
+který se postupně zpracovává a vydává nové nuly do prostoru –
+jako střed toroidu vesmíru, z něhož vesmír roste.
+8. Vše plyne ze sousedství
+Pohyb i význam jsou určeny sousedstvím:
+– kam je volno, tam směřuje další výpočet,
+– kde je zaplněno, vzniká tlak – odpudivost, možná magnetická,
+– jednicky se nikdy nesrazí, protože pravidla výpočtu jsou konzistentní.
+To může vysvětlit i průchod světla čočkou:
+z pohledu 3D se sbíhá v bodě,
+ale v digitální síti nikdy nekoliduje –
+mění pouze orientaci a sousedství.
+9. Jediná možná rychlost
+Rychleji ani pomaleji se pohybovat nelze,
+protože rychlost je krok výpočtu.
+Jedna změna pozice za jeden tiktak
+je čas i rychlost světla zároveň.
+To je maximum možného pohybu v tomto vesmíru.
