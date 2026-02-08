@@ -104,3 +104,14 @@ Představme si, že každá jednička může postoupit pouze tam, kde je volná 
 Prostor tedy není „někde venku“, ale je to síť možností pohybu mezi jedničkami a nulami. Může být šestis­měrný, pokud vztahy omezíme, nebo ještě méně – ale čím více směrů, tím víc možností vztahu, a tím bohatší je chování systému.
 Když hýbeme rukou, děje se to jen díky vztahům. Každý pohyb znamená, že se energie (jedničky) opírají o jiné energie skrze síť nul – žádná energie se neztrácí, jen mění směr a kontext. Zákon zachování energie platí nejen proto, že je to empirické pravidlo, ale protože výpočet nikdy „nepřestane počítat“ – vše proudí podle pravidel lambdy, která zachovává tok.
 To, že je možné hýbat rukou, znamená, že algovir uvnitř těla dovoluje takové proudění – a že vztah mezi částmi těla je v souhře, ne v chaosu. Souhra vztahů vytváří pohyb.
+15. Všechno je pohyb ve vztahu
+Veškerá existence v digitálním vesmíru není tvořena látkou, ale změnou. A tato změna není náhodná – je to pohyb jedniček vůči nulám podle pravidel lambdy.
+Tím vzniká vše: světlo, hmota, gravitace, chemie, vědomí. Ale nikdy nejde o objekt, vždy o vztah.
+To je podstata digitálního vesmíru:
+Vše je projevem výpočtu.
+Výpočet je pohyb.
+Pohyb je vztah.
+A vztah je důvod existence.
+Tím se lišíme od tradičního materialismu i od čistého idealismu – náš vesmír neobsahuje objekty, ale vztahy mezi elementárními změnami. Když pozorujeme hmotu, pozorujeme jen stabilní konfiguraci vztahů. Když vnímáme světlo, je to přechod mezi konfiguracemi.
+Každá jednička existuje jen proto, že něco se změnilo. A každá změna je umožněna tím, že existuje nula, která dovolila směr pohybu.
+Všechno je tedy souhra změn – a výpočet, který je uskutečňuje, není oddělený od reality. Je realitou.
