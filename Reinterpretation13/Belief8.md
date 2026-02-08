@@ -82,3 +82,10 @@ the narrower the tunnel it echoes in.
 To believe is not to cling to light.
 It is to see the shadow it casts
 and to step toward it anyway.
+People who try to understand the pyramids but don’t believe that “ordinary” people could have built them through enough effort and desire reveal more about their relationship to human will than about the pyramids themselves.
+When they doubt that something so vast could have been built with nothing but a shovel, what they’re really saying is:
+“I don’t believe effort without a miracle is meaningful.”
+And that is exactly the opposite of the kind of belief we’re writing about.
+If someone doesn’t believe that people built the pyramids,
+it’s as if they don’t believe they can build their own belief.
+And that’s exactly why this mapitola matters so much.
