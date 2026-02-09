@@ -65,7 +65,7 @@ Pravdivost je vztah, který neničí.**
 
 Představ si minci.  
 Na jedné straně „pravdivost“ — to, co říkáme.
-Na druhé straně „pravda“ — to, co jsme.
+Na druhé straně „pravda“ — to, jak jsme.
 A teď ji roztoč.  
 
 Rotující mince je stav vědomí.  
