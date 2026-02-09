@@ -2,6 +2,11 @@ Digitální vesmír: Když vztah tvoří svět
 Nezačneme vzorcem, ale obrazem. Představ si nekonečný prostor plný nul. Samotné nuly nic nevyjadřují, ale tvoří prostor, médium. Jsou tím, co vyrovnává. Tvoří síť klidu a ticha. A pak se objeví jednička. Změna. Informace. Nerovnováha. Vznik vztahu.
 Tímto vzniká digitální vesmír: prostor tvořený nulami, ve kterém se pohybují jedničky podle pravidla – lambdy.
 
+Proč si to představit takhle?
+Protože současné modely nejsou špatně, jen nejsou poslední. Digitální vesmír není fyzikální model — je to způsob vidění, který propojuje informace, vztah, paměť a vědomí do jednoho rámce.
+Pokud připustíme, že výpočet se může odehrávat i ve struktuře, která nemá hmotu, ale má pravidlo změny, můžeme zahlédnout nový typ reality:
+takovou, která dává smysl skrze vztah, ne skrze kolizi.
+
 1. Nula: ticho, prostor, síť
 Nuly nejsou prázdné – jsou aktivním médiem. Vytvářejí prostor pro vztahy, umožňují pohyb. Proudí. Nejsou to pevné body, ale síť, která se přeskupuje podle přítomnosti jedniček. Nula je podmínka vztahu. Její proudění určuje tvar světa.
 
