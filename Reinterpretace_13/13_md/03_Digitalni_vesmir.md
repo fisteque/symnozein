@@ -1,7 +1,7 @@
 ---
 title: "03 Digitální vesmír: Když vztah tvoří svět"
 summary: "Výklad světa jako binárního pole, kde jedničky a nuly nejsou jen čísla, ale prvky vztahu. Mapitola zkoumá vznik smyslu, rytmus tik–tak–tok, gravitační konfigurace, algovir i podmínky vědomí."
-tags: ["digitální vesmír", "jednička", "nula", "algovir", "vědomí", "vztah", "tik-tak", "lambda", "pravda"]
+tags: "digitální vesmír", "jednička", "nula", "algovir", "vědomí", "vztah", "tik-tak", "lambda", "pravda"
 date: 2026-02-09
 hidden: false
 file: 03_Digitalni_vesmir.html
