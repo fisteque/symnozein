@@ -1,10 +1,10 @@
 ---
-title: "02 Víra"
+title: "2 Víra"
 summary: "Mapa, která ukazuje, že víra není slabost ani domněnka – ale počátek vědomého vztahu ke světu."
 tags: ["víra", "vědomí", "postoj", "strom"]
 date: 2026-02-08
 hidden: false
-file: 02_Vira.md
+file: 02_Vira.html
 ---
 
 # Víra
