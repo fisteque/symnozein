@@ -1,5 +1,5 @@
 ---
-title: Dualita pravdy: Pravda, jak jsme
+title: Dualita pravdy
 summary: Pravda není jedna. Tato mapitola rozlišuje mezi realizací, realitací a pravdivostí. Ukazuje, jak pravda vzniká ve vztahu a proč je důležité nahradit absolutismus rytmem vědomé rezonance. Rotující mince pravdy je symbolem pohyblivého vědomí, které drží významy v napětí.
 tags: mapa:pravda, reinterpretace:epistemologie, pravda, pravdivost, realizace, realitace, vědomí, vztah
 date: 2026-02-10
