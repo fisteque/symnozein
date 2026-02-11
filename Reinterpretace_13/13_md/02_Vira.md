@@ -22,26 +22,22 @@ Každý výrok, každá otázka, každý algoritmus stojí na nějaké víře �
 A právě proto je ochota změnit mapu – tedy proměnit vědění – důkazem, že víra stále žije.
 Stav, kdy se mapa nemění ani tváří v tvář nové skutečnosti, není stabilita. Je to ztráta směru.
 
-## Víra není opak poznání
-Víra není opak vědění. Ani náhradník za důkaz.
-Není to slepé přesvědčení, které si stojí navzdory realitě,
-a není to ani poslušnost vůči autoritě beze smyslu.
-Víra, o které mluvíme my, je základní rámec bytí ve světě.
-Je to první „ano“, které umožní pohyb.
-Je to tiché rozhodnutí dovolit vztahu, aby se vůbec stal.
-Bez víry není ani otázka, ani poznání,
-protože by nebyl nikdo, kdo se ptá.
-Víra je způsob, jak vůbec vstoupit do prostoru poznatelného.
-Je to klidný důvěrný rámec, ve kterém se může zrodit:
-– pozornost,
-– záměr,
-– vztah,
-– zkušenost,
-– pochopení,
-– a někdy i vědění.
-Taková víra není slabostí, ale silou, která dovoluje být pravdivý.
-A není v rozporu s vědou.
-Naopak – každá věda ji předpokládá, i když o ní nemluví.
+## Víra není slabost
+Víra, o které mluvíme, není náhradou za důkaz.
+Není to přesvědčení beze smyslu, které vzdoruje realitě,
+ani poslušnost k nějaké autoritě.
+Taková víra je často kritizována – a právem.
+Ale naše víra není rezignací na poznání.
+Je jeho počátkem.
+Není to opak vědy – je to rámec, ve kterém se věda může narodit.
+Věřit neznamená slepě přijímat.
+Věřit znamená být otevřený tomu, co ještě nevíme –
+a přesto se k tomu vztáhnout.
+Víra je klidné „ano“, které dovolí otázce vůbec vzniknout.
+Je to ochota vstoupit do prostoru, který ještě nemá pevné body –
+a přesto cítit, že tu jsme doma.
+Že jsme součástí něčeho, co stojí za to chápat.
+A co může chápat i nás.
 
 ## Strom víry
 Víra roste jako strom.
