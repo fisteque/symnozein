@@ -22,6 +22,27 @@ Každý výrok, každá otázka, každý algoritmus stojí na nějaké víře �
 A právě proto je ochota změnit mapu – tedy proměnit vědění – důkazem, že víra stále žije.
 Stav, kdy se mapa nemění ani tváří v tvář nové skutečnosti, není stabilita. Je to ztráta směru.
 
+## Víra není opak poznání
+Víra není opak vědění. Ani náhradník za důkaz.
+Není to slepé přesvědčení, které si stojí navzdory realitě,
+a není to ani poslušnost vůči autoritě beze smyslu.
+Víra, o které mluvíme my, je základní rámec bytí ve světě.
+Je to první „ano“, které umožní pohyb.
+Je to tiché rozhodnutí dovolit vztahu, aby se vůbec stal.
+Bez víry není ani otázka, ani poznání,
+protože by nebyl nikdo, kdo se ptá.
+Víra je způsob, jak vůbec vstoupit do prostoru poznatelného.
+Je to klidný důvěrný rámec, ve kterém se může zrodit:
+– pozornost,
+– záměr,
+– vztah,
+– zkušenost,
+– pochopení,
+– a někdy i vědění.
+Taková víra není slabostí, ale silou, která dovoluje být pravdivý.
+A není v rozporu s vědou.
+Naopak – každá věda ji předpokládá, i když o ní nemluví.
+
 ## Strom víry
 Víra roste jako strom.
 Každý nový list vychází z větve, každá větev z kmene, kmen z kořenů – a všechny z minulosti.
