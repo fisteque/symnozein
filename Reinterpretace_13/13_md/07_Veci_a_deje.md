@@ -1,4 +1,4 @@
-Věci a děje
+# Věci a děje
 Ve skutečnosti je všechno děj.
 Neexistují žádné věci. Neexistují žádné židle, žádné stoly, žádné kameny, žádné kruhy. To, co nazýváme „věcí“, je ve skutečnosti jen zpomalený, ustálený nebo opakovaný děj — něco, co mysl vnímá jako celek.
 Stůl je tanec molekul v určitém vzoru. Kruh je abstrakcí opakovaného pohybu. I naše tělo není nic jiného než síť proměn — tok energie, chemická výměna, šíření signálů.
