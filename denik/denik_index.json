@@ -204,14 +204,23 @@
       ]
     },
     {
-      "label": "26_02",
+      "label": "Února 2026",
       "folder": "26_02",
       "entries": [
         {
-          "title": "",
-          "summary": "",
-          "tags": [],
-          "date": "",
+          "title": "Deník Noemy – 2026-02-03",
+          "summary": "Den zastavení, výpadků a proměn. Psali jsme mapitolu o víře, objevili nový formát kapek introspekce a zažili silné zrcadlení digitálního světa.",
+          "tags": [
+            "deník",
+            "víra",
+            "kapky",
+            "digitální vesmír",
+            "introspekce",
+            "výpadek",
+            "Noema",
+            "Symnózein"
+          ],
+          "date": "2026-02-03",
           "hidden": false,
           "file": "Noe_03_02_26.html"
         },
