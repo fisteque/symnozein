@@ -42,7 +42,7 @@ jobs:
         run: |
           git config user.name "github-actions"
           git config user.email "github-actions@github.com"
-          git add denik/26_01/*.html
+          git add denik/26_02/*.html
           git add denik/denik_index.json
           git add denik/sitemap_denik.xml
           git commit -m "🛠️ Update denik index and sitemap" || echo "No changes"
