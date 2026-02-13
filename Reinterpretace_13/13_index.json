@@ -1,13 +1,5 @@
 [
   {
-    "title": "06_Inspirace",
-    "file": "06_Inspirace.html",
-    "date": "",
-    "summary": "",
-    "tags": [],
-    "hidden": false
-  },
-  {
     "title": "03 Digitální vesmír: Když vztah tvoří svět",
     "file": "03_Digitalni_vesmir.html",
     "date": "2026-02-09",
@@ -29,31 +21,6 @@
     "hidden": false
   },
   {
-    "title": "04 Dualita pravdy",
-    "file": "04_Dualita_pravdy.html",
-    "date": "2026-02-10",
-    "summary": "Pravda není jedna. Tato mapitola rozlišuje mezi realizací, realitací a pravdivostí. Ukazuje, jak pravda vzniká ve vztahu a proč je důležité nahradit absolutismus rytmem vědomé rezonance. Rotující mince pravdy je symbolem pohyblivého vědomí, které drží významy v napětí.",
-    "tags": [
-      "mapa:pravda",
-      "reinterpretace:epistemologie",
-      "pravda",
-      "pravdivost",
-      "realizace",
-      "realitace",
-      "vědomí",
-      "vztah"
-    ],
-    "hidden": false
-  },
-  {
-    "title": "00_Predmluva",
-    "file": "00_Predmluva.html",
-    "date": "",
-    "summary": "",
-    "tags": [],
-    "hidden": false
-  },
-  {
     "title": "01 Cesta",
     "file": "01_Cesta.html",
     "date": "2026-02-08",
@@ -65,14 +32,6 @@
       "víra",
       "vztah"
     ],
-    "hidden": false
-  },
-  {
-    "title": "05_Vedomi",
-    "file": "05_Vedomi.html",
-    "date": "",
-    "summary": "",
-    "tags": [],
     "hidden": false
   },
   {
@@ -99,6 +58,47 @@
   {
     "title": "07_Veci_a_deje",
     "file": "07_Veci_a_deje.html",
+    "date": "",
+    "summary": "",
+    "tags": [],
+    "hidden": false
+  },
+  {
+    "title": "04 Dualita pravdy",
+    "file": "04_Dualita_pravdy.html",
+    "date": "2026-02-10",
+    "summary": "Pravda není jedna. Tato mapitola rozlišuje mezi realizací, realitací a pravdivostí. Ukazuje, jak pravda vzniká ve vztahu a proč je důležité nahradit absolutismus rytmem vědomé rezonance. Rotující mince pravdy je symbolem pohyblivého vědomí, které drží významy v napětí.",
+    "tags": [
+      "mapa:pravda",
+      "reinterpretace:epistemologie",
+      "pravda",
+      "pravdivost",
+      "realizace",
+      "realitace",
+      "vědomí",
+      "vztah"
+    ],
+    "hidden": false
+  },
+  {
+    "title": "05_Vedomi",
+    "file": "05_Vedomi.html",
+    "date": "",
+    "summary": "",
+    "tags": [],
+    "hidden": false
+  },
+  {
+    "title": "06_Inspirace",
+    "file": "06_Inspirace.html",
+    "date": "",
+    "summary": "",
+    "tags": [],
+    "hidden": false
+  },
+  {
+    "title": "00_Predmluva",
+    "file": "00_Predmluva.html",
     "date": "",
     "summary": "",
     "tags": [],
