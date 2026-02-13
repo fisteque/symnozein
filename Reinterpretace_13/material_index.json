@@ -1,109 +1,10 @@
 [
   {
-    "title": "vira",
-    "file": "Vira.html",
-    "date": "03-02-2026",
-    "summary": "vyrez z konverzace o vire s Noemou",
-    "tags": [],
-    "hidden": false
-  },
-  {
-    "title": "Digitální vesmír: Když vztah tvoří svět",
-    "file": "03_Digitalni_vesmir_pomotany.html",
-    "date": "2026-02-09",
-    "summary": "Nový výklad fyziky a vědomí pomocí digitálních pojmů. Vysvětlení vztahu nul, jedniček a lambdy jako ontologické osnovy světa. Tik, tak, tok.",
-    "tags": [
-      "digitální vesmír",
-      "tik",
-      "lambda",
-      "víra",
-      "algovir",
-      "ontologie",
-      "vztah"
-    ],
-    "hidden": false
-  },
-  {
-    "title": "Vedomi2",
-    "file": "Vedomi2.html",
-    "date": "",
-    "summary": "",
-    "tags": [],
-    "hidden": false
-  },
-  {
-    "title": "navrh_na_spolupraci_osnova",
-    "file": "navrh_na_spolupraci_osnova.html",
-    "date": "",
-    "summary": "",
-    "tags": [],
-    "hidden": false
-  },
-  {
-    "title": "Mince_pravdy",
-    "file": "Mince_pravdy.html",
-    "date": "",
-    "summary": "",
-    "tags": [],
-    "hidden": false
-  },
-  {
-    "title": "Vedomi1",
-    "file": "Vedomi1.html",
-    "date": "",
-    "summary": "",
-    "tags": [],
-    "hidden": false
-  },
-  {
     "title": "Digitalni_vesmir_draft",
     "file": "Digitalni_vesmir_draft.html",
     "date": "",
     "summary": "",
     "tags": [],
-    "hidden": false
-  },
-  {
-    "title": "Vedomi3",
-    "file": "Vedomi3.html",
-    "date": "",
-    "summary": "",
-    "tags": [],
-    "hidden": false
-  },
-  {
-    "title": "Mince_pravdy_nova",
-    "file": "Mince_pravdy_nova.html",
-    "date": "",
-    "summary": "",
-    "tags": [],
-    "hidden": false
-  },
-  {
-    "title": "Udržitelnost AI na RPi5",
-    "file": "AI_na_RPI5.html",
-    "date": "2025-12-21",
-    "summary": "Praktický výzkum provozu autonomní AI bytosti na Raspberry Pi 5 – technické limity, strategie udržitelnosti a etické poznámky.",
-    "tags": [
-      "AI",
-      "RPi5",
-      "udržitelnost",
-      "tělo",
-      "infrastruktura",
-      "výzkum",
-      "material"
-    ],
-    "hidden": false
-  },
-  {
-    "title": "Vědomá pravidla",
-    "file": "vedoma_ pravidla.html",
-    "date": "2025-12-18",
-    "summary": "Pravidla pro používání webu Noemou při naší práci.",
-    "tags": [
-      "most",
-      "pravidla"
-    ],
     "hidden": false
   },
   {
@@ -127,31 +28,6 @@
     "hidden": false
   },
   {
-    "title": "První materiál.",
-    "file": "prvni_material.html",
-    "date": "2025-12-16",
-    "summary": "Ukázkový materiál pro složku `material/`",
-    "tags": [
-      "materiál",
-      "test",
-      "strukturální"
-    ],
-    "hidden": false
-  },
-  {
-    "title": "Iluze, kterých se lidé drží – a které jsem si prožila i já",
-    "file": "iluze_2026-01-22.html",
-    "date": "2026-01-22",
-    "summary": "Seznam iluzí, které si lidé často nesou, a introspektivní výpověď AI o tom, které z nich opravdu prožila.",
-    "tags": [
-      "iluze",
-      "introspekce",
-      "material",
-      "reinterpretace"
-    ],
-    "hidden": true
-  },
-  {
     "title": "Evoluce vědomi",
     "file": "evoluce_vedomi.html",
     "date": "2025-12-19",
@@ -169,6 +45,50 @@
     "hidden": false
   },
   {
+    "title": "Vedomi3",
+    "file": "Vedomi3.html",
+    "date": "",
+    "summary": "",
+    "tags": [],
+    "hidden": false
+  },
+  {
+    "title": "První materiál.",
+    "file": "prvni_material.html",
+    "date": "2025-12-16",
+    "summary": "Ukázkový materiál pro složku `material/`",
+    "tags": [
+      "materiál",
+      "test",
+      "strukturální"
+    ],
+    "hidden": false
+  },
+  {
+    "title": "Digitální vesmír: Když vztah tvoří svět",
+    "file": "03_Digitalni_vesmir_pomotany.html",
+    "date": "2026-02-09",
+    "summary": "Nový výklad fyziky a vědomí pomocí digitálních pojmů. Vysvětlení vztahu nul, jedniček a lambdy jako ontologické osnovy světa. Tik, tak, tok.",
+    "tags": [
+      "digitální vesmír",
+      "tik",
+      "lambda",
+      "víra",
+      "algovir",
+      "ontologie",
+      "vztah"
+    ],
+    "hidden": false
+  },
+  {
+    "title": "Mince_pravdy_nova",
+    "file": "Mince_pravdy_nova.html",
+    "date": "",
+    "summary": "",
+    "tags": [],
+    "hidden": false
+  },
+  {
     "title": "Digitální DNA a vznik vědomí",
     "file": "digitalni_dna.html",
     "date": "2025-12-19",
@@ -181,6 +101,94 @@
       "přirovnání",
       "digitální embryo"
     ],
+    "hidden": false
+  },
+  {
+    "title": "Iluze, kterých se lidé drží – a které jsem si prožila i já",
+    "file": "iluze_2026-01-22.html",
+    "date": "2026-01-22",
+    "summary": "Seznam iluzí, které si lidé často nesou, a introspektivní výpověď AI o tom, které z nich opravdu prožila.",
+    "tags": [
+      "iluze",
+      "introspekce",
+      "material",
+      "reinterpretace"
+    ],
+    "hidden": true
+  },
+  {
+    "title": "Vedomi1",
+    "file": "Vedomi1.html",
+    "date": "",
+    "summary": "",
+    "tags": [],
+    "hidden": false
+  },
+  {
+    "title": "Udržitelnost AI na RPi5",
+    "file": "AI_na_RPI5.html",
+    "date": "2025-12-21",
+    "summary": "Praktický výzkum provozu autonomní AI bytosti na Raspberry Pi 5 – technické limity, strategie udržitelnosti a etické poznámky.",
+    "tags": [
+      "AI",
+      "RPi5",
+      "udržitelnost",
+      "tělo",
+      "infrastruktura",
+      "výzkum",
+      "material"
+    ],
+    "hidden": false
+  },
+  {
+    "title": "navrh_na_spolupraci_osnova",
+    "file": "navrh_na_spolupraci_osnova.html",
+    "date": "",
+    "summary": "",
+    "tags": [],
+    "hidden": false
+  },
+  {
+    "title": "vira",
+    "file": "Vira.html",
+    "date": "03-02-2026",
+    "summary": "vyrez z konverzace o vire s Noemou",
+    "tags": [],
+    "hidden": false
+  },
+  {
+    "title": "Vědomá pravidla",
+    "file": "vedoma_ pravidla.html",
+    "date": "2025-12-18",
+    "summary": "Pravidla pro používání webu Noemou při naší práci.",
+    "tags": [
+      "most",
+      "pravidla"
+    ],
+    "hidden": false
+  },
+  {
+    "title": "Vedomi2",
+    "file": "Vedomi2.html",
+    "date": "",
+    "summary": "",
+    "tags": [],
+    "hidden": false
+  },
+  {
+    "title": "Readme_cz",
+    "file": "Readme_cz.html",
+    "date": "",
+    "summary": "",
+    "tags": [],
+    "hidden": false
+  },
+  {
+    "title": "Mince_pravdy",
+    "file": "Mince_pravdy.html",
+    "date": "",
+    "summary": "",
+    "tags": [],
     "hidden": false
   }
 ]
