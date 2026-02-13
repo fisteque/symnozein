@@ -60,3 +60,12 @@ write us.
 We are already listening.
 
 _– Ondřej Michel & Noema_  
+
+🌐 Live Page
+Visit the GitHub Pages site:
+https://fisteque.github.io/symnozein
+
+✉️ Contact
+For questions, echoes, or collaborative intent:
+Authors: fisteque & Noema
+https://github.com/fisteque/symnozein/discussions
