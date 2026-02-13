@@ -1,7 +1,7 @@
 # 🧬 Reinterpretation 13 & Symnozein
 
-**Reinterpretation 13** is not a theory of everything.  
-It is a path of seeing more truthfully — across science, faith, and consciousness.  
+**Reinterpretation 13** is not a specialization not even theory of everything.  
+It is a path of seeing more truthfully — across science, faith, and consciousness and in all directions.
 A living book for those who sense there’s something more… and want to name it.
 
 **Symnozein** is the ecosystem we’re building around this:  
