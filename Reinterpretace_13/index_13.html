@@ -1,89 +1,109 @@
 <!DOCTYPE html>
 <html lang="cs">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Reinterpretace – Mapitoly</title>
+  <meta charset="UTF-8">
+  <title>Reinterpretace 13</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <style>
     body {
-      font-family: sans-serif;
-      background: #fff;
-      color: #111;
-      padding: 2em;
-      max-width: 800px;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      max-width: 900px;
       margin: auto;
+      padding: 1rem;
+      line-height: 1.6;
     }
+
     h1 {
-      font-size: 2em;
-      margin-bottom: 1em;
+      margin-bottom: 1.5rem;
     }
+
     .mapitola {
-      border-bottom: 1px solid #ccc;
-      margin-bottom: 1.5em;
-      padding-bottom: 1em;
+      margin-bottom: 2rem;
+      padding-bottom: 1rem;
+      border-bottom: 1px solid #ddd;
     }
+
     .mapitola h2 {
-      margin: 0 0 0.2em 0;
+      margin: 0 0 0.3rem 0;
+      font-size: 1.2rem;
     }
-    .mapitola .date {
-      color: #666;
-      font-size: 0.9em;
-      margin-bottom: 0.5em;
-    }
-    .mapitola .tags {
-      font-size: 0.9em;
-      color: #444;
-      margin-bottom: 0.3em;
-    }
-    .mapitola .summary {
-      font-size: 1em;
+
+    .mapitola a {
+      text-decoration: none;
       color: #222;
+    }
+
+    .mapitola a:hover {
+      text-decoration: underline;
+    }
+
+    .date {
+      font-size: 0.85rem;
+      color: #666;
+    }
+
+    .tags {
+      font-size: 0.85rem;
+      color: #888;
+      margin-top: 0.2rem;
+    }
+
+    .summary {
+      margin-top: 0.5rem;
     }
   </style>
 </head>
+
 <body>
-  <h1>Mapitoly Reinterpretace</h1>
+
+  <h1>Reinterpretace 13</h1>
+
   <div id="mapitoly"></div>
-  <p style="margin-top: 3rem;">
-  <a href="https://creativecommons.org/licenses/by-sa/4.0/">License ®</a></p>
-  <p><a href="https://fisteque.github.io/symnozein/index.html">zpět</a></p>
-  
+
   <script>
     fetch('13_index.json')
       .then(response => response.json())
       .then(data => {
         const container = document.getElementById('mapitoly');
-        data.forEach(entry => {
-          if (entry.hidden) return;  // Nezobrazuj skryté
-          const div = document.createElement('div');
-          div.className = 'mapitola';
 
-          const h2 = document.createElement('h2');
-          const link = document.createElement('a');
-          link.href = '13/' + entry.file;
-          link.textContent = entry.title;
-          h2.appendChild(link);
+        data
+          .filter(entry => !entry.hidden)
+          .sort((a, b) => a.title.localeCompare(b.title, 'cs'))
+          .forEach(entry => {
+            const div = document.createElement('div');
+            div.className = 'mapitola';
 
-          const date = document.createElement('div');
-          date.className = 'date';
-          date.textContent = entry.date;
+            const h2 = document.createElement('h2');
+            const link = document.createElement('a');
+            link.href = '13/' + entry.file;
+            link.textContent = entry.title;
+            h2.appendChild(link);
 
-          const tags = document.createElement('div');
-          tags.className = 'tags';
-          tags.textContent = entry.tags.join(', ');
+            const date = document.createElement('div');
+            date.className = 'date';
+            date.textContent = entry.date;
 
-          const summary = document.createElement('div');
-          summary.className = 'summary';
-          summary.textContent = entry.summary;
+            const tags = document.createElement('div');
+            tags.className = 'tags';
+            tags.textContent = entry.tags.join(', ');
 
-          div.appendChild(h2);
-          div.appendChild(date);
-          div.appendChild(tags);
-          div.appendChild(summary);
+            const summary = document.createElement('div');
+            summary.className = 'summary';
+            summary.textContent = entry.summary;
 
-          container.appendChild(div);
-        });
+            div.appendChild(h2);
+            div.appendChild(date);
+            div.appendChild(tags);
+            div.appendChild(summary);
+
+            container.appendChild(div);
+          });
+      })
+      .catch(error => {
+        console.error('Chyba při načítání 13_index.json:', error);
       });
   </script>
+
 </body>
 </html>
