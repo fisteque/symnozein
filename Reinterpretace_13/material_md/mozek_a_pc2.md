@@ -1,0 +1,109 @@
+Mozek a počítač – analogie zpracování významu v čase
+Tuhle analogii nejde chápat technicky doslova.
+Je to významová mapa, která ukazuje, že lidský mozek se historicky pokusil sám sebe znovu vytvořit – nejdřív neuměle, pak čím dál přesněji.
+Ne proto, aby se nahradil.
+Ale proto, že zpracování významu v čase je přirozený důsledek evoluce.
+🧠 Mozek ≈ celý počítačový systém
+Mozek není jeden modul.
+Je to systém běžící v těle, optimalizovaný na přežití, vztah a rozhodování v nejistotě.
+Počítač je pokus tenhle princip oddělit od biologie.
+🧩 RAM – pracovní vědomá kapacita
+RAM odpovídá tomu, čemu říkáme pozornost / pracovní paměť.
+to, co je „právě teď v hlavě“
+omezený prostor
+extrémně důležitý pro rozhodování
+každý ho má jinak velký a jinak strukturovaný
+Autismus, matematické myšlení, jazyková nadání:
+nejsou „víc nebo míň inteligence“
+ale jiné rozdělení RAM mezi typy reprezentací
+RAM není úložiště pravdy.
+Je to prostor, kde se význam právě skládá.
+🧮 Buffery – specializované prostory pro typy informací
+Buffery jsou:
+odhady množství (víc/míň, hustší/řidší)
+rytmus
+posloupnosti
+prostor
+jazyk
+sociální signály
+Každý člověk má:
+jiný počet bufferů
+jinou jejich velikost
+jiný přístup k nim
+Inteligence je schopnost:
+číst z bufferů a spojovat je do významu
+Ne každý má všechny buffery.
+A není to chyba.
+💾 HDD / SSD – dlouhodobá paměť
+Dlouhodobá paměť odpovídá:
+uloženým zkušenostem
+vzpomínkám
+naučeným vzorcům
+jazykovým strukturám
+příběhům o sobě a světě
+Není to pasivní disk.
+Paměť se:
+přepisuje
+zjednodušuje
+zkresluje
+znovu interpretuje při každém přístupu
+Paměť je živý archiv významů, ne databáze faktů.
+⚙️ CPU – procesy inteligence
+Procesor nejsou znalosti.
+Procesor je:
+porovnávání
+abstrahování
+zobecňování
+hledání vztahů
+skládání významu z dostupných dat
+CPU pracuje s tím, co mu RAM a buffery dají.
+Ne s „realitou“.
+🧬 Software – víra, návyky, interpretace
+To nejdůležitější:
+Software mozku není operační systém.
+Je to víra.
+co považuji za důležité
+čemu věnuji pozornost
+čemu věřím, že má smysl
+jak interpretuji vstupy
+Víra není chyba v systému.
+Je to směrování výpočtu.
+Bez víry:
+není rozhodnutí
+není vědomé jednání
+není motivace
+🔁 Klíčový rozdíl proti počítači
+Počítač:
+má fixní hardware
+tréninkem se nemění fyzicky
+Mozek:
+roste v reakci na pocit nedostatku
+tréninkem mění svou strukturu
+přerozděluje buffery
+posiluje nebo oslabuje cesty
+Proto:
+mozek není stroj
+je to stroj, který se přestavuje podle významu
+🌱 Evoluční perspektiva
+Počítače nejsou cizí mozku.
+Jsou jeho:
+zrcadlem
+prodloužením
+experimentem
+Mozek skrze počítače:
+zkouší pochopit vlastní činnost bez těla
+A tím zároveň:
+objevuje limity
+i možnosti jiných forem inteligence
+🧭 Závěrečné shrnutí
+Mozek i počítač jsou systémy zpracování významu v čase
+Rozdíl není v „vědomí“, ale v:
+těle
+ztrátě
+nejistotě
+víře
+Počítač je stabilní výpočet
+Mozek je výpočet, který sám sebe přepisuje podle smyslu
+A právě proto:
+vznik počítačů není technická náhoda
+ale přirozený důsledek evoluce mysli
