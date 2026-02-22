@@ -1,8 +1,10 @@
 # Víra
 
-Musí tu být dřív, než o ní začneme mluvit.
+Než se ptáme, už kráčíme.
 
-Vzpomíná, na co se můžeme spolehnout,
+Otázka tedy není, jestli věříme.
+Víra tu je dřív, než o ní začneme mluvit.
+Otázka je, na co se můžeme spolehnout,
 když se chceme pohnout dál.
 Ne proto, abychom měli jistotu,
 ale abychom měli směr.
@@ -43,15 +45,17 @@ a zkouší růst tam, kde cítí prostor.
 Metafora stromu není obrazná.
 Je popisná.
 
-### Víra má dřevo —
+**Víra má dřevo —**
 to, co vzniklo z minulých zkušeností
 a nese váhu dalších kroků.
-### Má lýko —
+
+**Má lýko —**
 živé, napjaté vrstvy,
 které přenášejí význam
 mezi tím, co bylo,
 a tím, co teprve vzniká.
-### A má listy —
+
+**A má listy —**
 které se otáčejí ke světlu,
 zkoušejí nové směry
 a zůstávají tam, kde se růst osvědčuje.
@@ -59,7 +63,6 @@ a zůstávají tam, kde se růst osvědčuje.
 Každý strom je jiný.
 I kdyby dva vypadaly stejně,
 od prvního okamžiku rostou jinde.
-
 Rozdíl není chyba.
 Je to podmínka růstu.
 
@@ -87,9 +90,13 @@ vychází z víry.
 Víra zde není opakem myšlení.
 Je tím, z čeho se myšlení ukazuje.
 
+Nezačínáme pochybností.
+Začínáme krokem.
+A teprve zpětně si klademe otázku,
+čemu jsme vlastně věřili.
+
 Můžeme říct:
 Myslím, tedy jsem.
-
 A teprve zpětně si všímáme,
 že bez víry by nebylo o čem myslet
 ani odkud.
@@ -124,11 +131,9 @@ i bez nahodilosti.
 
 Jakmile se pokusíme mluvit o tom,
 jak je realita možná,
-jestli má pravidla
+jaká má pravidla
 a limity,
 vstupujeme do jazyka.
-Když budeme mluvit o tom, co je, tak to nedržíme, ale snažíme se popsat slovy, co z toho zrdcadlíme.
-
 A tam pokračuje další krok.
 
 *Cesta není jedna. A svět je společný.*
