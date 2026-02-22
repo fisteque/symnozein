@@ -34,6 +34,7 @@ Není to vědění.
 Není to rozhodnutí.
 Je to odpověď světu,
 která se stane dřív, než víme proč.
+
 Tomuto pohybu zde říkáme víra.
 
 ## Strom víry
