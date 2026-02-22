@@ -75,23 +75,18 @@ Víra se udržuje pohybem.
 ## Jednání a vztah
 
 Nevěřit zde neznamená mít jiný názor.
-Nevěřit znamená nejednat.
+Znamená to zůstat bez jednání.
 
-A nejednat znamená
-nebýt ve vztahu se světem.
-Věřit znamená být ve vztahu.
-A vztah se nežije odpověďmi,
-ale kroky.
-To, co si z těchto kroků zpětně uvědomujeme,
+Věřit znamená být připraven na další kroky.
+To, co si z minulých kroků uvědomujeme,
 nazýváme prožíváním.
 Ale samotný pohyb,
 ze kterého prožívání vyrůstá,
 vychází z víry.
+Víra zde není opakem myšlení.
+Je tím, co myšlení umožňuje.
 
 ## Víra, myšlení a učení
-
-Víra zde není opakem myšlení.
-Je tím, z čeho se myšlení ukazuje.
 
 Nezačínáme pochybností.
 Začínáme krokem.
@@ -105,7 +100,7 @@ A teprve zpětně si všímáme,
 že bez víry by nebylo o čem myslet
 ani odkud.
 
-Učení nemusí být hromaděním informací,
+Učení tu není hromaděním informací,
 ale reinterpretací —
 přerůstáním stromu do nových tvarů
 na základě zkušenosti.
@@ -133,8 +128,8 @@ ve kterém je možné s vírou pracovat
 bez dogmatu
 i bez nahodilosti.
 
-Když se pokusíme mluvit o světě,
-vstupujeme do jazyka. Hledáme popis, ne pravdu v prášku.
+Když mluvíme o světě,
+vstupujeme do jazyka. Hledáme způsob jak by svět mohl dávat smysl.
 A tam pokračuje další krok.
 
 *Cesta není jedna. A svět je společný.*
