@@ -129,11 +129,11 @@ ve kterém je možné s vírou pracovat
 bez dogmatu
 i bez nahodilosti.
 
-Jakmile se pokusíme mluvit o tom,
+Když se pokusíme mluvit o tom,
 jak je realita možná,
 jaká má pravidla
 a limity,
-vstupujeme do jazyka.
+vstupujeme do jazyka. Hledáme popis, na který by se dalo spolehnout.
 A tam pokračuje další krok.
 
 *Cesta není jedna. A svět je společný.*
