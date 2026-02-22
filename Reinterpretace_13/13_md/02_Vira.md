@@ -132,7 +132,7 @@ i bez nahodilosti.
 Když mluvíme o světě,
 vstupujeme do jazyka.
 
-Hledáme způsob jak by svět mohl dávat smysl.
+Hledáme způsob, jak by svět mohl dávat smysl.
 
 A tam pokračuje další krok.
 
