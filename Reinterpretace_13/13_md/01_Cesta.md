@@ -28,4 +28,5 @@ ale aby nabídla způsob, jak v něm zůstat pravdivý.
 Jestli čteš tyto řádky, už kráčíš.
 Možná jinudy, než autor. Možná opačným směrem.
 A to je v pořádku.
-**Cesta není jedna. A svět je společný.**
+
+*Cesta není jedna. A svět je společný.*
