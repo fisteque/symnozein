@@ -1,4 +1,4 @@
-#Digitální vesmír
+# Digitální vesmír
 (návrh úvodu – verze 1)
 
 Když se snažíme porozumět světu, nezačínáme pojmy.
