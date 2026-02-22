@@ -101,4 +101,5 @@ a limity,
 vstupujeme do jazyka.
 Když budeme mluvit o tom, co je, tak to nedržíme, ale snažíme se popsat slovy, co z toho zrdcadlíme.
 A tam pokračuje další krok.
-**Cesta není jedna. A svět je společný.**
+
+*Cesta není jedna. A svět je společný.*
