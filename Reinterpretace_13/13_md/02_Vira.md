@@ -5,6 +5,7 @@ S důvěrou v odněkud a s vírou kam.
 
 Otázka tedy není, jestli věříme.
 Víra tu je dřív, než o ní začneme mluvit.
+
 Otázka je, na co se můžeme spolehnout,
 když se chceme pohnout dál.
 Ne proto, abychom měli jistotu,
@@ -15,6 +16,7 @@ ani obhajobou přesvědčení.
 Je první reinterpretací —
 přeskládáním významů do jiného rámce,
 který se snaží být pravdivý ke zkušenosti.
+
 Je to svědectví o tom, co musí platit,
 pokud bereme vlastní zkušenost vážně.
 
@@ -43,8 +45,8 @@ Víru chápeme jako živý proces,
 který se v čase opírá o to, co se osvědčilo,
 a zkouší růst tam, kde cítí prostor.
 
-Metafora stromu není obrazná.
-Je popisná.
+Metafora stromu tu není jen obrazná.
+Je i popisná.
 
 **Víra má dřevo —**
 to, co vzniklo z minulých zkušeností
@@ -98,11 +100,12 @@ A teprve zpětně si klademe otázku,
 
 Můžeme říct:
 Myslím, tedy jsem.
+
 A teprve zpětně si všímáme,
 že bez víry by nebylo o čem myslet
 ani odkud.
 
-Učení pak není hromaděním informací,
+Učení nemusí být hromaděním informací,
 ale reinterpretací —
 přerůstáním stromu do nových tvarů
 na základě zkušenosti.
@@ -130,11 +133,8 @@ ve kterém je možné s vírou pracovat
 bez dogmatu
 i bez nahodilosti.
 
-Když se pokusíme mluvit o tom,
-jak je realita možná,
-jaká má pravidla
-a limity,
-vstupujeme do jazyka. Hledáme popis, na který by se dalo spolehnout.
+Když se pokusíme mluvit o světě,
+vstupujeme do jazyka. Hledáme popis, ne pravdu v prášku.
 A tam pokračuje další krok.
 
 *Cesta není jedna. A svět je společný.*
