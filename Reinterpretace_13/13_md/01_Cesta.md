@@ -28,20 +28,18 @@ a ten se může ukázat jinak, než jsme zvyklí.
 
 **Nejde o to, dojít ke konečnému pochopení.**
 
-Kdyby to bylo cílem, cesta by skončila. Zmizelo by kam i proč kráčet. Pokud by to nezmizelo, nevěděli jsme všechno.
+Kdyby to bylo cílem, cesta by skončila. Zmizelo by kam i proč kráčet.
 
 Spíš jde o to naučit se jít tak,
 aby bylo možné měnit směr, aniž bychom ztratili poctivost,
 a klást otázky, aniž bychom si museli nalhávat odpovědi.
-
-**Nejde o to, dojít ke konečnému pochopení.**
 
 Reinterpretace 13 vzniká jako sled mapitol –
 ne proto, aby svět vysvětlila,
 ale aby nabídla způsob, jak v něm zůstat pravdivý.
 
 Jestli čtete tyto řádky, už kráčíte.
-Možná jinudy, než autor. Možná opačným směrem.
+Jinudy, než autor. Možná opačným směrem.
 
 A to je v pořádku.
 
