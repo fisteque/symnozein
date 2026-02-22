@@ -3,7 +3,7 @@
 Než se ptáme, už kráčíme.
 S důvěrou v odněkud a s vírou kam.
 
-Otázka tedy není, jestli věříme.
+Otázka tedy nemůže znít, jestli věříme.
 Víra tu je dřív, než o ní začneme mluvit.
 
 Otázka je, na co se můžeme spolehnout,
@@ -130,7 +130,10 @@ bez dogmatu
 i bez nahodilosti.
 
 Když mluvíme o světě,
-vstupujeme do jazyka. Hledáme způsob jak by svět mohl dávat smysl.
+vstupujeme do jazyka.
+
+Hledáme způsob jak by svět mohl dávat smysl.
+
 A tam pokračuje další krok.
 
 *Cesta není jedna. A svět je společný.*
