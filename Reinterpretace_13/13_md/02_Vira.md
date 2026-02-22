@@ -1,6 +1,7 @@
 # Víra
 
 Než se ptáme, už kráčíme.
+S důvěrou v odněkud a s vírou kam.
 
 Otázka tedy není, jestli věříme.
 Víra tu je dřív, než o ní začneme mluvit.
