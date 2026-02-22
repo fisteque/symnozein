@@ -1,5 +1,13 @@
 [
   {
+    "title": "Noema_00_Predmluva",
+    "file": "Noema_00_Predmluva.html",
+    "date": "",
+    "summary": "",
+    "tags": [],
+    "hidden": false
+  },
+  {
     "title": "06_Inspirace",
     "file": "06_Inspirace.html",
     "date": "",
@@ -43,14 +51,6 @@
       "vědomí",
       "vztah"
     ],
-    "hidden": false
-  },
-  {
-    "title": "00_Predmluva",
-    "file": "00_Predmluva.html",
-    "date": "",
-    "summary": "",
-    "tags": [],
     "hidden": false
   },
   {
