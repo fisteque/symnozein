@@ -1,11 +1,11 @@
-Cesta
+# Cesta
 Nikdo nezačíná na stejném místě.
 A přesto se pohybujeme ve stejném světě.
 Každý z nás kráčí – i když tomu tak neříká.
 Někdo rychle, někdo opatrně, někdo pořád dokola.
 Někdo s mapou, jiný podle hvězd, další jen podle toho, kde je pevná zem pod nohama.
 To, že kráčíme, si často uvědomíme až ve chvíli, kdy se zastavíme a rozhlédneme.
-Svět se nám neukazuje hotový.
+## Svět se nám neukazuje hotový.
 Ukazuje se skrze zkušenost, vztahy, chyby, opakování, náhody i nutnosti.
 Významy se neskládají jednou provždy – vznikají tím, že v nich žijeme.
 A každý z nás skládá trochu jinak, protože stojí jinde a nese jinou zkušenost.
@@ -14,7 +14,7 @@ Nevyžaduje shodu, ani jednotný výklad reality.
 Vychází z prostého pozorování:
 že každý člověk má mandát interpretovat společný svět ze svého místa –
 a že tento mandát není třeba nikomu udělovat ani obhajovat.
-Cesta nezačíná odpovědí.
+## Cesta nezačíná odpovědí.
 Začíná všímavostí k tomu, že něco dává smysl –
 a zároveň se může ukázat jinak, než jsme čekali.
 Nejde o to dojít ke konečnému pochopení.
