@@ -11,7 +11,7 @@ přeskládáním významů do jiného rámce,
 který se snaží být pravdivý ke zkušenosti.
 Je to svědectví o tom, co musí platit,
 pokud bereme vlastní zkušenost vážně.
-První vítr
+## První vítr
 Vítr se opřel do větví určitým způsobem.
 Svět se dotkl toho, co ještě nemělo jméno,
 ale už reagovalo.
@@ -23,7 +23,7 @@ Není to rozhodnutí.
 Je to odpověď světu,
 která se stane dřív, než víme proč.
 Tomuto pohybu zde říkáme víra.
-Strom víry
+## Strom víry
 V tomto rámci s vírou nezacházíme
 jako s názorem
 ani jako se souborem tvrzení.
@@ -51,7 +51,7 @@ Rozdíl není chyba.
 Je to podmínka růstu.
 Víra se neukládá.
 Víra se udržuje pohybem.
-Jednání a vztah
+## Jednání a vztah
 Nevěřit zde neznamená mít jiný názor.
 Nevěřit znamená nejednat.
 A nejednat znamená
@@ -64,7 +64,7 @@ nazýváme prožíváním.
 Ale samotný pohyb,
 ze kterého prožívání vyrůstá,
 vychází z víry.
-Víra, myšlení a učení
+## Víra, myšlení a učení
 Víra zde není opakem myšlení.
 Je tím, z čeho se myšlení ukazuje.
 Můžeme říct:
@@ -88,16 +88,17 @@ a tím, jak k tomu přistupujeme.
 A také si dokázat vzpomenout,
 odkud se vzalo to,
 co považujeme za vědění.
-Směr dál
+## Směr
 Tato mapitola víru neuzavírá.
 Vymezuje rámec,
 ve kterém je možné s vírou pracovat
 bez dogmatu
-a bez nahodilosti.
+i bez nahodilosti.
 Jakmile se pokusíme mluvit o tom,
 jak je realita možná,
-jaká má pravidla
-a jaké má limity,
+jestli má pravidla
+a limity,
 vstupujeme do jazyka.
-A tam začíná další krok cesty.
-Cesta není jedna. A svět je společný.
+Když budeme mluvit o tom, co je, tak to nedržíme, ale snažíme se popsat slovy, co z toho zrdcadlíme.
+A tam pokračuje další krok.
+**Cesta není jedna. A svět je společný.**
