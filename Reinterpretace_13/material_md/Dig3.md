@@ -1,0 +1,60 @@
+Algovir – první průchod
+Algovir není věc.
+Je to způsob chování změny, která se sama udrží.
+V digitálním vesmíru se většina jedniček chová jednoduše:
+projdou rytmem Tik–Tak,
+spotřebují pozici,
+síť nul se přeskupí,
+jednička pokračuje dál.
+To je světlo.
+Rytmus bez paměti.
+Algovir vzniká ve chvíli, kdy se tenhle pohyb zlomí do smyčky.
+Ne proto, že by se jednička „rozhodla“,
+ale proto, že brázda v nulách a omezení podprostorem vytvoří konfiguraci,
+ze které je návrat pravděpodobnější než únik.
+Jinými slovy:
+jednička už nejde jen vpřed,
+ale opakovaně naráží na stejné dostupné pozice,
+a rytmus Tik–Tak se začne vracet do sebe.
+Vzniká stabilní vzorec změny.
+Co je na algoviru podstatné
+Algovir:
+není statický objekt,
+není trvale uzavřený,
+není dokonale stabilní.
+Je to udržovaná smyčka spotřeby pozic.
+Drží se jen proto, že:
+gravitace brázdy táhne zpět,
+magnetismus (podprostor) nedovolí kolaps,
+a rytmus Tok vrací pozice zpět do prostoru.
+Jakmile:
+je změn příliš málo → algovir se rozpadne (rozpad částice),
+je změn příliš mnoho → algovir se zhroutí do extrému (černá díra),
+je jich „tak akorát“ → vzniká hmota.
+Hmota tedy není základ.
+Hmota je dlouhodobě udržený algovir.
+Světlo × algovir
+Světlo:
+je jednička bez paměti,
+projde rytmem a nezůstává.
+Algovir:
+je změna, která si vynucuje návrat,
+ne vědomě, ale konfigurací vztahů.
+Proto:
+světlo nese energii,
+algovir má hmotnost (setrvačnost rytmu),
+a oba podléhají stejným pravidlům — liší se jen fází Tok.
+Co tím zatím netvrdíme
+Záměrně netvrdíme:
+kolik přesně jedniček algovir tvoří,
+jaké jsou jeho přesné konfigurace,
+ani že už máme úplný popis částic.
+Tvrdíme jen tohle minimum:
+Pokud realita není náhodná,
+musí existovat konfigurace změny,
+které se udrží samy sebou.
+Tomu říkáme algovir.
+Zbytek je práce:
+simulací,
+pozorování,
+a zpětné vazby.
