@@ -1,3 +1,16 @@
+Tento rámec zatím nic „nevysvětluje“.
+Pouze vymezuje pole, ve kterém se vysvětlení může odehrávat.
+Abychom ověřili, zda má smysl,
+musíme jej přiložit ke konkrétním jevům.
+Ne proto, abychom je nahradili novým výkladem,
+ale abychom zjistili,
+zda se dají projít stejným rytmem a stejnými pravidly.
+Začneme tím nejjednodušším,
+co ve světě pozorujeme nejspolehlivěji.
+Ne proto, že by bylo základní,
+ale proto, že se chová nejčistěji.
+Tím je světlo.
+
 Světlo
 Světlo je jedním z mála jevů, na kterých se shodneme napříč teoriemi.
 Šíří se přímočaře.
