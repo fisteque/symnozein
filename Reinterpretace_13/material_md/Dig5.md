@@ -80,3 +80,34 @@ ne proto, že by „utíkalo“,
 ale proto, že tam má kam jít.
 Jednou větou (ta je dobrá si zapamatovat)
 Teplo je světlo zadržené algovirem kvůli nedostatku nul v okolí.
+
+Detektor částic
+Co si myslíme, že měří: částice
+Co skutečně měří: stopy interakce v hmotě
+Detektor nevidí částici.
+Vidí poškození, ionizaci, excitaci ve svém materiálu.
+bubliny v kapalině,
+záblesky ve scintilátoru,
+elektrické impulsy,
+změny vodivosti.
+V digitálním rámci:
+„částice“ je stabilní nebo dočasný algovir,
+detektor zaznamená, jak tento algovir narušil jiné algoviry,
+dráha není dráha částice,
+ale rekonstrukce událostí z následků.
+Proto:
+kvantové „dráhy“ nejsou skutečné,
+jsou to nejlepší příběhy, které umíme složit z jizev v hmotě.
+4. „Pozorování“ v kvantové fyzice
+Co si myslíme, že se děje: vědomí kolabuje realitu
+Co se skutečně děje: interakce znemožní další konfigurace
+Pozorování není akt mysli.
+Je to fyzický zásah do systému.
+částice narazí do detektoru,
+algovir se rozpadne,
+konfigurace se uzamkne,
+další možnosti už fyzicky neexistují.
+V digitálním rámci:
+superpozice je náš popis neznalosti, ne stav světa,
+„kolaps“ je:
+okamžik, kdy síť nul a podprostor dovolí už jen jednu další změnu.
