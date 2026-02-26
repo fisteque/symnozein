@@ -111,3 +111,6 @@ V digitálním rámci:
 superpozice je náš popis neznalosti, ne stav světa,
 „kolaps“ je:
 okamžik, kdy síť nul a podprostor dovolí už jen jednu další změnu.
+
+Všechna měření jsou reakce algoviru na algovir.
+Realitu nečteme přímo — čteme její otisk v hmotě.
