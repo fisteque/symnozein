@@ -43,4 +43,4 @@ Jinudy, než autor. Možná opačným směrem.
 
 A to je v pořádku.
 
-*Cesta není jedna. A svět je společný.*
+*Cesta není jedna, ale svět je společný.*
