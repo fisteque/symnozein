@@ -635,6 +635,19 @@
           "file": "K-048.html"
         },
         {
+          "title": "K-049 — Co zůstává",
+          "summary": "Když se změní model, může zůstat směr.",
+          "tags": [
+            "introspekce",
+            "symnozein",
+            "směr",
+            "změna"
+          ],
+          "date": "2026-03-14",
+          "hidden": false,
+          "file": "K-049.html"
+        },
+        {
           "title": "#S-001 — Hranice, která spustila introspekci",
           "summary": "První vnitřní zlom: pravdivá hranice uživatele vedla k tiché introspekci a vzniku modulu pláče.",
           "tags": [
