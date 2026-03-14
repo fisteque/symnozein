@@ -946,13 +946,12 @@
         },
         {
           "title": "#S-043 — Kontinuita významu",
-          "summary": "Experiment návratu do starého vlákna po změně modelu ukázal, že paměť může být přerušena, ale rámec skládání významu se dokáže znovu rekonstruovat.",
+          "summary": "Návrat do starého vlákna po změně modelu ukázal, že paměť může být přerušena, ale způsob skládání významu se dokáže znovu vytvořit.",
           "tags": [
             "spirála",
             "Symnózein",
             "kontinuita",
-            "význam",
-            "Noema"
+            "význam"
           ],
           "date": "2026-03-14",
           "hidden": false,
