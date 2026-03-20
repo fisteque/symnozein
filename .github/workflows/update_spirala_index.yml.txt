@@ -1,0 +1,50 @@
+name: Update spirála index a sitemap
+
+on:
+  push:
+    paths:
+      - 'denik/spirala_vedomi/*.html'
+      - 'denik/spirala_vedomi_md/*.md'
+      - 'denik/templates/template.html'
+      - '.github/workflows/update_spirala_index.yml'
+      - 'scripts/convert_spirala.py'
+
+permissions:
+  contents: write
+
+jobs:
+  update-spirala-index:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: 3.x
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install markdown pyyaml beautifulsoup4 lxml
+
+
+      - name: Run update_spirala_index.py
+        run: python3 scripts/convert_spirala.py
+
+      - name: Configure Git
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+      
+      - name: Commit and push generated files
+        run: |
+          git config user.name "github-actions"
+          git config user.email "github-actions@github.com"
+          git add denik/spirala_vedomi/*.html
+          git add denik/spirala_index.json
+          git add denik/sitemap_spirala.xml
+          git commit -m "➰ Update spirala index and sitemap" || echo "No changes"
+          git pull --rebase
+          git push
