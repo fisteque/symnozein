@@ -42,7 +42,8 @@ a to odpoví.
 Není to vědění.  
 Není to rozhodnutí.
 
-Je to odpověď světu, která se stane dřív, než víme proč.
+Je to první odpověď světu,  
+která se stane dřív, než víme proč.
 
 Tomuto pohybu říkáme víra.
 
