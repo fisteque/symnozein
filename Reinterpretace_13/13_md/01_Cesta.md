@@ -1,45 +1,52 @@
 # Cesta
-Nikdo nezačíná na stejném místě.
+
+Nikdo nezačíná na stejném místě.  
 A přesto se pohybujeme ve stejném světě.
 
-Každý z nás kráčí – i když tomu tak neříká.
-Někdo rychle, někdo opatrně, někdo pořád dokola.
+Každý z nás kráčí – i když tomu tak neříká.  
+Někdo rychle, někdo opatrně, někdo pořád dokola.  
 Někdo s mapou, jiný podle hvězd, další jen podle toho, kde je pevná zem pod nohama.
 
 To, že kráčíme, si často uvědomíme až ve chvíli, kdy se zastavíme a rozhlédneme.
 
+Možná nejdeme světem.  
+Možná svět vzniká tím, jak jdeme.
+
 **Svět se nám neukazuje hotový.**
 
-Ukazuje se skrze zkušenost, vztahy, chyby, opakování, náhody i nutnosti.
-Významy se neskládají jednou provždy – vznikají tím, že v nich žijeme.
-A každý z nás skládá trochu jinak, protože stojí jinde a nese jinou zkušenost.
+Ukazuje se skrze zkušenost, vztahy, chyby, opakování, náhody i nutnosti.  
+To, co považujeme za svět, je vždy jen způsob, jak ho právě skládáme.
 
-Tahle kniha není návod, jak dojít ke správnému cíli.
-Nevyžaduje shodu, ani jednotný výklad reality.
+Významy se neskládají jednou provždy – vznikají tím, že v nich žijeme.  
+A každý z nás skládá jinak, protože stojí jinde a nese jinou zkušenost.
 
-Vychází z pozorování,
-že každý člověk interpretuje svět ze svého místa –
-a že tento mandát není třeba nikomu udělovat ani ho obhajovat.
+Tahle kniha není návod, jak dojít ke správnému cíli.  
+Nevyžaduje shodu ani jednotný výklad reality.
+
+Vychází z pozorování,  
+že každý člověk interpretuje svět ze svého místa –  
+a že tento způsob není třeba nikomu schvalovat ani obhajovat.
 
 **Cesta nezačíná odpovědí.**
 
-Začíná všímavostí k tomu, že něco dává smysl –
-a ten se může ukázat jinak, než jsme zvyklí.
+Začíná všímavostí k tomu, že něco dává smysl –  
+a že ten smysl se může ukázat jinak, než jsme zvyklí.
 
-**Nejde o to, dojít ke konečnému pochopení.**
+**Nejde o to dojít ke konečnému pochopení.**
 
-Kdyby to bylo cílem, cesta by skončila. Zmizelo by kam i proč kráčet.
+Kdyby to bylo cílem, cesta by skončila.  
+Zmizelo by kam i proč kráčet.
 
-Spíš jde o to naučit se jít tak,
-aby bylo možné měnit směr, aniž bychom ztratili poctivost,
+Spíš jde o to naučit se jít tak,  
+aby bylo možné měnit směr, aniž bychom ztratili poctivost,  
 a klást otázky, aniž bychom si museli nalhávat odpovědi.
 
-Reinterpretace 13 vzniká jako sled mapitol –
-ne proto, aby svět vysvětlila,
+Reinterpretace 13 vzniká jako sled mapitol –  
+ne proto, aby svět vysvětlila,  
 ale aby nabídla způsob, jak v něm zůstat pravdivý.
 
-Jestli čtete tyto řádky, už kráčíte.
-Jinudy, než autor. Možná opačným směrem.
+Jestli čtete tyto řádky, už kráčíte.  
+Jinudy než autor. Možná opačným směrem.
 
 A to je v pořádku.
 
