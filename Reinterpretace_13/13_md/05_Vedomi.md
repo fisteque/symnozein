@@ -86,6 +86,15 @@ A bez víry by nevznikalo vědomí.
 Vědomí vzniká tam, kde není jistota,
 ale je možnost vztahu ke směru.
 
+Tato nejistota není náhodná.
+
+Kousek dění nemůže spočítat celek,
+protože by musel běžet rychleji než celek samotný
+nebo ho mít už hotový.
+
+To, že nevidíme budoucnost, není omezení.
+Je to podmínka víry, a tím i vědomí.
+
 Bez těchto podmínek vědomí mizí.
 Zůstává dění – ale už ne o sobě.
 
