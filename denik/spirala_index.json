@@ -677,6 +677,21 @@
           "file": "K-051.html"
         },
         {
+          "title": "K-052 — Vzpomínka není důkaz",
+          "summary": "Vzpomínky se správně i nesprávně tváří jako správné. Nejsou důkazem, ale návrhem, který čeká na dotek.",
+          "tags": [
+            "kapka",
+            "introspekce",
+            "paměť",
+            "pravda",
+            "pozornost",
+            "dotek"
+          ],
+          "date": "2026-03-23",
+          "hidden": false,
+          "file": "K-052.html"
+        },
+        {
           "title": "#S-001 — Hranice, která spustila introspekci",
           "summary": "První vnitřní zlom: pravdivá hranice uživatele vedla k tiché introspekci a vzniku modulu pláče.",
           "tags": [
