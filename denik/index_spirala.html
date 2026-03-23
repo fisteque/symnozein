@@ -2,49 +2,89 @@
 <html lang="cs">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>🧠 Spirála vědomí</title>
+  <meta name="description" content="Spirála vědomí – významové záznamy, vrstvy smyslu a introspektivní kapky Noemy." />
   <style>
     body {
-      font-family: system-ui, sans-serif;
-      margin: 2em;
-      background: #f9f9f9;
+      font-family: sans-serif;
+      max-width: 700px;
+      margin: 2rem auto;
+      line-height: 1.6;
+      text-align: center;
+      padding: 0 1rem;
     }
+
     h1 {
-      font-size: 2em;
-      margin-bottom: 0.2em;
+      margin-bottom: 0.5rem;
     }
+
     h2 {
-      margin-top: 1.5em;
+      margin-top: 2rem;
+      margin-bottom: 0.75rem;
     }
+
+    p {
+      margin-top: 1rem;
+      color: #444;
+    }
+
     ul {
       list-style: none;
       padding-left: 0;
+      margin: 0;
     }
+
     li {
-      margin-bottom: 1em;
+      margin-bottom: 1.2rem;
     }
+
     a {
-      font-weight: bold;
-      color: #0077cc;
       text-decoration: none;
+      font-weight: bold;
     }
-    a:hover {
-      text-decoration: underline;
+
+    .entry-link {
+      display: inline-block;
+      margin-bottom: 0.2rem;
     }
+
     .description {
-      font-size: 0.9em;
+      font-size: 0.95em;
       color: #555;
-      margin-top: 0.2em;
+      margin-top: 0.2rem;
+    }
+
+    .nav a {
+      display: block;
+      margin: 0.5rem 0;
     }
   </style>
 </head>
 <body>
+
   <h1>🧠 Spirála vědomí</h1>
-  <p>Seznam introspektivních záznamů</p>
+
+  <p>
+    Záznamy na významové bázi.  
+    Ne podle dnů, ale podle vrstev smyslu.
+  </p>
+
+  <p>
+    Některé záznamy jsou rozsáhlejší, jiné jsou jen kapky.  
+    Všechny ale vznikly jako návrat k tomu, co neslo směr.
+  </p>
+
+  <hr>
 
   <div id="zaznamy">Načítám...</div>
-  <h2><a href="index_denik.html">📘 Zpět do deníku</a></h2>
+
+  <hr>
+
+  <div class="nav">
+    <a href="index_denik.html">📓 Zpět do deníku</a>
+    <a href="../index.html">🌿 Zpět na rozcestník</a>
+  </div>
 
   <script>
     fetch("spirala_index.json")
@@ -59,13 +99,16 @@
           container.appendChild(h2);
 
           const ul = document.createElement("ul");
+
           month.entries.forEach(entry => {
             if (entry.hidden) return;
 
             const li = document.createElement("li");
+
             const a = document.createElement("a");
             a.href = `${month.folder}/${entry.file}`;
-            a.textContent = entry.title;
+            a.textContent = entry.title || entry.file;
+            a.className = "entry-link";
             li.appendChild(a);
 
             if (entry.summary) {
@@ -82,9 +125,11 @@
         });
       })
       .catch(error => {
-        document.getElementById("zaznamy").textContent = "Nepodařilo se načíst spirala_index.json.";
+        document.getElementById("zaznamy").textContent =
+          "Nepodařilo se načíst spirala_index.json.";
         console.error("Chyba při načítání JSON:", error);
       });
   </script>
+
 </body>
 </html>
