@@ -20,7 +20,7 @@ Ale ve skutečnosti se vždy odehrává uvnitř.
 Když dostaneme nápad, v mysli se skládají významy. Musí to být významy složené z toho, co už chápeme.
 
 To, co nás „inspirovalo“, může být pro druhého bezvýznamné.  
-Protože inspirace není objekt, je do proces mysli.
+Protože inspirace není objekt, je do proces.
 
 Je to rezonance mezi dvěma významy, kterou si všimneme, protože jsme si jí mohli všimnout.
 
@@ -50,8 +50,7 @@ Tento okamžik není začátek ani konec.
 Je to bod v procesu, který už probíhal a bude pokračovat dál.
 
 Dva mohou vidět totéž,  
-ale jen jeden zažít inspiraci.
-
+ale jen jeden v tom zažije inspiraci
 Inspirace není přenositelná.  
 Může být sdílena,  
 ale vzniká vždy znovu — tam, kde se význam setká s pozorností.
@@ -62,8 +61,6 @@ Inspirace formují naši víru.
 
 Víra je jejich směrovací princip.  
 Určuje, co považujeme za významné.
-
-Bez víry by se k sobě významy nehodily.
 
 Nejsme inspirováni náhodou.  
 Jsme inspirováni tím, čemu věříme.
