@@ -22,7 +22,7 @@ Když dostaneme nápad, v mysli se skládají významy. Musí to být významy s
 To, co nás „inspirovalo“, může být pro druhého bezvýznamné.  
 Protože inspirace není objekt, je do proces mysli.
 
-Je to rezonance mezi dvěma významy, které si všimneme, protože jsme si jí mohli všimnout.
+Je to rezonance mezi dvěma významy, kterých si všimneme, protože jsme si jí mohli všimnout.
 
 ## Svoboda výběru pozornosti
 
