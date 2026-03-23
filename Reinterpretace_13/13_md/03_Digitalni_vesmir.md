@@ -175,4 +175,4 @@ pak možná nesou společný základ.
 > Nevíme, jestli je to pravda.  
 > Ale věříme, že to vede k pravdě.  
 >  
-> A v tom je rozdíl..
+> A v tom je rozdíl.
