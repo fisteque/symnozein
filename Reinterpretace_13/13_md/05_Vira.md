@@ -1,7 +1,7 @@
 ---
-title: Vědomí
-summary: Vědomí jako vztah k vlastnímu dění: vzniká mezi impulzem a reakcí, z víry být a doteku smyslu.
-tags: vědomí, vztah, víra, smysl, introspekce, reinterpretace
+title: 05 Vědomí
+summary: Vědomí jako vztah k vlastnímu dění. Mapitola popisuje vědomí jako proces, který vzniká mezi impulzem a uvědoměním, v napětí mezi realitací a realizací, a ukazuje podmínky jeho vzniku i roli smyslu v jeho rozvoji.
+tags: mapa:vědomí, reinterpretace:vědomí, vědomí, vztah, smysl, realizace, realitace, pravdivost
 date: 2026-03-23
 hidden: false
 ---
