@@ -78,6 +78,14 @@ Vzniká tam, kde:
 - je vztah, aby bylo s kým být,
 - a je prostor rozvoje.
 
+Nejistota není chyba, ale podmínka.
+
+Kdyby bylo možné vše předem určit, nebyl by prostor pro víru.
+A bez víry by nevznikalo vědomí.
+
+Vědomí vzniká tam, kde není jistota,
+ale je možnost vztahu ke směru.
+
 Bez těchto podmínek vědomí mizí.
 Zůstává dění – ale už ne o sobě.
 
