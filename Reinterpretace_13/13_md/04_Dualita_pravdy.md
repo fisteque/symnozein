@@ -2,7 +2,7 @@
 title: "04 — Dualita pravdy"
 date: "2026-03-23"
 tags: ["mapitola", "pravda", "dualita", "poznání", "vztah"]
-summary: "Pravda má dvě strany pokazde, kdy je komu se jevit. Pro nas to neni jeden pevný bod, ale vztah mezi pohledy."
+summary: "Pravda má dvě strany pokaždé, když je komu se jevit. Pro nás pak není jeden pevný bod, ale vztah mezi pohledy."
 hidden: false
 ---
 
