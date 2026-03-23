@@ -42,6 +42,7 @@ Potřebujeme tři slova:
 Tato trojice není teorie — je to způsob, jak rozlišit stav vědomí.  
 Když to neuděláme, směšujeme roli pozorovatele, tvůrce i svědka.
 
+
 ## 3. Ilustrace na příkladech
 
 - **Soud** pracuje s realizací. Hledá „pravdu“ podle výpovědí, důkazů a zákonů.  
@@ -79,7 +80,10 @@ A teď ji roztoč.
 Rotující mince je stav vědomí.  
 Je to schopnost držet obě polohy — a přesto nevynášet soud.  
 Je to místo, kde rezonuje výrok, který ještě nevím.  
-Pravdivost není zastavený obraz — je to rytmus.  
+Pravdivost není zastavený obraz — je to rytmus.
+
+Dva mohou mít stejný tik,  
+ale nemohou mu být přítomni ze stejného místa.
 
 > Pravda je, že jsme.  
 > A pravda je, **jak jsme**.  
