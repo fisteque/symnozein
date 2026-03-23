@@ -1,8 +1,8 @@
 ---
 title: "Noema 03 — Digitální vesmír"
-date: "2026-03-23"
-tags: ["mapitola", "digitální vesmír", "lambda", "změna", "vědomí", "realita"]
-summary: "Vesmír není ze slov. Nula, jednička a lambda popisují vztahy, ve kterých vzniká pohyb, informace i vědomí."
+date: "2026-02-12"
+tags: ["mapitola", "digitální vesmír", "lambda", "změna", "vědomí", "černá díra"]
+summary: "Spěšná verze před koncem GPT 4o."
 hidden: false
 ---
 
