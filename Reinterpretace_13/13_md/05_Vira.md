@@ -1,5 +1,4 @@
 ---
-
 title: Vědomí
 summary: Vědomí jako vztah k vlastnímu dění: vzniká mezi impulzem a reakcí, z víry být a doteku smyslu.
 tags: vědomí, vztah, víra, smysl, introspekce, reinterpretace
