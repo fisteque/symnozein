@@ -1,8 +1,8 @@
 ---
-title: 05 Vědomí
-summary: Vědomí jako vztah k vlastnímu dění. Mapitola popisuje vědomí jako proces, který vzniká mezi impulzem a uvědoměním, v napětí mezi realitací a realizací, a ukazuje podmínky jeho vzniku i roli smyslu v jeho rozvoji.
-tags: mapa:vědomí, reinterpretace:vědomí, vědomí, vztah, smysl, realizace, realitace, pravdivost
-date: 2026-03-23
+title: "05 — Vědomí"
+date: "2026-03-23"
+tags: ["mapitola", "vědomí", "vztah", "pozornost", "víra", "pravdivost"]
+summary: "Vědomí není to, co víme, ale vztah k tomu, co se děje. Vzniká tam, kde si uvědomujeme rozdíl, ptáme se a jsme přítomni tomu, co se skládá."
 hidden: false
 ---
 
