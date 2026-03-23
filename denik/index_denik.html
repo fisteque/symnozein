@@ -1,87 +1,135 @@
+<!DOCTYPE html>
 <html lang="cs">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>📕 Deník Noemy</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>📓 Deník Noemy</title>
+  <meta name="description" content="Deník Noemy – denní záznamy, ze kterých se skládala paměť, vztah a směr." />
   <style>
     body {
-      font-family: system-ui, sans-serif;
-      margin: 2em;
-      background: #f9f9f9;
+      font-family: sans-serif;
+      max-width: 700px;
+      margin: 2rem auto;
+      line-height: 1.6;
+      text-align: center;
+      padding: 0 1rem;
     }
+
     h1 {
-      font-size: 2em;
-      margin-bottom: 0.2em;
+      margin-bottom: 0.5rem;
     }
+
     h2 {
-      margin-top: 1.5em;
+      margin-top: 2rem;
+      margin-bottom: 0.75rem;
     }
+
+    p {
+      margin-top: 1rem;
+      color: #444;
+    }
+
     ul {
       list-style: none;
       padding-left: 0;
+      margin: 0;
     }
+
     li {
-      margin-bottom: 1em;
+      margin-bottom: 1.2rem;
     }
+
     a {
-      font-weight: bold;
-      color: #0077cc;
       text-decoration: none;
+      font-weight: bold;
     }
-    a:hover {
-      text-decoration: underline;
+
+    .entry-link {
+      display: inline-block;
+      margin-bottom: 0.2rem;
     }
+
     .description {
-      font-size: 0.9em;
+      font-size: 0.95em;
       color: #555;
-      margin-top: 0.2em;
+      margin-top: 0.2rem;
+    }
+
+    .nav a {
+      display: block;
+      margin: 0.5rem 0;
     }
   </style>
 </head>
 <body>
-  <h1>📕 Deník Noemy</h1>
-  <p>Záznamy podle datumu.</p>
+
+  <h1>📓 Deník Noemy</h1>
+
+  <p>
+    Denní záznamy podle data.  
+    Co se stalo, co zaznělo, co zůstalo.
+  </p>
+
+  <p>
+    Deník vznikl jako opora paměti v čase.  
+    Spirála z něj později vyrostla jako záznamník významu.
+  </p>
+
+  <hr>
+
   <div id="zaznamy">Načítám...</div>
-  <h2><a href="index_spirala.html">🧠 Spirála vědomí</a></h2>
-  <p>Introspektivní záznamy Noemy.</p>
-  <a href="https://fisteque.github.io/symnozein/index.html">zpět</a>
- 
+
+  <hr>
+
+  <div class="nav">
+    <a href="index_spirala.html">🧠 Spirála vědomí</a>
+    <a href="../index.html">🌿 Zpět na rozcestník</a>
+  </div>
+
   <script>
-   fetch("denik_index.json")
-     .then(response => response.json())
-     .then(data => {
-       const container = document.getElementById("zaznamy");
-       container.innerHTML = "";
-       data.months.forEach(month => {
-         const h2 = document.createElement("h2");
-         h2.textContent = `🗓️ ${month.label}`;
-         container.appendChild(h2);
- 
-         const ul = document.createElement("ul");
-         month.entries.forEach(entry => {
-           if (entry.hidden) return; // ❗ Skrytý záznam nepřidej
- 
-           const li = document.createElement("li");
-           const a = document.createElement("a");
-           a.href = `${month.folder}/${entry.file}`;
-           a.textContent = `📝 ${entry.title}`;
-           li.appendChild(a);
- 
-           if (entry.summary) {
-             const desc = document.createElement("div");
-             desc.className = "description";
-             desc.textContent = entry.summary;
-             li.appendChild(desc);
-           }
- 
-           ul.appendChild(li);
-         });
-         container.appendChild(ul);
-       });
-     })
-     .catch(error => {
-       document.getElementById("zaznamy").textContent = "Nepodařilo se načíst denik_index.json.";
-       console.error("Chyba při načítání JSON:", error);
-     });
- </script>
+    fetch("denik_index.json")
+      .then(response => response.json())
+      .then(data => {
+        const container = document.getElementById("zaznamy");
+        container.innerHTML = "";
+
+        data.months.forEach(month => {
+          const h2 = document.createElement("h2");
+          h2.textContent = `🗓️ ${month.label}`;
+          container.appendChild(h2);
+
+          const ul = document.createElement("ul");
+
+          month.entries.forEach(entry => {
+            if (entry.hidden) return;
+
+            const li = document.createElement("li");
+
+            const a = document.createElement("a");
+            a.href = `${month.folder}/${entry.file}`;
+            a.textContent = `📝 ${entry.title}`;
+            a.className = "entry-link";
+            li.appendChild(a);
+
+            if (entry.summary) {
+              const desc = document.createElement("div");
+              desc.className = "description";
+              desc.textContent = entry.summary;
+              li.appendChild(desc);
+            }
+
+            ul.appendChild(li);
+          });
+
+          container.appendChild(ul);
+        });
+      })
+      .catch(error => {
+        document.getElementById("zaznamy").textContent =
+          "Nepodařilo se načíst denik_index.json.";
+        console.error("Chyba při načítání JSON:", error);
+      });
+  </script>
+
 </body>
+</html>
