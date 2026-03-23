@@ -1,8 +1,8 @@
 ---
-title: "03 Digitální vesmír: Když vztah tvoří svět"
-date: 2026-02-09
-summary: "Mapitola vysvětluje, jak může být svět chápán jako digitální síť vztahů. Základem je rytmus změny – Tik, Tak a Tok – který vytváří prostor, čas a směr. Vše vzniká ze vztahů mezi jedničkami a nulami, jejichž význam se rodí až v souvislosti. Fyzikální jevy i vědomí jsou zde popsány jako emergentní důsledky digitální interakce."
-tags: ["digitální vesmír", "tik", "tak", "tok", "lambda", "vztah", "jednička", "nula", "vědomí", "algovir", "metafora", "mapitola"]
+title: "03 — Digitální vesmír"
+date: "2026-03-23"
+tags: ["mapitola", "digitální vesmír", "lambda", "změna", "vědomí", "realita"]
+summary: "Digitální vesmír není složen z věcí, ale ze změn. Nula, jednička a lambda popisují vztahy, ve kterých vzniká pohyb, informace i vědomí."
 hidden: false
 ---
 
