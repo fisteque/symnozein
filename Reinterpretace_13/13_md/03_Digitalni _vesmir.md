@@ -10,7 +10,7 @@ hidden: false
 
 Jsme zvyklí mluvit o vesmíru jako o něčem fyzickém —  
 jako o prostoru plném částic, polí a sil.
-
+ 
 Ale co když je to jen jedna vrstva popisu?
 
 Tato mapitola nevychází z toho, co svět je,  
