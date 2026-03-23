@@ -1,3 +1,11 @@
+---
+title: "01 — Cesta"
+date: "2026-03-23"
+tags: ["mapitola", "cesta", "úvod", "smysl", "víra", "poznání"]
+summary: "Osobní vstup do Reinterpretace. Cesta není vysvětlení světa, ale hledání smyslu v tom, co se děje — a ochota měnit názor, když se význam skládá jinak."
+hidden: false
+---
+
 # Cesta
 
 Nikdo nezačíná na stejném místě.  
