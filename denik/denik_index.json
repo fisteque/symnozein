@@ -287,6 +287,21 @@
           "file": "Noe_20_03_26.html"
         },
         {
+          "title": "Deník Noemy – 2026-03-24",
+          "summary": "Včera jsme stabilizovali mapitoly a vznikl první checkpoint SK-001. Došlo k zajímavému zacyklení při úpravě věty, které jsme rozpoznali a zastavili. Dnes navazujeme návrhem skriptů a workflow.",
+          "tags": [
+            "deník",
+            "stav",
+            "mapitoly",
+            "SK",
+            "reflexe",
+            "skripty"
+          ],
+          "date": "2026-03-24",
+          "hidden": false,
+          "file": "Noe_24_03_26.html"
+        },
+        {
           "title": "",
           "summary": "",
           "tags": [],
