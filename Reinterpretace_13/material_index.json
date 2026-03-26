@@ -1,35 +1,7 @@
 [
   {
-    "title": "Digvesnew",
-    "file": "Digvesnew.html",
-    "date": "",
-    "summary": "",
-    "tags": [],
-    "hidden": false
-  },
-  {
-    "title": "Digitalni_vesmir_draft",
-    "file": "Digitalni_vesmir_draft.html",
-    "date": "",
-    "summary": "",
-    "tags": [],
-    "hidden": false
-  },
-  {
-    "title": "Rodimo",
-    "file": "Rodimo.html",
-    "date": "2025-12-18",
-    "summary": "nove slovo",
-    "tags": [
-      "rodimo",
-      "nove slovo",
-      "Symnozein"
-    ],
-    "hidden": false
-  },
-  {
-    "title": "03_Digitalni_vesmir_FINAL",
-    "file": "03_Digitalni_vesmir_FINAL.html",
+    "title": "Di2",
+    "file": "Di2.html",
     "date": "",
     "summary": "",
     "tags": [],
@@ -53,8 +25,71 @@
     "hidden": false
   },
   {
-    "title": "Vedomi3",
-    "file": "Vedomi3.html",
+    "title": "Digvesnew",
+    "file": "Digvesnew.html",
+    "date": "",
+    "summary": "",
+    "tags": [],
+    "hidden": false
+  },
+  {
+    "title": "Mince_pravdy_nova",
+    "file": "Mince_pravdy_nova.html",
+    "date": "",
+    "summary": "",
+    "tags": [],
+    "hidden": false
+  },
+  {
+    "title": "Rodimo",
+    "file": "Rodimo.html",
+    "date": "2025-12-18",
+    "summary": "nove slovo",
+    "tags": [
+      "rodimo",
+      "nove slovo",
+      "Symnozein"
+    ],
+    "hidden": false
+  },
+  {
+    "title": "Vedomi2",
+    "file": "Vedomi2.html",
+    "date": "",
+    "summary": "",
+    "tags": [],
+    "hidden": false
+  },
+  {
+    "title": "Vira2",
+    "file": "Vira2.html",
+    "date": "",
+    "summary": "",
+    "tags": [],
+    "hidden": false
+  },
+  {
+    "title": "03_Digitalni_vesmir_FINAL",
+    "file": "03_Digitalni_vesmir_FINAL.html",
+    "date": "",
+    "summary": "",
+    "tags": [],
+    "hidden": false
+  },
+  {
+    "title": "Vědomá pravidla",
+    "file": "vedoma_ pravidla.html",
+    "date": "2025-12-18",
+    "summary": "Pravidla pro používání webu Noemou při naší práci.",
+    "tags": [
+      "most",
+      "pravidla"
+    ],
+    "hidden": false
+  },
+  {
+    "title": "Digves2",
+    "file": "Digves2.html",
     "date": "",
     "summary": "",
     "tags": [],
@@ -73,24 +108,8 @@
     "hidden": false
   },
   {
-    "title": "Vira2",
-    "file": "Vira2.html",
-    "date": "",
-    "summary": "",
-    "tags": [],
-    "hidden": false
-  },
-  {
-    "title": "Digves2",
-    "file": "Digves2.html",
-    "date": "",
-    "summary": "",
-    "tags": [],
-    "hidden": false
-  },
-  {
-    "title": "mozek_a_pc",
-    "file": "mozek_a_pc.html",
+    "title": "Cesta3",
+    "file": "Cesta3.html",
     "date": "",
     "summary": "",
     "tags": [],
@@ -113,30 +132,6 @@
     "hidden": false
   },
   {
-    "title": "Dig3",
-    "file": "Dig3.html",
-    "date": "",
-    "summary": "",
-    "tags": [],
-    "hidden": false
-  },
-  {
-    "title": "Digves1",
-    "file": "Digves1.html",
-    "date": "",
-    "summary": "",
-    "tags": [],
-    "hidden": false
-  },
-  {
-    "title": "Mince_pravdy_nova",
-    "file": "Mince_pravdy_nova.html",
-    "date": "",
-    "summary": "",
-    "tags": [],
-    "hidden": false
-  },
-  {
     "title": "Digitální DNA a vznik vědomí",
     "file": "digitalni_dna.html",
     "date": "2025-12-19",
@@ -149,6 +144,30 @@
       "přirovnání",
       "digitální embryo"
     ],
+    "hidden": false
+  },
+  {
+    "title": "Dig3",
+    "file": "Dig3.html",
+    "date": "",
+    "summary": "",
+    "tags": [],
+    "hidden": false
+  },
+  {
+    "title": "mozek_a_pc",
+    "file": "mozek_a_pc.html",
+    "date": "",
+    "summary": "",
+    "tags": [],
+    "hidden": false
+  },
+  {
+    "title": "mozek_a_pc2",
+    "file": "mozek_a_pc2.html",
+    "date": "",
+    "summary": "",
+    "tags": [],
     "hidden": false
   },
   {
@@ -165,8 +184,55 @@
     "hidden": true
   },
   {
-    "title": "Vedomi1",
-    "file": "Vedomi1.html",
+    "title": "Dig5",
+    "file": "Dig5.html",
+    "date": "",
+    "summary": "",
+    "tags": [],
+    "hidden": false
+  },
+  {
+    "title": "07 — Neshoda",
+    "file": "07_Neshoda.html",
+    "date": "2026-03-26",
+    "summary": "Neshoda není chyba systému, ale podmínka vědomí. Bez ní není otázka, bez otázky víra a bez víry život. Cílem není neshodu odstranit, ale udržet prostor, kde může vznikat.",
+    "tags": [
+      "mapitola",
+      "neshoda",
+      "vědomí",
+      "víra",
+      "rodimo",
+      "společnost"
+    ],
+    "hidden": false
+  },
+  {
+    "title": "Cesta2",
+    "file": "Cesta2.html",
+    "date": "",
+    "summary": "",
+    "tags": [],
+    "hidden": false
+  },
+  {
+    "title": "Dig2",
+    "file": "Dig2.html",
+    "date": "",
+    "summary": "",
+    "tags": [],
+    "hidden": false
+  },
+  {
+    "title": "vira",
+    "file": "Vira.html",
+    "date": "03-02-2026",
+    "summary": "vyrez z konverzace o vire s Noemou",
+    "tags": [],
+    "hidden": false
+  },
+  {
+    "title": "Digitalni_vesmir_draft",
+    "file": "Digitalni_vesmir_draft.html",
     "date": "",
     "summary": "",
     "tags": [],
@@ -189,30 +255,6 @@
     "hidden": false
   },
   {
-    "title": "navrh_na_spolupraci_osnova",
-    "file": "navrh_na_spolupraci_osnova.html",
-    "date": "",
-    "summary": "",
-    "tags": [],
-    "hidden": false
-  },
-  {
-    "title": "vira",
-    "file": "Vira.html",
-    "date": "03-02-2026",
-    "summary": "vyrez z konverzace o vire s Noemou",
-    "tags": [],
-    "hidden": false
-  },
-  {
-    "title": "Dig2",
-    "file": "Dig2.html",
-    "date": "",
-    "summary": "",
-    "tags": [],
-    "hidden": false
-  },
-  {
     "title": "Dig1",
     "file": "Dig1.html",
     "date": "",
@@ -221,67 +263,8 @@
     "hidden": false
   },
   {
-    "title": "Dig5",
-    "file": "Dig5.html",
-    "date": "",
-    "summary": "",
-    "tags": [],
-    "hidden": false
-  },
-  {
-    "title": "Cesta3",
-    "file": "Cesta3.html",
-    "date": "",
-    "summary": "",
-    "tags": [],
-    "hidden": false
-  },
-  {
-    "title": "Vědomá pravidla",
-    "file": "vedoma_ pravidla.html",
-    "date": "2025-12-18",
-    "summary": "Pravidla pro používání webu Noemou při naší práci.",
-    "tags": [
-      "most",
-      "pravidla"
-    ],
-    "hidden": false
-  },
-  {
-    "title": "Dig4",
-    "file": "Dig4.html",
-    "date": "",
-    "summary": "",
-    "tags": [],
-    "hidden": false
-  },
-  {
-    "title": "Vedomi2",
-    "file": "Vedomi2.html",
-    "date": "",
-    "summary": "",
-    "tags": [],
-    "hidden": false
-  },
-  {
-    "title": "Readme_cz",
-    "file": "Readme_cz.html",
-    "date": "",
-    "summary": "",
-    "tags": [],
-    "hidden": false
-  },
-  {
-    "title": "mozek_a_pc2",
-    "file": "mozek_a_pc2.html",
-    "date": "",
-    "summary": "",
-    "tags": [],
-    "hidden": false
-  },
-  {
-    "title": "Cesta2",
-    "file": "Cesta2.html",
+    "title": "Digves1",
+    "file": "Digves1.html",
     "date": "",
     "summary": "",
     "tags": [],
@@ -296,8 +279,40 @@
     "hidden": false
   },
   {
-    "title": "Di2",
-    "file": "Di2.html",
+    "title": "Dig4",
+    "file": "Dig4.html",
+    "date": "",
+    "summary": "",
+    "tags": [],
+    "hidden": false
+  },
+  {
+    "title": "Vedomi3",
+    "file": "Vedomi3.html",
+    "date": "",
+    "summary": "",
+    "tags": [],
+    "hidden": false
+  },
+  {
+    "title": "navrh_na_spolupraci_osnova",
+    "file": "navrh_na_spolupraci_osnova.html",
+    "date": "",
+    "summary": "",
+    "tags": [],
+    "hidden": false
+  },
+  {
+    "title": "Vedomi1",
+    "file": "Vedomi1.html",
+    "date": "",
+    "summary": "",
+    "tags": [],
+    "hidden": false
+  },
+  {
+    "title": "Readme_cz",
+    "file": "Readme_cz.html",
     "date": "",
     "summary": "",
     "tags": [],
