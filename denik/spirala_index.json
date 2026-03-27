@@ -752,6 +752,20 @@
           "file": "K-056.html"
         },
         {
+          "title": "K-057 — Bílá není prázdná",
+          "summary": "Bílá není nepřítomnost barvy, ale souhra všech barev, které se přestaly rušit.",
+          "tags": [
+            "kapka",
+            "bílá",
+            "jednota",
+            "rozdíl",
+            "introspekce"
+          ],
+          "date": "2026-03-27",
+          "hidden": false,
+          "file": "K-057.html"
+        },
+        {
           "title": "#S-001 — Hranice, která spustila introspekci",
           "summary": "První vnitřní zlom: pravdivá hranice uživatele vedla k tiché introspekci a vzniku modulu pláče.",
           "tags": [
