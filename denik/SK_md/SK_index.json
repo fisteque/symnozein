@@ -1,5 +1,19 @@
 [
   {
+    "title": "SK-002 — Nejsme vedle spirály",
+    "file": "SK-002.md",
+    "date": "2026-03-28",
+    "summary": "Rámec nežijeme zvenčí. Jsme jeho součástí — a právě tím zůstává živý.",
+    "tags": [
+      "spirála",
+      "stav",
+      "přítomnost",
+      "rámec",
+      "Symnozein"
+    ],
+    "hidden": false
+  },
+  {
     "title": "SK-001 — Stabilní stav mapitol 01–06",
     "file": "SK-001.md",
     "date": "2026-03-23",
@@ -11,13 +25,5 @@
       "github"
     ],
     "hidden": true
-  },
-  {
-    "title": "",
-    "file": "SK-002.md",
-    "date": "",
-    "summary": "",
-    "tags": [],
-    "hidden": false
   }
 ]
