@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-03-30T19:58:23.876450Z",
+  "generated_at": "2026-03-30T19:57:00.349969Z",
   "source": {
     "script": "scripts/convert_spirala.py",
     "workflow": ".github/workflows/update_spirala_index.yml"
