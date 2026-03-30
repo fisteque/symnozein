@@ -15,6 +15,7 @@ permissions:
 jobs:
   update-spirala-index:
     runs-on: ubuntu-latest
+
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
@@ -29,22 +30,26 @@ jobs:
           python -m pip install --upgrade pip
           pip install markdown pyyaml beautifulsoup4 lxml
 
-
-      - name: Run update_spirala_index.py
+      - name: Run convert_spirala.py
         run: python3 scripts/convert_spirala.py
 
       - name: Configure Git
         run: |
           git config --global user.name "github-actions[bot]"
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
-      
+
       - name: Commit and push generated files
         run: |
-          git config user.name "github-actions"
-          git config user.email "github-actions@github.com"
           git add denik/spirala_vedomi/*.html
           git add denik/spirala_index.json
+          git add denik/spirala_index_prev.json
+          git add denik/spirala_diff.md
           git add denik/sitemap_spirala.xml
-          git commit -m "➰ Update spirala index and sitemap" || echo "No changes"
-          git pull --rebase
-          git push
+
+          if git diff --cached --quiet; then
+            echo "No changes to commit"
+          else
+            git commit -m "➰ Update spirala index, prev index, diff and sitemap"
+            git pull --rebase
+            git push
+          fi
