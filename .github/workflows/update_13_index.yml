@@ -10,7 +10,7 @@ on:
       - 'scripts/convert_13.py'
 
 permissions:
-      contents: write
+  contents: write
 
 jobs:
   convert:
@@ -32,19 +32,23 @@ jobs:
       - name: Run conversion script
         run: |
           python scripts/convert_13.py
-          
+
       - name: Configure Git
         run: |
           git config --global user.name "github-actions[bot]"
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
-      
+
       - name: Commit and push generated files
         run: |
           git config user.name "github-actions"
           git config user.email "github-actions@github.com"
+
           git add Reinterpretace_13/13/*.html
           git add Reinterpretace_13/13_index.json
+          git add Reinterpretace_13/13_index_prev.json
+          git add Reinterpretace_13/13_diff.md
           git add Reinterpretace_13/sitemap_13.xml
-          git commit -m "🛠️ Update 13 index and sitemap" || echo "No changes"
+
+          git commit -m "🛠️ Update 13 index, prev index, diff and sitemap" || echo "No changes"
           git pull --rebase
           git push
