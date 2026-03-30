@@ -5,6 +5,23 @@ Uchovává posledních **50** záznamů.
 
 ---
 
+## 2026-03-30T21:48:01.291250Z
+
+Zdroj změn:
+- skript: `scripts/convert_13.py`
+- workflow: `.github/workflows/update_13_index.yml`
+
+➕ přidáno: **0**
+- nic
+
+🔄 změněno: **1**
+- `Clovek.html`
+
+❌ odebráno: **0**
+- nic
+
+---
+
 ## 2026-03-30T21:45:59.759243Z
 
 Zdroj změn:
