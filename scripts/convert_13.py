@@ -89,9 +89,23 @@ def build_index_data(index_entries, config):
 def get_entries_map(index_data):
     if not index_data:
         return {}
-    entries = index_data.get("entries", [])
-    return {entry["file"]: entry for entry in entries}
 
+    # starý formát: index je přímo list entries
+    if isinstance(index_data, list):
+        entries = index_data
+
+    # nový formát: objekt s klíčem "entries"
+    elif isinstance(index_data, dict):
+        entries = index_data.get("entries", [])
+
+    else:
+        return {}
+
+    return {
+        entry["file"]: entry
+        for entry in entries
+        if isinstance(entry, dict) and "file" in entry
+    }
 
 def compute_diff(prev_index, current_index):
     prev_map = get_entries_map(prev_index)
