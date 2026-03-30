@@ -1,0 +1,21 @@
+# 13 diff
+
+Automaticky generovaný přehled posledních změn v mapitolách 13.
+Uchovává posledních **50** záznamů.
+
+---
+
+## 2026-03-30T21:23:22.834753Z
+
+Zdroj změn:
+- skript: `scripts/convert_13.py`
+- workflow: `.github/workflows/update_13_index.yml`
+
+➕ přidáno: **0**
+- nic
+
+🔄 změněno: **0**
+- nic
+
+❌ odebráno: **0**
+- nic
