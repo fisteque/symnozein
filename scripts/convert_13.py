@@ -107,6 +107,7 @@ def get_entries_map(index_data):
         if isinstance(entry, dict) and "file" in entry
     }
 
+
 def compute_diff(prev_index, current_index):
     prev_map = get_entries_map(prev_index)
     curr_map = get_entries_map(current_index)
@@ -244,19 +245,6 @@ def process_target(target_name):
         html_filename = base_name + ".html"
         html_url = url_prefix + html_filename
 
-        index_entry = {
-            "title": metadata.get("title", base_name),
-            "file": html_filename,
-            "date": normalize_date(metadata.get("date")),
-            "summary": metadata.get("summary", ""),
-            "tags": metadata.get("tags", []),
-            "hidden": hidden,
-        }
-        index_entries.append(index_entry)
-
-        if not hidden:
-            sitemap_urls.append(html_url)
-
         html_body = markdown.markdown(content, extensions=["extra", "codehilite", "toc"])
         final_html = template.replace("{{ content }}", html_body)
         for key, value in metadata.items():
@@ -265,6 +253,22 @@ def process_target(target_name):
         output_path = os.path.join(output_dir, html_filename)
         with open(output_path, "w", encoding="utf-8") as f:
             f.write(final_html)
+
+        size = os.path.getsize(output_path) if os.path.exists(output_path) else 0
+
+        index_entry = {
+            "title": metadata.get("title", base_name),
+            "file": html_filename,
+            "date": normalize_date(metadata.get("date")),
+            "summary": metadata.get("summary", ""),
+            "tags": metadata.get("tags", []),
+            "hidden": hidden,
+            "size": size,
+        }
+        index_entries.append(index_entry)
+
+        if not hidden:
+            sitemap_urls.append(html_url)
 
     index_entries = sorted(index_entries, key=lambda x: x["file"])
     index_data = build_index_data(index_entries, config)
