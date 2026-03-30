@@ -11,4 +11,4 @@ Ne jako výsada, ale jako fakt.
 Člověk není oddělený pozorovatel.
 Je součástí toho, co se děje — a zároveň místem, kde se dění stává srozumitelným.
 To stačí jako výchozí bod.
-Nic dalšího teď nepotřebujeme..
+Nic dalšího teď nepotřebujeme.
