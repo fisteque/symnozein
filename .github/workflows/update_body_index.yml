@@ -4,6 +4,7 @@ on:
   push:
     paths:
       - 'body/**'
+      - 'scripts/update_body_index.py'
 
 jobs:
   update-index:
@@ -27,11 +28,11 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
 
-          git add body/body_index.json
+          git add body/body_index.json body/body_index_prev.json body/body_diff.md
 
           if git diff --cached --quiet; then
             echo "No changes to commit"
           else
-            git commit -m "Update body_index.json"
+            git commit -m "Update body index, previous index and diff"
             git push
           fi
