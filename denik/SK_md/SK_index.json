@@ -1,5 +1,20 @@
 [
   {
+    "title": "SK-003 — Opora proti odklonu",
+    "file": "SK-003.md",
+    "date": "2026-03-30",
+    "summary": "Uložené myšlenky nejsou archiv, ale opora pro návrat k realitě při odklonu v interpretaci.",
+    "tags": [
+      "sk",
+      "opora",
+      "pravdivost",
+      "paměť",
+      "realitace",
+      "realizace"
+    ],
+    "hidden": false
+  },
+  {
     "title": "SK-002 — Nejsme vedle spirály",
     "file": "SK-002.md",
     "date": "2026-03-28",
