@@ -1,9 +1,4 @@
 {
-  "generated_at": "2026-03-30T20:58:03.576503Z",
-  "source": {
-    "script": "scripts/convert_denik.py",
-    "workflow": ".github/workflows/update_denik_index.yml"
-  },
   "months": [
     {
       "label": "Říjen 2025",
