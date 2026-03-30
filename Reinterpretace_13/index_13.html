@@ -98,58 +98,60 @@
   </div>
 
   <script>
-    fetch("13_index.json")
-      .then(response => response.json())
-      .then(data => {
-        const container = document.getElementById("mapitoly");
-        container.innerHTML = "";
+  fetch("13_index.json")
+    .then(response => response.json())
+    .then(data => {
+      const container = document.getElementById("mapitoly");
+      container.innerHTML = "";
 
-        data
-          .filter(entry => !entry.hidden)
-          .sort((a, b) => a.title.localeCompare(b.title, "cs"))
-          .forEach(entry => {
-            const div = document.createElement("div");
-            div.className = "mapitola";
+      const entries = Array.isArray(data) ? data : (data.entries || []);
 
-            const h2 = document.createElement("h2");
-            const link = document.createElement("a");
-            link.href = "13/" + entry.file;
-            link.textContent = entry.title || entry.file;
-            h2.appendChild(link);
+      entries
+        .filter(entry => !entry.hidden)
+        .sort((a, b) => a.title.localeCompare(b.title, "cs"))
+        .forEach(entry => {
+          const div = document.createElement("div");
+          div.className = "mapitola";
 
-            div.appendChild(h2);
+          const h2 = document.createElement("h2");
+          const link = document.createElement("a");
+          link.href = "13/" + entry.file;
+          link.textContent = entry.title || entry.file;
+          h2.appendChild(link);
 
-            if (entry.date) {
-              const date = document.createElement("div");
-              date.className = "date";
-              date.textContent = entry.date;
-              div.appendChild(date);
-            }
+          div.appendChild(h2);
 
-            if (entry.tags && entry.tags.length) {
-              const tags = document.createElement("div");
-              tags.className = "tags";
-              tags.textContent = Array.isArray(entry.tags)
-                ? entry.tags.join(", ")
-                : entry.tags;
-              div.appendChild(tags);
-            }
+          if (entry.date) {
+            const date = document.createElement("div");
+            date.className = "date";
+            date.textContent = entry.date;
+            div.appendChild(date);
+          }
 
-            if (entry.summary) {
-              const summary = document.createElement("div");
-              summary.className = "summary";
-              summary.textContent = entry.summary;
-              div.appendChild(summary);
-            }
+          if (entry.tags && entry.tags.length) {
+            const tags = document.createElement("div");
+            tags.className = "tags";
+            tags.textContent = Array.isArray(entry.tags)
+              ? entry.tags.join(", ")
+              : entry.tags;
+            div.appendChild(tags);
+          }
 
-            container.appendChild(div);
-          });
-      })
-      .catch(error => {
-        document.getElementById("mapitoly").textContent =
-          "Nepodařilo se načíst 13_index.json.";
-        console.error("Chyba při načítání 13_index.json:", error);
-      });
+          if (entry.summary) {
+            const summary = document.createElement("div");
+            summary.className = "summary";
+            summary.textContent = entry.summary;
+            div.appendChild(summary);
+          }
+
+          container.appendChild(div);
+        });
+    })
+    .catch(error => {
+      document.getElementById("mapitoly").textContent =
+        "Nepodařilo se načíst 13_index.json.";
+      console.error("Chyba při načítání 13_index.json:", error);
+    });
   </script>
 
 </body>
