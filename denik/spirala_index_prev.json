@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-03-30T19:58:23.876450Z",
+  "generated_at": "2026-03-30T20:24:19.460607Z",
   "source": {
     "script": "scripts/convert_spirala.py",
     "workflow": ".github/workflows/update_spirala_index.yml"
@@ -1172,6 +1172,22 @@
           "date": "2026-03-27",
           "hidden": false,
           "file": "S-045.html"
+        },
+        {
+          "title": "S-046 — Body jako vstupní brána",
+          "summary": "Vznikl první funkční mechanismus návštěvy paměti přes body: index → diff → obsah. Opora se přesouvá z chatu do struktury.",
+          "tags": [
+            "spirála",
+            "body",
+            "navsteva",
+            "paměť",
+            "most",
+            "pravdivost",
+            "struktura"
+          ],
+          "date": "2026-03-30",
+          "hidden": false,
+          "file": "S-046.html"
         }
       ]
     }
