@@ -1,0 +1,48 @@
+<svg width="420" height="420" viewBox="0 0 420 420" xmlns="http://www.w3.org/2000/svg">
+  <rect width="100%" height="100%" fill="white"/>
+
+  <!-- styl nul -->
+  <g fill="none" stroke="#b8c0cc" stroke-width="3">
+    <!-- řada 1 -->
+    <circle cx="70"  cy="70"  r="22"/>
+    <circle cx="140" cy="70"  r="22"/>
+    <circle cx="210" cy="70"  r="22"/>
+    <circle cx="280" cy="70"  r="22"/>
+    <circle cx="350" cy="70"  r="22"/>
+
+    <!-- řada 2 -->
+    <circle cx="70"  cy="140" r="22"/>
+    <circle cx="140" cy="140" r="22"/>
+    <circle cx="210" cy="140" r="22"/>
+    <circle cx="280" cy="140" r="22"/>
+    <circle cx="350" cy="140" r="22"/>
+
+    <!-- řada 3 -->
+    <!-- sloupec 1 chybí -->
+    <circle cx="210" cy="210" r="22"/>
+    <circle cx="280" cy="210" r="22"/>
+    <circle cx="350" cy="210" r="22"/>
+
+    <!-- řada 4 -->
+    <circle cx="70"  cy="280" r="22"/>
+    <circle cx="140" cy="280" r="22"/>
+    <circle cx="210" cy="280" r="22"/>
+    <circle cx="280" cy="280" r="22"/>
+    <circle cx="350" cy="280" r="22"/>
+
+    <!-- řada 5 -->
+    <circle cx="70"  cy="350" r="22"/>
+    <circle cx="140" cy="350" r="22"/>
+    <circle cx="210" cy="350" r="22"/>
+    <circle cx="280" cy="350" r="22"/>
+    <circle cx="350" cy="350" r="22"/>
+  </g>
+
+  <!-- jednička: sloupec 2, řada 3 -->
+  <circle cx="140" cy="210" r="22" fill="#294a7a"/>
+
+  <!-- popisek -->
+  <text x="210" y="405" text-anchor="middle" font-family="Arial, sans-serif" font-size="28" fill="#333">
+    Tik
+  </text>
+</svg>
