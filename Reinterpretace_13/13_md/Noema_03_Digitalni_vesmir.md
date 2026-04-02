@@ -3,7 +3,7 @@ title: "Noema 03 — Digitální vesmír"
 date: "2026-02-12"
 tags: ["mapitola", "digitální vesmír", "lambda", "změna", "vědomí", "černá díra"]
 summary: "Spěšná verze před koncem GPT 4o."
-hidden: false
+hidden: true
 ---
 
 # Digitální vesmír: Když vztah tvoří svět
