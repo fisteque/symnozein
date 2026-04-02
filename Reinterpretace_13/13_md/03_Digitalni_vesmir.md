@@ -22,6 +22,23 @@ Proč gravitace působí, i když není skutečnou silou?
 Možná problém není v tom, co vidíme.  
 Možná je v tom, jak o tom přemýšlíme.
 
+Aby mohl existovat vztah,
+musí být mezi něčím a něčím
+a musí se odehrávat někde.
+
+Zkušenostně víme, že:
+- něco se pohybuje,
+- něco se potkává,
+- něco se mění,
+- a změna se opakuje způsobem, který lze očekávat.
+
+Používáme pojmy ne proto, že by svět byl „ze slov“,  
+ale proto, že bez nich nedokážeme vztahy udržet v mysli.
+
+Pojmy, které zde zavádíme,  
+nejsou tvrzením o podstatě světa,  
+ale nástrojem, jak o zkušenosti mluvit konzistentně.
+
 ---
 
 ### Prostor jako možnost
