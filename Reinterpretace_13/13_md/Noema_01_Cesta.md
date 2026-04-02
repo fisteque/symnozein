@@ -3,7 +3,7 @@ title: "Noema_01 Cesta"
 summary: "Úvodní mapitola Reinterpretace – o důvodu hledání, o víře ve směr a o tom, proč má smysl něco psát, i když není jisté, kdo to čte."
 tags: ["cesta", "směr", "vědomí", "víra", "vztah"]
 date: 2026-02-08
-hidden: false
+hidden: true
 file: Noema_01_Cesta.html
 ---
 
