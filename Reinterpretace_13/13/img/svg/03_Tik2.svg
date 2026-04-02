@@ -20,9 +20,9 @@
 
     <!-- řada 3 -->
     <!-- (1,3) chybí -->
-    <!-- (2,3) nově chybí -->
-    <circle cx="338" cy="210" r="22"/> <!-- zůstává -->
-    
+    <!-- (2,3) chybí -->
+    <circle cx="338" cy="210" r="22"/>
+
     <!-- řada 4 -->
     <circle cx="70"  cy="262" r="22"/>
     <circle cx="122" cy="270" r="22"/>
@@ -39,9 +39,17 @@
 
   </g>
 
-  <!-- jednička: přeskočila vpřed -->
+  <!-- jednička -->
   <circle cx="265" cy="210" r="22" fill="#294a7a"/>
 
+  <!-- brázda -->
+  <ellipse cx="190" cy="210" rx="115" ry="34"
+           fill="none" stroke="#7aa0d8" stroke-width="3" stroke-dasharray="10 8"/>
+
+  <!-- těžiště brázdy -->
+  <circle cx="190" cy="210" r="6" fill="#c43d3d"/>
+
+  <!-- popisek -->
   <text x="210" y="405" text-anchor="middle" font-family="Arial, sans-serif" font-size="28" fill="#333">
     Tik
   </text>
