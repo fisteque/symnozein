@@ -30,7 +30,7 @@ Zkušenostně víme, že:
 - něco se pohybuje,
 - něco se potkává,
 - něco se mění,
-- a změna se opakuje způsobem, který lze očekávat.
+- a změna se opakuje způsobem, který se ukazuje jako pravidelný
 
 Používáme pojmy ne proto, že by svět byl „ze slov“,  
 ale proto, že bez nich nedokážeme vztahy udržet v mysli.
