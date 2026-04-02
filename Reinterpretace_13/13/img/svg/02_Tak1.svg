@@ -6,15 +6,15 @@
 
     <!-- řada 1 -->
     <circle cx="70"  cy="90"  r="22"/>
-    <circle cx="137" cy="74"  r="22"/>
-    <circle cx="208" cy="71"  r="22"/>
-    <circle cx="279" cy="70"  r="22"/>
-    <circle cx="349" cy="70"  r="22"/>
+    <circle cx="135" cy="85"  r="22"/>
+    <circle cx="208" cy="77"  r="22"/>
+    <circle cx="279" cy="73"  r="22"/>
+    <circle cx="349" cy="71"  r="22"/>
 
     <!-- řada 2 -->
     <circle cx="70"  cy="160" r="22"/>
-    <circle cx="134" cy="150" r="22"/>
-    <circle cx="206" cy="145" r="22"/>
+    <circle cx="136" cy="150" r="22"/>
+    <circle cx="207" cy="145" r="22"/>
     <circle cx="278" cy="142" r="22"/>
     <circle cx="349" cy="141" r="22"/>
 
@@ -33,10 +33,10 @@
 
     <!-- řada 5 -->
     <circle cx="70"  cy="330" r="22"/>
-    <circle cx="130" cy="346" r="22"/>
-    <circle cx="205" cy="349" r="22"/>
-    <circle cx="277" cy="350" r="22"/>
-    <circle cx="349" cy="350" r="22"/>
+    <circle cx="135" cy="335" r="22"/>
+    <circle cx="208" cy="343" r="22"/>
+    <circle cx="279" cy="347" r="22"/>
+    <circle cx="349" cy="349" r="22"/>
 
   </g>
 
