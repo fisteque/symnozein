@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-02T17:24:09.437689Z",
+  "generated_at": "2026-04-02T17:27:14.014610Z",
   "source": {
     "script": "scripts/convert_13.py",
     "workflow": ".github/workflows/update_13_index.yml"
@@ -43,7 +43,7 @@
       "summary": "Pokus o popis reality jako procesu změn — kde prostor tvoří možnosti (nuly), změnu nese informace (jednička) a jejich rytmus (Tik–Tak–Tok) vytváří to, co vnímáme jako čas, hmotu i gravitaci.",
       "tags": "digitální vesmír, tik-tak-tok, jednička, nula, algovir, gravitace, čas, reinterpretace",
       "hidden": false,
-      "size": 6367
+      "size": 6894
     },
     {
       "title": "03 — Digitální vesmír_old",
