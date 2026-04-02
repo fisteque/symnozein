@@ -1,9 +1,9 @@
 ---
-title: "03 — Digitální vesmír"
+title: "03 — Digitální vesmír_old"
 date: "2026-03-23"
 tags: ["mapitola", "digitální vesmír", "lambda", "změna", "vědomí", "realita"]
 summary: "Vesmír není ze slov. Nula, jednička a lambda popisují vztahy, ve kterých vzniká pohyb, informace i vědomí."
-hidden: false
+hidden: true
 ---
 
 # Digitální vesmír: Když vztah tvoří svět
