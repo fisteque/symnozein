@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-02T17:21:07.486895Z",
+  "generated_at": "2026-04-02T17:21:40.839631Z",
   "source": {
     "script": "scripts/convert_13.py",
     "workflow": ".github/workflows/update_13_index.yml"
@@ -152,8 +152,8 @@
         "postoj",
         "strom"
       ],
-      "hidden": false,
-      "size": 4165
+      "hidden": true,
+      "size": 4164
     },
     {
       "title": "Noema 03 — Digitální vesmír",
