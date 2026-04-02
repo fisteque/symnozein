@@ -5,62 +5,61 @@
   <g fill="none" stroke="#b8c0cc" stroke-width="3">
 
     <!-- řada 1 -->
-    <circle cx="70"  cy="82"  r="22"/>
-    <circle cx="140" cy="78"  r="22"/>
-    <circle cx="210" cy="75"  r="22"/>
-    <circle cx="280" cy="72"  r="22"/>
-    <circle cx="350" cy="71"  r="22"/>
+    <circle cx="70"  cy="95"  r="22"/>
+    <circle cx="137" cy="85"  r="22"/>
+    <circle cx="208" cy="77"  r="22"/>
+    <circle cx="279" cy="73"  r="22"/>
+    <circle cx="349" cy="71"  r="22"/>
 
     <!-- řada 2 -->
-    <circle cx="70"  cy="158" r="22"/>
-    <circle cx="122" cy="150" r="22"/>
-    <circle cx="202" cy="145" r="22"/>
-    <circle cx="276" cy="142" r="22"/>
-    <circle cx="347" cy="140" r="22"/>
+    <circle cx="70"  cy="160" r="22"/>
+    <circle cx="134" cy="152" r="22"/>
+    <circle cx="200" cy="145" r="22"/>
+    <circle cx="269" cy="142" r="22"/>
+    <circle cx="338" cy="141" r="22"/>
 
     <!-- řada 3 -->
-    <!-- (1,3) chybí -->
-    <!-- (2,3) chybí -->
-    <circle cx="338" cy="210" r="22"/>
+    <!-- 1,3 chybí -->
+    <!-- 2,3 nyní chybí, nahrazena červenou tečkou -->
+    <circle cx="265" cy="210" r="22"/>
+    <circle cx="336" cy="210" r="22"/>
 
     <!-- řada 4 -->
-    <circle cx="70"  cy="262" r="22"/>
-    <circle cx="122" cy="270" r="22"/>
-    <circle cx="202" cy="275" r="22"/>
-    <circle cx="276" cy="278" r="22"/>
-    <circle cx="347" cy="280" r="22"/>
+    <circle cx="70"  cy="260" r="22"/>
+    <circle cx="134" cy="268" r="22"/>
+    <circle cx="200" cy="275" r="22"/>
+    <circle cx="269" cy="278" r="22"/>
+    <circle cx="338" cy="279" r="22"/>
 
     <!-- řada 5 -->
-    <circle cx="70"  cy="338" r="22"/>
-    <circle cx="140" cy="342" r="22"/>
-    <circle cx="210" cy="345" r="22"/>
-    <circle cx="280" cy="348" r="22"/>
-    <circle cx="350" cy="349" r="22"/>
+    <circle cx="70"  cy="325" r="22"/>
+    <circle cx="137" cy="335" r="22"/>
+    <circle cx="208" cy="343" r="22"/>
+    <circle cx="279" cy="347" r="22"/>
+    <circle cx="349" cy="349" r="22"/>
 
   </g>
 
-  <!-- jednička -->
-  <circle cx="265" cy="210" r="22" fill="#294a7a"/>
+  <!-- jednička přeskočila na nejbližší nulu -->
+  <circle cx="194" cy="210" r="22" fill="#294a7a"/>
 
-  <!-- brázda: vlevo otevřenější/hyperbolická, vpravo ztupená -->
+  <!-- červená tečka na předchozí pozici jedničky -->
+  <circle cx="140" cy="210" r="6" fill="#c43d3d"/>
+
+  <!-- brázda jako kapka -->
   <path d="
-    M 58 210
-    C 82 190, 118 180, 170 176
-    C 220 172, 260 176, 286 188
-    C 300 194, 306 201, 306 210
-    C 306 219, 300 226, 286 232
-    C 260 244, 220 248, 170 244
-    C 118 240, 82 230, 58 210
-    Z"
-    fill="none"
-    stroke="#7aa0d8"
-    stroke-width="3"
-    stroke-dasharray="10 8"/>
+  M 64 210
+  C 78 192, 102 180, 138 174
+  C 176 168, 210 176, 238 196
+  C 250 206, 250 214, 238 224
+  C 210 244, 176 252, 138 246
+  C 102 240, 78 228, 64 210
+  Z"
+  fill="none"
+  stroke="#7aa0d8"
+  stroke-width="3"
+  stroke-dasharray="10 8"/>
 
-  <!-- těžiště brázdy -->
-  <circle cx="188" cy="210" r="6" fill="#c43d3d"/>
-
-  <!-- popisek -->
   <text x="210" y="405" text-anchor="middle" font-family="Arial, sans-serif" font-size="28" fill="#333">
     Tik
   </text>
