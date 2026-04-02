@@ -45,7 +45,8 @@
 
   <!-- červená tečka na předchozí pozici jedničky -->
   <circle cx="140" cy="210" r="6" fill="#c43d3d"/>
-
+  <circle cx="70" cy="210" r="6" fill="#c43d3d"/>
+  
   <!-- brázda jako kapka -->
   <path d="
   M 20 210
