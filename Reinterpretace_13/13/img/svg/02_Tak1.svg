@@ -20,9 +20,9 @@
 
     <!-- řada 3 -->
     <!-- 1,3 chybí -->
-    <circle cx="198" cy="210" r="22"/>  <!-- 3,3 výrazněji doleva -->
-    <circle cx="266" cy="210" r="22"/>  <!-- 4,3 znatelně doleva -->
-    <circle cx="338" cy="210" r="22"/>  <!-- 5,3 nejméně, ale víc než předtím -->
+    <circle cx="195" cy="210" r="22"/>  <!-- 3,3 výrazněji doleva -->
+    <circle cx="265" cy="210" r="22"/>  <!-- 4,3 znatelně doleva -->
+    <circle cx="336" cy="210" r="22"/>  <!-- 5,3 nejméně, ale víc než předtím -->
 
     <!-- řada 4 -->
     <circle cx="70"  cy="260" r="22"/>
