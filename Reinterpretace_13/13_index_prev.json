@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-02T17:20:35.666601Z",
+  "generated_at": "2026-04-02T17:21:07.486895Z",
   "source": {
     "script": "scripts/convert_13.py",
     "workflow": ".github/workflows/update_13_index.yml"
@@ -138,8 +138,8 @@
         "víra",
         "vztah"
       ],
-      "hidden": false,
-      "size": 3252
+      "hidden": true,
+      "size": 3251
     },
     {
       "title": "Noema 02 Víra",
