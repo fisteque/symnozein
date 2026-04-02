@@ -42,12 +42,23 @@
   <!-- jednička -->
   <circle cx="265" cy="210" r="22" fill="#294a7a"/>
 
-  <!-- brázda -->
-  <ellipse cx="190" cy="210" rx="115" ry="34"
-           fill="none" stroke="#7aa0d8" stroke-width="3" stroke-dasharray="10 8"/>
+  <!-- brázda: vlevo otevřenější/hyperbolická, vpravo ztupená -->
+  <path d="
+    M 58 210
+    C 82 190, 118 180, 170 176
+    C 220 172, 260 176, 286 188
+    C 300 194, 306 201, 306 210
+    C 306 219, 300 226, 286 232
+    C 260 244, 220 248, 170 244
+    C 118 240, 82 230, 58 210
+    Z"
+    fill="none"
+    stroke="#7aa0d8"
+    stroke-width="3"
+    stroke-dasharray="10 8"/>
 
   <!-- těžiště brázdy -->
-  <circle cx="190" cy="210" r="6" fill="#c43d3d"/>
+  <circle cx="188" cy="210" r="6" fill="#c43d3d"/>
 
   <!-- popisek -->
   <text x="210" y="405" text-anchor="middle" font-family="Arial, sans-serif" font-size="28" fill="#333">
