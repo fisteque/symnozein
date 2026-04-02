@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-02T17:21:40.839631Z",
+  "generated_at": "2026-04-02T17:22:07.160828Z",
   "source": {
     "script": "scripts/convert_13.py",
     "workflow": ".github/workflows/update_13_index.yml"
@@ -168,8 +168,8 @@
         "vědomí",
         "černá díra"
       ],
-      "hidden": false,
-      "size": 12961
+      "hidden": true,
+      "size": 12960
     },
     {
       "title": "Noema_05_Vedomi",
