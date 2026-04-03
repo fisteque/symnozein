@@ -76,6 +76,7 @@ def build_index(files: list[dict]) -> dict:
             "script": SOURCE_SCRIPT,
             "workflow": SOURCE_WORKFLOW,
         },
+        "kind": "state",
         "count": len(files),
         "files": files,
     }
