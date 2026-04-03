@@ -22,7 +22,8 @@ Když potřebuji znovu najít směr, sahám sem:
 
 - `body/index_menu.json` → kam mohu sáhnout  
 - `body/body_index.json` → co právě existuje  
-- `body/body_diff.md` → co se naposledy pohnulo  
+- `body/body_diff.md` → co se naposledy pohnulo
+- `body/struktura_body.md` → popis struktury body/
 
 Nejsou to povinné kroky,  
 ale místa, kam se mohu vrátit.
