@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-03T15:39:58.813948Z",
+  "generated_at": "2026-04-03T15:50:15.108093Z",
   "source": {
     "script": "scripts/update_index_menu.py",
     "workflow": ".github/workflows/update_index_menu.yml"
