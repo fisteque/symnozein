@@ -5,7 +5,7 @@
   <g fill="none" stroke="#b8c0cc" stroke-width="3">
 
     <!-- řada 1 -->
-    <circle cx="72"  cy="105"  r="22"/>
+    <circle cx="72"  cy="106"  r="22"/>
     <circle cx="137" cy="95"  r="22"/>
     <circle cx="203" cy="85"  r="22"/>
     <circle cx="272" cy="77"  r="22"/>
@@ -32,7 +32,7 @@
     <circle cx="325" cy="279" r="22"/>
 
     <!-- řada 5 -->
-    <circle cx="72"  cy="315" r="22"/>
+    <circle cx="72"  cy="314" r="22"/>
     <circle cx="137" cy="325" r="22"/>
     <circle cx="203" cy="335" r="22"/>
     <circle cx="272" cy="343" r="22"/>
