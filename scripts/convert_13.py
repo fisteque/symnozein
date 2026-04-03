@@ -258,13 +258,14 @@ def process_target(target_name):
         size = os.path.getsize(output_path) if os.path.exists(output_path) else 0
 
         index_entry = {
-            "title": metadata.get("title", base_name),
-            "file": html_filename,
-            "date": normalize_date(metadata.get("date")),
-            "summary": metadata.get("summary", ""),
-            "tags": metadata.get("tags", []),
-            "hidden": hidden,
-            "size": size,
+          "title": metadata.get("title", base_name),
+          "file": html_filename,
+          "path": os.path.join(output_dir, html_filename).replace("\\", "/"),
+          "date": normalize_date(metadata.get("date")),
+          "summary": metadata.get("summary", "") or "",
+          "tags": metadata.get("tags", []) or [],
+          "hidden": hidden,
+          "size": size,
         }
         index_entries.append(index_entry)
 
