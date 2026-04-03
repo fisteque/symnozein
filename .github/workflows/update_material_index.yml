@@ -1,19 +1,17 @@
-name: Update material Index
+name: Update Material Index
 
 on:
   push:
     paths:
       - 'Reinterpretace_13/material_md/*.md'
-      - 'Reinterpretace_13/templates/template.html'
       - '.github/workflows/update_material_index.yml'
       - 'scripts/update_material_index.py'
-      - 'scripts/convert_material.py'
 
 permissions:
-      contents: write
-      
+  contents: write
+
 jobs:
-  build:
+  update-material:
     runs-on: ubuntu-latest
 
     steps:
@@ -21,31 +19,33 @@ jobs:
         uses: actions/checkout@v4
 
       - name: Set up Python
-        uses: actions/setup-python@v4
+        uses: actions/setup-python@v5
         with:
           python-version: '3.x'
 
       - name: Install dependencies
         run: |
-          python -m pip install --upgrade pip
-          pip install markdown pyyaml beautifulsoup4 lxml
-      
-      - name: Run conversion script
+          pip install pyyaml
+
+      - name: Run material index script
         run: |
-          python scripts/convert_material.py
+          python scripts/update_material_index.py
 
       - name: Configure Git
         run: |
-          git config --global user.name "github-actions[bot]"
-          git config --global user.email "github-actions[bot]@users.noreply.github.com"
-      
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+
       - name: Commit and push generated files
         run: |
-          git config user.name "github-actions"
-          git config user.email "github-actions@github.com"
-          git add Reinterpretace_13/material/*.html
           git add Reinterpretace_13/material_index.json
-          git add Reinterpretace_13/sitemap_material.xml
-          git commit -m "🗂 Update material index and sitemap" || echo "No changes"
-          git pull --rebase
+          git add Reinterpretace_13/material_index_prev.json
+          git add Reinterpretace_13/material_diff.md
+
+          if git diff --cached --quiet; then
+            echo "No changes to commit"
+            exit 0
+          fi
+
+          git commit -m "🛠️ Update material index, prev index and diff"
           git push
