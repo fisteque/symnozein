@@ -43,13 +43,13 @@
   <!-- jednička přeskočila na nejbližší nulu -->
   <circle cx="194" cy="210" r="22" fill="#294a7a"/>
 
-  <!-- červené tečka na předchozích pozicich jedničky -->
+  <!-- červené tečky na předchozích pozicich jedničky -->
   <circle cx="140" cy="210" r="6" fill="#c43d3d"/>
   <circle cx="70" cy="210" r="6" fill="#c43d3d"/>
   
   <!-- brázda jako kapka -->
   <path d="
-  M 20 210
+  M 4 210
   L 194 180
   A 32 32 0 0 1 194 240
   Z"
