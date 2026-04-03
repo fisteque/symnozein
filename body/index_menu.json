@@ -1,0 +1,54 @@
+{
+  "generated_at": "2026-04-03T15:39:58.813948Z",
+  "source": {
+    "script": "scripts/update_index_menu.py",
+    "workflow": ".github/workflows/update_index_menu.yml"
+  },
+  "menu": [
+    {
+      "name": "body",
+      "index_path": "body/body_index.json",
+      "prev_path": "body/body_index_prev.json",
+      "diff_path": "body/body_diff.md",
+      "index_exists": true,
+      "prev_exists": true,
+      "diff_exists": true
+    },
+    {
+      "name": "13",
+      "index_path": "Reinterpretace_13/13_index.json",
+      "prev_path": "Reinterpretace_13/13_index_prev.json",
+      "diff_path": "Reinterpretace_13/13_diff.md",
+      "index_exists": true,
+      "prev_exists": true,
+      "diff_exists": true
+    },
+    {
+      "name": "material",
+      "index_path": "Reinterpretace_13/material_index.json",
+      "prev_path": "Reinterpretace_13/material_index_prev.json",
+      "diff_path": "Reinterpretace_13/material_diff.md",
+      "index_exists": true,
+      "prev_exists": true,
+      "diff_exists": true
+    },
+    {
+      "name": "spirala",
+      "index_path": "denik/spirala_index.json",
+      "prev_path": "denik/spirala_index_prev.json",
+      "diff_path": "denik/spirala_diff.md",
+      "index_exists": true,
+      "prev_exists": true,
+      "diff_exists": true
+    },
+    {
+      "name": "denik",
+      "index_path": "denik/denik_index.json",
+      "prev_path": "denik/denik_index_prev.json",
+      "diff_path": "denik/denik_diff.md",
+      "index_exists": true,
+      "prev_exists": true,
+      "diff_exists": true
+    }
+  ]
+}
