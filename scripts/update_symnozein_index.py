@@ -61,6 +61,20 @@ def backup_previous_index(index_path: str, index_prev_path: str):
         shutil.copy2(index_path, index_prev_path)
 
 
+def ensure_prev_exists(index_prev_path: str):
+    if not os.path.exists(index_prev_path):
+        empty_prev = {
+            "generated_at": utc_now_iso(),
+            "source": {
+                "script": CONFIG["source_script"],
+                "workflow": CONFIG["source_workflow"],
+            },
+            "entries": [],
+        }
+        with open(index_prev_path, "w", encoding="utf-8") as f:
+            json.dump(empty_prev, f, indent=2, ensure_ascii=False)
+
+
 def load_json(path: str):
     if not os.path.exists(path):
         return None
@@ -238,6 +252,7 @@ def main():
 
     previous_index = load_json(index_path)
     backup_previous_index(index_path, index_prev_path)
+    ensure_prev_exists(index_prev_path)
 
     index_entries = []
     for filename in sorted(os.listdir(input_dir)):
