@@ -1,0 +1,47 @@
+name: Update index menu
+
+on:
+  push:
+    paths:
+      - 'body/**'
+      - 'denik/**'
+      - 'Reinterpretace_13/**'
+      - '.github/workflows/update_index_menu.yml'
+      - 'scripts/update_index_menu.py'
+
+permissions:
+  contents: write
+
+jobs:
+  update-index-menu:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.x'
+
+      - name: Run index menu script
+        run: |
+          python scripts/update_index_menu.py
+
+      - name: Configure Git
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+
+      - name: Commit and push generated file
+        run: |
+          git add body/index_menu.json
+
+          if git diff --cached --quiet; then
+            echo "No changes to commit"
+            exit 0
+          fi
+
+          git commit -m "🧭 Update index menu"
+          git push
