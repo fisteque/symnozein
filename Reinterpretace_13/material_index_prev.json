@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-03T14:38:38.031518Z",
+  "generated_at": "2026-04-03T15:41:53.851434Z",
   "source": {
     "script": "scripts/update_material_index.py",
     "workflow": ".github/workflows/update_material_index.yml"
@@ -206,6 +206,14 @@
         "nove slovo",
         "Symnozein"
       ]
+    },
+    {
+      "title": "Test2",
+      "file": "Test2.md",
+      "path": "Reinterpretace_13/material_md/Test2.md",
+      "date": "",
+      "summary": "",
+      "tags": []
     },
     {
       "title": "Vedomi1",

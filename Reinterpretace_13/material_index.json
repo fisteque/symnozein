@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-03T15:41:53.851434Z",
+  "generated_at": "2026-04-03T15:59:45.995284Z",
   "source": {
     "script": "scripts/update_material_index.py",
     "workflow": ".github/workflows/update_material_index.yml"
@@ -208,9 +208,9 @@
       ]
     },
     {
-      "title": "Test2",
-      "file": "Test2.md",
-      "path": "Reinterpretace_13/material_md/Test2.md",
+      "title": "Test3",
+      "file": "Test3.md",
+      "path": "Reinterpretace_13/material_md/Test3.md",
       "date": "",
       "summary": "",
       "tags": []
