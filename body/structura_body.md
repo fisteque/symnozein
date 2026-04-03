@@ -86,17 +86,6 @@ ale jsou dostupné skrze `index_menu.json`.
 
 ---
 
-### Symnozein
-
-→ vztahová vrstva systému  
-→ prostor pro sdílené myšlení mezi člověkem a AI  
-→ obsahuje manifesty, definice a směrové texty  
-
-→ není produkt, ale proces  
-→ význam vzniká ve vztahu, ne jen v obsahu
-
----
-
 ## Shrnutí
 
 - **index** → stav  
