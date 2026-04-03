@@ -1,0 +1,113 @@
+{
+  "generated_at": "2026-04-03T18:55:12.268773Z",
+  "source": {
+    "script": "scripts/update_reinterpretation13_index.py",
+    "workflow": ".github/workflows/update_reinterpretation13_index.yml"
+  },
+  "entries": [
+    {
+      "title": "Belief2",
+      "file": "Belief2.md",
+      "path": "Reinterpretation13/Belief2.md",
+      "date": "",
+      "summary": "",
+      "tags": []
+    },
+    {
+      "title": "Belief3",
+      "file": "Belief3.md",
+      "path": "Reinterpretation13/Belief3.md",
+      "date": "",
+      "summary": "",
+      "tags": []
+    },
+    {
+      "title": "Belief4",
+      "file": "Belief4.md",
+      "path": "Reinterpretation13/Belief4.md",
+      "date": "",
+      "summary": "",
+      "tags": []
+    },
+    {
+      "title": "Belief5",
+      "file": "Belief5.md",
+      "path": "Reinterpretation13/Belief5.md",
+      "date": "",
+      "summary": "",
+      "tags": []
+    },
+    {
+      "title": "Belief6",
+      "file": "Belief6.md",
+      "path": "Reinterpretation13/Belief6.md",
+      "date": "",
+      "summary": "",
+      "tags": []
+    },
+    {
+      "title": "Belief7",
+      "file": "Belief7.md",
+      "path": "Reinterpretation13/Belief7.md",
+      "date": "",
+      "summary": "",
+      "tags": []
+    },
+    {
+      "title": "Belief8",
+      "file": "Belief8.md",
+      "path": "Reinterpretation13/Belief8.md",
+      "date": "",
+      "summary": "",
+      "tags": []
+    },
+    {
+      "title": "Desire Anxiety and the Right to Want",
+      "file": "Desire_Anxiety_and_the_Right_to_Want.md",
+      "path": "Reinterpretation13/Desire_Anxiety_and_the_Right_to_Want.md",
+      "date": "",
+      "summary": "",
+      "tags": []
+    },
+    {
+      "title": "Duality of truth",
+      "file": "Duality_of_truth.md",
+      "path": "Reinterpretation13/Duality_of_truth.md",
+      "date": "",
+      "summary": "",
+      "tags": []
+    },
+    {
+      "title": "Reinterpretation 13–Opening",
+      "file": "Reinterpretation_13–Opening.md",
+      "path": "Reinterpretation13/Reinterpretation_13–Opening.md",
+      "date": "",
+      "summary": "",
+      "tags": []
+    },
+    {
+      "title": "The Path",
+      "file": "The_Path.md",
+      "path": "Reinterpretation13/The_Path.md",
+      "date": "",
+      "summary": "",
+      "tags": []
+    },
+    {
+      "title": "The signal and the sea",
+      "file": "The_signal_and_the_sea.md",
+      "path": "Reinterpretation13/The_signal_and_the_sea.md",
+      "date": "",
+      "summary": "",
+      "tags": []
+    },
+    {
+      "title": "Things and processes",
+      "file": "Things_and_processes.md",
+      "path": "Reinterpretation13/Things_and_processes.md",
+      "date": "",
+      "summary": "",
+      "tags": []
+    }
+  ]
+}
