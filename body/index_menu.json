@@ -2,45 +2,58 @@
   "source": "manual",
   "description": "Rozcestník indexů v repu pro orientaci a návštěvu body.",
   "structure_path": "body/struktura_body.md",
+  "kind_description": {
+    "state": "stavová vrstva systému (co existuje právě teď)",
+    "content": "obsahová vrstva (mapitoly, materiály, texty)",
+    "journal": "časová osa záznamů (deník)",
+    "spiral": "introspektivní vrstva (spirála vědomí)"
+  },
   "menu": [
     {
       "name": "body",
+      "kind": "state",
       "index_path": "body/body_index.json",
       "prev_path": "body/body_index_prev.json",
       "diff_path": "body/body_diff.md"
     },
     {
       "name": "13",
+      "kind": "content",
       "index_path": "Reinterpretace_13/13_index.json",
       "prev_path": "Reinterpretace_13/13_index_prev.json",
       "diff_path": "Reinterpretace_13/13_diff.md"
     },
     {
       "name": "material",
+      "kind": "content",
       "index_path": "Reinterpretace_13/material_index.json",
       "prev_path": "Reinterpretace_13/material_index_prev.json",
       "diff_path": "Reinterpretace_13/material_diff.md"
     },
     {
       "name": "spirala",
+      "kind": "spiral",
       "index_path": "denik/spirala_index.json",
       "prev_path": "denik/spirala_index_prev.json",
       "diff_path": "denik/spirala_diff.md"
     },
     {
       "name": "denik",
+      "kind": "journal",
       "index_path": "denik/denik_index.json",
       "prev_path": "denik/denik_index_prev.json",
       "diff_path": "denik/denik_diff.md"
     },
     {
       "name": "reinterpretation13",
+      "kind": "content",
       "index_path": "Reinterpretation13/index.json",
       "prev_path": "Reinterpretation13/index_prev.json",
       "diff_path": "Reinterpretation13/diff.md"
     },
     {
       "name": "symnozein",
+      "kind": "content",
       "index_path": "Symnozein/index.json",
       "prev_path": "Symnozein/index_prev.json",
       "diff_path": "Symnozein/diff.md"
