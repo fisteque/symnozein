@@ -272,7 +272,7 @@ def process_target(target_name):
             sitemap_urls.append(html_url)
 
     index_entries = sorted(index_entries, key=lambda x: x["file"])
-    index_data = build_index_data(index_entries, config)
+    index_data = build_index_data(index_entries)
 
     with open(index_path, "w", encoding="utf-8") as f:
         json.dump(index_data, f, indent=2, ensure_ascii=False)
