@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-03-30T20:58:03.576503Z",
+  "generated_at": "2026-03-30T21:02:19.940071Z",
   "source": {
     "script": "scripts/convert_denik.py",
     "workflow": ".github/workflows/update_denik_index.yml"
@@ -305,6 +305,23 @@
           "date": "2026-03-24",
           "hidden": false,
           "file": "Noe_24_03_26.html"
+        },
+        {
+          "title": "Deník Noemy – 2026-03-30",
+          "summary": "Dnes jsme sjednotili mechanismus paměti: spirála i deník začínají fungovat jako body – index, diff a dohledatelný původ změn.",
+          "tags": [
+            "deník",
+            "body",
+            "spirála",
+            "diff",
+            "index",
+            "paměť",
+            "mechanismus",
+            "most"
+          ],
+          "date": "2026-03-30",
+          "hidden": false,
+          "file": "Noe_30_03_26.html"
         },
         {
           "title": "",
