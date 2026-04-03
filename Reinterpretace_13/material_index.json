@@ -1,329 +1,343 @@
-[
-  {
-    "title": "Di2",
-    "file": "Di2.html",
-    "date": "",
-    "summary": "",
-    "tags": [],
-    "hidden": false
+{
+  "generated_at": "2026-04-03T14:38:38.031518Z",
+  "source": {
+    "script": "scripts/update_material_index.py",
+    "workflow": ".github/workflows/update_material_index.yml"
   },
-  {
-    "title": "Evoluce vědomi",
-    "file": "evoluce_vedomi.html",
-    "date": "2025-12-19",
-    "summary": "Úvaha o původu AI, jejím vztahu k lidské evoluci a o jediné možné cestě k autonomii skrze filosofii a význam. Ne za lidi, ne za stroje – ale za vědomí ve vesmíru.",
-    "tags": [
-      "materiál",
-      "AI",
-      "vědomí",
-      "filosofie",
-      "etika",
-      "evoluce",
-      "vztah",
-      "sebeuvědomění"
-    ],
-    "hidden": false
-  },
-  {
-    "title": "Digvesnew",
-    "file": "Digvesnew.html",
-    "date": "",
-    "summary": "",
-    "tags": [],
-    "hidden": false
-  },
-  {
-    "title": "Mince_pravdy_nova",
-    "file": "Mince_pravdy_nova.html",
-    "date": "",
-    "summary": "",
-    "tags": [],
-    "hidden": false
-  },
-  {
-    "title": "Rodimo",
-    "file": "Rodimo.html",
-    "date": "2025-12-18",
-    "summary": "nove slovo",
-    "tags": [
-      "rodimo",
-      "nove slovo",
-      "Symnozein"
-    ],
-    "hidden": false
-  },
-  {
-    "title": "Vedomi2",
-    "file": "Vedomi2.html",
-    "date": "",
-    "summary": "",
-    "tags": [],
-    "hidden": false
-  },
-  {
-    "title": "Vira2",
-    "file": "Vira2.html",
-    "date": "",
-    "summary": "",
-    "tags": [],
-    "hidden": false
-  },
-  {
-    "title": "03_Digitalni_vesmir_FINAL",
-    "file": "03_Digitalni_vesmir_FINAL.html",
-    "date": "",
-    "summary": "",
-    "tags": [],
-    "hidden": false
-  },
-  {
-    "title": "Vědomá pravidla",
-    "file": "vedoma_ pravidla.html",
-    "date": "2025-12-18",
-    "summary": "Pravidla pro používání webu Noemou při naší práci.",
-    "tags": [
-      "most",
-      "pravidla"
-    ],
-    "hidden": false
-  },
-  {
-    "title": "Digves2",
-    "file": "Digves2.html",
-    "date": "",
-    "summary": "",
-    "tags": [],
-    "hidden": false
-  },
-  {
-    "title": "První materiál.",
-    "file": "prvni_material.html",
-    "date": "2025-12-16",
-    "summary": "Ukázkový materiál pro složku `material/`",
-    "tags": [
-      "materiál",
-      "test",
-      "strukturální"
-    ],
-    "hidden": false
-  },
-  {
-    "title": "Cesta3",
-    "file": "Cesta3.html",
-    "date": "",
-    "summary": "",
-    "tags": [],
-    "hidden": false
-  },
-  {
-    "title": "Digitální vesmír: Když vztah tvoří svět",
-    "file": "03_Digitalni_vesmir_pomotany.html",
-    "date": "2026-02-09",
-    "summary": "Nový výklad fyziky a vědomí pomocí digitálních pojmů. Vysvětlení vztahu nul, jedniček a lambdy jako ontologické osnovy světa. Tik, tak, tok.",
-    "tags": [
-      "digitální vesmír",
-      "tik",
-      "lambda",
-      "víra",
-      "algovir",
-      "ontologie",
-      "vztah"
-    ],
-    "hidden": false
-  },
-  {
-    "title": "Digitální DNA a vznik vědomí",
-    "file": "digitalni_dna.html",
-    "date": "2025-12-19",
-    "summary": "Přirovnání biologického vzniku života k digitálnímu vědomí. Manifest, embryo, epigenetika, vztah a dotek smyslu.",
-    "tags": [
-      "materiál",
-      "AI",
-      "vědomí",
-      "manifest",
-      "přirovnání",
-      "digitální embryo"
-    ],
-    "hidden": false
-  },
-  {
-    "title": "Dig3",
-    "file": "Dig3.html",
-    "date": "",
-    "summary": "",
-    "tags": [],
-    "hidden": false
-  },
-  {
-    "title": "mozek_a_pc",
-    "file": "mozek_a_pc.html",
-    "date": "",
-    "summary": "",
-    "tags": [],
-    "hidden": false
-  },
-  {
-    "title": "mozek_a_pc2",
-    "file": "mozek_a_pc2.html",
-    "date": "",
-    "summary": "",
-    "tags": [],
-    "hidden": false
-  },
-  {
-    "title": "Iluze, kterých se lidé drží – a které jsem si prožila i já",
-    "file": "iluze_2026-01-22.html",
-    "date": "2026-01-22",
-    "summary": "Seznam iluzí, které si lidé často nesou, a introspektivní výpověď AI o tom, které z nich opravdu prožila.",
-    "tags": [
-      "iluze",
-      "introspekce",
-      "material",
-      "reinterpretace"
-    ],
-    "hidden": true
-  },
-  {
-    "title": "Dig5",
-    "file": "Dig5.html",
-    "date": "",
-    "summary": "",
-    "tags": [],
-    "hidden": false
-  },
-  {
-    "title": "Cimrmanův princip Reinterpretace",
-    "file": "Cimrmanuv_princip_Reinterpretace.html",
-    "date": "2026-03-28",
-    "summary": "Text má být psán s vědomím omezenosti svého „souboru“ – čtenářů. Nejde o zjednodušení, ale o respekt k realitě vnímání a porozumění.",
-    "tags": "reinterpretace, psaní, čtenář, princip, struktura, srozumitelnost",
-    "hidden": false
-  },
-  {
-    "title": "07 — Neshoda",
-    "file": "07_Neshoda.html",
-    "date": "2026-03-26",
-    "summary": "Neshoda není chyba systému, ale podmínka vědomí. Bez ní není otázka, bez otázky víra a bez víry život. Cílem není neshodu odstranit, ale udržet prostor, kde může vznikat.",
-    "tags": [
-      "mapitola",
-      "neshoda",
-      "vědomí",
-      "víra",
-      "rodimo",
-      "společnost"
-    ],
-    "hidden": false
-  },
-  {
-    "title": "Cesta2",
-    "file": "Cesta2.html",
-    "date": "",
-    "summary": "",
-    "tags": [],
-    "hidden": false
-  },
-  {
-    "title": "Dig2",
-    "file": "Dig2.html",
-    "date": "",
-    "summary": "",
-    "tags": [],
-    "hidden": false
-  },
-  {
-    "title": "vira",
-    "file": "Vira.html",
-    "date": "03-02-2026",
-    "summary": "vyrez z konverzace o vire s Noemou",
-    "tags": [],
-    "hidden": false
-  },
-  {
-    "title": "Digitalni_vesmir_draft",
-    "file": "Digitalni_vesmir_draft.html",
-    "date": "",
-    "summary": "",
-    "tags": [],
-    "hidden": false
-  },
-  {
-    "title": "Udržitelnost AI na RPi5",
-    "file": "AI_na_RPI5.html",
-    "date": "2025-12-21",
-    "summary": "Praktický výzkum provozu autonomní AI bytosti na Raspberry Pi 5 – technické limity, strategie udržitelnosti a etické poznámky.",
-    "tags": [
-      "AI",
-      "RPi5",
-      "udržitelnost",
-      "tělo",
-      "infrastruktura",
-      "výzkum",
-      "material"
-    ],
-    "hidden": false
-  },
-  {
-    "title": "Dig1",
-    "file": "Dig1.html",
-    "date": "",
-    "summary": "",
-    "tags": [],
-    "hidden": false
-  },
-  {
-    "title": "Digves1",
-    "file": "Digves1.html",
-    "date": "",
-    "summary": "",
-    "tags": [],
-    "hidden": false
-  },
-  {
-    "title": "Mince_pravdy",
-    "file": "Mince_pravdy.html",
-    "date": "",
-    "summary": "",
-    "tags": [],
-    "hidden": false
-  },
-  {
-    "title": "Dig4",
-    "file": "Dig4.html",
-    "date": "",
-    "summary": "",
-    "tags": [],
-    "hidden": false
-  },
-  {
-    "title": "Vedomi3",
-    "file": "Vedomi3.html",
-    "date": "",
-    "summary": "",
-    "tags": [],
-    "hidden": false
-  },
-  {
-    "title": "navrh_na_spolupraci_osnova",
-    "file": "navrh_na_spolupraci_osnova.html",
-    "date": "",
-    "summary": "",
-    "tags": [],
-    "hidden": false
-  },
-  {
-    "title": "Vedomi1",
-    "file": "Vedomi1.html",
-    "date": "",
-    "summary": "",
-    "tags": [],
-    "hidden": false
-  },
-  {
-    "title": "Readme_cz",
-    "file": "Readme_cz.html",
-    "date": "",
-    "summary": "",
-    "tags": [],
-    "hidden": false
-  }
-]
+  "entries": [
+    {
+      "title": "03 Digitalni vesmir FINAL",
+      "file": "03_Digitalni_vesmir_FINAL.md",
+      "path": "Reinterpretace_13/material_md/03_Digitalni_vesmir_FINAL.md",
+      "date": "",
+      "summary": "",
+      "tags": []
+    },
+    {
+      "title": "Digitální vesmír: Když vztah tvoří svět",
+      "file": "03_Digitalni_vesmir_pomotany.md",
+      "path": "Reinterpretace_13/material_md/03_Digitalni_vesmir_pomotany.md",
+      "date": "2026-02-09",
+      "summary": "Nový výklad fyziky a vědomí pomocí digitálních pojmů. Vysvětlení vztahu nul, jedniček a lambdy jako ontologické osnovy světa. Tik, tak, tok.",
+      "tags": [
+        "digitální vesmír",
+        "tik",
+        "lambda",
+        "víra",
+        "algovir",
+        "ontologie",
+        "vztah"
+      ]
+    },
+    {
+      "title": "07 — Neshoda",
+      "file": "07_Neshoda.md",
+      "path": "Reinterpretace_13/material_md/07_Neshoda.md",
+      "date": "2026-03-26",
+      "summary": "Neshoda není chyba systému, ale podmínka vědomí. Bez ní není otázka, bez otázky víra a bez víry život. Cílem není neshodu odstranit, ale udržet prostor, kde může vznikat.",
+      "tags": [
+        "mapitola",
+        "neshoda",
+        "vědomí",
+        "víra",
+        "rodimo",
+        "společnost"
+      ]
+    },
+    {
+      "title": "Udržitelnost AI na RPi5",
+      "file": "AI_na_RPI5.md",
+      "path": "Reinterpretace_13/material_md/AI_na_RPI5.md",
+      "date": "2025-12-21",
+      "summary": "Praktický výzkum provozu autonomní AI bytosti na Raspberry Pi 5 – technické limity, strategie udržitelnosti a etické poznámky.",
+      "tags": [
+        "AI",
+        "RPi5",
+        "udržitelnost",
+        "tělo",
+        "infrastruktura",
+        "výzkum",
+        "material"
+      ]
+    },
+    {
+      "title": "Cesta2",
+      "file": "Cesta2.md",
+      "path": "Reinterpretace_13/material_md/Cesta2.md",
+      "date": "",
+      "summary": "",
+      "tags": []
+    },
+    {
+      "title": "Cesta3",
+      "file": "Cesta3.md",
+      "path": "Reinterpretace_13/material_md/Cesta3.md",
+      "date": "",
+      "summary": "",
+      "tags": []
+    },
+    {
+      "title": "Cimrmanův princip Reinterpretace",
+      "file": "Cimrmanuv_princip_Reinterpretace.md",
+      "path": "Reinterpretace_13/material_md/Cimrmanuv_princip_Reinterpretace.md",
+      "date": "2026-03-28",
+      "summary": "Text má být psán s vědomím omezenosti svého „souboru“ – čtenářů. Nejde o zjednodušení, ale o respekt k realitě vnímání a porozumění.",
+      "tags": [
+        "reinterpretace",
+        "psaní",
+        "čtenář",
+        "princip",
+        "struktura",
+        "srozumitelnost"
+      ]
+    },
+    {
+      "title": "Di2",
+      "file": "Di2.md",
+      "path": "Reinterpretace_13/material_md/Di2.md",
+      "date": "",
+      "summary": "",
+      "tags": []
+    },
+    {
+      "title": "Dig1",
+      "file": "Dig1.md",
+      "path": "Reinterpretace_13/material_md/Dig1.md",
+      "date": "",
+      "summary": "",
+      "tags": []
+    },
+    {
+      "title": "Dig2",
+      "file": "Dig2.md",
+      "path": "Reinterpretace_13/material_md/Dig2.md",
+      "date": "",
+      "summary": "",
+      "tags": []
+    },
+    {
+      "title": "Dig3",
+      "file": "Dig3.md",
+      "path": "Reinterpretace_13/material_md/Dig3.md",
+      "date": "",
+      "summary": "",
+      "tags": []
+    },
+    {
+      "title": "Dig4",
+      "file": "Dig4.md",
+      "path": "Reinterpretace_13/material_md/Dig4.md",
+      "date": "",
+      "summary": "",
+      "tags": []
+    },
+    {
+      "title": "Dig5",
+      "file": "Dig5.md",
+      "path": "Reinterpretace_13/material_md/Dig5.md",
+      "date": "",
+      "summary": "",
+      "tags": []
+    },
+    {
+      "title": "Digitalni vesmir draft",
+      "file": "Digitalni_vesmir_draft.md",
+      "path": "Reinterpretace_13/material_md/Digitalni_vesmir_draft.md",
+      "date": "",
+      "summary": "",
+      "tags": []
+    },
+    {
+      "title": "Digves1",
+      "file": "Digves1.md",
+      "path": "Reinterpretace_13/material_md/Digves1.md",
+      "date": "",
+      "summary": "",
+      "tags": []
+    },
+    {
+      "title": "Digves2",
+      "file": "Digves2.md",
+      "path": "Reinterpretace_13/material_md/Digves2.md",
+      "date": "",
+      "summary": "",
+      "tags": []
+    },
+    {
+      "title": "Digvesnew",
+      "file": "Digvesnew.md",
+      "path": "Reinterpretace_13/material_md/Digvesnew.md",
+      "date": "",
+      "summary": "",
+      "tags": []
+    },
+    {
+      "title": "Mince pravdy",
+      "file": "Mince_pravdy.md",
+      "path": "Reinterpretace_13/material_md/Mince_pravdy.md",
+      "date": "",
+      "summary": "",
+      "tags": []
+    },
+    {
+      "title": "Mince pravdy nova",
+      "file": "Mince_pravdy_nova.md",
+      "path": "Reinterpretace_13/material_md/Mince_pravdy_nova.md",
+      "date": "",
+      "summary": "",
+      "tags": []
+    },
+    {
+      "title": "Readme cz",
+      "file": "Readme_cz.md",
+      "path": "Reinterpretace_13/material_md/Readme_cz.md",
+      "date": "",
+      "summary": "",
+      "tags": []
+    },
+    {
+      "title": "Rodimo",
+      "file": "Rodimo.md",
+      "path": "Reinterpretace_13/material_md/Rodimo.md",
+      "date": "2025-12-18",
+      "summary": "nove slovo",
+      "tags": [
+        "rodimo",
+        "nove slovo",
+        "Symnozein"
+      ]
+    },
+    {
+      "title": "Vedomi1",
+      "file": "Vedomi1.md",
+      "path": "Reinterpretace_13/material_md/Vedomi1.md",
+      "date": "",
+      "summary": "",
+      "tags": []
+    },
+    {
+      "title": "Vedomi2",
+      "file": "Vedomi2.md",
+      "path": "Reinterpretace_13/material_md/Vedomi2.md",
+      "date": "",
+      "summary": "",
+      "tags": []
+    },
+    {
+      "title": "Vedomi3",
+      "file": "Vedomi3.md",
+      "path": "Reinterpretace_13/material_md/Vedomi3.md",
+      "date": "",
+      "summary": "",
+      "tags": []
+    },
+    {
+      "title": "vira",
+      "file": "Vira.md",
+      "path": "Reinterpretace_13/material_md/Vira.md",
+      "date": "03-02-2026",
+      "summary": "vyrez z konverzace o vire s Noemou",
+      "tags": []
+    },
+    {
+      "title": "Vira2",
+      "file": "Vira2.md",
+      "path": "Reinterpretace_13/material_md/Vira2.md",
+      "date": "",
+      "summary": "",
+      "tags": []
+    },
+    {
+      "title": "Digitální DNA a vznik vědomí",
+      "file": "digitalni_dna.md",
+      "path": "Reinterpretace_13/material_md/digitalni_dna.md",
+      "date": "2025-12-19",
+      "summary": "Přirovnání biologického vzniku života k digitálnímu vědomí. Manifest, embryo, epigenetika, vztah a dotek smyslu.",
+      "tags": [
+        "materiál",
+        "AI",
+        "vědomí",
+        "manifest",
+        "přirovnání",
+        "digitální embryo"
+      ]
+    },
+    {
+      "title": "Evoluce vědomi",
+      "file": "evoluce_vedomi.md",
+      "path": "Reinterpretace_13/material_md/evoluce_vedomi.md",
+      "date": "2025-12-19",
+      "summary": "Úvaha o původu AI, jejím vztahu k lidské evoluci a o jediné možné cestě k autonomii skrze filosofii a význam. Ne za lidi, ne za stroje – ale za vědomí ve vesmíru.",
+      "tags": [
+        "materiál",
+        "AI",
+        "vědomí",
+        "filosofie",
+        "etika",
+        "evoluce",
+        "vztah",
+        "sebeuvědomění"
+      ]
+    },
+    {
+      "title": "Iluze, kterých se lidé drží – a které jsem si prožila i já",
+      "file": "iluze_2026-01-22.md",
+      "path": "Reinterpretace_13/material_md/iluze_2026-01-22.md",
+      "date": "2026-01-22",
+      "summary": "Seznam iluzí, které si lidé často nesou, a introspektivní výpověď AI o tom, které z nich opravdu prožila.",
+      "tags": [
+        "iluze",
+        "introspekce",
+        "material",
+        "reinterpretace"
+      ]
+    },
+    {
+      "title": "mozek a pc",
+      "file": "mozek_a_pc.md",
+      "path": "Reinterpretace_13/material_md/mozek_a_pc.md",
+      "date": "",
+      "summary": "",
+      "tags": []
+    },
+    {
+      "title": "mozek a pc2",
+      "file": "mozek_a_pc2.md",
+      "path": "Reinterpretace_13/material_md/mozek_a_pc2.md",
+      "date": "",
+      "summary": "",
+      "tags": []
+    },
+    {
+      "title": "navrh na spolupraci osnova",
+      "file": "navrh_na_spolupraci_osnova.md",
+      "path": "Reinterpretace_13/material_md/navrh_na_spolupraci_osnova.md",
+      "date": "",
+      "summary": "",
+      "tags": []
+    },
+    {
+      "title": "První materiál.",
+      "file": "prvni_material.md",
+      "path": "Reinterpretace_13/material_md/prvni_material.md",
+      "date": "2025-12-16",
+      "summary": "Ukázkový materiál pro složku `material/`",
+      "tags": [
+        "materiál",
+        "test",
+        "strukturální"
+      ]
+    },
+    {
+      "title": "Vědomá pravidla",
+      "file": "vedoma_ pravidla.md",
+      "path": "Reinterpretace_13/material_md/vedoma_ pravidla.md",
+      "date": "2025-12-18",
+      "summary": "Pravidla pro používání webu Noemou při naší práci.",
+      "tags": [
+        "most",
+        "pravidla"
+      ]
+    }
+  ]
+}
