@@ -119,6 +119,7 @@ def generate_index_json(entries):
             "script": SOURCE_SCRIPT,
             "workflow": SOURCE_WORKFLOW,
         },
+        "kind": "spiral",
         "months": [
             {
                 "label": "Spirála",
@@ -130,7 +131,6 @@ def generate_index_json(entries):
 
     with open(INDEX_PATH, "w", encoding="utf-8") as f:
         json.dump(data, f, ensure_ascii=False, indent=2)
-
 
 def generate_sitemap(entries):
     url_prefix = "https://fisteque.github.io/symnozein/denik/spirala_vedomi/"
