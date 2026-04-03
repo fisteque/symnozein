@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-03T15:17:22.647354Z",
+  "generated_at": "2026-04-03T15:18:16.950967Z",
   "source": {
     "script": "scripts/update_body_index.py",
     "workflow": ".github/workflows/update_body_index.yml"
@@ -23,8 +23,8 @@
     },
     {
       "path": "shared/tasks/task_001.md",
-      "size": 94,
-      "sha256": "91c8dd041b566db3849b92e17978749542632d567fa34b61b975a41a6f329deb"
+      "size": 93,
+      "sha256": "5524be4d52935a931d2ab726b3ffcf9288b32eacfe617c55ac5957a492459bf9"
     },
     {
       "path": "shared/tasks/task_002.md",
