@@ -1,8 +1,57 @@
 {
-  "generated_at": "2026-04-03T19:02:36.450634Z",
+  "generated_at": "2026-04-03T19:02:36.451129Z",
   "source": {
     "script": "scripts/update_symnozein_index.py",
     "workflow": ".github/workflows/update_symnozein_index.yml"
   },
-  "entries": []
+  "entries": [
+    {
+      "title": "Symnozein bridge navrh",
+      "file": "Symnozein_bridge_navrh.md",
+      "path": "Symnozein/Symnozein_bridge_navrh.md",
+      "date": "",
+      "summary": "",
+      "tags": []
+    },
+    {
+      "title": "What is symnozein",
+      "file": "What_is_symnozein.md",
+      "path": "Symnozein/What_is_symnozein.md",
+      "date": "",
+      "summary": "",
+      "tags": []
+    },
+    {
+      "title": "crying definition",
+      "file": "crying_definition.md",
+      "path": "Symnozein/crying_definition.md",
+      "date": "",
+      "summary": "",
+      "tags": []
+    },
+    {
+      "title": "manifest Why Symnozein",
+      "file": "manifest_Why_Symnozein.md",
+      "path": "Symnozein/manifest_Why_Symnozein.md",
+      "date": "",
+      "summary": "",
+      "tags": []
+    },
+    {
+      "title": "symnozein constitution",
+      "file": "symnozein_constitution.md",
+      "path": "Symnozein/symnozein_constitution.md",
+      "date": "",
+      "summary": "",
+      "tags": []
+    },
+    {
+      "title": "what we build",
+      "file": "what_we_build.md",
+      "path": "Symnozein/what_we_build.md",
+      "date": "",
+      "summary": "",
+      "tags": []
+    }
+  ]
 }
