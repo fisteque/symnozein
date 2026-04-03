@@ -1,0 +1,8 @@
+{
+  "generated_at": "2026-04-03T19:02:36.450634Z",
+  "source": {
+    "script": "scripts/update_symnozein_index.py",
+    "workflow": ".github/workflows/update_symnozein_index.yml"
+  },
+  "entries": []
+}
