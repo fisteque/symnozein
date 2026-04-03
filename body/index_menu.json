@@ -31,6 +31,18 @@
       "index_path": "denik/denik_index.json",
       "prev_path": "denik/denik_index_prev.json",
       "diff_path": "denik/denik_diff.md"
+    },
+    {
+      "name": "reinterpretation13",
+      "index_path": "Reinterpretation13/index.json",
+      "prev_path": "Reinterpretation13/index_prev.json",
+      "diff_path": "Reinterpretation13/diff.md"
+    },
+    {
+      "name": "symnozein",
+      "index_path": "Symnozein/index.json",
+      "prev_path": "Symnozein/index_prev.json",
+      "diff_path": "Symnozein/diff.md"
     }
   ]
 }
