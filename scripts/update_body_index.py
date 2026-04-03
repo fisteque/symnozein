@@ -1,3 +1,4 @@
+import hashlib
 import json
 import os
 import shutil
@@ -20,10 +21,12 @@ def utc_now_iso() -> str:
     return datetime.now(timezone.utc).isoformat().replace("+00:00", "Z")
 
 
-def file_mtime_iso(path: str) -> str:
-    return datetime.fromtimestamp(
-        os.stat(path).st_mtime, tz=timezone.utc
-    ).isoformat().replace("+00:00", "Z")
+def sha256_file(path: str) -> str:
+    hasher = hashlib.sha256()
+    with open(path, "rb") as f:
+        for chunk in iter(lambda: f.read(65536), b""):
+            hasher.update(chunk)
+    return hasher.hexdigest()
 
 
 def scan_directory(base_path: str) -> list[dict]:
@@ -46,7 +49,7 @@ def scan_directory(base_path: str) -> list[dict]:
                 {
                     "path": rel_path,
                     "size": os.stat(full_path).st_size,
-                    "modified": file_mtime_iso(full_path),
+                    "sha256": sha256_file(full_path),
                 }
             )
 
@@ -105,7 +108,7 @@ def compute_diff(prev_index: dict | None, current_index: dict) -> dict:
         curr_item = curr_map[path]
         if (
             prev_item.get("size") != curr_item.get("size")
-            or prev_item.get("modified") != curr_item.get("modified")
+            or prev_item.get("sha256") != curr_item.get("sha256")
         ):
             changed.append(path)
 
