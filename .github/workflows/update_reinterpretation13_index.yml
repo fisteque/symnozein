@@ -36,11 +36,16 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
 
+      - name: Pull latest changes (avoid push conflicts)
+        run: |
+          git pull --rebase origin main || true
+
       - name: Commit and push generated files
         run: |
-          git add Reinterpretation13/index.json
-          git add Reinterpretation13/index_prev.json
-          git add Reinterpretation13/diff.md
+          # přidá jen existující soubory
+          [ -f Reinterpretation13/index.json ] && git add Reinterpretation13/index.json
+          [ -f Reinterpretation13/index_prev.json ] && git add Reinterpretation13/index_prev.json
+          [ -f Reinterpretation13/diff.md ] && git add Reinterpretation13/diff.md
 
           if git diff --cached --quiet; then
             echo "No changes to commit"
