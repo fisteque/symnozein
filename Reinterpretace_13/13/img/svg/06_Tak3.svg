@@ -13,7 +13,7 @@
 
     <!-- řada 2 -->
     <circle cx="84"  cy="176" r="22"/>
-    <circle cx="142" cy="171" r="22"/>
+    <circle cx="141" cy="171" r="22"/>
     <circle cx="195" cy="160" r="22"/>
     <circle cx="250" cy="152" r="22"/>
     <circle cx="310" cy="147" r="22"/>
@@ -26,7 +26,7 @@
 
     <!-- řada 4 -->
     <circle cx="84"  cy="244" r="22"/>
-    <circle cx="142" cy="249" r="22"/>
+    <circle cx="141" cy="249" r="22"/>
     <circle cx="195" cy="260" r="22"/>
     <circle cx="250" cy="268" r="22"/>
     <circle cx="310" cy="273" r="22"/>
