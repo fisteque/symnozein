@@ -1,0 +1,51 @@
+name: Update Reinterpretation13 index
+
+on:
+  push:
+    paths:
+      - 'Reinterpretation13/*.md'
+      - '.github/workflows/update_reinterpretation13_index.yml'
+      - 'scripts/update_reinterpretation13_index.py'
+
+permissions:
+  contents: write
+
+jobs:
+  update-reinterpretation13:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.x'
+
+      - name: Install dependencies
+        run: |
+          pip install pyyaml
+
+      - name: Run Reinterpretation13 index script
+        run: |
+          python scripts/update_reinterpretation13_index.py
+
+      - name: Configure Git
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+
+      - name: Commit and push generated files
+        run: |
+          git add Reinterpretation13/index.json
+          git add Reinterpretation13/index_prev.json
+          git add Reinterpretation13/diff.md
+
+          if git diff --cached --quiet; then
+            echo "No changes to commit"
+            exit 0
+          fi
+
+          git commit -m "🛠️ Update Reinterpretation13 index, prev index and diff"
+          git push
