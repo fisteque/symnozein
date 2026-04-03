@@ -217,7 +217,7 @@ def build_entry(filename: str):
     metadata, _content = load_metadata(filepath)
 
     title = metadata.get("title") or title_from_filename(filename)
-    summary = metadata.get("summary", "")
+    summary = metadata.get("summary", "") or ""
     tags = ensure_list(metadata.get("tags"))
     date_value = normalize_date(metadata.get("date"))
 
@@ -227,7 +227,7 @@ def build_entry(filename: str):
         "path": filepath.replace("\\", "/"),
         "date": date_value,
         "summary": summary,
-        "tags": tags,
+        "tags": tags
     }
 
 
