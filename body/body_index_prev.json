@@ -1,9 +1,10 @@
 {
-  "generated_at": "2026-04-03T20:26:53.862697Z",
+  "generated_at": "2026-04-03T20:41:21.664032Z",
   "source": {
     "script": "scripts/update_body_index.py",
     "workflow": ".github/workflows/update_body_index.yml"
   },
+  "kind": "state",
   "count": 17,
   "files": [
     {
