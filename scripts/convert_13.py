@@ -75,13 +75,14 @@ def load_json(path):
         return json.load(f)
 
 
-def build_index_data(index_entries, config):
+def build_index_data(index_entries):
     return {
         "generated_at": utc_now_iso(),
         "source": {
-            "script": config["source_script"],
-            "workflow": config["source_workflow"],
+            "script": CONFIG["source_script"],
+            "workflow": CONFIG["source_workflow"],
         },
+        "kind": "content",
         "entries": index_entries,
     }
 
