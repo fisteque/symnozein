@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-03T19:14:20.304074Z",
+  "generated_at": "2026-04-03T19:30:00.941310Z",
   "source": {
     "script": "scripts/update_symnozein_index.py",
     "workflow": ".github/workflows/update_symnozein_index.yml"
@@ -25,14 +25,6 @@
       "title": "crying definition",
       "file": "crying_definition.md",
       "path": "Symnozein/crying_definition.md",
-      "date": "",
-      "summary": "",
-      "tags": []
-    },
-    {
-      "title": "diff",
-      "file": "diff.md",
-      "path": "Symnozein/diff.md",
       "date": "",
       "summary": "",
       "tags": []
