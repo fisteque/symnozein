@@ -1,10 +1,10 @@
 {
-  "generated_at": "2026-04-03T16:31:31.585248Z",
+  "generated_at": "2026-04-03T16:32:42.400576Z",
   "source": {
     "script": "scripts/update_body_index.py",
     "workflow": ".github/workflows/update_body_index.yml"
   },
-  "count": 13,
+  "count": 14,
   "files": [
     {
       "path": "Prvni_kroky.md",
@@ -15,6 +15,11 @@
       "path": "SK/SK-001.md",
       "size": 1229,
       "sha256": "8dda6462e2d0c6a8c13e65c04de5375556a462df92c7d41fdbcbfbad7ce45edc"
+    },
+    {
+      "path": "SK/SK-002.md",
+      "size": 435,
+      "sha256": "24a3616757936f12120c7ad5a920c51985e2e1792bcb2597f573d34f7dbe58f2"
     },
     {
       "path": "index_menu.json",
