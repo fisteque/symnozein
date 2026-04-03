@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-03T15:59:00.542350Z",
+  "generated_at": "2026-04-03T16:23:44.102242Z",
   "source": {
     "script": "scripts/update_body_index.py",
     "workflow": ".github/workflows/update_body_index.yml"
@@ -12,14 +12,14 @@
       "sha256": "a64f2a0faa0bd9816711902d8de0d84e1723c45163fe5b33c756e38597d5356a"
     },
     {
-      "path": "Tdst.md",
-      "size": 5,
-      "sha256": "f2ca1bb6c7e907d06dafe4687e579fce76b37e4e93b7605022da52e6ccc26fd2"
-    },
-    {
       "path": "index_menu.json",
       "size": 1060,
       "sha256": "408d3abcc85ea7743af5f9dd1fe0cfbcc8b76cc34d7c664bca440e855c72a0dd"
+    },
+    {
+      "path": "navsteva_body.md",
+      "size": 1801,
+      "sha256": "268357f1cf42189ee3cbaf825ccaa166bf5d0b894c42c3adf3b277d867379220"
     },
     {
       "path": "shared/anchors/anchors.md",
