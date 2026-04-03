@@ -8,13 +8,13 @@
     <circle cx="78"  cy="109" r="22"/>
     <circle cx="137" cy="103"  r="22"/>
     <circle cx="196" cy="95"  r="22"/>
-    <circle cx="259" cy="87"  r="22"/>
-    <circle cx="323" cy="79"  r="22"/>
+    <circle cx="258" cy="87"  r="22"/>
+    <circle cx="322" cy="79"  r="22"/>
 
     <!-- řada 2 -->
     <circle cx="81"  cy="176" r="22"/>
     <circle cx="140" cy="171" r="22"/>
-    <circle cx="196" cy="161" r="22"/>
+    <circle cx="195" cy="16o" r="22"/>
     <circle cx="251" cy="152" r="22"/>
     <circle cx="310" cy="147" r="22"/>
 
@@ -27,7 +27,7 @@
     <!-- řada 4 -->
     <circle cx="81"  cy="244" r="22"/>
     <circle cx="140" cy="249" r="22"/>
-    <circle cx="196" cy="259" r="22"/>
+    <circle cx="195" cy="260" r="22"/>
     <circle cx="251" cy="268" r="22"/>
     <circle cx="310" cy="273" r="22"/>
 
@@ -35,8 +35,8 @@
     <circle cx="78"  cy="311" r="22"/>
     <circle cx="137" cy="317" r="22"/>
     <circle cx="196" cy="325" r="22"/>
-    <circle cx="259" cy="333" r="22"/>
-    <circle cx="323" cy="341" r="22"/>
+    <circle cx="258" cy="333" r="22"/>
+    <circle cx="322" cy="341" r="22"/>
 
   </g>
 
