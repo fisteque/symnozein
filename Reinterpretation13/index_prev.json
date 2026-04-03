@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-03T19:15:06.583035Z",
+  "generated_at": "2026-04-03T19:31:09.017543Z",
   "source": {
     "script": "scripts/update_reinterpretation13_index.py",
     "workflow": ".github/workflows/update_reinterpretation13_index.yml"
@@ -105,14 +105,6 @@
       "title": "Things and processes",
       "file": "Things_and_processes.md",
       "path": "Reinterpretation13/Things_and_processes.md",
-      "date": "",
-      "summary": "",
-      "tags": []
-    },
-    {
-      "title": "diff",
-      "file": "diff.md",
-      "path": "Reinterpretation13/diff.md",
       "date": "",
       "summary": "",
       "tags": []
