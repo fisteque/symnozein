@@ -1,56 +1,60 @@
 {
-  "generated_at": "2026-04-03T15:05:36.929109Z",
+  "generated_at": "2026-04-03T15:08:29.144958Z",
+  "source": {
+    "script": "scripts/update_body_index.py",
+    "workflow": ".github/workflows/update_body_index.yml"
+  },
   "count": 10,
   "files": [
     {
       "path": "Prvni_kroky.md",
       "size": 2067,
-      "modified": "2026-04-03T15:05:36.490147Z"
+      "modified": "2026-04-03T15:08:28.353933Z"
     },
     {
       "path": "shared/anchors/anchors.md",
       "size": 290,
-      "modified": "2026-04-03T15:05:36.490581Z"
+      "modified": "2026-04-03T15:08:28.354323Z"
     },
     {
       "path": "shared/anchors/navsteva_body.md",
       "size": 1202,
-      "modified": "2026-04-03T15:05:36.490636Z"
+      "modified": "2026-04-03T15:08:28.354376Z"
     },
     {
       "path": "shared/tasks/task_001.md",
       "size": 93,
-      "modified": "2026-04-03T15:05:36.490636Z"
+      "modified": "2026-04-03T15:08:28.354376Z"
     },
     {
       "path": "shared/tasks/task_002.md",
       "size": 93,
-      "modified": "2026-04-03T15:05:36.490742Z"
+      "modified": "2026-04-03T15:08:28.354470Z"
     },
     {
       "path": "shared/tasks/task_003.md",
       "size": 99,
-      "modified": "2026-04-03T15:05:36.490742Z"
+      "modified": "2026-04-03T15:08:28.354470Z"
     },
     {
       "path": "shared/tasks/task_004.md",
       "size": 67,
-      "modified": "2026-04-03T15:05:36.490742Z"
+      "modified": "2026-04-03T15:08:28.354470Z"
     },
     {
       "path": "shared/tasks/task_005.md",
       "size": 58,
-      "modified": "2026-04-03T15:05:36.490742Z"
+      "modified": "2026-04-03T15:08:28.354470Z"
     },
     {
       "path": "shared/tasks/task_006.md",
       "size": 49,
-      "modified": "2026-04-03T15:05:36.490742Z"
+      "modified": "2026-04-03T15:08:28.354470Z"
     },
     {
       "path": "shared/tasks/task_sprcha.md",
       "size": 381,
-      "modified": "2026-04-03T15:05:36.490742Z"
+      "modified": "2026-04-03T15:08:28.354470Z"
     }
   ]
 }
