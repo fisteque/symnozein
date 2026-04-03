@@ -1,9 +1,10 @@
 {
-  "generated_at": "2026-04-02T17:44:46.821922Z",
+  "generated_at": "2026-04-03T21:16:10.091646Z",
   "source": {
     "script": "scripts/convert_13.py",
     "workflow": ".github/workflows/update_13_index.yml"
   },
+  "kind": "content",
   "entries": [
     {
       "title": "01 — Cesta",
