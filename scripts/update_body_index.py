@@ -8,6 +8,11 @@ OUTPUT_FILE = os.path.join(BODY_DIR, "body_index.json")
 PREV_FILE = os.path.join(BODY_DIR, "body_index_prev.json")
 DIFF_FILE = os.path.join(BODY_DIR, "body_diff.md")
 
+SOURCE_SCRIPT = "scripts/update_body_index.py"
+SOURCE_WORKFLOW = ".github/workflows/update_body_index.yml"
+DIFF_TITLE = "# body diff"
+DIFF_DESCRIPTION = "Automaticky generovaný přehled posledních změn ve složce `body/`."
+
 MAX_DIFF_ENTRIES = 50
 
 
@@ -16,7 +21,9 @@ def utc_now_iso() -> str:
 
 
 def file_mtime_iso(path: str) -> str:
-    return datetime.fromtimestamp(os.stat(path).st_mtime, tz=timezone.utc).isoformat().replace("+00:00", "Z")
+    return datetime.fromtimestamp(
+        os.stat(path).st_mtime, tz=timezone.utc
+    ).isoformat().replace("+00:00", "Z")
 
 
 def scan_directory(base_path: str) -> list[dict]:
@@ -62,6 +69,10 @@ def backup_previous_index() -> None:
 def build_index(files: list[dict]) -> dict:
     return {
         "generated_at": utc_now_iso(),
+        "source": {
+            "script": SOURCE_SCRIPT,
+            "workflow": SOURCE_WORKFLOW,
+        },
         "count": len(files),
         "files": files,
     }
@@ -100,6 +111,13 @@ def compute_diff(prev_index: dict | None, current_index: dict) -> dict:
 
     return {
         "generated_at": current_index["generated_at"],
+        "source": current_index.get(
+            "source",
+            {
+                "script": SOURCE_SCRIPT,
+                "workflow": SOURCE_WORKFLOW,
+            },
+        ),
         "added": added,
         "removed": removed,
         "changed": changed,
@@ -125,8 +143,7 @@ def parse_existing_diff_entries(path: str) -> list[str]:
     if not parts:
         return []
 
-    # první blok je hlavička
-    if parts[0].startswith("# body diff"):
+    if parts[0].startswith(DIFF_TITLE):
         return parts[1:]
 
     return parts
@@ -139,8 +156,13 @@ def format_list(items: list[str], empty_text: str) -> list[str]:
 
 
 def format_diff_entry(diff: dict) -> str:
+    source = diff.get("source", {})
     lines = [
         f"## {diff['generated_at']}",
+        "",
+        "Zdroj změn:",
+        f"- skript: `{source.get('script', SOURCE_SCRIPT)}`",
+        f"- workflow: `{source.get('workflow', SOURCE_WORKFLOW)}`",
         "",
         f"➕ přidáno: **{diff['count_added']}**",
         *format_list(diff["added"], "nic"),
@@ -162,9 +184,9 @@ def write_diff_file(diff: dict, path: str, max_entries: int) -> None:
     entries = entries[:max_entries]
 
     lines = [
-        "# body diff",
+        DIFF_TITLE,
         "",
-        f"Automaticky generovaný přehled posledních změn ve složce `body/`.",
+        DIFF_DESCRIPTION,
         f"Uchovává posledních **{max_entries}** záznamů.",
         "",
         "---",
