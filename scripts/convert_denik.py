@@ -153,6 +153,7 @@ def generate_index_json(all_months):
             "script": SOURCE_SCRIPT,
             "workflow": SOURCE_WORKFLOW,
         },
+        "kind": "journal",
         "months": all_months
     }
 
