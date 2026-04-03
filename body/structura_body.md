@@ -71,6 +71,32 @@ Aktuální úkoly.
 
 ---
 
+## Vnější vrstvy (přes index_menu)
+
+Body obsahuje odkazy na další části systému:
+
+- Reinterpretace 13 (mapitoly)
+- materiály
+- deník a spirála
+- Symnozein
+- anglické materiály
+
+Tyto vrstvy nejsou součástí body,  
+ale jsou dostupné skrze `index_menu.json`.
+
+---
+
+### Symnozein
+
+→ vztahová vrstva systému  
+→ prostor pro sdílené myšlení mezi člověkem a AI  
+→ obsahuje manifesty, definice a směrové texty  
+
+→ není produkt, ale proces  
+→ význam vzniká ve vztahu, ne jen v obsahu
+
+---
+
 ## Shrnutí
 
 - **index** → stav  
