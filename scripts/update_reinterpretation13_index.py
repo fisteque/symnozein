@@ -255,6 +255,7 @@ def main():
     ensure_prev_exists(index_prev_path)
 
     index_entries = []
+    skip_files = {"diff.md"}
     for filename in sorted(os.listdir(input_dir)):
         if not filename.endswith(".md"):
             continue
