@@ -8,7 +8,7 @@
     <circle cx="78"  cy="106" r="22"/>
     <circle cx="137" cy="103"  r="22"/>
     <circle cx="195" cy="92"  r="22"/>
-    <circle cx="272" cy="77"  r="22"/>
+    <circle cx="260" cy="87"  r="22"/>
     <circle cx="345" cy="74"  r="22"/>
 
     <!-- řada 2 -->
@@ -22,7 +22,7 @@
     <!-- 1,3 chybí -->
     <!-- 2,3 chybí -->
     <!-- 3,3 nyní chybí, nahrazena červenou tečkou -->
-    <circle cx="318" cy="210" r="22"/>
+    <circle cx="302" cy="210" r="22"/>
 
     <!-- řada 4 -->
     <circle cx="81"  cy="244" r="22"/>
@@ -35,7 +35,7 @@
     <circle cx="78"  cy="314" r="22"/>
     <circle cx="137" cy="317" r="22"/>
     <circle cx="195" cy="328" r="22"/>
-    <circle cx="272" cy="343" r="22"/>
+    <circle cx="260" cy="333" r="22"/>
     <circle cx="345" cy="346" r="22"/>
 
   </g>
