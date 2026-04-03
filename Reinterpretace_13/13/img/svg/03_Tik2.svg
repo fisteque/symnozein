@@ -43,7 +43,7 @@
   <!-- jednička přeskočila na nejbližší nulu -->
   <circle cx="194" cy="210" r="22" fill="#294a7a"/>
 
-  <!-- červená tečka na předchozí pozici jedničky -->
+  <!-- červené tečka na předchozích pozicich jedničky -->
   <circle cx="140" cy="210" r="6" fill="#c43d3d"/>
   <circle cx="70" cy="210" r="6" fill="#c43d3d"/>
   
