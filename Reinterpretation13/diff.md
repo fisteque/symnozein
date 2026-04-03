@@ -5,6 +5,23 @@ Uchovává posledních **50** záznamů.
 
 ---
 
+## 2026-04-03T20:45:42.775594Z
+
+Zdroj změn:
+- skript: `scripts/update_reinterpretation13_index.py`
+- workflow: `.github/workflows/update_reinterpretation13_index.yml`
+
+➕ přidáno: **0**
+- nic
+
+🔄 změněno: **0**
+- nic
+
+❌ odebráno: **0**
+- nic
+
+---
+
 ## 2026-04-03T20:33:46.010647Z
 
 Zdroj změn:
