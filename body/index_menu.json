@@ -1,6 +1,7 @@
 {
   "source": "manual",
   "description": "Rozcestník indexů v repu pro orientaci a návštěvu body.",
+  "structure_path": "body/struktura_body.md",
   "menu": [
     {
       "name": "body",
