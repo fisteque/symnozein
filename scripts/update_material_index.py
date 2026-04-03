@@ -75,6 +75,7 @@ def build_index_data(index_entries):
             "script": CONFIG["source_script"],
             "workflow": CONFIG["source_workflow"],
         },
+        "kind": "content",
         "entries": index_entries,
     }
 
