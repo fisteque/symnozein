@@ -75,12 +75,12 @@ def load_json(path):
         return json.load(f)
 
 
-def build_index_data(index_entries):
+def build_index_data(index_entries, config):
     return {
         "generated_at": utc_now_iso(),
         "source": {
-            "script": CONFIG["source_script"],
-            "workflow": CONFIG["source_workflow"],
+            "script": config["source_script"],
+            "workflow": config["source_workflow"],
         },
         "kind": "content",
         "entries": index_entries,
@@ -272,7 +272,7 @@ def process_target(target_name):
             sitemap_urls.append(html_url)
 
     index_entries = sorted(index_entries, key=lambda x: x["file"])
-    index_data = build_index_data(index_entries)
+    index_data = build_index_data(index_entries, config)
 
     with open(index_path, "w", encoding="utf-8") as f:
         json.dump(index_data, f, indent=2, ensure_ascii=False)
