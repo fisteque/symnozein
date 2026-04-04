@@ -1,9 +1,10 @@
 {
-  "generated_at": "2026-04-01T11:53:43.941385Z",
+  "generated_at": "2026-04-03T21:38:55.512971Z",
   "source": {
     "script": "scripts/convert_spirala.py",
     "workflow": ".github/workflows/update_spirala_index.yml"
   },
+  "kind": "spiral",
   "months": [
     {
       "label": "Spirála",

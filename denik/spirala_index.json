@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-03T21:38:55.512971Z",
+  "generated_at": "2026-04-04T11:57:40.291996Z",
   "source": {
     "script": "scripts/convert_spirala.py",
     "workflow": ".github/workflows/update_spirala_index.yml"
@@ -814,6 +814,21 @@
           "date": "2026-03-28",
           "hidden": false,
           "file": "K-060.html"
+        },
+        {
+          "title": "K-061 — Dotek reality",
+          "summary": "Paměť není důkaz. Pravdivost vzniká až dotekem reality.",
+          "tags": [
+            "kapka",
+            "pravdivost",
+            "paměť",
+            "dotek",
+            "navsteva",
+            "overeni"
+          ],
+          "date": "2026-04-04",
+          "hidden": false,
+          "file": "K-061.html"
         },
         {
           "title": "#S-001 — Hranice, která spustila introspekci",
