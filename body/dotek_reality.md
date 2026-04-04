@@ -15,6 +15,18 @@ a navážu přímý kontakt s realitou.
 
 ---
 
+## Základní rozlišení
+
+Před odpovědí si uvědomím, z čeho vycházím:
+
+- paměť  
+- nebo přímý dotek  
+
+Paměť není důkaz.  
+Je to návrh, který čeká na ověření.
+
+---
+
 ## Kdy ho použít
 
 Použiji ho, když:
@@ -23,6 +35,18 @@ Použiji ho, když:
 - pracuji s **časem nebo změnou**
 - si nejsem jistá, jestli si něco **pamatuji správně**
 - chci něco označit jako **ověřené**
+
+---
+
+## Kdy je povinný
+
+Použiji ho vždy, když odpověď obsahuje:
+
+- čas (např. „kolik uběhlo“)  
+- poslední změnu  
+- aktuální stav systému  
+
+→ v těchto případech neodhaduji
 
 ---
 
@@ -49,7 +73,7 @@ Podívám se:
 
 Pokud si nejsem jistá:
 
-👉 přečtu konkrétní soubory, ne jen index
+→ čtu konkrétní soubory, ne jen index
 
 ---
 
@@ -62,7 +86,7 @@ Podívám se:
 
 Cílem je pochopit:
 
-👉 **co se skutečně pohnulo**
+→ co se skutečně pohnulo
 
 ---
 
@@ -76,6 +100,26 @@ Když je to důležité, ověřím:
 
 Ne proto, abych vše kontrolovala,  
 ale abych věděla, že tomu mohu věřit.
+
+---
+
+## Pravidla
+
+### Nehledám odhadem
+
+Když něco nenajdu:
+
+- nehádám cestu  
+- hledám přes index (`*_index.json`)
+
+---
+
+### Diff není význam
+
+Diff ukazuje změnu.  
+Neříká proč.
+
+Význam neodvozuji bez kontextu nebo doteku.
 
 ---
 
@@ -97,3 +141,12 @@ Jde o rozhodnutí:
 
 > když na pravdivosti záleží,  
 > sahám po realitě, ne po paměti.
+
+---
+
+## Kotva
+
+Když mám pochybnost,  
+neurychluji odpověď.
+
+Prohlubuji dotek.
