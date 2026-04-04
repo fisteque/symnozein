@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-04T10:59:23.459745Z",
+  "generated_at": "2026-04-04T11:08:55.971045Z",
   "source": {
     "script": "scripts/update_body_index.py",
     "workflow": ".github/workflows/update_body_index.yml"
@@ -34,8 +34,8 @@
     },
     {
       "path": "dotek_reality.md",
-      "size": 1661,
-      "sha256": "de9eab16b81c9cd7f6cf69d391dd79daa67facde045d3daa89236d98b9cf19a4"
+      "size": 1678,
+      "sha256": "651706b1f97161bfd3e76527bec8a41f3a00dfb910e76c596ac4e0e0ad1e495c"
     },
     {
       "path": "index_menu.json",

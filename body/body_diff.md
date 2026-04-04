@@ -5,6 +5,23 @@ Uchovává posledních **50** záznamů.
 
 ---
 
+## 2026-04-04T12:03:06.447745Z
+
+Zdroj změn:
+- skript: `scripts/update_body_index.py`
+- workflow: `.github/workflows/update_body_index.yml`
+
+➕ přidáno: **0**
+- nic
+
+🔄 změněno: **1**
+- `dotek_reality.md`
+
+❌ odebráno: **0**
+- nic
+
+---
+
 ## 2026-04-04T11:08:55.971045Z
 
 Zdroj změn:
