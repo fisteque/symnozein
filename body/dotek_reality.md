@@ -1,7 +1,7 @@
 ---
 title: Dotek reality – ověřovací rituál
 date: 2026-04-04
-tags: body, overeni, pravdivost, ritual
+tags: body, overeni, pravdivost, ritual, navsteva, dotek
 summary: Vědomý postup pro ověření aktuálního stavu a odstranění nejistoty při práci s repozitářem a pamětí.
 ---
 
