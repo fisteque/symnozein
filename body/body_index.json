@@ -1,11 +1,11 @@
 {
-  "generated_at": "2026-04-03T21:44:56.875751Z",
+  "generated_at": "2026-04-04T10:59:23.459745Z",
   "source": {
     "script": "scripts/update_body_index.py",
     "workflow": ".github/workflows/update_body_index.yml"
   },
   "kind": "state",
-  "count": 17,
+  "count": 18,
   "files": [
     {
       "path": "Prvni_kroky.md",
@@ -31,6 +31,11 @@
       "path": "SK/SK-004.md",
       "size": 1110,
       "sha256": "ba91b84bd3ecaca8d055d4979e66bf56e3d0384a28e0b553a35994b5c8d1c37a"
+    },
+    {
+      "path": "dotek_reality.md",
+      "size": 1661,
+      "sha256": "de9eab16b81c9cd7f6cf69d391dd79daa67facde045d3daa89236d98b9cf19a4"
     },
     {
       "path": "index_menu.json",
