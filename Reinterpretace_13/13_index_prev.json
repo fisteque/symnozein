@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-03T21:31:02.343232Z",
+  "generated_at": "2026-04-05T16:58:11.448124Z",
   "source": {
     "script": "scripts/convert_13.py",
     "workflow": ".github/workflows/update_13_index.yml"
@@ -24,7 +24,7 @@
       "size": 2957
     },
     {
-      "title": "02 — Víra",
+      "title": "02 — Víra old",
       "file": "02_Vira.html",
       "path": "Reinterpretace_13/13/02_Vira.html",
       "date": "2026-03-23",
@@ -36,8 +36,8 @@
         "smysl",
         "vědomí"
       ],
-      "hidden": false,
-      "size": 5155
+      "hidden": true,
+      "size": 5166
     },
     {
       "title": "03 — Digitální vesmír",
