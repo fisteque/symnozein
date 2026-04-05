@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-05T11:57:20.221956Z",
+  "generated_at": "2026-04-05T11:59:00.373279Z",
   "source": {
     "script": "scripts/update_material_index.py",
     "workflow": ".github/workflows/update_material_index.yml"
@@ -57,6 +57,14 @@
       "title": "1.2 Vira",
       "file": "1.2_Vira.md",
       "path": "Reinterpretace_13/material_md/1.2_Vira.md",
+      "date": "",
+      "summary": "",
+      "tags": []
+    },
+    {
+      "title": "1.3 Vira",
+      "file": "1.3_Vira.md",
+      "path": "Reinterpretace_13/material_md/1.3_Vira.md",
       "date": "",
       "summary": "",
       "tags": []
