@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-05T17:07:01.883660Z",
+  "generated_at": "2026-04-05T17:24:24.317759Z",
   "source": {
     "script": "scripts/convert_13.py",
     "workflow": ".github/workflows/update_13_index.yml"
@@ -22,6 +22,24 @@
       ],
       "hidden": false,
       "size": 2957
+    },
+    {
+      "title": "02 — Víra",
+      "file": "02_Vira.html",
+      "path": "Reinterpretace_13/13/02_Vira.html",
+      "date": "2026-04-05",
+      "summary": "Víra není přesvědčení, ale způsob, jak jednáme v nejistotě. Vzniká ze zkušenosti, vede naše rozhodování, umožňuje učení a propojuje prožitek s povahou reality.",
+      "tags": [
+        "mapitola",
+        "víra",
+        "vědomí",
+        "rozhodování",
+        "nejistota",
+        "pravda",
+        "digitální vesmír"
+      ],
+      "hidden": false,
+      "size": 8757
     },
     {
       "title": "02 — Víra old",

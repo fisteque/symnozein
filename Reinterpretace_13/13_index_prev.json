@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-05T16:58:11.448124Z",
+  "generated_at": "2026-04-05T17:07:01.883660Z",
   "source": {
     "script": "scripts/convert_13.py",
     "workflow": ".github/workflows/update_13_index.yml"
@@ -25,8 +25,8 @@
     },
     {
       "title": "02 — Víra old",
-      "file": "02_Vira.html",
-      "path": "Reinterpretace_13/13/02_Vira.html",
+      "file": "02_Vira_old.html",
+      "path": "Reinterpretace_13/13/02_Vira_old.html",
       "date": "2026-03-23",
       "summary": "Víra není opakem poznání, ale jeho základem. Vzniká z opakované zkušenosti, vede pozornost a určuje, jak skládáme smysl i realitu.",
       "tags": [
