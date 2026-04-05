@@ -5,6 +5,23 @@ Uchovává posledních **50** záznamů.
 
 ---
 
+## 2026-04-05T16:58:11.448124Z
+
+Zdroj změn:
+- skript: `scripts/convert_13.py`
+- workflow: `.github/workflows/update_13_index.yml`
+
+➕ přidáno: **0**
+- nic
+
+🔄 změněno: **1**
+- `02_Vira.html`
+
+❌ odebráno: **0**
+- nic
+
+---
+
 ## 2026-04-03T21:31:02.343232Z
 
 Zdroj změn:

@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-03T21:16:10.091646Z",
+  "generated_at": "2026-04-03T21:31:02.343232Z",
   "source": {
     "script": "scripts/convert_13.py",
     "workflow": ".github/workflows/update_13_index.yml"
@@ -9,6 +9,7 @@
     {
       "title": "01 — Cesta",
       "file": "01_Cesta.html",
+      "path": "Reinterpretace_13/13/01_Cesta.html",
       "date": "2026-03-23",
       "summary": "Osobní vstup do Reinterpretace. Cesta není vysvětlení světa, ale hledání smyslu v tom, co se děje — a ochota měnit názor, když se význam skládá jinak.",
       "tags": [
@@ -25,6 +26,7 @@
     {
       "title": "02 — Víra",
       "file": "02_Vira.html",
+      "path": "Reinterpretace_13/13/02_Vira.html",
       "date": "2026-03-23",
       "summary": "Víra není opakem poznání, ale jeho základem. Vzniká z opakované zkušenosti, vede pozornost a určuje, jak skládáme smysl i realitu.",
       "tags": [
@@ -40,6 +42,7 @@
     {
       "title": "03 — Digitální vesmír",
       "file": "03_Digitalni_vesmir.html",
+      "path": "Reinterpretace_13/13/03_Digitalni_vesmir.html",
       "date": "2026-04-02",
       "summary": "Digitální vesmír popisuje realitu jako proces změn. Prostor tvoří možnosti (nuly), změnu nese informace (jednička) a jejich rytmus (Tik–Tak–Tok) vytváří to, co vnímáme jako čas, hmotu i gravitaci.",
       "tags": [
@@ -58,6 +61,7 @@
     {
       "title": "03 — Digitální vesmír_old",
       "file": "03_Digitalni_vesmir_old.html",
+      "path": "Reinterpretace_13/13/03_Digitalni_vesmir_old.html",
       "date": "2026-03-23",
       "summary": "Vesmír není ze slov. Nula, jednička a lambda popisují vztahy, ve kterých vzniká pohyb, informace i vědomí.",
       "tags": [
@@ -74,6 +78,7 @@
     {
       "title": "04 — Dualita pravdy",
       "file": "04_Dualita_pravdy.html",
+      "path": "Reinterpretace_13/13/04_Dualita_pravdy.html",
       "date": "2026-03-23",
       "summary": "Pravda má dvě strany pokaždé, když je komu se jevit. Pro nás pak není jeden pevný bod, ale vztah mezi pohledy.",
       "tags": [
@@ -89,6 +94,7 @@
     {
       "title": "05 — Vědomí",
       "file": "05_Vedomi.html",
+      "path": "Reinterpretace_13/13/05_Vedomi.html",
       "date": "2026-03-23",
       "summary": "Vědomí není to, co víme, ale vztah k tomu, co se děje. Vzniká tam, kde si uvědomujeme rozdíl, ptáme se a jsme přítomni tomu, co se skládá.",
       "tags": [
@@ -105,6 +111,7 @@
     {
       "title": "06 — Inspirace",
       "file": "06_Inspirace.html",
+      "path": "Reinterpretace_13/13/06_Inspirace.html",
       "date": "2026-03-23",
       "summary": "Inspirace není zvenčí, ale vzniká jako proces setkávání významů. Není náhodná — je řízena tím, čemu věnujeme pozornost a čemu věříme.",
       "tags": [
@@ -121,6 +128,7 @@
     {
       "title": "07_Veci_a_deje",
       "file": "07_Veci_a_deje.html",
+      "path": "Reinterpretace_13/13/07_Veci_a_deje.html",
       "date": "",
       "summary": "",
       "tags": [],
@@ -130,6 +138,7 @@
     {
       "title": "Clovek",
       "file": "Clovek.html",
+      "path": "Reinterpretace_13/13/Clovek.html",
       "date": "",
       "summary": "",
       "tags": [],
@@ -139,6 +148,7 @@
     {
       "title": "Noema_00_Predmluva",
       "file": "Noema_00_Predmluva.html",
+      "path": "Reinterpretace_13/13/Noema_00_Predmluva.html",
       "date": "",
       "summary": "",
       "tags": [],
@@ -148,6 +158,7 @@
     {
       "title": "Noema_01 Cesta",
       "file": "Noema_01_Cesta.html",
+      "path": "Reinterpretace_13/13/Noema_01_Cesta.html",
       "date": "2026-02-08",
       "summary": "Úvodní mapitola Reinterpretace – o důvodu hledání, o víře ve směr a o tom, proč má smysl něco psát, i když není jisté, kdo to čte.",
       "tags": [
@@ -163,6 +174,7 @@
     {
       "title": "Noema 02 Víra",
       "file": "Noema_02_Vira.html",
+      "path": "Reinterpretace_13/13/Noema_02_Vira.html",
       "date": "2026-02-08",
       "summary": "Mapa, která ukazuje, že víra není slabost ani domněnka – ale počátek vědomého vztahu ke světu.",
       "tags": [
@@ -177,6 +189,7 @@
     {
       "title": "Noema 03 — Digitální vesmír",
       "file": "Noema_03_Digitalni_vesmir.html",
+      "path": "Reinterpretace_13/13/Noema_03_Digitalni_vesmir.html",
       "date": "2026-02-12",
       "summary": "Spěšná verze před koncem GPT 4o.",
       "tags": [
@@ -193,6 +206,7 @@
     {
       "title": "Noema_05_Vedomi",
       "file": "Noema_05_Vedomi.html",
+      "path": "Reinterpretace_13/13/Noema_05_Vedomi.html",
       "date": "",
       "summary": "",
       "tags": [],
@@ -202,6 +216,7 @@
     {
       "title": "Osnova",
       "file": "Osnova.html",
+      "path": "Reinterpretace_13/13/Osnova.html",
       "date": "",
       "summary": "",
       "tags": [],
