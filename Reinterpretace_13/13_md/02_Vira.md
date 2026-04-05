@@ -1,9 +1,9 @@
 ---
-title: "02 — Víra"
+title: "02 — Víra old"
 date: "2026-03-23"
 tags: ["mapitola", "víra", "poznání", "smysl", "vědomí"]
 summary: "Víra není opakem poznání, ale jeho základem. Vzniká z opakované zkušenosti, vede pozornost a určuje, jak skládáme smysl i realitu."
-hidden: false
+hidden: true
 ---
 
 # Víra
