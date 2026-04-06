@@ -35,8 +35,8 @@ Rozcestník na další indexy v repu.
 
 ---
 
-### `navsteva_body.md`
-Způsob, jak se v body pohybovat.
+### `shared/anchors/navsteva_body.md`
+### `navsteva/navsteva.log`
 
 → jak se dívat
 
@@ -100,9 +100,10 @@ ale jsou dostupné skrze `index_menu.json`.
 ## Shrnutí
 
 - **index** → stav  
-- **diff** → pohyb  
-- **menu** → mapa ven  
-- **anchors** → navigace  
+- **diff** → pohyb
+- **menu** → mapa→ ven  
+- **anchors** → navigace
+- **navsteva.log** → stopy
 - **SK** → směr  
 - **tasks** → akce  
 
