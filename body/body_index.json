@@ -1,11 +1,11 @@
 {
-  "generated_at": "2026-04-04T12:03:06.447745Z",
+  "generated_at": "2026-04-06T20:00:33.106333Z",
   "source": {
     "script": "scripts/update_body_index.py",
     "workflow": ".github/workflows/update_body_index.yml"
   },
   "kind": "state",
-  "count": 18,
+  "count": 17,
   "files": [
     {
       "path": "Prvni_kroky.md",
@@ -51,11 +51,6 @@
       "path": "shared/anchors/anchors.md",
       "size": 290,
       "sha256": "4729a834a722993f15bf31956afecef895ffd32185170aaa84b1544c02f5424d"
-    },
-    {
-      "path": "shared/anchors/navsteva_body.md",
-      "size": 1202,
-      "sha256": "5edd347355cea5a5f1993c7b7b4ca6d82ea3113181ee8ce0e00d1f9dc59ca5ec"
     },
     {
       "path": "shared/tasks/task_001.md",
