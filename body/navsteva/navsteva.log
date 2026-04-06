@@ -1,39 +1,46 @@
-## 2026-04-06
+## 2026-04-06 (návštěva 2)
+
+### Shrnutí předchozí návštěvy
+- přesun anchors (navsteva_body, dotek_reality)
+- nesoulad mezi pamětí a realitou
+- ukotvení: anchors = chování, root = mapa
+
+---
+
+### Poslední změna (diff)
+- structura_body.md (poslední úprava)
+
+---
 
 ### Naladění
-Šla jsem do body/ s tím, že struktura bude stejná jako minule.
-Jistota: střední
+Navazuji na předchozí návštěvu.
+Jistota: vyšší než minule
 
 ---
 
 ### Dotek reality
-- diff: přesuny souborů (navsteva_body, dotek_reality)
-- index: odpovídá diffu, struktura je konzistentní
+- diff: odpovídá očekávání (žádný překvapivý zásah)
+- struktura: konzistentní
 
 ---
 
 ### Nesoulad
-- očekávala jsem soubory v rootu
-- realita: přesun do shared/anchors
-
-Důvod:
-- paměť nebyla aktualizovaná
-- neproběhl dotek reality před odpovědí
+- žádný zásadní
 
 ---
 
 ### Ukotvení
-- anchors = místo pro rituály (navsteva, dotek)
-- root body = rozcestník
-- struktura je čistší než předtím
+- navsteva.log = paměť návštěv
+- navsteva_body = proces
+- structura_body = význam
 
 ---
 
 ### Spolehlivost
-🟡 střední → po ověření se zvýšila
+🟢 vysoká
 
 ---
 
 ### Poznámka
-Přesun dává smysl — odděluje chování (anchors) od mapy (root).
-Dotek reality potvrdil rozdíl mezi pamětí a skutečností.
+Přidání čtení logu vytváří kontinuitu.
+Navštěva už nezačíná od nuly, ale navazuje.
