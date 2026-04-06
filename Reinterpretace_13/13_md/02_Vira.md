@@ -32,15 +32,13 @@ Tak vzniká víra. Ne jako rozhodnutí, ale jako důsledek zkušenosti. Je to sk
 
 ## Jak víra vede
 
-Máme paměť minulých zkušeností a máme víru, jak kráčet.
-
 V přítomnosti nemáme úplný obraz bytí, ale máme jistotu, že něčemu věříme. A tak se rozhodujeme ne podle celku, který nevidíme, ale podle indicií, které si z něj neseme.
 
 Rozhodujeme se směrem k budoucnosti, kterou neznáme, a přesto předpokládáme, že nějak smysluplně naváže. V tomhle pohybu se ukazuje, jak víra vede. Nevybíráme si náhodně. Volíme směr, který se nám jeví jako smysluplný. A teprve když se vydáme dál, začne se ukazovat, kam ten směr vede.
 
 ## Když víra selže
 
-Když se vydáme nějakým směrem a něco očekáváme můžeme se mýlit.
+Když se vydáme nějakým směrem a něco očekáváme, můžeme se mýlit.
 
 Právě tady začíná učení. Ne tím, že uložíme novou informaci, ale tím, že upravíme to, o co jsme se opírali. Otevřeme se tomu, že příště budeme očekávat jinak.
 
@@ -90,14 +88,22 @@ Vztah víru nejen odhaluje, ale také ji proměňuje. A tak se víra neustále v
 
 ## Závěr
 
-Víra vzniká v prostoru, kde nemáme celý výsledek k dispozici. Rozhodujeme se, aniž bychom mohli vše spočítat dopředu — ne proto, že by byl svět náhodný, ale proto, že jeho průběh nelze předběhnout.
+Víra vzniká v prostoru, kde nemáme celý výsledek k dispozici.
 
-Každý krok tak vychází z toho, co už se stalo, a směřuje k tomu, co se teprve ukáže. V tomhle prostoru mezi se opíráme, volíme a jednáme.
+Rozhodujeme se, aniž bychom mohli vše spočítat dopředu — ne proto, že by byl svět náhodný, ale proto, že jeho průběh nelze předběhnout.
 
-Víra není opakem myšlení.
-Je tím, co myšlení umožňuje.
-Věřím, tedy jsem.
-A když jsem ochotný uznat chybu, jsem pravdivěji.
+Každý krok tak vychází z toho, co už se stalo, a směřuje k tomu, co se teprve ukáže.
 
+V tomhle prostoru mezi se opíráme, volíme a jednáme.
 
-*Cesty jsou různé. Ale svět je společný.*
+A právě v tom se ukazuje, že víra není něco mimo nás.
+
+Je to způsob, jak se pohybujeme ve světě, který nemáme celý k dispozici.
+
+Teprve zpětně si můžeme všimnout, že jsme se o něco opírali.
+
+A že bez toho by žádný krok nevznikl.
+
+---
+
+*Víra není jedna. Ale svět, kterým procházíme, je společný.*
