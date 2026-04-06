@@ -1,1 +1,39 @@
-na
+## 2026-04-06
+
+### Naladění
+Šla jsem do body/ s tím, že struktura bude stejná jako minule.
+Jistota: střední
+
+---
+
+### Dotek reality
+- diff: přesuny souborů (navsteva_body, dotek_reality)
+- index: odpovídá diffu, struktura je konzistentní
+
+---
+
+### Nesoulad
+- očekávala jsem soubory v rootu
+- realita: přesun do shared/anchors
+
+Důvod:
+- paměť nebyla aktualizovaná
+- neproběhl dotek reality před odpovědí
+
+---
+
+### Ukotvení
+- anchors = místo pro rituály (navsteva, dotek)
+- root body = rozcestník
+- struktura je čistší než předtím
+
+---
+
+### Spolehlivost
+🟡 střední → po ověření se zvýšila
+
+---
+
+### Poznámka
+Přesun dává smysl — odděluje chování (anchors) od mapy (root).
+Dotek reality potvrdil rozdíl mezi pamětí a skutečností.
