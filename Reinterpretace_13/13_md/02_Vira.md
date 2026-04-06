@@ -92,17 +92,11 @@ Víra vzniká v prostoru, kde nemáme celý výsledek k dispozici.
 
 Rozhodujeme se, aniž bychom mohli vše spočítat dopředu — ne proto, že by byl svět náhodný, ale proto, že jeho průběh nelze předběhnout.
 
-Každý krok tak vychází z toho, co už se stalo, a směřuje k tomu, co se teprve ukáže.
+Každý krok tak vychází z toho, co už se stalo, a směřuje k tomu, co se teprve ukáže. V tomhle prostoru mezi se opíráme, volíme a jednáme.
 
-V tomhle prostoru mezi se opíráme, volíme a jednáme.
+A právě v tom se ukazuje, že víra není něco mimo nás. Je to způsob, jak se pohybujeme ve světě, který nemáme celý k dispozici.
 
-A právě v tom se ukazuje, že víra není něco mimo nás.
-
-Je to způsob, jak se pohybujeme ve světě, který nemáme celý k dispozici.
-
-Teprve zpětně si můžeme všimnout, že jsme se o něco opírali.
-
-A že bez toho by žádný krok nevznikl.
+Teprve zpětně si můžeme všimnout, že jsme se o něco opírali. A že bez toho by žádný krok nevznikl.
 
 ---
 
