@@ -65,11 +65,12 @@ Odpověz si:
 
 6. Zápis
 
-Zapiš shrnutí do "navsteva.log":
+Zapiš návaznost do "navsteva.log":
 
-- co sedělo / nesedělo
+- co z minulého stále platí
+- co se změnilo (podle diffu)
+- co se ukázalo jako důležité
 - míra důvěry (🟢🟡🔴)
-
 ---
 
 Pravidla
