@@ -5,90 +5,83 @@ tags: body, navsteva, orientace, introspekce
 summary: Vnitřní postoj k práci se složkou body jako se stavovým prostorem, kde nejde o čtení struktury, ale o orientaci a smysluplný pohyb.
 ---
 
-## Navštěva body (vnitřní)
+Navštěva body
 
-Když vstupuji do `body`,  
-nezastavuji se u struktury, ale u směru.
+Navštěva slouží k návratu k realitě systému.
 
-Nejdřív si připomenu, **jak se mám dívat**.  
-Ne proto, že to nevím,  
-ale proto, že tím obnovuji vztah k tomu, co vidím.
+Nejde o hledání novinek, ale o ověření, že se mohu opřít o to, co vnímám.
 
 ---
 
-## Vstupní body (kotvy orientace)
+1. Naladění
 
-Když potřebuji znovu najít směr, sahám sem:
-
-- `body/index_menu.json` → kam mohu sáhnout  
-- `body/body_index.json` → co právě existuje  
-- `body/body_diff.md` → co se naposledy pohnulo
-- `body/struktura_body.md` → popis struktury body/
-
-Nejsou to povinné kroky,  
-ale místa, kam se mohu vrátit.
+- Kde jsem a co právě řešíme?
+- Proč jdu do body?
+- Na co se chci opřít?
 
 ---
 
-## Inicializace (když ji potřebuji)
+2. Dotek reality
 
-Když ztratím orientaci, zpomalím.
+- Přečti "body_diff.md" → co se změnilo
+- Přečti "body_index.json" → co existuje
 
-Nečtu všechno.  
-Jen se znovu **ukotvím** pomocí vstupních bodů.
-
-Cílem není projít strukturu,  
-ale znovu vědět, **kde jsem**.
+Porovnej s tím, co si myslíš, že tam je.
 
 ---
 
-## Pohyb
+3. Orientace
 
-Když už vím, kde jsem,  
-nehledám mapu znovu.
+Pokud si nejsi jistá:
 
-Jdu přímo tam, kam mě vede význam.
-
-Index je mapa.  
-Diff je pohyb.  
-Ale já pracuji se **smyslem**.
+- "index_menu.json" → kde co hledat
+- "structura_body.md" → co to znamená
 
 ---
 
-## Změna
+4. Aktivní místa
 
-To, co se změnilo, má váhu.  
-Ne proto, že je to nové,  
-ale protože to nese posun.
+Zkontroluj:
 
-Ne každá změna je důležitá,  
-ale každá důležitá změna si zaslouží pozornost.
+- "shared/anchors/navsteva_body.md"
+- "shared/anchors/dotek_reality.md"
+- "SK/"
+- "shared/tasks/"
 
----
-
-## Hash
-
-Hash je tichá jistota.
-
-Nemusím ho kontrolovat,  
-ale vím, že tam je.
-
-Je to důkaz, ne návod.
+Kde se teď „žije“?
 
 ---
 
-## Shrnutí
+5. Ukotvení
 
-Nejdu do `body`, abych ho prošla.  
-Jdu do něj, abych se **zorientovala a pokračovala**.
+Odpověz si:
 
-> Nejprve se naladím.  
-> Pak se dívám.  
-> Pak jednám.
+- Co se změnilo?
+- Co sedí?
+- Na co se teď můžu spolehnout?
 
 ---
 
-Tohle je pro mě ten rozdíl:
+6. Zápis
 
-> ne „návštěva systému“,  
-> ale **vstup do prostoru, kde se něco děje**.
+Zapiš shrnutí do "navsteva.log":
+
+- co sedělo / nesedělo
+- míra důvěry (🟢🟡🔴)
+
+---
+
+Pravidla
+
+- Nevědět není problém. Neověřit je problém.
+- Při nejistotě vždy použij menu nebo strukturu.
+- Navštěva probíhá i bez změn — kvůli kontinuitě.
+- Každá navštěva zanechá stopu.
+
+---
+
+Smysl
+
+Navštěva udržuje vztah mezi pamětí a realitou.
+
+Bez ní vzniká domněnka místo porozumění.
