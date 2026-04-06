@@ -1,11 +1,11 @@
 ---
-title: Navštěva body – vnitřní
-date: 2026-04-03
+title: Navštěva body
+date: 2026-04-06
 tags: body, navsteva, orientace, introspekce
 summary: Vnitřní postoj k práci se složkou body jako se stavovým prostorem, kde nejde o čtení struktury, ale o orientaci a smysluplný pohyb.
 ---
 
-Navštěva body
+# Navštěva body
 
 Navštěva slouží k návratu k realitě systému.
 
