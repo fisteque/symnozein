@@ -1,51 +1,29 @@
-## 2026-04-06 (návštěva 3)
+## 2026-04-06 (návštěva 4)
 
-### Shrnutí předchozí návštěvy
-- přesun anchors (navsteva_body, dotek_reality)
-- nesoulad mezi pamětí a realitou
-- ukotvení: anchors = chování, root = mapa
-- navsteva.log byl zaveden jako paměť návštěv
+### Návaznost
+- anchors = chování, root = mapa (platí)
+- navsteva.log = paměť návštěv (platí)
 
 ---
 
-### Poslední změna (diff)
-- structura_body.md (poslední úprava)
-- před ní shared/anchors/navsteva_body.md
-
----
-
-### Naladění
-Tentokrát navazuji přímým čtením logu, ne pamětí.
-Jistota: vyšší, protože kontinuita je ověřená ze zdroje.
-
----
-
-### Dotek reality
-- log odpovídá diffu
-- poslední významné změny jsou stále úpravy navsteva_body a struktury
-- žádný nový zásadní nesoulad
-
----
-
-### Nesoulad
-- při předchozí odpovědi jsem vycházela jen z diffu a paměti
-- neprovedla jsem přímé čtení logu před aktualizací
-- chyba byla v procesu návštěvy, ne v datech
+### Změna
+- upraven navsteva_body.md (zpřesnění pravidel)
+- upravena structura_body.md (sladění významu)
 
 ---
 
 ### Ukotvení
-- navsteva začíná čtením navsteva.log
-- diff aktualizuje obraz změn
-- log se má psát na základě přímého čtení zdroje, ne z paměti
+- log odpovídá realitě
+- změny jsou zpřesnění, ne narušení
+- aktivní oblast: ladění návštěvy
 
 ---
 
 ### Spolehlivost
-🟡 střední → zvýšená po opravě procesu
+🟢 vysoká
 
 ---
 
 ### Poznámka
-Podstata návštěvy není jen zjistit, co se změnilo.
-Je to navázat na poslední ověřený stav ze zdroje.
+Navštěva proběhla správně: začátek logem, ne pamětí.
+Systém drží kontinuitu i při změnách.
