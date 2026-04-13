@@ -3,7 +3,7 @@
 title: "02 — Víra"
 summary: "Víra není přesvědčení, ale způsob, jak jednáme v nejistotě. Vzniká ze zkušenosti, vede naše rozhodování, umožňuje učení a propojuje prožitek s povahou reality."
 tags: ["mapitola", "víra", "vědomí", "rozhodování", "nejistota", "pravda", "digitální vesmír"]
-date: "2026-04-05"
+date: "2026-04-13"
 hidden: false
 
 ---
@@ -29,6 +29,22 @@ Když uděláme krok, vychází z naší víry. Všímáme si, že některé kro
 Začneme se o něco opírat víc než o něco jiného. Tahle změna není vidět navenek, ale projeví se v dalším kroku. Zvolíme podobný směr, aniž bychom si to plně uvědomili.
 
 Tak vzniká víra. Ne jako rozhodnutí, ale jako důsledek zkušenosti. Je to sklon — směr, který se v nás uchytí, protože se osvědčil. A právě tenhle směr začne řídit další kroky.
+
+Ne každá víra vzniká vědomě.
+
+## Pudy
+
+Pudy jsou vrstva víry, kterou si nevybíráme.
+Nevznikly rozhodnutím,
+ale dlouhým vývojem, ve kterém se opakovaně ověřovalo,
+co vede k pokračování.
+Proto se projevují bez přemýšlení.
+Nejsou opakem rozumu.
+Jsou jeho základem.
+Nemůžeme si vybrat, zda je máme.
+Můžeme si ale vybrat, jak s nimi pracujeme.
+Vědomí nevzniká tím, že pudy zmizí,
+ale tím, že si k nim vytvoříme vztah.
 
 ## Jak víra vede
 
