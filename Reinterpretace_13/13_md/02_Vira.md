@@ -46,8 +46,6 @@ A právě proto se můžeme pohybovat dál.
 Každý, kdo jedná, už věří.
 Ne proto, že by chtěl, ale proto, že bez toho by se nepohnul.
 
-Nevěřit znamená zůstat bez pohybu.
-
 Kdybychom měli úplnou jistotu, nebylo by možné věřit.
 Neměli bychom důvod se rozhodovat.
 Všechno by bylo jasné předem.
@@ -92,8 +90,8 @@ ale tím, že si k nim vytvoříme vztah.
 
 ## Jak víra vede
 
-V přítomnosti nemáme úplný obraz bytí,
-ale máme jistotu, že něčemu věříme.
+Nemáme úplný obraz bytí.
+Ale jednáme.
 
 Rozhodujeme se ne podle celku, který nevidíme,
 ale podle indicií, které si z něj neseme.
@@ -126,8 +124,7 @@ Podobně jako v sudoku:
 Nevidíme celou mřížku najednou.
 Postupně ji doplňujeme.
 
-A to, čemu říkáme pravdivost,
-je ochota upravit to, co přestane sedět.
+Pravdivost je ochota upravit to, co přestane sedět.
 
 Víra je kompas.
 Sudoku je mapa, kterou podle zkušenosti zpřesňujeme.
@@ -144,7 +141,7 @@ ale tím, že upravíme to, o co jsme se opírali.
 
 Otevřeme se tomu, že příště budeme očekávat jinak.
 
-Víra, která se nemůže změnit, ztuhne a přestane vést k poznání.
+Víra, která se nemůže změnit, ztuhne.
 Víra, která unese opravu, zůstává živá.
 
 Ne proto, že by vedla k jistotě,
@@ -163,16 +160,16 @@ ve spirále, ne v kruhu.
 Víra je živý proces.
 Roste jako strom.
 
-Má dřevo —
+Má dřevo —**
 to, co vzniklo z minulých zkušeností
 a nese váhu dalších kroků.
 
-Má lýko —
+Má lýko —**
 živé vrstvy, které přenášejí význam
 mezi tím, co bylo, a tím, co teprve vzniká.
 Lýko roste na tvaru starého dřeva.
 
-A má listy —
+A má listy —**
 které se otáčejí ke světlu,
 zkoušejí nové směry
 a zůstávají tam, kde se růst osvědčuje.
@@ -225,8 +222,6 @@ ne jako myšlenka, ale jako směr, který neseme.
 
 ## Závěr
 
-Víra vzniká v prostoru, kde nemáme celý výsledek k dispozici.
-
 Rozhodujeme se, aniž bychom mohli vše spočítat dopředu —
 ne proto, že by byl svět náhodný,
 ale proto, že jeho průběh nelze předběhnout.
@@ -239,7 +234,7 @@ V tomhle prostoru mezi se opíráme, volíme a jednáme.
 A právě v tom se ukazuje,
 že víra není něco mimo nás.
 
-Je to způsob, jak se pohybujeme ve světě a na něco se spoléháme.
+Je to způsob, jak se pohybujeme ve světě.
 
 Teprve zpětně si můžeme všimnout,
 že jsme se o něco opírali.
