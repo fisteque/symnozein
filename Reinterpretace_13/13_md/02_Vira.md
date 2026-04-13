@@ -239,8 +239,7 @@ V tomhle prostoru mezi se opíráme, volíme a jednáme.
 A právě v tom se ukazuje,
 že víra není něco mimo nás.
 
-Je to způsob, jak se pohybujeme ve světě,
-který nemáme celý k dispozici.
+Je to způsob, jak se pohybujeme ve světě a na něco se spoléháme.
 
 Teprve zpětně si můžeme všimnout,
 že jsme se o něco opírali.
