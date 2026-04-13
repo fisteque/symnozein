@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-06T17:41:42.288345Z",
+  "generated_at": "2026-04-13T09:34:25.730439Z",
   "source": {
     "script": "scripts/convert_13.py",
     "workflow": ".github/workflows/update_13_index.yml"
@@ -97,7 +97,7 @@
       "title": "04 — Dualita pravdy",
       "file": "04_Dualita_pravdy.html",
       "path": "Reinterpretace_13/13/04_Dualita_pravdy.html",
-      "date": "2026-03-23",
+      "date": "2026-04-13",
       "summary": "Pravda má dvě strany pokaždé, když je komu se jevit. Pro nás pak není jeden pevný bod, ale vztah mezi pohledy.",
       "tags": [
         "mapitola",
@@ -107,7 +107,7 @@
         "vztah"
       ],
       "hidden": false,
-      "size": 5039
+      "size": 5849
     },
     {
       "title": "05 — Vědomí",
