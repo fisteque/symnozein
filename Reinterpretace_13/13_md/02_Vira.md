@@ -160,21 +160,21 @@ ve spirále, ne v kruhu.
 Víra je živý proces.
 Roste jako strom.
 
-Má dřevo —**
+**Má dřevo —**
 to, co vzniklo z minulých zkušeností
 a nese váhu dalších kroků.
 
-Má lýko —**
+**Má lýko —**
 živé vrstvy, které přenášejí význam
 mezi tím, co bylo, a tím, co teprve vzniká.
 Lýko roste na tvaru starého dřeva.
 
-A má listy —**
+**A má listy —**
 které se otáčejí ke světlu,
 zkoušejí nové směry
 a zůstávají tam, kde se růst osvědčuje.
 
-Jeho kořeny jsou pudy, kmen tvoří zažité zásady a větvemi strom sahá po významech.
+Jeho kořeny jsou pudy, kmen tvoří zažité postoje a větvemi strom sahá po významech.
 
 Každý strom je jiný.
 I kdyby dva vypadaly stejně, od prvního okamžiku rostou každý na jiném místě.
