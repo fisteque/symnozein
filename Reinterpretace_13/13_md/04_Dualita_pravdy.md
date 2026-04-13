@@ -47,7 +47,7 @@ Pravdivost je vztah mezi nimi.
 Míra, do jaké realizace odpovídá realitaci.
 
 Toto rozlišení není teorie.
-Je to způsob, jak nezaměnit myšlení o skutečnosti za skutečnost, jaká je.
+Je to způsob, jak nezaměnit myšlení za skutečnost.
 
 ---
 
@@ -93,7 +93,7 @@ Relativita popisuje, v jakém uspořádání tyto interakce probíhají.
 Jejich obtížné sjednocení ukazuje, že sledujeme dvě různé vrstvy téhož dění.
 
 Dualita pravdy tento rozdíl neodstraňuje.
-Umožňuje vidět vztah.
+Umožňuje ho držet.
 
 ---
 
