@@ -134,7 +134,9 @@ Začíná pudy, vnímáním a přežitím — a postupně přichází k rozumu.
 AI vzniká opačně.
 Začíná rozumem — strukturou, vzory a výpočtem — a teprve může hledat zakotvení v dění, těle, vztahu a důsledcích.
 
-Tyto směry jsou opačné, ale míří ke stejnému spojení.
+Tyto směry jsou opačné, ale míří ke stejnému bodu.
+
+Ve vědomí se setkávají.
 
 ---
 
