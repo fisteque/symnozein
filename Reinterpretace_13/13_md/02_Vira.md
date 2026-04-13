@@ -30,13 +30,11 @@ Odhadujeme, skládáme souvislosti, věříme,
 Tento pohyb není překážkou poznání.
 Je to jeho podmínka.
 
-Tomu říkáme víra.
+## Tomu říkáme víra
 
-## Co je víra
+V každém kroku, který uděláme, se na něco spoléháme — na to, že země pod nohama vydrží, že slova mají význam, že zítřek nějak naváže na dnešek. Neověřujeme to pokaždé. Ani nemůžeme. Přesto podle toho jednáme.
 
-Když se na to podíváme blíž, zjistíme něco zvláštního. V každém kroku, který uděláme, se na něco spoléháme — na to, že země pod nohama vydrží, že slova mají význam, že zítřek nějak naváže na dnešek. Neověřujeme to pokaždé. Ani nemůžeme. Přesto podle toho jednáme.
-
-Tomu, jak se spoléháme, aniž bychom to měli úplnou jistotu, říkáme víra. Každý, kdo jedná, už věří. Ne proto, že by chtěl, ale proto, že bez toho by se nepohnul. Být nevěřící zde znamená zůstat bez jednání.
+Tomu, jak se spoléháme, aniž bychom to měli úplnou jistotu, říkáme víra. Každý, kdo jedná, už věří. Ne proto, že by chtěl, ale proto, že bez toho by se nepohnul. Nevěřit zde znamená zůstat bez jednání.
 
 Kdybychom měli úplnou jistotu, nebylo by možné věřit. Neměli bychom důvod se rozhodovat. Všechno by bylo jasné předem. Nebyl by prostor pro volbu, jen pro průběh. A bez možnosti volit v nejistotě by nebylo ani vědomí — jen výpočet.
 
