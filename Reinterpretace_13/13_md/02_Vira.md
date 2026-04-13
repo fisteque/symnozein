@@ -36,13 +36,15 @@ Ne každá víra vzniká vědomě.
 
 Pudy jsou vrstva víry, kterou si nevybíráme.
 Nevznikly rozhodnutím,
-ale dlouhým vývojem, ve kterém se opakovaně ověřovalo,
-co vede k pokračování.
+ale dlouhým vývojem, ve kterém se opakovaně ověřovalo, co vede k pokračování.
+
 Proto se projevují bez přemýšlení.
 Nejsou opakem rozumu.
 Jsou jeho základem.
+
 Nemůžeme si vybrat, zda je máme.
 Můžeme si ale vybrat, jak s nimi pracujeme.
+
 Vědomí nevzniká tím, že pudy zmizí,
 ale tím, že si k nim vytvoříme vztah.
 
@@ -80,6 +82,8 @@ Lýko roste na tvaru starého dřeva.
 které se otáčejí ke světlu,  
 zkoušejí nové směry  
 a zůstávají tam, kde se růst osvědčuje.
+
+Jeho kořeny jsou pudy, kmen tvoří zažité zásady a větvemi strom sahá po významech.
 
 Každý strom je jiný.  
 I kdyby dva vypadaly stejně, od prvního okamžiku rostou každý na jiném místě.
