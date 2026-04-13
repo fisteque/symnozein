@@ -103,13 +103,22 @@ Kdyby se změny zastavily, zastavily by se i v nás.
 
 Každá změna zanechává v prostoru stopu.
 
-Ne jako objekt,  
-ale jako změnu v tom, kde se další změna skutečně odehrála.
+Ne jako objekt,
+ale jako změnu v tom, kde se další změna skutečně může odehrát.
 
-Tomu říkáme **brázda**.
+Tomu říkáme brázda.
 
-Brázda je realizovaná stopa změny v prostoru.  
-A každá jednička ji za sebou zanechává.
+Brázda je realizovaná stopa změny v prostoru.
+Nevyjadřuje, kde něco bylo,
+ale jak se změnily možnosti dalšího dění.
+
+Každý Tik ji vytváří.
+
+Každý Tak ji začleňuje zpět do prostoru.
+
+Brázda tak není paměť uložená mimo dění.
+
+Je to paměť samotného prostoru.
 
 ---
 
