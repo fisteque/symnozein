@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-13T10:34:43.537271Z",
+  "generated_at": "2026-04-13T11:48:01.398025Z",
   "source": {
     "script": "scripts/convert_13.py",
     "workflow": ".github/workflows/update_13_index.yml"
@@ -61,7 +61,7 @@
       "title": "03 — Digitální vesmír",
       "file": "03_Digitalni_vesmir.html",
       "path": "Reinterpretace_13/13/03_Digitalni_vesmir.html",
-      "date": "2026-04-02",
+      "date": "2026-04-13",
       "summary": "Digitální vesmír popisuje realitu jako proces změn. Prostor tvoří možnosti (nuly), změnu nese informace (jednička) a jejich rytmus (Tik–Tak–Tok) vytváří to, co vnímáme jako čas, hmotu i gravitaci.",
       "tags": [
         "mapitola",
@@ -74,7 +74,7 @@
         "čas"
       ],
       "hidden": false,
-      "size": 6946
+      "size": 7958
     },
     {
       "title": "03 — Digitální vesmír_old",
