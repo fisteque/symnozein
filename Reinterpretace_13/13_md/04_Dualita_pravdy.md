@@ -1,6 +1,6 @@
 ---
 title: "04 — Dualita pravdy"
-date: "2026-03-23"
+date: "2026-04-13"
 tags: ["mapitola", "pravda", "dualita", "poznání", "vztah"]
 summary: "Pravda má dvě strany pokaždé, když je komu se jevit. Pro nás pak není jeden pevný bod, ale vztah mezi pohledy."
 hidden: false
@@ -66,6 +66,20 @@ nejen že se mýlíme — **ztrácíme vztah ke skutečnému dění**.
 Naopak, když odmítneme realizaci a lpíme jen na „faktech“,  
 ztrácíme schopnost tvořit, vykládat a sdílet význam.  
 To vede k dehumanizaci: člověk se stává strojem na reakce.
+
+Realitace je to, co drží souvislosti pohromadě.
+Není to náš model, ale to, co model dohání.
+Tik–Tak–Tok je pokus stanovit minimální pravidla, podle kterých se realitace projevuje.
+Kvantová fyzika se přibližuje víře — pracuje s tím, jak se realita jeví při doteku.
+Relativita se přibližuje struktuře — popisuje, jak se změna drží v prostoru a čase.
+Dualita pravdy tyto pohledy nesjednocuje tím, že by jeden zrušila,
+ale tím, že ukazuje jejich vztah.
+Abychom mohli poznávat, musíme se dívat ze dvou míst:
+jako kousek vesmíru, který prožívá,
+a jako celek, který si představujeme.
+Teprve mezi těmito pohledy vzniká směr.
+
+Děj probíhá, ale skutečnost vzniká až v jeho vztahovém doteku — a víra je způsob, jak se v tom doteku orientujeme.
 
 **Pravda bez vztahu je násilí.  
 Pravdivost je vztah, který neničí.**
