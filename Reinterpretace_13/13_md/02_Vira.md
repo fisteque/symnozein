@@ -174,7 +174,7 @@ které se otáčejí ke světlu,
 zkoušejí nové směry
 a zůstávají tam, kde se růst osvědčuje.
 
-Jeho kořeny jsou pudy, kmen tvoří zažité postoje a větvemi strom sahá po významech.
+Jeho kořeny jsou pudy, kmen tvoří postoje a větvemi strom sahá po významech.
 
 Každý strom je jiný.
 I kdyby dva vypadaly stejně, od prvního okamžiku rostou každý na jiném místě.
