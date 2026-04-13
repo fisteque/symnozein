@@ -10,9 +10,27 @@ hidden: false
 
 # Víra
 
-Svět, který pozorujeme, se někdy zdá být samozřejmý. Věci mají tvar, pohybují se, světlo se šíří, čas plyne. Měříme vzdálenosti, rychlosti i energii — a máme pocit, že tím popisujeme realitu. Ale čím přesněji měříme, tím víc narážíme na rozpory. A přesto jednáme dál. Ne proto, že bychom měli jistotu, ale proto, že volíme směr.
+Sedíme a rozhodujeme se, co udělat.
 
-Nevolíme podle jistoty. Volíme podle toho, čemu věříme.
+Možností vidíme víc.
+Každá vede jinam.
+A nevíme, která je správná, dokud se nerozhodneme.
+
+A rozhodneme se.
+
+Ne proto, že máme jistotu.
+Ale proto, že musíme pokračovat.
+
+V každém takovém okamžiku se opíráme o něco,
+co není vidět celé.
+
+Odhadujeme, skládáme souvislosti, věříme,
+že to, co děláme, dává smysl.
+
+Tento pohyb není překážkou poznání.
+Je to jeho podmínka.
+
+Tomu říkáme víra.
 
 ## Co je víra
 
