@@ -144,10 +144,11 @@ Tím se mění, kam může další změna směřovat.
 
 ### Omezení a vazby
 
+Z přeskupování prostoru vyplývá ještě jedna vlastnost.
 Změny ve vesmíru sdílejí společný rytmus.
 
-Ale neprobíhají izolovaně.
-Každý proces využívá stejné prostředí a tím omezuje ostatní.
+Ale neprobíhají izolovaně —
+každý proces využívá stejné prostředí a tím omezuje ostatní.
 
 Prostor není pasivní.
 Je tvořen možnostmi (nulami), které jsou při změně využívány a přeskupovány.
