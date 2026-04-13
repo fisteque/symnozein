@@ -1,6 +1,6 @@
 ---
 title: "03 — Digitální vesmír"
-date: "2026-04-02"
+date: "2026-04-13"
 tags: ["mapitola", "digitální vesmír", "tik-tak-tok", "jednička", "nula", "algovir", "gravitace", "čas"]
 summary: "Digitální vesmír popisuje realitu jako proces změn. Prostor tvoří možnosti (nuly), změnu nese informace (jednička) a jejich rytmus (Tik–Tak–Tok) vytváří to, co vnímáme jako čas, hmotu i gravitaci."
 hidden: false
@@ -142,22 +142,52 @@ Tím se mění, kam může další změna směřovat.
 
 ---
 
+### Omezení a vazby
+
+Změny ve vesmíru sdílejí společný rytmus.
+
+Ale neprobíhají izolovaně.
+Každý proces využívá stejné prostředí a tím omezuje ostatní.
+
+Prostor není pasivní.
+Je tvořen možnostmi (nulami), které jsou při změně využívány a přeskupovány.
+
+Proto není možné, aby více procesů probíhalo nezávisle ve stejném místě.
+Změny sdílejí stejné pozice a tím se navzájem ovlivňují.
+
+Každý Tik spotřebovává možnost.
+Každý Tak ji znovu rozděluje.
+
+Změna tak nikdy neprobíhá „zdarma“.
+Vždy zanechává stopu v tom, kde a jak mohou proběhnout další změny.
+
+Paralelita tedy existuje, ale vždy ve vazbě.
+Ne jako nezávislé děje, ale jako souběžné procesy ve sdíleném prostředí.
+
+---
+
 ### Čas
 
-Všechny změny ve vesmíru probíhají ve stejném rytmu.
+Změny ve vesmíru probíhají ve společném rytmu.
 
-Právě díky tomu můžeme měřit čas, vzdálenost i energii.
+Ale protože sdílejí stejné prostředí,
+nemůže se každá změna odehrávat plně uvnitř vlastního cyklu.
 
-Pokud je algovir v klidu vůči proudu nul,  
-všechny změny probíhají v jeho vnitřním cyklu.
+Změna se vždy rozděluje mezi to, co systém dělá,
+a to, jak se pohybuje v prostředí.
 
-Pokud se pohybuje vstříc nulám,  
+Pokud je algovir v klidu vůči okolí,
+většina změn probíhá uvnitř jeho cyklu.
+
+Pokud se pohybuje vůči proudu nul,
 část změn je potřeba na tento pohyb.
 
 Jeho cyklus se tím zpomalí.
 
-> Čas se nezpomaluje.  
-> Jen se změna rozděluje mezi cyklus a pohyb.
+Čas se tedy nezpomaluje.
+Jen se změna rozděluje mezi cyklus a pohyb.
+
+Právě toto omezení se může projevit jako rozdíl v tom, co nazýváme čas.
 
 ---
 
