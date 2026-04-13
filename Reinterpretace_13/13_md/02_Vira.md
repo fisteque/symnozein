@@ -90,9 +90,6 @@ ale tím, že si k nim vytvoříme vztah.
 
 ## Jak víra vede
 
-Nemáme úplný obraz bytí.
-Ale jednáme.
-
 Rozhodujeme se ne podle celku, který nevidíme,
 ale podle indicií, které si z něj neseme.
 
