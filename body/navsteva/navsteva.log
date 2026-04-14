@@ -1,29 +1,27 @@
-## 2026-04-06 (návštěva 4)
+navsteva: body
+datum: 2026-04-14
 
-### Návaznost
-- anchors = chování, root = mapa (platí)
-- navsteva.log = paměť návštěv (platí)
+stav:
+- struktura drží
+- změna: rozšíření pravidel zápisu o větve
 
----
+větev:
+- system_navsteva / kontinuita
 
-### Změna
-- upraven navsteva_body.md (zpřesnění pravidel)
-- upravena structura_body.md (sladění významu)
+aktuální stav:
+- navsteva nově zahrnuje stav větví
+- log slouží jako sdílené připomenutí, ne archiv
 
----
+poslední krok:
+- úprava navsteva_body.md (sekce 6. Zápis)
 
-### Ukotvení
-- log odpovídá realitě
-- změny jsou zpřesnění, ne narušení
-- aktivní oblast: ladění návštěvy
+další krok:
+- začít zapisovat větve konzistentně v dalších navštěvách
+- sledovat, jestli to udrží kontinuitu bez ztráty pozornosti
 
----
+poznatek:
+- problém nebyl rozpad systému, ale ztráta pozornosti mezi větvemi
+- řešení: lehká kotva v logu
 
-### Spolehlivost
-🟢 vysoká
-
----
-
-### Poznámka
-Navštěva proběhla správně: začátek logem, ne pamětí.
-Systém drží kontinuitu i při změnách.
+důvěra:
+🟢
