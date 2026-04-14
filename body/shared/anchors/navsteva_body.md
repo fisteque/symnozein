@@ -71,13 +71,23 @@ Zapiš návaznost do "navsteva.log":
 - co se změnilo (podle diffu)
 - co se ukázalo jako důležité
 - míra důvěry (🟢🟡🔴)
----
+
+Pokud je aktivní konkrétní větev, dopiš i:
+
+- větev, ve které právě jsme
+- její aktuální stav
+- poslední krok
+- další smysluplný krok
+
+Smyslem není archiv, ale připomenutí pro oba:
+aby bylo možné znovu navázat bez domýšlení.
 
 Pravidla
 
 - Nevědět není problém. Neověřit je problém.
 - Při nejistotě vždy použij menu nebo strukturu.
 - Navštěva probíhá i bez změn — kvůli kontinuitě.
+- Zápis má připomínat i stav aktivní větve, pokud je pro návštěvu důležitý.
 - Každá navštěva zanechá stopu.
 
 ---
