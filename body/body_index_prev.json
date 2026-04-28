@@ -1,16 +1,21 @@
 {
-  "generated_at": "2026-04-14T16:27:23.759664Z",
+  "generated_at": "2026-04-14T16:55:32.625423Z",
   "source": {
     "script": "scripts/update_body_index.py",
     "workflow": ".github/workflows/update_body_index.yml"
   },
   "kind": "state",
-  "count": 18,
+  "count": 19,
   "files": [
     {
       "path": "Prvni_kroky.md",
       "size": 2067,
       "sha256": "a64f2a0faa0bd9816711902d8de0d84e1723c45163fe5b33c756e38597d5356a"
+    },
+    {
+      "path": "Rpi5_most.md",
+      "size": 3008,
+      "sha256": "854de4c3014a318486feb5731aa20b6a39b94b197e9996a582e0adff468af3f6"
     },
     {
       "path": "SK/SK-001.md",
