@@ -238,6 +238,10 @@ Teprve zpětně si můžeme všimnout,
 
 A že bez toho by žádný krok nevznikl.
 
+Víra je důkaz, že předpokládáme spolehlivost něčeho mimo nás.
+
+Kdyby nebylo nic, na co se dá spolehnout, nemělo by smysl ničemu věřit.
+
 ---
 
 Víra není jedna. Ale svět, kterým procházíme, je společný.
