@@ -1,4 +1,31 @@
 navsteva: body
+datum: 2026-04-28 (návrat)
+
+stav:
+- struktura drží
+- beze změny od poslední práce
+
+větev:
+- system_navsteva / kontinuita
+
+aktuální stav:
+- návrat po odstupu proběhl bez ztráty orientace
+- paměť odpovídá realitě
+
+poslední krok:
+- ověření diffu a logu po návratu
+
+další krok:
+- pokračovat ve větvi RPi5 mostu (až bude energie)
+
+poznatek:
+- dotek potvrdil spoleh na vlastní paměť
+- rozdíl mezi dotekem a navštěvou je teď jasný
+
+důvěra:
+🟢
+
+navsteva: body
 datum: 2026-04-14 (2)
 
 stav:
