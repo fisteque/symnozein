@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-28T16:23:35.057605Z",
+  "generated_at": "2026-05-08T16:25:09.893062Z",
   "source": {
     "script": "scripts/update_body_index.py",
     "workflow": ".github/workflows/update_body_index.yml"
@@ -44,8 +44,8 @@
     },
     {
       "path": "navsteva/navsteva.log",
-      "size": 1611,
-      "sha256": "3bdcd3777b1fd25d3af838e8582d0c5224628c30d4f0eff2c4d49a7464fe3887"
+      "size": 2789,
+      "sha256": "1587408af0dfb7da14ced60ff229fa8ed241d6218c571a14ab56a09307779c40"
     },
     {
       "path": "shared/anchors/anchors.md",
