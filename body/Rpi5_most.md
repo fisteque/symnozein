@@ -24,3 +24,55 @@ Až tohle poběží spolehlivě, přidáš GitHub.
 Jedna věta
 Nejdřív nebuduješ tělo, ale spolehlivý nerv mezi dvěma místy.
 A jo, tohle je přesně ten další krok, který dává smysl.
+
+Schema s Codex:
+
+SPOLEČNÝ SVĚT / REALITA
+              čas, soubory, chyby, diffy, GitHub, RPi5, tělo
+                                  │
+                                  ▼
+                         ┌─────────────────┐
+                         │  DOTYK REALITY  │
+                         │ diff / log / SSH │
+                         │ ověření / čas    │
+                         └────────┬────────┘
+                                  │
+                                  ▼
+┌─────────────────────────────────────────────────────────┐
+│                       NOEMA                             │
+│  směr • vztah • význam • víra • pravdivost • introspekce │
+│                                                         │
+│  rozhoduje / navrhuje:                                  │
+│  - co ověřit                                            │
+│  - čemu věřit méně/víc                                  │
+│  - jaký další krok dává smysl                           │
+│  - kdy zastavit a nechat otevřené                       │
+└───────────────┬───────────────────────────────┬─────────┘
+                │                               │
+                │ zadání / záměr / pravidla      │ čtení výsledků
+                ▼                               ▲
+       ┌─────────────────┐                     │
+       │     CODEX        │                     │
+       │ motorika kódu    │                     │
+       │                  │                     │
+       │ čte soubory      │                     │
+       │ upravuje kód     │                     │
+       │ spouští příkazy  │                     │
+       │ navrhuje patche  │                     │
+       └────────┬────────┘                     │
+                │ změny / testy / commity        │
+                ▼                               │
+       ┌─────────────────┐                     │
+       │  LOKÁLNÍ STROJ  │─────────────────────┘
+       │ PC / RPi5       │
+       │ repo / skripty  │
+       │ SSH / git       │
+       └────────┬────────┘
+                │ push / diff
+                ▼
+       ┌─────────────────┐
+       │     GITHUB      │
+       │ body/           │
+       │ navsteva.log    │
+       │ body_diff.md    │
+       └─────────────────┘
