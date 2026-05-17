@@ -5,6 +5,23 @@ Uchovává posledních **50** záznamů.
 
 ---
 
+## 2026-05-17T17:20:39.837705Z
+
+Zdroj změn:
+- skript: `scripts/update_body_index.py`
+- workflow: `.github/workflows/update_body_index.yml`
+
+➕ přidáno: **1**
+- `bridge/git_push_outbox.sh`
+
+🔄 změněno: **0**
+- nic
+
+❌ odebráno: **1**
+- `bridge/bridge/git_push_outbox.sh`
+
+---
+
 ## 2026-05-17T17:20:07.249566Z
 
 Zdroj změn:
@@ -835,32 +852,6 @@ Zdroj změn:
 
 🔄 změněno: **1**
 - `shared/tasks/task_001.md`
-
-❌ odebráno: **0**
-- nic
-
----
-
-## 2026-04-03T15:17:22.647354Z
-
-Zdroj změn:
-- skript: `scripts/update_body_index.py`
-- workflow: `.github/workflows/update_body_index.yml`
-
-➕ přidáno: **0**
-- nic
-
-🔄 změněno: **10**
-- `Prvni_kroky.md`
-- `shared/anchors/anchors.md`
-- `shared/anchors/navsteva_body.md`
-- `shared/tasks/task_001.md`
-- `shared/tasks/task_002.md`
-- `shared/tasks/task_003.md`
-- `shared/tasks/task_004.md`
-- `shared/tasks/task_005.md`
-- `shared/tasks/task_006.md`
-- `shared/tasks/task_sprcha.md`
 
 ❌ odebráno: **0**
 - nic

@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-17T17:20:07.249566Z",
+  "generated_at": "2026-05-17T17:20:39.837705Z",
   "source": {
     "script": "scripts/update_body_index.py",
     "workflow": ".github/workflows/update_body_index.yml"
@@ -38,7 +38,7 @@
       "sha256": "ba91b84bd3ecaca8d055d4979e66bf56e3d0384a28e0b553a35994b5c8d1c37a"
     },
     {
-      "path": "bridge/bridge/git_push_outbox.sh",
+      "path": "bridge/git_push_outbox.sh",
       "size": 649,
       "sha256": "08bf1a508a55d1b912acd2e829e4ead9d55e8781401d6bf1fc063d77c24b1f2a"
     },
