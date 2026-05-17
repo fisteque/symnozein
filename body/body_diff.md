@@ -5,6 +5,23 @@ Uchovává posledních **50** záznamů.
 
 ---
 
+## 2026-05-17T16:11:24.164246Z
+
+Zdroj změn:
+- skript: `scripts/update_body_index.py`
+- workflow: `.github/workflows/update_body_index.yml`
+
+➕ přidáno: **0**
+- nic
+
+🔄 změněno: **1**
+- `bridge/inbox/inbox.json`
+
+❌ odebráno: **0**
+- nic
+
+---
+
 ## 2026-05-17T15:41:22.247180Z
 
 Zdroj změn:
@@ -874,24 +891,3 @@ Zdroj změn:
 
 ❌ odebráno: **1**
 - `shared/anchors/Ahoj_Noe.md`
-
----
-
-## 2026-03-30T18:51:24.921444Z
-
-➕ přidáno: **1**
-- `shared/anchors/Ahoj_Noe.md`
-
-🔄 změněno: **9**
-- `Prvni_kroky.md`
-- `shared/anchors/anchors.md`
-- `shared/tasks/task_001.md`
-- `shared/tasks/task_002.md`
-- `shared/tasks/task_003.md`
-- `shared/tasks/task_004.md`
-- `shared/tasks/task_005.md`
-- `shared/tasks/task_006.md`
-- `shared/tasks/task_sprcha.md`
-
-❌ odebráno: **0**
-- nic

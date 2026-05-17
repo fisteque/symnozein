@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-17T15:41:22.247180Z",
+  "generated_at": "2026-05-17T16:11:24.164246Z",
   "source": {
     "script": "scripts/update_body_index.py",
     "workflow": ".github/workflows/update_body_index.yml"
@@ -44,8 +44,8 @@
     },
     {
       "path": "bridge/inbox/inbox.json",
-      "size": 37,
-      "sha256": "a1422621fb5f64387a747f3b13a11f0c8735dbb922e03dce9dadc57151a51173"
+      "size": 31,
+      "sha256": "d0edea04b013a1cb4c843f50059dfd2104fef15e46f85fc83f47e63510a33c7b"
     },
     {
       "path": "bridge/logs/bridge.log",
