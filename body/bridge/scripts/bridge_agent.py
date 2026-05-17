@@ -54,7 +54,7 @@ def write_outbox(message, received):
         "status": "ok",
         "received": received,
         "message": message,
-        "timestamp": datetime.utcnow().isoformat()
+        "timestamp": datetime.now(UTC).isoformat()
     }
 
     with open(OUTBOX, "w", encoding="utf-8") as f:
