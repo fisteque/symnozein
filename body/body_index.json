@@ -1,11 +1,11 @@
 {
-  "generated_at": "2026-05-10T10:24:10.594258Z",
+  "generated_at": "2026-05-17T14:50:30.047518Z",
   "source": {
     "script": "scripts/update_body_index.py",
     "workflow": ".github/workflows/update_body_index.yml"
   },
   "kind": "state",
-  "count": 19,
+  "count": 23,
   "files": [
     {
       "path": "Prvni_kroky.md",
@@ -36,6 +36,26 @@
       "path": "SK/SK-004.md",
       "size": 1110,
       "sha256": "ba91b84bd3ecaca8d055d4979e66bf56e3d0384a28e0b553a35994b5c8d1c37a"
+    },
+    {
+      "path": "bridge/bridge.py",
+      "size": 620,
+      "sha256": "241e7fb590e1414f8451df95bc7928b0188b72d8bb56692a6b0009fbcda1265a"
+    },
+    {
+      "path": "bridge/inbox/inbox.json",
+      "size": 31,
+      "sha256": "d0edea04b013a1cb4c843f50059dfd2104fef15e46f85fc83f47e63510a33c7b"
+    },
+    {
+      "path": "bridge/logs/bridge.log",
+      "size": 63,
+      "sha256": "3946982b956f82119596df5ef6aebbfbaf3eea17f3218ec2d96319a3022899f5"
+    },
+    {
+      "path": "bridge/outbox/outbox.json",
+      "size": 99,
+      "sha256": "f3b678fbe7dc7fcd3abbfd749e3ee668e04ce462a476ec2f76209287c9860e9d"
     },
     {
       "path": "index_menu.json",

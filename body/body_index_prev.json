@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-08T16:25:09.893062Z",
+  "generated_at": "2026-05-10T10:24:10.594258Z",
   "source": {
     "script": "scripts/update_body_index.py",
     "workflow": ".github/workflows/update_body_index.yml"
@@ -14,8 +14,8 @@
     },
     {
       "path": "Rpi5_most.md",
-      "size": 3008,
-      "sha256": "854de4c3014a318486feb5731aa20b6a39b94b197e9996a582e0adff468af3f6"
+      "size": 6009,
+      "sha256": "d31efc937ebf5a94d9c6beae52b926dfeb9fee9b0d3ded38622bc02e99355196"
     },
     {
       "path": "SK/SK-001.md",
