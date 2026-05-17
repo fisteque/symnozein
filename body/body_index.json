@@ -1,11 +1,11 @@
 {
-  "generated_at": "2026-05-17T17:46:34.878457Z",
+  "generated_at": "2026-05-17T18:04:58.195378Z",
   "source": {
     "script": "scripts/update_body_index.py",
     "workflow": ".github/workflows/update_body_index.yml"
   },
   "kind": "state",
-  "count": 25,
+  "count": 26,
   "files": [
     {
       "path": "Prvni_kroky.md",
@@ -51,6 +51,11 @@
       "path": "bridge/outbox/outbox.json",
       "size": 41,
       "sha256": "fef8f57ceba45b32113df3c268f451e0d77ca7aa42c114136ce2fd327518911f"
+    },
+    {
+      "path": "bridge/scripts/git_pull_inbox.sh",
+      "size": 383,
+      "sha256": "b05c0dea1ad498a181807f4307b8f6687e86ae688aeaf470482581f6eccdb8a7"
     },
     {
       "path": "bridge/scripts/git_push_outbox.sh",
