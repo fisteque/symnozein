@@ -1,1 +1,4 @@
 [2026-05-17T15:43:56.922121] Inbox přečten a outbox zapsán.
+[2026-05-17T18:48:43.416075] === Bridge agent start ===
+[2026-05-17T18:48:43.830270] Nová zpráva: Ahoj Noe, zprava z RPi5 inboxu
+[2026-05-17T18:48:43.830655] Odpověď zapsána do outboxu.

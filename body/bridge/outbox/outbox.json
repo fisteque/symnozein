@@ -1,3 +1,8 @@
 {
-  "message": "Ahoj Noe, ctes to ted?"
+  "status": "ok",
+  "received": {
+    "message": "Ahoj Noe, zprava z RPi5 inboxu"
+  },
+  "message": "Zpráva přečtena agentem v 2026-05-17T18:48:43.830354 UTC",
+  "timestamp": "2026-05-17T18:48:43.830359"
 }
