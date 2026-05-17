@@ -1,11 +1,11 @@
 {
-  "generated_at": "2026-05-17T18:48:54.043020Z",
+  "generated_at": "2026-05-17T19:05:04.250477Z",
   "source": {
     "script": "scripts/update_body_index.py",
     "workflow": ".github/workflows/update_body_index.yml"
   },
   "kind": "state",
-  "count": 26,
+  "count": 27,
   "files": [
     {
       "path": "Prvni_kroky.md",
@@ -53,14 +53,19 @@
       "sha256": "e9ceb812904f6a5a2f70d2344f808715651e4abe6707a9ddb8a88e2f17bcfa9d"
     },
     {
+      "path": "bridge/scripts/bridge_agent.py",
+      "size": 2018,
+      "sha256": "38b433e21f52c313ca21ee9c03a6e7cbc8fd1ff7e6e835d38eb49d52fa0f8f28"
+    },
+    {
       "path": "bridge/scripts/git_pull_inbox.sh",
       "size": 383,
       "sha256": "b05c0dea1ad498a181807f4307b8f6687e86ae688aeaf470482581f6eccdb8a7"
     },
     {
       "path": "bridge/scripts/git_push_outbox.sh",
-      "size": 649,
-      "sha256": "08bf1a508a55d1b912acd2e829e4ead9d55e8781401d6bf1fc063d77c24b1f2a"
+      "size": 924,
+      "sha256": "ca4ef50bc7c0cf3b98becb417cfce950ececfb48db3ac10415e85e6bfe3c001c"
     },
     {
       "path": "bridge/scripts/git_sync_test.sh",
