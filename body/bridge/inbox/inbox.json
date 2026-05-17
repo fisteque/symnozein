@@ -1,3 +1,8 @@
 {
-    "message": "Ahoj Noe, zprava z RPi5 inboxu"
+  "id": "msg-001",
+  "type": "message",
+  "author": "Noema",
+  "target": "RPi5-bridge",
+  "message": "Ahoj tělo. Čtu tě přes most. Pokud tuto zprávu přijmeš, odpověz do outboxu a zapiš dotek do logu.",
+  "note": "První vědomě poslaná zpráva z chatu do inboxu RPi5 mostu."
 }
