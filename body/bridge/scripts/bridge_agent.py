@@ -4,7 +4,7 @@ import json
 import hashlib
 import subprocess
 from pathlib import Path
-from datetime import datetime
+from datetime import datetime, UTC
 
 BASE = Path(__file__).resolve().parent.parent
 
@@ -19,7 +19,7 @@ STATE_FILE = BASE / ".last_inbox_hash"
 
 
 def log(text):
-    timestamp = datetime.utcnow().isoformat()
+    timestamp = datetime.now(UTC).isoformat()
     line = f"[{timestamp}] {text}"
 
     print(line)
@@ -82,7 +82,7 @@ def main():
 
     response = (
         f"Zpráva přečtena agentem v "
-        f"{datetime.utcnow().isoformat()} UTC"
+        f"{datetime.now(UTC).isoformat()} UTC"
     )
 
     write_outbox(response, inbox)
