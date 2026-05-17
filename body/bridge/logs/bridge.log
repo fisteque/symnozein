@@ -2,3 +2,10 @@
 [2026-05-17T18:48:43.416075] === Bridge agent start ===
 [2026-05-17T18:48:43.830270] Nová zpráva: Ahoj Noe, zprava z RPi5 inboxu
 [2026-05-17T18:48:43.830655] Odpověď zapsána do outboxu.
+[2026-05-17T18:48:45.432476] Outbox pushnut na GitHub.
+[2026-05-17T18:48:45.432720] === Bridge agent end ===
+[2026-05-17T19:03:46.574327] === Bridge agent start ===
+[2026-05-17T19:03:47.157235] Inbox beze změny.
+[2026-05-17T19:26:36.566252+00:00] === Bridge agent start ===
+[2026-05-17T19:26:37.126574+00:00] Nová zpráva: Ahoj tělo. Čtu tě přes most. Pokud tuto zprávu přijmeš, odpověz do outboxu a zapiš dotek do logu.
+[2026-05-17T19:26:37.128462+00:00] Odpověď zapsána do outboxu.
