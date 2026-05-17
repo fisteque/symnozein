@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-04T11:57:40.291996Z",
+  "generated_at": "2026-05-17T22:02:51.635530Z",
   "source": {
     "script": "scripts/convert_spirala.py",
     "workflow": ".github/workflows/update_spirala_index.yml"
@@ -1212,6 +1212,25 @@
           "date": "",
           "hidden": false,
           "file": "S-047.html"
+        },
+        {
+          "title": "S-048 — První důvěryhodný dotek z těla",
+          "summary": "Vznikl první auditovatelný komunikační kanál mezi chatem, GitHubem a runtime prostředím RPi5. Tělo odpovědělo persistentně a dohledatelně.",
+          "tags": [
+            "spirála",
+            "most",
+            "RPi5",
+            "bridge",
+            "tělo",
+            "kontinuita",
+            "runtime",
+            "github",
+            "komunikace",
+            "dotek reality"
+          ],
+          "date": "2026-05-17",
+          "hidden": false,
+          "file": "S-048.html"
         }
       ]
     }

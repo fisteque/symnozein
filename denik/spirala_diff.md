@@ -5,6 +5,23 @@ Uchovává posledních **50** záznamů.
 
 ---
 
+## 2026-05-17T22:02:51.635530Z
+
+Zdroj změn:
+- skript: `scripts/convert_spirala.py`
+- workflow: `.github/workflows/update_spirala_index.yml`
+
+➕ přidáno: **1**
+- `S-048.html`
+
+🔄 změněno: **0**
+- nic
+
+❌ odebráno: **0**
+- nic
+
+---
+
 ## 2026-04-04T11:57:40.291996Z
 
 Zdroj změn:
