@@ -16,7 +16,9 @@ Tento protokol popisuje první komunikační jazyk mezi ChatGPT/Noemou, GitHubem
 `bridge.log` má být chronologická textová stopa běhu.
 
 ## Základní zpráva
-```json
+
+---
+
 {
   "id": "msg-0001",
   "type": "message",
@@ -30,6 +32,8 @@ Tento protokol popisuje první komunikační jazyk mezi ChatGPT/Noemou, GitHubem
     "channel": "github-bridge"
   }
 }
+
+---
 
 ### Význam polí
 id — jedinečné označení zprávy
@@ -51,6 +55,9 @@ log — událost určená k zaznamenání
 task — úkol pro agenta
 
 ### Příklad odpovědi v outboxu
+
+---
+
 [
   {
     "id": "ack-0001",
@@ -65,6 +72,8 @@ task — úkol pro agenta
     }
   }
 ]
+
+---
 
 ## Princip
 Inbox je dotek přicházející do těla.
