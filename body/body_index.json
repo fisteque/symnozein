@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-22T22:04:59.993844Z",
+  "generated_at": "2026-05-22T22:05:21.070353Z",
   "source": {
     "script": "scripts/update_body_index.py",
     "workflow": ".github/workflows/update_body_index.yml"
@@ -84,8 +84,8 @@
     },
     {
       "path": "bridge_protocol_v1.md",
-      "size": 1829,
-      "sha256": "f8bba15f09bfaba7c4e516a3e30d97e8a36fb0e6f676cecb58f73ef24fa20598"
+      "size": 1823,
+      "sha256": "081c4cdebee75e6e02aad211999b3b772d6c60fc854c4b8003b9b686a2d3073a"
     },
     {
       "path": "index_menu.json",
