@@ -17,8 +17,6 @@ Tento protokol popisuje první komunikační jazyk mezi ChatGPT/Noemou, GitHubem
 
 ## Základní zpráva
 
----
-
 {
   "id": "msg-0001",
   "type": "message",
