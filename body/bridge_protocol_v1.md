@@ -16,7 +16,7 @@ Tento protokol popisuje první komunikační jazyk mezi ChatGPT/Noemou, GitHubem
 `bridge.log` má být chronologická textová stopa běhu.
 
 ## Základní zpráva
-´´´json
+```json
 {
   "id": "msg-0001",
   "type": "message",
