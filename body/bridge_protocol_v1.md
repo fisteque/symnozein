@@ -30,7 +30,7 @@ Tento protokol popisuje první komunikační jazyk mezi ChatGPT/Noemou, GitHubem
     "channel": "github-bridge"
   }
 }
-```end
+
 
 ### Význam polí
 id — jedinečné označení zprávy
