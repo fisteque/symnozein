@@ -31,8 +31,6 @@ Tento protokol popisuje první komunikační jazyk mezi ChatGPT/Noemou, GitHubem
   }
 }
 
----
-
 ### Význam polí
 id — jedinečné označení zprávy
 type — druh zprávy
