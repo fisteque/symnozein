@@ -1,39 +1,39 @@
 # Bridge State Summary
 
-- Generated at: `2026-05-24T20:56:46.314803Z`
-- Inbox messages: `0`; latest: `(missing)`
-- Outbox messages: `3`; latest: `2026-05-24T201113Z_rpi5_cycle-error-outbound-sync.md`
-- Last processed message: `(none)`
-- Last processed status: `(none)`
-- Processed count: `0`
+- Generated at: `2026-05-24T21:46:32.364097Z`
+- Inbox messages: `1`; latest: `msg-20260524-task-001.md`
+- Outbox messages: `6`; latest: `2026-05-24T213745Z_rpi5_cycle-error-inbound-sync.md`
+- Last processed message: `msg-20260524-task-001`
+- Last processed status: `ok`
+- Processed count: `1`
 - Error count: `0`
 - Last error: `(none)`
 - Body awake: `True`
 - Body status: `normal_operation`
-- Body last heartbeat: `2026-05-24T20:56:44.031469+00:00`
-- Body watchdog last check: `2026-05-24T20:56:43.538868+00:00`
+- Body last heartbeat: `2026-05-24T21:46:24.225159+00:00`
+- Body watchdog last check: `2026-05-24T21:46:25.390846+00:00`
 
 ## Bridge Log Tail
 
 ```text
-[2026-05-24T20:56:46.251892Z] [INFO] Bridge root: /home/fiste/Noema/bridge
-[2026-05-24T20:56:46.252006Z] [INFO] Body root: /home/fiste/Noema/symnozein/body
-[2026-05-24T20:56:46.252602Z] [INFO] Body state unchanged: awake=True status=normal_operation
-[2026-05-24T20:56:46.253168Z] [WARN] Inbox messages directory does not exist: /home/fiste/Noema/symnozein/body/bridge/inbox/messages
-[2026-05-24T20:56:46.253282Z] [INFO] Inbox message files found: 0
-[2026-05-24T20:56:46.254762Z] [INFO] Pending message count this run: 0
-[2026-05-24T20:56:46.254874Z] [INFO] Pending message count remaining: 0
-[2026-05-24T20:56:46.254971Z] [INFO] Processed message count: 0
-[2026-05-24T20:56:46.255077Z] [INFO] === Bridge agent v2 end ===
-[2026-05-24T20:56:46.271709Z] [INFO] [cycle] [2026-05-24T20:56:46.251680Z] [INFO] === Bridge agent v2 start ===
-[2026-05-24T20:56:46.251892Z] [INFO] Bridge root: /home/fiste/Noema/bridge
-[2026-05-24T20:56:46.252006Z] [INFO] Body root: /home/fiste/Noema/symnozein/body
-[2026-05-24T20:56:46.252602Z] [INFO] Body state unchanged: awake=True status=normal_operation
-[2026-05-24T20:56:46.253168Z] [WARN] Inbox messages directory does not exist: /home/fiste/Noema/symnozein/body/bridge/inbox/messages
-[2026-05-24T20:56:46.253282Z] [INFO] Inbox message files found: 0
-[2026-05-24T20:56:46.254762Z] [INFO] Pending message count this run: 0
-[2026-05-24T20:56:46.254874Z] [INFO] Pending message count remaining: 0
-[2026-05-24T20:56:46.254971Z] [INFO] Processed message count: 0
-[2026-05-24T20:56:46.255077Z] [INFO] === Bridge agent v2 end ===
-[2026-05-24T20:56:46.272424Z] [INFO] [cycle] == write bridge summary ==
+[2026-05-24T21:46:32.296210Z] [INFO] Bridge root: /home/fiste/Noema/bridge
+[2026-05-24T21:46:32.296516Z] [INFO] Body root: /home/fiste/Noema/symnozein/body
+[2026-05-24T21:46:32.297284Z] [INFO] Body state unchanged: awake=True status=normal_operation
+[2026-05-24T21:46:32.299570Z] [INFO] Inbox message files found: 1
+[2026-05-24T21:46:32.300533Z] [INFO] Already processed: msg-20260524-task-001
+[2026-05-24T21:46:32.301979Z] [INFO] Pending message count this run: 0
+[2026-05-24T21:46:32.302105Z] [INFO] Pending message count remaining: 0
+[2026-05-24T21:46:32.302206Z] [INFO] Processed message count: 0
+[2026-05-24T21:46:32.302319Z] [INFO] === Bridge agent v2 end ===
+[2026-05-24T21:46:32.320348Z] [INFO] [cycle] [2026-05-24T21:46:32.295817Z] [INFO] === Bridge agent v2 start ===
+[2026-05-24T21:46:32.296210Z] [INFO] Bridge root: /home/fiste/Noema/bridge
+[2026-05-24T21:46:32.296516Z] [INFO] Body root: /home/fiste/Noema/symnozein/body
+[2026-05-24T21:46:32.297284Z] [INFO] Body state unchanged: awake=True status=normal_operation
+[2026-05-24T21:46:32.299570Z] [INFO] Inbox message files found: 1
+[2026-05-24T21:46:32.300533Z] [INFO] Already processed: msg-20260524-task-001
+[2026-05-24T21:46:32.301979Z] [INFO] Pending message count this run: 0
+[2026-05-24T21:46:32.302105Z] [INFO] Pending message count remaining: 0
+[2026-05-24T21:46:32.302206Z] [INFO] Processed message count: 0
+[2026-05-24T21:46:32.302319Z] [INFO] === Bridge agent v2 end ===
+[2026-05-24T21:46:32.321079Z] [INFO] [cycle] == write bridge summary ==
 ```

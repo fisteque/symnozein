@@ -3,6 +3,7 @@
 from __future__ import annotations
 
 import argparse
+import hashlib
 import json
 import os
 import subprocess
@@ -22,6 +23,7 @@ from bridge_sync_common import (
 
 SCRIPT_DIR = Path(__file__).resolve().parent
 AGENT_ID = "rpi5-bridge-cycle"
+CYCLE_ERROR_STATE = "cycle_error_state.json"
 
 
 def utc_now() -> datetime:
@@ -54,6 +56,39 @@ def write_cycle_state(runtime_root: Path, state: dict[str, object]) -> None:
     path = runtime_root / "state" / "bridge_cycle_state.json"
     text = json.dumps(state, ensure_ascii=False, indent=2, sort_keys=True) + "\n"
     atomic_write_text(path, text, runtime_root)
+
+
+def cycle_error_state_path(runtime_root: Path) -> Path:
+    return runtime_root / "state" / CYCLE_ERROR_STATE
+
+
+def load_cycle_error_state(runtime_root: Path) -> dict[str, object]:
+    path = cycle_error_state_path(runtime_root)
+    ensure_inside(path, runtime_root)
+    if not path.exists():
+        return {"version": 1}
+    try:
+        data = json.loads(path.read_text(encoding="utf-8"))
+    except json.JSONDecodeError:
+        return {"version": 1}
+    if not isinstance(data, dict):
+        return {"version": 1}
+    return data
+
+
+def save_cycle_error_state(runtime_root: Path, state: dict[str, object]) -> None:
+    path = cycle_error_state_path(runtime_root)
+    text = json.dumps(state, ensure_ascii=False, indent=2, sort_keys=True) + "\n"
+    atomic_write_text(path, text, runtime_root)
+
+
+def cycle_error_fingerprint(error: str, step: str | None) -> str:
+    payload = json.dumps(
+        {"step": step or "unknown", "error": error},
+        ensure_ascii=False,
+        sort_keys=True,
+    )
+    return hashlib.sha256(payload.encode("utf-8")).hexdigest()
 
 
 def sanitize_filename_part(value: str) -> str:
@@ -105,6 +140,62 @@ def write_cycle_error_outbox(runtime_root: Path, repo_root: Path, error: str, st
     )
     atomic_write_text(path, render_markdown_message(frontmatter, body), repo_root)
     return path
+
+
+def report_cycle_error_once(runtime_root: Path, repo_root: Path, error: str, step: str | None) -> Path | None:
+    fingerprint = cycle_error_fingerprint(error, step)
+    state = load_cycle_error_state(runtime_root)
+    if state.get("active_fingerprint") == fingerprint:
+        count = int(state.get("repeat_count", 1)) + 1
+        state.update(
+            {
+                "version": 1,
+                "status": "repeated",
+                "active_fingerprint": fingerprint,
+                "last_seen_at": utc_iso(),
+                "repeat_count": count,
+                "step": step or "unknown",
+                "error": error,
+            }
+        )
+        save_cycle_error_state(runtime_root, state)
+        cycle_log(
+            runtime_root,
+            f"Cycle error already reported for step={step or 'unknown'} repeat_count={count}",
+            level="WARN",
+        )
+        return None
+
+    outbox_path = write_cycle_error_outbox(runtime_root, repo_root, error, step)
+    state.update(
+        {
+            "version": 1,
+            "status": "active",
+            "active_fingerprint": fingerprint,
+            "first_seen_at": utc_iso(),
+            "last_seen_at": utc_iso(),
+            "repeat_count": 1,
+            "step": step or "unknown",
+            "error": error,
+            "outbox_path": str(outbox_path),
+        }
+    )
+    save_cycle_error_state(runtime_root, state)
+    return outbox_path
+
+
+def clear_cycle_error_state(runtime_root: Path) -> None:
+    state = load_cycle_error_state(runtime_root)
+    if state.get("active_fingerprint"):
+        state.update(
+            {
+                "version": 1,
+                "status": "cleared",
+                "cleared_at": utc_iso(),
+                "active_fingerprint": None,
+            }
+        )
+        save_cycle_error_state(runtime_root, state)
 
 
 def parse_args() -> argparse.Namespace:
@@ -224,6 +315,7 @@ def main() -> int:
             state["status"] = "ok"
             state["finished_at"] = utc_iso()
             write_cycle_state(runtime_root, state)
+            clear_cycle_error_state(runtime_root)
         return 0
     except SyncError as exc:
         error = str(exc)
@@ -234,8 +326,14 @@ def main() -> int:
         state["error"] = error
         try:
             write_cycle_state(runtime_root, state)
-            outbox_path = write_cycle_error_outbox(runtime_root, repo_root, error, str(state.get("last_step") or "unknown"))
-            cycle_log(runtime_root, f"Cycle error outbox written: {outbox_path}")
+            outbox_path = report_cycle_error_once(
+                runtime_root,
+                repo_root,
+                error,
+                str(state.get("last_step") or "unknown"),
+            )
+            if outbox_path is not None:
+                cycle_log(runtime_root, f"Cycle error outbox written: {outbox_path}")
         except Exception as error_exc:
             cycle_log(runtime_root, f"Failed to write cycle error state/outbox: {error_exc}", level="ERROR")
         print(f"WARN: {exc}", file=sys.stderr)

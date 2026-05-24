@@ -11,6 +11,7 @@ from pathlib import Path
 
 from bridge_sync_common import (
     FORBIDDEN_REPO_PATHS,
+    INBOX_MESSAGES,
     LOGS,
     OUTBOX_MESSAGES,
     SCRIPTS,
@@ -33,6 +34,7 @@ REPO_LOG_TAIL_NAME = "bridge_tail.log"
 LOG_TAIL = LOGS / REPO_LOG_TAIL_NAME
 LEGACY_REPO_LOG = LOGS / RUNTIME_LOG_NAME
 ALLOWED_REPO_PATHS = (OUTBOX_MESSAGES, LOG_TAIL, STATE_SUMMARY, SCRIPTS, LEGACY_REPO_LOG)
+LOCAL_ONLY_REPO_PATHS = (INBOX_MESSAGES,)
 LOG_ROTATE_MAX_LINES = 5000
 LOG_ROTATE_RETAIN_LINES = 3000
 LOG_TAIL_LINES = 300
@@ -201,8 +203,14 @@ def is_allowed_worktree_status_line(line: str) -> bool:
     name = line[3:] if len(line) > 2 and line[2] == " " else line[2:]
     if " -> " in name:
         old_name, new_name = name.split(" -> ", 1)
-        return is_allowed_staged_path(old_name) and is_allowed_staged_path(new_name)
-    return is_allowed_staged_path(name)
+        return is_allowed_worktree_path(old_name) and is_allowed_worktree_path(new_name)
+    return is_allowed_worktree_path(name)
+
+
+def is_allowed_worktree_path(name: str) -> bool:
+    path = Path(name)
+    allowed_paths = (*ALLOWED_REPO_PATHS, *LOCAL_ONLY_REPO_PATHS)
+    return any(path == allowed or allowed in path.parents for allowed in allowed_paths)
 
 
 def ensure_only_allowed_worktree_changes(repo_root: Path) -> None:
