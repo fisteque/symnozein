@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-24T20:29:12.628466Z",
+  "generated_at": "2026-05-24T20:29:43.381574Z",
   "source": {
     "script": "scripts/update_body_index.py",
     "workflow": ".github/workflows/update_body_index.yml"
@@ -54,8 +54,8 @@
     },
     {
       "path": "bridge/logs/bridge_tail.log",
-      "size": 22367,
-      "sha256": "2639190067ef52179880bc9abf1350dd26134a7ec27df85b4c806b11ed701e0c"
+      "size": 22266,
+      "sha256": "59d97891d3f0f657bd5c983e0b14dbf9ca311a2477c791d6dbc184af2ac91841"
     },
     {
       "path": "bridge/outbox/messages/2026-05-24T195155Z_rpi5_cycle-error-outbound-sync.md",
@@ -104,8 +104,8 @@
     },
     {
       "path": "bridge/scripts/bridge_sync_outbound.py",
-      "size": 12296,
-      "sha256": "d0ae80694fe9f70e9889960cccdf73fc62f3f51af0ba377d1e1b8cc6ecc8192d"
+      "size": 12696,
+      "sha256": "d6af14ad622b36dd68aaed18e049b05c4a376b1059e4acb9675558c1bfd0a77e"
     },
     {
       "path": "bridge/scripts/git_askpass.py",
@@ -185,7 +185,7 @@
     {
       "path": "bridge/state_summary/latest.md",
       "size": 2169,
-      "sha256": "e75bf952ea7541d999964b629f7b0540c98162b0ad096bc162a98f8f6a9762f3"
+      "sha256": "0714ac09ea5e037f2ef085bcbfc3acd869a10075a37e245a347f044181e1fc08"
     },
     {
       "path": "bridge_protocol_v1.md",
