@@ -235,7 +235,7 @@ def staged_allowed_paths(repo_root: Path) -> list[str]:
 
 
 def has_substantive_staged_change(repo_root: Path) -> bool:
-    quiet_paths = (repo_rel(LOG_TAIL), repo_rel(STATE_SUMMARY))
+    quiet_paths = (repo_rel(LOG_TAIL), repo_rel(LEGACY_REPO_LOG), repo_rel(STATE_SUMMARY))
     for path in staged_allowed_paths(repo_root):
         if not any(path == quiet or path.startswith(f"{quiet}/") for quiet in quiet_paths):
             return True
