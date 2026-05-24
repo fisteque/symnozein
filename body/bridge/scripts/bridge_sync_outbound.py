@@ -3,6 +3,7 @@
 from __future__ import annotations
 
 import argparse
+import os
 import shutil
 import sys
 from pathlib import Path
@@ -120,6 +121,14 @@ def show_pending(repo_root: Path) -> str:
     ).stdout.strip()
 
 
+def git_push_env() -> dict[str, str]:
+    env = os.environ.copy()
+    env["GIT_TERMINAL_PROMPT"] = "0"
+    if env.get("GITHUB_USER") and env.get("GITHUB_TOKEN"):
+        env["GIT_ASKPASS"] = str(Path(__file__).resolve().with_name("git_askpass.py"))
+    return env
+
+
 def main() -> int:
     args = parse_args()
     try:
@@ -159,7 +168,11 @@ def main() -> int:
         commit = run_git(repo_root, ["commit", "-m", COMMIT_MESSAGE])
         print_git_output(commit)
         print(f"Pushing to {args.remote} {args.branch}...")
-        push = run_git(repo_root, ["push", args.remote, f"HEAD:{args.branch}"])
+        push = run_git(
+            repo_root,
+            ["push", args.remote, f"HEAD:{args.branch}"],
+            env=git_push_env(),
+        )
         print_git_output(push)
         return 0
     except SyncError as exc:

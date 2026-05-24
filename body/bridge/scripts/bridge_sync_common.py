@@ -83,6 +83,7 @@ def run_git(
     *,
     check: bool = True,
     capture: bool = True,
+    env: dict[str, str] | None = None,
 ) -> subprocess.CompletedProcess[str]:
     cmd = ["git", "-C", str(repo_root), *args]
     try:
@@ -92,6 +93,7 @@ def run_git(
             text=True,
             stdout=subprocess.PIPE if capture else None,
             stderr=subprocess.PIPE if capture else None,
+            env=env,
         )
     except subprocess.CalledProcessError as exc:
         stderr = (exc.stderr or "").strip()
