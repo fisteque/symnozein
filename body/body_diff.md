@@ -5,6 +5,49 @@ Uchovává posledních **50** záznamů.
 
 ---
 
+## 2026-05-24T19:54:59.453579Z
+
+Zdroj změn:
+- skript: `scripts/update_body_index.py`
+- workflow: `.github/workflows/update_body_index.yml`
+
+➕ přidáno: **23**
+- `bridge/outbox/messages/2026-05-24T195155Z_rpi5_cycle-error-outbound-sync.md`
+- `bridge/scripts/bridge_agent_v2.py`
+- `bridge/scripts/bridge_cycle.py`
+- `bridge/scripts/bridge_cycle_lock.py`
+- `bridge/scripts/bridge_sync_common.py`
+- `bridge/scripts/bridge_sync_inbound.py`
+- `bridge/scripts/bridge_sync_outbound.py`
+- `bridge/scripts/git_askpass.py`
+- `bridge/scripts/legacy/bridge_agent.py`
+- `bridge/scripts/legacy/git_pull_inbox.sh`
+- `bridge/scripts/legacy/git_push_outbox.sh`
+- `bridge/scripts/legacy/git_sync_test.sh`
+- `bridge/scripts/legacy/sync_scripts_to_repo.sh`
+- `bridge/scripts/mirror_scripts_to_repo.py`
+- `bridge/scripts/sync_body_without_bridge.py`
+- `bridge/scripts/sync_symnozein_without_bridge.py`
+- `bridge/scripts/tasks/allowlist.json`
+- `bridge/scripts/tasks/example_task.py`
+- `bridge/scripts/tasks/mirror_scripts_to_repo_task.py`
+- `bridge/scripts/tasks/sync_body_without_bridge_task.py`
+- `bridge/scripts/tasks/sync_symnozein_without_bridge_task.py`
+- `bridge/scripts/write_bridge_summary.py`
+- `bridge/state_summary/latest.md`
+
+🔄 změněno: **1**
+- `bridge/logs/bridge.log`
+
+❌ odebráno: **5**
+- `bridge/scripts/bridge_agent.py`
+- `bridge/scripts/git_pull_inbox.sh`
+- `bridge/scripts/git_push_outbox.sh`
+- `bridge/scripts/git_sync_test.sh`
+- `bridge/scripts/sync_scripts_to_repo.sh`
+
+---
+
 ## 2026-05-22T22:05:21.070353Z
 
 Zdroj změn:
@@ -841,20 +884,3 @@ Zdroj změn:
 
 ❌ odebráno: **1**
 - `shared/anchors/navsteva_body.md`
-
----
-
-## 2026-04-04T12:03:06.447745Z
-
-Zdroj změn:
-- skript: `scripts/update_body_index.py`
-- workflow: `.github/workflows/update_body_index.yml`
-
-➕ přidáno: **0**
-- nic
-
-🔄 změněno: **1**
-- `dotek_reality.md`
-
-❌ odebráno: **0**
-- nic
