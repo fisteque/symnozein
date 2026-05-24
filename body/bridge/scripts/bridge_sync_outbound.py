@@ -28,9 +28,11 @@ from mirror_scripts_to_repo import mirror_scripts
 
 
 COMMIT_MESSAGE = "Sync RPi bridge outbound state"
-ALLOWED_REPO_PATHS = (OUTBOX_MESSAGES, LOGS, STATE_SUMMARY, SCRIPTS)
 RUNTIME_LOG_NAME = "bridge.log"
 REPO_LOG_TAIL_NAME = "bridge_tail.log"
+LOG_TAIL = LOGS / REPO_LOG_TAIL_NAME
+LEGACY_REPO_LOG = LOGS / RUNTIME_LOG_NAME
+ALLOWED_REPO_PATHS = (OUTBOX_MESSAGES, LOG_TAIL, STATE_SUMMARY, SCRIPTS, LEGACY_REPO_LOG)
 LOG_ROTATE_MAX_LINES = 5000
 LOG_ROTATE_RETAIN_LINES = 3000
 LOG_TAIL_LINES = 300
@@ -123,6 +125,12 @@ def mirror_log_tail(runtime_root: Path, repo_root: Path, *, dry_run: bool) -> in
     tail = lines[-LOG_TAIL_LINES:]
     text = "\n".join(tail) + ("\n" if tail else "")
     changed = write_if_changed(target, text, dry_run=dry_run)
+    legacy_repo_log = ensure_inside(repo_root / LEGACY_REPO_LOG, repo_root)
+    if legacy_repo_log.exists():
+        print(f"{'Would depublish' if dry_run else 'Depublishing'} legacy repo log {legacy_repo_log}")
+        if not dry_run:
+            legacy_repo_log.unlink()
+        changed = True
     if changed:
         return 1
     print(f"Log tail unchanged: {target}")
@@ -227,7 +235,7 @@ def staged_allowed_paths(repo_root: Path) -> list[str]:
 
 
 def has_substantive_staged_change(repo_root: Path) -> bool:
-    quiet_paths = (repo_rel(LOGS), repo_rel(STATE_SUMMARY))
+    quiet_paths = (repo_rel(LOG_TAIL), repo_rel(STATE_SUMMARY))
     for path in staged_allowed_paths(repo_root):
         if not any(path == quiet or path.startswith(f"{quiet}/") for quiet in quiet_paths):
             return True
