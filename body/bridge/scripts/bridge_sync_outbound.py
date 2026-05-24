@@ -6,6 +6,7 @@ import argparse
 import os
 import shutil
 import sys
+from datetime import UTC, datetime
 from pathlib import Path
 
 from bridge_sync_common import (
@@ -28,6 +29,15 @@ from mirror_scripts_to_repo import mirror_scripts
 
 COMMIT_MESSAGE = "Sync RPi bridge outbound state"
 ALLOWED_REPO_PATHS = (OUTBOX_MESSAGES, LOGS, STATE_SUMMARY, SCRIPTS)
+RUNTIME_LOG_NAME = "bridge.log"
+REPO_LOG_TAIL_NAME = "bridge_tail.log"
+LOG_ROTATE_MAX_LINES = 5000
+LOG_ROTATE_RETAIN_LINES = 3000
+LOG_TAIL_LINES = 300
+
+
+def utc_stamp() -> str:
+    return datetime.now(UTC).strftime("%Y%m%dT%H%M%SZ")
 
 
 def parse_args() -> argparse.Namespace:
@@ -67,10 +77,61 @@ def copy_tree_without_delete(source_root: Path, target_root: Path, *, dry_run: b
     return changed
 
 
+def write_if_changed(path: Path, text: str, *, dry_run: bool) -> bool:
+    if path.exists() and path.read_text(encoding="utf-8", errors="replace") == text:
+        return False
+    print(f"{'Would write' if dry_run else 'Writing'} {path}")
+    if not dry_run:
+        path.parent.mkdir(parents=True, exist_ok=True)
+        path.write_text(text, encoding="utf-8")
+    return True
+
+
+def rotate_runtime_log(runtime_root: Path, *, dry_run: bool) -> int:
+    log_path = runtime_root / "logs" / RUNTIME_LOG_NAME
+    ensure_inside(log_path, runtime_root)
+    if not log_path.exists():
+        return 0
+
+    lines = log_path.read_text(encoding="utf-8", errors="replace").splitlines()
+    if len(lines) <= LOG_ROTATE_MAX_LINES:
+        return 0
+
+    retain = lines[-LOG_ROTATE_RETAIN_LINES:]
+    archived = lines[: len(lines) - len(retain)]
+    archive_path = log_path.with_name(f"bridge-{utc_stamp()}-{len(archived)}-lines.log")
+    ensure_inside(archive_path, runtime_root)
+    print(
+        f"{'Would rotate' if dry_run else 'Rotating'} {log_path}: "
+        f"archive_lines={len(archived)} retain_lines={len(retain)}"
+    )
+    if not dry_run:
+        archive_path.write_text("\n".join(archived) + "\n", encoding="utf-8")
+        log_path.write_text("\n".join(retain) + "\n", encoding="utf-8")
+    return len(archived)
+
+
+def mirror_log_tail(runtime_root: Path, repo_root: Path, *, dry_run: bool) -> int:
+    rotate_runtime_log(runtime_root, dry_run=dry_run)
+    source = runtime_root / "logs" / RUNTIME_LOG_NAME
+    target_dir = ensure_inside(repo_root / LOGS, repo_root)
+    target = ensure_inside(target_dir / REPO_LOG_TAIL_NAME, target_dir)
+    if not source.exists():
+        print(f"Optional source missing, skipped: {source}")
+        return 0
+    lines = source.read_text(encoding="utf-8", errors="replace").splitlines()
+    tail = lines[-LOG_TAIL_LINES:]
+    text = "\n".join(tail) + ("\n" if tail else "")
+    changed = write_if_changed(target, text, dry_run=dry_run)
+    if changed:
+        return 1
+    print(f"Log tail unchanged: {target}")
+    return 0
+
+
 def mirror_outbound(runtime_root: Path, repo_root: Path, *, dry_run: bool) -> None:
     pairs = (
         (runtime_root / "outbox/messages", repo_root / OUTBOX_MESSAGES),
-        (runtime_root / "logs", repo_root / LOGS),
         (runtime_root / "state_summary", repo_root / STATE_SUMMARY),
     )
     for source, target in pairs:
@@ -81,6 +142,11 @@ def mirror_outbound(runtime_root: Path, repo_root: Path, *, dry_run: bool) -> No
         else:
             print(f"Optional source missing, skipped: {source}")
 
+    changed = mirror_log_tail(runtime_root, repo_root, dry_run=dry_run)
+    print(
+        f"Mirrored log tail {runtime_root / 'logs' / RUNTIME_LOG_NAME} -> "
+        f"{repo_root / LOGS / REPO_LOG_TAIL_NAME}. Changed files: {changed}"
+    )
     mirror_scripts(runtime_root, repo_root, dry_run=dry_run)
 
 
