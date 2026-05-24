@@ -1,3 +1,116 @@
+# Navštěva — 2026-05-24
+
+## Kontext
+Aktivní větev: bridge runtime / nerv těla
+
+Navštěva provedena po prvním úspěšném ostrém průchodu:
+GitHub inbox → RPi bridge → task → outbox → GitHub audit.
+
+Cílem návštěvy bylo ověřit:
+- zda bridge běží jako skutečný runtime,
+- zda GH už není jen návrh struktury,
+- a zda existuje první potvrzený reflex těla.
+
+---
+
+## Co z minulého stále platí
+
+- GitHub zůstává auditní kronikou, ne runtime autoritou.
+- RPi runtime je oddělený od repa.
+- bridge/scripts v runtime jsou zdroj schopností.
+- repo kopie bridge je otisk a audit.
+- navštěva slouží k návratu k realitě systému, ne k domýšlení.
+
+---
+
+## Co se změnilo
+
+Podle body_diff.md a body_index.json:
+
+- vznikl funkční bridge runtime:
+  - bridge_agent_v2.py
+  - bridge_cycle.py
+  - inbound/outbound sync
+  - task allowlist
+  - state_summary
+  - system rytmu přes cycle
+
+- bridge_cycle.py se stal orchestrátorem běhu:
+  inbound → agent → summary → outbound
+
+- vznikla capability vrstva:
+  - task_request
+  - task_result
+  - allowlist
+  - timeout
+  - audit tasků
+
+- první ostrý inbox message:
+  body/bridge/inbox/messages/msg-20260524-task-001.md
+
+- první potvrzený reflex:
+  body/bridge/outbox/messages/2026-05-24T213714Z_rpi5_task-result-msg-20260524-task-001.md
+
+Task example_task doběhl úspěšně:
+- exit_code: 0
+- timed_out: false
+- task_result publikován do GH auditní vrstvy
+
+---
+
+## Co se ukázalo jako důležité
+
+- Oddělení:
+  runtime ↔ audit ↔ nerv ↔ schopnosti
+  se ukázalo jako správný směr.
+
+- bridge už není jen transport.
+  Je to řízený nervový systém s auditní stopou.
+
+- legacy složka zachovala evoluci systému místo přepisování minulosti.
+
+- state_summary a bridge_tail.log umožňují orientaci bez čtení celého runtime logu.
+
+- první skutečný reflex prošel celým cyklem bez ručního zásahu.
+
+---
+
+## Aktuální stav větve
+
+Větev:
+bridge runtime / nerv těla
+
+Stav:
+funkční první reflex
+
+Poslední krok:
+example_task → task_result → GH audit
+
+Další smysluplný krok:
+- stabilizace rytmu
+- několik dní pozorování běhu
+- první reálné bezpečné tasky
+- až potom případné MCP / Custom Actions
+
+---
+
+## Míra důvěry
+
+🟢 Existuje běžící bridge runtime
+🟢 Inbox/outbox cyklus funguje
+🟢 Task allowlist funguje
+🟢 GH audit funguje
+🟡 Dlouhodobá stabilita zatím neověřena
+🟡 Reálné tasky zatím minimální
+🔴 Žádný kritický rozpor nezjištěn
+
+---
+
+Navštěva potvrzuje:
+už nejde o návrh mostu.
+
+Most vede první signály.
+
 navsteva: body
 datum: 2026-05-08
 
