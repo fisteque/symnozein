@@ -24,6 +24,7 @@ if not BODY_ROOT.exists():
 
 INBOX_DIR = BODY_ROOT / "bridge" / "inbox" / "messages"
 OUTBOX_DIR = BODY_ROOT / "bridge" / "outbox" / "messages"
+CODEX_OUTBOX_DIR = BODY_ROOT / "bridge" / "outbox" / "codex"
 STATE_DIR = BRIDGE_ROOT / "state"
 LOG_FILE = BRIDGE_ROOT / "logs" / "bridge.log"
 PROCESSED_FILE = STATE_DIR / "processed_messages.json"
@@ -298,6 +299,59 @@ def write_outbox_message(
     assert_inside(reply_path, OUTBOX_DIR)
     atomic_write_text(reply_path, render_markdown_message(frontmatter, body), OUTBOX_DIR)
     return reply_path
+
+
+def write_codex_needed(message: Message) -> Path:
+    ensure_dir(CODEX_OUTBOX_DIR)
+    assert_inside(CODEX_OUTBOX_DIR, BODY_ROOT)
+
+    now = utc_now()
+    message_id = message.message_id
+    codex_payload = message.frontmatter.get("codex")
+    question = None
+    if isinstance(codex_payload, dict) and isinstance(codex_payload.get("question"), str):
+        question = codex_payload["question"].strip()
+    if not question:
+        question = message.body.strip()
+    if not question:
+        raise ValueError("codex_request requires codex.question or non-empty message body")
+
+    frontmatter = {
+        "id": f"codex-needed-{now.strftime('%Y%m%d-%H%M%S')}-{sanitize_filename_part(message_id)}",
+        "type": "codex_needed",
+        "created_at": utc_iso(now),
+        "sender": AGENT_ID,
+        "target": "codex",
+        "reply_to": message_id,
+        "status": "pending_codex",
+        "requested_by": str(message.frontmatter.get("sender") or "noema"),
+        "source_message": relative_to_body(message.path),
+    }
+    body_lines = [
+        "# Codex Needed",
+        "",
+        f"- source_message_id: `{message_id}`",
+        f"- source_sender: `{message.frontmatter.get('sender')}`",
+        f"- source_created_at: `{message.frontmatter.get('created_at')}`",
+        "",
+        "## Question",
+        "",
+        question,
+        "",
+        "## Source Body",
+        "",
+        message.body.strip() or "(empty)",
+    ]
+
+    stamp = now.strftime("%Y-%m-%dT%H%M%SZ")
+    path = CODEX_OUTBOX_DIR / f"{stamp}_codex-needed-{sanitize_filename_part(message_id)}.md"
+    counter = 1
+    while path.exists():
+        path = CODEX_OUTBOX_DIR / f"{path.stem}-{counter}{path.suffix}"
+        counter += 1
+    assert_inside(path, CODEX_OUTBOX_DIR)
+    atomic_write_text(path, render_markdown_message(frontmatter, "\n".join(body_lines)), CODEX_OUTBOX_DIR)
+    return path
 
 
 def ack_frontmatter(message: Message, now: datetime) -> dict[str, Any]:
@@ -823,6 +877,9 @@ def process_inbox() -> int:
                 run = run_allowlisted_task(message)
                 reply_path = write_task_result(message, run)
                 status = "ok" if run.get("status") == "ok" else "error"
+            elif message_type == "codex_request":
+                reply_path = write_codex_needed(message)
+                status = "pending_codex"
             else:
                 reply_path = write_ack(message)
                 status = "ok"

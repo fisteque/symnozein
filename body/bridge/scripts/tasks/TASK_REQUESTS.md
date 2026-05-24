@@ -46,6 +46,43 @@ Valid targets are:
 - `rpi5-bridge-agent`
 - `rpi5-bridge`
 
+## Codex Requests
+
+Use `codex_request` when Noema needs Codex to inspect or answer something later.
+The bridge agent does not call Codex and does not execute a task. It only creates
+a pending item in:
+
+```text
+/home/fiste/Noema/symnozein/body/bridge/outbox/codex/
+```
+
+Example:
+
+```markdown
+---
+id: msg-20260525-codex-001
+type: codex_request
+created_at: 2026-05-25T00:20:00Z
+sender: noema
+target: rpi5-bridge-agent
+codex:
+  question: "Zkontroluj prosim posledni bridge error a navrhni opravu."
+---
+
+Kontext pro Codex muze byt tady v tele zpravy.
+```
+
+The generated pending item uses:
+
+```yaml
+type: codex_needed
+target: codex
+status: pending_codex
+```
+
+Codex responses are written manually later as outbox messages with
+`author: Codex`. The bridge agent must not pretend to be Codex.
+
 ## Execution Rules
 
 The agent accepts a task only when all of these are true:
