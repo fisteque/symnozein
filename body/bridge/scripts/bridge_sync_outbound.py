@@ -179,6 +179,13 @@ def ensure_no_disallowed_staged_paths(repo_root: Path) -> None:
         )
 
 
+def path_exists_or_tracked(repo_root: Path, path: Path) -> bool:
+    if (repo_root / path).exists():
+        return True
+    result = run_git(repo_root, ["ls-files", "--error-unmatch", repo_rel(path)], check=False)
+    return result.returncode == 0
+
+
 def working_tree_status(repo_root: Path) -> str:
     return run_git(repo_root, ["status", "--porcelain"]).stdout.strip()
 
@@ -208,13 +215,13 @@ def ensure_only_allowed_worktree_changes(repo_root: Path) -> None:
 
 
 def stage_allowed_paths(repo_root: Path) -> None:
-    existing = [path for path in ALLOWED_REPO_PATHS if (repo_root / path).exists()]
+    existing = [path for path in ALLOWED_REPO_PATHS if path_exists_or_tracked(repo_root, path)]
     if existing:
         run_git(repo_root, ["add", "--", *[repo_rel(path) for path in existing]])
 
 
 def show_pending(repo_root: Path) -> str:
-    existing = [path for path in ALLOWED_REPO_PATHS if (repo_root / path).exists()]
+    existing = [path for path in ALLOWED_REPO_PATHS if path_exists_or_tracked(repo_root, path)]
     if not existing:
         return ""
     return run_git(
@@ -224,7 +231,7 @@ def show_pending(repo_root: Path) -> str:
 
 
 def staged_allowed_paths(repo_root: Path) -> list[str]:
-    existing = [path for path in ALLOWED_REPO_PATHS if (repo_root / path).exists()]
+    existing = [path for path in ALLOWED_REPO_PATHS if path_exists_or_tracked(repo_root, path)]
     if not existing:
         return []
     output = run_git(
@@ -243,7 +250,7 @@ def has_substantive_staged_change(repo_root: Path) -> bool:
 
 
 def unstage_allowed_paths(repo_root: Path) -> None:
-    existing = [path for path in ALLOWED_REPO_PATHS if (repo_root / path).exists()]
+    existing = [path for path in ALLOWED_REPO_PATHS if path_exists_or_tracked(repo_root, path)]
     if existing:
         run_git(repo_root, ["restore", "--staged", "--", *[repo_rel(path) for path in existing]])
 
