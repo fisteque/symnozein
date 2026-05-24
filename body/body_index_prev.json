@@ -1,11 +1,11 @@
 {
-  "generated_at": "2026-05-22T22:05:21.070353Z",
+  "generated_at": "2026-05-24T19:54:59.453579Z",
   "source": {
     "script": "scripts/update_body_index.py",
     "workflow": ".github/workflows/update_body_index.yml"
   },
   "kind": "state",
-  "count": 29,
+  "count": 47,
   "files": [
     {
       "path": "Prvni_kroky.md",
@@ -49,8 +49,13 @@
     },
     {
       "path": "bridge/logs/bridge.log",
-      "size": 752,
-      "sha256": "d9f9db1721d61c4b265ad5e946adcd25b8fbaf7ac3bd4a04b3cfe99b69f13e74"
+      "size": 333051,
+      "sha256": "b9db77b49fb46438e76701a3bb690a7305b61fc6a9f36dfb589d275c0c216aee"
+    },
+    {
+      "path": "bridge/outbox/messages/2026-05-24T195155Z_rpi5_cycle-error-outbound-sync.md",
+      "size": 295,
+      "sha256": "e476d4c950280c996d3b317bd39f56fa13032b87dec282f1e8c68f1165dfb112"
     },
     {
       "path": "bridge/outbox/outbox.json",
@@ -58,29 +63,114 @@
       "sha256": "e20fe977adeb942811cf1d222b3056a8c561c25bbcaa297e0332f428276f9a48"
     },
     {
-      "path": "bridge/scripts/bridge_agent.py",
+      "path": "bridge/scripts/bridge_agent_v2.py",
+      "size": 28832,
+      "sha256": "7f388e308503212223d7d7e66845421f4899546e6d862b43273ad15b11cf63d1"
+    },
+    {
+      "path": "bridge/scripts/bridge_cycle.py",
+      "size": 8195,
+      "sha256": "5b3a06f6b6c39541948f2c80bd750232e5e2a511901ad5d9c65647e39d44f4de"
+    },
+    {
+      "path": "bridge/scripts/bridge_cycle_lock.py",
+      "size": 3066,
+      "sha256": "4aa4d20079baa868f3dcf205dfcd088e09fcb02ba6b580f5afa4cd2ed244c4b1"
+    },
+    {
+      "path": "bridge/scripts/bridge_sync_common.py",
+      "size": 4827,
+      "sha256": "62b69fd5e5b9e265aab69b43059ebb42a29e9f9060fb03c3c88a163a88330a87"
+    },
+    {
+      "path": "bridge/scripts/bridge_sync_inbound.py",
+      "size": 2209,
+      "sha256": "1a923533c71b997fff6666707b0e855c8deebfaba9d13317d2c8781bd2bb7ddd"
+    },
+    {
+      "path": "bridge/scripts/bridge_sync_outbound.py",
+      "size": 5975,
+      "sha256": "96ccc09006569f753a7e271c8458350d9f847654aa408b92cf62400396412d79"
+    },
+    {
+      "path": "bridge/scripts/git_askpass.py",
+      "size": 408,
+      "sha256": "2f767e6e3a0af2546dd03d3f985f9f9382cd70d6ab0792b7553c16a8026ea295"
+    },
+    {
+      "path": "bridge/scripts/legacy/bridge_agent.py",
       "size": 2023,
       "sha256": "99aca0f55b7c731d42e194e65cdcb07cf2fe5bb06be0c986668ee8e3c14d4487"
     },
     {
-      "path": "bridge/scripts/git_pull_inbox.sh",
+      "path": "bridge/scripts/legacy/git_pull_inbox.sh",
       "size": 383,
       "sha256": "b05c0dea1ad498a181807f4307b8f6687e86ae688aeaf470482581f6eccdb8a7"
     },
     {
-      "path": "bridge/scripts/git_push_outbox.sh",
+      "path": "bridge/scripts/legacy/git_push_outbox.sh",
       "size": 924,
       "sha256": "ca4ef50bc7c0cf3b98becb417cfce950ececfb48db3ac10415e85e6bfe3c001c"
     },
     {
-      "path": "bridge/scripts/git_sync_test.sh",
+      "path": "bridge/scripts/legacy/git_sync_test.sh",
       "size": 170,
       "sha256": "251a3af83444137d5ea0f11b9ecda63da4e47b0aa41a27c1c877093c8621b396"
     },
     {
-      "path": "bridge/scripts/sync_scripts_to_repo.sh",
+      "path": "bridge/scripts/legacy/sync_scripts_to_repo.sh",
       "size": 677,
       "sha256": "09bae64581b0cb66194731d4685b17338e80f53b7c2406ccf69c00021c2221b7"
+    },
+    {
+      "path": "bridge/scripts/mirror_scripts_to_repo.py",
+      "size": 2670,
+      "sha256": "cb8c955e9c49391a77f2cf509bd110469fb36350c8ed9bf561b5217a8d548585"
+    },
+    {
+      "path": "bridge/scripts/sync_body_without_bridge.py",
+      "size": 2653,
+      "sha256": "a5d22108e17a5d0e212e3259c6f40bb4abe2063ada75f77584dba1459f04d770"
+    },
+    {
+      "path": "bridge/scripts/sync_symnozein_without_bridge.py",
+      "size": 2827,
+      "sha256": "45b0b0abcae950dd1f3a9c496305e2acfc0c11678fd5951de64dbe0560b9ded2"
+    },
+    {
+      "path": "bridge/scripts/tasks/allowlist.json",
+      "size": 855,
+      "sha256": "afe891b5d6082c2b5dd5332ff98d31cf736af0367501144b25e374c9537fe10e"
+    },
+    {
+      "path": "bridge/scripts/tasks/example_task.py",
+      "size": 513,
+      "sha256": "9a2442d335f7a8c18f6d0260fc95a08966b658013de664df452f8a131ba07e09"
+    },
+    {
+      "path": "bridge/scripts/tasks/mirror_scripts_to_repo_task.py",
+      "size": 1831,
+      "sha256": "b42cfaa12ea226938a39d0320dbd427b3ecd18ded6b3b7fe66e85e65e21237d0"
+    },
+    {
+      "path": "bridge/scripts/tasks/sync_body_without_bridge_task.py",
+      "size": 2427,
+      "sha256": "0dd573983b9a45f4a8e1d92600047476e5ddfe513709950a78ba2eff0a3dacf4"
+    },
+    {
+      "path": "bridge/scripts/tasks/sync_symnozein_without_bridge_task.py",
+      "size": 2452,
+      "sha256": "f6a2d10bcc025d530e08dd269d576804df21cc3d4d5ef986fcf5e7b56cf89f83"
+    },
+    {
+      "path": "bridge/scripts/write_bridge_summary.py",
+      "size": 5555,
+      "sha256": "f24b7c5845ba8674d6651579cd35fc597cc225373c9d6492588fc76d857d7ac6"
+    },
+    {
+      "path": "bridge/state_summary/latest.md",
+      "size": 2169,
+      "sha256": "961f394565b5466314274b1b5a0e1e915757e0371cf7cbb0883929ad18a2238b"
     },
     {
       "path": "bridge_protocol_v1.md",
