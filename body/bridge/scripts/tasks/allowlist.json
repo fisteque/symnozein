@@ -1,0 +1,25 @@
+{
+  "version": 1,
+  "tasks": {
+    "example_task": {
+      "description": "Minimal safe smoke-test task. Echoes received arguments.",
+      "script": "example_task.py",
+      "timeout_seconds": 10
+    },
+    "mirror_scripts_to_repo": {
+      "description": "Mirror local bridge/scripts into symnozein/body/bridge/scripts without deleting repo files.",
+      "script": "mirror_scripts_to_repo_task.py",
+      "timeout_seconds": 20
+    },
+    "sync_body_without_bridge": {
+      "description": "Fetch and restore body/ content except body/bridge.",
+      "script": "sync_body_without_bridge_task.py",
+      "timeout_seconds": 30
+    },
+    "sync_symnozein_without_bridge": {
+      "description": "Fetch and restore symnozein repo content except body/bridge.",
+      "script": "sync_symnozein_without_bridge_task.py",
+      "timeout_seconds": 30
+    }
+  }
+}
