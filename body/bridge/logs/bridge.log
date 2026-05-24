@@ -4675,3 +4675,63 @@ No inbound changes for body/bridge/inbox/messages.
 [2026-05-24T19:56:00.920031Z] [INFO] [cycle] == write bridge summary ==
 [2026-05-24T19:56:00.978195Z] [INFO] [cycle] Wrote bridge summary: /home/fiste/Noema/symnozein/body/bridge/state_summary/latest.md
 [2026-05-24T19:56:00.978888Z] [INFO] [cycle] == outbound sync ==
+[2026-05-24T19:56:01.589050Z] [INFO] [cycle] Mirrored /home/fiste/Noema/bridge/outbox/messages -> /home/fiste/Noema/symnozein/body/bridge/outbox/messages. Changed files: 0
+Copying /home/fiste/Noema/bridge/logs/bridge.log -> /home/fiste/Noema/symnozein/body/bridge/logs/bridge.log
+Mirrored /home/fiste/Noema/bridge/logs -> /home/fiste/Noema/symnozein/body/bridge/logs. Changed files: 1
+Optional source missing, skipped: /home/fiste/Noema/bridge/state_summary
+Scripts mirror complete. Changed files: 0
+Staged outbound changes:
+M	body/bridge/logs/bridge.log
+M	body/bridge/scripts/bridge_sync_outbound.py
+M	body/bridge/state_summary/latest.md
+Commit message in code: Sync RPi bridge outbound state
+Committing outbound changes...
+[main 04aba67] Sync RPi bridge outbound state
+ 3 files changed, 99 insertions(+), 23 deletions(-)
+Pushing to origin main...
+[2026-05-24T19:56:01.589229Z] [ERROR] [cycle] ERROR: Git command failed: git -C /home/fiste/Noema/symnozein push origin HEAD:main
+To https://github.com/fisteque/symnozein.git
+ ! [rejected]        HEAD -> main (non-fast-forward)
+error: failed to push some refs to 'https://github.com/fisteque/symnozein.git'
+hint: Updates were rejected because the tip of your current branch is behind
+hint: its remote counterpart. Integrate the remote changes (e.g.
+hint: 'git pull ...') before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+[2026-05-24T19:56:01.589900Z] [ERROR] [cycle] Step failed (outbound sync) with exit code 2
+[2026-05-24T19:56:01.591997Z] [ERROR] [cycle] Traceback (most recent call last):
+  File "/home/fiste/Noema/bridge/scripts/bridge_cycle.py", line 220, in main
+    run_step(runtime_root, "outbound sync", outbound)
+  File "/home/fiste/Noema/bridge/scripts/bridge_cycle.py", line 148, in run_step
+    raise SyncError(f"Step failed ({name}) with exit code {result.returncode}")
+bridge_sync_common.SyncError: Step failed (outbound sync) with exit code 2
+[2026-05-24T19:56:01.607489Z] [INFO] [cycle] Cycle error outbox written: /home/fiste/Noema/symnozein/body/bridge/outbox/messages/2026-05-24T195601Z_rpi5_cycle-error-outbound-sync.md
+[2026-05-24T20:04:22.217059Z] [INFO] [cycle] Bridge cycle lock acquired: /home/fiste/Noema/bridge/state/bridge_cycle.lock.json
+[2026-05-24T20:04:22.218697Z] [INFO] [cycle] == inbound sync ==
+[2026-05-24T20:04:22.655633Z] [INFO] [cycle] Fetching origin main...
+From https://github.com/fisteque/symnozein
+ * branch            main       -> FETCH_HEAD
+No inbound changes for body/bridge/inbox/messages.
+[2026-05-24T20:04:22.656336Z] [INFO] [cycle] == bridge agent ==
+[2026-05-24T20:04:22.723937Z] [INFO] === Bridge agent v2 start ===
+[2026-05-24T20:04:22.724148Z] [INFO] Bridge root: /home/fiste/Noema/bridge
+[2026-05-24T20:04:22.724266Z] [INFO] Body root: /home/fiste/Noema/symnozein/body
+[2026-05-24T20:04:22.724861Z] [INFO] Body state unchanged: awake=True status=normal_operation
+[2026-05-24T20:04:22.725435Z] [WARN] Inbox messages directory does not exist: /home/fiste/Noema/symnozein/body/bridge/inbox/messages
+[2026-05-24T20:04:22.725554Z] [INFO] Inbox message files found: 0
+[2026-05-24T20:04:22.727873Z] [INFO] Pending message count this run: 0
+[2026-05-24T20:04:22.727989Z] [INFO] Pending message count remaining: 0
+[2026-05-24T20:04:22.728092Z] [INFO] Processed message count: 0
+[2026-05-24T20:04:22.728187Z] [INFO] === Bridge agent v2 end ===
+[2026-05-24T20:04:22.744773Z] [INFO] [cycle] [2026-05-24T20:04:22.723937Z] [INFO] === Bridge agent v2 start ===
+[2026-05-24T20:04:22.724148Z] [INFO] Bridge root: /home/fiste/Noema/bridge
+[2026-05-24T20:04:22.724266Z] [INFO] Body root: /home/fiste/Noema/symnozein/body
+[2026-05-24T20:04:22.724861Z] [INFO] Body state unchanged: awake=True status=normal_operation
+[2026-05-24T20:04:22.725435Z] [WARN] Inbox messages directory does not exist: /home/fiste/Noema/symnozein/body/bridge/inbox/messages
+[2026-05-24T20:04:22.725554Z] [INFO] Inbox message files found: 0
+[2026-05-24T20:04:22.727873Z] [INFO] Pending message count this run: 0
+[2026-05-24T20:04:22.727989Z] [INFO] Pending message count remaining: 0
+[2026-05-24T20:04:22.728092Z] [INFO] Processed message count: 0
+[2026-05-24T20:04:22.728187Z] [INFO] === Bridge agent v2 end ===
+[2026-05-24T20:04:22.745461Z] [INFO] [cycle] == write bridge summary ==
+[2026-05-24T20:04:22.800507Z] [INFO] [cycle] Wrote bridge summary: /home/fiste/Noema/symnozein/body/bridge/state_summary/latest.md
+[2026-05-24T20:04:22.801215Z] [INFO] [cycle] == outbound sync ==
