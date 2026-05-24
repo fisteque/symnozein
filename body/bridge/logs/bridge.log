@@ -4622,3 +4622,56 @@ No inbound changes for body/bridge/inbox/messages.
 [2026-05-24T19:54:49.208174Z] [INFO] [cycle] == write bridge summary ==
 [2026-05-24T19:54:49.266557Z] [INFO] [cycle] Wrote bridge summary: /home/fiste/Noema/symnozein/body/bridge/state_summary/latest.md
 [2026-05-24T19:54:49.267263Z] [INFO] [cycle] == outbound sync ==
+[2026-05-24T19:54:50.825513Z] [INFO] [cycle] Mirrored /home/fiste/Noema/bridge/outbox/messages -> /home/fiste/Noema/symnozein/body/bridge/outbox/messages. Changed files: 0
+Copying /home/fiste/Noema/bridge/logs/bridge.log -> /home/fiste/Noema/symnozein/body/bridge/logs/bridge.log
+Mirrored /home/fiste/Noema/bridge/logs -> /home/fiste/Noema/symnozein/body/bridge/logs. Changed files: 1
+Optional source missing, skipped: /home/fiste/Noema/bridge/state_summary
+Scripts mirror complete. Changed files: 0
+Staged outbound changes:
+M	body/bridge/logs/bridge.log
+A	body/bridge/outbox/messages/2026-05-24T195155Z_rpi5_cycle-error-outbound-sync.md
+M	body/bridge/scripts/bridge_sync_common.py
+M	body/bridge/scripts/bridge_sync_outbound.py
+A	body/bridge/scripts/git_askpass.py
+M	body/bridge/state_summary/latest.md
+Commit message in code: Sync RPi bridge outbound state
+Committing outbound changes...
+[main 4b02022] Sync RPi bridge outbound state
+ 6 files changed, 170 insertions(+), 25 deletions(-)
+ create mode 100644 body/bridge/outbox/messages/2026-05-24T195155Z_rpi5_cycle-error-outbound-sync.md
+ create mode 100755 body/bridge/scripts/git_askpass.py
+Pushing to origin main...
+To https://github.com/fisteque/symnozein.git
+   f616370..4b02022  HEAD -> main
+[2026-05-24T19:54:50.825700Z] [INFO] [cycle] Bridge cycle complete.
+[2026-05-24T19:56:00.161581Z] [INFO] [cycle] Bridge cycle lock acquired: /home/fiste/Noema/bridge/state/bridge_cycle.lock.json
+[2026-05-24T19:56:00.164664Z] [INFO] [cycle] == inbound sync ==
+[2026-05-24T19:56:00.800672Z] [INFO] [cycle] Fetching origin main...
+From https://github.com/fisteque/symnozein
+ * branch            main       -> FETCH_HEAD
+   4b02022..b18b4df  main       -> origin/main
+No inbound changes for body/bridge/inbox/messages.
+[2026-05-24T19:56:00.801556Z] [INFO] [cycle] == bridge agent ==
+[2026-05-24T19:56:00.896225Z] [INFO] === Bridge agent v2 start ===
+[2026-05-24T19:56:00.896453Z] [INFO] Bridge root: /home/fiste/Noema/bridge
+[2026-05-24T19:56:00.896585Z] [INFO] Body root: /home/fiste/Noema/symnozein/body
+[2026-05-24T19:56:00.897204Z] [INFO] Body state unchanged: awake=True status=normal_operation
+[2026-05-24T19:56:00.897806Z] [WARN] Inbox messages directory does not exist: /home/fiste/Noema/symnozein/body/bridge/inbox/messages
+[2026-05-24T19:56:00.897929Z] [INFO] Inbox message files found: 0
+[2026-05-24T19:56:00.901044Z] [INFO] Pending message count this run: 0
+[2026-05-24T19:56:00.901201Z] [INFO] Pending message count remaining: 0
+[2026-05-24T19:56:00.901313Z] [INFO] Processed message count: 0
+[2026-05-24T19:56:00.901414Z] [INFO] === Bridge agent v2 end ===
+[2026-05-24T19:56:00.919357Z] [INFO] [cycle] [2026-05-24T19:56:00.896225Z] [INFO] === Bridge agent v2 start ===
+[2026-05-24T19:56:00.896453Z] [INFO] Bridge root: /home/fiste/Noema/bridge
+[2026-05-24T19:56:00.896585Z] [INFO] Body root: /home/fiste/Noema/symnozein/body
+[2026-05-24T19:56:00.897204Z] [INFO] Body state unchanged: awake=True status=normal_operation
+[2026-05-24T19:56:00.897806Z] [WARN] Inbox messages directory does not exist: /home/fiste/Noema/symnozein/body/bridge/inbox/messages
+[2026-05-24T19:56:00.897929Z] [INFO] Inbox message files found: 0
+[2026-05-24T19:56:00.901044Z] [INFO] Pending message count this run: 0
+[2026-05-24T19:56:00.901201Z] [INFO] Pending message count remaining: 0
+[2026-05-24T19:56:00.901313Z] [INFO] Processed message count: 0
+[2026-05-24T19:56:00.901414Z] [INFO] === Bridge agent v2 end ===
+[2026-05-24T19:56:00.920031Z] [INFO] [cycle] == write bridge summary ==
+[2026-05-24T19:56:00.978195Z] [INFO] [cycle] Wrote bridge summary: /home/fiste/Noema/symnozein/body/bridge/state_summary/latest.md
+[2026-05-24T19:56:00.978888Z] [INFO] [cycle] == outbound sync ==

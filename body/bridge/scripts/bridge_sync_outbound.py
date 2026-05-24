@@ -121,6 +121,25 @@ def show_pending(repo_root: Path) -> str:
     ).stdout.strip()
 
 
+def staged_allowed_paths(repo_root: Path) -> list[str]:
+    existing = [path for path in ALLOWED_REPO_PATHS if (repo_root / path).exists()]
+    if not existing:
+        return []
+    output = run_git(
+        repo_root,
+        ["diff", "--cached", "--name-only", "--", *[repo_rel(path) for path in existing]],
+    ).stdout
+    return [line for line in output.splitlines() if line]
+
+
+def has_substantive_staged_change(repo_root: Path) -> bool:
+    quiet_paths = (repo_rel(LOGS), repo_rel(STATE_SUMMARY))
+    for path in staged_allowed_paths(repo_root):
+        if not any(path == quiet or path.startswith(f"{quiet}/") for quiet in quiet_paths):
+            return True
+    return False
+
+
 def git_push_env() -> dict[str, str]:
     env = os.environ.copy()
     env["GIT_TERMINAL_PROMPT"] = "0"
@@ -157,6 +176,10 @@ def main() -> int:
 
         if not pending:
             print("Nothing to commit or push.")
+            return 0
+
+        if args.commit_and_push and not has_substantive_staged_change(repo_root):
+            print("Only logs/state_summary changed; leaving them staged for the next substantive outbound change.")
             return 0
 
         print(f"Commit message in code: {COMMIT_MESSAGE}")
