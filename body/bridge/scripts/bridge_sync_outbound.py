@@ -36,10 +36,15 @@ ALLOWED_REPO_PATHS = (OUTBOX_MESSAGES, LOG_TAIL, STATE_SUMMARY, SCRIPTS, LEGACY_
 LOG_ROTATE_MAX_LINES = 5000
 LOG_ROTATE_RETAIN_LINES = 3000
 LOG_TAIL_LINES = 300
+LOG_ARCHIVE_DIR = "archive"
 
 
 def utc_stamp() -> str:
     return datetime.now(UTC).strftime("%Y%m%dT%H%M%SZ")
+
+
+def utc_month() -> str:
+    return datetime.now(UTC).strftime("%Y-%m")
 
 
 def parse_args() -> argparse.Namespace:
@@ -101,13 +106,15 @@ def rotate_runtime_log(runtime_root: Path, *, dry_run: bool) -> int:
 
     retain = lines[-LOG_ROTATE_RETAIN_LINES:]
     archived = lines[: len(lines) - len(retain)]
-    archive_path = log_path.with_name(f"bridge-{utc_stamp()}-{len(archived)}-lines.log")
+    archive_dir = log_path.parent / LOG_ARCHIVE_DIR / utc_month()
+    archive_path = archive_dir / f"bridge-{utc_stamp()}-{len(archived)}-lines.log"
     ensure_inside(archive_path, runtime_root)
     print(
         f"{'Would rotate' if dry_run else 'Rotating'} {log_path}: "
-        f"archive_lines={len(archived)} retain_lines={len(retain)}"
+        f"archive={archive_path} archive_lines={len(archived)} retain_lines={len(retain)}"
     )
     if not dry_run:
+        archive_path.parent.mkdir(parents=True, exist_ok=True)
         archive_path.write_text("\n".join(archived) + "\n", encoding="utf-8")
         log_path.write_text("\n".join(retain) + "\n", encoding="utf-8")
     return len(archived)
