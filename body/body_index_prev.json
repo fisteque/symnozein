@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-24T21:46:42.756760Z",
+  "generated_at": "2026-05-24T22:36:00.670215Z",
   "source": {
     "script": "scripts/update_body_index.py",
     "workflow": ".github/workflows/update_body_index.yml"
@@ -54,8 +54,8 @@
     },
     {
       "path": "bridge/logs/bridge_tail.log",
-      "size": 25591,
-      "sha256": "05bbbbaefc43512c6a07c7840a56101e6a17c45e0f2abff86ea193ac1c53af03"
+      "size": 21297,
+      "sha256": "7ee7b0a176d97a41fdc4aae4294aaeafaca025667253c2cdb0bd224fb5bab1ee"
     },
     {
       "path": "bridge/outbox/messages/2026-05-24T195155Z_rpi5_cycle-error-outbound-sync.md",
@@ -94,8 +94,8 @@
     },
     {
       "path": "bridge/scripts/bridge_agent_v2.py",
-      "size": 28832,
-      "sha256": "7f388e308503212223d7d7e66845421f4899546e6d862b43273ad15b11cf63d1"
+      "size": 30921,
+      "sha256": "129c0fd3e68c759f1f6998348f26d4e7a1c66aa50ce199d8ce7f5b9975c22af6"
     },
     {
       "path": "bridge/scripts/bridge_cycle.py",
@@ -109,8 +109,8 @@
     },
     {
       "path": "bridge/scripts/bridge_sync_common.py",
-      "size": 4827,
-      "sha256": "62b69fd5e5b9e265aab69b43059ebb42a29e9f9060fb03c3c88a163a88330a87"
+      "size": 4876,
+      "sha256": "6a56d4c9b901255b5534e64e910d485f70de6a3cfc1b9225ef862dd63dcc2719"
     },
     {
       "path": "bridge/scripts/bridge_sync_inbound.py",
@@ -119,8 +119,8 @@
     },
     {
       "path": "bridge/scripts/bridge_sync_outbound.py",
-      "size": 13564,
-      "sha256": "d61fdba15e1114c7bd3444d4b0f538c1a016d4d83c4a45b6dbd26f32f24ad1e1"
+      "size": 13596,
+      "sha256": "bceebd89085317324603e4fe415f1fee4bb3a575e2bc6d94b51635b6d9cd116b"
     },
     {
       "path": "bridge/scripts/git_askpass.py",
@@ -169,8 +169,8 @@
     },
     {
       "path": "bridge/scripts/tasks/TASK_REQUESTS.md",
-      "size": 4368,
-      "sha256": "095fdaaa643becd9a989924966540642546136d7f5a515a9ffe61423aa7902b3"
+      "size": 5153,
+      "sha256": "9d1514d2b5e62932c959e3a7d4fac77093047ce0a4c9abada24ad9f3c4c51716"
     },
     {
       "path": "bridge/scripts/tasks/allowlist.json",
@@ -205,7 +205,7 @@
     {
       "path": "bridge/state_summary/latest.md",
       "size": 2084,
-      "sha256": "3afa721934a2047e07c70b633c50ba9cc3e53a983ed6632cd6e2cff78a18508e"
+      "sha256": "bf6d312b8588013281ac3863e28fe1a1cb82aabc46d14d91d7834018c72171b1"
     },
     {
       "path": "bridge_protocol_v1.md",
