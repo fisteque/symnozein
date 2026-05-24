@@ -1,11 +1,11 @@
 {
-  "generated_at": "2026-05-24T22:42:53.247241Z",
+  "generated_at": "2026-05-24T22:52:27.710896Z",
   "source": {
     "script": "scripts/update_body_index.py",
     "workflow": ".github/workflows/update_body_index.yml"
   },
   "kind": "state",
-  "count": 54,
+  "count": 56,
   "files": [
     {
       "path": "Prvni_kroky.md",
@@ -55,7 +55,7 @@
     {
       "path": "bridge/logs/bridge_tail.log",
       "size": 21297,
-      "sha256": "7ee7b0a176d97a41fdc4aae4294aaeafaca025667253c2cdb0bd224fb5bab1ee"
+      "sha256": "ced5aaa222a9cb285948e9be30467b4e3c533f4a905ab6c49b46f14a9e175960"
     },
     {
       "path": "bridge/outbox/messages/2026-05-24T195155Z_rpi5_cycle-error-outbound-sync.md",
@@ -86,6 +86,11 @@
       "path": "bridge/outbox/messages/2026-05-24T213745Z_rpi5_cycle-error-inbound-sync.md",
       "size": 292,
       "sha256": "e2a89a163fc3634a0a935b44ba0114c50cb66f01b7cbd23747d6ef8f31e2ec70"
+    },
+    {
+      "path": "bridge/outbox/messages/2026-05-24T223803Z_rpi5_cycle-error-outbound-sync.md",
+      "size": 295,
+      "sha256": "8987a02e11b6301dddee52d2972a3b040e65e1a289af006bd59c1fc30610b692"
     },
     {
       "path": "bridge/outbox/outbox.json",
@@ -119,8 +124,8 @@
     },
     {
       "path": "bridge/scripts/bridge_sync_outbound.py",
-      "size": 13596,
-      "sha256": "bceebd89085317324603e4fe415f1fee4bb3a575e2bc6d94b51635b6d9cd116b"
+      "size": 13654,
+      "sha256": "28667a1b306c33c5595cf71878be760b4839c257a5ff2152cdbb3c0336641d23"
     },
     {
       "path": "bridge/scripts/git_askpass.py",
@@ -203,9 +208,14 @@
       "sha256": "f24b7c5845ba8674d6651579cd35fc597cc225373c9d6492588fc76d857d7ac6"
     },
     {
+      "path": "bridge/state_summary/codex.md",
+      "size": 4021,
+      "sha256": "5f843ab380e6357ae25145dd3e3687c8068f2ffcc8fb284c253b24ab85fbfcd0"
+    },
+    {
       "path": "bridge/state_summary/latest.md",
-      "size": 2084,
-      "sha256": "bf6d312b8588013281ac3863e28fe1a1cb82aabc46d14d91d7834018c72171b1"
+      "size": 2085,
+      "sha256": "a4bd733427d081624c4ba233ae21986131a18af665f34d815faead87b19dbb86"
     },
     {
       "path": "bridge_protocol_v1.md",
