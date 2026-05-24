@@ -105,6 +105,34 @@ def ensure_no_disallowed_staged_paths(repo_root: Path) -> None:
         )
 
 
+def working_tree_status(repo_root: Path) -> str:
+    return run_git(repo_root, ["status", "--porcelain"]).stdout.strip()
+
+
+def is_allowed_worktree_status_line(line: str) -> bool:
+    name = line[3:] if len(line) > 2 and line[2] == " " else line[2:]
+    if " -> " in name:
+        old_name, new_name = name.split(" -> ", 1)
+        return is_allowed_staged_path(old_name) and is_allowed_staged_path(new_name)
+    return is_allowed_staged_path(name)
+
+
+def ensure_only_allowed_worktree_changes(repo_root: Path) -> None:
+    status = working_tree_status(repo_root)
+    if not status:
+        return
+    disallowed = [
+        line
+        for line in status.splitlines()
+        if not is_allowed_worktree_status_line(line)
+    ]
+    if disallowed:
+        raise SyncError(
+            "Refusing outbound sync because worktree has changes outside the bridge outbound whitelist:\n"
+            + "\n".join(disallowed)
+        )
+
+
 def stage_allowed_paths(repo_root: Path) -> None:
     existing = [path for path in ALLOWED_REPO_PATHS if (repo_root / path).exists()]
     if existing:
@@ -138,6 +166,48 @@ def has_substantive_staged_change(repo_root: Path) -> bool:
         if not any(path == quiet or path.startswith(f"{quiet}/") for quiet in quiet_paths):
             return True
     return False
+
+
+def unstage_allowed_paths(repo_root: Path) -> None:
+    existing = [path for path in ALLOWED_REPO_PATHS if (repo_root / path).exists()]
+    if existing:
+        run_git(repo_root, ["restore", "--staged", "--", *[repo_rel(path) for path in existing]])
+
+
+def branch_divergence(repo_root: Path) -> tuple[int, int]:
+    output = run_git(repo_root, ["rev-list", "--left-right", "--count", "HEAD...FETCH_HEAD"]).stdout
+    left, right = output.strip().split()
+    return int(left), int(right)
+
+
+def safe_rebase_onto_fetch_head(repo_root: Path, remote: str, branch: str) -> None:
+    ensure_only_allowed_worktree_changes(repo_root)
+    fetch = run_git(repo_root, ["fetch", "--no-tags", remote, branch])
+    print_git_output(fetch)
+    ahead, behind = branch_divergence(repo_root)
+    if behind == 0:
+        print("Local branch is not behind remote; no pre-push rebase needed.")
+        return
+
+    print(f"Local branch divergence before push: ahead={ahead} behind={behind}")
+    dirty = bool(working_tree_status(repo_root))
+    stash_ref = None
+    if dirty:
+        stash = run_git(
+            repo_root,
+            ["stash", "push", "--include-untracked", "-m", "bridge-outbound-pre-rebase"],
+        )
+        print_git_output(stash)
+        stash_ref = "stash@{0}"
+
+    try:
+        rebase = run_git(repo_root, ["rebase", "FETCH_HEAD"])
+        print_git_output(rebase)
+    finally:
+        if stash_ref is not None:
+            pop = run_git(repo_root, ["stash", "pop", stash_ref])
+            print_git_output(pop)
+    ensure_only_allowed_worktree_changes(repo_root)
 
 
 def git_push_env() -> dict[str, str]:
@@ -185,6 +255,20 @@ def main() -> int:
         print(f"Commit message in code: {COMMIT_MESSAGE}")
         if not args.commit_and_push:
             print("Not committing or pushing. Re-run with --commit-and-push to publish.")
+            return 0
+
+        safe_rebase_onto_fetch_head(repo_root, args.remote, args.branch)
+        unstage_allowed_paths(repo_root)
+        stage_allowed_paths(repo_root)
+        ensure_no_forbidden_status(repo_root)
+        ensure_no_disallowed_staged_paths(repo_root)
+        pending = show_pending(repo_root)
+        if not pending:
+            print("Nothing to commit or push after pre-push rebase.")
+            return 0
+        if not has_substantive_staged_change(repo_root):
+            unstage_allowed_paths(repo_root)
+            print("Only logs/state_summary changed; not committing this cycle.")
             return 0
 
         print("Committing outbound changes...")
