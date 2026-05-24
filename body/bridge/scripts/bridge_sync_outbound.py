@@ -34,6 +34,7 @@ RUNTIME_LOG_NAME = "bridge.log"
 REPO_LOG_TAIL_NAME = "bridge_tail.log"
 LOG_TAIL = LOGS / REPO_LOG_TAIL_NAME
 LEGACY_REPO_LOG = LOGS / RUNTIME_LOG_NAME
+STATE_SUMMARY_LATEST = STATE_SUMMARY / "latest.md"
 ALLOWED_REPO_PATHS = (OUTBOX_MESSAGES, OUTBOX_CODEX, LOG_TAIL, STATE_SUMMARY, SCRIPTS, LEGACY_REPO_LOG)
 LOCAL_ONLY_REPO_PATHS = (INBOX_MESSAGES,)
 LOG_ROTATE_MAX_LINES = 5000
@@ -258,7 +259,7 @@ def staged_allowed_paths(repo_root: Path) -> list[str]:
 
 
 def has_substantive_staged_change(repo_root: Path) -> bool:
-    quiet_paths = (repo_rel(LOG_TAIL), repo_rel(LEGACY_REPO_LOG), repo_rel(STATE_SUMMARY))
+    quiet_paths = (repo_rel(LOG_TAIL), repo_rel(LEGACY_REPO_LOG), repo_rel(STATE_SUMMARY_LATEST))
     for path in staged_allowed_paths(repo_root):
         if not any(path == quiet or path.startswith(f"{quiet}/") for quiet in quiet_paths):
             return True
