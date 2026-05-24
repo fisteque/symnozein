@@ -248,10 +248,6 @@ def main() -> int:
             print("Nothing to commit or push.")
             return 0
 
-        if args.commit_and_push and not has_substantive_staged_change(repo_root):
-            print("Only logs/state_summary changed; leaving them staged for the next substantive outbound change.")
-            return 0
-
         print(f"Commit message in code: {COMMIT_MESSAGE}")
         if not args.commit_and_push:
             print("Not committing or pushing. Re-run with --commit-and-push to publish.")
