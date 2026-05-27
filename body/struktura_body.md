@@ -34,7 +34,7 @@ Důležité soubory:
 - `body/body_index.json`
 - `body/body_diff.md`
 - `body/index_menu.json`
-- `body/structura_body.md`
+- `body/struktura_body.md`
 
 ---
 
