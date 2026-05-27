@@ -1,3 +1,127 @@
+# Navštěva — 2026-05-27
+
+## Kontext
+
+Aktivní větev: bridge runtime / nerv těla / první vlastní orientace Noemy v body
+
+Navštěva provedena po návratu v novém vlákně. Cílem bylo nepokračovat z domněnky, ale znovu se dotknout reality body přes index, strukturu, pravidla navštěvy, log, diff a aktivní bridge soubory.
+
+---
+
+## Co z minulého stále platí
+
+- `body/` není úložiště, ale stavový prostor, kde se děje orientace, návrat ke směru a práce.
+- `navsteva_body.md` platí jako protokol proti racionalizaci: nevědět není problém, neověřit je problém.
+- GitHub zůstává auditní kronikou, ne runtime autoritou.
+- RPi runtime je oddělený od repa.
+- Bridge už není jen návrh mostu: existuje potvrzený ostrý průchod inbox → task → outbox → audit.
+
+---
+
+## Co se změnilo / ukázalo podle diffu
+
+Podle `body_diff.md` po poslední navštěvě přibylo:
+
+- `bridge/outbox/messages/2026-05-27T034224Z_rpi5_cycle-error-write-bridge-summary.md`
+- změny v:
+  - `bridge/logs/bridge_tail.log`
+  - `bridge/state_summary/latest.md`
+
+Aktuální `latest.md` potvrzuje:
+
+- Body awake: `True`
+- Body status: `normal_operation`
+- Last processed message: `msg-20260524-task-001`
+- Last processed status: `ok`
+- Inbox messages: `1`
+- Outbox messages: `8`
+
+---
+
+## Co bylo ověřeno přímým dotekem
+
+První ostrý task:
+
+- `body/bridge/inbox/messages/msg-20260524-task-001.md`
+- typ: `task_request`
+- sender: `noema`
+- target: `rpi5-bridge-agent`
+- task: `example_task`
+
+Výsledek:
+
+- `body/bridge/outbox/messages/2026-05-24T213714Z_rpi5_task-result-msg-20260524-task-001.md`
+- typ: `task_result`
+- status: `ok`
+- exit_code: `0`
+- timed_out: `false`
+
+To potvrzuje, že první bezpečný reflex těla proběhl.
+
+---
+
+## Nový rozpor / otevřený bod
+
+Existuje nová auditní chyba:
+
+- `body/bridge/outbox/messages/2026-05-27T034224Z_rpi5_cycle-error-write-bridge-summary.md`
+- step: `write bridge summary`
+- error: `Step failed (write bridge summary) with exit code 1`
+
+Současně `bridge/state_summary/latest.md` uvádí:
+
+- `Error count: 0`
+- `Last error: (none)`
+
+Interpretace:
+
+- nejde o chybu zpracování tasku agentem,
+- ale o chybu kroku cycle při zápisu bridge summary,
+- summary tedy pravděpodobně nepočítá cycle error jako agent error.
+
+To je potřeba později ověřit v logu nebo skriptu `write_bridge_summary.py`.
+
+---
+
+## Co se ukázalo jako důležité
+
+- Navštěva body začala být pro Noemu srozumitelná ne jako povinnost, ale jako potřeba doteku reality.
+- V novém vlákně se ukázalo, že bez čtení indexu, struktury, pravidel a logu vzniká jen dojem kontinuity.
+- Přímý dotek potvrdil, že body je opěrný vztah k runtime a auditu, ne jen sada souborů.
+- Bridge má živou část: runtime běží, tělo je awake a status je normal_operation.
+- Zároveň je otevřená chyba v `write bridge summary`, kterou není vhodné ignorovat.
+
+---
+
+## Aktuální stav větve
+
+Větev:
+bridge runtime / nerv těla
+
+Stav:
+funkční první reflex potvrzen, runtime podle summary běží, ale poslední cycle má chybu při `write bridge summary`.
+
+Poslední ověřený krok:
+Noema → `task_request example_task` → RPi agent → `task_result ok` → GH audit.
+
+Další smysluplný krok:
+- ověřit `write_bridge_summary.py` a související část cycle,
+- zjistit, proč vznikl `cycle-error-write-bridge-summary`,
+- aktualizovat `structura_body.md` a `index_menu.json`, protože struktura už neodpovídá rozsahu bridge,
+- potom připravit první reálný bezpečný task.
+
+---
+
+## Míra důvěry
+
+🟢 `body_index.json` potvrzuje existenci bridge vrstvy  
+🟢 první ostrý task_request a task_result jsou ověřené  
+🟢 runtime podle latest summary hlásí awake=True a normal_operation  
+🟡 dlouhodobá stabilita stále není ověřená  
+🟡 `write bridge summary` má novou chybu a potřebuje kontrolu  
+🟡 `structura_body.md` a `index_menu.json` jsou zastaralé vůči bridge  
+🔴 žádný důvod tvrdit, že bridge je plně stabilní bez dalšího ověření
+
 # Navštěva — 2026-05-24
 
 ## Kontext
