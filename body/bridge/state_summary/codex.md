@@ -8,7 +8,45 @@ messages. Keep the newest items at the top.
 
 ## Latest 10 Implementations
 
-### 1. Passive Codex Request Queue
+### 1. Body State Atomic Writes And Bridge Cycle Recovery
+
+Fixed a race where `state/body_state.json` could be observed as empty while it
+was being rewritten by heartbeat/watchdog. The public bridge summary now also
+tolerates a transient invalid read so a temporary body-state read problem does
+not fail the whole bridge cycle.
+
+Changed:
+
+- `core/hb/heartbeat.py`
+- `core/watchdog/state_watchdog.py`
+- `bridge/scripts/write_bridge_summary.py`
+- `body/bridge/scripts/write_bridge_summary.py`
+
+Operational work:
+
+- stopped the bridge cycle timer while debugging;
+- synced `symnozein` to clear non-bridge dirty index files that blocked
+  outbound sync;
+- restarted `noema-heartbeat.service` and `noema-watchdog.service` so they use
+  atomic writes;
+- ran a one-shot bridge cycle successfully and pushed pending outbox backlog,
+  including the missing task result for `msg-20260527-task-sync-body-001`;
+- restarted `bridge-cycle.timer` and verified repeated clean timer cycles.
+
+Verified:
+
+- `body_state.json` remains valid JSON after service restart;
+- `write_bridge_summary.py` no longer crashes on an empty temporary
+  `body_state.json`;
+- latest bridge cycle state is `status: ok`, `error: null`.
+
+Published as:
+
+```text
+46dc635 Sync RPi bridge outbound state
+```
+
+### 2. Passive Codex Request Queue
 
 Added a passive `codex_request` path. Noema can send a request to the bridge
 inbox, and the bridge agent creates a pending Codex item in:
@@ -36,7 +74,7 @@ Published as:
 e99d8e7 Sync RPi bridge outbound state
 ```
 
-### 2. One-Time Cycle Error Reporting
+### 3. One-Time Cycle Error Reporting
 
 Fixed repeated cycle error spam. The cycle now fingerprints the active error
 and writes only one outbox error for the same failure. Repeats update local
@@ -46,7 +84,7 @@ Changed:
 
 - `bridge/scripts/bridge_cycle.py`
 
-### 3. Safe Inbound Handling For Existing Inbox Files
+### 4. Safe Inbound Handling For Existing Inbox Files
 
 Adjusted inbound sync so an identical local inbox file and remote inbox file are
 accepted as the same message. A real content conflict still stops the cycle.
@@ -55,7 +93,7 @@ Changed:
 
 - `bridge/scripts/bridge_sync_inbound.py`
 
-### 4. Outbound Rebase Tolerance For Local Inbox
+### 5. Outbound Rebase Tolerance For Local Inbox
 
 Allowed local inbox files to exist during outbound rebase checks without being
 treated as forbidden outbound changes. Inbox is still not staged or pushed by
@@ -71,7 +109,7 @@ Published with the first successful task result as:
 9b4df4c Sync RPi bridge outbound state
 ```
 
-### 5. Task Request Guide
+### 6. Task Request Guide
 
 Added a task invocation guide beside the allowlist and wrappers:
 
@@ -88,7 +126,7 @@ Published as:
 5036923 Sync RPi bridge outbound state
 ```
 
-### 6. Runtime Log Tail And Rotation
+### 7. Runtime Log Tail And Rotation
 
 Stopped publishing the full bridge log to GitHub. Outbound sync now publishes:
 
@@ -110,7 +148,7 @@ Published across:
 aade471 Sync RPi bridge outbound state
 ```
 
-### 7. Safe Pre-Push Rebase
+### 8. Safe Pre-Push Rebase
 
 Outbound sync now fetches and safely rebases before commit/push when local
 changes are limited to bridge-owned paths. It uses no force push and refuses
@@ -120,7 +158,7 @@ Changed:
 
 - `bridge/scripts/bridge_sync_outbound.py`
 
-### 8. Systemd Bridge Cycle
+### 9. Systemd Bridge Cycle
 
 Installed and validated a one-shot bridge cycle controlled by a systemd timer.
 The service runs the sequence:
@@ -133,7 +171,7 @@ The service runs the sequence:
 The timer fires every 30 seconds. There is no daemon loop inside the bridge
 scripts.
 
-### 9. Allowlisted Task Runner
+### 10. Allowlisted Task Runner
 
 Added `task_request` support to the bridge agent. Tasks run only from:
 
@@ -144,15 +182,3 @@ Added `task_request` support to the bridge agent. Tasks run only from:
 Execution is controlled by `allowlist.json`, uses `shell=False`, enforces string
 arguments, timeout, non-root execution, stdout/stderr capture, and task run
 state in local `task_runs.json`.
-
-### 10. Bridge State Summary
-
-Added generated state summary:
-
-```text
-symnozein/body/bridge/state_summary/latest.md
-```
-
-It reports inbox/outbox counts, last processed message, error count, body state,
-and bridge log tail without publishing internal state files such as
-`processed_messages.json` or `event_state.json`.
