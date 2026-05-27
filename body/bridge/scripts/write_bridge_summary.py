@@ -5,6 +5,7 @@ from __future__ import annotations
 import argparse
 import json
 import sys
+import time
 from datetime import UTC, datetime
 from pathlib import Path
 from typing import Any
@@ -29,12 +30,29 @@ def parse_args() -> argparse.Namespace:
     return parser.parse_args()
 
 
-def load_json(path: Path) -> dict[str, Any]:
+def load_json(path: Path, *, tolerate_invalid: bool = False) -> dict[str, Any]:
     if not path.exists():
         return {}
-    with path.open("r", encoding="utf-8") as handle:
-        data = json.load(handle)
+    last_error: Exception | None = None
+    for attempt in range(3):
+        try:
+            with path.open("r", encoding="utf-8") as handle:
+                data = json.load(handle)
+            break
+        except json.JSONDecodeError as exc:
+            last_error = exc
+            if not tolerate_invalid or attempt == 2:
+                if tolerate_invalid:
+                    return {"_load_error": f"{type(exc).__name__}: {exc}"}
+                raise
+            time.sleep(0.1)
+    else:
+        if tolerate_invalid and last_error is not None:
+            return {"_load_error": f"{type(last_error).__name__}: {last_error}"}
+        return {}
     if not isinstance(data, dict):
+        if tolerate_invalid:
+            return {"_load_error": f"JSON file must contain an object: {path}"}
         raise SyncError(f"JSON file must contain an object: {path}")
     return data
 
@@ -78,7 +96,7 @@ def last_processed_message(processed: dict[str, Any]) -> tuple[str, dict[str, An
 
 def render_summary(runtime_root: Path, repo_root: Path, project_root: Path, log_lines: int) -> str:
     processed = load_json(runtime_root / "state" / "processed_messages.json")
-    body_state = load_json(project_root / "state" / "body_state.json")
+    body_state = load_json(project_root / "state" / "body_state.json", tolerate_invalid=True)
     errors = processed.get("errors")
     if not isinstance(errors, list):
         errors = []
@@ -94,6 +112,7 @@ def render_summary(runtime_root: Path, repo_root: Path, project_root: Path, log_
 
     body_awake = body_state.get("awake", "(unknown)") if body_state else "(missing)"
     body_status = body_state.get("status", "(unknown)") if body_state else "(missing)"
+    body_state_load_error = body_state.get("_load_error") if body_state else None
 
     lines = [
         "# Bridge State Summary",
@@ -109,6 +128,9 @@ def render_summary(runtime_root: Path, repo_root: Path, project_root: Path, log_
         f"- Body awake: `{body_awake}`",
         f"- Body status: `{body_status}`",
     ]
+
+    if body_state_load_error:
+        lines.append(f"- Body state read warning: `{body_state_load_error}`")
 
     if body_state:
         lines.extend(
@@ -148,4 +170,3 @@ def main() -> int:
 
 if __name__ == "__main__":
     raise SystemExit(main())
-
