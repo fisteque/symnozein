@@ -1,11 +1,11 @@
 {
-  "generated_at": "2026-05-27T08:07:23.799815Z",
+  "generated_at": "2026-05-27T16:45:05.525949Z",
   "source": {
     "script": "scripts/update_body_index.py",
     "workflow": ".github/workflows/update_body_index.yml"
   },
   "kind": "state",
-  "count": 58,
+  "count": 66,
   "files": [
     {
       "path": "Prvni_kroky.md",
@@ -59,8 +59,8 @@
     },
     {
       "path": "bridge/logs/bridge_tail.log",
-      "size": 21379,
-      "sha256": "639550997f6dc401134b9452b188477d900a82e4322a159fbaa8564d493b34c5"
+      "size": 22209,
+      "sha256": "275c3c731e08ad1dcdeb470e9698ad774663bb699d839fbee8b17312f54e8db4"
     },
     {
       "path": "bridge/outbox/messages/2026-05-24T195155Z_rpi5_cycle-error-outbound-sync.md",
@@ -101,6 +101,46 @@
       "path": "bridge/outbox/messages/2026-05-27T034224Z_rpi5_cycle-error-write-bridge-summary.md",
       "size": 316,
       "sha256": "42d0f5eaab87fde30104bb95db880d0e2a5c568ad5b45961b0942aa807361581"
+    },
+    {
+      "path": "bridge/outbox/messages/2026-05-27T080735Z_rpi5_cycle-error-outbound-sync.md",
+      "size": 295,
+      "sha256": "d856b10336127d696907e7ed76da8a5a9f3ff7f19e90cc00638fb4be24ee59de"
+    },
+    {
+      "path": "bridge/outbox/messages/2026-05-27T080735Z_rpi5_task-result-msg-20260527-task-sync-body-001.md",
+      "size": 1192,
+      "sha256": "da5d1a6a90bb73eb8034592c9a91e8ec2bfec1fad95d93c061138ec76fca91f6"
+    },
+    {
+      "path": "bridge/outbox/messages/2026-05-27T114102Z_rpi5_cycle-error-unknown.md",
+      "size": 355,
+      "sha256": "567923f8dc1b98d909e2ca2f3af4857f06385d50e7d817f5ab8fd87b65b0d192"
+    },
+    {
+      "path": "bridge/outbox/messages/2026-05-27T115634Z_rpi5_cycle-error-unknown.md",
+      "size": 355,
+      "sha256": "fdc68b3334d5ec2d279221dab97559882dd7bc38e1287d00a1a131e9d49db9fc"
+    },
+    {
+      "path": "bridge/outbox/messages/2026-05-27T121203Z_rpi5_cycle-error-unknown.md",
+      "size": 355,
+      "sha256": "42806b2e53f393772cb186c37818152cfc1c776e5273579a0ee0c79730054bf8"
+    },
+    {
+      "path": "bridge/outbox/messages/2026-05-27T122655Z_rpi5_cycle-error-outbound-sync.md",
+      "size": 295,
+      "sha256": "17ddaeada665f9847d1a88d0a64ec0bad56408b41c93e09546ee536d911b2911"
+    },
+    {
+      "path": "bridge/outbox/messages/2026-05-27T124404Z_rpi5_cycle-error-unknown.md",
+      "size": 355,
+      "sha256": "1c2b56ace092e73f656fd9f5635a52f4e6c3ee3098eaac9eb50d9a7834126502"
+    },
+    {
+      "path": "bridge/outbox/messages/2026-05-27T125856Z_rpi5_cycle-error-outbound-sync.md",
+      "size": 295,
+      "sha256": "1f2269d76b2b525023d622360ed6c65ee058c2e9a87a9730a4d10ba8afdf9bc4"
     },
     {
       "path": "bridge/outbox/outbox.json",
@@ -214,8 +254,8 @@
     },
     {
       "path": "bridge/scripts/write_bridge_summary.py",
-      "size": 5555,
-      "sha256": "f24b7c5845ba8674d6651579cd35fc597cc225373c9d6492588fc76d857d7ac6"
+      "size": 6493,
+      "sha256": "70c21a106756a52fb8ce5138eb8cf9512bb34411a3c1496d6f31b214e24841f2"
     },
     {
       "path": "bridge/state_summary/codex.md",
@@ -224,8 +264,8 @@
     },
     {
       "path": "bridge/state_summary/latest.md",
-      "size": 2092,
-      "sha256": "3c4208ee6b671b5508a086195f311e7b9481aea1814677560ae4a5634629b007"
+      "size": 2126,
+      "sha256": "9d646591f9112ca5603a44dd51b8576b6d0c1f8bc7a8bd303bd50767339a37b3"
     },
     {
       "path": "bridge_protocol_v1.md",
