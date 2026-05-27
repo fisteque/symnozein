@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-27T18:18:21.596847Z",
+  "generated_at": "2026-05-27T18:21:37.625516Z",
   "source": {
     "script": "scripts/update_body_index.py",
     "workflow": ".github/workflows/update_body_index.yml"
@@ -48,14 +48,14 @@
       "sha256": "eca090a19a20ab65cf6fcb5f07ddec88820c97a96bdb5b7c45f26844b99323cf"
     },
     {
+      "path": "bridge/inbox/messages/codex/msg-20260527-codex-inbox-write-task-001",
+      "size": 1377,
+      "sha256": "d38cdb034d3e7c4e9c0210d0765eb63c5d0dd07b94030541ed81021fd8f40dab"
+    },
+    {
       "path": "bridge/inbox/messages/msg-20260524-task-001.md",
       "size": 292,
       "sha256": "b37dc0113b7d0cc0eabb3515bc5f70946c2c2f98572b2f4579a3536d90878fab"
-    },
-    {
-      "path": "bridge/inbox/messages/msg-20260527-codex-inbox-write-task-001",
-      "size": 1377,
-      "sha256": "d38cdb034d3e7c4e9c0210d0765eb63c5d0dd07b94030541ed81021fd8f40dab"
     },
     {
       "path": "bridge/inbox/messages/msg-20260527-task-sync-body-001.md",
