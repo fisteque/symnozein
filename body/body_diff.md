@@ -5,6 +5,23 @@ Uchovává posledních **50** záznamů.
 
 ---
 
+## 2026-05-27T18:21:37.625516Z
+
+Zdroj změn:
+- skript: `scripts/update_body_index.py`
+- workflow: `.github/workflows/update_body_index.yml`
+
+➕ přidáno: **1**
+- `bridge/inbox/messages/codex/msg-20260527-codex-inbox-write-task-001`
+
+🔄 změněno: **0**
+- nic
+
+❌ odebráno: **1**
+- `bridge/inbox/messages/msg-20260527-codex-inbox-write-task-001`
+
+---
+
 ## 2026-05-27T18:18:21.596847Z
 
 Zdroj změn:
@@ -905,23 +922,6 @@ Zdroj změn:
 
 🔄 změněno: **1**
 - `bridge/outbox/outbox.json`
-
-❌ odebráno: **0**
-- nic
-
----
-
-## 2026-05-17T16:16:00.411206Z
-
-Zdroj změn:
-- skript: `scripts/update_body_index.py`
-- workflow: `.github/workflows/update_body_index.yml`
-
-➕ přidáno: **0**
-- nic
-
-🔄 změněno: **1**
-- `bridge/inbox/inbox.json`
 
 ❌ odebráno: **0**
 - nic
