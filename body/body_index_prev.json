@@ -1,11 +1,11 @@
 {
-  "generated_at": "2026-05-27T07:17:11.569964Z",
+  "generated_at": "2026-05-27T08:07:23.799815Z",
   "source": {
     "script": "scripts/update_body_index.py",
     "workflow": ".github/workflows/update_body_index.yml"
   },
   "kind": "state",
-  "count": 57,
+  "count": 58,
   "files": [
     {
       "path": "Prvni_kroky.md",
@@ -51,6 +51,11 @@
       "path": "bridge/inbox/messages/msg-20260524-task-001.md",
       "size": 292,
       "sha256": "b37dc0113b7d0cc0eabb3515bc5f70946c2c2f98572b2f4579a3536d90878fab"
+    },
+    {
+      "path": "bridge/inbox/messages/msg-20260527-task-sync-body-001.md",
+      "size": 489,
+      "sha256": "cd09068ddfed1ec88f5a730e1afdd0de6ad2e684ffb614af93db097aed37b903"
     },
     {
       "path": "bridge/logs/bridge_tail.log",
