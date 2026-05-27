@@ -267,9 +267,9 @@ def has_substantive_staged_change(repo_root: Path) -> bool:
 
 
 def unstage_allowed_paths(repo_root: Path) -> None:
-    existing = [path for path in ALLOWED_REPO_PATHS if path_exists_or_tracked(repo_root, path)]
-    if existing:
-        run_git(repo_root, ["restore", "--staged", "--", *[repo_rel(path) for path in existing]])
+    staged = staged_allowed_paths(repo_root)
+    if staged:
+        run_git(repo_root, ["restore", "--staged", "--", *staged])
 
 
 def branch_divergence(repo_root: Path) -> tuple[int, int]:
