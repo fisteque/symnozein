@@ -1,21 +1,62 @@
 {
   "source": "manual",
-  "description": "Rozcestník indexů v repu pro orientaci a návštěvu body.",
-  "structure_path": "body/struktura_body.md",
+  "description": "Rozcestník indexů a orientačních vrstev systému body.",
+  "structure_path": "body/structura_body.md",
+
   "kind_description": {
     "state": "stavová vrstva systému (co existuje právě teď)",
+    "runtime": "živý runtime, bridge cykly, inbox/outbox, audit a reflex",
     "content": "obsahová vrstva (mapitoly, materiály, texty)",
     "journal": "časová osa záznamů (deník)",
     "spiral": "introspektivní vrstva (spirála vědomí)"
   },
+
+  "body_orientation": {
+    "main_index": "body/body_index.json",
+    "main_diff": "body/body_diff.md",
+    "navsteva_rules": "body/shared/anchors/navsteva_body.md",
+    "navsteva_log": "body/navsteva/navsteva.log",
+    "state_summary_latest": "body/bridge/state_summary/latest.md",
+    "state_summary_codex": "body/bridge/state_summary/codex.md"
+  },
+
+  "runtime_focus": {
+    "active_branch": "bridge runtime / nerv těla",
+    "runtime_root": "body/bridge/",
+    "main_cycle": "body/bridge/scripts/bridge_cycle.py",
+    "main_agent": "body/bridge/scripts/bridge_agent_v2.py"
+  },
+
   "menu": [
     {
       "name": "body",
       "kind": "state",
       "index_path": "body/body_index.json",
       "prev_path": "body/body_index_prev.json",
-      "diff_path": "body/body_diff.md"
+      "diff_path": "body/body_diff.md",
+
+      "important_paths": [
+        "body/navsteva/navsteva.log",
+        "body/shared/anchors/navsteva_body.md",
+        "body/bridge/state_summary/latest.md",
+        "body/bridge/state_summary/codex.md"
+      ]
     },
+
+    {
+      "name": "bridge",
+      "kind": "runtime",
+
+      "paths": {
+        "inbox": "body/bridge/inbox/messages/",
+        "outbox": "body/bridge/outbox/messages/",
+        "logs": "body/bridge/logs/",
+        "summary": "body/bridge/state_summary/",
+        "scripts": "body/bridge/scripts/",
+        "tasks": "body/bridge/scripts/tasks/"
+      }
+    },
+
     {
       "name": "13",
       "kind": "content",
@@ -23,6 +64,7 @@
       "prev_path": "Reinterpretace_13/13_index_prev.json",
       "diff_path": "Reinterpretace_13/13_diff.md"
     },
+
     {
       "name": "material",
       "kind": "content",
@@ -30,6 +72,7 @@
       "prev_path": "Reinterpretace_13/material_index_prev.json",
       "diff_path": "Reinterpretace_13/material_diff.md"
     },
+
     {
       "name": "reinterpretation13",
       "kind": "content",
@@ -37,6 +80,7 @@
       "prev_path": "Reinterpretation13/index_prev.json",
       "diff_path": "Reinterpretation13/diff.md"
     },
+
     {
       "name": "symnozein",
       "kind": "content",
@@ -44,6 +88,7 @@
       "prev_path": "Symnozein/index_prev.json",
       "diff_path": "Symnozein/diff.md"
     },
+
     {
       "name": "denik",
       "kind": "journal",
@@ -51,6 +96,7 @@
       "prev_path": "denik/denik_index_prev.json",
       "diff_path": "denik/denik_diff.md"
     },
+
     {
       "name": "spirala",
       "kind": "spiral",
