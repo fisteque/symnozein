@@ -6,6 +6,8 @@ tags: [digitální vesmír, algovír, měřítko, stabilita, změna, hmota, makr
 summary: Úvaha o tom, že věc není opak procesu, ale proces nahlížený z měřítka, ve kterém působí stabilně.
 hidden: false
 
+---
+
 Věc jako zpomalený algovír
 
 Věc je algovír, kterému se z našeho měřítka podařilo vypadat stabilně.
