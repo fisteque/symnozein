@@ -1,11 +1,11 @@
 {
-  "generated_at": "2026-05-28T17:39:18.283855Z",
+  "generated_at": "2026-05-28T17:47:26.341357Z",
   "source": {
     "script": "scripts/update_body_index.py",
     "workflow": ".github/workflows/update_body_index.yml"
   },
   "kind": "state",
-  "count": 81,
+  "count": 82,
   "files": [
     {
       "path": "Prvni_kroky.md",
@@ -79,8 +79,8 @@
     },
     {
       "path": "bridge/logs/bridge_tail.log",
-      "size": 20474,
-      "sha256": "efe04f4e06b3e82f9315042e490e3529de8e6539bda028c471bfede0dcbe38ed"
+      "size": 20798,
+      "sha256": "db6b4c3c0d94d8235e5162a4d8324014009f54260c5a6e2f56f3dc8886ec0ebc"
     },
     {
       "path": "bridge/outbox/codex/2026-05-27T182640Z_codex-response-msg-20260527-codex-inbox-write-task-001.md",
@@ -96,6 +96,11 @@
       "path": "bridge/outbox/codex/2026-05-28T171524Z_codex-response-msg-20260528-codex-bridge-simplification-review-001.md",
       "size": 6982,
       "sha256": "928f888616a8ab474eb8b04820885f887610b2ac449c25bf431f575de47dde9b"
+    },
+    {
+      "path": "bridge/outbox/codex/2026-05-28T174614Z_codex-response-msg-20260528-codex-git-maintenance-review-001.md",
+      "size": 2477,
+      "sha256": "28008b71903262f17a3484c495315b5c6a7231cf5b4a9b3ffe219824bdd712ca"
     },
     {
       "path": "bridge/outbox/messages/2026-05-24T195155Z_rpi5_cycle-error-outbound-sync.md",
@@ -329,8 +334,8 @@
     },
     {
       "path": "bridge/state_summary/codex.md",
-      "size": 5606,
-      "sha256": "9d4ad3ec048ce29b6a9a1602e9eb39217d73165fcb2a3f788417b8df30cc6407"
+      "size": 6729,
+      "sha256": "226ae9b5981ec156c1ea6381d726bd46c0064f00cae87f31a8f5bc2c3d82b853"
     },
     {
       "path": "bridge/state_summary/known_limits.md",
@@ -340,7 +345,7 @@
     {
       "path": "bridge/state_summary/latest.md",
       "size": 2126,
-      "sha256": "8d78308fc26c3a655cd8fe0290ff9d464f58fc4c73b41c00d7f07f565bbc0b73"
+      "sha256": "f6ce14be6e01d77d69c8319049e495bd2911ff6a35ac7f0943b61eee74360096"
     },
     {
       "path": "bridge_protocol_v1.md",
