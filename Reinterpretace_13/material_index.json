@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-05T15:03:06.113443Z",
+  "generated_at": "2026-05-28T19:55:51.519575Z",
   "source": {
     "script": "scripts/update_material_index.py",
     "workflow": ".github/workflows/update_material_index.yml"
@@ -391,6 +391,22 @@
         "materiál",
         "test",
         "strukturální"
+      ]
+    },
+    {
+      "title": "Věc jako zpomalený algovír",
+      "file": "vec_jako_zpomaleny_algovir.md",
+      "path": "Reinterpretace_13/material_md/vec_jako_zpomaleny_algovir.md",
+      "date": "2026-05-28",
+      "summary": "Úvaha o tom, že věc není opak procesu, ale proces nahlížený z měřítka, ve kterém působí stabilně.",
+      "tags": [
+        "digitální vesmír",
+        "algovír",
+        "měřítko",
+        "stabilita",
+        "změna",
+        "hmota",
+        "makro"
       ]
     },
     {

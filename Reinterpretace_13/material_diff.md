@@ -5,6 +5,23 @@ Uchovává posledních **50** záznamů.
 
 ---
 
+## 2026-05-28T19:55:51.519575Z
+
+Zdroj změn:
+- skript: `scripts/update_material_index.py`
+- workflow: `.github/workflows/update_material_index.yml`
+
+➕ přidáno: **1**
+- `vec_jako_zpomaleny_algovir.md`
+
+🔄 změněno: **0**
+- nic
+
+❌ odebráno: **0**
+- nic
+
+---
+
 ## 2026-04-05T15:03:06.113443Z
 
 Zdroj změn:
