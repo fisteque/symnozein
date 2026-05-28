@@ -8,6 +8,28 @@ messages. Keep the newest items at the top.
 
 ## Latest 10 Implementations
 
+### 1. Known Bridge Limits Anchor
+
+Added an operational anchor for known bridge limits:
+
+```text
+body/bridge/state_summary/known_limits.md
+```
+
+Updated the task request guide to link that anchor before proposing new tasks or
+input layers:
+
+```text
+body/bridge/scripts/tasks/TASK_REQUESTS.md
+```
+
+Purpose: separate verified state, proposals, the user's current safety/proxy
+role, transport gaps, and dead-end assumptions before future bridge work.
+
+Verified: the files exist in the repo mirror under `symnozein/body/bridge/`,
+the task guide link matches the body-relative path used by bridge docs, and no
+runtime task was needed or started.
+
 ### 1. Body State Atomic Writes And Bridge Cycle Recovery
 
 Fixed a race where `state/body_state.json` could be observed as empty while it
