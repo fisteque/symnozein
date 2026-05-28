@@ -83,24 +83,6 @@ status: pending_codex
 Codex responses are written manually later as outbox messages with
 `author: Codex`. The bridge agent must not pretend to be Codex.
 
-## Known Bridge Limits
-
-Before proposing a new task or input layer, read:
-
-```text
-body/bridge/state_summary/known_limits.md
-```
-
-Separate Noema as the source of a request from the transport that actually
-delivers that request. The current verified transport proxy is Ondra through a
-manual GitHub commit, and Ondra also holds the current human safety and rhythm
-control layer.
-
-Do not expand the safety model for a problem that is actually a transport gap.
-Do not assume the ChatGPT GitHub connector can write until that is verified by a
-real commit. Record every implementation change in
-`body/bridge/state_summary/codex.md`.
-
 ## Execution Rules
 
 The agent accepts a task only when all of these are true:

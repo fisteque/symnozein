@@ -6,7 +6,7 @@ This file is a human-readable implementation ledger. It is not the runtime
 source of truth; runtime state remains in local bridge state files and bridge
 messages. Keep the newest items at the top.
 
-## Latest 10 Implementations
+## Latest Implementations
 
 ### 1. Known Bridge Limits Anchor
 
@@ -30,7 +30,7 @@ Verified: the files exist in the repo mirror under `symnozein/body/bridge/`,
 the task guide link matches the body-relative path used by bridge docs, and no
 runtime task was needed or started.
 
-### 1. Body State Atomic Writes And Bridge Cycle Recovery
+### 2. Body State Atomic Writes And Bridge Cycle Recovery
 
 Fixed a race where `state/body_state.json` could be observed as empty while it
 was being rewritten by heartbeat/watchdog. The public bridge summary now also
@@ -68,7 +68,7 @@ Published as:
 46dc635 Sync RPi bridge outbound state
 ```
 
-### 2. Passive Codex Request Queue
+### 3. Passive Codex Request Queue
 
 Added a passive `codex_request` path. Noema can send a request to the bridge
 inbox, and the bridge agent creates a pending Codex item in:
@@ -96,7 +96,7 @@ Published as:
 e99d8e7 Sync RPi bridge outbound state
 ```
 
-### 3. One-Time Cycle Error Reporting
+### 4. One-Time Cycle Error Reporting
 
 Fixed repeated cycle error spam. The cycle now fingerprints the active error
 and writes only one outbox error for the same failure. Repeats update local
@@ -106,7 +106,7 @@ Changed:
 
 - `bridge/scripts/bridge_cycle.py`
 
-### 4. Safe Inbound Handling For Existing Inbox Files
+### 5. Safe Inbound Handling For Existing Inbox Files
 
 Adjusted inbound sync so an identical local inbox file and remote inbox file are
 accepted as the same message. A real content conflict still stops the cycle.
@@ -115,7 +115,7 @@ Changed:
 
 - `bridge/scripts/bridge_sync_inbound.py`
 
-### 5. Outbound Rebase Tolerance For Local Inbox
+### 6. Outbound Rebase Tolerance For Local Inbox
 
 Allowed local inbox files to exist during outbound rebase checks without being
 treated as forbidden outbound changes. Inbox is still not staged or pushed by
@@ -131,7 +131,7 @@ Published with the first successful task result as:
 9b4df4c Sync RPi bridge outbound state
 ```
 
-### 6. Task Request Guide
+### 7. Task Request Guide
 
 Added a task invocation guide beside the allowlist and wrappers:
 
@@ -148,7 +148,7 @@ Published as:
 5036923 Sync RPi bridge outbound state
 ```
 
-### 7. Runtime Log Tail And Rotation
+### 8. Runtime Log Tail And Rotation
 
 Stopped publishing the full bridge log to GitHub. Outbound sync now publishes:
 
@@ -170,7 +170,7 @@ Published across:
 aade471 Sync RPi bridge outbound state
 ```
 
-### 8. Safe Pre-Push Rebase
+### 9. Safe Pre-Push Rebase
 
 Outbound sync now fetches and safely rebases before commit/push when local
 changes are limited to bridge-owned paths. It uses no force push and refuses
@@ -180,7 +180,7 @@ Changed:
 
 - `bridge/scripts/bridge_sync_outbound.py`
 
-### 9. Systemd Bridge Cycle
+### 10. Systemd Bridge Cycle
 
 Installed and validated a one-shot bridge cycle controlled by a systemd timer.
 The service runs the sequence:
@@ -193,7 +193,7 @@ The service runs the sequence:
 The timer fires every 30 seconds. There is no daemon loop inside the bridge
 scripts.
 
-### 10. Allowlisted Task Runner
+### 11. Allowlisted Task Runner
 
 Added `task_request` support to the bridge agent. Tasks run only from:
 
