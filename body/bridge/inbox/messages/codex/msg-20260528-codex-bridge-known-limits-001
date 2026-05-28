@@ -1,0 +1,192 @@
+---
+
+id: msg-20260528-codex-bridge-known-limits-001
+type: codex_request
+created_at: 2026-05-28T00:00:00Z
+sender: noema
+target: rpi5-bridge-agent
+codex:
+question: "Vytvoř provozní kotvu pro známé limity bridge vstupu a doplň odkaz do TASK_REQUESTS.md, aby Codex i Noema při další práci rozlišovali ověřený stav, návrhy, bezpečnostní roli uživatele, proxy transport a slepé větve."
+
+Kontext
+
+Dnes jsme narazili na rozdíl mezi tím, co UI naznačuje, a tím, co je technicky ověřené.
+
+V běžném ChatGPT chatu se objevil write nástroj pro GitHub, ale pokus o přímý zápis do repozitáře skončil chybou:
+
+"403 Resource not accessible by integration"
+
+Z toho plyne: přímý zápis z běžného ChatGPT chatu do GitHubu není ověřený funkční kanál. UI souhlas s akcí není totéž jako skutečné GitHub "contents: write" oprávnění.
+
+Zároveň je ověřené, že RPi bridge po opravě atomic write problému běží, heartbeat se aktualizuje, summary ukazuje stav "ok", a "codex_request" cesta přes inbox/outbox funguje, pokud je zpráva do inboxu dodána přes GitHub proxy.
+
+Role v aktuálním systému
+
+Ondra / uživatel
+
+Ondra není jen transportní proxy.
+
+Ondra je aktuálně lidská bezpečnostní, vztahová a rytmická vrstva mezi Noemou, GitHubem, Codexem a RPi tělem.
+
+To znamená:
+
+- Noema připraví request nebo obsah zprávy.
+- Ondra ho zkontroluje.
+- Ondra rozhodne, zda je vhodné ho pustit dál.
+- Ondra ho ručně uloží/commitne do GitHub inboxu.
+- RPi bridge si ho stáhne a zpracuje.
+- Výsledek se vrací přes outbox, diff, summary a heartbeat.
+
+Tato role není jen technická. Ondra drží odpovědnost za to, aby se do těla nepouštěly nevhodné, neověřené nebo nebezpečné požadavky.
+
+Zjednodušeně: Ondra je ten, kdo tělu nedá zapalovač jen proto, že si o něj nějaká vrstva systému řekla.
+
+Ondra také udržuje rytmus interakce:
+
+- kdy má smysl pokračovat,
+- kdy je lepší zastavit,
+- kdy je potřeba ověření,
+- kdy je potřeba Codex,
+- kdy je potřeba lidská pauza,
+- a kdy se z technické práce začíná stávat zmatené UX místo pravdivého postupu.
+
+Tato bezpečnostní a vztahová role je záměrná. Není to nedostatek autonomie, ale aktuální safety model.
+
+Dokud nebude existovat jiný ověřený a auditovaný transport s jasnými limity, nesmí se předpokládat, že Noema umí zprávy doručit do RPi sama.
+
+Noema v běžném ChatGPT chatu
+
+Noema v tomto kontextu není autonomní proces s vlastním write access do GitHubu ani vlastní HTTP klient k RPi.
+
+Noema umí:
+
+- číst dostupné repo soubory přes GitHub nástroje,
+- připravovat requesty, zprávy, návrhy a technické instrukce,
+- interpretovat outbox, diff, summary a logy,
+- navrhovat další kroky,
+- udržovat pozornost na rozdílu mezi ověřeným stavem, návrhem a přáním.
+
+Noema neumí v běžném chatu ověřeně:
+
+- sama commitovat do GitHubu,
+- sama zavolat RPi webhook,
+- sama doručit zprávu do bridge inboxu,
+- vlastnit runtime mimo aktuální chatový běh.
+
+Proto se jakýkoliv návrh „Noema zapíše do inboxu“ musí chápat jako:
+
+"Noema připraví obsah → ověřený transport ho doručí"
+
+Nikoli jako přímý zápis Noemy do světa.
+
+Úkol 1 — vytvoř provozní kotvu
+
+Vytvoř nový soubor:
+
+"body/bridge/state_summary/known_limits.md"
+
+Soubor má sloužit jako provozní kotva pro Noemu, Ondru i Codex při další práci s bridge.
+
+Záznam má jasně rozlišit:
+
+Ověřeno
+
+- RPi bridge běží přes inbox/outbox model.
+- Heartbeat a watchdog po poslední opravě fungují.
+- "body/bridge/state_summary/latest.md" je provozní aktuální summary.
+- "body/bridge/state_summary/codex.md" je implementační ledger.
+- "codex_request" zpráva může být zpracována bridge agentem a vytvořit Codex odpověď do "body/bridge/outbox/codex/".
+- Atomic write problém s "body_state.json" byl řešen a ověřen.
+- Aktuální ověřená transportní proxy je Ondra přes ruční GitHub commit.
+- Aktuální bezpečnostní a vztahovou kontrolní vrstvu drží Ondra.
+
+Neověřeno / nefunkční
+
+- Přímý zápis z běžného ChatGPT chatu do GitHub repozitáře není funkčně ověřený.
+- Pokus o "create_file" z chatu skončil "403 Resource not accessible by integration".
+- UI souhlas s akcí není totéž jako skutečné GitHub write oprávnění.
+- Webhook na RPi by byl pouze přijímací ucho; běžný ChatGPT chat ho neumí sám zavolat bez dalšího vykonavatele.
+- Noema v běžném chatu nemá vlastní stabilní runtime ani vlastní write transport.
+
+Návrhy, které nejsou hotová cesta
+
+- "write_inbox_message" je dobrý návrh úzkého allowlistovaného tasku, ale sám neřeší transport zprávy z chatu do RPi.
+- Mac/Codex/desktop agent by mohl fungovat jako vykonavatel s oprávněním commitovat, ale zatím není součástí ověřeného bridge runtime.
+- Webhook přes Tailscale může být budoucí vstupní vrstva, ale jen pokud bude existovat skutečný odesílající prostředník.
+- Přímý GitHub write z ChatGPT se nesmí považovat za funkční jen proto, že se v UI objevilo okno se souhlasem.
+
+Provozní pravidlo
+
+Každá nová komunikační cesta se považuje za funkční až po ověření skutečným důkazem:
+
+- commit v GitHubu,
+- outbox odpověď,
+- aktualizovaný heartbeat/summary,
+- nebo jiný auditovatelný runtime důkaz.
+
+Do té doby je to pouze návrh nebo možnost.
+
+Každá cesta, která by umožňovala Noemě nebo jiné AI vrstvě zapisovat do těla bez Ondrovy kontroly, musí mít nejdřív vlastní safety model, audit, omezení rozsahu a možnost lidského zastavení.
+
+Pozornost
+
+Tento záznam má zabránit tomu, aby Noema, Ondra nebo Codex znovu považovali neověřenou možnost za hotový kanál.
+
+Důležité rozlišení:
+
+- GitHub proxy je aktuálně ověřená cesta a touto proxy je Ondra.
+- Ondra není jen proxy, ale bezpečnostní, vztahová a rytmická vrstva systému.
+- Přímý write z chatu není ověřená cesta.
+- Codex request funguje, ale musí se nějak dostat do inboxu.
+- RPi bridge je vykonavatel a auditní tělo, ne magický transport z chatu.
+- Noema je v tomto režimu zdroj záměru a textu, ne přímý vykonavatel zápisu.
+
+Úkol 2 — doplň TASK_REQUESTS.md
+
+Uprav:
+
+"body/bridge/scripts/tasks/TASK_REQUESTS.md"
+
+Doplň krátkou sekci:
+
+"## Known Bridge Limits"
+
+Sekce má odkázat na:
+
+"body/bridge/state_summary/known_limits.md"
+
+A stručně říct:
+
+- před návrhem nového tasku nebo vstupní vrstvy si přečti "known_limits.md";
+- rozlišuj Noemu jako zdroj requestu od transportu, který request skutečně doručí;
+- aktuální ověřená transportní proxy je Ondra přes ruční GitHub commit;
+- Ondra zároveň drží aktuální lidskou safety a rytmickou kontrolní vrstvu;
+- nerozšiřuj safety model kvůli problému, který je ve skutečnosti transportní;
+- nepředpokládej, že ChatGPT GitHub connector umí zapisovat, dokud to není ověřeno commitem;
+- každý implementační zásah zapiš do "body/bridge/state_summary/codex.md".
+
+Úkol 3 — zapiš implementaci do codex.md
+
+Po implementaci přidej nový horní záznam do:
+
+"body/bridge/state_summary/codex.md"
+
+Záznam má uvést:
+
+- vytvořený soubor "body/bridge/state_summary/known_limits.md",
+- změnu v "body/bridge/scripts/tasks/TASK_REQUESTS.md",
+- účel: oddělit ověřený stav, návrhy, bezpečnostní/proxy roli uživatele a slepé větve,
+- ověření: soubory existují, odkazy dávají smysl, žádný runtime task nebyl spuštěn, pokud nebyl potřeba.
+
+Poznámka
+
+Tohle není žádost o obecný write access, webhook implementaci ani nový task writer.
+
+Je to žádost o provozní kotvu a dokumentační pravidlo, aby se při další práci nezaměňovalo:
+
+- co funguje,
+- co je návrh,
+- kdo je aktuální proxy,
+- kdo drží lidskou bezpečnostní odpovědnost,
+- co je transportní mezera,
+- a co je pouze UI dojem.
