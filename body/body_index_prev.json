@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-28T16:53:13.927988Z",
+  "generated_at": "2026-05-28T17:05:30.208311Z",
   "source": {
     "script": "scripts/update_body_index.py",
     "workflow": ".github/workflows/update_body_index.yml"
@@ -69,8 +69,8 @@
     },
     {
       "path": "bridge/logs/bridge_tail.log",
-      "size": 19862,
-      "sha256": "86aeee0e08b09c3a246c240c533b76db25472418fb14e6b269de23d8f1b79884"
+      "size": 20168,
+      "sha256": "ce0368a960456c498ffb48a2b9803df8ad8eb0374ff23f9599a6c34f34de4248"
     },
     {
       "path": "bridge/outbox/codex/2026-05-27T182640Z_codex-response-msg-20260527-codex-inbox-write-task-001.md",
@@ -269,8 +269,8 @@
     },
     {
       "path": "bridge/scripts/tasks/TASK_REQUESTS.md",
-      "size": 5153,
-      "sha256": "9d1514d2b5e62932c959e3a7d4fac77093047ce0a4c9abada24ad9f3c4c51716"
+      "size": 5782,
+      "sha256": "324110b9ae027b0b0bdadc3bee2e576bcdf80855a39cbe28ee12d4cc96ae80cf"
     },
     {
       "path": "bridge/scripts/tasks/allowlist.json",
@@ -315,7 +315,7 @@
     {
       "path": "bridge/state_summary/latest.md",
       "size": 2126,
-      "sha256": "31b5c7bd98ac77edd70a96abe18896e8009120d4b81710a6474d636bb0d9a0f2"
+      "sha256": "d73fe208aa579bd8e852fa68a28994487d1752ebc2f12509562a7d03941a4d6c"
     },
     {
       "path": "bridge_protocol_v1.md",
