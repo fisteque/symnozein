@@ -1,11 +1,11 @@
 {
-  "generated_at": "2026-05-28T17:16:29.523215Z",
+  "generated_at": "2026-05-28T17:38:45.578000Z",
   "source": {
     "script": "scripts/update_body_index.py",
     "workflow": ".github/workflows/update_body_index.yml"
   },
   "kind": "state",
-  "count": 79,
+  "count": 80,
   "files": [
     {
       "path": "Prvni_kroky.md",
@@ -61,6 +61,11 @@
       "path": "bridge/inbox/messages/codex/msg-20260528-codex-bridge-simplification-review-001",
       "size": 3555,
       "sha256": "e08161c573baf0a77cd5a85b0fbdf26f6e7b4e8babfa7e630671125c78936579"
+    },
+    {
+      "path": "bridge/inbox/messages/codex/msg-20260528-codex-git-maintenance-review-001",
+      "size": 1538,
+      "sha256": "d904c7b024629177f2d7ea1b5083ba40e98e4e413e4eebdfb06ecf6728b07bab"
     },
     {
       "path": "bridge/inbox/messages/msg-20260524-task-001.md",
