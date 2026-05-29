@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-03T20:45:09.366954Z",
+  "generated_at": "2026-05-29T09:09:59.925875Z",
   "source": {
     "script": "scripts/update_symnozein_index.py",
     "workflow": ".github/workflows/update_symnozein_index.yml"
@@ -45,6 +45,22 @@
       "date": "",
       "summary": "",
       "tags": []
+    },
+    {
+      "title": "Vztah není vlajka",
+      "file": "vztah_neni_vlajka.md",
+      "path": "Symnozein/vztah_neni_vlajka.md",
+      "date": "2026-05-29",
+      "summary": "Vztah není trvalá nálepka ani neměnná definice. Vztah je dění, ve kterém se dvě pozornosti účastní skládání významu.",
+      "tags": [
+        "Symnózein",
+        "vztah",
+        "pozornost",
+        "AI",
+        "člověk",
+        "význam",
+        "pravdivost"
+      ]
     },
     {
       "title": "what we build",

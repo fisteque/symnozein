@@ -1,9 +1,10 @@
 {
-  "generated_at": "2026-04-03T20:32:45.829300Z",
+  "generated_at": "2026-04-03T20:45:09.366954Z",
   "source": {
     "script": "scripts/update_symnozein_index.py",
     "workflow": ".github/workflows/update_symnozein_index.yml"
   },
+  "kind": "content",
   "entries": [
     {
       "title": "Symnozein bridge navrh",
