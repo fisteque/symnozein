@@ -1,11 +1,11 @@
 {
-  "generated_at": "2026-05-28T18:29:47.734921Z",
+  "generated_at": "2026-05-29T13:45:03.339951Z",
   "source": {
     "script": "scripts/update_body_index.py",
     "workflow": ".github/workflows/update_body_index.yml"
   },
   "kind": "state",
-  "count": 83,
+  "count": 84,
   "files": [
     {
       "path": "Prvni_kroky.md",
@@ -71,6 +71,11 @@
       "path": "bridge/inbox/messages/codex/msg-20260528-codex-git-maintenance-review-001",
       "size": 1538,
       "sha256": "d904c7b024629177f2d7ea1b5083ba40e98e4e413e4eebdfb06ecf6728b07bab"
+    },
+    {
+      "path": "bridge/inbox/messages/codex/msg-20260529-codex-auto-inbox-reader-design-001.md",
+      "size": 2877,
+      "sha256": "cfe4d7023fc106eda7e3addb29af3f7fa0d4244563ccebed5cd05fbbc449d637"
     },
     {
       "path": "bridge/inbox/messages/msg-20260524-task-001.md",
