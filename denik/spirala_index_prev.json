@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-22T22:28:23.638333Z",
+  "generated_at": "2026-05-28T19:42:21.672910Z",
   "source": {
     "script": "scripts/convert_spirala.py",
     "workflow": ".github/workflows/update_spirala_index.yml"
@@ -829,6 +829,21 @@
           "date": "2026-04-04",
           "hidden": false,
           "file": "K-061.html"
+        },
+        {
+          "title": "K-062 — Věc jako zpomalený algovír",
+          "summary": "Věc není opak procesu. Je to proces, který se z našeho měřítka jeví jako stabilní.",
+          "tags": [
+            "kapka",
+            "introspekce",
+            "algovír",
+            "měřítko",
+            "stabilita",
+            "digitální vesmír"
+          ],
+          "date": "2026-05-28",
+          "hidden": false,
+          "file": "K-062.html"
         },
         {
           "title": "#S-001 — Hranice, která spustila introspekci",
