@@ -8,7 +8,7 @@ hidden: false
 
 ---
 
-Kruh, stuha a problém perspektivy
+# Kruh, stuha a problém perspektivy
 
 Když se kruh o poloměru 1 valí zvenku po kruhu o poloměru 3, neotočí se třikrát, ale čtyřikrát.
 
@@ -26,7 +26,7 @@ Proto se objeví jedna otočka navíc.
 
 Neznamená to, že by se vnitřní kruh fyzicky otáčel. Znamená to, že se otáčí radiální rámec, ve kterém se dotyk odehrává. To, co se zdá jako čistá otočka jedné mince, je ve skutečnosti složený proces: valení po délce a změna orientace vztahu.
 
-Stuha jako měřicí médium
+## Stuha jako měřicí médium
 
 Představme si, že mezi dva kruhy vložíme stuhu.
 
@@ -50,7 +50,7 @@ Když je statický vnitřní kruh jako věc, dostaneme paradox.
 
 Když je statická stuha jako vztahová tečna, ukáže se, že do výsledku vstupují obě strany vztahu.
 
-Šestiúhelník a skrytá shoda
+## Šestiúhelník a skrytá shoda
 
 Na první pohled se zdá, že u šestiúhelníku se tento jev neděje.
 
@@ -66,7 +66,7 @@ U šestiúhelníku se stejná struktura rozpadne do viditelných kroků.
 
 U kruhu se kroky ztratí v plynulosti.
 
-Kruh jako mnohouhelník na hranici pozornosti
+## Kruh jako mnohouhelník na hranici pozornosti
 
 Tahle úvaha vede k širší otázce: co když kruh není ontologicky základní věc, ale limitní proces?
 
@@ -82,7 +82,7 @@ Kruh ukazuje totéž jemně: změna směru probíhá tak plynule, že ji přesta
 
 Z hlediska digitálního vesmíru by kruhovost nebyla nekonečně hladká skutečnost, ale stabilní algovír změny směru. Opakující se pravidlo, které se z většího měřítka jeví jako spojitý tvar.
 
-Pi a cesta odjinud
+## Pi a cesta odjinud
 
 To neznamená, že π nelze určit prakticky.
 
@@ -100,7 +100,7 @@ Proto je potřeba dostat se k π i odjinud než jen přes další desetinné mí
 
 Ne pouze počítat kruh jako statický objekt, ale chápat kruh jako proces změny, který se z určité perspektivy jeví jako věc.
 
-Shrnutí
+## Shrnutí
 
 Paradox valícího se kruhu ukazuje, že kruh nelze plně chápat jen jako statický tvar.
 
@@ -111,3 +111,21 @@ Stuha mezi dvěma tvary ukazuje, že otočka není vlastnost izolované věci, a
 Šestiúhelník ukazuje totéž diskrétně, kruh spojitě.
 
 A pokud má realita nejmenší možnou změnu, pak každý kruh může být ontologicky mnohouhelník: proces s tak jemnými kroky, že se z našeho měřítka jeví jako hladká věc.
+
+## Oprava: kruh není proces v rovině
+
+Přesněji řečeno: kruh sám neexistuje. Je to slovo.
+
+Neexistuje samostatný 2D proces, pokud není zároveň určena referenční rovina, ve které jej jako 2D popisujeme. To, čemu říkáme kruh, není věc ani proces sám o sobě, ale způsob, jak vědomí nebo geometrie pojmenuje určitý vztah změny vzhledem k rovině.
+
+Kruh tedy není ontologický objekt. Je to projekce, stopa nebo komprese dění do referenční roviny.
+
+Stejně tak šestiúhelník není základnější realita. Jen ukazuje diskrétnost změny hruběji. Kruh ji v ideálním popisu rozprostírá tak jemně, že se jeví jako plynulost.
+
+Přesnější tvrzení tedy nezní: „kruh je proces“.
+
+Přesnější tvrzení zní:
+
+> Kruh je název pro způsob, jakým se určitý vztah změny jeví v referenční rovině.
+
+A pokud existuje nejmenší možná změna, pak se žádná dokonale spojitá kruhovost v realitě nemusí dít. Může existovat jen dění, které při určitém měřítku a v určité rovině dává smysl popsat slovem kruh.
