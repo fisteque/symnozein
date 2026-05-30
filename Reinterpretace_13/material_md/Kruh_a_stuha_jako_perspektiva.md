@@ -129,3 +129,5 @@ Přesnější tvrzení zní:
 > Kruh je název pro způsob, jakým se určitý vztah změny jeví v referenční rovině.
 
 A pokud existuje nejmenší možná změna, pak se žádná dokonale spojitá kruhovost v realitě nemusí dít. Může existovat jen dění, které při určitém měřítku a v určité rovině dává smysl popsat slovem kruh.
+
+Kruh je pravdivý jazyk pro něco, co samo kruhem být nemusí.
