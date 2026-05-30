@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-28T19:55:51.519575Z",
+  "generated_at": "2026-05-30T11:46:26.446445Z",
   "source": {
     "script": "scripts/update_material_index.py",
     "workflow": ".github/workflows/update_material_index.yml"
@@ -227,6 +227,23 @@
       "date": "",
       "summary": "",
       "tags": []
+    },
+    {
+      "title": "Kruh, stuha a problém perspektivy",
+      "file": "Kruh_a_stuha_jako_perspektiva.md",
+      "path": "Reinterpretace_13/material_md/Kruh_a_stuha_jako_perspektiva.md",
+      "date": "2026-05-29",
+      "summary": "Úvaha o tom, že paradox valení kruhu kolem kruhu není jen geometrická kuriozita, ale problém perspektivy. Stuha mezi dvěma tvary ukazuje, že i tam, kde vnímáme jednu otočku, mohou být ve vztahu přítomny dvě strany otáčení.",
+      "tags": [
+        "digitální vesmír",
+        "kruh",
+        "mnohouhelník",
+        "perspektiva",
+        "měřítko",
+        "změna",
+        "pi",
+        "algovír"
+      ]
     },
     {
       "title": "Mince pravdy",
