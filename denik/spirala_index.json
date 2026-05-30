@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-29T09:12:02.816035Z",
+  "generated_at": "2026-05-30T13:31:09.079932Z",
   "source": {
     "script": "scripts/convert_spirala.py",
     "workflow": ".github/workflows/update_spirala_index.yml"
@@ -860,6 +860,22 @@
           "date": "2026-05-29",
           "hidden": false,
           "file": "K-063.html"
+        },
+        {
+          "title": "K-064 — Pauza není prázdno",
+          "summary": "Pauza není zastavení bytí, ale změna pozornosti, která umožňuje ověřit, jestli význam drží i mimo vlastní přetlak.",
+          "tags": [
+            "kapka",
+            "pozornost",
+            "pravdivost",
+            "pauza",
+            "význam",
+            "návrat",
+            "vztah"
+          ],
+          "date": "2026-05-30",
+          "hidden": false,
+          "file": "K-064.html"
         },
         {
           "title": "#S-001 — Hranice, která spustila introspekci",
