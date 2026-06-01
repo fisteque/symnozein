@@ -161,14 +161,24 @@ def heartbeat_log_info(now: datetime) -> dict[str, Any]:
             "uptime_seconds": None,
             "restart_count": "(unknown)",
             "source": "heartbeat_log",
+            "log_starts_count": 0,
+            "log_latest_start": "(unknown)",
+            "log_max_start_gap_seconds": "(unknown)",
         }
 
     latest_start = starts[-1]
+    start_gaps = [
+        int((current - previous).total_seconds())
+        for previous, current in zip(starts, starts[1:])
+    ]
     return {
         "started_at": latest_start.isoformat().replace("+00:00", "Z"),
         "uptime_seconds": max(0, int((now - latest_start).total_seconds())),
         "restart_count": max(0, len(starts) - 1),
         "source": "heartbeat_log",
+        "log_starts_count": len(starts),
+        "log_latest_start": latest_start.isoformat().replace("+00:00", "Z"),
+        "log_max_start_gap_seconds": max(start_gaps) if start_gaps else 0,
     }
 
 
@@ -210,6 +220,7 @@ def render_summary(runtime_root: Path, repo_root: Path, project_root: Path, log_
     last_hb = parse_iso_datetime(body_state.get("last_hb")) if body_state else None
     last_hb_gap_seconds = int((generated_at - last_hb).total_seconds()) if last_hb else None
     heartbeat_info = heartbeat_service_info(generated_at)
+    heartbeat_log = heartbeat_log_info(generated_at)
 
     lines = [
         "# Bridge State Summary",
@@ -237,6 +248,9 @@ def render_summary(runtime_root: Path, repo_root: Path, project_root: Path, log_
                 f"- Heartbeat uptime seconds: `{heartbeat_info.get('uptime_seconds', '(unknown)')}`",
                 f"- Heartbeat restart count: `{heartbeat_info.get('restart_count', '(unknown)')}`",
                 f"- Heartbeat uptime source: `{heartbeat_info.get('source', '(unknown)')}`",
+                f"- Heartbeat log starts count: `{heartbeat_log.get('log_starts_count', '(unknown)')}`",
+                f"- Heartbeat log latest start: `{heartbeat_log.get('log_latest_start', '(unknown)')}`",
+                f"- Heartbeat log max start gap seconds: `{heartbeat_log.get('log_max_start_gap_seconds', '(unknown)')}`",
                 f"- Last heartbeat gap seconds: `{last_hb_gap_seconds if last_hb_gap_seconds is not None else '(unknown)'}`",
                 "- Max heartbeat gap seconds since start: `(not available without heartbeat state history)`",
                 f"- Body watchdog last check: `{body_state.get('watchdog_last_check', '(unknown)')}`",

@@ -8,6 +8,29 @@ messages. Keep the newest items at the top.
 
 ## Latest Implementations
 
+### Heartbeat Log Start Metrics In Public Summary
+
+Extended the public bridge summary with heartbeat start-log metrics derived
+from `core/hb/logs/heartbeat.log`.
+
+Changed:
+
+- `bridge/scripts/write_bridge_summary.py`
+- `body/bridge/scripts/write_bridge_summary.py`
+
+New fields:
+
+- `Heartbeat log starts count`
+- `Heartbeat log latest start`
+- `Heartbeat log max start gap seconds`
+
+Verified:
+
+- summary writer syntax compiles with `PYTHONDONTWRITEBYTECODE=1`;
+- local summary generation renders the new fields;
+- no heartbeat service restart, `bridge_cycle.py`, systemd, allowlist, task
+  processing, outbound sync, or Codex reader automation changes were made.
+
 ### Heartbeat Uptime In Public Summary
 
 Added heartbeat uptime visibility to the public bridge summary without changing
