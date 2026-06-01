@@ -5,6 +5,23 @@ Uchovává posledních **50** záznamů.
 
 ---
 
+## 2026-06-01T18:21:37.868958Z
+
+Zdroj změn:
+- skript: `scripts/update_body_index.py`
+- workflow: `.github/workflows/update_body_index.yml`
+
+➕ přidáno: **0**
+- nic
+
+🔄 změněno: **1**
+- `bridge/inbox/messages/codex/msg-20260601-codex-reader-stub-test-safe-001.md`
+
+❌ odebráno: **0**
+- nic
+
+---
+
 ## 2026-06-01T18:18:11.864379Z
 
 Zdroj změn:
@@ -896,28 +913,6 @@ Zdroj změn:
 
 🔄 změněno: **1**
 - `navsteva/navsteva.log`
-
-❌ odebráno: **0**
-- nic
-
----
-
-## 2026-05-24T22:36:00.670215Z
-
-Zdroj změn:
-- skript: `scripts/update_body_index.py`
-- workflow: `.github/workflows/update_body_index.yml`
-
-➕ přidáno: **0**
-- nic
-
-🔄 změněno: **6**
-- `bridge/logs/bridge_tail.log`
-- `bridge/scripts/bridge_agent_v2.py`
-- `bridge/scripts/bridge_sync_common.py`
-- `bridge/scripts/bridge_sync_outbound.py`
-- `bridge/scripts/tasks/TASK_REQUESTS.md`
-- `bridge/state_summary/latest.md`
 
 ❌ odebráno: **0**
 - nic
