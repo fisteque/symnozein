@@ -8,6 +8,47 @@ messages. Keep the newest items at the top.
 
 ## Latest Implementations
 
+### Codex Inbox Reader Manual Writer Stub
+
+Added an optional manual `--write-stub` mode to the standalone Codex inbox
+reader.
+
+Changed:
+
+- `bridge/scripts/codex_inbox_reader.py`
+- `body/bridge/scripts/codex_inbox_reader.py`
+- `bridge/scripts/tasks/TASK_REQUESTS.md`
+- `body/bridge/scripts/tasks/TASK_REQUESTS.md`
+
+Behavior:
+
+- default mode remains dry-run with no file writes, no state updates, no
+  commits, and no pushes;
+- `--write-stub` reads `body/bridge/inbox/messages/codex/*.md` with the same
+  validation and classification as dry-run;
+- runtime-local state is stored at
+  `/home/fiste/Noema/bridge/state/codex_reader_state.json`;
+- processed messages are keyed by `message_id` plus `sha256(content)`;
+- repeated runs of the same message/hash do not duplicate a response;
+- the same `message_id` with a different hash is recorded as `conflict`;
+- safe classified requests create a stub `codex_response` with
+  `status: stub_written` under `body/bridge/outbox/codex/`;
+- risky or unknown requests create a stub response with
+  `status: needs_human`;
+- generated response paths are constrained to `body/bridge/outbox/codex/`.
+
+Verified:
+
+- syntax compiles with `PYTHONDONTWRITEBYTECODE=1`;
+- `/tmp` dry-run fixture has no side effects and creates no state/outbox files;
+- `/tmp` writer-stub fixture creates one safe stub response;
+- repeated writer-stub run does not duplicate the response;
+- same message id with changed content hash records a conflict;
+- risky request produces `needs_human`;
+- state is written under the runtime root, not under the repo tree;
+- no `bridge_cycle.py`, systemd unit/timer, allowlist, outbound sync rules,
+  runtime task processing, or automatic reader startup changes were made.
+
 ### Heartbeat Log Start Metrics In Public Summary
 
 Extended the public bridge summary with heartbeat start-log metrics derived

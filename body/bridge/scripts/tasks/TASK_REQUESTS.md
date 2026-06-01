@@ -83,20 +83,38 @@ status: pending_codex
 Codex responses are written manually later as outbox messages with
 `author: Codex`. The bridge agent must not pretend to be Codex.
 
-## Codex Inbox Reader Dry Run
+## Codex Inbox Reader
 
-The standalone dry-run reader lives at:
+The standalone reader lives at:
 
 ```text
 /home/fiste/Noema/bridge/scripts/codex_inbox_reader.py
 ```
 
-It only scans `body/bridge/inbox/messages/codex/`, validates Markdown
-frontmatter, computes `sha256(content)`, classifies the request, and prints what
-it would do. It does not write `codex_response` files, does not update local
-state, does not commit, and does not push.
+Default mode is still dry-run. It scans only
+`body/bridge/inbox/messages/codex/`, validates Markdown frontmatter, computes
+`sha256(content)`, classifies the request, and prints what it would do. Dry-run
+mode does not write `codex_response` files, does not update local state, does
+not commit, and does not push.
 
-The proposed future state file is runtime-local:
+The optional manual writer-stub mode is:
+
+```text
+/home/fiste/Noema/bridge/scripts/codex_inbox_reader.py --write-stub
+```
+
+Writer-stub mode is not automated. It writes only:
+
+- runtime-local state at `/home/fiste/Noema/bridge/state/codex_reader_state.json`;
+- stub `codex_response` files under `body/bridge/outbox/codex/`.
+
+The state key is `message_id + sha256(content)`. Repeated runs do not duplicate
+the same message/hash. A repeated `message_id` with different content hash is
+recorded as a conflict and is not silently overwritten. Safe classified requests
+get `status: stub_written`; risky or unknown requests get
+`status: needs_human`.
+
+The state file is runtime-local:
 
 ```text
 /home/fiste/Noema/bridge/state/codex_reader_state.json
