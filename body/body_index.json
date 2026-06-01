@@ -1,11 +1,11 @@
 {
-  "generated_at": "2026-06-01T17:16:06.782125Z",
+  "generated_at": "2026-06-01T17:23:13.370517Z",
   "source": {
     "script": "scripts/update_body_index.py",
     "workflow": ".github/workflows/update_body_index.yml"
   },
   "kind": "state",
-  "count": 93,
+  "count": 94,
   "files": [
     {
       "path": "Prvni_kroky.md",
@@ -99,8 +99,8 @@
     },
     {
       "path": "bridge/logs/bridge_tail.log",
-      "size": 21770,
-      "sha256": "b8008838d7a84450f8d97d2184d16b44b060bcc665587678f9a64278af05b02e"
+      "size": 21131,
+      "sha256": "4f40727cf6c5f442760cfc618f77c12485933102ce3c185b77899ed33b80d305"
     },
     {
       "path": "bridge/outbox/codex/2026-05-27T182640Z_codex-response-msg-20260527-codex-inbox-write-task-001.md",
@@ -131,6 +131,11 @@
       "path": "bridge/outbox/codex/2026-06-01T165450Z_codex-response-msg-20260601-codex-inbox-reader-dry-run-001.md",
       "size": 2830,
       "sha256": "56b8bbba5c461a307854a583026579112e30e56cfb57bf76d9cb3b80a5019b3e"
+    },
+    {
+      "path": "bridge/outbox/codex/2026-06-01T172220Z_codex-response-msg-20260601-codex-heartbeat-uptime-summary-001.md",
+      "size": 2266,
+      "sha256": "2602f9fc1336d1590fd01f2a2aab640d04ca14f53152150cfbcddd71d6940f78"
     },
     {
       "path": "bridge/outbox/messages/2026-05-24T195155Z_rpi5_cycle-error-outbound-sync.md",
@@ -384,13 +389,13 @@
     },
     {
       "path": "bridge/scripts/write_bridge_summary.py",
-      "size": 6493,
-      "sha256": "70c21a106756a52fb8ce5138eb8cf9512bb34411a3c1496d6f31b214e24841f2"
+      "size": 10457,
+      "sha256": "30188ec622c6806ca8ba2b65184ef418d184741f13cd35f2169dc7d9fa4632f1"
     },
     {
       "path": "bridge/state_summary/codex.md",
-      "size": 10554,
-      "sha256": "8a5e991f7ba97c60986c7e202f9c429a1d2a235c137b41a33f06b5a0f9407737"
+      "size": 11783,
+      "sha256": "e6d0c265b268c8d6394ef4e4d775d57da5b0710c8e7c3e66dc816d4610d8dc5e"
     },
     {
       "path": "bridge/state_summary/known_limits.md",
@@ -399,8 +404,8 @@
     },
     {
       "path": "bridge/state_summary/latest.md",
-      "size": 2126,
-      "sha256": "eeb21af30e8923f62ebbb984f272a5a244ff628da292a66698967e6ad0479c52"
+      "size": 2419,
+      "sha256": "225c7bd991e8b075528d2cb56acaee9ee79ed0312d3d0fbc5c215f30657833bd"
     },
     {
       "path": "bridge_protocol_v1.md",
