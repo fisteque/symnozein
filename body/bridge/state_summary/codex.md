@@ -8,6 +8,35 @@ messages. Keep the newest items at the top.
 
 ## Latest Implementations
 
+### Safe Pre-Push Rebase Inbox Handling
+
+Fixed an outbound sync failure where pre-push rebase stashed an
+inbound-restored inbox file as untracked, then failed on `stash pop` after the
+same file arrived from `FETCH_HEAD` as tracked.
+
+Changed:
+
+- `bridge/scripts/bridge_sync_outbound.py`
+- `body/bridge/scripts/bridge_sync_outbound.py`
+
+Behavior now:
+
+- worktree status uses `--untracked-files=all` so inbox file paths are checked
+  precisely;
+- before rebase, only local-only untracked inbox files that exactly match
+  `FETCH_HEAD` are removed, allowing rebase to restore them as tracked files;
+- pre-rebase stash is limited to existing `ALLOWED_REPO_PATHS`;
+- `LOCAL_ONLY_REPO_PATHS` / inbox files are not stashed;
+- `git stash push --include-untracked` is no longer used.
+
+Verified with a local `/tmp` reproduction: remote added an inbox file, the same
+file existed locally as untracked, an allowed outbound file was dirty, rebase
+completed, the inbox file became tracked from remote HEAD, the outbound change
+remained, and no test stash was left behind.
+
+Cleanup: removed an accidentally mirrored Python bytecode file from
+`body/bridge/scripts/__pycache__/` after syntax verification generated it.
+
 ### 1. Git Maintenance Review And Local GC
 
 Reviewed the repeated Git maintenance warning from `.git/gc.log` and the
