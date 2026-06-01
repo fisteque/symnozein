@@ -1,11 +1,11 @@
 {
-  "generated_at": "2026-06-01T17:58:07.635668Z",
+  "generated_at": "2026-06-01T18:04:31.312602Z",
   "source": {
     "script": "scripts/update_body_index.py",
     "workflow": ".github/workflows/update_body_index.yml"
   },
   "kind": "state",
-  "count": 95,
+  "count": 96,
   "files": [
     {
       "path": "Prvni_kroky.md",
@@ -104,8 +104,8 @@
     },
     {
       "path": "bridge/logs/bridge_tail.log",
-      "size": 21770,
-      "sha256": "87d0424b7fff0714657a5cccd829b624a4bd801fc3b0a1611635138066880a11"
+      "size": 20721,
+      "sha256": "6304e9e3a812058a12028be5494bf33d86b05d767168564067fcdceefda239ff"
     },
     {
       "path": "bridge/outbox/codex/2026-05-27T182640Z_codex-response-msg-20260527-codex-inbox-write-task-001.md",
@@ -141,6 +141,11 @@
       "path": "bridge/outbox/codex/2026-06-01T172220Z_codex-response-msg-20260601-codex-heartbeat-uptime-summary-001.md",
       "size": 2266,
       "sha256": "2602f9fc1336d1590fd01f2a2aab640d04ca14f53152150cfbcddd71d6940f78"
+    },
+    {
+      "path": "bridge/outbox/codex/2026-06-01T180234Z_codex-response-msg-20260601-codex-reader-writer-stub-001.md",
+      "size": 1570,
+      "sha256": "f5491d0c4b4257eed50514c7a6218b8aa8e4587074f3b05894083018222d2353"
     },
     {
       "path": "bridge/outbox/messages/2026-05-24T195155Z_rpi5_cycle-error-outbound-sync.md",
@@ -314,8 +319,8 @@
     },
     {
       "path": "bridge/scripts/codex_inbox_reader.py",
-      "size": 8659,
-      "sha256": "79a49e697a0dd1d7dc805ef0de1b256538625ec56a9d43b630015f11fea4780e"
+      "size": 16635,
+      "sha256": "16c9a651959f33d284468474f164636e93be06832bab2f4498c639fdd12f600a"
     },
     {
       "path": "bridge/scripts/git_askpass.py",
@@ -364,8 +369,8 @@
     },
     {
       "path": "bridge/scripts/tasks/TASK_REQUESTS.md",
-      "size": 6451,
-      "sha256": "524c00941550a9bd84b6580213d083b7b6546821ed812686f8282b2bc7325bfb"
+      "size": 7105,
+      "sha256": "0592b23a9547fbcc5cd2b5432b2af3b2e69982058e3e8d6133fd00968ad030e7"
     },
     {
       "path": "bridge/scripts/tasks/allowlist.json",
@@ -399,8 +404,8 @@
     },
     {
       "path": "bridge/state_summary/codex.md",
-      "size": 12445,
-      "sha256": "852d6bdf4ffdb8688757369ccadc774d3de45e600bfda32415d905455f16e952"
+      "size": 14166,
+      "sha256": "45235afc80ac265af35b5c2c86b0adaa61a5a124b480bb3c60f1d8785474a427"
     },
     {
       "path": "bridge/state_summary/known_limits.md",
@@ -410,7 +415,7 @@
     {
       "path": "bridge/state_summary/latest.md",
       "size": 2562,
-      "sha256": "6af2a40934b64b386672eaf6fdb0bcdd3ecddfd4119967737a0602707ad369bd"
+      "sha256": "edeb4d3823a8771df258ae6f16a8d88b9d314af9f84274ea44f5b1019352fe5c"
     },
     {
       "path": "bridge_protocol_v1.md",

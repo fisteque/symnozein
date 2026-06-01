@@ -5,6 +5,23 @@ Uchovává posledních **50** záznamů.
 
 ---
 
+## 2026-06-01T18:18:11.864379Z
+
+Zdroj změn:
+- skript: `scripts/update_body_index.py`
+- workflow: `.github/workflows/update_body_index.yml`
+
+➕ přidáno: **1**
+- `bridge/inbox/messages/codex/msg-20260601-codex-reader-stub-test-safe-001.md`
+
+🔄 změněno: **0**
+- nic
+
+❌ odebráno: **0**
+- nic
+
+---
+
 ## 2026-06-01T18:04:31.312602Z
 
 Zdroj změn:
@@ -900,29 +917,6 @@ Zdroj změn:
 - `bridge/scripts/bridge_sync_common.py`
 - `bridge/scripts/bridge_sync_outbound.py`
 - `bridge/scripts/tasks/TASK_REQUESTS.md`
-- `bridge/state_summary/latest.md`
-
-❌ odebráno: **0**
-- nic
-
----
-
-## 2026-05-24T21:46:42.756760Z
-
-Zdroj změn:
-- skript: `scripts/update_body_index.py`
-- workflow: `.github/workflows/update_body_index.yml`
-
-➕ přidáno: **3**
-- `bridge/outbox/messages/2026-05-24T213714Z_rpi5_task-result-msg-20260524-task-001.md`
-- `bridge/outbox/messages/2026-05-24T213715Z_rpi5_cycle-error-outbound-sync.md`
-- `bridge/outbox/messages/2026-05-24T213745Z_rpi5_cycle-error-inbound-sync.md`
-
-🔄 změněno: **5**
-- `bridge/logs/bridge_tail.log`
-- `bridge/scripts/bridge_cycle.py`
-- `bridge/scripts/bridge_sync_inbound.py`
-- `bridge/scripts/bridge_sync_outbound.py`
 - `bridge/state_summary/latest.md`
 
 ❌ odebráno: **0**
