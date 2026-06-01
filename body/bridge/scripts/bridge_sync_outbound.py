@@ -198,7 +198,7 @@ def path_exists_or_tracked(repo_root: Path, path: Path) -> bool:
 
 
 def working_tree_status(repo_root: Path) -> str:
-    return run_git(repo_root, ["status", "--porcelain"]).stdout.strip()
+    return run_git(repo_root, ["status", "--porcelain", "--untracked-files=all"]).stdout.strip()
 
 
 def working_tree_status_for_paths(repo_root: Path, paths: tuple[Path, ...]) -> str:
@@ -279,6 +279,10 @@ def unstage_allowed_paths(repo_root: Path) -> None:
         run_git(repo_root, ["restore", "--staged", "--", *staged])
 
 
+def existing_allowed_paths(repo_root: Path) -> list[Path]:
+    return [path for path in ALLOWED_REPO_PATHS if path_exists_or_tracked(repo_root, path)]
+
+
 def local_only_untracked_paths(repo_root: Path) -> list[Path]:
     status = working_tree_status_for_paths(repo_root, LOCAL_ONLY_REPO_PATHS)
     paths: list[Path] = []
@@ -338,7 +342,7 @@ def safe_rebase_onto_fetch_head(repo_root: Path, remote: str, branch: str) -> No
                 "-m",
                 "bridge-outbound-pre-rebase",
                 "--",
-                *[repo_rel(path) for path in ALLOWED_REPO_PATHS],
+                *[repo_rel(path) for path in existing_allowed_paths(repo_root)],
             ],
         )
         print_git_output(stash)
