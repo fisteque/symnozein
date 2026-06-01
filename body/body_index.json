@@ -1,11 +1,11 @@
 {
-  "generated_at": "2026-06-01T21:24:48.132886Z",
+  "generated_at": "2026-06-01T23:43:11.670966Z",
   "source": {
     "script": "scripts/update_body_index.py",
     "workflow": ".github/workflows/update_body_index.yml"
   },
   "kind": "state",
-  "count": 104,
+  "count": 105,
   "files": [
     {
       "path": "Prvni_kroky.md",
@@ -125,7 +125,7 @@
     {
       "path": "bridge/logs/bridge_tail.log",
       "size": 26334,
-      "sha256": "ab4e925779d051f4d89905941443aa015701adea7493a7a36202acca544d0b03"
+      "sha256": "cf0724464ec09a89129a7fc431d96352e6196a87bfa39db9f530f7e58bc01e37"
     },
     {
       "path": "bridge/outbox/codex/2026-05-27T182640Z_codex-response-msg-20260527-codex-inbox-write-task-001.md",
@@ -323,6 +323,11 @@
       "sha256": "9e34c6689c4a8410e41b64b73fde672df70ee02b5536853e256e7d3cd4841bb5"
     },
     {
+      "path": "bridge/outbox/messages/2026-06-01T232829Z_rpi5_cycle-error-unknown.md",
+      "size": 355,
+      "sha256": "0bc3e7a631ddd9e64de8e998e1460a5738cde380f3c97ecaded77b84336541d4"
+    },
+    {
       "path": "bridge/outbox/outbox.json",
       "size": 472,
       "sha256": "e20fe977adeb942811cf1d222b3056a8c561c25bbcaa297e0332f428276f9a48"
@@ -455,7 +460,7 @@
     {
       "path": "bridge/state_summary/latest.md",
       "size": 2556,
-      "sha256": "2531dc4c6264f9b3808b42916e0960edc476c53fde49433c2c04e788e2a5983f"
+      "sha256": "ea81f27a02503664c99d95f2b50f47e16c18ddd2c58a9ee23a9ae2a4edc204c7"
     },
     {
       "path": "bridge_protocol_v1.md",
