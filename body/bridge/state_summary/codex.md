@@ -8,6 +8,38 @@ messages. Keep the newest items at the top.
 
 ## Latest Implementations
 
+### Git Housekeeping Cleanup After Rebase Fix
+
+Cleared the Git maintenance warnings that were still appearing in every bridge
+cycle after the safe rebase fix.
+
+Operational steps:
+
+- stopped `bridge-cycle.timer` before maintenance;
+- inspected all `bridge-outbound-pre-rebase` stashes and verified they contained
+  only derived bridge outputs:
+  `body/bridge/logs/bridge_tail.log` and
+  `body/bridge/state_summary/latest.md`;
+- cleared those stale bridge rebase stashes;
+- removed only Git housekeeping files:
+  `symnozein/.git/gc.log` and
+  `symnozein/.git/objects/pack/tmp_pack_*`;
+- ran `git prune`;
+- ran `git gc --prune=now`;
+- restarted `bridge-cycle.timer`.
+
+Verified:
+
+- `git fsck --connectivity-only --no-progress` exits cleanly with no output;
+- `git count-objects -vH` reports `garbage: 0`, `size-garbage: 0 bytes`,
+  `packs: 1`, and only a small loose object count after subsequent cycles;
+- `symnozein/.git/gc.log` no longer exists;
+- `git stash list` is empty;
+- post-cleanup bridge cycles finish with `status: ok` and no GC/prune warning
+  in the journal;
+- no audit outbox files, inbox files, bridge runtime state, allowlist, systemd
+  config, or bridge runtime logic were changed.
+
 ### Safe Pre-Push Rebase Inbox Handling
 
 Fixed an outbound sync failure where pre-push rebase stashed an
