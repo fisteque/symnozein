@@ -201,6 +201,13 @@ def working_tree_status(repo_root: Path) -> str:
     return run_git(repo_root, ["status", "--porcelain"]).stdout.strip()
 
 
+def working_tree_status_for_paths(repo_root: Path, paths: tuple[Path, ...]) -> str:
+    return run_git(
+        repo_root,
+        ["status", "--porcelain", "--untracked-files=all", "--", *[repo_rel(path) for path in paths]],
+    ).stdout.strip()
+
+
 def is_allowed_worktree_status_line(line: str) -> bool:
     name = line[3:] if len(line) > 2 and line[2] == " " else line[2:]
     if " -> " in name:
@@ -272,6 +279,37 @@ def unstage_allowed_paths(repo_root: Path) -> None:
         run_git(repo_root, ["restore", "--staged", "--", *staged])
 
 
+def local_only_untracked_paths(repo_root: Path) -> list[Path]:
+    status = working_tree_status_for_paths(repo_root, LOCAL_ONLY_REPO_PATHS)
+    paths: list[Path] = []
+    for line in status.splitlines():
+        if not line.startswith("?? "):
+            continue
+        path = Path(line[3:])
+        if any(path == local_only or local_only in path.parents for local_only in LOCAL_ONLY_REPO_PATHS):
+            paths.append(path)
+    return paths
+
+
+def fetch_head_file_bytes(repo_root: Path, path: Path) -> bytes | None:
+    result = run_git(repo_root, ["show", f"FETCH_HEAD:{repo_rel(path)}"], check=False)
+    if result.returncode != 0:
+        return None
+    return result.stdout.encode("utf-8")
+
+
+def clear_matching_local_only_untracked_files(repo_root: Path) -> None:
+    for path in local_only_untracked_paths(repo_root):
+        full_path = ensure_inside(repo_root / path, repo_root)
+        remote_bytes = fetch_head_file_bytes(repo_root, path)
+        if remote_bytes is None or not full_path.is_file():
+            continue
+        if full_path.read_bytes() != remote_bytes:
+            continue
+        full_path.unlink()
+        print(f"Removed local-only untracked file already present in FETCH_HEAD: {repo_rel(path)}")
+
+
 def branch_divergence(repo_root: Path) -> tuple[int, int]:
     output = run_git(repo_root, ["rev-list", "--left-right", "--count", "HEAD...FETCH_HEAD"]).stdout
     left, right = output.strip().split()
@@ -288,12 +326,20 @@ def safe_rebase_onto_fetch_head(repo_root: Path, remote: str, branch: str) -> No
         return
 
     print(f"Local branch divergence before push: ahead={ahead} behind={behind}")
-    dirty = bool(working_tree_status(repo_root))
+    clear_matching_local_only_untracked_files(repo_root)
+    allowed_dirty = bool(working_tree_status_for_paths(repo_root, ALLOWED_REPO_PATHS))
     stash_ref = None
-    if dirty:
+    if allowed_dirty:
         stash = run_git(
             repo_root,
-            ["stash", "push", "--include-untracked", "-m", "bridge-outbound-pre-rebase"],
+            [
+                "stash",
+                "push",
+                "-m",
+                "bridge-outbound-pre-rebase",
+                "--",
+                *[repo_rel(path) for path in ALLOWED_REPO_PATHS],
+            ],
         )
         print_git_output(stash)
         stash_ref = "stash@{0}"
