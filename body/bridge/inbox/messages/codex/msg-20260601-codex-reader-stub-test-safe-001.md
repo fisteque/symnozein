@@ -8,6 +8,8 @@ target: codex
 codex:
 question: "Test reader-writer-stub režimu: bezpečný návrhový request."
 
+---
+
 Kontext
 
 Toto je malý test writer-stub režimu v "codex_inbox_reader.py".
