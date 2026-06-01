@@ -83,6 +83,28 @@ status: pending_codex
 Codex responses are written manually later as outbox messages with
 `author: Codex`. The bridge agent must not pretend to be Codex.
 
+## Codex Inbox Reader Dry Run
+
+The standalone dry-run reader lives at:
+
+```text
+/home/fiste/Noema/bridge/scripts/codex_inbox_reader.py
+```
+
+It only scans `body/bridge/inbox/messages/codex/`, validates Markdown
+frontmatter, computes `sha256(content)`, classifies the request, and prints what
+it would do. It does not write `codex_response` files, does not update local
+state, does not commit, and does not push.
+
+The proposed future state file is runtime-local:
+
+```text
+/home/fiste/Noema/bridge/state/codex_reader_state.json
+```
+
+Do not run the reader from `bridge_cycle.py`, systemd, or the task allowlist
+without a separate implementation request and safety review.
+
 ## Known Bridge Limits
 
 Before proposing a new task or input layer, read:

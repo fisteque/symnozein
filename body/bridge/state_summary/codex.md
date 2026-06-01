@@ -8,6 +8,48 @@ messages. Keep the newest items at the top.
 
 ## Latest Implementations
 
+### Codex Inbox Reader Dry-Run
+
+Prepared the first safe standalone dry-run step for a future Codex inbox
+reader.
+
+Changed:
+
+- `bridge/scripts/codex_inbox_reader.py`
+- `body/bridge/scripts/codex_inbox_reader.py`
+- `bridge/scripts/tasks/TASK_REQUESTS.md`
+- `body/bridge/scripts/tasks/TASK_REQUESTS.md`
+
+Behavior:
+
+- scans only `body/bridge/inbox/messages/codex/*.md`;
+- ignores hidden files, symlinks, non-files, and files outside the allowed
+  inbox directory;
+- rejects files larger than 64 KiB;
+- parses YAML frontmatter and extracts `id`, `type`, `sender`, `target`, and
+  `created_at`;
+- computes `sha256(content)`;
+- classifies requests as `design_review`, `documentation_review`,
+  `status_summary`, `safety_review`, `needs_human`, or `invalid`;
+- prints what it would do and writes nothing.
+
+State specification:
+
+- future runtime-local state path:
+  `/home/fiste/Noema/bridge/state/codex_reader_state.json`;
+- dry-run mode does not create or update that file.
+
+Verified:
+
+- real inbox dry-run succeeds and reports side effects as false for file writes,
+  outbox writes, commits, and pushes;
+- `/tmp` fixture confirms a design request becomes `design_review`, a risky
+  request becomes `needs_human`, and a file without frontmatter becomes
+  `invalid`;
+- no `bridge_cycle.py`, systemd unit/timer, allowlist, runtime task processing,
+  outbound sync rules, existing inbox/outbox messages, or audit files were
+  changed.
+
 ### Git Housekeeping Cleanup After Rebase Fix
 
 Cleared the Git maintenance warnings that were still appearing in every bridge
