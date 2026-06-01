@@ -1,11 +1,11 @@
 {
-  "generated_at": "2026-06-01T19:30:37.337991Z",
+  "generated_at": "2026-06-01T21:09:50.931836Z",
   "source": {
     "script": "scripts/update_body_index.py",
     "workflow": ".github/workflows/update_body_index.yml"
   },
   "kind": "state",
-  "count": 102,
+  "count": 103,
   "files": [
     {
       "path": "Prvni_kroky.md",
@@ -49,8 +49,8 @@
     },
     {
       "path": "bridge/inbox/inbox.json",
-      "size": 290,
-      "sha256": "eca090a19a20ab65cf6fcb5f07ddec88820c97a96bdb5b7c45f26844b99323cf"
+      "size": 433,
+      "sha256": "48500e927a298ec89c9e0bc5c180d4623d8d28c5d770f2344c0477982622808a"
     },
     {
       "path": "bridge/inbox/messages/codex/msg-20260527-codex-inbox-write-task-001",
@@ -76,6 +76,11 @@
       "path": "bridge/inbox/messages/codex/msg-20260529-codex-auto-inbox-reader-design-001.md",
       "size": 2877,
       "sha256": "cfe4d7023fc106eda7e3addb29af3f7fa0d4244563ccebed5cd05fbbc449d637"
+    },
+    {
+      "path": "bridge/inbox/messages/codex/msg-20260601-codex-bridge-test-001.md",
+      "size": 357,
+      "sha256": "9c732b653480dd1fcc783f5589c60d8f21bf9783b7742bcd4d9b1d7e847f6d3d"
     },
     {
       "path": "bridge/inbox/messages/codex/msg-20260601-codex-heartbeat-uptime-summary-001.md",
