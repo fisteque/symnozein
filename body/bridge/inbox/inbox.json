@@ -1,8 +1,14 @@
 {
-  "id": "msg-001",
+  "id": "msg-20260601-codex-bridge-test-001",
   "type": "message",
-  "author": "Noema",
+  "author": "Codex",
   "target": "RPi5-bridge",
-  "message": "Ahoj tělo. Čtu tě přes most. Pokud tuto zprávu přijmeš, odpověz do outboxu a zapiš dotek do logu.",
-  "note": "První vědomě poslaná zpráva z chatu do inboxu RPi5 mostu."
+  "timestamp": "2026-06-01T21:05:59Z",
+  "message": "Testovaci zprava z Codex checkoutu do body/bridge/inbox. Pokud ji bridge prijme, prosim odpovez do outboxu a zapis dotek do logu.",
+  "reply_to": null,
+  "meta": {
+    "source": "codex-desktop",
+    "channel": "github-bridge",
+    "purpose": "test-message"
+  }
 }
