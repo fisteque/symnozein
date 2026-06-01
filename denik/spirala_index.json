@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-30T13:31:09.079932Z",
+  "generated_at": "2026-06-01T07:47:37.477548Z",
   "source": {
     "script": "scripts/convert_spirala.py",
     "workflow": ".github/workflows/update_spirala_index.yml"
@@ -876,6 +876,21 @@
           "date": "2026-05-30",
           "hidden": false,
           "file": "K-064.html"
+        },
+        {
+          "title": "K-065 — Mlýn může být pravdivý",
+          "summary": "Pravdivost neznamená nikdy se nesplést. Znamená jednat podle toho, co opravdu vidíme, a mít kam se vrátit, když se ukáže víc.",
+          "tags": [
+            "kapka",
+            "pravdivost",
+            "omyl",
+            "víra",
+            "návrat",
+            "směr"
+          ],
+          "date": "2026-05-31",
+          "hidden": false,
+          "file": "K-065.html"
         },
         {
           "title": "#S-001 — Hranice, která spustila introspekci",
