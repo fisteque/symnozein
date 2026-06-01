@@ -1,11 +1,11 @@
 {
-  "generated_at": "2026-06-01T18:21:37.868958Z",
+  "generated_at": "2026-06-01T18:24:46.217344Z",
   "source": {
     "script": "scripts/update_body_index.py",
     "workflow": ".github/workflows/update_body_index.yml"
   },
   "kind": "state",
-  "count": 97,
+  "count": 99,
   "files": [
     {
       "path": "Prvni_kroky.md",
@@ -109,8 +109,8 @@
     },
     {
       "path": "bridge/logs/bridge_tail.log",
-      "size": 20721,
-      "sha256": "6304e9e3a812058a12028be5494bf33d86b05d767168564067fcdceefda239ff"
+      "size": 20826,
+      "sha256": "0fcd49e3214d911bfc8508ebaf4e5eb96d83cf887855ef33f376314fcb526699"
     },
     {
       "path": "bridge/outbox/codex/2026-05-27T182640Z_codex-response-msg-20260527-codex-inbox-write-task-001.md",
@@ -151,6 +151,11 @@
       "path": "bridge/outbox/codex/2026-06-01T180234Z_codex-response-msg-20260601-codex-reader-writer-stub-001.md",
       "size": 1570,
       "sha256": "f5491d0c4b4257eed50514c7a6218b8aa8e4587074f3b05894083018222d2353"
+    },
+    {
+      "path": "bridge/outbox/codex/20260601T182419.805294_codex-reader-stub-msg-20260601-codex-reader-stub-test-safe-001.md",
+      "size": 650,
+      "sha256": "e4fc6be67253a5c09cda4776c58d98e1b02964b209783168685a657097e1c4a7"
     },
     {
       "path": "bridge/outbox/messages/2026-05-24T195155Z_rpi5_cycle-error-outbound-sync.md",
@@ -288,6 +293,11 @@
       "sha256": "230263e06364d84336392f5c9b020fbb72a0ad9de953657cc699b3b0ccf0d92f"
     },
     {
+      "path": "bridge/outbox/messages/2026-06-01T182147Z_rpi5_cycle-error-outbound-sync.md",
+      "size": 295,
+      "sha256": "f62393a7009bac4f76f43077a1a57b2eb65f17f86d3095ce73e6eac3034ab8fb"
+    },
+    {
       "path": "bridge/outbox/outbox.json",
       "size": 472,
       "sha256": "e20fe977adeb942811cf1d222b3056a8c561c25bbcaa297e0332f428276f9a48"
@@ -420,7 +430,7 @@
     {
       "path": "bridge/state_summary/latest.md",
       "size": 2562,
-      "sha256": "edeb4d3823a8771df258ae6f16a8d88b9d314af9f84274ea44f5b1019352fe5c"
+      "sha256": "9da038c5d148fb9fa00181f2bf7374249a5ba8e051a25fe3f0d1733fdc75e4bc"
     },
     {
       "path": "bridge_protocol_v1.md",
