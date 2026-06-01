@@ -8,6 +8,38 @@ messages. Keep the newest items at the top.
 
 ## Latest Implementations
 
+### Heartbeat Uptime In Public Summary
+
+Added heartbeat uptime visibility to the public bridge summary without changing
+the heartbeat service, watchdog service, bridge cycle, systemd units, allowlist,
+task processing, or outbound sync rules.
+
+Changed:
+
+- `bridge/scripts/write_bridge_summary.py`
+- `body/bridge/scripts/write_bridge_summary.py`
+
+Behavior:
+
+- `latest.md` now includes heartbeat service start, heartbeat uptime seconds,
+  restart count, uptime source, and last heartbeat gap seconds;
+- the summary writer first tries systemd service metadata for
+  `noema-heartbeat.service`;
+- when systemd metadata is unavailable, it falls back to the last
+  `heartbeat started` line in `core/hb/logs/heartbeat.log`;
+- max heartbeat gap since start is explicitly marked unavailable without
+  heartbeat state history.
+
+Verified:
+
+- Codex dry-run reader classified the request as `design_review` and reported
+  all side effects as false;
+- `write_bridge_summary.py` renders the new fields locally;
+- no heartbeat service restart was needed;
+- no `bridge_cycle.py`, systemd unit/timer, allowlist, runtime task processing,
+  Codex reader automation, outbound sync rules, existing inbox/outbox messages,
+  or audit files were changed.
+
 ### Codex Inbox Reader Dry-Run
 
 Prepared the first safe standalone dry-run step for a future Codex inbox

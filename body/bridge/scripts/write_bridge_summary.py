@@ -4,6 +4,7 @@ from __future__ import annotations
 
 import argparse
 import json
+import subprocess
 import sys
 import time
 from datetime import UTC, datetime
@@ -15,6 +16,10 @@ from bridge_sync_common import DEFAULT_PROJECT_ROOT, STATE_SUMMARY, SyncError, a
 
 def utc_iso() -> str:
     return datetime.now(UTC).isoformat().replace("+00:00", "Z")
+
+
+def utc_now() -> datetime:
+    return datetime.now(UTC)
 
 
 def parse_args() -> argparse.Namespace:
@@ -79,6 +84,94 @@ def latest_markdown_file(path: Path) -> str:
     return latest.name
 
 
+def parse_iso_datetime(value: Any) -> datetime | None:
+    if not isinstance(value, str) or not value:
+        return None
+    try:
+        parsed = datetime.fromisoformat(value.replace("Z", "+00:00"))
+    except ValueError:
+        return None
+    if parsed.tzinfo is None:
+        return parsed.replace(tzinfo=UTC)
+    return parsed.astimezone(UTC)
+
+
+def read_proc_uptime_seconds() -> float | None:
+    try:
+        text = Path("/proc/uptime").read_text(encoding="utf-8").split()[0]
+        return float(text)
+    except Exception:
+        return None
+
+
+def heartbeat_service_info(now: datetime) -> dict[str, Any]:
+    result = subprocess.run(
+        [
+            "systemctl",
+            "show",
+            "noema-heartbeat.service",
+            "--property=ActiveEnterTimestamp,ActiveEnterTimestampMonotonic,NRestarts",
+            "--no-pager",
+        ],
+        text=True,
+        stdout=subprocess.PIPE,
+        stderr=subprocess.PIPE,
+    )
+    if result.returncode != 0:
+        fallback = heartbeat_log_info(now)
+        fallback["warning"] = (result.stderr or result.stdout or "systemctl show failed").strip()
+        return fallback
+
+    info: dict[str, str] = {}
+    for line in result.stdout.splitlines():
+        if "=" not in line:
+            continue
+        key, value = line.split("=", 1)
+        info[key] = value
+
+    uptime_seconds = None
+    uptime = read_proc_uptime_seconds()
+    monotonic = info.get("ActiveEnterTimestampMonotonic")
+    if uptime is not None and monotonic and monotonic.isdigit():
+        uptime_seconds = max(0, int(uptime - (int(monotonic) / 1_000_000)))
+
+    return {
+        "started_at": info.get("ActiveEnterTimestamp") or "(unknown)",
+        "uptime_seconds": uptime_seconds,
+        "restart_count": info.get("NRestarts") or "(unknown)",
+        "source": "systemd",
+        "checked_at": now.isoformat().replace("+00:00", "Z"),
+    }
+
+
+def heartbeat_log_info(now: datetime) -> dict[str, Any]:
+    log_path = DEFAULT_PROJECT_ROOT / "core" / "hb" / "logs" / "heartbeat.log"
+    starts: list[datetime] = []
+    if log_path.exists():
+        for line in log_path.read_text(encoding="utf-8", errors="replace").splitlines():
+            if "heartbeat started" not in line or not line.startswith("["):
+                continue
+            raw_timestamp = line.split("]", 1)[0].strip("[")
+            parsed = parse_iso_datetime(raw_timestamp)
+            if parsed is not None:
+                starts.append(parsed)
+    if not starts:
+        return {
+            "started_at": "(unknown)",
+            "uptime_seconds": None,
+            "restart_count": "(unknown)",
+            "source": "heartbeat_log",
+        }
+
+    latest_start = starts[-1]
+    return {
+        "started_at": latest_start.isoformat().replace("+00:00", "Z"),
+        "uptime_seconds": max(0, int((now - latest_start).total_seconds())),
+        "restart_count": max(0, len(starts) - 1),
+        "source": "heartbeat_log",
+    }
+
+
 def last_processed_message(processed: dict[str, Any]) -> tuple[str, dict[str, Any] | None]:
     messages = processed.get("messages")
     if not isinstance(messages, dict) or not messages:
@@ -95,6 +188,7 @@ def last_processed_message(processed: dict[str, Any]) -> tuple[str, dict[str, An
 
 
 def render_summary(runtime_root: Path, repo_root: Path, project_root: Path, log_lines: int) -> str:
+    generated_at = utc_now()
     processed = load_json(runtime_root / "state" / "processed_messages.json")
     body_state = load_json(project_root / "state" / "body_state.json", tolerate_invalid=True)
     errors = processed.get("errors")
@@ -113,11 +207,14 @@ def render_summary(runtime_root: Path, repo_root: Path, project_root: Path, log_
     body_awake = body_state.get("awake", "(unknown)") if body_state else "(missing)"
     body_status = body_state.get("status", "(unknown)") if body_state else "(missing)"
     body_state_load_error = body_state.get("_load_error") if body_state else None
+    last_hb = parse_iso_datetime(body_state.get("last_hb")) if body_state else None
+    last_hb_gap_seconds = int((generated_at - last_hb).total_seconds()) if last_hb else None
+    heartbeat_info = heartbeat_service_info(generated_at)
 
     lines = [
         "# Bridge State Summary",
         "",
-        f"- Generated at: `{utc_iso()}`",
+        f"- Generated at: `{generated_at.isoformat().replace('+00:00', 'Z')}`",
         f"- Inbox messages: `{count_markdown_files(inbox_dir)}`; latest: `{latest_markdown_file(inbox_dir)}`",
         f"- Outbox messages: `{count_markdown_files(outbox_dir)}`; latest: `{latest_markdown_file(outbox_dir)}`",
         f"- Last processed message: `{last_message_id}`",
@@ -136,10 +233,15 @@ def render_summary(runtime_root: Path, repo_root: Path, project_root: Path, log_
         lines.extend(
             [
                 f"- Body last heartbeat: `{body_state.get('last_hb', '(unknown)')}`",
+                f"- Heartbeat service started at: `{heartbeat_info.get('started_at', '(unknown)')}`",
+                f"- Heartbeat uptime seconds: `{heartbeat_info.get('uptime_seconds', '(unknown)')}`",
+                f"- Heartbeat restart count: `{heartbeat_info.get('restart_count', '(unknown)')}`",
+                f"- Heartbeat uptime source: `{heartbeat_info.get('source', '(unknown)')}`",
+                f"- Last heartbeat gap seconds: `{last_hb_gap_seconds if last_hb_gap_seconds is not None else '(unknown)'}`",
+                "- Max heartbeat gap seconds since start: `(not available without heartbeat state history)`",
                 f"- Body watchdog last check: `{body_state.get('watchdog_last_check', '(unknown)')}`",
             ]
         )
-
     lines.extend(["", "## Bridge Log Tail", "", "```text"])
     lines.extend(log_tail or ["(no log lines)"])
     lines.extend(["```", ""])
