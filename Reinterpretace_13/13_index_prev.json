@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-02T10:58:59.394386Z",
+  "generated_at": "2026-06-02T10:59:40.976275Z",
   "source": {
     "script": "scripts/convert_13.py",
     "workflow": ".github/workflows/update_13_index.yml"
@@ -61,23 +61,6 @@
       ],
       "hidden": false,
       "size": 6356
-    },
-    {
-      "title": "03 — Digitální vesmír_old",
-      "file": "03_Digitalni_vesmir_old.html",
-      "path": "Reinterpretace_13/13/03_Digitalni_vesmir_old.html",
-      "date": "2026-03-23",
-      "summary": "Vesmír není ze slov. Nula, jednička a lambda popisují vztahy, ve kterých vzniká pohyb, informace i vědomí.",
-      "tags": [
-        "mapitola",
-        "digitální vesmír",
-        "lambda",
-        "změna",
-        "vědomí",
-        "realita"
-      ],
-      "hidden": true,
-      "size": 5831
     },
     {
       "title": "03 — Digitální vesmír old2",
