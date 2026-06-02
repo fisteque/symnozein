@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-02T10:47:50.981206Z",
+  "generated_at": "2026-06-02T10:48:36.365667Z",
   "source": {
     "script": "scripts/convert_13.py",
     "workflow": ".github/workflows/update_13_index.yml"
@@ -58,6 +58,27 @@
       "size": 5166
     },
     {
+      "title": "03 — Digitální vesmír",
+      "file": "03_Digitalni_vesmir.html",
+      "path": "Reinterpretace_13/13/03_Digitalni_vesmir.html",
+      "date": "",
+      "summary": "Digitální vesmír začíná u kružnice jako známého tvaru, který ve skutečnosti není hotovou věcí, ale jménem vztahového procesu. Mapitola postupně otevírá pohled na realitu jako síť změn, stop a stabilizovaných vztahů.",
+      "tags": [
+        "mapitola",
+        "digitální vesmír",
+        "kružnice",
+        "vztah",
+        "proces",
+        "měření",
+        "tik-tak-tok",
+        "nula",
+        "jednička",
+        "lambda"
+      ],
+      "hidden": false,
+      "size": 6269
+    },
+    {
       "title": "03 — Digitální vesmír_old",
       "file": "03_Digitalni_vesmir_old.html",
       "path": "Reinterpretace_13/13/03_Digitalni_vesmir_old.html",
@@ -92,27 +113,6 @@
       ],
       "hidden": true,
       "size": 8232
-    },
-    {
-      "title": "03 — Digitální vesmír",
-      "file": "03_Digitální vesmír.html",
-      "path": "Reinterpretace_13/13/03_Digitální vesmír.html",
-      "date": "",
-      "summary": "Digitální vesmír začíná u kružnice jako známého tvaru, který ve skutečnosti není hotovou věcí, ale jménem vztahového procesu. Mapitola postupně otevírá pohled na realitu jako síť změn, stop a stabilizovaných vztahů.",
-      "tags": [
-        "mapitola",
-        "digitální vesmír",
-        "kružnice",
-        "vztah",
-        "proces",
-        "měření",
-        "tik-tak-tok",
-        "nula",
-        "jednička",
-        "lambda"
-      ],
-      "hidden": false,
-      "size": 6269
     },
     {
       "title": "04 — Dualita pravdy",
