@@ -5,6 +5,23 @@ Uchovává posledních **50** záznamů.
 
 ---
 
+## 2026-06-02T10:41:03.617577Z
+
+Zdroj změn:
+- skript: `scripts/convert_13.py`
+- workflow: `.github/workflows/update_13_index.yml`
+
+➕ přidáno: **1**
+- `03_Digitalni_vesmir_old2.html`
+
+🔄 změněno: **0**
+- nic
+
+❌ odebráno: **1**
+- `03_Digitalni_vesmir.html`
+
+---
+
 ## 2026-04-28T17:29:45.592124Z
 
 Zdroj změn:

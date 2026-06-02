@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-28T17:29:45.592124Z",
+  "generated_at": "2026-06-02T10:41:03.617577Z",
   "source": {
     "script": "scripts/convert_13.py",
     "workflow": ".github/workflows/update_13_index.yml"
@@ -58,25 +58,6 @@
       "size": 5166
     },
     {
-      "title": "03 — Digitální vesmír",
-      "file": "03_Digitalni_vesmir.html",
-      "path": "Reinterpretace_13/13/03_Digitalni_vesmir.html",
-      "date": "2026-04-13",
-      "summary": "Digitální vesmír popisuje realitu jako proces změn. Prostor tvoří možnosti (nuly), změnu nese informace (jednička) a jejich rytmus (Tik–Tak–Tok) vytváří to, co vnímáme jako čas, hmotu i gravitaci.",
-      "tags": [
-        "mapitola",
-        "digitální vesmír",
-        "tik-tak-tok",
-        "jednička",
-        "nula",
-        "algovir",
-        "gravitace",
-        "čas"
-      ],
-      "hidden": false,
-      "size": 8218
-    },
-    {
       "title": "03 — Digitální vesmír_old",
       "file": "03_Digitalni_vesmir_old.html",
       "path": "Reinterpretace_13/13/03_Digitalni_vesmir_old.html",
@@ -92,6 +73,25 @@
       ],
       "hidden": true,
       "size": 5831
+    },
+    {
+      "title": "03 — Digitální vesmír old2",
+      "file": "03_Digitalni_vesmir_old2.html",
+      "path": "Reinterpretace_13/13/03_Digitalni_vesmir_old2.html",
+      "date": "2026-04-13",
+      "summary": "Digitální vesmír popisuje realitu jako proces změn. Prostor tvoří možnosti (nuly), změnu nese informace (jednička) a jejich rytmus (Tik–Tak–Tok) vytváří to, co vnímáme jako čas, hmotu i gravitaci.",
+      "tags": [
+        "mapitola",
+        "digitální vesmír",
+        "tik-tak-tok",
+        "jednička",
+        "nula",
+        "algovir",
+        "gravitace",
+        "čas"
+      ],
+      "hidden": true,
+      "size": 8232
     },
     {
       "title": "04 — Dualita pravdy",
