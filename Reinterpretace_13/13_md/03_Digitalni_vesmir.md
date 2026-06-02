@@ -11,8 +11,8 @@ status: "rozepsáno"
 
 # Digitální vesmír: Když vztah tvoří svět
 
-«Tato mapitola je rozepsaná.
-Současná verze slouží jako nový čitelný vstup do digitálního vesmíru; navazující pojmy jako nula, jednička, lambda, Tik–Tak–Tok, brázda, algovir, čas a gravitace budou dále dopracovány z materiálů.»
+> Tato mapitola je rozepsaná.
+> Současná verze slouží jako nový čitelný vstup do digitálního vesmíru; navazující pojmy jako nula, jednička, lambda, Tik–Tak–Tok, brázda, algovir, čas a gravitace budou dále dopracovány z materiálů.
 
 ## Každý ví, co je kružnice.
 
