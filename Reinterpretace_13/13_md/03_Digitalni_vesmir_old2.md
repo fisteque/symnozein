@@ -1,9 +1,9 @@
 ---
-title: "03 — Digitální vesmír"
+title: "03 — Digitální vesmír old2"
 date: "2026-04-13"
 tags: ["mapitola", "digitální vesmír", "tik-tak-tok", "jednička", "nula", "algovir", "gravitace", "čas"]
 summary: "Digitální vesmír popisuje realitu jako proces změn. Prostor tvoří možnosti (nuly), změnu nese informace (jednička) a jejich rytmus (Tik–Tak–Tok) vytváří to, co vnímáme jako čas, hmotu i gravitaci."
-hidden: false
+hidden: true
 ---
 
 ## 03 — Digitální vesmír
