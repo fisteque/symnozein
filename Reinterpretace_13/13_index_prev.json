@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-02T11:00:22.719521Z",
+  "generated_at": "2026-06-02T11:06:29.725387Z",
   "source": {
     "script": "scripts/convert_13.py",
     "workflow": ".github/workflows/update_13_index.yml"
@@ -60,7 +60,7 @@
         "lambda"
       ],
       "hidden": false,
-      "size": 6356
+      "size": 6379
     },
     {
       "title": "04 — Dualita pravdy",
