@@ -1,7 +1,7 @@
 ---
 
 title: "03 — Digitální vesmír"
-date: ""
+date: "2026-06-02"
 tags: ["mapitola", "digitální vesmír", "kružnice", "vztah", "proces", "měření", "tik-tak-tok", "nula", "jednička", "lambda"]
 summary: "Digitální vesmír začíná u kružnice jako známého tvaru, který ve skutečnosti není hotovou věcí, ale jménem vztahového procesu. Mapitola postupně otevírá pohled na realitu jako síť změn, stop a stabilizovaných vztahů."
 hidden: false
@@ -9,12 +9,12 @@ status: "rozepsáno"
 
 ---
 
-Digitální vesmír: Když vztah tvoří svět
+# Digitální vesmír: Když vztah tvoří svět
 
 «Tato mapitola je rozepsaná.
 Současná verze slouží jako nový čitelný vstup do digitálního vesmíru; navazující pojmy jako nula, jednička, lambda, Tik–Tak–Tok, brázda, algovir, čas a gravitace budou dále dopracovány z materiálů.»
 
-Každý ví, co je kružnice.
+## Každý ví, co je kružnice.
 
 Stačí vzít tužku, kružítko nebo jen prst ve vzduchu a naznačit tvar, který se vrací sám k sobě. Kruh je tak známý, že se u něj většinou nezastavujeme. Považujeme ho za jednu z nejjednodušších věcí. Něco, co už víme. Něco, co stačí pojmenovat.
 
