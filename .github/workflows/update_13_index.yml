@@ -6,7 +6,6 @@ on:
       - 'Reinterpretace_13/13_md/*.md'
       - 'Reinterpretace_13/templates/template.html'
       - '.github/workflows/update_13_index.yml'
-      - 'scripts/update_13_index.py'
       - 'scripts/convert_13.py'
 
 permissions:
