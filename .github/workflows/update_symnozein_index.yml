@@ -38,7 +38,7 @@ jobs:
 
       - name: Pull latest changes (avoid push conflicts)
         run: |
-          git pull --rebase origin main || true
+          git pull --rebase origin main
 
       - name: Commit and push generated files
         run: |
