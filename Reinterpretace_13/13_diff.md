@@ -5,6 +5,23 @@ Uchovává posledních **50** záznamů.
 
 ---
 
+## 2026-06-02T10:47:50.981206Z
+
+Zdroj změn:
+- skript: `scripts/convert_13.py`
+- workflow: `.github/workflows/update_13_index.yml`
+
+➕ přidáno: **1**
+- `03_Digitální vesmír.html`
+
+🔄 změněno: **0**
+- nic
+
+❌ odebráno: **0**
+- nic
+
+---
+
 ## 2026-06-02T10:41:03.617577Z
 
 Zdroj změn:
