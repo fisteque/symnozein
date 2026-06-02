@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-02T10:48:36.365667Z",
+  "generated_at": "2026-06-02T10:56:58.493843Z",
   "source": {
     "script": "scripts/convert_13.py",
     "workflow": ".github/workflows/update_13_index.yml"
@@ -61,7 +61,7 @@
       "title": "03 — Digitální vesmír",
       "file": "03_Digitalni_vesmir.html",
       "path": "Reinterpretace_13/13/03_Digitalni_vesmir.html",
-      "date": "",
+      "date": "2026-06-02",
       "summary": "Digitální vesmír začíná u kružnice jako známého tvaru, který ve skutečnosti není hotovou věcí, ale jménem vztahového procesu. Mapitola postupně otevírá pohled na realitu jako síť změn, stop a stabilizovaných vztahů.",
       "tags": [
         "mapitola",
@@ -76,7 +76,7 @@
         "lambda"
       ],
       "hidden": false,
-      "size": 6269
+      "size": 6356
     },
     {
       "title": "03 — Digitální vesmír_old",
