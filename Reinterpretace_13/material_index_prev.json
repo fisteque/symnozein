@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-30T14:15:28.154773Z",
+  "generated_at": "2026-06-02T10:03:15.271106Z",
   "source": {
     "script": "scripts/update_material_index.py",
     "workflow": ".github/workflows/update_material_index.yml"
@@ -243,6 +243,23 @@
         "změna",
         "pi",
         "algovír"
+      ]
+    },
+    {
+      "title": "Kružnice před slovem",
+      "file": "Kruznice_pred_slovem.md",
+      "path": "Reinterpretace_13/material_md/Kruznice_pred_slovem.md",
+      "date": "2026-06-02",
+      "summary": "Úvaha o tom, že některé problémy vznikají tím, že jazyk uzavře proces do jména a my pak hledáme pravdu ve věci, místo ve vztahu, který pojmu předchází.",
+      "tags": [
+        "reinterpretace",
+        "věci a děje",
+        "měření",
+        "jazyk",
+        "kružnice",
+        "pi",
+        "vztah",
+        "proces"
       ]
     },
     {
