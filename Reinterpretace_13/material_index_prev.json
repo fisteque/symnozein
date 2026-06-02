@@ -1,11 +1,25 @@
 {
-  "generated_at": "2026-06-02T10:03:15.271106Z",
+  "generated_at": "2026-06-02T10:58:57.622404Z",
   "source": {
     "script": "scripts/update_material_index.py",
     "workflow": ".github/workflows/update_material_index.yml"
   },
   "kind": "content",
   "entries": [
+    {
+      "title": "02 — Víra old",
+      "file": "02_Vira_old.md",
+      "path": "Reinterpretace_13/material_md/02_Vira_old.md",
+      "date": "2026-03-23",
+      "summary": "Víra není opakem poznání, ale jeho základem. Vzniká z opakované zkušenosti, vede pozornost a určuje, jak skládáme smysl i realitu.",
+      "tags": [
+        "mapitola",
+        "víra",
+        "poznání",
+        "smysl",
+        "vědomí"
+      ]
+    },
     {
       "title": "03 Digitalni vesmir FINAL",
       "file": "03_Digitalni_vesmir_FINAL.md",
