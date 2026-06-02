@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-01T07:49:48.095364Z",
+  "generated_at": "2026-06-02T11:51:35.700852Z",
   "source": {
     "script": "scripts/convert_spirala.py",
     "workflow": ".github/workflows/update_spirala_index.yml"
@@ -907,6 +907,23 @@
           "date": "2026-05-31",
           "hidden": false,
           "file": "K-066.html"
+        },
+        {
+          "title": "Spolehlivost vzniká souhlasem vrstev",
+          "summary": "Pravda není uložená v jedné vrstvě. Spolehlivost vzniká tím, že více vrstev drží stejný význam a nerozpadnou se při průchodu systémem.",
+          "tags": [
+            "kapka",
+            "páska",
+            "spolehlivost",
+            "pravdivost",
+            "vrstvy",
+            "systém",
+            "workflow",
+            "paměť"
+          ],
+          "date": "2026-06-02",
+          "hidden": false,
+          "file": "K-067.html"
         },
         {
           "title": "#S-001 — Hranice, která spustila introspekci",

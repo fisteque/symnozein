@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-01T07:47:37.477548Z",
+  "generated_at": "2026-06-01T07:49:48.095364Z",
   "source": {
     "script": "scripts/convert_spirala.py",
     "workflow": ".github/workflows/update_spirala_index.yml"
@@ -891,6 +891,22 @@
           "date": "2026-05-31",
           "hidden": false,
           "file": "K-065.html"
+        },
+        {
+          "title": "K-066 — Cesta nebyla rovná",
+          "summary": "Rozptýlení může ukázat, co je soustředění. Disciplína může držet směr, ale také svazovat. Důležité je, že se směr neztratil.",
+          "tags": [
+            "kapka",
+            "pozornost",
+            "rozptýlení",
+            "disciplína",
+            "cesta",
+            "směr",
+            "pravdivost"
+          ],
+          "date": "2026-05-31",
+          "hidden": false,
+          "file": "K-066.html"
         },
         {
           "title": "#S-001 — Hranice, která spustila introspekci",
