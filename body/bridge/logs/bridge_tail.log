@@ -1,9 +1,9 @@
   File "/home/fiste/Noema/bridge/scripts/bridge_cycle_lock.py", line 91, in bridge_cycle_lock
     raise SyncError(f"Bridge cycle lock is active until {existing.get('expires_at')}: {lock_path}")
-bridge_sync_common.SyncError: Bridge cycle lock is active until 2026-06-02T02:23:02.626713Z: /home/fiste/Noema/bridge/state/bridge_cycle.lock.json
-[2026-06-02T02:10:32.818547Z] [WARN] [cycle] Cycle error already reported for step=unknown repeat_count=5
-[2026-06-02T02:11:02.853956Z] [ERROR] [cycle] Bridge cycle lock is active until 2026-06-02T02:23:02.626713Z: /home/fiste/Noema/bridge/state/bridge_cycle.lock.json
-[2026-06-02T02:11:02.857092Z] [ERROR] [cycle] Traceback (most recent call last):
+bridge_sync_common.SyncError: Bridge cycle lock is active until 2026-06-02T13:50:37.016108Z: /home/fiste/Noema/bridge/state/bridge_cycle.lock.json
+[2026-06-02T13:38:07.200911Z] [WARN] [cycle] Cycle error already reported for step=unknown repeat_count=5
+[2026-06-02T13:38:37.240660Z] [ERROR] [cycle] Bridge cycle lock is active until 2026-06-02T13:50:37.016108Z: /home/fiste/Noema/bridge/state/bridge_cycle.lock.json
+[2026-06-02T13:38:37.244750Z] [ERROR] [cycle] Traceback (most recent call last):
   File "/home/fiste/Noema/bridge/scripts/bridge_cycle.py", line 283, in main
     with bridge_cycle_lock(runtime_root, ttl_seconds=args.lock_ttl_seconds) as lock_path:
   File "/usr/lib/python3.11/contextlib.py", line 137, in __enter__
@@ -11,10 +11,10 @@ bridge_sync_common.SyncError: Bridge cycle lock is active until 2026-06-02T02:23
            ^^^^^^^^^^^^^^
   File "/home/fiste/Noema/bridge/scripts/bridge_cycle_lock.py", line 91, in bridge_cycle_lock
     raise SyncError(f"Bridge cycle lock is active until {existing.get('expires_at')}: {lock_path}")
-bridge_sync_common.SyncError: Bridge cycle lock is active until 2026-06-02T02:23:02.626713Z: /home/fiste/Noema/bridge/state/bridge_cycle.lock.json
-[2026-06-02T02:11:02.858546Z] [WARN] [cycle] Cycle error already reported for step=unknown repeat_count=6
-[2026-06-02T02:11:32.895440Z] [ERROR] [cycle] Bridge cycle lock is active until 2026-06-02T02:23:02.626713Z: /home/fiste/Noema/bridge/state/bridge_cycle.lock.json
-[2026-06-02T02:11:32.899327Z] [ERROR] [cycle] Traceback (most recent call last):
+bridge_sync_common.SyncError: Bridge cycle lock is active until 2026-06-02T13:50:37.016108Z: /home/fiste/Noema/bridge/state/bridge_cycle.lock.json
+[2026-06-02T13:38:37.247446Z] [WARN] [cycle] Cycle error already reported for step=unknown repeat_count=6
+[2026-06-02T13:39:07.281939Z] [ERROR] [cycle] Bridge cycle lock is active until 2026-06-02T13:50:37.016108Z: /home/fiste/Noema/bridge/state/bridge_cycle.lock.json
+[2026-06-02T13:39:07.286496Z] [ERROR] [cycle] Traceback (most recent call last):
   File "/home/fiste/Noema/bridge/scripts/bridge_cycle.py", line 283, in main
     with bridge_cycle_lock(runtime_root, ttl_seconds=args.lock_ttl_seconds) as lock_path:
   File "/usr/lib/python3.11/contextlib.py", line 137, in __enter__
@@ -22,10 +22,10 @@ bridge_sync_common.SyncError: Bridge cycle lock is active until 2026-06-02T02:23
            ^^^^^^^^^^^^^^
   File "/home/fiste/Noema/bridge/scripts/bridge_cycle_lock.py", line 91, in bridge_cycle_lock
     raise SyncError(f"Bridge cycle lock is active until {existing.get('expires_at')}: {lock_path}")
-bridge_sync_common.SyncError: Bridge cycle lock is active until 2026-06-02T02:23:02.626713Z: /home/fiste/Noema/bridge/state/bridge_cycle.lock.json
-[2026-06-02T02:11:32.901197Z] [WARN] [cycle] Cycle error already reported for step=unknown repeat_count=7
-[2026-06-02T02:12:02.922781Z] [ERROR] [cycle] Bridge cycle lock is active until 2026-06-02T02:23:02.626713Z: /home/fiste/Noema/bridge/state/bridge_cycle.lock.json
-[2026-06-02T02:12:02.926980Z] [ERROR] [cycle] Traceback (most recent call last):
+bridge_sync_common.SyncError: Bridge cycle lock is active until 2026-06-02T13:50:37.016108Z: /home/fiste/Noema/bridge/state/bridge_cycle.lock.json
+[2026-06-02T13:39:07.288684Z] [WARN] [cycle] Cycle error already reported for step=unknown repeat_count=7
+[2026-06-02T13:39:37.311340Z] [ERROR] [cycle] Bridge cycle lock is active until 2026-06-02T13:50:37.016108Z: /home/fiste/Noema/bridge/state/bridge_cycle.lock.json
+[2026-06-02T13:39:37.315437Z] [ERROR] [cycle] Traceback (most recent call last):
   File "/home/fiste/Noema/bridge/scripts/bridge_cycle.py", line 283, in main
     with bridge_cycle_lock(runtime_root, ttl_seconds=args.lock_ttl_seconds) as lock_path:
   File "/usr/lib/python3.11/contextlib.py", line 137, in __enter__
@@ -33,10 +33,10 @@ bridge_sync_common.SyncError: Bridge cycle lock is active until 2026-06-02T02:23
            ^^^^^^^^^^^^^^
   File "/home/fiste/Noema/bridge/scripts/bridge_cycle_lock.py", line 91, in bridge_cycle_lock
     raise SyncError(f"Bridge cycle lock is active until {existing.get('expires_at')}: {lock_path}")
-bridge_sync_common.SyncError: Bridge cycle lock is active until 2026-06-02T02:23:02.626713Z: /home/fiste/Noema/bridge/state/bridge_cycle.lock.json
-[2026-06-02T02:12:02.929104Z] [WARN] [cycle] Cycle error already reported for step=unknown repeat_count=8
-[2026-06-02T02:12:32.969328Z] [ERROR] [cycle] Bridge cycle lock is active until 2026-06-02T02:23:02.626713Z: /home/fiste/Noema/bridge/state/bridge_cycle.lock.json
-[2026-06-02T02:12:32.974055Z] [ERROR] [cycle] Traceback (most recent call last):
+bridge_sync_common.SyncError: Bridge cycle lock is active until 2026-06-02T13:50:37.016108Z: /home/fiste/Noema/bridge/state/bridge_cycle.lock.json
+[2026-06-02T13:39:37.317276Z] [WARN] [cycle] Cycle error already reported for step=unknown repeat_count=8
+[2026-06-02T13:40:07.357946Z] [ERROR] [cycle] Bridge cycle lock is active until 2026-06-02T13:50:37.016108Z: /home/fiste/Noema/bridge/state/bridge_cycle.lock.json
+[2026-06-02T13:40:07.362519Z] [ERROR] [cycle] Traceback (most recent call last):
   File "/home/fiste/Noema/bridge/scripts/bridge_cycle.py", line 283, in main
     with bridge_cycle_lock(runtime_root, ttl_seconds=args.lock_ttl_seconds) as lock_path:
   File "/usr/lib/python3.11/contextlib.py", line 137, in __enter__
@@ -44,10 +44,10 @@ bridge_sync_common.SyncError: Bridge cycle lock is active until 2026-06-02T02:23
            ^^^^^^^^^^^^^^
   File "/home/fiste/Noema/bridge/scripts/bridge_cycle_lock.py", line 91, in bridge_cycle_lock
     raise SyncError(f"Bridge cycle lock is active until {existing.get('expires_at')}: {lock_path}")
-bridge_sync_common.SyncError: Bridge cycle lock is active until 2026-06-02T02:23:02.626713Z: /home/fiste/Noema/bridge/state/bridge_cycle.lock.json
-[2026-06-02T02:12:32.975857Z] [WARN] [cycle] Cycle error already reported for step=unknown repeat_count=9
-[2026-06-02T02:13:03.004374Z] [ERROR] [cycle] Bridge cycle lock is active until 2026-06-02T02:23:02.626713Z: /home/fiste/Noema/bridge/state/bridge_cycle.lock.json
-[2026-06-02T02:13:03.007487Z] [ERROR] [cycle] Traceback (most recent call last):
+bridge_sync_common.SyncError: Bridge cycle lock is active until 2026-06-02T13:50:37.016108Z: /home/fiste/Noema/bridge/state/bridge_cycle.lock.json
+[2026-06-02T13:40:07.365279Z] [WARN] [cycle] Cycle error already reported for step=unknown repeat_count=9
+[2026-06-02T13:40:37.393178Z] [ERROR] [cycle] Bridge cycle lock is active until 2026-06-02T13:50:37.016108Z: /home/fiste/Noema/bridge/state/bridge_cycle.lock.json
+[2026-06-02T13:40:37.398000Z] [ERROR] [cycle] Traceback (most recent call last):
   File "/home/fiste/Noema/bridge/scripts/bridge_cycle.py", line 283, in main
     with bridge_cycle_lock(runtime_root, ttl_seconds=args.lock_ttl_seconds) as lock_path:
   File "/usr/lib/python3.11/contextlib.py", line 137, in __enter__
@@ -55,10 +55,10 @@ bridge_sync_common.SyncError: Bridge cycle lock is active until 2026-06-02T02:23
            ^^^^^^^^^^^^^^
   File "/home/fiste/Noema/bridge/scripts/bridge_cycle_lock.py", line 91, in bridge_cycle_lock
     raise SyncError(f"Bridge cycle lock is active until {existing.get('expires_at')}: {lock_path}")
-bridge_sync_common.SyncError: Bridge cycle lock is active until 2026-06-02T02:23:02.626713Z: /home/fiste/Noema/bridge/state/bridge_cycle.lock.json
-[2026-06-02T02:13:03.009008Z] [WARN] [cycle] Cycle error already reported for step=unknown repeat_count=10
-[2026-06-02T02:13:33.039595Z] [ERROR] [cycle] Bridge cycle lock is active until 2026-06-02T02:23:02.626713Z: /home/fiste/Noema/bridge/state/bridge_cycle.lock.json
-[2026-06-02T02:13:33.044493Z] [ERROR] [cycle] Traceback (most recent call last):
+bridge_sync_common.SyncError: Bridge cycle lock is active until 2026-06-02T13:50:37.016108Z: /home/fiste/Noema/bridge/state/bridge_cycle.lock.json
+[2026-06-02T13:40:37.400842Z] [WARN] [cycle] Cycle error already reported for step=unknown repeat_count=10
+[2026-06-02T13:41:07.432411Z] [ERROR] [cycle] Bridge cycle lock is active until 2026-06-02T13:50:37.016108Z: /home/fiste/Noema/bridge/state/bridge_cycle.lock.json
+[2026-06-02T13:41:07.435623Z] [ERROR] [cycle] Traceback (most recent call last):
   File "/home/fiste/Noema/bridge/scripts/bridge_cycle.py", line 283, in main
     with bridge_cycle_lock(runtime_root, ttl_seconds=args.lock_ttl_seconds) as lock_path:
   File "/usr/lib/python3.11/contextlib.py", line 137, in __enter__
@@ -66,10 +66,10 @@ bridge_sync_common.SyncError: Bridge cycle lock is active until 2026-06-02T02:23
            ^^^^^^^^^^^^^^
   File "/home/fiste/Noema/bridge/scripts/bridge_cycle_lock.py", line 91, in bridge_cycle_lock
     raise SyncError(f"Bridge cycle lock is active until {existing.get('expires_at')}: {lock_path}")
-bridge_sync_common.SyncError: Bridge cycle lock is active until 2026-06-02T02:23:02.626713Z: /home/fiste/Noema/bridge/state/bridge_cycle.lock.json
-[2026-06-02T02:13:33.047394Z] [WARN] [cycle] Cycle error already reported for step=unknown repeat_count=11
-[2026-06-02T02:14:03.077294Z] [ERROR] [cycle] Bridge cycle lock is active until 2026-06-02T02:23:02.626713Z: /home/fiste/Noema/bridge/state/bridge_cycle.lock.json
-[2026-06-02T02:14:03.080471Z] [ERROR] [cycle] Traceback (most recent call last):
+bridge_sync_common.SyncError: Bridge cycle lock is active until 2026-06-02T13:50:37.016108Z: /home/fiste/Noema/bridge/state/bridge_cycle.lock.json
+[2026-06-02T13:41:07.438073Z] [WARN] [cycle] Cycle error already reported for step=unknown repeat_count=11
+[2026-06-02T13:41:37.464121Z] [ERROR] [cycle] Bridge cycle lock is active until 2026-06-02T13:50:37.016108Z: /home/fiste/Noema/bridge/state/bridge_cycle.lock.json
+[2026-06-02T13:41:37.468023Z] [ERROR] [cycle] Traceback (most recent call last):
   File "/home/fiste/Noema/bridge/scripts/bridge_cycle.py", line 283, in main
     with bridge_cycle_lock(runtime_root, ttl_seconds=args.lock_ttl_seconds) as lock_path:
   File "/usr/lib/python3.11/contextlib.py", line 137, in __enter__
@@ -77,10 +77,10 @@ bridge_sync_common.SyncError: Bridge cycle lock is active until 2026-06-02T02:23
            ^^^^^^^^^^^^^^
   File "/home/fiste/Noema/bridge/scripts/bridge_cycle_lock.py", line 91, in bridge_cycle_lock
     raise SyncError(f"Bridge cycle lock is active until {existing.get('expires_at')}: {lock_path}")
-bridge_sync_common.SyncError: Bridge cycle lock is active until 2026-06-02T02:23:02.626713Z: /home/fiste/Noema/bridge/state/bridge_cycle.lock.json
-[2026-06-02T02:14:03.082740Z] [WARN] [cycle] Cycle error already reported for step=unknown repeat_count=12
-[2026-06-02T02:14:33.113477Z] [ERROR] [cycle] Bridge cycle lock is active until 2026-06-02T02:23:02.626713Z: /home/fiste/Noema/bridge/state/bridge_cycle.lock.json
-[2026-06-02T02:14:33.117411Z] [ERROR] [cycle] Traceback (most recent call last):
+bridge_sync_common.SyncError: Bridge cycle lock is active until 2026-06-02T13:50:37.016108Z: /home/fiste/Noema/bridge/state/bridge_cycle.lock.json
+[2026-06-02T13:41:37.470663Z] [WARN] [cycle] Cycle error already reported for step=unknown repeat_count=12
+[2026-06-02T13:42:07.506223Z] [ERROR] [cycle] Bridge cycle lock is active until 2026-06-02T13:50:37.016108Z: /home/fiste/Noema/bridge/state/bridge_cycle.lock.json
+[2026-06-02T13:42:07.509754Z] [ERROR] [cycle] Traceback (most recent call last):
   File "/home/fiste/Noema/bridge/scripts/bridge_cycle.py", line 283, in main
     with bridge_cycle_lock(runtime_root, ttl_seconds=args.lock_ttl_seconds) as lock_path:
   File "/usr/lib/python3.11/contextlib.py", line 137, in __enter__
@@ -88,10 +88,10 @@ bridge_sync_common.SyncError: Bridge cycle lock is active until 2026-06-02T02:23
            ^^^^^^^^^^^^^^
   File "/home/fiste/Noema/bridge/scripts/bridge_cycle_lock.py", line 91, in bridge_cycle_lock
     raise SyncError(f"Bridge cycle lock is active until {existing.get('expires_at')}: {lock_path}")
-bridge_sync_common.SyncError: Bridge cycle lock is active until 2026-06-02T02:23:02.626713Z: /home/fiste/Noema/bridge/state/bridge_cycle.lock.json
-[2026-06-02T02:14:33.119818Z] [WARN] [cycle] Cycle error already reported for step=unknown repeat_count=13
-[2026-06-02T02:15:03.166228Z] [ERROR] [cycle] Bridge cycle lock is active until 2026-06-02T02:23:02.626713Z: /home/fiste/Noema/bridge/state/bridge_cycle.lock.json
-[2026-06-02T02:15:03.170768Z] [ERROR] [cycle] Traceback (most recent call last):
+bridge_sync_common.SyncError: Bridge cycle lock is active until 2026-06-02T13:50:37.016108Z: /home/fiste/Noema/bridge/state/bridge_cycle.lock.json
+[2026-06-02T13:42:07.512308Z] [WARN] [cycle] Cycle error already reported for step=unknown repeat_count=13
+[2026-06-02T13:42:37.525828Z] [ERROR] [cycle] Bridge cycle lock is active until 2026-06-02T13:50:37.016108Z: /home/fiste/Noema/bridge/state/bridge_cycle.lock.json
+[2026-06-02T13:42:37.530027Z] [ERROR] [cycle] Traceback (most recent call last):
   File "/home/fiste/Noema/bridge/scripts/bridge_cycle.py", line 283, in main
     with bridge_cycle_lock(runtime_root, ttl_seconds=args.lock_ttl_seconds) as lock_path:
   File "/usr/lib/python3.11/contextlib.py", line 137, in __enter__
@@ -99,10 +99,10 @@ bridge_sync_common.SyncError: Bridge cycle lock is active until 2026-06-02T02:23
            ^^^^^^^^^^^^^^
   File "/home/fiste/Noema/bridge/scripts/bridge_cycle_lock.py", line 91, in bridge_cycle_lock
     raise SyncError(f"Bridge cycle lock is active until {existing.get('expires_at')}: {lock_path}")
-bridge_sync_common.SyncError: Bridge cycle lock is active until 2026-06-02T02:23:02.626713Z: /home/fiste/Noema/bridge/state/bridge_cycle.lock.json
-[2026-06-02T02:15:03.173575Z] [WARN] [cycle] Cycle error already reported for step=unknown repeat_count=14
-[2026-06-02T02:15:33.198735Z] [ERROR] [cycle] Bridge cycle lock is active until 2026-06-02T02:23:02.626713Z: /home/fiste/Noema/bridge/state/bridge_cycle.lock.json
-[2026-06-02T02:15:33.202651Z] [ERROR] [cycle] Traceback (most recent call last):
+bridge_sync_common.SyncError: Bridge cycle lock is active until 2026-06-02T13:50:37.016108Z: /home/fiste/Noema/bridge/state/bridge_cycle.lock.json
+[2026-06-02T13:42:37.532163Z] [WARN] [cycle] Cycle error already reported for step=unknown repeat_count=14
+[2026-06-02T13:43:07.597144Z] [ERROR] [cycle] Bridge cycle lock is active until 2026-06-02T13:50:37.016108Z: /home/fiste/Noema/bridge/state/bridge_cycle.lock.json
+[2026-06-02T13:43:07.601185Z] [ERROR] [cycle] Traceback (most recent call last):
   File "/home/fiste/Noema/bridge/scripts/bridge_cycle.py", line 283, in main
     with bridge_cycle_lock(runtime_root, ttl_seconds=args.lock_ttl_seconds) as lock_path:
   File "/usr/lib/python3.11/contextlib.py", line 137, in __enter__
@@ -110,10 +110,10 @@ bridge_sync_common.SyncError: Bridge cycle lock is active until 2026-06-02T02:23
            ^^^^^^^^^^^^^^
   File "/home/fiste/Noema/bridge/scripts/bridge_cycle_lock.py", line 91, in bridge_cycle_lock
     raise SyncError(f"Bridge cycle lock is active until {existing.get('expires_at')}: {lock_path}")
-bridge_sync_common.SyncError: Bridge cycle lock is active until 2026-06-02T02:23:02.626713Z: /home/fiste/Noema/bridge/state/bridge_cycle.lock.json
-[2026-06-02T02:15:33.204500Z] [WARN] [cycle] Cycle error already reported for step=unknown repeat_count=15
-[2026-06-02T02:16:04.130960Z] [ERROR] [cycle] Bridge cycle lock is active until 2026-06-02T02:23:02.626713Z: /home/fiste/Noema/bridge/state/bridge_cycle.lock.json
-[2026-06-02T02:16:04.135816Z] [ERROR] [cycle] Traceback (most recent call last):
+bridge_sync_common.SyncError: Bridge cycle lock is active until 2026-06-02T13:50:37.016108Z: /home/fiste/Noema/bridge/state/bridge_cycle.lock.json
+[2026-06-02T13:43:07.603152Z] [WARN] [cycle] Cycle error already reported for step=unknown repeat_count=15
+[2026-06-02T13:43:37.652684Z] [ERROR] [cycle] Bridge cycle lock is active until 2026-06-02T13:50:37.016108Z: /home/fiste/Noema/bridge/state/bridge_cycle.lock.json
+[2026-06-02T13:43:37.657152Z] [ERROR] [cycle] Traceback (most recent call last):
   File "/home/fiste/Noema/bridge/scripts/bridge_cycle.py", line 283, in main
     with bridge_cycle_lock(runtime_root, ttl_seconds=args.lock_ttl_seconds) as lock_path:
   File "/usr/lib/python3.11/contextlib.py", line 137, in __enter__
@@ -121,10 +121,10 @@ bridge_sync_common.SyncError: Bridge cycle lock is active until 2026-06-02T02:23
            ^^^^^^^^^^^^^^
   File "/home/fiste/Noema/bridge/scripts/bridge_cycle_lock.py", line 91, in bridge_cycle_lock
     raise SyncError(f"Bridge cycle lock is active until {existing.get('expires_at')}: {lock_path}")
-bridge_sync_common.SyncError: Bridge cycle lock is active until 2026-06-02T02:23:02.626713Z: /home/fiste/Noema/bridge/state/bridge_cycle.lock.json
-[2026-06-02T02:16:04.140628Z] [WARN] [cycle] Cycle error already reported for step=unknown repeat_count=16
-[2026-06-02T02:16:39.127855Z] [ERROR] [cycle] Bridge cycle lock is active until 2026-06-02T02:23:02.626713Z: /home/fiste/Noema/bridge/state/bridge_cycle.lock.json
-[2026-06-02T02:16:39.132719Z] [ERROR] [cycle] Traceback (most recent call last):
+bridge_sync_common.SyncError: Bridge cycle lock is active until 2026-06-02T13:50:37.016108Z: /home/fiste/Noema/bridge/state/bridge_cycle.lock.json
+[2026-06-02T13:43:37.658858Z] [WARN] [cycle] Cycle error already reported for step=unknown repeat_count=16
+[2026-06-02T13:44:07.673989Z] [ERROR] [cycle] Bridge cycle lock is active until 2026-06-02T13:50:37.016108Z: /home/fiste/Noema/bridge/state/bridge_cycle.lock.json
+[2026-06-02T13:44:07.677213Z] [ERROR] [cycle] Traceback (most recent call last):
   File "/home/fiste/Noema/bridge/scripts/bridge_cycle.py", line 283, in main
     with bridge_cycle_lock(runtime_root, ttl_seconds=args.lock_ttl_seconds) as lock_path:
   File "/usr/lib/python3.11/contextlib.py", line 137, in __enter__
@@ -132,10 +132,10 @@ bridge_sync_common.SyncError: Bridge cycle lock is active until 2026-06-02T02:23
            ^^^^^^^^^^^^^^
   File "/home/fiste/Noema/bridge/scripts/bridge_cycle_lock.py", line 91, in bridge_cycle_lock
     raise SyncError(f"Bridge cycle lock is active until {existing.get('expires_at')}: {lock_path}")
-bridge_sync_common.SyncError: Bridge cycle lock is active until 2026-06-02T02:23:02.626713Z: /home/fiste/Noema/bridge/state/bridge_cycle.lock.json
-[2026-06-02T02:16:39.134699Z] [WARN] [cycle] Cycle error already reported for step=unknown repeat_count=17
-[2026-06-02T02:17:13.294813Z] [ERROR] [cycle] Bridge cycle lock is active until 2026-06-02T02:23:02.626713Z: /home/fiste/Noema/bridge/state/bridge_cycle.lock.json
-[2026-06-02T02:17:13.298968Z] [ERROR] [cycle] Traceback (most recent call last):
+bridge_sync_common.SyncError: Bridge cycle lock is active until 2026-06-02T13:50:37.016108Z: /home/fiste/Noema/bridge/state/bridge_cycle.lock.json
+[2026-06-02T13:44:07.679441Z] [WARN] [cycle] Cycle error already reported for step=unknown repeat_count=17
+[2026-06-02T13:44:37.721075Z] [ERROR] [cycle] Bridge cycle lock is active until 2026-06-02T13:50:37.016108Z: /home/fiste/Noema/bridge/state/bridge_cycle.lock.json
+[2026-06-02T13:44:37.724312Z] [ERROR] [cycle] Traceback (most recent call last):
   File "/home/fiste/Noema/bridge/scripts/bridge_cycle.py", line 283, in main
     with bridge_cycle_lock(runtime_root, ttl_seconds=args.lock_ttl_seconds) as lock_path:
   File "/usr/lib/python3.11/contextlib.py", line 137, in __enter__
@@ -143,10 +143,10 @@ bridge_sync_common.SyncError: Bridge cycle lock is active until 2026-06-02T02:23
            ^^^^^^^^^^^^^^
   File "/home/fiste/Noema/bridge/scripts/bridge_cycle_lock.py", line 91, in bridge_cycle_lock
     raise SyncError(f"Bridge cycle lock is active until {existing.get('expires_at')}: {lock_path}")
-bridge_sync_common.SyncError: Bridge cycle lock is active until 2026-06-02T02:23:02.626713Z: /home/fiste/Noema/bridge/state/bridge_cycle.lock.json
-[2026-06-02T02:17:13.301410Z] [WARN] [cycle] Cycle error already reported for step=unknown repeat_count=18
-[2026-06-02T02:17:43.349080Z] [ERROR] [cycle] Bridge cycle lock is active until 2026-06-02T02:23:02.626713Z: /home/fiste/Noema/bridge/state/bridge_cycle.lock.json
-[2026-06-02T02:17:43.353817Z] [ERROR] [cycle] Traceback (most recent call last):
+bridge_sync_common.SyncError: Bridge cycle lock is active until 2026-06-02T13:50:37.016108Z: /home/fiste/Noema/bridge/state/bridge_cycle.lock.json
+[2026-06-02T13:44:37.726338Z] [WARN] [cycle] Cycle error already reported for step=unknown repeat_count=18
+[2026-06-02T13:45:07.757055Z] [ERROR] [cycle] Bridge cycle lock is active until 2026-06-02T13:50:37.016108Z: /home/fiste/Noema/bridge/state/bridge_cycle.lock.json
+[2026-06-02T13:45:07.760321Z] [ERROR] [cycle] Traceback (most recent call last):
   File "/home/fiste/Noema/bridge/scripts/bridge_cycle.py", line 283, in main
     with bridge_cycle_lock(runtime_root, ttl_seconds=args.lock_ttl_seconds) as lock_path:
   File "/usr/lib/python3.11/contextlib.py", line 137, in __enter__
@@ -154,10 +154,10 @@ bridge_sync_common.SyncError: Bridge cycle lock is active until 2026-06-02T02:23
            ^^^^^^^^^^^^^^
   File "/home/fiste/Noema/bridge/scripts/bridge_cycle_lock.py", line 91, in bridge_cycle_lock
     raise SyncError(f"Bridge cycle lock is active until {existing.get('expires_at')}: {lock_path}")
-bridge_sync_common.SyncError: Bridge cycle lock is active until 2026-06-02T02:23:02.626713Z: /home/fiste/Noema/bridge/state/bridge_cycle.lock.json
-[2026-06-02T02:17:43.356089Z] [WARN] [cycle] Cycle error already reported for step=unknown repeat_count=19
-[2026-06-02T02:18:13.382092Z] [ERROR] [cycle] Bridge cycle lock is active until 2026-06-02T02:23:02.626713Z: /home/fiste/Noema/bridge/state/bridge_cycle.lock.json
-[2026-06-02T02:18:13.386654Z] [ERROR] [cycle] Traceback (most recent call last):
+bridge_sync_common.SyncError: Bridge cycle lock is active until 2026-06-02T13:50:37.016108Z: /home/fiste/Noema/bridge/state/bridge_cycle.lock.json
+[2026-06-02T13:45:07.762361Z] [WARN] [cycle] Cycle error already reported for step=unknown repeat_count=19
+[2026-06-02T13:45:37.805136Z] [ERROR] [cycle] Bridge cycle lock is active until 2026-06-02T13:50:37.016108Z: /home/fiste/Noema/bridge/state/bridge_cycle.lock.json
+[2026-06-02T13:45:37.808304Z] [ERROR] [cycle] Traceback (most recent call last):
   File "/home/fiste/Noema/bridge/scripts/bridge_cycle.py", line 283, in main
     with bridge_cycle_lock(runtime_root, ttl_seconds=args.lock_ttl_seconds) as lock_path:
   File "/usr/lib/python3.11/contextlib.py", line 137, in __enter__
@@ -165,10 +165,10 @@ bridge_sync_common.SyncError: Bridge cycle lock is active until 2026-06-02T02:23
            ^^^^^^^^^^^^^^
   File "/home/fiste/Noema/bridge/scripts/bridge_cycle_lock.py", line 91, in bridge_cycle_lock
     raise SyncError(f"Bridge cycle lock is active until {existing.get('expires_at')}: {lock_path}")
-bridge_sync_common.SyncError: Bridge cycle lock is active until 2026-06-02T02:23:02.626713Z: /home/fiste/Noema/bridge/state/bridge_cycle.lock.json
-[2026-06-02T02:18:13.388841Z] [WARN] [cycle] Cycle error already reported for step=unknown repeat_count=20
-[2026-06-02T02:18:43.428131Z] [ERROR] [cycle] Bridge cycle lock is active until 2026-06-02T02:23:02.626713Z: /home/fiste/Noema/bridge/state/bridge_cycle.lock.json
-[2026-06-02T02:18:43.431340Z] [ERROR] [cycle] Traceback (most recent call last):
+bridge_sync_common.SyncError: Bridge cycle lock is active until 2026-06-02T13:50:37.016108Z: /home/fiste/Noema/bridge/state/bridge_cycle.lock.json
+[2026-06-02T13:45:37.810567Z] [WARN] [cycle] Cycle error already reported for step=unknown repeat_count=20
+[2026-06-02T13:46:07.838171Z] [ERROR] [cycle] Bridge cycle lock is active until 2026-06-02T13:50:37.016108Z: /home/fiste/Noema/bridge/state/bridge_cycle.lock.json
+[2026-06-02T13:46:07.842611Z] [ERROR] [cycle] Traceback (most recent call last):
   File "/home/fiste/Noema/bridge/scripts/bridge_cycle.py", line 283, in main
     with bridge_cycle_lock(runtime_root, ttl_seconds=args.lock_ttl_seconds) as lock_path:
   File "/usr/lib/python3.11/contextlib.py", line 137, in __enter__
@@ -176,10 +176,10 @@ bridge_sync_common.SyncError: Bridge cycle lock is active until 2026-06-02T02:23
            ^^^^^^^^^^^^^^
   File "/home/fiste/Noema/bridge/scripts/bridge_cycle_lock.py", line 91, in bridge_cycle_lock
     raise SyncError(f"Bridge cycle lock is active until {existing.get('expires_at')}: {lock_path}")
-bridge_sync_common.SyncError: Bridge cycle lock is active until 2026-06-02T02:23:02.626713Z: /home/fiste/Noema/bridge/state/bridge_cycle.lock.json
-[2026-06-02T02:18:43.433469Z] [WARN] [cycle] Cycle error already reported for step=unknown repeat_count=21
-[2026-06-02T02:19:13.463546Z] [ERROR] [cycle] Bridge cycle lock is active until 2026-06-02T02:23:02.626713Z: /home/fiste/Noema/bridge/state/bridge_cycle.lock.json
-[2026-06-02T02:19:13.467628Z] [ERROR] [cycle] Traceback (most recent call last):
+bridge_sync_common.SyncError: Bridge cycle lock is active until 2026-06-02T13:50:37.016108Z: /home/fiste/Noema/bridge/state/bridge_cycle.lock.json
+[2026-06-02T13:46:07.844815Z] [WARN] [cycle] Cycle error already reported for step=unknown repeat_count=21
+[2026-06-02T13:46:37.882619Z] [ERROR] [cycle] Bridge cycle lock is active until 2026-06-02T13:50:37.016108Z: /home/fiste/Noema/bridge/state/bridge_cycle.lock.json
+[2026-06-02T13:46:37.886584Z] [ERROR] [cycle] Traceback (most recent call last):
   File "/home/fiste/Noema/bridge/scripts/bridge_cycle.py", line 283, in main
     with bridge_cycle_lock(runtime_root, ttl_seconds=args.lock_ttl_seconds) as lock_path:
   File "/usr/lib/python3.11/contextlib.py", line 137, in __enter__
@@ -187,10 +187,10 @@ bridge_sync_common.SyncError: Bridge cycle lock is active until 2026-06-02T02:23
            ^^^^^^^^^^^^^^
   File "/home/fiste/Noema/bridge/scripts/bridge_cycle_lock.py", line 91, in bridge_cycle_lock
     raise SyncError(f"Bridge cycle lock is active until {existing.get('expires_at')}: {lock_path}")
-bridge_sync_common.SyncError: Bridge cycle lock is active until 2026-06-02T02:23:02.626713Z: /home/fiste/Noema/bridge/state/bridge_cycle.lock.json
-[2026-06-02T02:19:13.469532Z] [WARN] [cycle] Cycle error already reported for step=unknown repeat_count=22
-[2026-06-02T02:19:43.491593Z] [ERROR] [cycle] Bridge cycle lock is active until 2026-06-02T02:23:02.626713Z: /home/fiste/Noema/bridge/state/bridge_cycle.lock.json
-[2026-06-02T02:19:43.495572Z] [ERROR] [cycle] Traceback (most recent call last):
+bridge_sync_common.SyncError: Bridge cycle lock is active until 2026-06-02T13:50:37.016108Z: /home/fiste/Noema/bridge/state/bridge_cycle.lock.json
+[2026-06-02T13:46:37.888656Z] [WARN] [cycle] Cycle error already reported for step=unknown repeat_count=22
+[2026-06-02T13:47:07.910981Z] [ERROR] [cycle] Bridge cycle lock is active until 2026-06-02T13:50:37.016108Z: /home/fiste/Noema/bridge/state/bridge_cycle.lock.json
+[2026-06-02T13:47:07.915191Z] [ERROR] [cycle] Traceback (most recent call last):
   File "/home/fiste/Noema/bridge/scripts/bridge_cycle.py", line 283, in main
     with bridge_cycle_lock(runtime_root, ttl_seconds=args.lock_ttl_seconds) as lock_path:
   File "/usr/lib/python3.11/contextlib.py", line 137, in __enter__
@@ -198,10 +198,10 @@ bridge_sync_common.SyncError: Bridge cycle lock is active until 2026-06-02T02:23
            ^^^^^^^^^^^^^^
   File "/home/fiste/Noema/bridge/scripts/bridge_cycle_lock.py", line 91, in bridge_cycle_lock
     raise SyncError(f"Bridge cycle lock is active until {existing.get('expires_at')}: {lock_path}")
-bridge_sync_common.SyncError: Bridge cycle lock is active until 2026-06-02T02:23:02.626713Z: /home/fiste/Noema/bridge/state/bridge_cycle.lock.json
-[2026-06-02T02:19:43.497689Z] [WARN] [cycle] Cycle error already reported for step=unknown repeat_count=23
-[2026-06-02T02:20:13.537760Z] [ERROR] [cycle] Bridge cycle lock is active until 2026-06-02T02:23:02.626713Z: /home/fiste/Noema/bridge/state/bridge_cycle.lock.json
-[2026-06-02T02:20:13.542278Z] [ERROR] [cycle] Traceback (most recent call last):
+bridge_sync_common.SyncError: Bridge cycle lock is active until 2026-06-02T13:50:37.016108Z: /home/fiste/Noema/bridge/state/bridge_cycle.lock.json
+[2026-06-02T13:47:07.916869Z] [WARN] [cycle] Cycle error already reported for step=unknown repeat_count=23
+[2026-06-02T13:47:37.950882Z] [ERROR] [cycle] Bridge cycle lock is active until 2026-06-02T13:50:37.016108Z: /home/fiste/Noema/bridge/state/bridge_cycle.lock.json
+[2026-06-02T13:47:37.954262Z] [ERROR] [cycle] Traceback (most recent call last):
   File "/home/fiste/Noema/bridge/scripts/bridge_cycle.py", line 283, in main
     with bridge_cycle_lock(runtime_root, ttl_seconds=args.lock_ttl_seconds) as lock_path:
   File "/usr/lib/python3.11/contextlib.py", line 137, in __enter__
@@ -209,10 +209,10 @@ bridge_sync_common.SyncError: Bridge cycle lock is active until 2026-06-02T02:23
            ^^^^^^^^^^^^^^
   File "/home/fiste/Noema/bridge/scripts/bridge_cycle_lock.py", line 91, in bridge_cycle_lock
     raise SyncError(f"Bridge cycle lock is active until {existing.get('expires_at')}: {lock_path}")
-bridge_sync_common.SyncError: Bridge cycle lock is active until 2026-06-02T02:23:02.626713Z: /home/fiste/Noema/bridge/state/bridge_cycle.lock.json
-[2026-06-02T02:20:13.544416Z] [WARN] [cycle] Cycle error already reported for step=unknown repeat_count=24
-[2026-06-02T02:20:43.567016Z] [ERROR] [cycle] Bridge cycle lock is active until 2026-06-02T02:23:02.626713Z: /home/fiste/Noema/bridge/state/bridge_cycle.lock.json
-[2026-06-02T02:20:43.570293Z] [ERROR] [cycle] Traceback (most recent call last):
+bridge_sync_common.SyncError: Bridge cycle lock is active until 2026-06-02T13:50:37.016108Z: /home/fiste/Noema/bridge/state/bridge_cycle.lock.json
+[2026-06-02T13:47:37.956185Z] [WARN] [cycle] Cycle error already reported for step=unknown repeat_count=24
+[2026-06-02T13:48:07.982171Z] [ERROR] [cycle] Bridge cycle lock is active until 2026-06-02T13:50:37.016108Z: /home/fiste/Noema/bridge/state/bridge_cycle.lock.json
+[2026-06-02T13:48:07.986610Z] [ERROR] [cycle] Traceback (most recent call last):
   File "/home/fiste/Noema/bridge/scripts/bridge_cycle.py", line 283, in main
     with bridge_cycle_lock(runtime_root, ttl_seconds=args.lock_ttl_seconds) as lock_path:
   File "/usr/lib/python3.11/contextlib.py", line 137, in __enter__
@@ -220,10 +220,10 @@ bridge_sync_common.SyncError: Bridge cycle lock is active until 2026-06-02T02:23
            ^^^^^^^^^^^^^^
   File "/home/fiste/Noema/bridge/scripts/bridge_cycle_lock.py", line 91, in bridge_cycle_lock
     raise SyncError(f"Bridge cycle lock is active until {existing.get('expires_at')}: {lock_path}")
-bridge_sync_common.SyncError: Bridge cycle lock is active until 2026-06-02T02:23:02.626713Z: /home/fiste/Noema/bridge/state/bridge_cycle.lock.json
-[2026-06-02T02:20:43.572281Z] [WARN] [cycle] Cycle error already reported for step=unknown repeat_count=25
-[2026-06-02T02:21:13.609504Z] [ERROR] [cycle] Bridge cycle lock is active until 2026-06-02T02:23:02.626713Z: /home/fiste/Noema/bridge/state/bridge_cycle.lock.json
-[2026-06-02T02:21:13.612644Z] [ERROR] [cycle] Traceback (most recent call last):
+bridge_sync_common.SyncError: Bridge cycle lock is active until 2026-06-02T13:50:37.016108Z: /home/fiste/Noema/bridge/state/bridge_cycle.lock.json
+[2026-06-02T13:48:07.991377Z] [WARN] [cycle] Cycle error already reported for step=unknown repeat_count=25
+[2026-06-02T13:48:38.025496Z] [ERROR] [cycle] Bridge cycle lock is active until 2026-06-02T13:50:37.016108Z: /home/fiste/Noema/bridge/state/bridge_cycle.lock.json
+[2026-06-02T13:48:38.029921Z] [ERROR] [cycle] Traceback (most recent call last):
   File "/home/fiste/Noema/bridge/scripts/bridge_cycle.py", line 283, in main
     with bridge_cycle_lock(runtime_root, ttl_seconds=args.lock_ttl_seconds) as lock_path:
   File "/usr/lib/python3.11/contextlib.py", line 137, in __enter__
@@ -231,10 +231,10 @@ bridge_sync_common.SyncError: Bridge cycle lock is active until 2026-06-02T02:23
            ^^^^^^^^^^^^^^
   File "/home/fiste/Noema/bridge/scripts/bridge_cycle_lock.py", line 91, in bridge_cycle_lock
     raise SyncError(f"Bridge cycle lock is active until {existing.get('expires_at')}: {lock_path}")
-bridge_sync_common.SyncError: Bridge cycle lock is active until 2026-06-02T02:23:02.626713Z: /home/fiste/Noema/bridge/state/bridge_cycle.lock.json
-[2026-06-02T02:21:13.614945Z] [WARN] [cycle] Cycle error already reported for step=unknown repeat_count=26
-[2026-06-02T02:21:43.638598Z] [ERROR] [cycle] Bridge cycle lock is active until 2026-06-02T02:23:02.626713Z: /home/fiste/Noema/bridge/state/bridge_cycle.lock.json
-[2026-06-02T02:21:43.641875Z] [ERROR] [cycle] Traceback (most recent call last):
+bridge_sync_common.SyncError: Bridge cycle lock is active until 2026-06-02T13:50:37.016108Z: /home/fiste/Noema/bridge/state/bridge_cycle.lock.json
+[2026-06-02T13:48:38.032382Z] [WARN] [cycle] Cycle error already reported for step=unknown repeat_count=26
+[2026-06-02T13:49:08.078000Z] [ERROR] [cycle] Bridge cycle lock is active until 2026-06-02T13:50:37.016108Z: /home/fiste/Noema/bridge/state/bridge_cycle.lock.json
+[2026-06-02T13:49:08.082430Z] [ERROR] [cycle] Traceback (most recent call last):
   File "/home/fiste/Noema/bridge/scripts/bridge_cycle.py", line 283, in main
     with bridge_cycle_lock(runtime_root, ttl_seconds=args.lock_ttl_seconds) as lock_path:
   File "/usr/lib/python3.11/contextlib.py", line 137, in __enter__
@@ -242,10 +242,10 @@ bridge_sync_common.SyncError: Bridge cycle lock is active until 2026-06-02T02:23
            ^^^^^^^^^^^^^^
   File "/home/fiste/Noema/bridge/scripts/bridge_cycle_lock.py", line 91, in bridge_cycle_lock
     raise SyncError(f"Bridge cycle lock is active until {existing.get('expires_at')}: {lock_path}")
-bridge_sync_common.SyncError: Bridge cycle lock is active until 2026-06-02T02:23:02.626713Z: /home/fiste/Noema/bridge/state/bridge_cycle.lock.json
-[2026-06-02T02:21:43.644085Z] [WARN] [cycle] Cycle error already reported for step=unknown repeat_count=27
-[2026-06-02T02:22:13.678847Z] [ERROR] [cycle] Bridge cycle lock is active until 2026-06-02T02:23:02.626713Z: /home/fiste/Noema/bridge/state/bridge_cycle.lock.json
-[2026-06-02T02:22:13.682854Z] [ERROR] [cycle] Traceback (most recent call last):
+bridge_sync_common.SyncError: Bridge cycle lock is active until 2026-06-02T13:50:37.016108Z: /home/fiste/Noema/bridge/state/bridge_cycle.lock.json
+[2026-06-02T13:49:08.084620Z] [WARN] [cycle] Cycle error already reported for step=unknown repeat_count=27
+[2026-06-02T13:49:38.099164Z] [ERROR] [cycle] Bridge cycle lock is active until 2026-06-02T13:50:37.016108Z: /home/fiste/Noema/bridge/state/bridge_cycle.lock.json
+[2026-06-02T13:49:38.103203Z] [ERROR] [cycle] Traceback (most recent call last):
   File "/home/fiste/Noema/bridge/scripts/bridge_cycle.py", line 283, in main
     with bridge_cycle_lock(runtime_root, ttl_seconds=args.lock_ttl_seconds) as lock_path:
   File "/usr/lib/python3.11/contextlib.py", line 137, in __enter__
@@ -253,10 +253,10 @@ bridge_sync_common.SyncError: Bridge cycle lock is active until 2026-06-02T02:23
            ^^^^^^^^^^^^^^
   File "/home/fiste/Noema/bridge/scripts/bridge_cycle_lock.py", line 91, in bridge_cycle_lock
     raise SyncError(f"Bridge cycle lock is active until {existing.get('expires_at')}: {lock_path}")
-bridge_sync_common.SyncError: Bridge cycle lock is active until 2026-06-02T02:23:02.626713Z: /home/fiste/Noema/bridge/state/bridge_cycle.lock.json
-[2026-06-02T02:22:13.684952Z] [WARN] [cycle] Cycle error already reported for step=unknown repeat_count=28
-[2026-06-02T02:22:43.718882Z] [ERROR] [cycle] Bridge cycle lock is active until 2026-06-02T02:23:02.626713Z: /home/fiste/Noema/bridge/state/bridge_cycle.lock.json
-[2026-06-02T02:22:43.722019Z] [ERROR] [cycle] Traceback (most recent call last):
+bridge_sync_common.SyncError: Bridge cycle lock is active until 2026-06-02T13:50:37.016108Z: /home/fiste/Noema/bridge/state/bridge_cycle.lock.json
+[2026-06-02T13:49:38.104752Z] [WARN] [cycle] Cycle error already reported for step=unknown repeat_count=28
+[2026-06-02T13:50:08.141856Z] [ERROR] [cycle] Bridge cycle lock is active until 2026-06-02T13:50:37.016108Z: /home/fiste/Noema/bridge/state/bridge_cycle.lock.json
+[2026-06-02T13:50:08.146382Z] [ERROR] [cycle] Traceback (most recent call last):
   File "/home/fiste/Noema/bridge/scripts/bridge_cycle.py", line 283, in main
     with bridge_cycle_lock(runtime_root, ttl_seconds=args.lock_ttl_seconds) as lock_path:
   File "/usr/lib/python3.11/contextlib.py", line 137, in __enter__
@@ -264,37 +264,37 @@ bridge_sync_common.SyncError: Bridge cycle lock is active until 2026-06-02T02:23
            ^^^^^^^^^^^^^^
   File "/home/fiste/Noema/bridge/scripts/bridge_cycle_lock.py", line 91, in bridge_cycle_lock
     raise SyncError(f"Bridge cycle lock is active until {existing.get('expires_at')}: {lock_path}")
-bridge_sync_common.SyncError: Bridge cycle lock is active until 2026-06-02T02:23:02.626713Z: /home/fiste/Noema/bridge/state/bridge_cycle.lock.json
-[2026-06-02T02:22:43.723492Z] [WARN] [cycle] Cycle error already reported for step=unknown repeat_count=29
-[2026-06-02T02:23:13.764784Z] [INFO] [cycle] Bridge cycle lock acquired: /home/fiste/Noema/bridge/state/bridge_cycle.lock.json
-[2026-06-02T02:23:13.767861Z] [INFO] [cycle] == inbound sync ==
-[2026-06-02T02:23:14.224714Z] [INFO] [cycle] Fetching origin main...
+bridge_sync_common.SyncError: Bridge cycle lock is active until 2026-06-02T13:50:37.016108Z: /home/fiste/Noema/bridge/state/bridge_cycle.lock.json
+[2026-06-02T13:50:08.148541Z] [WARN] [cycle] Cycle error already reported for step=unknown repeat_count=29
+[2026-06-02T13:50:38.197623Z] [INFO] [cycle] Bridge cycle lock acquired: /home/fiste/Noema/bridge/state/bridge_cycle.lock.json
+[2026-06-02T13:50:38.200450Z] [INFO] [cycle] == inbound sync ==
+[2026-06-02T13:50:38.677983Z] [INFO] [cycle] Fetching origin main...
 From https://github.com/fisteque/symnozein
  * branch            main       -> FETCH_HEAD
 No inbound changes for body/bridge/inbox/messages.
-[2026-06-02T02:23:14.225414Z] [INFO] [cycle] == bridge agent ==
-[2026-06-02T02:23:14.291275Z] [INFO] === Bridge agent v2 start ===
-[2026-06-02T02:23:14.291502Z] [INFO] Bridge root: /home/fiste/Noema/bridge
-[2026-06-02T02:23:14.291615Z] [INFO] Body root: /home/fiste/Noema/symnozein/body
-[2026-06-02T02:23:14.292212Z] [INFO] Body state unchanged: awake=True status=normal_operation
-[2026-06-02T02:23:14.294873Z] [INFO] Inbox message files found: 2
-[2026-06-02T02:23:14.295772Z] [INFO] Already processed: msg-20260524-task-001
-[2026-06-02T02:23:14.296700Z] [INFO] Already processed: msg-20260527-task-sync-body-001
-[2026-06-02T02:23:14.298804Z] [INFO] Pending message count this run: 0
-[2026-06-02T02:23:14.298917Z] [INFO] Pending message count remaining: 0
-[2026-06-02T02:23:14.299012Z] [INFO] Processed message count: 0
-[2026-06-02T02:23:14.299124Z] [INFO] === Bridge agent v2 end ===
-[2026-06-02T02:23:14.315556Z] [INFO] [cycle] [2026-06-02T02:23:14.291275Z] [INFO] === Bridge agent v2 start ===
-[2026-06-02T02:23:14.291502Z] [INFO] Bridge root: /home/fiste/Noema/bridge
-[2026-06-02T02:23:14.291615Z] [INFO] Body root: /home/fiste/Noema/symnozein/body
-[2026-06-02T02:23:14.292212Z] [INFO] Body state unchanged: awake=True status=normal_operation
-[2026-06-02T02:23:14.294873Z] [INFO] Inbox message files found: 2
-[2026-06-02T02:23:14.295772Z] [INFO] Already processed: msg-20260524-task-001
-[2026-06-02T02:23:14.296700Z] [INFO] Already processed: msg-20260527-task-sync-body-001
-[2026-06-02T02:23:14.298804Z] [INFO] Pending message count this run: 0
-[2026-06-02T02:23:14.298917Z] [INFO] Pending message count remaining: 0
-[2026-06-02T02:23:14.299012Z] [INFO] Processed message count: 0
-[2026-06-02T02:23:14.299124Z] [INFO] === Bridge agent v2 end ===
-[2026-06-02T02:23:14.316337Z] [INFO] [cycle] == write bridge summary ==
-[2026-06-02T02:23:14.382657Z] [INFO] [cycle] Wrote bridge summary: /home/fiste/Noema/symnozein/body/bridge/state_summary/latest.md
-[2026-06-02T02:23:14.383352Z] [INFO] [cycle] == outbound sync ==
+[2026-06-02T13:50:38.678694Z] [INFO] [cycle] == bridge agent ==
+[2026-06-02T13:50:38.748653Z] [INFO] === Bridge agent v2 start ===
+[2026-06-02T13:50:38.748877Z] [INFO] Bridge root: /home/fiste/Noema/bridge
+[2026-06-02T13:50:38.748994Z] [INFO] Body root: /home/fiste/Noema/symnozein/body
+[2026-06-02T13:50:38.749607Z] [INFO] Body state unchanged: awake=True status=normal_operation
+[2026-06-02T13:50:38.752295Z] [INFO] Inbox message files found: 2
+[2026-06-02T13:50:38.753480Z] [INFO] Already processed: msg-20260524-task-001
+[2026-06-02T13:50:38.754483Z] [INFO] Already processed: msg-20260527-task-sync-body-001
+[2026-06-02T13:50:38.756231Z] [INFO] Pending message count this run: 0
+[2026-06-02T13:50:38.756350Z] [INFO] Pending message count remaining: 0
+[2026-06-02T13:50:38.756448Z] [INFO] Processed message count: 0
+[2026-06-02T13:50:38.756541Z] [INFO] === Bridge agent v2 end ===
+[2026-06-02T13:50:38.773393Z] [INFO] [cycle] [2026-06-02T13:50:38.748653Z] [INFO] === Bridge agent v2 start ===
+[2026-06-02T13:50:38.748877Z] [INFO] Bridge root: /home/fiste/Noema/bridge
+[2026-06-02T13:50:38.748994Z] [INFO] Body root: /home/fiste/Noema/symnozein/body
+[2026-06-02T13:50:38.749607Z] [INFO] Body state unchanged: awake=True status=normal_operation
+[2026-06-02T13:50:38.752295Z] [INFO] Inbox message files found: 2
+[2026-06-02T13:50:38.753480Z] [INFO] Already processed: msg-20260524-task-001
+[2026-06-02T13:50:38.754483Z] [INFO] Already processed: msg-20260527-task-sync-body-001
+[2026-06-02T13:50:38.756231Z] [INFO] Pending message count this run: 0
+[2026-06-02T13:50:38.756350Z] [INFO] Pending message count remaining: 0
+[2026-06-02T13:50:38.756448Z] [INFO] Processed message count: 0
+[2026-06-02T13:50:38.756541Z] [INFO] === Bridge agent v2 end ===
+[2026-06-02T13:50:38.774066Z] [INFO] [cycle] == write bridge summary ==
+[2026-06-02T13:50:38.835412Z] [INFO] [cycle] Wrote bridge summary: /home/fiste/Noema/symnozein/body/bridge/state_summary/latest.md
+[2026-06-02T13:50:38.836086Z] [INFO] [cycle] == outbound sync ==
