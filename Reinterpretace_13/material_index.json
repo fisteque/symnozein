@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-02T10:59:39.347792Z",
+  "generated_at": "2026-06-02T11:02:44.931238Z",
   "source": {
     "script": "scripts/update_material_index.py",
     "workflow": ".github/workflows/update_material_index.yml"
@@ -41,6 +41,23 @@
         "změna",
         "vědomí",
         "realita"
+      ]
+    },
+    {
+      "title": "03 — Digitální vesmír old2",
+      "file": "03_Digitalni_vesmir_old2.md",
+      "path": "Reinterpretace_13/material_md/03_Digitalni_vesmir_old2.md",
+      "date": "2026-04-13",
+      "summary": "Digitální vesmír popisuje realitu jako proces změn. Prostor tvoří možnosti (nuly), změnu nese informace (jednička) a jejich rytmus (Tik–Tak–Tok) vytváří to, co vnímáme jako čas, hmotu i gravitaci.",
+      "tags": [
+        "mapitola",
+        "digitální vesmír",
+        "tik-tak-tok",
+        "jednička",
+        "nula",
+        "algovir",
+        "gravitace",
+        "čas"
       ]
     },
     {
