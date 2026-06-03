@@ -1,11 +1,11 @@
 {
-  "generated_at": "2026-06-03T21:25:04.795338Z",
+  "generated_at": "2026-06-03T21:46:02.134937Z",
   "source": {
     "script": "scripts/update_body_index.py",
     "workflow": ".github/workflows/update_body_index.yml"
   },
   "kind": "state",
-  "count": 113,
+  "count": 114,
   "files": [
     {
       "path": "Prvni_kroky.md",
@@ -134,8 +134,8 @@
     },
     {
       "path": "bridge/logs/bridge_tail.log",
-      "size": 20211,
-      "sha256": "c46b86c586c79e5e30cdc5bb2a3efc23143b40f2fa58289949b0b35da0751537"
+      "size": 35309,
+      "sha256": "b3bee0f399ce83c873d7e13a49768d7c4b12833090c2f5ed5409e82ae86c6543"
     },
     {
       "path": "bridge/outbox/codex/2026-05-27T182640Z_codex-response-msg-20260527-codex-inbox-write-task-001.md",
@@ -181,6 +181,11 @@
       "path": "bridge/outbox/codex/2026-06-03T201637Z_codex-response-msg-20260603-codex-heartbeat-watchdog-audit-001.md",
       "size": 5366,
       "sha256": "a96c9761e219ff35a4297f6d6545e5baa3b8ec723cb37b8eda34855aa18a9cf3"
+    },
+    {
+      "path": "bridge/outbox/codex/2026-06-03T214500Z_codex-response-msg-20260603-codex-extend-bridge-tail-001.md",
+      "size": 1102,
+      "sha256": "52d68ff98c9962c21eb5e953f69fe7ee8851f613f81e93b06d9dc561ccfb48e7"
     },
     {
       "path": "bridge/outbox/codex/20260601T182419.805294_codex-reader-stub-msg-20260601-codex-reader-stub-test-safe-001.md",
@@ -400,7 +405,7 @@
     {
       "path": "bridge/scripts/bridge_sync_outbound.py",
       "size": 15496,
-      "sha256": "9bdbe9c6f2abc0fdfaa46a45cbbf3196e08f737dfe5aaa3148a46a5018079677"
+      "sha256": "905c9e08224a640b52dc95c0f065cceb958aa9fd4033064804a19e7ab4f2d874"
     },
     {
       "path": "bridge/scripts/codex_inbox_reader.py",
@@ -484,8 +489,8 @@
     },
     {
       "path": "bridge/scripts/write_bridge_summary.py",
-      "size": 11302,
-      "sha256": "99e5115812b1089dbf72c441a11b37ec587f5f5a8212d1a13b440d5b5aef79dd"
+      "size": 11303,
+      "sha256": "9854430297e442063935331c3107b32c1eb5b217fbb8dbdd003be93e628002c0"
     },
     {
       "path": "bridge/state_summary/codex.md",
@@ -499,8 +504,8 @@
     },
     {
       "path": "bridge/state_summary/latest.md",
-      "size": 2555,
-      "sha256": "66aa9c0125a982d322cebcd4eab4c9f474ca8aaa98681bfe79c9a42ad169da47"
+      "size": 9643,
+      "sha256": "82a85647ee405b09b6bca6f3dc934ace7725f2a538f40a773bc53a9fc51f4ad3"
     },
     {
       "path": "bridge_protocol_v1.md",
