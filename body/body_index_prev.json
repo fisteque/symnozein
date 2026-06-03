@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-03T21:12:21.063717Z",
+  "generated_at": "2026-06-03T21:25:04.795338Z",
   "source": {
     "script": "scripts/update_body_index.py",
     "workflow": ".github/workflows/update_body_index.yml"
@@ -49,8 +49,8 @@
     },
     {
       "path": "bridge/inbox/inbox.json",
-      "size": 433,
-      "sha256": "48500e927a298ec89c9e0bc5c180d4623d8d28c5d770f2344c0477982622808a"
+      "size": 290,
+      "sha256": "eca090a19a20ab65cf6fcb5f07ddec88820c97a96bdb5b7c45f26844b99323cf"
     },
     {
       "path": "bridge/inbox/messages/codex/msg-20260527-codex-inbox-write-task-001",
