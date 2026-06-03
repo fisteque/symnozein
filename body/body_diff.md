@@ -5,6 +5,23 @@ Uchovává posledních **50** záznamů.
 
 ---
 
+## 2026-06-03T19:31:06.191255Z
+
+Zdroj změn:
+- skript: `scripts/update_body_index.py`
+- workflow: `.github/workflows/update_body_index.yml`
+
+➕ přidáno: **1**
+- `bridge/inbox/messages/codex/msg-20260603-codex-heartbeat-watchdog-audit-001.md`
+
+🔄 změněno: **0**
+- nic
+
+❌ odebráno: **0**
+- nic
+
+---
+
 ## 2026-06-03T07:47:36.525468Z
 
 Zdroj změn:
@@ -893,20 +910,3 @@ Zdroj změn:
 
 ❌ odebráno: **0**
 - nic
-
----
-
-## 2026-05-27T18:21:37.625516Z
-
-Zdroj změn:
-- skript: `scripts/update_body_index.py`
-- workflow: `.github/workflows/update_body_index.yml`
-
-➕ přidáno: **1**
-- `bridge/inbox/messages/codex/msg-20260527-codex-inbox-write-task-001`
-
-🔄 změněno: **0**
-- nic
-
-❌ odebráno: **1**
-- `bridge/inbox/messages/msg-20260527-codex-inbox-write-task-001`
