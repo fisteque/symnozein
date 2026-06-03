@@ -31,7 +31,7 @@ def parse_args() -> argparse.Namespace:
         default=DEFAULT_PROJECT_ROOT,
         help=f"Project root containing state/body_state.json. Default: {DEFAULT_PROJECT_ROOT}",
     )
-    parser.add_argument("--log-lines", type=int, default=20, help="Number of bridge.log tail lines to include.")
+    parser.add_argument("--log-lines", type=int, default=120, help="Number of bridge.log tail lines to include.")
     return parser.parse_args()
 
 

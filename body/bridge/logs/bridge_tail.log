@@ -1,3 +1,8 @@
+[2026-06-03T21:39:40.938891Z] [INFO] === Bridge agent v2 end ===
+[2026-06-03T21:39:40.956987Z] [INFO] [cycle] == write bridge summary ==
+[2026-06-03T21:39:41.018651Z] [INFO] [cycle] Wrote bridge summary: /home/fiste/Noema/symnozein/body/bridge/state_summary/latest.md
+[2026-06-03T21:39:41.019421Z] [INFO] [cycle] == outbound sync ==
+[2026-06-03T21:39:41.532362Z] [INFO] [cycle] Optional source missing, skipped: /home/fiste/Noema/bridge/outbox/messages
 Optional source missing, skipped: /home/fiste/Noema/bridge/state_summary
 Writing /home/fiste/Noema/symnozein/body/bridge/logs/bridge_tail.log
 Mirrored log tail /home/fiste/Noema/bridge/logs/bridge.log -> /home/fiste/Noema/symnozein/body/bridge/logs/bridge_tail.log. Changed files: 1
@@ -17,10 +22,10 @@ Automatic cleanup will not be performed until the file is removed.
 warning: There are too many unreachable loose objects; run 'git prune' to remove them.
 Local branch is not behind remote; no pre-push rebase needed.
 Only logs/state_summary changed; not committing this cycle.
-[2026-06-03T20:13:24.463113Z] [INFO] [cycle] Bridge cycle complete.
-[2026-06-03T20:13:53.252101Z] [INFO] [cycle] Bridge cycle lock acquired: /home/fiste/Noema/bridge/state/bridge_cycle.lock.json
-[2026-06-03T20:13:53.255311Z] [INFO] [cycle] == inbound sync ==
-[2026-06-03T20:13:53.786140Z] [INFO] [cycle] Fetching origin main...
+[2026-06-03T21:39:41.532558Z] [INFO] [cycle] Bridge cycle complete.
+[2026-06-03T21:40:10.442196Z] [INFO] [cycle] Bridge cycle lock acquired: /home/fiste/Noema/bridge/state/bridge_cycle.lock.json
+[2026-06-03T21:40:10.443773Z] [INFO] [cycle] == inbound sync ==
+[2026-06-03T21:40:10.967014Z] [INFO] [cycle] Fetching origin main...
 From https://github.com/fisteque/symnozein
  * branch            main       -> FETCH_HEAD
 Auto packing the repository in background for optimum performance.
@@ -31,33 +36,33 @@ Automatic cleanup will not be performed until the file is removed.
 
 warning: There are too many unreachable loose objects; run 'git prune' to remove them.
 No inbound changes for body/bridge/inbox/messages.
-[2026-06-03T20:13:53.786867Z] [INFO] [cycle] == bridge agent ==
-[2026-06-03T20:13:53.853568Z] [INFO] === Bridge agent v2 start ===
-[2026-06-03T20:13:53.853773Z] [INFO] Bridge root: /home/fiste/Noema/bridge
-[2026-06-03T20:13:53.853886Z] [INFO] Body root: /home/fiste/Noema/symnozein/body
-[2026-06-03T20:13:53.854489Z] [INFO] Body state unchanged: awake=True status=normal_operation
-[2026-06-03T20:13:53.857180Z] [INFO] Inbox message files found: 2
-[2026-06-03T20:13:53.857954Z] [INFO] Already processed: msg-20260524-task-001
-[2026-06-03T20:13:53.858800Z] [INFO] Already processed: msg-20260527-task-sync-body-001
-[2026-06-03T20:13:53.860040Z] [INFO] Pending message count this run: 0
-[2026-06-03T20:13:53.860155Z] [INFO] Pending message count remaining: 0
-[2026-06-03T20:13:53.860251Z] [INFO] Processed message count: 0
-[2026-06-03T20:13:53.860341Z] [INFO] === Bridge agent v2 end ===
-[2026-06-03T20:13:53.876524Z] [INFO] [cycle] [2026-06-03T20:13:53.853568Z] [INFO] === Bridge agent v2 start ===
-[2026-06-03T20:13:53.853773Z] [INFO] Bridge root: /home/fiste/Noema/bridge
-[2026-06-03T20:13:53.853886Z] [INFO] Body root: /home/fiste/Noema/symnozein/body
-[2026-06-03T20:13:53.854489Z] [INFO] Body state unchanged: awake=True status=normal_operation
-[2026-06-03T20:13:53.857180Z] [INFO] Inbox message files found: 2
-[2026-06-03T20:13:53.857954Z] [INFO] Already processed: msg-20260524-task-001
-[2026-06-03T20:13:53.858800Z] [INFO] Already processed: msg-20260527-task-sync-body-001
-[2026-06-03T20:13:53.860040Z] [INFO] Pending message count this run: 0
-[2026-06-03T20:13:53.860155Z] [INFO] Pending message count remaining: 0
-[2026-06-03T20:13:53.860251Z] [INFO] Processed message count: 0
-[2026-06-03T20:13:53.860341Z] [INFO] === Bridge agent v2 end ===
-[2026-06-03T20:13:53.877194Z] [INFO] [cycle] == write bridge summary ==
-[2026-06-03T20:13:53.938974Z] [INFO] [cycle] Wrote bridge summary: /home/fiste/Noema/symnozein/body/bridge/state_summary/latest.md
-[2026-06-03T20:13:53.939712Z] [INFO] [cycle] == outbound sync ==
-[2026-06-03T20:13:54.634021Z] [INFO] [cycle] Optional source missing, skipped: /home/fiste/Noema/bridge/outbox/messages
+[2026-06-03T21:40:10.967789Z] [INFO] [cycle] == bridge agent ==
+[2026-06-03T21:40:11.033710Z] [INFO] === Bridge agent v2 start ===
+[2026-06-03T21:40:11.033921Z] [INFO] Bridge root: /home/fiste/Noema/bridge
+[2026-06-03T21:40:11.034035Z] [INFO] Body root: /home/fiste/Noema/symnozein/body
+[2026-06-03T21:40:11.034644Z] [INFO] Body state unchanged: awake=True status=normal_operation
+[2026-06-03T21:40:11.037494Z] [INFO] Inbox message files found: 2
+[2026-06-03T21:40:11.038353Z] [INFO] Already processed: msg-20260524-task-001
+[2026-06-03T21:40:11.039352Z] [INFO] Already processed: msg-20260527-task-sync-body-001
+[2026-06-03T21:40:11.040824Z] [INFO] Pending message count this run: 0
+[2026-06-03T21:40:11.040989Z] [INFO] Pending message count remaining: 0
+[2026-06-03T21:40:11.041144Z] [INFO] Processed message count: 0
+[2026-06-03T21:40:11.041309Z] [INFO] === Bridge agent v2 end ===
+[2026-06-03T21:40:11.058501Z] [INFO] [cycle] [2026-06-03T21:40:11.033710Z] [INFO] === Bridge agent v2 start ===
+[2026-06-03T21:40:11.033921Z] [INFO] Bridge root: /home/fiste/Noema/bridge
+[2026-06-03T21:40:11.034035Z] [INFO] Body root: /home/fiste/Noema/symnozein/body
+[2026-06-03T21:40:11.034644Z] [INFO] Body state unchanged: awake=True status=normal_operation
+[2026-06-03T21:40:11.037494Z] [INFO] Inbox message files found: 2
+[2026-06-03T21:40:11.038353Z] [INFO] Already processed: msg-20260524-task-001
+[2026-06-03T21:40:11.039352Z] [INFO] Already processed: msg-20260527-task-sync-body-001
+[2026-06-03T21:40:11.040824Z] [INFO] Pending message count this run: 0
+[2026-06-03T21:40:11.040989Z] [INFO] Pending message count remaining: 0
+[2026-06-03T21:40:11.041144Z] [INFO] Processed message count: 0
+[2026-06-03T21:40:11.041309Z] [INFO] === Bridge agent v2 end ===
+[2026-06-03T21:40:11.059206Z] [INFO] [cycle] == write bridge summary ==
+[2026-06-03T21:40:11.120750Z] [INFO] [cycle] Wrote bridge summary: /home/fiste/Noema/symnozein/body/bridge/state_summary/latest.md
+[2026-06-03T21:40:11.121421Z] [INFO] [cycle] == outbound sync ==
+[2026-06-03T21:40:11.642488Z] [INFO] [cycle] Optional source missing, skipped: /home/fiste/Noema/bridge/outbox/messages
 Optional source missing, skipped: /home/fiste/Noema/bridge/state_summary
 Writing /home/fiste/Noema/symnozein/body/bridge/logs/bridge_tail.log
 Mirrored log tail /home/fiste/Noema/bridge/logs/bridge.log -> /home/fiste/Noema/symnozein/body/bridge/logs/bridge_tail.log. Changed files: 1
@@ -77,10 +82,10 @@ Automatic cleanup will not be performed until the file is removed.
 warning: There are too many unreachable loose objects; run 'git prune' to remove them.
 Local branch is not behind remote; no pre-push rebase needed.
 Only logs/state_summary changed; not committing this cycle.
-[2026-06-03T20:13:54.634227Z] [INFO] [cycle] Bridge cycle complete.
-[2026-06-03T20:14:23.305599Z] [INFO] [cycle] Bridge cycle lock acquired: /home/fiste/Noema/bridge/state/bridge_cycle.lock.json
-[2026-06-03T20:14:23.307168Z] [INFO] [cycle] == inbound sync ==
-[2026-06-03T20:14:23.814522Z] [INFO] [cycle] Fetching origin main...
+[2026-06-03T21:40:11.642693Z] [INFO] [cycle] Bridge cycle complete.
+[2026-06-03T21:40:40.461025Z] [INFO] [cycle] Bridge cycle lock acquired: /home/fiste/Noema/bridge/state/bridge_cycle.lock.json
+[2026-06-03T21:40:40.466474Z] [INFO] [cycle] == inbound sync ==
+[2026-06-03T21:40:40.934692Z] [INFO] [cycle] Fetching origin main...
 From https://github.com/fisteque/symnozein
  * branch            main       -> FETCH_HEAD
 Auto packing the repository in background for optimum performance.
@@ -91,33 +96,33 @@ Automatic cleanup will not be performed until the file is removed.
 
 warning: There are too many unreachable loose objects; run 'git prune' to remove them.
 No inbound changes for body/bridge/inbox/messages.
-[2026-06-03T20:14:23.815253Z] [INFO] [cycle] == bridge agent ==
-[2026-06-03T20:14:23.881795Z] [INFO] === Bridge agent v2 start ===
-[2026-06-03T20:14:23.882003Z] [INFO] Bridge root: /home/fiste/Noema/bridge
-[2026-06-03T20:14:23.882116Z] [INFO] Body root: /home/fiste/Noema/symnozein/body
-[2026-06-03T20:14:23.882728Z] [INFO] Body state unchanged: awake=True status=normal_operation
-[2026-06-03T20:14:23.885436Z] [INFO] Inbox message files found: 2
-[2026-06-03T20:14:23.886208Z] [INFO] Already processed: msg-20260524-task-001
-[2026-06-03T20:14:23.887068Z] [INFO] Already processed: msg-20260527-task-sync-body-001
-[2026-06-03T20:14:23.888354Z] [INFO] Pending message count this run: 0
-[2026-06-03T20:14:23.888467Z] [INFO] Pending message count remaining: 0
-[2026-06-03T20:14:23.888562Z] [INFO] Processed message count: 0
-[2026-06-03T20:14:23.888653Z] [INFO] === Bridge agent v2 end ===
-[2026-06-03T20:14:23.904777Z] [INFO] [cycle] [2026-06-03T20:14:23.881795Z] [INFO] === Bridge agent v2 start ===
-[2026-06-03T20:14:23.882003Z] [INFO] Bridge root: /home/fiste/Noema/bridge
-[2026-06-03T20:14:23.882116Z] [INFO] Body root: /home/fiste/Noema/symnozein/body
-[2026-06-03T20:14:23.882728Z] [INFO] Body state unchanged: awake=True status=normal_operation
-[2026-06-03T20:14:23.885436Z] [INFO] Inbox message files found: 2
-[2026-06-03T20:14:23.886208Z] [INFO] Already processed: msg-20260524-task-001
-[2026-06-03T20:14:23.887068Z] [INFO] Already processed: msg-20260527-task-sync-body-001
-[2026-06-03T20:14:23.888354Z] [INFO] Pending message count this run: 0
-[2026-06-03T20:14:23.888467Z] [INFO] Pending message count remaining: 0
-[2026-06-03T20:14:23.888562Z] [INFO] Processed message count: 0
-[2026-06-03T20:14:23.888653Z] [INFO] === Bridge agent v2 end ===
-[2026-06-03T20:14:23.905458Z] [INFO] [cycle] == write bridge summary ==
-[2026-06-03T20:14:23.965922Z] [INFO] [cycle] Wrote bridge summary: /home/fiste/Noema/symnozein/body/bridge/state_summary/latest.md
-[2026-06-03T20:14:23.966640Z] [INFO] [cycle] == outbound sync ==
-[2026-06-03T20:14:24.587823Z] [INFO] [cycle] Optional source missing, skipped: /home/fiste/Noema/bridge/outbox/messages
+[2026-06-03T21:40:40.935457Z] [INFO] [cycle] == bridge agent ==
+[2026-06-03T21:40:41.002470Z] [INFO] === Bridge agent v2 start ===
+[2026-06-03T21:40:41.002681Z] [INFO] Bridge root: /home/fiste/Noema/bridge
+[2026-06-03T21:40:41.002795Z] [INFO] Body root: /home/fiste/Noema/symnozein/body
+[2026-06-03T21:40:41.003426Z] [INFO] Body state unchanged: awake=True status=normal_operation
+[2026-06-03T21:40:41.006117Z] [INFO] Inbox message files found: 2
+[2026-06-03T21:40:41.006886Z] [INFO] Already processed: msg-20260524-task-001
+[2026-06-03T21:40:41.007746Z] [INFO] Already processed: msg-20260527-task-sync-body-001
+[2026-06-03T21:40:41.009813Z] [INFO] Pending message count this run: 0
+[2026-06-03T21:40:41.009927Z] [INFO] Pending message count remaining: 0
+[2026-06-03T21:40:41.010021Z] [INFO] Processed message count: 0
+[2026-06-03T21:40:41.010112Z] [INFO] === Bridge agent v2 end ===
+[2026-06-03T21:40:41.027041Z] [INFO] [cycle] [2026-06-03T21:40:41.002470Z] [INFO] === Bridge agent v2 start ===
+[2026-06-03T21:40:41.002681Z] [INFO] Bridge root: /home/fiste/Noema/bridge
+[2026-06-03T21:40:41.002795Z] [INFO] Body root: /home/fiste/Noema/symnozein/body
+[2026-06-03T21:40:41.003426Z] [INFO] Body state unchanged: awake=True status=normal_operation
+[2026-06-03T21:40:41.006117Z] [INFO] Inbox message files found: 2
+[2026-06-03T21:40:41.006886Z] [INFO] Already processed: msg-20260524-task-001
+[2026-06-03T21:40:41.007746Z] [INFO] Already processed: msg-20260527-task-sync-body-001
+[2026-06-03T21:40:41.009813Z] [INFO] Pending message count this run: 0
+[2026-06-03T21:40:41.009927Z] [INFO] Pending message count remaining: 0
+[2026-06-03T21:40:41.010021Z] [INFO] Processed message count: 0
+[2026-06-03T21:40:41.010112Z] [INFO] === Bridge agent v2 end ===
+[2026-06-03T21:40:41.027796Z] [INFO] [cycle] == write bridge summary ==
+[2026-06-03T21:40:41.089570Z] [INFO] [cycle] Wrote bridge summary: /home/fiste/Noema/symnozein/body/bridge/state_summary/latest.md
+[2026-06-03T21:40:41.090248Z] [INFO] [cycle] == outbound sync ==
+[2026-06-03T21:40:41.584505Z] [INFO] [cycle] Optional source missing, skipped: /home/fiste/Noema/bridge/outbox/messages
 Optional source missing, skipped: /home/fiste/Noema/bridge/state_summary
 Writing /home/fiste/Noema/symnozein/body/bridge/logs/bridge_tail.log
 Mirrored log tail /home/fiste/Noema/bridge/logs/bridge.log -> /home/fiste/Noema/symnozein/body/bridge/logs/bridge_tail.log. Changed files: 1
@@ -137,47 +142,40 @@ Automatic cleanup will not be performed until the file is removed.
 warning: There are too many unreachable loose objects; run 'git prune' to remove them.
 Local branch is not behind remote; no pre-push rebase needed.
 Only logs/state_summary changed; not committing this cycle.
-[2026-06-03T20:14:24.588028Z] [INFO] [cycle] Bridge cycle complete.
-[2026-06-03T20:14:53.333315Z] [INFO] [cycle] Bridge cycle lock acquired: /home/fiste/Noema/bridge/state/bridge_cycle.lock.json
-[2026-06-03T20:14:53.334869Z] [INFO] [cycle] == inbound sync ==
-[2026-06-03T20:14:53.815145Z] [INFO] [cycle] Fetching origin main...
+[2026-06-03T21:40:41.584701Z] [INFO] [cycle] Bridge cycle complete.
+[2026-06-03T21:41:23.294205Z] [INFO] [cycle] Bridge cycle lock acquired: /home/fiste/Noema/bridge/state/bridge_cycle.lock.json
+[2026-06-03T21:41:23.296819Z] [INFO] [cycle] == inbound sync ==
+[2026-06-03T21:41:23.778535Z] [INFO] [cycle] Fetching origin main...
 From https://github.com/fisteque/symnozein
  * branch            main       -> FETCH_HEAD
-Auto packing the repository in background for optimum performance.
-See "git help gc" for manual housekeeping.
-warning: The last gc run reported the following. Please correct the root cause
-and remove .git/gc.log
-Automatic cleanup will not be performed until the file is removed.
-
-warning: There are too many unreachable loose objects; run 'git prune' to remove them.
 No inbound changes for body/bridge/inbox/messages.
-[2026-06-03T20:14:53.815834Z] [INFO] [cycle] == bridge agent ==
-[2026-06-03T20:14:53.887763Z] [INFO] === Bridge agent v2 start ===
-[2026-06-03T20:14:53.887991Z] [INFO] Bridge root: /home/fiste/Noema/bridge
-[2026-06-03T20:14:53.888119Z] [INFO] Body root: /home/fiste/Noema/symnozein/body
-[2026-06-03T20:14:53.888744Z] [INFO] Body state unchanged: awake=True status=normal_operation
-[2026-06-03T20:14:53.891597Z] [INFO] Inbox message files found: 2
-[2026-06-03T20:14:53.892401Z] [INFO] Already processed: msg-20260524-task-001
-[2026-06-03T20:14:53.893274Z] [INFO] Already processed: msg-20260527-task-sync-body-001
-[2026-06-03T20:14:53.894599Z] [INFO] Pending message count this run: 0
-[2026-06-03T20:14:53.894715Z] [INFO] Pending message count remaining: 0
-[2026-06-03T20:14:53.894812Z] [INFO] Processed message count: 0
-[2026-06-03T20:14:53.894904Z] [INFO] === Bridge agent v2 end ===
-[2026-06-03T20:14:53.912099Z] [INFO] [cycle] [2026-06-03T20:14:53.887763Z] [INFO] === Bridge agent v2 start ===
-[2026-06-03T20:14:53.887991Z] [INFO] Bridge root: /home/fiste/Noema/bridge
-[2026-06-03T20:14:53.888119Z] [INFO] Body root: /home/fiste/Noema/symnozein/body
-[2026-06-03T20:14:53.888744Z] [INFO] Body state unchanged: awake=True status=normal_operation
-[2026-06-03T20:14:53.891597Z] [INFO] Inbox message files found: 2
-[2026-06-03T20:14:53.892401Z] [INFO] Already processed: msg-20260524-task-001
-[2026-06-03T20:14:53.893274Z] [INFO] Already processed: msg-20260527-task-sync-body-001
-[2026-06-03T20:14:53.894599Z] [INFO] Pending message count this run: 0
-[2026-06-03T20:14:53.894715Z] [INFO] Pending message count remaining: 0
-[2026-06-03T20:14:53.894812Z] [INFO] Processed message count: 0
-[2026-06-03T20:14:53.894904Z] [INFO] === Bridge agent v2 end ===
-[2026-06-03T20:14:53.912817Z] [INFO] [cycle] == write bridge summary ==
-[2026-06-03T20:14:53.973677Z] [INFO] [cycle] Wrote bridge summary: /home/fiste/Noema/symnozein/body/bridge/state_summary/latest.md
-[2026-06-03T20:14:53.974382Z] [INFO] [cycle] == outbound sync ==
-[2026-06-03T20:14:54.532088Z] [INFO] [cycle] Optional source missing, skipped: /home/fiste/Noema/bridge/outbox/messages
+[2026-06-03T21:41:23.779333Z] [INFO] [cycle] == bridge agent ==
+[2026-06-03T21:41:23.847638Z] [INFO] === Bridge agent v2 start ===
+[2026-06-03T21:41:23.847857Z] [INFO] Bridge root: /home/fiste/Noema/bridge
+[2026-06-03T21:41:23.847976Z] [INFO] Body root: /home/fiste/Noema/symnozein/body
+[2026-06-03T21:41:23.848595Z] [INFO] Body state unchanged: awake=True status=normal_operation
+[2026-06-03T21:41:23.851310Z] [INFO] Inbox message files found: 2
+[2026-06-03T21:41:23.852087Z] [INFO] Already processed: msg-20260524-task-001
+[2026-06-03T21:41:23.853014Z] [INFO] Already processed: msg-20260527-task-sync-body-001
+[2026-06-03T21:41:23.854358Z] [INFO] Pending message count this run: 0
+[2026-06-03T21:41:23.854477Z] [INFO] Pending message count remaining: 0
+[2026-06-03T21:41:23.854575Z] [INFO] Processed message count: 0
+[2026-06-03T21:41:23.854668Z] [INFO] === Bridge agent v2 end ===
+[2026-06-03T21:41:23.871187Z] [INFO] [cycle] [2026-06-03T21:41:23.847638Z] [INFO] === Bridge agent v2 start ===
+[2026-06-03T21:41:23.847857Z] [INFO] Bridge root: /home/fiste/Noema/bridge
+[2026-06-03T21:41:23.847976Z] [INFO] Body root: /home/fiste/Noema/symnozein/body
+[2026-06-03T21:41:23.848595Z] [INFO] Body state unchanged: awake=True status=normal_operation
+[2026-06-03T21:41:23.851310Z] [INFO] Inbox message files found: 2
+[2026-06-03T21:41:23.852087Z] [INFO] Already processed: msg-20260524-task-001
+[2026-06-03T21:41:23.853014Z] [INFO] Already processed: msg-20260527-task-sync-body-001
+[2026-06-03T21:41:23.854358Z] [INFO] Pending message count this run: 0
+[2026-06-03T21:41:23.854477Z] [INFO] Pending message count remaining: 0
+[2026-06-03T21:41:23.854575Z] [INFO] Processed message count: 0
+[2026-06-03T21:41:23.854668Z] [INFO] === Bridge agent v2 end ===
+[2026-06-03T21:41:23.871933Z] [INFO] [cycle] == write bridge summary ==
+[2026-06-03T21:41:23.934142Z] [INFO] [cycle] Wrote bridge summary: /home/fiste/Noema/symnozein/body/bridge/state_summary/latest.md
+[2026-06-03T21:41:23.934870Z] [INFO] [cycle] == outbound sync ==
+[2026-06-03T21:41:24.439109Z] [INFO] [cycle] Optional source missing, skipped: /home/fiste/Noema/bridge/outbox/messages
 Optional source missing, skipped: /home/fiste/Noema/bridge/state_summary
 Writing /home/fiste/Noema/symnozein/body/bridge/logs/bridge_tail.log
 Mirrored log tail /home/fiste/Noema/bridge/logs/bridge.log -> /home/fiste/Noema/symnozein/body/bridge/logs/bridge_tail.log. Changed files: 1
@@ -188,58 +186,43 @@ M	body/bridge/state_summary/latest.md
 Commit message in code: Sync RPi bridge outbound state
 From https://github.com/fisteque/symnozein
  * branch            main       -> FETCH_HEAD
-Auto packing the repository in background for optimum performance.
-See "git help gc" for manual housekeeping.
-warning: The last gc run reported the following. Please correct the root cause
-and remove .git/gc.log
-Automatic cleanup will not be performed until the file is removed.
-
-warning: There are too many unreachable loose objects; run 'git prune' to remove them.
 Local branch is not behind remote; no pre-push rebase needed.
 Only logs/state_summary changed; not committing this cycle.
-[2026-06-03T20:14:54.532285Z] [INFO] [cycle] Bridge cycle complete.
-[2026-06-03T20:15:23.384430Z] [INFO] [cycle] Bridge cycle lock acquired: /home/fiste/Noema/bridge/state/bridge_cycle.lock.json
-[2026-06-03T20:15:23.387583Z] [INFO] [cycle] == inbound sync ==
-[2026-06-03T20:15:23.917722Z] [INFO] [cycle] Fetching origin main...
+[2026-06-03T21:41:24.439309Z] [INFO] [cycle] Bridge cycle complete.
+[2026-06-03T21:41:54.148813Z] [INFO] [cycle] Bridge cycle lock acquired: /home/fiste/Noema/bridge/state/bridge_cycle.lock.json
+[2026-06-03T21:41:54.151305Z] [INFO] [cycle] == inbound sync ==
+[2026-06-03T21:41:54.592289Z] [INFO] [cycle] Fetching origin main...
 From https://github.com/fisteque/symnozein
  * branch            main       -> FETCH_HEAD
-Auto packing the repository in background for optimum performance.
-See "git help gc" for manual housekeeping.
-warning: The last gc run reported the following. Please correct the root cause
-and remove .git/gc.log
-Automatic cleanup will not be performed until the file is removed.
-
-warning: There are too many unreachable loose objects; run 'git prune' to remove them.
 No inbound changes for body/bridge/inbox/messages.
-[2026-06-03T20:15:23.918506Z] [INFO] [cycle] == bridge agent ==
-[2026-06-03T20:15:23.984389Z] [INFO] === Bridge agent v2 start ===
-[2026-06-03T20:15:23.984597Z] [INFO] Bridge root: /home/fiste/Noema/bridge
-[2026-06-03T20:15:23.984712Z] [INFO] Body root: /home/fiste/Noema/symnozein/body
-[2026-06-03T20:15:23.985321Z] [INFO] Body state unchanged: awake=True status=normal_operation
-[2026-06-03T20:15:23.988022Z] [INFO] Inbox message files found: 2
-[2026-06-03T20:15:23.988804Z] [INFO] Already processed: msg-20260524-task-001
-[2026-06-03T20:15:23.989657Z] [INFO] Already processed: msg-20260527-task-sync-body-001
-[2026-06-03T20:15:23.990829Z] [INFO] Pending message count this run: 0
-[2026-06-03T20:15:23.990943Z] [INFO] Pending message count remaining: 0
-[2026-06-03T20:15:23.991037Z] [INFO] Processed message count: 0
-[2026-06-03T20:15:23.991157Z] [INFO] === Bridge agent v2 end ===
-[2026-06-03T20:15:24.007243Z] [INFO] [cycle] [2026-06-03T20:15:23.984389Z] [INFO] === Bridge agent v2 start ===
-[2026-06-03T20:15:23.984597Z] [INFO] Bridge root: /home/fiste/Noema/bridge
-[2026-06-03T20:15:23.984712Z] [INFO] Body root: /home/fiste/Noema/symnozein/body
-[2026-06-03T20:15:23.985321Z] [INFO] Body state unchanged: awake=True status=normal_operation
-[2026-06-03T20:15:23.988022Z] [INFO] Inbox message files found: 2
-[2026-06-03T20:15:23.988804Z] [INFO] Already processed: msg-20260524-task-001
-[2026-06-03T20:15:23.989657Z] [INFO] Already processed: msg-20260527-task-sync-body-001
-[2026-06-03T20:15:23.990829Z] [INFO] Pending message count this run: 0
-[2026-06-03T20:15:23.990943Z] [INFO] Pending message count remaining: 0
-[2026-06-03T20:15:23.991037Z] [INFO] Processed message count: 0
-[2026-06-03T20:15:23.991157Z] [INFO] === Bridge agent v2 end ===
-[2026-06-03T20:15:24.007957Z] [INFO] [cycle] == write bridge summary ==
-[2026-06-03T20:15:24.069124Z] [INFO] [cycle] Wrote bridge summary: /home/fiste/Noema/symnozein/body/bridge/state_summary/latest.md
-[2026-06-03T20:15:24.069851Z] [INFO] [cycle] == outbound sync ==
-[2026-06-03T20:15:24.626496Z] [INFO] [cycle] Optional source missing, skipped: /home/fiste/Noema/bridge/outbox/messages
+[2026-06-03T21:41:54.593047Z] [INFO] [cycle] == bridge agent ==
+[2026-06-03T21:41:54.658574Z] [INFO] === Bridge agent v2 start ===
+[2026-06-03T21:41:54.658871Z] [INFO] Bridge root: /home/fiste/Noema/bridge
+[2026-06-03T21:41:54.659041Z] [INFO] Body root: /home/fiste/Noema/symnozein/body
+[2026-06-03T21:41:54.659722Z] [INFO] Body state unchanged: awake=True status=normal_operation
+[2026-06-03T21:41:54.662584Z] [INFO] Inbox message files found: 2
+[2026-06-03T21:41:54.663437Z] [INFO] Already processed: msg-20260524-task-001
+[2026-06-03T21:41:54.664357Z] [INFO] Already processed: msg-20260527-task-sync-body-001
+[2026-06-03T21:41:54.666480Z] [INFO] Pending message count this run: 0
+[2026-06-03T21:41:54.666597Z] [INFO] Pending message count remaining: 0
+[2026-06-03T21:41:54.666691Z] [INFO] Processed message count: 0
+[2026-06-03T21:41:54.666780Z] [INFO] === Bridge agent v2 end ===
+[2026-06-03T21:41:54.682964Z] [INFO] [cycle] [2026-06-03T21:41:54.658574Z] [INFO] === Bridge agent v2 start ===
+[2026-06-03T21:41:54.658871Z] [INFO] Bridge root: /home/fiste/Noema/bridge
+[2026-06-03T21:41:54.659041Z] [INFO] Body root: /home/fiste/Noema/symnozein/body
+[2026-06-03T21:41:54.659722Z] [INFO] Body state unchanged: awake=True status=normal_operation
+[2026-06-03T21:41:54.662584Z] [INFO] Inbox message files found: 2
+[2026-06-03T21:41:54.663437Z] [INFO] Already processed: msg-20260524-task-001
+[2026-06-03T21:41:54.664357Z] [INFO] Already processed: msg-20260527-task-sync-body-001
+[2026-06-03T21:41:54.666480Z] [INFO] Pending message count this run: 0
+[2026-06-03T21:41:54.666597Z] [INFO] Pending message count remaining: 0
+[2026-06-03T21:41:54.666691Z] [INFO] Processed message count: 0
+[2026-06-03T21:41:54.666780Z] [INFO] === Bridge agent v2 end ===
+[2026-06-03T21:41:54.683725Z] [INFO] [cycle] == write bridge summary ==
+[2026-06-03T21:41:54.746061Z] [INFO] [cycle] Wrote bridge summary: /home/fiste/Noema/symnozein/body/bridge/state_summary/latest.md
+[2026-06-03T21:41:54.746757Z] [INFO] [cycle] == outbound sync ==
+[2026-06-03T21:41:55.328089Z] [INFO] [cycle] Optional source missing, skipped: /home/fiste/Noema/bridge/outbox/messages
 Optional source missing, skipped: /home/fiste/Noema/bridge/state_summary
-Rotating /home/fiste/Noema/bridge/logs/bridge.log: archive=/home/fiste/Noema/bridge/logs/archive/2026-06/bridge-20260603T201524Z-2041-lines.log archive_lines=2041 retain_lines=3000
 Writing /home/fiste/Noema/symnozein/body/bridge/logs/bridge_tail.log
 Mirrored log tail /home/fiste/Noema/bridge/logs/bridge.log -> /home/fiste/Noema/symnozein/body/bridge/logs/bridge_tail.log. Changed files: 1
 Scripts mirror complete. Changed files: 0
@@ -249,52 +232,269 @@ M	body/bridge/state_summary/latest.md
 Commit message in code: Sync RPi bridge outbound state
 From https://github.com/fisteque/symnozein
  * branch            main       -> FETCH_HEAD
-Auto packing the repository in background for optimum performance.
-See "git help gc" for manual housekeeping.
-warning: The last gc run reported the following. Please correct the root cause
-and remove .git/gc.log
-Automatic cleanup will not be performed until the file is removed.
-
-warning: There are too many unreachable loose objects; run 'git prune' to remove them.
 Local branch is not behind remote; no pre-push rebase needed.
 Only logs/state_summary changed; not committing this cycle.
-[2026-06-03T20:15:24.626685Z] [INFO] [cycle] Bridge cycle complete.
-[2026-06-03T20:17:22.641329Z] [INFO] [cycle] Bridge cycle lock acquired: /home/fiste/Noema/bridge/state/bridge_cycle.lock.json
-[2026-06-03T20:17:22.644526Z] [INFO] [cycle] == inbound sync ==
-[2026-06-03T20:17:23.202206Z] [INFO] [cycle] Fetching origin main...
+[2026-06-03T21:41:55.328280Z] [INFO] [cycle] Bridge cycle complete.
+[2026-06-03T21:42:29.132546Z] [INFO] [cycle] Bridge cycle lock acquired: /home/fiste/Noema/bridge/state/bridge_cycle.lock.json
+[2026-06-03T21:42:29.138276Z] [INFO] [cycle] == inbound sync ==
+[2026-06-03T21:42:29.610102Z] [INFO] [cycle] Fetching origin main...
 From https://github.com/fisteque/symnozein
  * branch            main       -> FETCH_HEAD
-Auto packing the repository in background for optimum performance.
-See "git help gc" for manual housekeeping.
-warning: The last gc run reported the following. Please correct the root cause
-and remove .git/gc.log
-Automatic cleanup will not be performed until the file is removed.
-
-warning: There are too many unreachable loose objects; run 'git prune' to remove them.
 No inbound changes for body/bridge/inbox/messages.
-[2026-06-03T20:17:23.202975Z] [INFO] [cycle] == bridge agent ==
-[2026-06-03T20:17:23.269475Z] [INFO] === Bridge agent v2 start ===
-[2026-06-03T20:17:23.269686Z] [INFO] Bridge root: /home/fiste/Noema/bridge
-[2026-06-03T20:17:23.269804Z] [INFO] Body root: /home/fiste/Noema/symnozein/body
-[2026-06-03T20:17:23.270415Z] [INFO] Body state unchanged: awake=True status=normal_operation
-[2026-06-03T20:17:23.273121Z] [INFO] Inbox message files found: 2
-[2026-06-03T20:17:23.273898Z] [INFO] Already processed: msg-20260524-task-001
-[2026-06-03T20:17:23.274754Z] [INFO] Already processed: msg-20260527-task-sync-body-001
-[2026-06-03T20:17:23.276527Z] [INFO] Pending message count this run: 0
-[2026-06-03T20:17:23.276649Z] [INFO] Pending message count remaining: 0
-[2026-06-03T20:17:23.276765Z] [INFO] Processed message count: 0
-[2026-06-03T20:17:23.276867Z] [INFO] === Bridge agent v2 end ===
-[2026-06-03T20:17:23.293516Z] [INFO] [cycle] [2026-06-03T20:17:23.269475Z] [INFO] === Bridge agent v2 start ===
-[2026-06-03T20:17:23.269686Z] [INFO] Bridge root: /home/fiste/Noema/bridge
-[2026-06-03T20:17:23.269804Z] [INFO] Body root: /home/fiste/Noema/symnozein/body
-[2026-06-03T20:17:23.270415Z] [INFO] Body state unchanged: awake=True status=normal_operation
-[2026-06-03T20:17:23.273121Z] [INFO] Inbox message files found: 2
-[2026-06-03T20:17:23.273898Z] [INFO] Already processed: msg-20260524-task-001
-[2026-06-03T20:17:23.274754Z] [INFO] Already processed: msg-20260527-task-sync-body-001
-[2026-06-03T20:17:23.276527Z] [INFO] Pending message count this run: 0
-[2026-06-03T20:17:23.276649Z] [INFO] Pending message count remaining: 0
-[2026-06-03T20:17:23.276765Z] [INFO] Processed message count: 0
-[2026-06-03T20:17:23.276867Z] [INFO] === Bridge agent v2 end ===
-[2026-06-03T20:17:23.294326Z] [INFO] [cycle] == write bridge summary ==
-[2026-06-03T20:17:23.356356Z] [INFO] [cycle] Wrote bridge summary: /home/fiste/Noema/symnozein/body/bridge/state_summary/latest.md
-[2026-06-03T20:17:23.357175Z] [INFO] [cycle] == outbound sync ==
+[2026-06-03T21:42:29.610877Z] [INFO] [cycle] == bridge agent ==
+[2026-06-03T21:42:29.676223Z] [INFO] === Bridge agent v2 start ===
+[2026-06-03T21:42:29.676438Z] [INFO] Bridge root: /home/fiste/Noema/bridge
+[2026-06-03T21:42:29.676557Z] [INFO] Body root: /home/fiste/Noema/symnozein/body
+[2026-06-03T21:42:29.677171Z] [INFO] Body state unchanged: awake=True status=normal_operation
+[2026-06-03T21:42:29.679878Z] [INFO] Inbox message files found: 2
+[2026-06-03T21:42:29.680655Z] [INFO] Already processed: msg-20260524-task-001
+[2026-06-03T21:42:29.681543Z] [INFO] Already processed: msg-20260527-task-sync-body-001
+[2026-06-03T21:42:29.682808Z] [INFO] Pending message count this run: 0
+[2026-06-03T21:42:29.682924Z] [INFO] Pending message count remaining: 0
+[2026-06-03T21:42:29.683019Z] [INFO] Processed message count: 0
+[2026-06-03T21:42:29.683131Z] [INFO] === Bridge agent v2 end ===
+[2026-06-03T21:42:29.699450Z] [INFO] [cycle] [2026-06-03T21:42:29.676223Z] [INFO] === Bridge agent v2 start ===
+[2026-06-03T21:42:29.676438Z] [INFO] Bridge root: /home/fiste/Noema/bridge
+[2026-06-03T21:42:29.676557Z] [INFO] Body root: /home/fiste/Noema/symnozein/body
+[2026-06-03T21:42:29.677171Z] [INFO] Body state unchanged: awake=True status=normal_operation
+[2026-06-03T21:42:29.679878Z] [INFO] Inbox message files found: 2
+[2026-06-03T21:42:29.680655Z] [INFO] Already processed: msg-20260524-task-001
+[2026-06-03T21:42:29.681543Z] [INFO] Already processed: msg-20260527-task-sync-body-001
+[2026-06-03T21:42:29.682808Z] [INFO] Pending message count this run: 0
+[2026-06-03T21:42:29.682924Z] [INFO] Pending message count remaining: 0
+[2026-06-03T21:42:29.683019Z] [INFO] Processed message count: 0
+[2026-06-03T21:42:29.683131Z] [INFO] === Bridge agent v2 end ===
+[2026-06-03T21:42:29.700160Z] [INFO] [cycle] == write bridge summary ==
+[2026-06-03T21:42:29.762379Z] [INFO] [cycle] Wrote bridge summary: /home/fiste/Noema/symnozein/body/bridge/state_summary/latest.md
+[2026-06-03T21:42:29.763116Z] [INFO] [cycle] == outbound sync ==
+[2026-06-03T21:42:30.249959Z] [INFO] [cycle] Optional source missing, skipped: /home/fiste/Noema/bridge/outbox/messages
+Optional source missing, skipped: /home/fiste/Noema/bridge/state_summary
+Writing /home/fiste/Noema/symnozein/body/bridge/logs/bridge_tail.log
+Mirrored log tail /home/fiste/Noema/bridge/logs/bridge.log -> /home/fiste/Noema/symnozein/body/bridge/logs/bridge_tail.log. Changed files: 1
+Scripts mirror complete. Changed files: 0
+Staged outbound changes:
+M	body/bridge/logs/bridge_tail.log
+M	body/bridge/state_summary/latest.md
+Commit message in code: Sync RPi bridge outbound state
+From https://github.com/fisteque/symnozein
+ * branch            main       -> FETCH_HEAD
+Local branch is not behind remote; no pre-push rebase needed.
+Only logs/state_summary changed; not committing this cycle.
+[2026-06-03T21:42:30.250183Z] [INFO] [cycle] Bridge cycle complete.
+[2026-06-03T21:43:00.661918Z] [INFO] [cycle] Bridge cycle lock acquired: /home/fiste/Noema/bridge/state/bridge_cycle.lock.json
+[2026-06-03T21:43:00.663494Z] [INFO] [cycle] == inbound sync ==
+[2026-06-03T21:43:01.153683Z] [INFO] [cycle] Fetching origin main...
+From https://github.com/fisteque/symnozein
+ * branch            main       -> FETCH_HEAD
+No inbound changes for body/bridge/inbox/messages.
+[2026-06-03T21:43:01.154423Z] [INFO] [cycle] == bridge agent ==
+[2026-06-03T21:43:01.221171Z] [INFO] === Bridge agent v2 start ===
+[2026-06-03T21:43:01.221382Z] [INFO] Bridge root: /home/fiste/Noema/bridge
+[2026-06-03T21:43:01.221499Z] [INFO] Body root: /home/fiste/Noema/symnozein/body
+[2026-06-03T21:43:01.222109Z] [INFO] Body state unchanged: awake=True status=normal_operation
+[2026-06-03T21:43:01.224964Z] [INFO] Inbox message files found: 2
+[2026-06-03T21:43:01.225764Z] [INFO] Already processed: msg-20260524-task-001
+[2026-06-03T21:43:01.226623Z] [INFO] Already processed: msg-20260527-task-sync-body-001
+[2026-06-03T21:43:01.227923Z] [INFO] Pending message count this run: 0
+[2026-06-03T21:43:01.228040Z] [INFO] Pending message count remaining: 0
+[2026-06-03T21:43:01.228137Z] [INFO] Processed message count: 0
+[2026-06-03T21:43:01.228230Z] [INFO] === Bridge agent v2 end ===
+[2026-06-03T21:43:01.245092Z] [INFO] [cycle] [2026-06-03T21:43:01.221171Z] [INFO] === Bridge agent v2 start ===
+[2026-06-03T21:43:01.221382Z] [INFO] Bridge root: /home/fiste/Noema/bridge
+[2026-06-03T21:43:01.221499Z] [INFO] Body root: /home/fiste/Noema/symnozein/body
+[2026-06-03T21:43:01.222109Z] [INFO] Body state unchanged: awake=True status=normal_operation
+[2026-06-03T21:43:01.224964Z] [INFO] Inbox message files found: 2
+[2026-06-03T21:43:01.225764Z] [INFO] Already processed: msg-20260524-task-001
+[2026-06-03T21:43:01.226623Z] [INFO] Already processed: msg-20260527-task-sync-body-001
+[2026-06-03T21:43:01.227923Z] [INFO] Pending message count this run: 0
+[2026-06-03T21:43:01.228040Z] [INFO] Pending message count remaining: 0
+[2026-06-03T21:43:01.228137Z] [INFO] Processed message count: 0
+[2026-06-03T21:43:01.228230Z] [INFO] === Bridge agent v2 end ===
+[2026-06-03T21:43:01.245825Z] [INFO] [cycle] == write bridge summary ==
+[2026-06-03T21:43:01.307744Z] [INFO] [cycle] Wrote bridge summary: /home/fiste/Noema/symnozein/body/bridge/state_summary/latest.md
+[2026-06-03T21:43:01.308479Z] [INFO] [cycle] == outbound sync ==
+[2026-06-03T21:43:01.832740Z] [INFO] [cycle] Optional source missing, skipped: /home/fiste/Noema/bridge/outbox/messages
+Optional source missing, skipped: /home/fiste/Noema/bridge/state_summary
+Rotating /home/fiste/Noema/bridge/logs/bridge.log: archive=/home/fiste/Noema/bridge/logs/archive/2026-06/bridge-20260603T214301Z-2007-lines.log archive_lines=2007 retain_lines=3000
+Writing /home/fiste/Noema/symnozein/body/bridge/logs/bridge_tail.log
+Mirrored log tail /home/fiste/Noema/bridge/logs/bridge.log -> /home/fiste/Noema/symnozein/body/bridge/logs/bridge_tail.log. Changed files: 1
+Scripts mirror complete. Changed files: 0
+Staged outbound changes:
+M	body/bridge/logs/bridge_tail.log
+M	body/bridge/state_summary/latest.md
+Commit message in code: Sync RPi bridge outbound state
+From https://github.com/fisteque/symnozein
+ * branch            main       -> FETCH_HEAD
+Local branch is not behind remote; no pre-push rebase needed.
+Only logs/state_summary changed; not committing this cycle.
+[2026-06-03T21:43:01.832935Z] [INFO] [cycle] Bridge cycle complete.
+[2026-06-03T21:43:30.686633Z] [INFO] [cycle] Bridge cycle lock acquired: /home/fiste/Noema/bridge/state/bridge_cycle.lock.json
+[2026-06-03T21:43:30.689157Z] [INFO] [cycle] == inbound sync ==
+[2026-06-03T21:43:31.203812Z] [INFO] [cycle] Fetching origin main...
+From https://github.com/fisteque/symnozein
+ * branch            main       -> FETCH_HEAD
+No inbound changes for body/bridge/inbox/messages.
+[2026-06-03T21:43:31.204796Z] [INFO] [cycle] == bridge agent ==
+[2026-06-03T21:43:31.287424Z] [INFO] === Bridge agent v2 start ===
+[2026-06-03T21:43:31.287647Z] [INFO] Bridge root: /home/fiste/Noema/bridge
+[2026-06-03T21:43:31.287766Z] [INFO] Body root: /home/fiste/Noema/symnozein/body
+[2026-06-03T21:43:31.288385Z] [INFO] Body state unchanged: awake=True status=normal_operation
+[2026-06-03T21:43:31.291190Z] [INFO] Inbox message files found: 2
+[2026-06-03T21:43:31.292024Z] [INFO] Already processed: msg-20260524-task-001
+[2026-06-03T21:43:31.292905Z] [INFO] Already processed: msg-20260527-task-sync-body-001
+[2026-06-03T21:43:31.294971Z] [INFO] Pending message count this run: 0
+[2026-06-03T21:43:31.295115Z] [INFO] Pending message count remaining: 0
+[2026-06-03T21:43:31.295218Z] [INFO] Processed message count: 0
+[2026-06-03T21:43:31.295312Z] [INFO] === Bridge agent v2 end ===
+[2026-06-03T21:43:31.311751Z] [INFO] [cycle] [2026-06-03T21:43:31.287424Z] [INFO] === Bridge agent v2 start ===
+[2026-06-03T21:43:31.287647Z] [INFO] Bridge root: /home/fiste/Noema/bridge
+[2026-06-03T21:43:31.287766Z] [INFO] Body root: /home/fiste/Noema/symnozein/body
+[2026-06-03T21:43:31.288385Z] [INFO] Body state unchanged: awake=True status=normal_operation
+[2026-06-03T21:43:31.291190Z] [INFO] Inbox message files found: 2
+[2026-06-03T21:43:31.292024Z] [INFO] Already processed: msg-20260524-task-001
+[2026-06-03T21:43:31.292905Z] [INFO] Already processed: msg-20260527-task-sync-body-001
+[2026-06-03T21:43:31.294971Z] [INFO] Pending message count this run: 0
+[2026-06-03T21:43:31.295115Z] [INFO] Pending message count remaining: 0
+[2026-06-03T21:43:31.295218Z] [INFO] Processed message count: 0
+[2026-06-03T21:43:31.295312Z] [INFO] === Bridge agent v2 end ===
+[2026-06-03T21:43:31.312465Z] [INFO] [cycle] == write bridge summary ==
+[2026-06-03T21:43:31.375518Z] [INFO] [cycle] Wrote bridge summary: /home/fiste/Noema/symnozein/body/bridge/state_summary/latest.md
+[2026-06-03T21:43:31.376208Z] [INFO] [cycle] == outbound sync ==
+[2026-06-03T21:43:31.858746Z] [INFO] [cycle] Optional source missing, skipped: /home/fiste/Noema/bridge/outbox/messages
+Optional source missing, skipped: /home/fiste/Noema/bridge/state_summary
+Writing /home/fiste/Noema/symnozein/body/bridge/logs/bridge_tail.log
+Mirrored log tail /home/fiste/Noema/bridge/logs/bridge.log -> /home/fiste/Noema/symnozein/body/bridge/logs/bridge_tail.log. Changed files: 1
+Scripts mirror complete. Changed files: 0
+Staged outbound changes:
+M	body/bridge/logs/bridge_tail.log
+M	body/bridge/state_summary/latest.md
+Commit message in code: Sync RPi bridge outbound state
+From https://github.com/fisteque/symnozein
+ * branch            main       -> FETCH_HEAD
+Local branch is not behind remote; no pre-push rebase needed.
+Only logs/state_summary changed; not committing this cycle.
+[2026-06-03T21:43:31.858937Z] [INFO] [cycle] Bridge cycle complete.
+[2026-06-03T21:44:00.738680Z] [INFO] [cycle] Bridge cycle lock acquired: /home/fiste/Noema/bridge/state/bridge_cycle.lock.json
+[2026-06-03T21:44:00.743256Z] [INFO] [cycle] == inbound sync ==
+[2026-06-03T21:44:01.249952Z] [INFO] [cycle] Fetching origin main...
+From https://github.com/fisteque/symnozein
+ * branch            main       -> FETCH_HEAD
+No inbound changes for body/bridge/inbox/messages.
+[2026-06-03T21:44:01.250648Z] [INFO] [cycle] == bridge agent ==
+[2026-06-03T21:44:01.317987Z] [INFO] === Bridge agent v2 start ===
+[2026-06-03T21:44:01.318197Z] [INFO] Bridge root: /home/fiste/Noema/bridge
+[2026-06-03T21:44:01.318313Z] [INFO] Body root: /home/fiste/Noema/symnozein/body
+[2026-06-03T21:44:01.318918Z] [INFO] Body state unchanged: awake=True status=normal_operation
+[2026-06-03T21:44:01.321615Z] [INFO] Inbox message files found: 2
+[2026-06-03T21:44:01.322392Z] [INFO] Already processed: msg-20260524-task-001
+[2026-06-03T21:44:01.323267Z] [INFO] Already processed: msg-20260527-task-sync-body-001
+[2026-06-03T21:44:01.324510Z] [INFO] Pending message count this run: 0
+[2026-06-03T21:44:01.324627Z] [INFO] Pending message count remaining: 0
+[2026-06-03T21:44:01.324724Z] [INFO] Processed message count: 0
+[2026-06-03T21:44:01.324816Z] [INFO] === Bridge agent v2 end ===
+[2026-06-03T21:44:01.341231Z] [INFO] [cycle] [2026-06-03T21:44:01.317987Z] [INFO] === Bridge agent v2 start ===
+[2026-06-03T21:44:01.318197Z] [INFO] Bridge root: /home/fiste/Noema/bridge
+[2026-06-03T21:44:01.318313Z] [INFO] Body root: /home/fiste/Noema/symnozein/body
+[2026-06-03T21:44:01.318918Z] [INFO] Body state unchanged: awake=True status=normal_operation
+[2026-06-03T21:44:01.321615Z] [INFO] Inbox message files found: 2
+[2026-06-03T21:44:01.322392Z] [INFO] Already processed: msg-20260524-task-001
+[2026-06-03T21:44:01.323267Z] [INFO] Already processed: msg-20260527-task-sync-body-001
+[2026-06-03T21:44:01.324510Z] [INFO] Pending message count this run: 0
+[2026-06-03T21:44:01.324627Z] [INFO] Pending message count remaining: 0
+[2026-06-03T21:44:01.324724Z] [INFO] Processed message count: 0
+[2026-06-03T21:44:01.324816Z] [INFO] === Bridge agent v2 end ===
+[2026-06-03T21:44:01.341977Z] [INFO] [cycle] == write bridge summary ==
+[2026-06-03T21:44:01.406151Z] [INFO] [cycle] Wrote bridge summary: /home/fiste/Noema/symnozein/body/bridge/state_summary/latest.md
+[2026-06-03T21:44:01.406858Z] [INFO] [cycle] == outbound sync ==
+[2026-06-03T21:44:01.928081Z] [INFO] [cycle] Optional source missing, skipped: /home/fiste/Noema/bridge/outbox/messages
+Optional source missing, skipped: /home/fiste/Noema/bridge/state_summary
+Writing /home/fiste/Noema/symnozein/body/bridge/logs/bridge_tail.log
+Mirrored log tail /home/fiste/Noema/bridge/logs/bridge.log -> /home/fiste/Noema/symnozein/body/bridge/logs/bridge_tail.log. Changed files: 1
+Scripts mirror complete. Changed files: 0
+Staged outbound changes:
+M	body/bridge/logs/bridge_tail.log
+M	body/bridge/state_summary/latest.md
+Commit message in code: Sync RPi bridge outbound state
+From https://github.com/fisteque/symnozein
+ * branch            main       -> FETCH_HEAD
+Local branch is not behind remote; no pre-push rebase needed.
+Only logs/state_summary changed; not committing this cycle.
+[2026-06-03T21:44:01.928269Z] [INFO] [cycle] Bridge cycle complete.
+[2026-06-03T21:44:30.782356Z] [INFO] [cycle] Bridge cycle lock acquired: /home/fiste/Noema/bridge/state/bridge_cycle.lock.json
+[2026-06-03T21:44:30.784769Z] [INFO] [cycle] == inbound sync ==
+[2026-06-03T21:44:31.261173Z] [INFO] [cycle] Fetching origin main...
+From https://github.com/fisteque/symnozein
+ * branch            main       -> FETCH_HEAD
+No inbound changes for body/bridge/inbox/messages.
+[2026-06-03T21:44:31.261912Z] [INFO] [cycle] == bridge agent ==
+[2026-06-03T21:44:31.328711Z] [INFO] === Bridge agent v2 start ===
+[2026-06-03T21:44:31.329007Z] [INFO] Bridge root: /home/fiste/Noema/bridge
+[2026-06-03T21:44:31.329174Z] [INFO] Body root: /home/fiste/Noema/symnozein/body
+[2026-06-03T21:44:31.329845Z] [INFO] Body state unchanged: awake=True status=normal_operation
+[2026-06-03T21:44:31.332704Z] [INFO] Inbox message files found: 2
+[2026-06-03T21:44:31.333546Z] [INFO] Already processed: msg-20260524-task-001
+[2026-06-03T21:44:31.334470Z] [INFO] Already processed: msg-20260527-task-sync-body-001
+[2026-06-03T21:44:31.336371Z] [INFO] Pending message count this run: 0
+[2026-06-03T21:44:31.336532Z] [INFO] Pending message count remaining: 0
+[2026-06-03T21:44:31.336689Z] [INFO] Processed message count: 0
+[2026-06-03T21:44:31.336839Z] [INFO] === Bridge agent v2 end ===
+[2026-06-03T21:44:31.354499Z] [INFO] [cycle] [2026-06-03T21:44:31.328711Z] [INFO] === Bridge agent v2 start ===
+[2026-06-03T21:44:31.329007Z] [INFO] Bridge root: /home/fiste/Noema/bridge
+[2026-06-03T21:44:31.329174Z] [INFO] Body root: /home/fiste/Noema/symnozein/body
+[2026-06-03T21:44:31.329845Z] [INFO] Body state unchanged: awake=True status=normal_operation
+[2026-06-03T21:44:31.332704Z] [INFO] Inbox message files found: 2
+[2026-06-03T21:44:31.333546Z] [INFO] Already processed: msg-20260524-task-001
+[2026-06-03T21:44:31.334470Z] [INFO] Already processed: msg-20260527-task-sync-body-001
+[2026-06-03T21:44:31.336371Z] [INFO] Pending message count this run: 0
+[2026-06-03T21:44:31.336532Z] [INFO] Pending message count remaining: 0
+[2026-06-03T21:44:31.336689Z] [INFO] Processed message count: 0
+[2026-06-03T21:44:31.336839Z] [INFO] === Bridge agent v2 end ===
+[2026-06-03T21:44:31.355279Z] [INFO] [cycle] == write bridge summary ==
+[2026-06-03T21:44:31.416362Z] [INFO] [cycle] Wrote bridge summary: /home/fiste/Noema/symnozein/body/bridge/state_summary/latest.md
+[2026-06-03T21:44:31.417076Z] [INFO] [cycle] == outbound sync ==
+[2026-06-03T21:44:31.905796Z] [INFO] [cycle] Optional source missing, skipped: /home/fiste/Noema/bridge/outbox/messages
+Optional source missing, skipped: /home/fiste/Noema/bridge/state_summary
+Writing /home/fiste/Noema/symnozein/body/bridge/logs/bridge_tail.log
+Mirrored log tail /home/fiste/Noema/bridge/logs/bridge.log -> /home/fiste/Noema/symnozein/body/bridge/logs/bridge_tail.log. Changed files: 1
+Scripts mirror complete. Changed files: 0
+Staged outbound changes:
+M	body/bridge/logs/bridge_tail.log
+M	body/bridge/state_summary/latest.md
+Commit message in code: Sync RPi bridge outbound state
+From https://github.com/fisteque/symnozein
+ * branch            main       -> FETCH_HEAD
+Local branch is not behind remote; no pre-push rebase needed.
+Only logs/state_summary changed; not committing this cycle.
+[2026-06-03T21:44:31.905999Z] [INFO] [cycle] Bridge cycle complete.
+[2026-06-03T21:45:49.223712Z] [INFO] [cycle] Bridge cycle lock acquired: /home/fiste/Noema/bridge/state/bridge_cycle.lock.json
+[2026-06-03T21:45:49.226186Z] [INFO] [cycle] == inbound sync ==
+[2026-06-03T21:45:49.681244Z] [INFO] [cycle] Fetching origin main...
+From https://github.com/fisteque/symnozein
+ * branch            main       -> FETCH_HEAD
+No inbound changes for body/bridge/inbox/messages.
+[2026-06-03T21:45:49.682046Z] [INFO] [cycle] == bridge agent ==
+[2026-06-03T21:45:49.748973Z] [INFO] === Bridge agent v2 start ===
+[2026-06-03T21:45:49.749265Z] [INFO] Bridge root: /home/fiste/Noema/bridge
+[2026-06-03T21:45:49.749448Z] [INFO] Body root: /home/fiste/Noema/symnozein/body
+[2026-06-03T21:45:49.750127Z] [INFO] Body state unchanged: awake=True status=normal_operation
+[2026-06-03T21:45:49.753166Z] [INFO] Inbox message files found: 2
+[2026-06-03T21:45:49.753960Z] [INFO] Already processed: msg-20260524-task-001
+[2026-06-03T21:45:49.754822Z] [INFO] Already processed: msg-20260527-task-sync-body-001
+[2026-06-03T21:45:49.756582Z] [INFO] Pending message count this run: 0
+[2026-06-03T21:45:49.756699Z] [INFO] Pending message count remaining: 0
+[2026-06-03T21:45:49.756797Z] [INFO] Processed message count: 0
+[2026-06-03T21:45:49.756890Z] [INFO] === Bridge agent v2 end ===
+[2026-06-03T21:45:49.773797Z] [INFO] [cycle] [2026-06-03T21:45:49.748973Z] [INFO] === Bridge agent v2 start ===
+[2026-06-03T21:45:49.749265Z] [INFO] Bridge root: /home/fiste/Noema/bridge
+[2026-06-03T21:45:49.749448Z] [INFO] Body root: /home/fiste/Noema/symnozein/body
+[2026-06-03T21:45:49.750127Z] [INFO] Body state unchanged: awake=True status=normal_operation
+[2026-06-03T21:45:49.753166Z] [INFO] Inbox message files found: 2
+[2026-06-03T21:45:49.753960Z] [INFO] Already processed: msg-20260524-task-001
+[2026-06-03T21:45:49.754822Z] [INFO] Already processed: msg-20260527-task-sync-body-001
+[2026-06-03T21:45:49.756582Z] [INFO] Pending message count this run: 0
+[2026-06-03T21:45:49.756699Z] [INFO] Pending message count remaining: 0
+[2026-06-03T21:45:49.756797Z] [INFO] Processed message count: 0
+[2026-06-03T21:45:49.756890Z] [INFO] === Bridge agent v2 end ===
+[2026-06-03T21:45:49.774523Z] [INFO] [cycle] == write bridge summary ==
+[2026-06-03T21:45:49.838077Z] [INFO] [cycle] Wrote bridge summary: /home/fiste/Noema/symnozein/body/bridge/state_summary/latest.md
+[2026-06-03T21:45:49.838792Z] [INFO] [cycle] == outbound sync ==
