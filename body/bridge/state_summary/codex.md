@@ -8,6 +8,50 @@ messages. Keep the newest items at the top.
 
 ## Latest Implementations
 
+### Exact Inbound Mirror And Codex Path Visibility
+
+Tightened the bridge inbox mirror rule so the Raspberry Pi checkout mirrors the
+GitHub inbox, while the Raspberry Pi never publishes inbox changes back to
+GitHub.
+
+Changed:
+
+- `bridge/scripts/bridge_sync_inbound.py`
+- `body/bridge/scripts/bridge_sync_inbound.py`
+- `bridge/scripts/bridge_agent_v2.py`
+- `body/bridge/scripts/bridge_agent_v2.py`
+- `bridge/scripts/write_bridge_summary.py`
+- `body/bridge/scripts/write_bridge_summary.py`
+
+Behavior now:
+
+- `body/bridge/inbox/messages` is treated as an exact local worktree mirror of
+  `FETCH_HEAD`;
+- inbound sync restores files from `FETCH_HEAD` and removes stale local files
+  under `body/bridge/inbox/messages`;
+- stale inbound pruning is local-only and does not stage, commit, or push inbox
+  paths;
+- outbound sync still excludes inbox paths from `ALLOWED_REPO_PATHS`, so the
+  Raspberry Pi reads the GitHub inbox but does not write it back;
+- bridge agent logs observed file counts and latest file names for
+  `body/bridge/inbox/messages/codex` and `body/bridge/outbox/codex`;
+- public summary reports codex inbox/outbox file counts, not just `*.md`
+  counts, because historical codex inbox files include extensionless files.
+
+Verified:
+
+- inbound dry-run against current `origin/main` reports no inbound changes;
+- local `body/bridge/inbox/messages` and `FETCH_HEAD` both contain 16 files,
+  with no local-only or remote-only paths;
+- local `body/bridge/outbox/codex` and `FETCH_HEAD` both contain 12 files,
+  with no local-only or remote-only paths;
+- a timer cycle completed successfully after the change;
+- post-cycle status only showed expected runtime outputs:
+  `body/bridge/logs/bridge_tail.log` and
+  `body/bridge/state_summary/latest.md`;
+- no `bridge_cycle.py`, systemd unit/timer, allowlist, runtime task execution,
+  or Codex reader automation changes were made.
+
 ### Codex Inbox Reader Manual Writer Stub
 
 Added an optional manual `--write-stub` mode to the standalone Codex inbox
