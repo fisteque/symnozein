@@ -23,6 +23,7 @@ if not BODY_ROOT.exists():
     BODY_ROOT = PROJECT_ROOT / "body"
 
 INBOX_DIR = BODY_ROOT / "bridge" / "inbox" / "messages"
+CODEX_INBOX_DIR = INBOX_DIR / "codex"
 OUTBOX_DIR = BODY_ROOT / "bridge" / "outbox" / "messages"
 CODEX_OUTBOX_DIR = BODY_ROOT / "bridge" / "outbox" / "codex"
 STATE_DIR = BRIDGE_ROOT / "state"
@@ -255,6 +256,26 @@ def list_inbox_messages() -> list[Path]:
         ),
         key=message_sort_key,
     )
+
+
+def list_markdown_files(path: Path) -> list[Path]:
+    if not path.exists():
+        return []
+    assert_inside(path, BODY_ROOT)
+    return sorted(
+        (
+            item
+            for item in path.glob("*.md")
+            if item.is_file() and not item.name.startswith(".")
+        ),
+        key=lambda item: (item.stat().st_mtime, item.name),
+    )
+
+
+def latest_file_name(paths: list[Path]) -> str:
+    if not paths:
+        return "(none)"
+    return paths[-1].name
 
 
 def sanitize_filename_part(value: str) -> str:
@@ -828,6 +849,16 @@ def process_inbox() -> int:
     pending_count = 0
     message_paths = list_inbox_messages()
     log(f"Inbox message files found: {len(message_paths)}")
+    codex_inbox_paths = list_markdown_files(CODEX_INBOX_DIR)
+    codex_outbox_paths = list_markdown_files(CODEX_OUTBOX_DIR)
+    log(
+        "Codex inbox message files observed: "
+        f"{len(codex_inbox_paths)} latest={latest_file_name(codex_inbox_paths)}"
+    )
+    log(
+        "Codex outbox message files observed: "
+        f"{len(codex_outbox_paths)} latest={latest_file_name(codex_outbox_paths)}"
+    )
 
     for message_path in message_paths:
         try:
