@@ -74,10 +74,26 @@ def count_markdown_files(path: Path) -> int:
     return sum(1 for item in path.glob("*.md") if item.is_file() and not item.name.startswith("."))
 
 
+def count_files(path: Path) -> int:
+    if not path.exists():
+        return 0
+    return sum(1 for item in path.iterdir() if item.is_file() and not item.name.startswith("."))
+
+
 def latest_markdown_file(path: Path) -> str:
     if not path.exists():
         return "(missing)"
     files = [item for item in path.glob("*.md") if item.is_file() and not item.name.startswith(".")]
+    if not files:
+        return "(none)"
+    latest = max(files, key=lambda item: (item.stat().st_mtime, item.name))
+    return latest.name
+
+
+def latest_file(path: Path) -> str:
+    if not path.exists():
+        return "(missing)"
+    files = [item for item in path.iterdir() if item.is_file() and not item.name.startswith(".")]
     if not files:
         return "(none)"
     latest = max(files, key=lambda item: (item.stat().st_mtime, item.name))
@@ -229,9 +245,9 @@ def render_summary(runtime_root: Path, repo_root: Path, project_root: Path, log_
         "",
         f"- Generated at: `{generated_at.isoformat().replace('+00:00', 'Z')}`",
         f"- Inbox messages: `{count_markdown_files(inbox_dir)}`; latest: `{latest_markdown_file(inbox_dir)}`",
-        f"- Codex inbox messages: `{count_markdown_files(codex_inbox_dir)}`; latest: `{latest_markdown_file(codex_inbox_dir)}`",
+        f"- Codex inbox files: `{count_files(codex_inbox_dir)}`; latest: `{latest_file(codex_inbox_dir)}`",
         f"- Outbox messages: `{count_markdown_files(outbox_dir)}`; latest: `{latest_markdown_file(outbox_dir)}`",
-        f"- Codex outbox messages: `{count_markdown_files(codex_outbox_dir)}`; latest: `{latest_markdown_file(codex_outbox_dir)}`",
+        f"- Codex outbox files: `{count_files(codex_outbox_dir)}`; latest: `{latest_file(codex_outbox_dir)}`",
         f"- Last processed message: `{last_message_id}`",
         f"- Last processed status: `{last_message.get('status', '(unknown)') if last_message else '(none)'}`",
         f"- Processed count: `{processed_count}`",

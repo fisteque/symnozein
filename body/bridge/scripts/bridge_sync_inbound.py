@@ -9,12 +9,12 @@ from bridge_sync_common import (
     INBOX_MESSAGES,
     SyncError,
     add_common_args,
+    ensure_inside,
     ensure_repo,
     print_git_output,
     porcelain_status,
     repo_rel,
     run_git,
-    updatable_paths_from_name_status,
 )
 
 
@@ -31,25 +31,42 @@ def parse_args() -> argparse.Namespace:
     return parser.parse_args()
 
 
-def remote_file_text(repo_root, path: str) -> str | None:
-    result = run_git(repo_root, ["show", f"FETCH_HEAD:{path}"], check=False)
-    if result.returncode != 0:
-        return None
-    return result.stdout
+def remote_inbound_paths(repo_root, path: str) -> set[str]:
+    output = run_git(repo_root, ["ls-tree", "-r", "--name-only", "FETCH_HEAD", "--", path]).stdout
+    return {line for line in output.splitlines() if line}
 
 
-def inbound_updates_match_local_files(repo_root, update_paths: list[str]) -> bool:
-    for path in update_paths:
-        local_path = repo_root / path
-        if not local_path.exists() or not local_path.is_file():
-            return False
-        remote_text = remote_file_text(repo_root, path)
-        if remote_text is None:
-            return False
-        local_text = local_path.read_text(encoding="utf-8", errors="replace")
-        if local_text != remote_text:
-            return False
-    return True
+def local_inbound_paths(repo_root, path: str) -> set[str]:
+    root = ensure_inside(repo_root / path, repo_root)
+    if not root.exists():
+        return set()
+    paths: set[str] = set()
+    for item in root.rglob("*"):
+        if not item.is_file():
+            continue
+        rel = item.resolve().relative_to(repo_root.resolve()).as_posix()
+        paths.add(rel)
+    return paths
+
+
+def remove_stale_local_files(repo_root, paths: list[str], *, dry_run: bool) -> None:
+    for path in paths:
+        local_path = ensure_inside(repo_root / path, repo_root)
+        if not local_path.exists():
+            continue
+        if not local_path.is_file():
+            raise SyncError(f"Refusing to remove non-file inbound path: {path}")
+        print(f"{'Would remove' if dry_run else 'Removing'} local inbound file absent from FETCH_HEAD: {path}")
+        if not dry_run:
+            local_path.unlink()
+
+
+def prune_empty_dirs(root) -> None:
+    if not root.exists():
+        return
+    for item in sorted(root.rglob("*"), reverse=True):
+        if item.is_dir() and not any(item.iterdir()):
+            item.rmdir()
 
 
 def main() -> int:
@@ -67,39 +84,42 @@ def main() -> int:
             repo_root,
             ["diff", "--name-status", f"HEAD..FETCH_HEAD", "--", path],
         ).stdout.strip()
+        remote_paths = remote_inbound_paths(repo_root, path)
+        local_paths = local_inbound_paths(repo_root, path)
+        stale_local_paths = sorted(local_paths - remote_paths)
 
         if not diff:
+            if stale_local_paths:
+                print("Local inbound files absent from FETCH_HEAD detected:")
+                for stale in stale_local_paths:
+                    print(f"  {stale}")
+                remove_stale_local_files(repo_root, stale_local_paths, dry_run=args.dry_run)
+                if not args.dry_run:
+                    prune_empty_dirs(repo_root / path)
+                print(f"Local inbound mirror pruned under {path}.")
+                return 0
             if local_status:
-                print("Local inbound files are already present and will be left untouched:")
+                print("Local inbound files are already present and match FETCH_HEAD:")
                 print(local_status)
             print(f"No inbound changes for {path}.")
             return 0
 
         print("Inbound changes detected:")
         print(diff)
-        update_paths, skipped_delete = updatable_paths_from_name_status(diff)
-        if skipped_delete:
-            print("Remote deletes are intentionally skipped:")
-            for skipped in skipped_delete:
-                print(f"  {skipped}")
-        if not update_paths:
-            print("No inbound additions or modifications to apply.")
-            return 0
-
-        if local_status and not inbound_updates_match_local_files(repo_root, update_paths):
-            raise SyncError(
-                f"Refusing to sync because local inbound paths are dirty while remote inbound changes exist ({path}):\n"
-                f"{local_status}"
-            )
-        if local_status:
-            print("Local inbound files match remote inbound updates; accepting them as already present.")
+        if stale_local_paths:
+            print("Local inbound files absent from FETCH_HEAD detected:")
+            for stale in stale_local_paths:
+                print(f"  {stale}")
 
         if args.dry_run:
             print("Dry run only; working tree was not updated.")
             return 0
 
-        run_git(repo_root, ["restore", "--source", "FETCH_HEAD", "--worktree", "--", *update_paths])
-        print(f"Updated inbound files only under {path}.")
+        remove_stale_local_files(repo_root, stale_local_paths, dry_run=False)
+        if remote_paths:
+            run_git(repo_root, ["restore", "--source", "FETCH_HEAD", "--worktree", "--", path])
+        prune_empty_dirs(repo_root / path)
+        print(f"Updated inbound mirror to match FETCH_HEAD under {path}.")
         return 0
     except SyncError as exc:
         print(f"ERROR: {exc}", file=sys.stderr)

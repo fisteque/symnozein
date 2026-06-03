@@ -258,14 +258,14 @@ def list_inbox_messages() -> list[Path]:
     )
 
 
-def list_markdown_files(path: Path) -> list[Path]:
+def list_observed_files(path: Path) -> list[Path]:
     if not path.exists():
         return []
     assert_inside(path, BODY_ROOT)
     return sorted(
         (
             item
-            for item in path.glob("*.md")
+            for item in path.iterdir()
             if item.is_file() and not item.name.startswith(".")
         ),
         key=lambda item: (item.stat().st_mtime, item.name),
@@ -849,8 +849,8 @@ def process_inbox() -> int:
     pending_count = 0
     message_paths = list_inbox_messages()
     log(f"Inbox message files found: {len(message_paths)}")
-    codex_inbox_paths = list_markdown_files(CODEX_INBOX_DIR)
-    codex_outbox_paths = list_markdown_files(CODEX_OUTBOX_DIR)
+    codex_inbox_paths = list_observed_files(CODEX_INBOX_DIR)
+    codex_outbox_paths = list_observed_files(CODEX_OUTBOX_DIR)
     log(
         "Codex inbox message files observed: "
         f"{len(codex_inbox_paths)} latest={latest_file_name(codex_inbox_paths)}"
