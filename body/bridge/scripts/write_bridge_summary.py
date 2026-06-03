@@ -264,6 +264,9 @@ def render_summary(runtime_root: Path, repo_root: Path, project_root: Path, log_
         lines.extend(
             [
                 f"- Body last heartbeat: `{body_state.get('last_hb', '(unknown)')}`",
+                f"- Heartbeat count: `{body_state.get('heartbeat_count', '(unknown)')}`",
+                f"- Heartbeat last gap seconds: `{body_state.get('heartbeat_last_gap_seconds', '(unknown)')}`",
+                f"- Heartbeat max gap seconds: `{body_state.get('heartbeat_max_gap_seconds', '(unknown)')}`",
                 f"- Heartbeat service started at: `{heartbeat_info.get('started_at', '(unknown)')}`",
                 f"- Heartbeat uptime seconds: `{heartbeat_info.get('uptime_seconds', '(unknown)')}`",
                 f"- Heartbeat restart count: `{heartbeat_info.get('restart_count', '(unknown)')}`",
@@ -272,7 +275,10 @@ def render_summary(runtime_root: Path, repo_root: Path, project_root: Path, log_
                 f"- Heartbeat log latest start: `{heartbeat_log.get('log_latest_start', '(unknown)')}`",
                 f"- Heartbeat log max start gap seconds: `{heartbeat_log.get('log_max_start_gap_seconds', '(unknown)')}`",
                 f"- Last heartbeat gap seconds: `{last_hb_gap_seconds if last_hb_gap_seconds is not None else '(unknown)'}`",
-                "- Max heartbeat gap seconds since start: `(not available without heartbeat state history)`",
+                f"- Watchdog last heartbeat age seconds: `{body_state.get('watchdog_last_hb_age_seconds', '(unknown)')}`",
+                f"- Watchdog heartbeat timeout threshold seconds: `{body_state.get('watchdog_max_hb_age_seconds', '(unknown)')}`",
+                f"- Watchdog heartbeat timeout count: `{body_state.get('heartbeat_timeout_count', '(unknown)')}`",
+                f"- Watchdog heartbeat timeout required count: `{body_state.get('heartbeat_timeout_required_count', '(unknown)')}`",
                 f"- Body watchdog last check: `{body_state.get('watchdog_last_check', '(unknown)')}`",
             ]
         )
