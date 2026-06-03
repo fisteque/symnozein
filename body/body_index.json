@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-03T22:02:55.755488Z",
+  "generated_at": "2026-06-03T22:11:08.347863Z",
   "source": {
     "script": "scripts/update_body_index.py",
     "workflow": ".github/workflows/update_body_index.yml"
@@ -134,8 +134,8 @@
     },
     {
       "path": "bridge/logs/bridge_tail.log",
-      "size": 35971,
-      "sha256": "c0218b0e1a6567acec0ab822b83bbaaea67ec3b9828c62e33e148f6cbeabf7a2"
+      "size": 38834,
+      "sha256": "7bfe22524581a7e2e15edad108779ffc68a863b1b347fcb8cf78c983fff7a1df"
     },
     {
       "path": "bridge/outbox/codex/2026-05-27T182640Z_codex-response-msg-20260527-codex-inbox-write-task-001.md",
@@ -389,8 +389,8 @@
     },
     {
       "path": "bridge/scripts/bridge_agent_v2.py",
-      "size": 31851,
-      "sha256": "0054fc410a7143b6e4582dd202c7e91ba91fca551fa878d04ba4eff6d920a6d6"
+      "size": 31848,
+      "sha256": "db878d6ed954d3c954b1a9eb74d087e22407123a7087ed576d45d6abbebf24f0"
     },
     {
       "path": "bridge/scripts/bridge_cycle.py",
@@ -409,8 +409,8 @@
     },
     {
       "path": "bridge/scripts/bridge_sync_inbound.py",
-      "size": 3523,
-      "sha256": "8023e48a28fb149757d1bc9166928fb274ab510d53b9ba8a0dc4ccd02dccd79a"
+      "size": 4322,
+      "sha256": "fa10aa88a02af0f188b536cddfc69955e0f84a2d36017adc9585aa4844c89a82"
     },
     {
       "path": "bridge/scripts/bridge_sync_outbound.py",
@@ -499,8 +499,8 @@
     },
     {
       "path": "bridge/scripts/write_bridge_summary.py",
-      "size": 11668,
-      "sha256": "e395a3c2640b568ef07e74f1ab399465dbce4993026598dfff84be9d755be3db"
+      "size": 12134,
+      "sha256": "9d64a3e7e74fc23dd00e6e3c17578643a92611728dc4837873511445be680170"
     },
     {
       "path": "bridge/state_summary/codex.md",
@@ -514,8 +514,8 @@
     },
     {
       "path": "bridge/state_summary/latest.md",
-      "size": 9833,
-      "sha256": "f26ea9f0c2f6bfde6e3f64f653d52d86b9711cfddd9175473f723b2b6869bf20"
+      "size": 10326,
+      "sha256": "4d451a5b424940e2beb36962b95e6f665e5aa76ee5c2ab30e7a243c89f5bb857"
     },
     {
       "path": "bridge_protocol_v1.md",
