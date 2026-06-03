@@ -1,11 +1,11 @@
 {
-  "generated_at": "2026-06-03T20:17:41.429157Z",
+  "generated_at": "2026-06-03T21:12:21.063717Z",
   "source": {
     "script": "scripts/update_body_index.py",
     "workflow": ".github/workflows/update_body_index.yml"
   },
   "kind": "state",
-  "count": 112,
+  "count": 113,
   "files": [
     {
       "path": "Prvni_kroky.md",
@@ -111,6 +111,11 @@
       "path": "bridge/inbox/messages/codex/msg-20260601-codex-reader-writer-stub-001.md",
       "size": 3878,
       "sha256": "32eacfd567a5b09abd6d01eb78cb04a62796e265cb6f0b4021b171ac6a8d9242"
+    },
+    {
+      "path": "bridge/inbox/messages/codex/msg-20260603-codex-extend-bridge-tail-001.md",
+      "size": 1953,
+      "sha256": "169584fcf6cb1c3cd12841f67bf7fb9511e597f9d646e2e44141cb7b2ff8ada9"
     },
     {
       "path": "bridge/inbox/messages/codex/msg-20260603-codex-heartbeat-watchdog-audit-001.md",

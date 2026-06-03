@@ -1,11 +1,11 @@
 {
-  "generated_at": "2026-06-03T19:31:06.191255Z",
+  "generated_at": "2026-06-03T20:17:41.429157Z",
   "source": {
     "script": "scripts/update_body_index.py",
     "workflow": ".github/workflows/update_body_index.yml"
   },
   "kind": "state",
-  "count": 111,
+  "count": 112,
   "files": [
     {
       "path": "Prvni_kroky.md",
@@ -129,8 +129,8 @@
     },
     {
       "path": "bridge/logs/bridge_tail.log",
-      "size": 21592,
-      "sha256": "8ad5b742dd4f7bbeb680dc2f117a35da5871cc29acfb5e76ac854c4b6400ce28"
+      "size": 20211,
+      "sha256": "c46b86c586c79e5e30cdc5bb2a3efc23143b40f2fa58289949b0b35da0751537"
     },
     {
       "path": "bridge/outbox/codex/2026-05-27T182640Z_codex-response-msg-20260527-codex-inbox-write-task-001.md",
@@ -171,6 +171,11 @@
       "path": "bridge/outbox/codex/2026-06-01T180234Z_codex-response-msg-20260601-codex-reader-writer-stub-001.md",
       "size": 1570,
       "sha256": "f5491d0c4b4257eed50514c7a6218b8aa8e4587074f3b05894083018222d2353"
+    },
+    {
+      "path": "bridge/outbox/codex/2026-06-03T201637Z_codex-response-msg-20260603-codex-heartbeat-watchdog-audit-001.md",
+      "size": 5366,
+      "sha256": "a96c9761e219ff35a4297f6d6545e5baa3b8ec723cb37b8eda34855aa18a9cf3"
     },
     {
       "path": "bridge/outbox/codex/20260601T182419.805294_codex-reader-stub-msg-20260601-codex-reader-stub-test-safe-001.md",
@@ -489,8 +494,8 @@
     },
     {
       "path": "bridge/state_summary/latest.md",
-      "size": 2635,
-      "sha256": "23f3d0d24a90dbfe0bd22275a6938ec321c30f4f115baa8b23d8453c09506a12"
+      "size": 2555,
+      "sha256": "66aa9c0125a982d322cebcd4eab4c9f474ca8aaa98681bfe79c9a42ad169da47"
     },
     {
       "path": "bridge_protocol_v1.md",
