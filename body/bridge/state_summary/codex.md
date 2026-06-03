@@ -8,6 +8,61 @@ messages. Keep the newest items at the top.
 
 ## Latest Implementations
 
+### Runtime Heartbeat Watchdog Tolerance
+
+Adjusted the local runtime heartbeat/watchdog behavior after two same-day
+false `heartbeat_timeout` flips were traced to heartbeat age crossing the old
+30 second threshold by only a fraction of a second.
+
+Changed runtime files:
+
+- `core/hb/heartbeat.py`
+- `core/watchdog/state_watchdog.py`
+
+Changed mirrored bridge summary script:
+
+- `bridge/scripts/write_bridge_summary.py`
+- `body/bridge/scripts/write_bridge_summary.py`
+
+Behavior now:
+
+- heartbeat timeout threshold is `45` seconds;
+- watchdog requires `2` consecutive heartbeat timeout checks before setting
+  `awake=false` / `status=heartbeat_timeout`;
+- heartbeat writes `heartbeat_count`, `heartbeat_last_gap_seconds`, and
+  `heartbeat_max_gap_seconds` into `/home/fiste/Noema/state/body_state.json`;
+- watchdog writes `watchdog_last_hb_age_seconds`,
+  `watchdog_max_hb_age_seconds`, `heartbeat_timeout_count`, and
+  `heartbeat_timeout_required_count` into the same runtime state;
+- public bridge summary renders the new heartbeat/watchdog metrics.
+
+Deployment notes:
+
+- `noema-heartbeat.service` was restarted to load the heartbeat changes;
+- `noema-watchdog.service` was restarted to load the 45 second threshold and
+  two-check hysteresis;
+- two `missing_services: noema-heartbeat.service` state events were produced
+  during the maintenance window while heartbeat was intentionally stopped.
+
+Verified:
+
+- both services are active after restart;
+- `body_state.json` shows `watchdog_max_hb_age_seconds: 45`,
+  `heartbeat_timeout_required_count: 2`, and `heartbeat_timeout_count: 0`;
+- the public summary shows heartbeat count, heartbeat gap metrics, watchdog
+  heartbeat age, timeout threshold, and hysteresis count;
+- synthetic hysteresis check confirms the first >45s miss keeps
+  `awake=true`, the second consecutive miss sets `heartbeat_timeout`, and a
+  fresh heartbeat resets the count.
+
+Mirror boundary:
+
+- runtime `core/` files are not mirrored to `symnozein` yet;
+- current mirror scope remains bridge-owned files only, mainly
+  `body/bridge/scripts`, `body/bridge/state_summary`, `body/bridge/logs`, and
+  bridge outbox files;
+- no `core/` paths are tracked in the `symnozein` mirror.
+
 ### Exact Inbound Mirror And Codex Path Visibility
 
 Tightened the bridge inbox mirror rule so the Raspberry Pi checkout mirrors the
