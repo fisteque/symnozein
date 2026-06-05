@@ -22,8 +22,9 @@ Behavior now:
 
 - default public `Bridge Log Tail` is `60` filtered lines instead of `120` raw
   lines;
-- the summary writer scans only a small end window of the runtime log before
-  filtering;
+- the summary writer reads the runtime log tail backwards in small byte chunks
+  instead of loading the whole file;
+- filtering scans only a bounded tail window before selecting public lines;
 - routine no-op noise such as already-processed messages, normal fetch output,
   no-op outbound summaries, and repeated root/path lines is omitted from the
   public tail;
