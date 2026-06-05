@@ -24,6 +24,8 @@ Behavior now:
 
 - outbound sync no longer creates or updates
   `body/bridge/logs/bridge_tail.log`;
+- the now-empty mirror directory `body/bridge/logs/` was removed from the
+  checkout; Git does not track empty directories;
 - runtime `/home/fiste/Noema/bridge/logs/bridge.log` remains local and is not
   mirrored or rotated by outbound sync;
 - public bridge log tail remains available through
@@ -40,6 +42,8 @@ Verified:
 - runtime and mirrored `bridge_sync_outbound.py` copies match;
 - Python syntax compilation passes for the touched outbound sync script;
 - outbound dry-run does not recreate `body/bridge/logs/bridge_tail.log`;
+- `body/bridge/logs/` is absent from the repository checkout after the tracked
+  log tail file was removed;
 - runtime `bridge/logs/bridge.log` remains present.
 
 ### Bridge Cycle Lock Diagnostics
