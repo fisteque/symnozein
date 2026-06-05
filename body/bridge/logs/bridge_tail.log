@@ -1,39 +1,33 @@
-[2026-06-04T14:12:04.040516Z] [INFO] [cycle] == inbound sync ==
-[2026-06-04T14:12:04.545842Z] [INFO] [cycle] Fetching origin main...
-From https://github.com/fisteque/symnozein
- * branch            main       -> FETCH_HEAD
-No inbound changes for body/bridge/inbox/messages.
-[2026-06-04T14:12:04.546625Z] [INFO] [cycle] == bridge agent ==
-[2026-06-04T14:12:04.614624Z] [INFO] === Bridge agent v2 start ===
-[2026-06-04T14:12:04.614837Z] [INFO] Bridge root: /home/fiste/Noema/bridge
-[2026-06-04T14:12:04.614952Z] [INFO] Body root: /home/fiste/Noema/symnozein/body
-[2026-06-04T14:12:04.615592Z] [INFO] Body state unchanged: awake=True status=normal_operation
-[2026-06-04T14:12:04.618305Z] [INFO] Inbox message files found: 2
-[2026-06-04T14:12:04.618900Z] [INFO] Codex inbox message files observed: 15 latest=msg-20260604-codex-body-status-ping-001.md
-[2026-06-04T14:12:04.619008Z] [INFO] Codex outbox message files observed: 12 latest=2026-06-03T214500Z_codex-response-msg-20260603-codex-extend-bridge-tail-001.md
-[2026-06-04T14:12:04.619810Z] [INFO] Already processed: msg-20260524-task-001
-[2026-06-04T14:12:04.620670Z] [INFO] Already processed: msg-20260527-task-sync-body-001
-[2026-06-04T14:12:04.621922Z] [INFO] Pending message count this run: 0
-[2026-06-04T14:12:04.622031Z] [INFO] Pending message count remaining: 0
-[2026-06-04T14:12:04.622124Z] [INFO] Processed message count: 0
-[2026-06-04T14:12:04.622213Z] [INFO] === Bridge agent v2 end ===
-[2026-06-04T14:12:04.638809Z] [INFO] [cycle] [2026-06-04T14:12:04.614624Z] [INFO] === Bridge agent v2 start ===
-[2026-06-04T14:12:04.614837Z] [INFO] Bridge root: /home/fiste/Noema/bridge
-[2026-06-04T14:12:04.614952Z] [INFO] Body root: /home/fiste/Noema/symnozein/body
-[2026-06-04T14:12:04.615592Z] [INFO] Body state unchanged: awake=True status=normal_operation
-[2026-06-04T14:12:04.618305Z] [INFO] Inbox message files found: 2
-[2026-06-04T14:12:04.618900Z] [INFO] Codex inbox message files observed: 15 latest=msg-20260604-codex-body-status-ping-001.md
-[2026-06-04T14:12:04.619008Z] [INFO] Codex outbox message files observed: 12 latest=2026-06-03T214500Z_codex-response-msg-20260603-codex-extend-bridge-tail-001.md
-[2026-06-04T14:12:04.619810Z] [INFO] Already processed: msg-20260524-task-001
-[2026-06-04T14:12:04.620670Z] [INFO] Already processed: msg-20260527-task-sync-body-001
-[2026-06-04T14:12:04.621922Z] [INFO] Pending message count this run: 0
-[2026-06-04T14:12:04.622031Z] [INFO] Pending message count remaining: 0
-[2026-06-04T14:12:04.622124Z] [INFO] Processed message count: 0
-[2026-06-04T14:12:04.622213Z] [INFO] === Bridge agent v2 end ===
-[2026-06-04T14:12:04.639495Z] [INFO] [cycle] == write bridge summary ==
-[2026-06-04T14:12:04.701167Z] [INFO] [cycle] Wrote bridge summary: /home/fiste/Noema/symnozein/body/bridge/state_summary/latest.md
-[2026-06-04T14:12:04.701825Z] [INFO] [cycle] == outbound sync ==
-[2026-06-04T14:12:05.257984Z] [INFO] [cycle] Optional source missing, skipped: /home/fiste/Noema/bridge/outbox/messages
+[2026-06-05T05:48:19.717730Z] [INFO] === Bridge agent v2 start ===
+[2026-06-05T05:48:19.717943Z] [INFO] Bridge root: /home/fiste/Noema/bridge
+[2026-06-05T05:48:19.718063Z] [INFO] Body root: /home/fiste/Noema/symnozein/body
+[2026-06-05T05:48:19.718686Z] [INFO] Body state unchanged: awake=True status=normal_operation
+[2026-06-05T05:48:19.721563Z] [INFO] Inbox message files found: 2
+[2026-06-05T05:48:19.722197Z] [INFO] Codex inbox message files observed: 15 latest=msg-20260604-codex-body-status-ping-001.md
+[2026-06-05T05:48:19.722308Z] [INFO] Codex outbox message files observed: 13 latest=2026-06-04T141638Z_codex-response-msg-20260604-codex-body-status-ping-001.md
+[2026-06-05T05:48:19.723239Z] [INFO] Already processed: msg-20260524-task-001
+[2026-06-05T05:48:19.724133Z] [INFO] Already processed: msg-20260527-task-sync-body-001
+[2026-06-05T05:48:19.726189Z] [INFO] Pending message count this run: 0
+[2026-06-05T05:48:19.726306Z] [INFO] Pending message count remaining: 0
+[2026-06-05T05:48:19.726404Z] [INFO] Processed message count: 0
+[2026-06-05T05:48:19.726500Z] [INFO] === Bridge agent v2 end ===
+[2026-06-05T05:48:19.742646Z] [INFO] [cycle] [2026-06-05T05:48:19.717730Z] [INFO] === Bridge agent v2 start ===
+[2026-06-05T05:48:19.717943Z] [INFO] Bridge root: /home/fiste/Noema/bridge
+[2026-06-05T05:48:19.718063Z] [INFO] Body root: /home/fiste/Noema/symnozein/body
+[2026-06-05T05:48:19.718686Z] [INFO] Body state unchanged: awake=True status=normal_operation
+[2026-06-05T05:48:19.721563Z] [INFO] Inbox message files found: 2
+[2026-06-05T05:48:19.722197Z] [INFO] Codex inbox message files observed: 15 latest=msg-20260604-codex-body-status-ping-001.md
+[2026-06-05T05:48:19.722308Z] [INFO] Codex outbox message files observed: 13 latest=2026-06-04T141638Z_codex-response-msg-20260604-codex-body-status-ping-001.md
+[2026-06-05T05:48:19.723239Z] [INFO] Already processed: msg-20260524-task-001
+[2026-06-05T05:48:19.724133Z] [INFO] Already processed: msg-20260527-task-sync-body-001
+[2026-06-05T05:48:19.726189Z] [INFO] Pending message count this run: 0
+[2026-06-05T05:48:19.726306Z] [INFO] Pending message count remaining: 0
+[2026-06-05T05:48:19.726404Z] [INFO] Processed message count: 0
+[2026-06-05T05:48:19.726500Z] [INFO] === Bridge agent v2 end ===
+[2026-06-05T05:48:19.743345Z] [INFO] [cycle] == write bridge summary ==
+[2026-06-05T05:48:19.806128Z] [INFO] [cycle] Wrote bridge summary: /home/fiste/Noema/symnozein/body/bridge/state_summary/latest.md
+[2026-06-05T05:48:19.806768Z] [INFO] [cycle] == outbound sync ==
+[2026-06-05T05:48:20.292217Z] [INFO] [cycle] Optional source missing, skipped: /home/fiste/Noema/bridge/outbox/messages
 Optional source missing, skipped: /home/fiste/Noema/bridge/state_summary
 Writing /home/fiste/Noema/symnozein/body/bridge/logs/bridge_tail.log
 Mirrored log tail /home/fiste/Noema/bridge/logs/bridge.log -> /home/fiste/Noema/symnozein/body/bridge/logs/bridge_tail.log. Changed files: 1
@@ -46,44 +40,44 @@ From https://github.com/fisteque/symnozein
  * branch            main       -> FETCH_HEAD
 Local branch is not behind remote; no pre-push rebase needed.
 Only logs/state_summary changed; not committing this cycle.
-[2026-06-04T14:12:05.258221Z] [INFO] [cycle] Bridge cycle complete.
-[2026-06-04T14:12:34.078205Z] [INFO] [cycle] Bridge cycle lock acquired: /home/fiste/Noema/bridge/state/bridge_cycle.lock.json
-[2026-06-04T14:12:34.079846Z] [INFO] [cycle] == inbound sync ==
-[2026-06-04T14:12:34.563299Z] [INFO] [cycle] Fetching origin main...
+[2026-06-05T05:48:20.292406Z] [INFO] [cycle] Bridge cycle complete.
+[2026-06-05T05:48:49.250997Z] [INFO] [cycle] Bridge cycle lock acquired: /home/fiste/Noema/bridge/state/bridge_cycle.lock.json
+[2026-06-05T05:48:49.253471Z] [INFO] [cycle] == inbound sync ==
+[2026-06-05T05:48:49.716625Z] [INFO] [cycle] Fetching origin main...
 From https://github.com/fisteque/symnozein
  * branch            main       -> FETCH_HEAD
 No inbound changes for body/bridge/inbox/messages.
-[2026-06-04T14:12:34.564068Z] [INFO] [cycle] == bridge agent ==
-[2026-06-04T14:12:34.631206Z] [INFO] === Bridge agent v2 start ===
-[2026-06-04T14:12:34.631424Z] [INFO] Bridge root: /home/fiste/Noema/bridge
-[2026-06-04T14:12:34.631543Z] [INFO] Body root: /home/fiste/Noema/symnozein/body
-[2026-06-04T14:12:34.632169Z] [INFO] Body state unchanged: awake=True status=normal_operation
-[2026-06-04T14:12:34.635142Z] [INFO] Inbox message files found: 2
-[2026-06-04T14:12:34.635780Z] [INFO] Codex inbox message files observed: 15 latest=msg-20260604-codex-body-status-ping-001.md
-[2026-06-04T14:12:34.635894Z] [INFO] Codex outbox message files observed: 12 latest=2026-06-03T214500Z_codex-response-msg-20260603-codex-extend-bridge-tail-001.md
-[2026-06-04T14:12:34.636709Z] [INFO] Already processed: msg-20260524-task-001
-[2026-06-04T14:12:34.637585Z] [INFO] Already processed: msg-20260527-task-sync-body-001
-[2026-06-04T14:12:34.639301Z] [INFO] Pending message count this run: 0
-[2026-06-04T14:12:34.639418Z] [INFO] Pending message count remaining: 0
-[2026-06-04T14:12:34.639516Z] [INFO] Processed message count: 0
-[2026-06-04T14:12:34.639611Z] [INFO] === Bridge agent v2 end ===
-[2026-06-04T14:12:34.656560Z] [INFO] [cycle] [2026-06-04T14:12:34.631206Z] [INFO] === Bridge agent v2 start ===
-[2026-06-04T14:12:34.631424Z] [INFO] Bridge root: /home/fiste/Noema/bridge
-[2026-06-04T14:12:34.631543Z] [INFO] Body root: /home/fiste/Noema/symnozein/body
-[2026-06-04T14:12:34.632169Z] [INFO] Body state unchanged: awake=True status=normal_operation
-[2026-06-04T14:12:34.635142Z] [INFO] Inbox message files found: 2
-[2026-06-04T14:12:34.635780Z] [INFO] Codex inbox message files observed: 15 latest=msg-20260604-codex-body-status-ping-001.md
-[2026-06-04T14:12:34.635894Z] [INFO] Codex outbox message files observed: 12 latest=2026-06-03T214500Z_codex-response-msg-20260603-codex-extend-bridge-tail-001.md
-[2026-06-04T14:12:34.636709Z] [INFO] Already processed: msg-20260524-task-001
-[2026-06-04T14:12:34.637585Z] [INFO] Already processed: msg-20260527-task-sync-body-001
-[2026-06-04T14:12:34.639301Z] [INFO] Pending message count this run: 0
-[2026-06-04T14:12:34.639418Z] [INFO] Pending message count remaining: 0
-[2026-06-04T14:12:34.639516Z] [INFO] Processed message count: 0
-[2026-06-04T14:12:34.639611Z] [INFO] === Bridge agent v2 end ===
-[2026-06-04T14:12:34.657315Z] [INFO] [cycle] == write bridge summary ==
-[2026-06-04T14:12:34.720990Z] [INFO] [cycle] Wrote bridge summary: /home/fiste/Noema/symnozein/body/bridge/state_summary/latest.md
-[2026-06-04T14:12:34.721713Z] [INFO] [cycle] == outbound sync ==
-[2026-06-04T14:12:35.220027Z] [INFO] [cycle] Optional source missing, skipped: /home/fiste/Noema/bridge/outbox/messages
+[2026-06-05T05:48:49.717638Z] [INFO] [cycle] == bridge agent ==
+[2026-06-05T05:48:49.784369Z] [INFO] === Bridge agent v2 start ===
+[2026-06-05T05:48:49.784585Z] [INFO] Bridge root: /home/fiste/Noema/bridge
+[2026-06-05T05:48:49.784703Z] [INFO] Body root: /home/fiste/Noema/symnozein/body
+[2026-06-05T05:48:49.785318Z] [INFO] Body state unchanged: awake=True status=normal_operation
+[2026-06-05T05:48:49.788062Z] [INFO] Inbox message files found: 2
+[2026-06-05T05:48:49.788678Z] [INFO] Codex inbox message files observed: 15 latest=msg-20260604-codex-body-status-ping-001.md
+[2026-06-05T05:48:49.788788Z] [INFO] Codex outbox message files observed: 13 latest=2026-06-04T141638Z_codex-response-msg-20260604-codex-body-status-ping-001.md
+[2026-06-05T05:48:49.789567Z] [INFO] Already processed: msg-20260524-task-001
+[2026-06-05T05:48:49.790426Z] [INFO] Already processed: msg-20260527-task-sync-body-001
+[2026-06-05T05:48:49.792168Z] [INFO] Pending message count this run: 0
+[2026-06-05T05:48:49.792285Z] [INFO] Pending message count remaining: 0
+[2026-06-05T05:48:49.792383Z] [INFO] Processed message count: 0
+[2026-06-05T05:48:49.792478Z] [INFO] === Bridge agent v2 end ===
+[2026-06-05T05:48:49.808650Z] [INFO] [cycle] [2026-06-05T05:48:49.784369Z] [INFO] === Bridge agent v2 start ===
+[2026-06-05T05:48:49.784585Z] [INFO] Bridge root: /home/fiste/Noema/bridge
+[2026-06-05T05:48:49.784703Z] [INFO] Body root: /home/fiste/Noema/symnozein/body
+[2026-06-05T05:48:49.785318Z] [INFO] Body state unchanged: awake=True status=normal_operation
+[2026-06-05T05:48:49.788062Z] [INFO] Inbox message files found: 2
+[2026-06-05T05:48:49.788678Z] [INFO] Codex inbox message files observed: 15 latest=msg-20260604-codex-body-status-ping-001.md
+[2026-06-05T05:48:49.788788Z] [INFO] Codex outbox message files observed: 13 latest=2026-06-04T141638Z_codex-response-msg-20260604-codex-body-status-ping-001.md
+[2026-06-05T05:48:49.789567Z] [INFO] Already processed: msg-20260524-task-001
+[2026-06-05T05:48:49.790426Z] [INFO] Already processed: msg-20260527-task-sync-body-001
+[2026-06-05T05:48:49.792168Z] [INFO] Pending message count this run: 0
+[2026-06-05T05:48:49.792285Z] [INFO] Pending message count remaining: 0
+[2026-06-05T05:48:49.792383Z] [INFO] Processed message count: 0
+[2026-06-05T05:48:49.792478Z] [INFO] === Bridge agent v2 end ===
+[2026-06-05T05:48:49.809382Z] [INFO] [cycle] == write bridge summary ==
+[2026-06-05T05:48:49.872394Z] [INFO] [cycle] Wrote bridge summary: /home/fiste/Noema/symnozein/body/bridge/state_summary/latest.md
+[2026-06-05T05:48:49.873096Z] [INFO] [cycle] == outbound sync ==
+[2026-06-05T05:48:50.353187Z] [INFO] [cycle] Optional source missing, skipped: /home/fiste/Noema/bridge/outbox/messages
 Optional source missing, skipped: /home/fiste/Noema/bridge/state_summary
 Writing /home/fiste/Noema/symnozein/body/bridge/logs/bridge_tail.log
 Mirrored log tail /home/fiste/Noema/bridge/logs/bridge.log -> /home/fiste/Noema/symnozein/body/bridge/logs/bridge_tail.log. Changed files: 1
@@ -96,44 +90,44 @@ From https://github.com/fisteque/symnozein
  * branch            main       -> FETCH_HEAD
 Local branch is not behind remote; no pre-push rebase needed.
 Only logs/state_summary changed; not committing this cycle.
-[2026-06-04T14:12:35.220215Z] [INFO] [cycle] Bridge cycle complete.
-[2026-06-04T14:13:04.117145Z] [INFO] [cycle] Bridge cycle lock acquired: /home/fiste/Noema/bridge/state/bridge_cycle.lock.json
-[2026-06-04T14:13:04.122585Z] [INFO] [cycle] == inbound sync ==
-[2026-06-04T14:13:04.597352Z] [INFO] [cycle] Fetching origin main...
+[2026-06-05T05:48:50.353377Z] [INFO] [cycle] Bridge cycle complete.
+[2026-06-05T05:49:19.284998Z] [INFO] [cycle] Bridge cycle lock acquired: /home/fiste/Noema/bridge/state/bridge_cycle.lock.json
+[2026-06-05T05:49:19.287526Z] [INFO] [cycle] == inbound sync ==
+[2026-06-05T05:49:19.755514Z] [INFO] [cycle] Fetching origin main...
 From https://github.com/fisteque/symnozein
  * branch            main       -> FETCH_HEAD
 No inbound changes for body/bridge/inbox/messages.
-[2026-06-04T14:13:04.598059Z] [INFO] [cycle] == bridge agent ==
-[2026-06-04T14:13:04.665050Z] [INFO] === Bridge agent v2 start ===
-[2026-06-04T14:13:04.665270Z] [INFO] Bridge root: /home/fiste/Noema/bridge
-[2026-06-04T14:13:04.665388Z] [INFO] Body root: /home/fiste/Noema/symnozein/body
-[2026-06-04T14:13:04.666016Z] [INFO] Body state unchanged: awake=True status=normal_operation
-[2026-06-04T14:13:04.668781Z] [INFO] Inbox message files found: 2
-[2026-06-04T14:13:04.669381Z] [INFO] Codex inbox message files observed: 15 latest=msg-20260604-codex-body-status-ping-001.md
-[2026-06-04T14:13:04.669486Z] [INFO] Codex outbox message files observed: 12 latest=2026-06-03T214500Z_codex-response-msg-20260603-codex-extend-bridge-tail-001.md
-[2026-06-04T14:13:04.670262Z] [INFO] Already processed: msg-20260524-task-001
-[2026-06-04T14:13:04.671133Z] [INFO] Already processed: msg-20260527-task-sync-body-001
-[2026-06-04T14:13:04.672365Z] [INFO] Pending message count this run: 0
-[2026-06-04T14:13:04.672475Z] [INFO] Pending message count remaining: 0
-[2026-06-04T14:13:04.672569Z] [INFO] Processed message count: 0
-[2026-06-04T14:13:04.672660Z] [INFO] === Bridge agent v2 end ===
-[2026-06-04T14:13:04.689586Z] [INFO] [cycle] [2026-06-04T14:13:04.665050Z] [INFO] === Bridge agent v2 start ===
-[2026-06-04T14:13:04.665270Z] [INFO] Bridge root: /home/fiste/Noema/bridge
-[2026-06-04T14:13:04.665388Z] [INFO] Body root: /home/fiste/Noema/symnozein/body
-[2026-06-04T14:13:04.666016Z] [INFO] Body state unchanged: awake=True status=normal_operation
-[2026-06-04T14:13:04.668781Z] [INFO] Inbox message files found: 2
-[2026-06-04T14:13:04.669381Z] [INFO] Codex inbox message files observed: 15 latest=msg-20260604-codex-body-status-ping-001.md
-[2026-06-04T14:13:04.669486Z] [INFO] Codex outbox message files observed: 12 latest=2026-06-03T214500Z_codex-response-msg-20260603-codex-extend-bridge-tail-001.md
-[2026-06-04T14:13:04.670262Z] [INFO] Already processed: msg-20260524-task-001
-[2026-06-04T14:13:04.671133Z] [INFO] Already processed: msg-20260527-task-sync-body-001
-[2026-06-04T14:13:04.672365Z] [INFO] Pending message count this run: 0
-[2026-06-04T14:13:04.672475Z] [INFO] Pending message count remaining: 0
-[2026-06-04T14:13:04.672569Z] [INFO] Processed message count: 0
-[2026-06-04T14:13:04.672660Z] [INFO] === Bridge agent v2 end ===
-[2026-06-04T14:13:04.690270Z] [INFO] [cycle] == write bridge summary ==
-[2026-06-04T14:13:04.751931Z] [INFO] [cycle] Wrote bridge summary: /home/fiste/Noema/symnozein/body/bridge/state_summary/latest.md
-[2026-06-04T14:13:04.752588Z] [INFO] [cycle] == outbound sync ==
-[2026-06-04T14:13:05.264423Z] [INFO] [cycle] Optional source missing, skipped: /home/fiste/Noema/bridge/outbox/messages
+[2026-06-05T05:49:19.756223Z] [INFO] [cycle] == bridge agent ==
+[2026-06-05T05:49:19.825524Z] [INFO] === Bridge agent v2 start ===
+[2026-06-05T05:49:19.825744Z] [INFO] Bridge root: /home/fiste/Noema/bridge
+[2026-06-05T05:49:19.825863Z] [INFO] Body root: /home/fiste/Noema/symnozein/body
+[2026-06-05T05:49:19.826626Z] [INFO] Body state unchanged: awake=True status=normal_operation
+[2026-06-05T05:49:19.829656Z] [INFO] Inbox message files found: 2
+[2026-06-05T05:49:19.830279Z] [INFO] Codex inbox message files observed: 15 latest=msg-20260604-codex-body-status-ping-001.md
+[2026-06-05T05:49:19.830391Z] [INFO] Codex outbox message files observed: 13 latest=2026-06-04T141638Z_codex-response-msg-20260604-codex-body-status-ping-001.md
+[2026-06-05T05:49:19.831337Z] [INFO] Already processed: msg-20260524-task-001
+[2026-06-05T05:49:19.832285Z] [INFO] Already processed: msg-20260527-task-sync-body-001
+[2026-06-05T05:49:19.834395Z] [INFO] Pending message count this run: 0
+[2026-06-05T05:49:19.834516Z] [INFO] Pending message count remaining: 0
+[2026-06-05T05:49:19.834655Z] [INFO] Processed message count: 0
+[2026-06-05T05:49:19.834764Z] [INFO] === Bridge agent v2 end ===
+[2026-06-05T05:49:19.852101Z] [INFO] [cycle] [2026-06-05T05:49:19.825524Z] [INFO] === Bridge agent v2 start ===
+[2026-06-05T05:49:19.825744Z] [INFO] Bridge root: /home/fiste/Noema/bridge
+[2026-06-05T05:49:19.825863Z] [INFO] Body root: /home/fiste/Noema/symnozein/body
+[2026-06-05T05:49:19.826626Z] [INFO] Body state unchanged: awake=True status=normal_operation
+[2026-06-05T05:49:19.829656Z] [INFO] Inbox message files found: 2
+[2026-06-05T05:49:19.830279Z] [INFO] Codex inbox message files observed: 15 latest=msg-20260604-codex-body-status-ping-001.md
+[2026-06-05T05:49:19.830391Z] [INFO] Codex outbox message files observed: 13 latest=2026-06-04T141638Z_codex-response-msg-20260604-codex-body-status-ping-001.md
+[2026-06-05T05:49:19.831337Z] [INFO] Already processed: msg-20260524-task-001
+[2026-06-05T05:49:19.832285Z] [INFO] Already processed: msg-20260527-task-sync-body-001
+[2026-06-05T05:49:19.834395Z] [INFO] Pending message count this run: 0
+[2026-06-05T05:49:19.834516Z] [INFO] Pending message count remaining: 0
+[2026-06-05T05:49:19.834655Z] [INFO] Processed message count: 0
+[2026-06-05T05:49:19.834764Z] [INFO] === Bridge agent v2 end ===
+[2026-06-05T05:49:19.852794Z] [INFO] [cycle] == write bridge summary ==
+[2026-06-05T05:49:19.915566Z] [INFO] [cycle] Wrote bridge summary: /home/fiste/Noema/symnozein/body/bridge/state_summary/latest.md
+[2026-06-05T05:49:19.916233Z] [INFO] [cycle] == outbound sync ==
+[2026-06-05T05:49:20.395450Z] [INFO] [cycle] Optional source missing, skipped: /home/fiste/Noema/bridge/outbox/messages
 Optional source missing, skipped: /home/fiste/Noema/bridge/state_summary
 Writing /home/fiste/Noema/symnozein/body/bridge/logs/bridge_tail.log
 Mirrored log tail /home/fiste/Noema/bridge/logs/bridge.log -> /home/fiste/Noema/symnozein/body/bridge/logs/bridge_tail.log. Changed files: 1
@@ -146,355 +140,361 @@ From https://github.com/fisteque/symnozein
  * branch            main       -> FETCH_HEAD
 Local branch is not behind remote; no pre-push rebase needed.
 Only logs/state_summary changed; not committing this cycle.
-[2026-06-04T14:13:05.264616Z] [INFO] [cycle] Bridge cycle complete.
-[2026-06-04T14:13:34.164603Z] [INFO] [cycle] Bridge cycle lock acquired: /home/fiste/Noema/bridge/state/bridge_cycle.lock.json
-[2026-06-04T14:13:34.167810Z] [INFO] [cycle] == inbound sync ==
-[2026-06-04T14:13:34.630395Z] [INFO] [cycle] Fetching origin main...
+[2026-06-05T05:49:20.395660Z] [INFO] [cycle] Bridge cycle complete.
+[2026-06-05T05:49:49.332225Z] [INFO] [cycle] Bridge cycle lock acquired: /home/fiste/Noema/bridge/state/bridge_cycle.lock.json
+[2026-06-05T05:49:49.333744Z] [INFO] [cycle] == inbound sync ==
+[2026-06-05T05:50:19.386184Z] [ERROR] [cycle] Bridge cycle lock is active until 2026-06-05T06:04:49.331813Z: /home/fiste/Noema/bridge/state/bridge_cycle.lock.json
+[2026-06-05T05:50:19.389520Z] [ERROR] [cycle] Traceback (most recent call last):
+  File "/home/fiste/Noema/bridge/scripts/bridge_cycle.py", line 283, in main
+    with bridge_cycle_lock(runtime_root, ttl_seconds=args.lock_ttl_seconds) as lock_path:
+  File "/usr/lib/python3.11/contextlib.py", line 137, in __enter__
+    return next(self.gen)
+           ^^^^^^^^^^^^^^
+  File "/home/fiste/Noema/bridge/scripts/bridge_cycle_lock.py", line 91, in bridge_cycle_lock
+    raise SyncError(f"Bridge cycle lock is active until {existing.get('expires_at')}: {lock_path}")
+bridge_sync_common.SyncError: Bridge cycle lock is active until 2026-06-05T06:04:49.331813Z: /home/fiste/Noema/bridge/state/bridge_cycle.lock.json
+[2026-06-05T05:50:19.405915Z] [INFO] [cycle] Cycle error outbox written: /home/fiste/Noema/symnozein/body/bridge/outbox/messages/2026-06-05T055019Z_rpi5_cycle-error-unknown.md
+[2026-06-05T05:50:49.415455Z] [ERROR] [cycle] Bridge cycle lock is active until 2026-06-05T06:04:49.331813Z: /home/fiste/Noema/bridge/state/bridge_cycle.lock.json
+[2026-06-05T05:50:49.419660Z] [ERROR] [cycle] Traceback (most recent call last):
+  File "/home/fiste/Noema/bridge/scripts/bridge_cycle.py", line 283, in main
+    with bridge_cycle_lock(runtime_root, ttl_seconds=args.lock_ttl_seconds) as lock_path:
+  File "/usr/lib/python3.11/contextlib.py", line 137, in __enter__
+    return next(self.gen)
+           ^^^^^^^^^^^^^^
+  File "/home/fiste/Noema/bridge/scripts/bridge_cycle_lock.py", line 91, in bridge_cycle_lock
+    raise SyncError(f"Bridge cycle lock is active until {existing.get('expires_at')}: {lock_path}")
+bridge_sync_common.SyncError: Bridge cycle lock is active until 2026-06-05T06:04:49.331813Z: /home/fiste/Noema/bridge/state/bridge_cycle.lock.json
+[2026-06-05T05:50:49.422090Z] [WARN] [cycle] Cycle error already reported for step=unknown repeat_count=2
+[2026-06-05T05:51:19.470466Z] [ERROR] [cycle] Bridge cycle lock is active until 2026-06-05T06:04:49.331813Z: /home/fiste/Noema/bridge/state/bridge_cycle.lock.json
+[2026-06-05T05:51:19.473605Z] [ERROR] [cycle] Traceback (most recent call last):
+  File "/home/fiste/Noema/bridge/scripts/bridge_cycle.py", line 283, in main
+    with bridge_cycle_lock(runtime_root, ttl_seconds=args.lock_ttl_seconds) as lock_path:
+  File "/usr/lib/python3.11/contextlib.py", line 137, in __enter__
+    return next(self.gen)
+           ^^^^^^^^^^^^^^
+  File "/home/fiste/Noema/bridge/scripts/bridge_cycle_lock.py", line 91, in bridge_cycle_lock
+    raise SyncError(f"Bridge cycle lock is active until {existing.get('expires_at')}: {lock_path}")
+bridge_sync_common.SyncError: Bridge cycle lock is active until 2026-06-05T06:04:49.331813Z: /home/fiste/Noema/bridge/state/bridge_cycle.lock.json
+[2026-06-05T05:51:19.475898Z] [WARN] [cycle] Cycle error already reported for step=unknown repeat_count=3
+[2026-06-05T05:51:49.497737Z] [ERROR] [cycle] Bridge cycle lock is active until 2026-06-05T06:04:49.331813Z: /home/fiste/Noema/bridge/state/bridge_cycle.lock.json
+[2026-06-05T05:51:49.502142Z] [ERROR] [cycle] Traceback (most recent call last):
+  File "/home/fiste/Noema/bridge/scripts/bridge_cycle.py", line 283, in main
+    with bridge_cycle_lock(runtime_root, ttl_seconds=args.lock_ttl_seconds) as lock_path:
+  File "/usr/lib/python3.11/contextlib.py", line 137, in __enter__
+    return next(self.gen)
+           ^^^^^^^^^^^^^^
+  File "/home/fiste/Noema/bridge/scripts/bridge_cycle_lock.py", line 91, in bridge_cycle_lock
+    raise SyncError(f"Bridge cycle lock is active until {existing.get('expires_at')}: {lock_path}")
+bridge_sync_common.SyncError: Bridge cycle lock is active until 2026-06-05T06:04:49.331813Z: /home/fiste/Noema/bridge/state/bridge_cycle.lock.json
+[2026-06-05T05:51:49.503837Z] [WARN] [cycle] Cycle error already reported for step=unknown repeat_count=4
+[2026-06-05T05:52:19.545711Z] [ERROR] [cycle] Bridge cycle lock is active until 2026-06-05T06:04:49.331813Z: /home/fiste/Noema/bridge/state/bridge_cycle.lock.json
+[2026-06-05T05:52:19.548860Z] [ERROR] [cycle] Traceback (most recent call last):
+  File "/home/fiste/Noema/bridge/scripts/bridge_cycle.py", line 283, in main
+    with bridge_cycle_lock(runtime_root, ttl_seconds=args.lock_ttl_seconds) as lock_path:
+  File "/usr/lib/python3.11/contextlib.py", line 137, in __enter__
+    return next(self.gen)
+           ^^^^^^^^^^^^^^
+  File "/home/fiste/Noema/bridge/scripts/bridge_cycle_lock.py", line 91, in bridge_cycle_lock
+    raise SyncError(f"Bridge cycle lock is active until {existing.get('expires_at')}: {lock_path}")
+bridge_sync_common.SyncError: Bridge cycle lock is active until 2026-06-05T06:04:49.331813Z: /home/fiste/Noema/bridge/state/bridge_cycle.lock.json
+[2026-06-05T05:52:19.551143Z] [WARN] [cycle] Cycle error already reported for step=unknown repeat_count=5
+[2026-06-05T05:52:49.584951Z] [ERROR] [cycle] Bridge cycle lock is active until 2026-06-05T06:04:49.331813Z: /home/fiste/Noema/bridge/state/bridge_cycle.lock.json
+[2026-06-05T05:52:49.589703Z] [ERROR] [cycle] Traceback (most recent call last):
+  File "/home/fiste/Noema/bridge/scripts/bridge_cycle.py", line 283, in main
+    with bridge_cycle_lock(runtime_root, ttl_seconds=args.lock_ttl_seconds) as lock_path:
+  File "/usr/lib/python3.11/contextlib.py", line 137, in __enter__
+    return next(self.gen)
+           ^^^^^^^^^^^^^^
+  File "/home/fiste/Noema/bridge/scripts/bridge_cycle_lock.py", line 91, in bridge_cycle_lock
+    raise SyncError(f"Bridge cycle lock is active until {existing.get('expires_at')}: {lock_path}")
+bridge_sync_common.SyncError: Bridge cycle lock is active until 2026-06-05T06:04:49.331813Z: /home/fiste/Noema/bridge/state/bridge_cycle.lock.json
+[2026-06-05T05:52:49.592237Z] [WARN] [cycle] Cycle error already reported for step=unknown repeat_count=6
+[2026-06-05T05:53:19.622586Z] [ERROR] [cycle] Bridge cycle lock is active until 2026-06-05T06:04:49.331813Z: /home/fiste/Noema/bridge/state/bridge_cycle.lock.json
+[2026-06-05T05:53:19.625878Z] [ERROR] [cycle] Traceback (most recent call last):
+  File "/home/fiste/Noema/bridge/scripts/bridge_cycle.py", line 283, in main
+    with bridge_cycle_lock(runtime_root, ttl_seconds=args.lock_ttl_seconds) as lock_path:
+  File "/usr/lib/python3.11/contextlib.py", line 137, in __enter__
+    return next(self.gen)
+           ^^^^^^^^^^^^^^
+  File "/home/fiste/Noema/bridge/scripts/bridge_cycle_lock.py", line 91, in bridge_cycle_lock
+    raise SyncError(f"Bridge cycle lock is active until {existing.get('expires_at')}: {lock_path}")
+bridge_sync_common.SyncError: Bridge cycle lock is active until 2026-06-05T06:04:49.331813Z: /home/fiste/Noema/bridge/state/bridge_cycle.lock.json
+[2026-06-05T05:53:19.627545Z] [WARN] [cycle] Cycle error already reported for step=unknown repeat_count=7
+[2026-06-05T05:53:49.653438Z] [ERROR] [cycle] Bridge cycle lock is active until 2026-06-05T06:04:49.331813Z: /home/fiste/Noema/bridge/state/bridge_cycle.lock.json
+[2026-06-05T05:53:49.657833Z] [ERROR] [cycle] Traceback (most recent call last):
+  File "/home/fiste/Noema/bridge/scripts/bridge_cycle.py", line 283, in main
+    with bridge_cycle_lock(runtime_root, ttl_seconds=args.lock_ttl_seconds) as lock_path:
+  File "/usr/lib/python3.11/contextlib.py", line 137, in __enter__
+    return next(self.gen)
+           ^^^^^^^^^^^^^^
+  File "/home/fiste/Noema/bridge/scripts/bridge_cycle_lock.py", line 91, in bridge_cycle_lock
+    raise SyncError(f"Bridge cycle lock is active until {existing.get('expires_at')}: {lock_path}")
+bridge_sync_common.SyncError: Bridge cycle lock is active until 2026-06-05T06:04:49.331813Z: /home/fiste/Noema/bridge/state/bridge_cycle.lock.json
+[2026-06-05T05:53:49.660015Z] [WARN] [cycle] Cycle error already reported for step=unknown repeat_count=8
+[2026-06-05T05:54:19.686810Z] [ERROR] [cycle] Bridge cycle lock is active until 2026-06-05T06:04:49.331813Z: /home/fiste/Noema/bridge/state/bridge_cycle.lock.json
+[2026-06-05T05:54:19.690895Z] [ERROR] [cycle] Traceback (most recent call last):
+  File "/home/fiste/Noema/bridge/scripts/bridge_cycle.py", line 283, in main
+    with bridge_cycle_lock(runtime_root, ttl_seconds=args.lock_ttl_seconds) as lock_path:
+  File "/usr/lib/python3.11/contextlib.py", line 137, in __enter__
+    return next(self.gen)
+           ^^^^^^^^^^^^^^
+  File "/home/fiste/Noema/bridge/scripts/bridge_cycle_lock.py", line 91, in bridge_cycle_lock
+    raise SyncError(f"Bridge cycle lock is active until {existing.get('expires_at')}: {lock_path}")
+bridge_sync_common.SyncError: Bridge cycle lock is active until 2026-06-05T06:04:49.331813Z: /home/fiste/Noema/bridge/state/bridge_cycle.lock.json
+[2026-06-05T05:54:19.693504Z] [WARN] [cycle] Cycle error already reported for step=unknown repeat_count=9
+[2026-06-05T05:54:49.784007Z] [ERROR] [cycle] Bridge cycle lock is active until 2026-06-05T06:04:49.331813Z: /home/fiste/Noema/bridge/state/bridge_cycle.lock.json
+[2026-06-05T05:54:49.788523Z] [ERROR] [cycle] Traceback (most recent call last):
+  File "/home/fiste/Noema/bridge/scripts/bridge_cycle.py", line 283, in main
+    with bridge_cycle_lock(runtime_root, ttl_seconds=args.lock_ttl_seconds) as lock_path:
+  File "/usr/lib/python3.11/contextlib.py", line 137, in __enter__
+    return next(self.gen)
+           ^^^^^^^^^^^^^^
+  File "/home/fiste/Noema/bridge/scripts/bridge_cycle_lock.py", line 91, in bridge_cycle_lock
+    raise SyncError(f"Bridge cycle lock is active until {existing.get('expires_at')}: {lock_path}")
+bridge_sync_common.SyncError: Bridge cycle lock is active until 2026-06-05T06:04:49.331813Z: /home/fiste/Noema/bridge/state/bridge_cycle.lock.json
+[2026-06-05T05:54:49.793566Z] [WARN] [cycle] Cycle error already reported for step=unknown repeat_count=10
+[2026-06-05T05:55:19.815149Z] [ERROR] [cycle] Bridge cycle lock is active until 2026-06-05T06:04:49.331813Z: /home/fiste/Noema/bridge/state/bridge_cycle.lock.json
+[2026-06-05T05:55:19.818277Z] [ERROR] [cycle] Traceback (most recent call last):
+  File "/home/fiste/Noema/bridge/scripts/bridge_cycle.py", line 283, in main
+    with bridge_cycle_lock(runtime_root, ttl_seconds=args.lock_ttl_seconds) as lock_path:
+  File "/usr/lib/python3.11/contextlib.py", line 137, in __enter__
+    return next(self.gen)
+           ^^^^^^^^^^^^^^
+  File "/home/fiste/Noema/bridge/scripts/bridge_cycle_lock.py", line 91, in bridge_cycle_lock
+    raise SyncError(f"Bridge cycle lock is active until {existing.get('expires_at')}: {lock_path}")
+bridge_sync_common.SyncError: Bridge cycle lock is active until 2026-06-05T06:04:49.331813Z: /home/fiste/Noema/bridge/state/bridge_cycle.lock.json
+[2026-06-05T05:55:19.820248Z] [WARN] [cycle] Cycle error already reported for step=unknown repeat_count=11
+[2026-06-05T05:55:49.858603Z] [ERROR] [cycle] Bridge cycle lock is active until 2026-06-05T06:04:49.331813Z: /home/fiste/Noema/bridge/state/bridge_cycle.lock.json
+[2026-06-05T05:55:49.861780Z] [ERROR] [cycle] Traceback (most recent call last):
+  File "/home/fiste/Noema/bridge/scripts/bridge_cycle.py", line 283, in main
+    with bridge_cycle_lock(runtime_root, ttl_seconds=args.lock_ttl_seconds) as lock_path:
+  File "/usr/lib/python3.11/contextlib.py", line 137, in __enter__
+    return next(self.gen)
+           ^^^^^^^^^^^^^^
+  File "/home/fiste/Noema/bridge/scripts/bridge_cycle_lock.py", line 91, in bridge_cycle_lock
+    raise SyncError(f"Bridge cycle lock is active until {existing.get('expires_at')}: {lock_path}")
+bridge_sync_common.SyncError: Bridge cycle lock is active until 2026-06-05T06:04:49.331813Z: /home/fiste/Noema/bridge/state/bridge_cycle.lock.json
+[2026-06-05T05:55:49.863252Z] [WARN] [cycle] Cycle error already reported for step=unknown repeat_count=12
+[2026-06-05T05:56:19.892701Z] [ERROR] [cycle] Bridge cycle lock is active until 2026-06-05T06:04:49.331813Z: /home/fiste/Noema/bridge/state/bridge_cycle.lock.json
+[2026-06-05T05:56:19.896500Z] [ERROR] [cycle] Traceback (most recent call last):
+  File "/home/fiste/Noema/bridge/scripts/bridge_cycle.py", line 283, in main
+    with bridge_cycle_lock(runtime_root, ttl_seconds=args.lock_ttl_seconds) as lock_path:
+  File "/usr/lib/python3.11/contextlib.py", line 137, in __enter__
+    return next(self.gen)
+           ^^^^^^^^^^^^^^
+  File "/home/fiste/Noema/bridge/scripts/bridge_cycle_lock.py", line 91, in bridge_cycle_lock
+    raise SyncError(f"Bridge cycle lock is active until {existing.get('expires_at')}: {lock_path}")
+bridge_sync_common.SyncError: Bridge cycle lock is active until 2026-06-05T06:04:49.331813Z: /home/fiste/Noema/bridge/state/bridge_cycle.lock.json
+[2026-06-05T05:56:19.898606Z] [WARN] [cycle] Cycle error already reported for step=unknown repeat_count=13
+[2026-06-05T05:56:49.938265Z] [ERROR] [cycle] Bridge cycle lock is active until 2026-06-05T06:04:49.331813Z: /home/fiste/Noema/bridge/state/bridge_cycle.lock.json
+[2026-06-05T05:56:49.942665Z] [ERROR] [cycle] Traceback (most recent call last):
+  File "/home/fiste/Noema/bridge/scripts/bridge_cycle.py", line 283, in main
+    with bridge_cycle_lock(runtime_root, ttl_seconds=args.lock_ttl_seconds) as lock_path:
+  File "/usr/lib/python3.11/contextlib.py", line 137, in __enter__
+    return next(self.gen)
+           ^^^^^^^^^^^^^^
+  File "/home/fiste/Noema/bridge/scripts/bridge_cycle_lock.py", line 91, in bridge_cycle_lock
+    raise SyncError(f"Bridge cycle lock is active until {existing.get('expires_at')}: {lock_path}")
+bridge_sync_common.SyncError: Bridge cycle lock is active until 2026-06-05T06:04:49.331813Z: /home/fiste/Noema/bridge/state/bridge_cycle.lock.json
+[2026-06-05T05:56:49.944846Z] [WARN] [cycle] Cycle error already reported for step=unknown repeat_count=14
+[2026-06-05T05:57:19.965447Z] [ERROR] [cycle] Bridge cycle lock is active until 2026-06-05T06:04:49.331813Z: /home/fiste/Noema/bridge/state/bridge_cycle.lock.json
+[2026-06-05T05:57:19.969745Z] [ERROR] [cycle] Traceback (most recent call last):
+  File "/home/fiste/Noema/bridge/scripts/bridge_cycle.py", line 283, in main
+    with bridge_cycle_lock(runtime_root, ttl_seconds=args.lock_ttl_seconds) as lock_path:
+  File "/usr/lib/python3.11/contextlib.py", line 137, in __enter__
+    return next(self.gen)
+           ^^^^^^^^^^^^^^
+  File "/home/fiste/Noema/bridge/scripts/bridge_cycle_lock.py", line 91, in bridge_cycle_lock
+    raise SyncError(f"Bridge cycle lock is active until {existing.get('expires_at')}: {lock_path}")
+bridge_sync_common.SyncError: Bridge cycle lock is active until 2026-06-05T06:04:49.331813Z: /home/fiste/Noema/bridge/state/bridge_cycle.lock.json
+[2026-06-05T05:57:19.971499Z] [WARN] [cycle] Cycle error already reported for step=unknown repeat_count=15
+[2026-06-05T05:57:50.011190Z] [ERROR] [cycle] Bridge cycle lock is active until 2026-06-05T06:04:49.331813Z: /home/fiste/Noema/bridge/state/bridge_cycle.lock.json
+[2026-06-05T05:57:50.014393Z] [ERROR] [cycle] Traceback (most recent call last):
+  File "/home/fiste/Noema/bridge/scripts/bridge_cycle.py", line 283, in main
+    with bridge_cycle_lock(runtime_root, ttl_seconds=args.lock_ttl_seconds) as lock_path:
+  File "/usr/lib/python3.11/contextlib.py", line 137, in __enter__
+    return next(self.gen)
+           ^^^^^^^^^^^^^^
+  File "/home/fiste/Noema/bridge/scripts/bridge_cycle_lock.py", line 91, in bridge_cycle_lock
+    raise SyncError(f"Bridge cycle lock is active until {existing.get('expires_at')}: {lock_path}")
+bridge_sync_common.SyncError: Bridge cycle lock is active until 2026-06-05T06:04:49.331813Z: /home/fiste/Noema/bridge/state/bridge_cycle.lock.json
+[2026-06-05T05:57:50.016414Z] [WARN] [cycle] Cycle error already reported for step=unknown repeat_count=16
+[2026-06-05T05:58:20.043123Z] [ERROR] [cycle] Bridge cycle lock is active until 2026-06-05T06:04:49.331813Z: /home/fiste/Noema/bridge/state/bridge_cycle.lock.json
+[2026-06-05T05:58:20.047127Z] [ERROR] [cycle] Traceback (most recent call last):
+  File "/home/fiste/Noema/bridge/scripts/bridge_cycle.py", line 283, in main
+    with bridge_cycle_lock(runtime_root, ttl_seconds=args.lock_ttl_seconds) as lock_path:
+  File "/usr/lib/python3.11/contextlib.py", line 137, in __enter__
+    return next(self.gen)
+           ^^^^^^^^^^^^^^
+  File "/home/fiste/Noema/bridge/scripts/bridge_cycle_lock.py", line 91, in bridge_cycle_lock
+    raise SyncError(f"Bridge cycle lock is active until {existing.get('expires_at')}: {lock_path}")
+bridge_sync_common.SyncError: Bridge cycle lock is active until 2026-06-05T06:04:49.331813Z: /home/fiste/Noema/bridge/state/bridge_cycle.lock.json
+[2026-06-05T05:58:20.049433Z] [WARN] [cycle] Cycle error already reported for step=unknown repeat_count=17
+[2026-06-05T05:58:50.075764Z] [ERROR] [cycle] Bridge cycle lock is active until 2026-06-05T06:04:49.331813Z: /home/fiste/Noema/bridge/state/bridge_cycle.lock.json
+[2026-06-05T05:58:50.078897Z] [ERROR] [cycle] Traceback (most recent call last):
+  File "/home/fiste/Noema/bridge/scripts/bridge_cycle.py", line 283, in main
+    with bridge_cycle_lock(runtime_root, ttl_seconds=args.lock_ttl_seconds) as lock_path:
+  File "/usr/lib/python3.11/contextlib.py", line 137, in __enter__
+    return next(self.gen)
+           ^^^^^^^^^^^^^^
+  File "/home/fiste/Noema/bridge/scripts/bridge_cycle_lock.py", line 91, in bridge_cycle_lock
+    raise SyncError(f"Bridge cycle lock is active until {existing.get('expires_at')}: {lock_path}")
+bridge_sync_common.SyncError: Bridge cycle lock is active until 2026-06-05T06:04:49.331813Z: /home/fiste/Noema/bridge/state/bridge_cycle.lock.json
+[2026-06-05T05:58:50.080393Z] [WARN] [cycle] Cycle error already reported for step=unknown repeat_count=18
+[2026-06-05T05:59:20.109800Z] [ERROR] [cycle] Bridge cycle lock is active until 2026-06-05T06:04:49.331813Z: /home/fiste/Noema/bridge/state/bridge_cycle.lock.json
+[2026-06-05T05:59:20.114173Z] [ERROR] [cycle] Traceback (most recent call last):
+  File "/home/fiste/Noema/bridge/scripts/bridge_cycle.py", line 283, in main
+    with bridge_cycle_lock(runtime_root, ttl_seconds=args.lock_ttl_seconds) as lock_path:
+  File "/usr/lib/python3.11/contextlib.py", line 137, in __enter__
+    return next(self.gen)
+           ^^^^^^^^^^^^^^
+  File "/home/fiste/Noema/bridge/scripts/bridge_cycle_lock.py", line 91, in bridge_cycle_lock
+    raise SyncError(f"Bridge cycle lock is active until {existing.get('expires_at')}: {lock_path}")
+bridge_sync_common.SyncError: Bridge cycle lock is active until 2026-06-05T06:04:49.331813Z: /home/fiste/Noema/bridge/state/bridge_cycle.lock.json
+[2026-06-05T05:59:20.116631Z] [WARN] [cycle] Cycle error already reported for step=unknown repeat_count=19
+[2026-06-05T05:59:50.150556Z] [ERROR] [cycle] Bridge cycle lock is active until 2026-06-05T06:04:49.331813Z: /home/fiste/Noema/bridge/state/bridge_cycle.lock.json
+[2026-06-05T05:59:50.155424Z] [ERROR] [cycle] Traceback (most recent call last):
+  File "/home/fiste/Noema/bridge/scripts/bridge_cycle.py", line 283, in main
+    with bridge_cycle_lock(runtime_root, ttl_seconds=args.lock_ttl_seconds) as lock_path:
+  File "/usr/lib/python3.11/contextlib.py", line 137, in __enter__
+    return next(self.gen)
+           ^^^^^^^^^^^^^^
+  File "/home/fiste/Noema/bridge/scripts/bridge_cycle_lock.py", line 91, in bridge_cycle_lock
+    raise SyncError(f"Bridge cycle lock is active until {existing.get('expires_at')}: {lock_path}")
+bridge_sync_common.SyncError: Bridge cycle lock is active until 2026-06-05T06:04:49.331813Z: /home/fiste/Noema/bridge/state/bridge_cycle.lock.json
+[2026-06-05T05:59:50.157979Z] [WARN] [cycle] Cycle error already reported for step=unknown repeat_count=20
+[2026-06-05T06:00:20.195455Z] [ERROR] [cycle] Bridge cycle lock is active until 2026-06-05T06:04:49.331813Z: /home/fiste/Noema/bridge/state/bridge_cycle.lock.json
+[2026-06-05T06:00:20.199899Z] [ERROR] [cycle] Traceback (most recent call last):
+  File "/home/fiste/Noema/bridge/scripts/bridge_cycle.py", line 283, in main
+    with bridge_cycle_lock(runtime_root, ttl_seconds=args.lock_ttl_seconds) as lock_path:
+  File "/usr/lib/python3.11/contextlib.py", line 137, in __enter__
+    return next(self.gen)
+           ^^^^^^^^^^^^^^
+  File "/home/fiste/Noema/bridge/scripts/bridge_cycle_lock.py", line 91, in bridge_cycle_lock
+    raise SyncError(f"Bridge cycle lock is active until {existing.get('expires_at')}: {lock_path}")
+bridge_sync_common.SyncError: Bridge cycle lock is active until 2026-06-05T06:04:49.331813Z: /home/fiste/Noema/bridge/state/bridge_cycle.lock.json
+[2026-06-05T06:00:20.202092Z] [WARN] [cycle] Cycle error already reported for step=unknown repeat_count=21
+[2026-06-05T06:00:50.225981Z] [ERROR] [cycle] Bridge cycle lock is active until 2026-06-05T06:04:49.331813Z: /home/fiste/Noema/bridge/state/bridge_cycle.lock.json
+[2026-06-05T06:00:50.229111Z] [ERROR] [cycle] Traceback (most recent call last):
+  File "/home/fiste/Noema/bridge/scripts/bridge_cycle.py", line 283, in main
+    with bridge_cycle_lock(runtime_root, ttl_seconds=args.lock_ttl_seconds) as lock_path:
+  File "/usr/lib/python3.11/contextlib.py", line 137, in __enter__
+    return next(self.gen)
+           ^^^^^^^^^^^^^^
+  File "/home/fiste/Noema/bridge/scripts/bridge_cycle_lock.py", line 91, in bridge_cycle_lock
+    raise SyncError(f"Bridge cycle lock is active until {existing.get('expires_at')}: {lock_path}")
+bridge_sync_common.SyncError: Bridge cycle lock is active until 2026-06-05T06:04:49.331813Z: /home/fiste/Noema/bridge/state/bridge_cycle.lock.json
+[2026-06-05T06:00:50.231070Z] [WARN] [cycle] Cycle error already reported for step=unknown repeat_count=22
+[2026-06-05T06:01:20.276689Z] [ERROR] [cycle] Bridge cycle lock is active until 2026-06-05T06:04:49.331813Z: /home/fiste/Noema/bridge/state/bridge_cycle.lock.json
+[2026-06-05T06:01:20.280008Z] [ERROR] [cycle] Traceback (most recent call last):
+  File "/home/fiste/Noema/bridge/scripts/bridge_cycle.py", line 283, in main
+    with bridge_cycle_lock(runtime_root, ttl_seconds=args.lock_ttl_seconds) as lock_path:
+  File "/usr/lib/python3.11/contextlib.py", line 137, in __enter__
+    return next(self.gen)
+           ^^^^^^^^^^^^^^
+  File "/home/fiste/Noema/bridge/scripts/bridge_cycle_lock.py", line 91, in bridge_cycle_lock
+    raise SyncError(f"Bridge cycle lock is active until {existing.get('expires_at')}: {lock_path}")
+bridge_sync_common.SyncError: Bridge cycle lock is active until 2026-06-05T06:04:49.331813Z: /home/fiste/Noema/bridge/state/bridge_cycle.lock.json
+[2026-06-05T06:01:20.281523Z] [WARN] [cycle] Cycle error already reported for step=unknown repeat_count=23
+[2026-06-05T06:01:50.304653Z] [ERROR] [cycle] Bridge cycle lock is active until 2026-06-05T06:04:49.331813Z: /home/fiste/Noema/bridge/state/bridge_cycle.lock.json
+[2026-06-05T06:01:50.307926Z] [ERROR] [cycle] Traceback (most recent call last):
+  File "/home/fiste/Noema/bridge/scripts/bridge_cycle.py", line 283, in main
+    with bridge_cycle_lock(runtime_root, ttl_seconds=args.lock_ttl_seconds) as lock_path:
+  File "/usr/lib/python3.11/contextlib.py", line 137, in __enter__
+    return next(self.gen)
+           ^^^^^^^^^^^^^^
+  File "/home/fiste/Noema/bridge/scripts/bridge_cycle_lock.py", line 91, in bridge_cycle_lock
+    raise SyncError(f"Bridge cycle lock is active until {existing.get('expires_at')}: {lock_path}")
+bridge_sync_common.SyncError: Bridge cycle lock is active until 2026-06-05T06:04:49.331813Z: /home/fiste/Noema/bridge/state/bridge_cycle.lock.json
+[2026-06-05T06:01:50.309882Z] [WARN] [cycle] Cycle error already reported for step=unknown repeat_count=24
+[2026-06-05T06:02:20.349262Z] [ERROR] [cycle] Bridge cycle lock is active until 2026-06-05T06:04:49.331813Z: /home/fiste/Noema/bridge/state/bridge_cycle.lock.json
+[2026-06-05T06:02:20.354014Z] [ERROR] [cycle] Traceback (most recent call last):
+  File "/home/fiste/Noema/bridge/scripts/bridge_cycle.py", line 283, in main
+    with bridge_cycle_lock(runtime_root, ttl_seconds=args.lock_ttl_seconds) as lock_path:
+  File "/usr/lib/python3.11/contextlib.py", line 137, in __enter__
+    return next(self.gen)
+           ^^^^^^^^^^^^^^
+  File "/home/fiste/Noema/bridge/scripts/bridge_cycle_lock.py", line 91, in bridge_cycle_lock
+    raise SyncError(f"Bridge cycle lock is active until {existing.get('expires_at')}: {lock_path}")
+bridge_sync_common.SyncError: Bridge cycle lock is active until 2026-06-05T06:04:49.331813Z: /home/fiste/Noema/bridge/state/bridge_cycle.lock.json
+[2026-06-05T06:02:20.356489Z] [WARN] [cycle] Cycle error already reported for step=unknown repeat_count=25
+[2026-06-05T06:02:50.390672Z] [ERROR] [cycle] Bridge cycle lock is active until 2026-06-05T06:04:49.331813Z: /home/fiste/Noema/bridge/state/bridge_cycle.lock.json
+[2026-06-05T06:02:50.393804Z] [ERROR] [cycle] Traceback (most recent call last):
+  File "/home/fiste/Noema/bridge/scripts/bridge_cycle.py", line 283, in main
+    with bridge_cycle_lock(runtime_root, ttl_seconds=args.lock_ttl_seconds) as lock_path:
+  File "/usr/lib/python3.11/contextlib.py", line 137, in __enter__
+    return next(self.gen)
+           ^^^^^^^^^^^^^^
+  File "/home/fiste/Noema/bridge/scripts/bridge_cycle_lock.py", line 91, in bridge_cycle_lock
+    raise SyncError(f"Bridge cycle lock is active until {existing.get('expires_at')}: {lock_path}")
+bridge_sync_common.SyncError: Bridge cycle lock is active until 2026-06-05T06:04:49.331813Z: /home/fiste/Noema/bridge/state/bridge_cycle.lock.json
+[2026-06-05T06:02:50.396079Z] [WARN] [cycle] Cycle error already reported for step=unknown repeat_count=26
+[2026-06-05T06:03:20.431706Z] [ERROR] [cycle] Bridge cycle lock is active until 2026-06-05T06:04:49.331813Z: /home/fiste/Noema/bridge/state/bridge_cycle.lock.json
+[2026-06-05T06:03:20.436600Z] [ERROR] [cycle] Traceback (most recent call last):
+  File "/home/fiste/Noema/bridge/scripts/bridge_cycle.py", line 283, in main
+    with bridge_cycle_lock(runtime_root, ttl_seconds=args.lock_ttl_seconds) as lock_path:
+  File "/usr/lib/python3.11/contextlib.py", line 137, in __enter__
+    return next(self.gen)
+           ^^^^^^^^^^^^^^
+  File "/home/fiste/Noema/bridge/scripts/bridge_cycle_lock.py", line 91, in bridge_cycle_lock
+    raise SyncError(f"Bridge cycle lock is active until {existing.get('expires_at')}: {lock_path}")
+bridge_sync_common.SyncError: Bridge cycle lock is active until 2026-06-05T06:04:49.331813Z: /home/fiste/Noema/bridge/state/bridge_cycle.lock.json
+[2026-06-05T06:03:20.438996Z] [WARN] [cycle] Cycle error already reported for step=unknown repeat_count=27
+[2026-06-05T06:03:50.459466Z] [ERROR] [cycle] Bridge cycle lock is active until 2026-06-05T06:04:49.331813Z: /home/fiste/Noema/bridge/state/bridge_cycle.lock.json
+[2026-06-05T06:03:50.464183Z] [ERROR] [cycle] Traceback (most recent call last):
+  File "/home/fiste/Noema/bridge/scripts/bridge_cycle.py", line 283, in main
+    with bridge_cycle_lock(runtime_root, ttl_seconds=args.lock_ttl_seconds) as lock_path:
+  File "/usr/lib/python3.11/contextlib.py", line 137, in __enter__
+    return next(self.gen)
+           ^^^^^^^^^^^^^^
+  File "/home/fiste/Noema/bridge/scripts/bridge_cycle_lock.py", line 91, in bridge_cycle_lock
+    raise SyncError(f"Bridge cycle lock is active until {existing.get('expires_at')}: {lock_path}")
+bridge_sync_common.SyncError: Bridge cycle lock is active until 2026-06-05T06:04:49.331813Z: /home/fiste/Noema/bridge/state/bridge_cycle.lock.json
+[2026-06-05T06:03:50.466770Z] [WARN] [cycle] Cycle error already reported for step=unknown repeat_count=28
+[2026-06-05T06:04:20.501489Z] [ERROR] [cycle] Bridge cycle lock is active until 2026-06-05T06:04:49.331813Z: /home/fiste/Noema/bridge/state/bridge_cycle.lock.json
+[2026-06-05T06:04:20.504624Z] [ERROR] [cycle] Traceback (most recent call last):
+  File "/home/fiste/Noema/bridge/scripts/bridge_cycle.py", line 283, in main
+    with bridge_cycle_lock(runtime_root, ttl_seconds=args.lock_ttl_seconds) as lock_path:
+  File "/usr/lib/python3.11/contextlib.py", line 137, in __enter__
+    return next(self.gen)
+           ^^^^^^^^^^^^^^
+  File "/home/fiste/Noema/bridge/scripts/bridge_cycle_lock.py", line 91, in bridge_cycle_lock
+    raise SyncError(f"Bridge cycle lock is active until {existing.get('expires_at')}: {lock_path}")
+bridge_sync_common.SyncError: Bridge cycle lock is active until 2026-06-05T06:04:49.331813Z: /home/fiste/Noema/bridge/state/bridge_cycle.lock.json
+[2026-06-05T06:04:20.506880Z] [WARN] [cycle] Cycle error already reported for step=unknown repeat_count=29
+[2026-06-05T06:04:50.521635Z] [INFO] [cycle] Bridge cycle lock acquired: /home/fiste/Noema/bridge/state/bridge_cycle.lock.json
+[2026-06-05T06:04:50.523230Z] [INFO] [cycle] == inbound sync ==
+[2026-06-05T06:04:50.995010Z] [INFO] [cycle] Fetching origin main...
 From https://github.com/fisteque/symnozein
  * branch            main       -> FETCH_HEAD
 No inbound changes for body/bridge/inbox/messages.
-[2026-06-04T14:13:34.631118Z] [INFO] [cycle] == bridge agent ==
-[2026-06-04T14:13:34.697618Z] [INFO] === Bridge agent v2 start ===
-[2026-06-04T14:13:34.697844Z] [INFO] Bridge root: /home/fiste/Noema/bridge
-[2026-06-04T14:13:34.697962Z] [INFO] Body root: /home/fiste/Noema/symnozein/body
-[2026-06-04T14:13:34.698586Z] [INFO] Body state unchanged: awake=True status=normal_operation
-[2026-06-04T14:13:34.701390Z] [INFO] Inbox message files found: 2
-[2026-06-04T14:13:34.702006Z] [INFO] Codex inbox message files observed: 15 latest=msg-20260604-codex-body-status-ping-001.md
-[2026-06-04T14:13:34.702119Z] [INFO] Codex outbox message files observed: 12 latest=2026-06-03T214500Z_codex-response-msg-20260603-codex-extend-bridge-tail-001.md
-[2026-06-04T14:13:34.702924Z] [INFO] Already processed: msg-20260524-task-001
-[2026-06-04T14:13:34.703833Z] [INFO] Already processed: msg-20260527-task-sync-body-001
-[2026-06-04T14:13:34.705080Z] [INFO] Pending message count this run: 0
-[2026-06-04T14:13:34.705194Z] [INFO] Pending message count remaining: 0
-[2026-06-04T14:13:34.705291Z] [INFO] Processed message count: 0
-[2026-06-04T14:13:34.705384Z] [INFO] === Bridge agent v2 end ===
-[2026-06-04T14:13:34.722540Z] [INFO] [cycle] [2026-06-04T14:13:34.697618Z] [INFO] === Bridge agent v2 start ===
-[2026-06-04T14:13:34.697844Z] [INFO] Bridge root: /home/fiste/Noema/bridge
-[2026-06-04T14:13:34.697962Z] [INFO] Body root: /home/fiste/Noema/symnozein/body
-[2026-06-04T14:13:34.698586Z] [INFO] Body state unchanged: awake=True status=normal_operation
-[2026-06-04T14:13:34.701390Z] [INFO] Inbox message files found: 2
-[2026-06-04T14:13:34.702006Z] [INFO] Codex inbox message files observed: 15 latest=msg-20260604-codex-body-status-ping-001.md
-[2026-06-04T14:13:34.702119Z] [INFO] Codex outbox message files observed: 12 latest=2026-06-03T214500Z_codex-response-msg-20260603-codex-extend-bridge-tail-001.md
-[2026-06-04T14:13:34.702924Z] [INFO] Already processed: msg-20260524-task-001
-[2026-06-04T14:13:34.703833Z] [INFO] Already processed: msg-20260527-task-sync-body-001
-[2026-06-04T14:13:34.705080Z] [INFO] Pending message count this run: 0
-[2026-06-04T14:13:34.705194Z] [INFO] Pending message count remaining: 0
-[2026-06-04T14:13:34.705291Z] [INFO] Processed message count: 0
-[2026-06-04T14:13:34.705384Z] [INFO] === Bridge agent v2 end ===
-[2026-06-04T14:13:34.723245Z] [INFO] [cycle] == write bridge summary ==
-[2026-06-04T14:13:34.784883Z] [INFO] [cycle] Wrote bridge summary: /home/fiste/Noema/symnozein/body/bridge/state_summary/latest.md
-[2026-06-04T14:13:34.785536Z] [INFO] [cycle] == outbound sync ==
-[2026-06-04T14:13:35.324662Z] [INFO] [cycle] Optional source missing, skipped: /home/fiste/Noema/bridge/outbox/messages
-Optional source missing, skipped: /home/fiste/Noema/bridge/state_summary
-Writing /home/fiste/Noema/symnozein/body/bridge/logs/bridge_tail.log
-Mirrored log tail /home/fiste/Noema/bridge/logs/bridge.log -> /home/fiste/Noema/symnozein/body/bridge/logs/bridge_tail.log. Changed files: 1
-Scripts mirror complete. Changed files: 0
-Staged outbound changes:
-M	body/bridge/logs/bridge_tail.log
-M	body/bridge/state_summary/latest.md
-Commit message in code: Sync RPi bridge outbound state
-From https://github.com/fisteque/symnozein
- * branch            main       -> FETCH_HEAD
-Local branch is not behind remote; no pre-push rebase needed.
-Only logs/state_summary changed; not committing this cycle.
-[2026-06-04T14:13:35.324848Z] [INFO] [cycle] Bridge cycle complete.
-[2026-06-04T14:14:04.203762Z] [INFO] [cycle] Bridge cycle lock acquired: /home/fiste/Noema/bridge/state/bridge_cycle.lock.json
-[2026-06-04T14:14:04.206241Z] [INFO] [cycle] == inbound sync ==
-[2026-06-04T14:14:04.713586Z] [INFO] [cycle] Fetching origin main...
-From https://github.com/fisteque/symnozein
- * branch            main       -> FETCH_HEAD
-No inbound changes for body/bridge/inbox/messages.
-[2026-06-04T14:14:04.714513Z] [INFO] [cycle] == bridge agent ==
-[2026-06-04T14:14:04.807730Z] [INFO] === Bridge agent v2 start ===
-[2026-06-04T14:14:04.808044Z] [INFO] Bridge root: /home/fiste/Noema/bridge
-[2026-06-04T14:14:04.808245Z] [INFO] Body root: /home/fiste/Noema/symnozein/body
-[2026-06-04T14:14:04.809035Z] [INFO] Body state unchanged: awake=True status=normal_operation
-[2026-06-04T14:14:04.812090Z] [INFO] Inbox message files found: 2
-[2026-06-04T14:14:04.812750Z] [INFO] Codex inbox message files observed: 15 latest=msg-20260604-codex-body-status-ping-001.md
-[2026-06-04T14:14:04.812911Z] [INFO] Codex outbox message files observed: 12 latest=2026-06-03T214500Z_codex-response-msg-20260603-codex-extend-bridge-tail-001.md
-[2026-06-04T14:14:04.813798Z] [INFO] Already processed: msg-20260524-task-001
-[2026-06-04T14:14:04.814751Z] [INFO] Already processed: msg-20260527-task-sync-body-001
-[2026-06-04T14:14:04.816683Z] [INFO] Pending message count this run: 0
-[2026-06-04T14:14:04.816843Z] [INFO] Pending message count remaining: 0
-[2026-06-04T14:14:04.817003Z] [INFO] Processed message count: 0
-[2026-06-04T14:14:04.817166Z] [INFO] === Bridge agent v2 end ===
-[2026-06-04T14:14:04.834298Z] [INFO] [cycle] [2026-06-04T14:14:04.807730Z] [INFO] === Bridge agent v2 start ===
-[2026-06-04T14:14:04.808044Z] [INFO] Bridge root: /home/fiste/Noema/bridge
-[2026-06-04T14:14:04.808245Z] [INFO] Body root: /home/fiste/Noema/symnozein/body
-[2026-06-04T14:14:04.809035Z] [INFO] Body state unchanged: awake=True status=normal_operation
-[2026-06-04T14:14:04.812090Z] [INFO] Inbox message files found: 2
-[2026-06-04T14:14:04.812750Z] [INFO] Codex inbox message files observed: 15 latest=msg-20260604-codex-body-status-ping-001.md
-[2026-06-04T14:14:04.812911Z] [INFO] Codex outbox message files observed: 12 latest=2026-06-03T214500Z_codex-response-msg-20260603-codex-extend-bridge-tail-001.md
-[2026-06-04T14:14:04.813798Z] [INFO] Already processed: msg-20260524-task-001
-[2026-06-04T14:14:04.814751Z] [INFO] Already processed: msg-20260527-task-sync-body-001
-[2026-06-04T14:14:04.816683Z] [INFO] Pending message count this run: 0
-[2026-06-04T14:14:04.816843Z] [INFO] Pending message count remaining: 0
-[2026-06-04T14:14:04.817003Z] [INFO] Processed message count: 0
-[2026-06-04T14:14:04.817166Z] [INFO] === Bridge agent v2 end ===
-[2026-06-04T14:14:04.834992Z] [INFO] [cycle] == write bridge summary ==
-[2026-06-04T14:14:04.897340Z] [INFO] [cycle] Wrote bridge summary: /home/fiste/Noema/symnozein/body/bridge/state_summary/latest.md
-[2026-06-04T14:14:04.897991Z] [INFO] [cycle] == outbound sync ==
-[2026-06-04T14:14:05.421367Z] [INFO] [cycle] Optional source missing, skipped: /home/fiste/Noema/bridge/outbox/messages
-Optional source missing, skipped: /home/fiste/Noema/bridge/state_summary
-Writing /home/fiste/Noema/symnozein/body/bridge/logs/bridge_tail.log
-Mirrored log tail /home/fiste/Noema/bridge/logs/bridge.log -> /home/fiste/Noema/symnozein/body/bridge/logs/bridge_tail.log. Changed files: 1
-Scripts mirror complete. Changed files: 0
-Staged outbound changes:
-M	body/bridge/logs/bridge_tail.log
-M	body/bridge/state_summary/latest.md
-Commit message in code: Sync RPi bridge outbound state
-From https://github.com/fisteque/symnozein
- * branch            main       -> FETCH_HEAD
-Local branch is not behind remote; no pre-push rebase needed.
-Only logs/state_summary changed; not committing this cycle.
-[2026-06-04T14:14:05.421556Z] [INFO] [cycle] Bridge cycle complete.
-[2026-06-04T14:14:34.238531Z] [INFO] [cycle] Bridge cycle lock acquired: /home/fiste/Noema/bridge/state/bridge_cycle.lock.json
-[2026-06-04T14:14:34.240060Z] [INFO] [cycle] == inbound sync ==
-[2026-06-04T14:14:34.750552Z] [INFO] [cycle] Fetching origin main...
-From https://github.com/fisteque/symnozein
- * branch            main       -> FETCH_HEAD
-No inbound changes for body/bridge/inbox/messages.
-[2026-06-04T14:14:34.751512Z] [INFO] [cycle] == bridge agent ==
-[2026-06-04T14:14:34.851504Z] [INFO] === Bridge agent v2 start ===
-[2026-06-04T14:14:34.851803Z] [INFO] Bridge root: /home/fiste/Noema/bridge
-[2026-06-04T14:14:34.851985Z] [INFO] Body root: /home/fiste/Noema/symnozein/body
-[2026-06-04T14:14:34.852899Z] [INFO] Body state unchanged: awake=True status=normal_operation
-[2026-06-04T14:14:34.857020Z] [INFO] Inbox message files found: 2
-[2026-06-04T14:14:34.857947Z] [INFO] Codex inbox message files observed: 15 latest=msg-20260604-codex-body-status-ping-001.md
-[2026-06-04T14:14:34.858114Z] [INFO] Codex outbox message files observed: 12 latest=2026-06-03T214500Z_codex-response-msg-20260603-codex-extend-bridge-tail-001.md
-[2026-06-04T14:14:34.859360Z] [INFO] Already processed: msg-20260524-task-001
-[2026-06-04T14:14:34.860721Z] [INFO] Already processed: msg-20260527-task-sync-body-001
-[2026-06-04T14:14:34.862230Z] [INFO] Pending message count this run: 0
-[2026-06-04T14:14:34.862406Z] [INFO] Pending message count remaining: 0
-[2026-06-04T14:14:34.862557Z] [INFO] Processed message count: 0
-[2026-06-04T14:14:34.862704Z] [INFO] === Bridge agent v2 end ===
-[2026-06-04T14:14:34.884204Z] [INFO] [cycle] [2026-06-04T14:14:34.851504Z] [INFO] === Bridge agent v2 start ===
-[2026-06-04T14:14:34.851803Z] [INFO] Bridge root: /home/fiste/Noema/bridge
-[2026-06-04T14:14:34.851985Z] [INFO] Body root: /home/fiste/Noema/symnozein/body
-[2026-06-04T14:14:34.852899Z] [INFO] Body state unchanged: awake=True status=normal_operation
-[2026-06-04T14:14:34.857020Z] [INFO] Inbox message files found: 2
-[2026-06-04T14:14:34.857947Z] [INFO] Codex inbox message files observed: 15 latest=msg-20260604-codex-body-status-ping-001.md
-[2026-06-04T14:14:34.858114Z] [INFO] Codex outbox message files observed: 12 latest=2026-06-03T214500Z_codex-response-msg-20260603-codex-extend-bridge-tail-001.md
-[2026-06-04T14:14:34.859360Z] [INFO] Already processed: msg-20260524-task-001
-[2026-06-04T14:14:34.860721Z] [INFO] Already processed: msg-20260527-task-sync-body-001
-[2026-06-04T14:14:34.862230Z] [INFO] Pending message count this run: 0
-[2026-06-04T14:14:34.862406Z] [INFO] Pending message count remaining: 0
-[2026-06-04T14:14:34.862557Z] [INFO] Processed message count: 0
-[2026-06-04T14:14:34.862704Z] [INFO] === Bridge agent v2 end ===
-[2026-06-04T14:14:34.885124Z] [INFO] [cycle] == write bridge summary ==
-[2026-06-04T14:14:34.954999Z] [INFO] [cycle] Wrote bridge summary: /home/fiste/Noema/symnozein/body/bridge/state_summary/latest.md
-[2026-06-04T14:14:34.955748Z] [INFO] [cycle] == outbound sync ==
-[2026-06-04T14:14:35.476157Z] [INFO] [cycle] Optional source missing, skipped: /home/fiste/Noema/bridge/outbox/messages
-Optional source missing, skipped: /home/fiste/Noema/bridge/state_summary
-Writing /home/fiste/Noema/symnozein/body/bridge/logs/bridge_tail.log
-Mirrored log tail /home/fiste/Noema/bridge/logs/bridge.log -> /home/fiste/Noema/symnozein/body/bridge/logs/bridge_tail.log. Changed files: 1
-Scripts mirror complete. Changed files: 0
-Staged outbound changes:
-M	body/bridge/logs/bridge_tail.log
-M	body/bridge/state_summary/latest.md
-Commit message in code: Sync RPi bridge outbound state
-From https://github.com/fisteque/symnozein
- * branch            main       -> FETCH_HEAD
-Local branch is not behind remote; no pre-push rebase needed.
-Only logs/state_summary changed; not committing this cycle.
-[2026-06-04T14:14:35.476346Z] [INFO] [cycle] Bridge cycle complete.
-[2026-06-04T14:15:04.273534Z] [INFO] [cycle] Bridge cycle lock acquired: /home/fiste/Noema/bridge/state/bridge_cycle.lock.json
-[2026-06-04T14:15:04.275170Z] [INFO] [cycle] == inbound sync ==
-[2026-06-04T14:15:04.789605Z] [INFO] [cycle] Fetching origin main...
-From https://github.com/fisteque/symnozein
- * branch            main       -> FETCH_HEAD
-No inbound changes for body/bridge/inbox/messages.
-[2026-06-04T14:15:04.790270Z] [INFO] [cycle] == bridge agent ==
-[2026-06-04T14:15:04.856609Z] [INFO] === Bridge agent v2 start ===
-[2026-06-04T14:15:04.856823Z] [INFO] Bridge root: /home/fiste/Noema/bridge
-[2026-06-04T14:15:04.856936Z] [INFO] Body root: /home/fiste/Noema/symnozein/body
-[2026-06-04T14:15:04.857551Z] [INFO] Body state unchanged: awake=True status=normal_operation
-[2026-06-04T14:15:04.860279Z] [INFO] Inbox message files found: 2
-[2026-06-04T14:15:04.860884Z] [INFO] Codex inbox message files observed: 15 latest=msg-20260604-codex-body-status-ping-001.md
-[2026-06-04T14:15:04.860990Z] [INFO] Codex outbox message files observed: 12 latest=2026-06-03T214500Z_codex-response-msg-20260603-codex-extend-bridge-tail-001.md
-[2026-06-04T14:15:04.861767Z] [INFO] Already processed: msg-20260524-task-001
-[2026-06-04T14:15:04.862624Z] [INFO] Already processed: msg-20260527-task-sync-body-001
-[2026-06-04T14:15:04.864317Z] [INFO] Pending message count this run: 0
-[2026-06-04T14:15:04.864430Z] [INFO] Pending message count remaining: 0
-[2026-06-04T14:15:04.864524Z] [INFO] Processed message count: 0
-[2026-06-04T14:15:04.864614Z] [INFO] === Bridge agent v2 end ===
-[2026-06-04T14:15:04.881087Z] [INFO] [cycle] [2026-06-04T14:15:04.856609Z] [INFO] === Bridge agent v2 start ===
-[2026-06-04T14:15:04.856823Z] [INFO] Bridge root: /home/fiste/Noema/bridge
-[2026-06-04T14:15:04.856936Z] [INFO] Body root: /home/fiste/Noema/symnozein/body
-[2026-06-04T14:15:04.857551Z] [INFO] Body state unchanged: awake=True status=normal_operation
-[2026-06-04T14:15:04.860279Z] [INFO] Inbox message files found: 2
-[2026-06-04T14:15:04.860884Z] [INFO] Codex inbox message files observed: 15 latest=msg-20260604-codex-body-status-ping-001.md
-[2026-06-04T14:15:04.860990Z] [INFO] Codex outbox message files observed: 12 latest=2026-06-03T214500Z_codex-response-msg-20260603-codex-extend-bridge-tail-001.md
-[2026-06-04T14:15:04.861767Z] [INFO] Already processed: msg-20260524-task-001
-[2026-06-04T14:15:04.862624Z] [INFO] Already processed: msg-20260527-task-sync-body-001
-[2026-06-04T14:15:04.864317Z] [INFO] Pending message count this run: 0
-[2026-06-04T14:15:04.864430Z] [INFO] Pending message count remaining: 0
-[2026-06-04T14:15:04.864524Z] [INFO] Processed message count: 0
-[2026-06-04T14:15:04.864614Z] [INFO] === Bridge agent v2 end ===
-[2026-06-04T14:15:04.881760Z] [INFO] [cycle] == write bridge summary ==
-[2026-06-04T14:15:04.943428Z] [INFO] [cycle] Wrote bridge summary: /home/fiste/Noema/symnozein/body/bridge/state_summary/latest.md
-[2026-06-04T14:15:04.944088Z] [INFO] [cycle] == outbound sync ==
-[2026-06-04T14:15:05.483784Z] [INFO] [cycle] Optional source missing, skipped: /home/fiste/Noema/bridge/outbox/messages
-Optional source missing, skipped: /home/fiste/Noema/bridge/state_summary
-Rotating /home/fiste/Noema/bridge/logs/bridge.log: archive=/home/fiste/Noema/bridge/logs/archive/2026-06/bridge-20260604T141504Z-2036-lines.log archive_lines=2036 retain_lines=3000
-Writing /home/fiste/Noema/symnozein/body/bridge/logs/bridge_tail.log
-Mirrored log tail /home/fiste/Noema/bridge/logs/bridge.log -> /home/fiste/Noema/symnozein/body/bridge/logs/bridge_tail.log. Changed files: 1
-Scripts mirror complete. Changed files: 0
-Staged outbound changes:
-M	body/bridge/logs/bridge_tail.log
-M	body/bridge/state_summary/latest.md
-Commit message in code: Sync RPi bridge outbound state
-From https://github.com/fisteque/symnozein
- * branch            main       -> FETCH_HEAD
-Local branch is not behind remote; no pre-push rebase needed.
-Only logs/state_summary changed; not committing this cycle.
-[2026-06-04T14:15:05.483975Z] [INFO] [cycle] Bridge cycle complete.
-[2026-06-04T14:15:34.318122Z] [INFO] [cycle] Bridge cycle lock acquired: /home/fiste/Noema/bridge/state/bridge_cycle.lock.json
-[2026-06-04T14:15:34.321275Z] [INFO] [cycle] == inbound sync ==
-[2026-06-04T14:15:34.852208Z] [INFO] [cycle] Fetching origin main...
-From https://github.com/fisteque/symnozein
- * branch            main       -> FETCH_HEAD
-No inbound changes for body/bridge/inbox/messages.
-[2026-06-04T14:15:34.853267Z] [INFO] [cycle] == bridge agent ==
-[2026-06-04T14:15:34.944108Z] [INFO] === Bridge agent v2 start ===
-[2026-06-04T14:15:34.944464Z] [INFO] Bridge root: /home/fiste/Noema/bridge
-[2026-06-04T14:15:34.944715Z] [INFO] Body root: /home/fiste/Noema/symnozein/body
-[2026-06-04T14:15:34.945569Z] [INFO] Body state unchanged: awake=True status=normal_operation
-[2026-06-04T14:15:34.949204Z] [INFO] Inbox message files found: 2
-[2026-06-04T14:15:34.949951Z] [INFO] Codex inbox message files observed: 15 latest=msg-20260604-codex-body-status-ping-001.md
-[2026-06-04T14:15:34.950082Z] [INFO] Codex outbox message files observed: 12 latest=2026-06-03T214500Z_codex-response-msg-20260603-codex-extend-bridge-tail-001.md
-[2026-06-04T14:15:34.951086Z] [INFO] Already processed: msg-20260524-task-001
-[2026-06-04T14:15:34.952188Z] [INFO] Already processed: msg-20260527-task-sync-body-001
-[2026-06-04T14:15:34.953543Z] [INFO] Pending message count this run: 0
-[2026-06-04T14:15:34.953680Z] [INFO] Pending message count remaining: 0
-[2026-06-04T14:15:34.953797Z] [INFO] Processed message count: 0
-[2026-06-04T14:15:34.953910Z] [INFO] === Bridge agent v2 end ===
-[2026-06-04T14:15:34.972753Z] [INFO] [cycle] [2026-06-04T14:15:34.944108Z] [INFO] === Bridge agent v2 start ===
-[2026-06-04T14:15:34.944464Z] [INFO] Bridge root: /home/fiste/Noema/bridge
-[2026-06-04T14:15:34.944715Z] [INFO] Body root: /home/fiste/Noema/symnozein/body
-[2026-06-04T14:15:34.945569Z] [INFO] Body state unchanged: awake=True status=normal_operation
-[2026-06-04T14:15:34.949204Z] [INFO] Inbox message files found: 2
-[2026-06-04T14:15:34.949951Z] [INFO] Codex inbox message files observed: 15 latest=msg-20260604-codex-body-status-ping-001.md
-[2026-06-04T14:15:34.950082Z] [INFO] Codex outbox message files observed: 12 latest=2026-06-03T214500Z_codex-response-msg-20260603-codex-extend-bridge-tail-001.md
-[2026-06-04T14:15:34.951086Z] [INFO] Already processed: msg-20260524-task-001
-[2026-06-04T14:15:34.952188Z] [INFO] Already processed: msg-20260527-task-sync-body-001
-[2026-06-04T14:15:34.953543Z] [INFO] Pending message count this run: 0
-[2026-06-04T14:15:34.953680Z] [INFO] Pending message count remaining: 0
-[2026-06-04T14:15:34.953797Z] [INFO] Processed message count: 0
-[2026-06-04T14:15:34.953910Z] [INFO] === Bridge agent v2 end ===
-[2026-06-04T14:15:34.973552Z] [INFO] [cycle] == write bridge summary ==
-[2026-06-04T14:15:35.038819Z] [INFO] [cycle] Wrote bridge summary: /home/fiste/Noema/symnozein/body/bridge/state_summary/latest.md
-[2026-06-04T14:15:35.039543Z] [INFO] [cycle] == outbound sync ==
-[2026-06-04T14:15:35.558258Z] [INFO] [cycle] Optional source missing, skipped: /home/fiste/Noema/bridge/outbox/messages
-Optional source missing, skipped: /home/fiste/Noema/bridge/state_summary
-Writing /home/fiste/Noema/symnozein/body/bridge/logs/bridge_tail.log
-Mirrored log tail /home/fiste/Noema/bridge/logs/bridge.log -> /home/fiste/Noema/symnozein/body/bridge/logs/bridge_tail.log. Changed files: 1
-Scripts mirror complete. Changed files: 0
-Staged outbound changes:
-M	body/bridge/logs/bridge_tail.log
-M	body/bridge/state_summary/latest.md
-Commit message in code: Sync RPi bridge outbound state
-From https://github.com/fisteque/symnozein
- * branch            main       -> FETCH_HEAD
-Local branch is not behind remote; no pre-push rebase needed.
-Only logs/state_summary changed; not committing this cycle.
-[2026-06-04T14:15:35.558450Z] [INFO] [cycle] Bridge cycle complete.
-[2026-06-04T14:16:04.341269Z] [INFO] [cycle] Bridge cycle lock acquired: /home/fiste/Noema/bridge/state/bridge_cycle.lock.json
-[2026-06-04T14:16:04.343756Z] [INFO] [cycle] == inbound sync ==
-[2026-06-04T14:16:04.816041Z] [INFO] [cycle] Fetching origin main...
-From https://github.com/fisteque/symnozein
- * branch            main       -> FETCH_HEAD
-No inbound changes for body/bridge/inbox/messages.
-[2026-06-04T14:16:04.816775Z] [INFO] [cycle] == bridge agent ==
-[2026-06-04T14:16:04.889035Z] [INFO] === Bridge agent v2 start ===
-[2026-06-04T14:16:04.889258Z] [INFO] Bridge root: /home/fiste/Noema/bridge
-[2026-06-04T14:16:04.889385Z] [INFO] Body root: /home/fiste/Noema/symnozein/body
-[2026-06-04T14:16:04.890039Z] [INFO] Body state unchanged: awake=True status=normal_operation
-[2026-06-04T14:16:04.892834Z] [INFO] Inbox message files found: 2
-[2026-06-04T14:16:04.893447Z] [INFO] Codex inbox message files observed: 15 latest=msg-20260604-codex-body-status-ping-001.md
-[2026-06-04T14:16:04.893560Z] [INFO] Codex outbox message files observed: 12 latest=2026-06-03T214500Z_codex-response-msg-20260603-codex-extend-bridge-tail-001.md
-[2026-06-04T14:16:04.894709Z] [INFO] Already processed: msg-20260524-task-001
-[2026-06-04T14:16:04.895746Z] [INFO] Already processed: msg-20260527-task-sync-body-001
-[2026-06-04T14:16:04.917150Z] [INFO] Pending message count this run: 0
-[2026-06-04T14:16:04.917336Z] [INFO] Pending message count remaining: 0
-[2026-06-04T14:16:04.917445Z] [INFO] Processed message count: 0
-[2026-06-04T14:16:04.917539Z] [INFO] === Bridge agent v2 end ===
-[2026-06-04T14:16:04.935258Z] [INFO] [cycle] [2026-06-04T14:16:04.889035Z] [INFO] === Bridge agent v2 start ===
-[2026-06-04T14:16:04.889258Z] [INFO] Bridge root: /home/fiste/Noema/bridge
-[2026-06-04T14:16:04.889385Z] [INFO] Body root: /home/fiste/Noema/symnozein/body
-[2026-06-04T14:16:04.890039Z] [INFO] Body state unchanged: awake=True status=normal_operation
-[2026-06-04T14:16:04.892834Z] [INFO] Inbox message files found: 2
-[2026-06-04T14:16:04.893447Z] [INFO] Codex inbox message files observed: 15 latest=msg-20260604-codex-body-status-ping-001.md
-[2026-06-04T14:16:04.893560Z] [INFO] Codex outbox message files observed: 12 latest=2026-06-03T214500Z_codex-response-msg-20260603-codex-extend-bridge-tail-001.md
-[2026-06-04T14:16:04.894709Z] [INFO] Already processed: msg-20260524-task-001
-[2026-06-04T14:16:04.895746Z] [INFO] Already processed: msg-20260527-task-sync-body-001
-[2026-06-04T14:16:04.917150Z] [INFO] Pending message count this run: 0
-[2026-06-04T14:16:04.917336Z] [INFO] Pending message count remaining: 0
-[2026-06-04T14:16:04.917445Z] [INFO] Processed message count: 0
-[2026-06-04T14:16:04.917539Z] [INFO] === Bridge agent v2 end ===
-[2026-06-04T14:16:04.935921Z] [INFO] [cycle] == write bridge summary ==
-[2026-06-04T14:16:05.002338Z] [INFO] [cycle] Wrote bridge summary: /home/fiste/Noema/symnozein/body/bridge/state_summary/latest.md
-[2026-06-04T14:16:05.003026Z] [INFO] [cycle] == outbound sync ==
-[2026-06-04T14:16:05.530592Z] [INFO] [cycle] Optional source missing, skipped: /home/fiste/Noema/bridge/outbox/messages
-Optional source missing, skipped: /home/fiste/Noema/bridge/state_summary
-Writing /home/fiste/Noema/symnozein/body/bridge/logs/bridge_tail.log
-Mirrored log tail /home/fiste/Noema/bridge/logs/bridge.log -> /home/fiste/Noema/symnozein/body/bridge/logs/bridge_tail.log. Changed files: 1
-Scripts mirror complete. Changed files: 0
-Staged outbound changes:
-M	body/bridge/logs/bridge_tail.log
-M	body/bridge/state_summary/latest.md
-Commit message in code: Sync RPi bridge outbound state
-From https://github.com/fisteque/symnozein
- * branch            main       -> FETCH_HEAD
-Local branch is not behind remote; no pre-push rebase needed.
-Only logs/state_summary changed; not committing this cycle.
-[2026-06-04T14:16:05.530832Z] [INFO] [cycle] Bridge cycle complete.
-[2026-06-04T14:16:34.397242Z] [INFO] [cycle] Bridge cycle lock acquired: /home/fiste/Noema/bridge/state/bridge_cycle.lock.json
-[2026-06-04T14:16:34.398868Z] [INFO] [cycle] == inbound sync ==
-[2026-06-04T14:16:34.894853Z] [INFO] [cycle] Fetching origin main...
-From https://github.com/fisteque/symnozein
- * branch            main       -> FETCH_HEAD
-No inbound changes for body/bridge/inbox/messages.
-[2026-06-04T14:16:34.895581Z] [INFO] [cycle] == bridge agent ==
-[2026-06-04T14:16:34.962737Z] [INFO] === Bridge agent v2 start ===
-[2026-06-04T14:16:34.962951Z] [INFO] Bridge root: /home/fiste/Noema/bridge
-[2026-06-04T14:16:34.963084Z] [INFO] Body root: /home/fiste/Noema/symnozein/body
-[2026-06-04T14:16:34.963712Z] [INFO] Body state unchanged: awake=True status=normal_operation
-[2026-06-04T14:16:34.966436Z] [INFO] Inbox message files found: 2
-[2026-06-04T14:16:34.967039Z] [INFO] Codex inbox message files observed: 15 latest=msg-20260604-codex-body-status-ping-001.md
-[2026-06-04T14:16:34.967168Z] [INFO] Codex outbox message files observed: 12 latest=2026-06-03T214500Z_codex-response-msg-20260603-codex-extend-bridge-tail-001.md
-[2026-06-04T14:16:34.967977Z] [INFO] Already processed: msg-20260524-task-001
-[2026-06-04T14:16:34.968843Z] [INFO] Already processed: msg-20260527-task-sync-body-001
-[2026-06-04T14:16:34.970556Z] [INFO] Pending message count this run: 0
-[2026-06-04T14:16:34.970668Z] [INFO] Pending message count remaining: 0
-[2026-06-04T14:16:34.970763Z] [INFO] Processed message count: 0
-[2026-06-04T14:16:34.970857Z] [INFO] === Bridge agent v2 end ===
-[2026-06-04T14:16:34.988648Z] [INFO] [cycle] [2026-06-04T14:16:34.962737Z] [INFO] === Bridge agent v2 start ===
-[2026-06-04T14:16:34.962951Z] [INFO] Bridge root: /home/fiste/Noema/bridge
-[2026-06-04T14:16:34.963084Z] [INFO] Body root: /home/fiste/Noema/symnozein/body
-[2026-06-04T14:16:34.963712Z] [INFO] Body state unchanged: awake=True status=normal_operation
-[2026-06-04T14:16:34.966436Z] [INFO] Inbox message files found: 2
-[2026-06-04T14:16:34.967039Z] [INFO] Codex inbox message files observed: 15 latest=msg-20260604-codex-body-status-ping-001.md
-[2026-06-04T14:16:34.967168Z] [INFO] Codex outbox message files observed: 12 latest=2026-06-03T214500Z_codex-response-msg-20260603-codex-extend-bridge-tail-001.md
-[2026-06-04T14:16:34.967977Z] [INFO] Already processed: msg-20260524-task-001
-[2026-06-04T14:16:34.968843Z] [INFO] Already processed: msg-20260527-task-sync-body-001
-[2026-06-04T14:16:34.970556Z] [INFO] Pending message count this run: 0
-[2026-06-04T14:16:34.970668Z] [INFO] Pending message count remaining: 0
-[2026-06-04T14:16:34.970763Z] [INFO] Processed message count: 0
-[2026-06-04T14:16:34.970857Z] [INFO] === Bridge agent v2 end ===
-[2026-06-04T14:16:34.989327Z] [INFO] [cycle] == write bridge summary ==
-[2026-06-04T14:16:35.052481Z] [INFO] [cycle] Wrote bridge summary: /home/fiste/Noema/symnozein/body/bridge/state_summary/latest.md
-[2026-06-04T14:16:35.053155Z] [INFO] [cycle] == outbound sync ==
-[2026-06-04T14:16:35.550766Z] [INFO] [cycle] Optional source missing, skipped: /home/fiste/Noema/bridge/outbox/messages
-Optional source missing, skipped: /home/fiste/Noema/bridge/state_summary
-Writing /home/fiste/Noema/symnozein/body/bridge/logs/bridge_tail.log
-Mirrored log tail /home/fiste/Noema/bridge/logs/bridge.log -> /home/fiste/Noema/symnozein/body/bridge/logs/bridge_tail.log. Changed files: 1
-Scripts mirror complete. Changed files: 0
-Staged outbound changes:
-M	body/bridge/logs/bridge_tail.log
-M	body/bridge/state_summary/latest.md
-Commit message in code: Sync RPi bridge outbound state
-From https://github.com/fisteque/symnozein
- * branch            main       -> FETCH_HEAD
-Local branch is not behind remote; no pre-push rebase needed.
-Only logs/state_summary changed; not committing this cycle.
-[2026-06-04T14:16:35.550978Z] [INFO] [cycle] Bridge cycle complete.
+[2026-06-05T06:04:50.995731Z] [INFO] [cycle] == bridge agent ==
+[2026-06-05T06:04:51.066125Z] [INFO] === Bridge agent v2 start ===
+[2026-06-05T06:04:51.066350Z] [INFO] Bridge root: /home/fiste/Noema/bridge
+[2026-06-05T06:04:51.066467Z] [INFO] Body root: /home/fiste/Noema/symnozein/body
+[2026-06-05T06:04:51.067111Z] [INFO] Body state unchanged: awake=True status=normal_operation
+[2026-06-05T06:04:51.069917Z] [INFO] Inbox message files found: 2
+[2026-06-05T06:04:51.070525Z] [INFO] Codex inbox message files observed: 15 latest=msg-20260604-codex-body-status-ping-001.md
+[2026-06-05T06:04:51.070634Z] [INFO] Codex outbox message files observed: 13 latest=2026-06-04T141638Z_codex-response-msg-20260604-codex-body-status-ping-001.md
+[2026-06-05T06:04:51.071431Z] [INFO] Already processed: msg-20260524-task-001
+[2026-06-05T06:04:51.072295Z] [INFO] Already processed: msg-20260527-task-sync-body-001
+[2026-06-05T06:04:51.073923Z] [INFO] Pending message count this run: 0
+[2026-06-05T06:04:51.074038Z] [INFO] Pending message count remaining: 0
+[2026-06-05T06:04:51.074136Z] [INFO] Processed message count: 0
+[2026-06-05T06:04:51.074230Z] [INFO] === Bridge agent v2 end ===
+[2026-06-05T06:04:51.090757Z] [INFO] [cycle] [2026-06-05T06:04:51.066125Z] [INFO] === Bridge agent v2 start ===
+[2026-06-05T06:04:51.066350Z] [INFO] Bridge root: /home/fiste/Noema/bridge
+[2026-06-05T06:04:51.066467Z] [INFO] Body root: /home/fiste/Noema/symnozein/body
+[2026-06-05T06:04:51.067111Z] [INFO] Body state unchanged: awake=True status=normal_operation
+[2026-06-05T06:04:51.069917Z] [INFO] Inbox message files found: 2
+[2026-06-05T06:04:51.070525Z] [INFO] Codex inbox message files observed: 15 latest=msg-20260604-codex-body-status-ping-001.md
+[2026-06-05T06:04:51.070634Z] [INFO] Codex outbox message files observed: 13 latest=2026-06-04T141638Z_codex-response-msg-20260604-codex-body-status-ping-001.md
+[2026-06-05T06:04:51.071431Z] [INFO] Already processed: msg-20260524-task-001
+[2026-06-05T06:04:51.072295Z] [INFO] Already processed: msg-20260527-task-sync-body-001
+[2026-06-05T06:04:51.073923Z] [INFO] Pending message count this run: 0
+[2026-06-05T06:04:51.074038Z] [INFO] Pending message count remaining: 0
+[2026-06-05T06:04:51.074136Z] [INFO] Processed message count: 0
+[2026-06-05T06:04:51.074230Z] [INFO] === Bridge agent v2 end ===
+[2026-06-05T06:04:51.091447Z] [INFO] [cycle] == write bridge summary ==
+[2026-06-05T06:04:51.155907Z] [INFO] [cycle] Wrote bridge summary: /home/fiste/Noema/symnozein/body/bridge/state_summary/latest.md
+[2026-06-05T06:04:51.156579Z] [INFO] [cycle] == outbound sync ==
