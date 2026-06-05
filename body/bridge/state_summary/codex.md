@@ -8,6 +8,29 @@ messages. Keep the newest items at the top.
 
 ## Latest Implementations
 
+### PC-Codex Postman Instructions
+
+Added a repository instruction document for the PC-Codex postman role.
+
+Changed:
+
+- `body/bridge/instructions/pc_codex_postman.md`
+- `bridge/scripts/bridge_sync_outbound.py`
+- `body/bridge/scripts/bridge_sync_outbound.py`
+
+Behavior:
+
+- documents PC-Codex as a narrow GitHub tape postman for delivering exactly one
+  requested Codex inbox message;
+- records allowed scope, forbidden paths/actions, filename rules, delivery
+  procedure, `created_at` rules, stop conditions, push rejection handling, and
+  response template;
+- outbound sync now allows the documentation-only
+  `body/bridge/instructions/` path so instruction files can be published by the
+  bridge audit flow;
+- no heartbeat/watchdog behavior, bridge lock logic, timer cadence,
+  inbox/outbox processing, or Git housekeeping was changed.
+
 ### Bridge Logging Cleanup Final State
 
 Closed the bridge logging cleanup pass after removing duplicate publication,
