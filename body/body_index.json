@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-05T18:08:54.250661Z",
+  "generated_at": "2026-06-05T18:12:25.310333Z",
   "source": {
     "script": "scripts/update_body_index.py",
     "workflow": ".github/workflows/update_body_index.yml"
@@ -469,8 +469,8 @@
     },
     {
       "path": "bridge/scripts/bridge_cycle.py",
-      "size": 11668,
-      "sha256": "033662e53a1a4dfda15f09ddd11d7a41d1daef6c852eed90d823bf0efdc93834"
+      "size": 11746,
+      "sha256": "cf9e6e68388836585ae8f7f7e14ea691ac0f3e0d5d950cc29c0d1897f4319843"
     },
     {
       "path": "bridge/scripts/bridge_cycle_lock.py",
@@ -579,8 +579,8 @@
     },
     {
       "path": "bridge/state_summary/codex.md",
-      "size": 20932,
-      "sha256": "c37a2282570d171498144378a1139fe7267112b6b706936aed3d154eece24892"
+      "size": 21888,
+      "sha256": "950904e9cfbec116fdb6925572b482b1296b375b8a2e0bd6b030b2100cf1a7cb"
     },
     {
       "path": "bridge/state_summary/known_limits.md",
@@ -589,8 +589,8 @@
     },
     {
       "path": "bridge/state_summary/latest.md",
-      "size": 11156,
-      "sha256": "bc96a49aac194a42dd2c33a622b020701b4ce8bc25dfd0b2ca006ceee17a78fb"
+      "size": 10871,
+      "sha256": "183433dd460e57f87561704e47aff79a661906ef7d4292038e985ed98b8c8d26"
     },
     {
       "path": "bridge_protocol_v1.md",
