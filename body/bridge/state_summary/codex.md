@@ -8,6 +8,30 @@ messages. Keep the newest items at the top.
 
 ## Latest Implementations
 
+### Block Bridge Script Bytecode Publishing
+
+Removed an accidentally tracked Python bytecode cache file from the bridge
+script mirror and hardened outbound publishing against future bytecode cache
+publication.
+
+Changed:
+
+- `bridge/scripts/.gitignore`
+- `body/bridge/scripts/.gitignore`
+- `bridge/scripts/bridge_sync_outbound.py`
+- `body/bridge/scripts/bridge_sync_outbound.py`
+- `body/bridge/scripts/__pycache__/bridge_sync_outbound.cpython-311.pyc`
+
+Behavior now:
+
+- `body/bridge/scripts/__pycache__/` and `*.pyc`/`*.pyo`/`*.pyd` files are
+  ignored in the bridge script mirror;
+- outbound staging rejects script cache paths unless the change is deleting an
+  already tracked cache file;
+- the existing tracked `bridge_sync_outbound.cpython-311.pyc` is removed from
+  the repository;
+- runtime bridge behavior is unchanged.
+
 ### PC-Codex Postman Instructions
 
 Added a repository instruction document for the PC-Codex postman role.
