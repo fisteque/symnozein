@@ -1,11 +1,11 @@
 {
-  "generated_at": "2026-06-05T12:28:06.908609Z",
+  "generated_at": "2026-06-05T12:37:55.023250Z",
   "source": {
     "script": "scripts/update_body_index.py",
     "workflow": ".github/workflows/update_body_index.yml"
   },
   "kind": "state",
-  "count": 125,
+  "count": 126,
   "files": [
     {
       "path": "Prvni_kroky.md",
@@ -126,6 +126,11 @@
       "path": "bridge/inbox/messages/codex/msg-20260604-codex-body-status-ping-001.md",
       "size": 1761,
       "sha256": "f2d9a38135e797fd32569e90155f577b762b3731c0210ac15f5371344c1023e4"
+    },
+    {
+      "path": "bridge/inbox/messages/codex/msg-20260605-codex-apply-lock-diagnostics-eyes-001.md",
+      "size": 2478,
+      "sha256": "26b156741e36b5ffd4b87d1f90a2ac77825eaf59f07f4d333c100be45d487f00"
     },
     {
       "path": "bridge/inbox/messages/codex/msg-20260605-codex-bridge-cycle-lock-audit-001.md",

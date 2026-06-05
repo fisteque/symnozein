@@ -5,6 +5,23 @@ Uchovává posledních **50** záznamů.
 
 ---
 
+## 2026-06-05T12:37:55.023250Z
+
+Zdroj změn:
+- skript: `scripts/update_body_index.py`
+- workflow: `.github/workflows/update_body_index.yml`
+
+➕ přidáno: **1**
+- `bridge/inbox/messages/codex/msg-20260605-codex-apply-lock-diagnostics-eyes-001.md`
+
+🔄 změněno: **0**
+- nic
+
+❌ odebráno: **0**
+- nic
+
+---
+
 ## 2026-06-05T12:28:06.908609Z
 
 Zdroj změn:
@@ -888,24 +905,6 @@ Zdroj změn:
 
 ➕ přidáno: **1**
 - `bridge/outbox/codex/2026-06-01T153903Z_codex-response-msg-20260529-codex-auto-inbox-reader-design-001.md`
-
-🔄 změněno: **2**
-- `bridge/logs/bridge_tail.log`
-- `bridge/state_summary/latest.md`
-
-❌ odebráno: **0**
-- nic
-
----
-
-## 2026-06-01T09:12:40.918019Z
-
-Zdroj změn:
-- skript: `scripts/update_body_index.py`
-- workflow: `.github/workflows/update_body_index.yml`
-
-➕ přidáno: **1**
-- `bridge/outbox/messages/2026-06-01T085737Z_rpi5_cycle-error-unknown.md`
 
 🔄 změněno: **2**
 - `bridge/logs/bridge_tail.log`
