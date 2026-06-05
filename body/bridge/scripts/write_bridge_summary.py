@@ -7,7 +7,6 @@ import json
 import subprocess
 import sys
 import time
-from collections import deque
 from datetime import UTC, datetime
 from pathlib import Path
 from typing import Any
@@ -16,6 +15,7 @@ from bridge_sync_common import DEFAULT_PROJECT_ROOT, STATE_SUMMARY, SyncError, a
 
 
 LOG_TAIL_SCAN_MULTIPLIER = 4
+LOG_TAIL_READ_CHUNK_BYTES = 8192
 PUBLIC_LOG_INCLUDE_MARKERS = (
     "[WARN]",
     "[ERROR]",
@@ -104,11 +104,18 @@ def load_json(path: Path, *, tolerate_invalid: bool = False) -> dict[str, Any]:
 def tail_lines(path: Path, limit: int) -> list[str]:
     if limit <= 0 or not path.exists():
         return []
-    tail: deque[str] = deque(maxlen=limit)
-    with path.open("r", encoding="utf-8", errors="replace") as handle:
-        for line in handle:
-            tail.append(line.rstrip("\n"))
-    return list(tail)
+    with path.open("rb") as handle:
+        handle.seek(0, 2)
+        position = handle.tell()
+        buffer = b""
+        lines: list[bytes] = []
+        while position > 0 and len(lines) <= limit:
+            read_size = min(LOG_TAIL_READ_CHUNK_BYTES, position)
+            position -= read_size
+            handle.seek(position)
+            buffer = handle.read(read_size) + buffer
+            lines = buffer.splitlines()
+    return [line.decode("utf-8", errors="replace") for line in lines[-limit:]]
 
 
 def include_public_log_line(line: str) -> bool:
