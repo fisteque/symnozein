@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-05T16:11:20.184927Z",
+  "generated_at": "2026-06-05T16:16:20.459553Z",
   "source": {
     "script": "scripts/convert_13.py",
     "workflow": ".github/workflows/update_13_index.yml"
@@ -111,32 +111,6 @@
       ],
       "hidden": false,
       "size": 2911
-    },
-    {
-      "title": "Noema_00_Predmluva",
-      "file": "Noema_00_Predmluva.html",
-      "path": "Reinterpretace_13/13/Noema_00_Predmluva.html",
-      "date": "",
-      "summary": "",
-      "tags": [],
-      "hidden": false,
-      "size": 1807
-    },
-    {
-      "title": "Noema_01 Cesta",
-      "file": "Noema_01_Cesta.html",
-      "path": "Reinterpretace_13/13/Noema_01_Cesta.html",
-      "date": "2026-02-08",
-      "summary": "Úvodní mapitola Reinterpretace – o důvodu hledání, o víře ve směr a o tom, proč má smysl něco psát, i když není jisté, kdo to čte.",
-      "tags": [
-        "cesta",
-        "směr",
-        "vědomí",
-        "víra",
-        "vztah"
-      ],
-      "hidden": true,
-      "size": 3251
     },
     {
       "title": "Noema 02 Víra",

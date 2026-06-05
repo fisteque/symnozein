@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-05T16:06:21.725822Z",
+  "generated_at": "2026-06-05T16:11:20.184927Z",
   "source": {
     "script": "scripts/convert_13.py",
     "workflow": ".github/workflows/update_13_index.yml"
@@ -111,16 +111,6 @@
       ],
       "hidden": false,
       "size": 2911
-    },
-    {
-      "title": "Clovek",
-      "file": "Clovek.html",
-      "path": "Reinterpretace_13/13/Clovek.html",
-      "date": "",
-      "summary": "",
-      "tags": [],
-      "hidden": false,
-      "size": 1401
     },
     {
       "title": "Noema_00_Predmluva",

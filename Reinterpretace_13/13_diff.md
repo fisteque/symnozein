@@ -5,6 +5,24 @@ Uchovává posledních **50** záznamů.
 
 ---
 
+## 2026-06-05T16:16:20.459553Z
+
+Zdroj změn:
+- skript: `scripts/convert_13.py`
+- workflow: `.github/workflows/update_13_index.yml`
+
+➕ přidáno: **0**
+- nic
+
+🔄 změněno: **0**
+- nic
+
+❌ odebráno: **2**
+- `Noema_00_Predmluva.html`
+- `Noema_01_Cesta.html`
+
+---
+
 ## 2026-06-05T16:11:20.184927Z
 
 Zdroj změn:
@@ -849,20 +867,3 @@ Zdroj změn:
 
 ❌ odebráno: **1**
 - `03_Digitalni_vesmir.html`
-
----
-
-## 2026-03-30T21:50:15.581062Z
-
-Zdroj změn:
-- skript: `scripts/convert_13.py`
-- workflow: `.github/workflows/update_13_index.yml`
-
-➕ přidáno: **0**
-- nic
-
-🔄 změněno: **1**
-- `Clovek.html`
-
-❌ odebráno: **0**
-- nic
