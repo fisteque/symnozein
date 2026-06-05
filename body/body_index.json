@@ -1,11 +1,11 @@
 {
-  "generated_at": "2026-06-05T19:17:57.609785Z",
+  "generated_at": "2026-06-05T19:22:21.983067Z",
   "source": {
     "script": "scripts/update_body_index.py",
     "workflow": ".github/workflows/update_body_index.yml"
   },
   "kind": "state",
-  "count": 132,
+  "count": 135,
   "files": [
     {
       "path": "Prvni_kroky.md",
@@ -168,6 +168,11 @@
       "sha256": "cd09068ddfed1ec88f5a730e1afdd0de6ad2e684ffb614af93db097aed37b903"
     },
     {
+      "path": "bridge/instructions/pc_codex_postman.md",
+      "size": 10941,
+      "sha256": "d94b67e03cd6dcb9fee66133f9ff04427679ca50f6e4fdf45d53df0e4f0ec949"
+    },
+    {
       "path": "bridge/outbox/codex/2026-05-27T182640Z_codex-response-msg-20260527-codex-inbox-write-task-001.md",
       "size": 4587,
       "sha256": "f166fed970c884439735c3315e5c3eeaa2c93cbac65e5adade924c057ef928b3"
@@ -246,6 +251,11 @@
       "path": "bridge/outbox/codex/2026-06-05T180759Z_codex-response-msg-20260605-codex-audit-bridge-logging-001.md",
       "size": 7402,
       "sha256": "3480160488d676e012c2579287ada4073dfbe370fa8b47e87221b6dc4fb60ed1"
+    },
+    {
+      "path": "bridge/outbox/codex/2026-06-05T192110Z_codex-response-msg-20260605-codex-save-pc-postman-instructions-001.md",
+      "size": 1139,
+      "sha256": "55d2d8e8e62ec6dd8496a4cccb459ab1b69b30ae7ea08b4ec6dce138a7b47156"
     },
     {
       "path": "bridge/outbox/codex/20260601T182419.805294_codex-reader-stub-msg-20260601-codex-reader-stub-test-safe-001.md",
@@ -463,6 +473,11 @@
       "sha256": "e27c8f9975dc446e54dcd0ee8d5a9895564e04ec786a029ccd6c1cebd9eb590a"
     },
     {
+      "path": "bridge/outbox/messages/2026-06-05T192109Z_rpi5_cycle-error-outbound-sync.md",
+      "size": 295,
+      "sha256": "b9f5d251bac124fe39331f3b2a5ab540fcbdd1ebe94223d009e38e1c4b4099a0"
+    },
+    {
       "path": "bridge/outbox/outbox.json",
       "size": 472,
       "sha256": "e20fe977adeb942811cf1d222b3056a8c561c25bbcaa297e0332f428276f9a48"
@@ -494,8 +509,8 @@
     },
     {
       "path": "bridge/scripts/bridge_sync_outbound.py",
-      "size": 13553,
-      "sha256": "4d2d63abeb6c2a2f3256a3fd46e9e1a1ce12d57662c6677663d1ca8b30f88087"
+      "size": 13615,
+      "sha256": "149f267832353604e163c9cbf47fb423b0b8152c8dcdba29ec362ace66ea7576"
     },
     {
       "path": "bridge/scripts/codex_inbox_reader.py",
@@ -584,8 +599,8 @@
     },
     {
       "path": "bridge/state_summary/codex.md",
-      "size": 25625,
-      "sha256": "94c02729ae226dbb8414b9e73de81fe8b1ac63c34be33f6ae1c2f26c5a2f108a"
+      "size": 26462,
+      "sha256": "4ce95b523ff075f5f01d1d7a3039452fcf7d20f6b4b63f86bd688b64a94a764f"
     },
     {
       "path": "bridge/state_summary/known_limits.md",
@@ -594,8 +609,8 @@
     },
     {
       "path": "bridge/state_summary/latest.md",
-      "size": 5553,
-      "sha256": "1a1720733f4bb6e6c9f864bf7d30758103dd076e4dfca16c7b526e329f55bb73"
+      "size": 6424,
+      "sha256": "cc8bfd7355ed4f4e124f10365385f37597d6df0b6501c648bcd5a62f667e5acd"
     },
     {
       "path": "bridge_protocol_v1.md",

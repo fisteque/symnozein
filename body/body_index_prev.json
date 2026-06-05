@@ -1,11 +1,11 @@
 {
-  "generated_at": "2026-06-05T18:30:05.360207Z",
+  "generated_at": "2026-06-05T19:17:57.609785Z",
   "source": {
     "script": "scripts/update_body_index.py",
     "workflow": ".github/workflows/update_body_index.yml"
   },
   "kind": "state",
-  "count": 131,
+  "count": 132,
   "files": [
     {
       "path": "Prvni_kroky.md",
@@ -146,6 +146,11 @@
       "path": "bridge/inbox/messages/codex/msg-20260605-codex-lock-diagnostics-design-001.md",
       "size": 2399,
       "sha256": "a120c2a4f063baf32d9d5f58feac0d5906709549c9f3c23a4a71ce3830e4b9b3"
+    },
+    {
+      "path": "bridge/inbox/messages/codex/msg-20260605-codex-save-pc-postman-instructions-001.md",
+      "size": 12534,
+      "sha256": "018ebf66375764c62b672277434062813947b2f933ff54e9de76d6e793e77a2a"
     },
     {
       "path": "bridge/inbox/messages/codex/msg-20260605-codex-stop-bridge-tail-log-001.md",
