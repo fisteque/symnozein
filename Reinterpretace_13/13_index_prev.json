@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-05T16:16:20.459553Z",
+  "generated_at": "2026-06-05T16:17:03.818664Z",
   "source": {
     "script": "scripts/convert_13.py",
     "workflow": ".github/workflows/update_13_index.yml"
@@ -111,21 +111,6 @@
       ],
       "hidden": false,
       "size": 2911
-    },
-    {
-      "title": "Noema 02 Víra",
-      "file": "Noema_02_Vira.html",
-      "path": "Reinterpretace_13/13/Noema_02_Vira.html",
-      "date": "2026-02-08",
-      "summary": "Mapa, která ukazuje, že víra není slabost ani domněnka – ale počátek vědomého vztahu ke světu.",
-      "tags": [
-        "víra",
-        "vědomí",
-        "postoj",
-        "strom"
-      ],
-      "hidden": true,
-      "size": 4164
     },
     {
       "title": "Noema 03 — Digitální vesmír",
