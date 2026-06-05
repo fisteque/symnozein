@@ -8,6 +8,39 @@ messages. Keep the newest items at the top.
 
 ## Latest Implementations
 
+### Bridge Cycle Lock Diagnostics
+
+Improved bridge cycle lock visibility so a blocked or overlapping cycle leaves
+actionable diagnostics instead of only reporting that a lock exists.
+
+Changed:
+
+- `bridge/scripts/bridge_cycle_lock.py`
+- `body/bridge/scripts/bridge_cycle_lock.py`
+- `bridge/scripts/bridge_cycle.py`
+- `body/bridge/scripts/bridge_cycle.py`
+
+Behavior now:
+
+- cycle locks include `status`, `current_step`, `last_progress_at`, `owner`,
+  and `host`;
+- active-lock errors report whether the recorded PID is alive, lock age,
+  current step, progress age, expiry, owner, and host;
+- `bridge_cycle.py` updates lock progress before each major step:
+  inbound sync, bridge agent, bridge summary, and outbound sync;
+- released locks preserve the diagnostic fields and mark
+  `current_step=released`;
+- lock files remain runtime-local under `/home/fiste/Noema/bridge/state/`.
+
+Verified:
+
+- runtime and mirrored bridge script copies match, except for ignored local
+  `__pycache__` files;
+- the latest script mirror committed the cycle lock and cycle updates;
+- post-check dirty state only showed expected generated outputs:
+  `body/bridge/logs/bridge_tail.log` and
+  `body/bridge/state_summary/latest.md`.
+
 ### Runtime Heartbeat Watchdog Tolerance
 
 Adjusted the local runtime heartbeat/watchdog behavior after two same-day
