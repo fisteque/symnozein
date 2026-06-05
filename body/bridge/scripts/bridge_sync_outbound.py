@@ -102,14 +102,24 @@ def ensure_no_forbidden_status(repo_root: Path) -> None:
         raise SyncError(f"Forbidden bridge state paths have git changes:\n{status}")
 
 
-def is_allowed_staged_path(name: str) -> bool:
+def is_allowed_staged_change(status: str, name: str) -> bool:
     path = Path(name)
-    return any(path == allowed or allowed in path.parents for allowed in ALLOWED_REPO_PATHS) or is_removed_repo_path(name)
+    if any(path == allowed or allowed in path.parents for allowed in ALLOWED_REPO_PATHS):
+        return True
+    return status.startswith("D") and is_removed_repo_path(name)
 
 
 def ensure_no_disallowed_staged_paths(repo_root: Path) -> None:
-    staged = run_git(repo_root, ["diff", "--cached", "--name-only"]).stdout.splitlines()
-    disallowed = [name for name in staged if not is_allowed_staged_path(name)]
+    staged = run_git(repo_root, ["diff", "--cached", "--name-status"]).stdout.splitlines()
+    disallowed: list[str] = []
+    for line in staged:
+        if not line:
+            continue
+        parts = line.split("\t")
+        status = parts[0]
+        names = parts[1:]
+        if not names or not all(is_allowed_staged_change(status, name) for name in names):
+            disallowed.append(line)
     if disallowed:
         raise SyncError(
             "Refusing outbound sync because staged paths outside the bridge outbound whitelist exist:\n"
