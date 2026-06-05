@@ -5,6 +5,25 @@ Uchovává posledních **50** záznamů.
 
 ---
 
+## 2026-06-05T17:45:09.693215Z
+
+Zdroj změn:
+- skript: `scripts/update_body_index.py`
+- workflow: `.github/workflows/update_body_index.yml`
+
+➕ přidáno: **0**
+- nic
+
+🔄 změněno: **3**
+- `bridge/scripts/bridge_sync_outbound.py`
+- `bridge/state_summary/codex.md`
+- `bridge/state_summary/latest.md`
+
+❌ odebráno: **0**
+- nic
+
+---
+
 ## 2026-06-05T17:44:39.934426Z
 
 Zdroj změn:
@@ -888,25 +907,6 @@ Zdroj změn:
 🔄 změněno: **4**
 - `bridge/logs/bridge_tail.log`
 - `bridge/scripts/tasks/TASK_REQUESTS.md`
-- `bridge/state_summary/codex.md`
-- `bridge/state_summary/latest.md`
-
-❌ odebráno: **0**
-- nic
-
----
-
-## 2026-06-01T16:39:04.828226Z
-
-Zdroj změn:
-- skript: `scripts/update_body_index.py`
-- workflow: `.github/workflows/update_body_index.yml`
-
-➕ přidáno: **0**
-- nic
-
-🔄 změněno: **3**
-- `bridge/logs/bridge_tail.log`
 - `bridge/state_summary/codex.md`
 - `bridge/state_summary/latest.md`
 

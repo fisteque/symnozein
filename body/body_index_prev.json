@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-05T17:36:43.556892Z",
+  "generated_at": "2026-06-05T17:44:39.934426Z",
   "source": {
     "script": "scripts/update_body_index.py",
     "workflow": ".github/workflows/update_body_index.yml"
@@ -156,11 +156,6 @@
       "path": "bridge/inbox/messages/msg-20260527-task-sync-body-001.md",
       "size": 489,
       "sha256": "cd09068ddfed1ec88f5a730e1afdd0de6ad2e684ffb614af93db097aed37b903"
-    },
-    {
-      "path": "bridge/logs/bridge_tail.log",
-      "size": 36430,
-      "sha256": "4aae3c7ef9cf9a9558d0c82fbaf5a465e98ac573fd8e0c0a512fa5eb1cf3a627"
     },
     {
       "path": "bridge/outbox/codex/2026-05-27T182640Z_codex-response-msg-20260527-codex-inbox-write-task-001.md",
@@ -443,6 +438,11 @@
       "sha256": "2210cbbed22746583f18c0bbcf839041092afdf4b42dfe7f659fde8a1d25879e"
     },
     {
+      "path": "bridge/outbox/messages/2026-06-05T174359Z_rpi5_cycle-error-outbound-sync.md",
+      "size": 295,
+      "sha256": "e27c8f9975dc446e54dcd0ee8d5a9895564e04ec786a029ccd6c1cebd9eb590a"
+    },
+    {
       "path": "bridge/outbox/outbox.json",
       "size": 472,
       "sha256": "e20fe977adeb942811cf1d222b3056a8c561c25bbcaa297e0332f428276f9a48"
@@ -474,8 +474,8 @@
     },
     {
       "path": "bridge/scripts/bridge_sync_outbound.py",
-      "size": 15496,
-      "sha256": "905c9e08224a640b52dc95c0f065cceb958aa9fd4033064804a19e7ab4f2d874"
+      "size": 13254,
+      "sha256": "d809a7ecde26a8c6765defdceef30c5a5e93e2ecca13ff277978815f49ae420e"
     },
     {
       "path": "bridge/scripts/codex_inbox_reader.py",
@@ -574,8 +574,8 @@
     },
     {
       "path": "bridge/state_summary/latest.md",
-      "size": 10078,
-      "sha256": "9b2622cf4ef83d0338fb7c114af75de8dfaa150695bad05e03be3d75ae150c31"
+      "size": 11268,
+      "sha256": "6069b89f1054045f5187faf3815535d410ca443e339bdc0b4e974de4943db615"
     },
     {
       "path": "bridge_protocol_v1.md",
