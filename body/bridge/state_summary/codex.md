@@ -22,7 +22,7 @@ Behavior now:
 
 - `bridge_cycle.py` checks `/home/fiste/Noema/bridge/logs/bridge.log` before
   writing the first line of a new cycle;
-- if the log has more than `5000` lines, older lines are archived under
+- if the log has more than `8000` lines, older lines are archived under
   `/home/fiste/Noema/bridge/logs/archive/YYYY-MM/`;
 - the newest `3000` lines are retained in the active runtime log;
 - the rotation archive remains local and is not mirrored to `symnozein`;
@@ -615,7 +615,7 @@ Stopped publishing the full bridge log to GitHub. Outbound sync now publishes:
 symnozein/body/bridge/logs/bridge_tail.log
 ```
 
-Runtime `bridge/logs/bridge.log` rotates after 5000 lines, retaining 3000 lines.
+Runtime `bridge/logs/bridge.log` rotates after 8000 lines, retaining 3000 lines.
 Archives are stored under:
 
 ```text

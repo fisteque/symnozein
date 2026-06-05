@@ -25,7 +25,7 @@ SCRIPT_DIR = Path(__file__).resolve().parent
 AGENT_ID = "rpi5-bridge-cycle"
 CYCLE_ERROR_STATE = "cycle_error_state.json"
 RUNTIME_LOG_NAME = "bridge.log"
-LOG_ROTATE_MAX_LINES = 5000
+LOG_ROTATE_MAX_LINES = 8000
 LOG_ROTATE_RETAIN_LINES = 3000
 LOG_ARCHIVE_DIR = "archive"
 
