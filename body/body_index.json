@@ -1,11 +1,11 @@
 {
-  "generated_at": "2026-06-05T19:29:31.117786Z",
+  "generated_at": "2026-06-05T19:37:32.577954Z",
   "source": {
     "script": "scripts/update_body_index.py",
     "workflow": ".github/workflows/update_body_index.yml"
   },
   "kind": "state",
-  "count": 136,
+  "count": 137,
   "files": [
     {
       "path": "Prvni_kroky.md",
@@ -171,6 +171,11 @@
       "path": "bridge/instructions/pc_codex_postman.md",
       "size": 10941,
       "sha256": "d94b67e03cd6dcb9fee66133f9ff04427679ca50f6e4fdf45d53df0e4f0ec949"
+    },
+    {
+      "path": "bridge/instructions/pc_codex_postman_quick.md",
+      "size": 801,
+      "sha256": "511d266b57c65e8461f74fd835a7821bbe5c7e6a8e82d3e6278e5475d1df0095"
     },
     {
       "path": "bridge/outbox/codex/2026-05-27T182640Z_codex-response-msg-20260527-codex-inbox-write-task-001.md",
@@ -615,7 +620,7 @@
     {
       "path": "bridge/state_summary/latest.md",
       "size": 6064,
-      "sha256": "72fc7a1c7e694193b19aa4a13f8ad28678771530379658967f8a5e5362f01feb"
+      "sha256": "627aa16f9452fbc0b4fda94c752ffe2106dfce23a1944aeebb8cdf11d64b7ccd"
     },
     {
       "path": "bridge_protocol_v1.md",
