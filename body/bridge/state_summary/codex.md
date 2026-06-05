@@ -8,6 +8,34 @@ messages. Keep the newest items at the top.
 
 ## Latest Implementations
 
+### Runtime-Only Bridge Log Rotation
+
+Moved bridge runtime log rotation back into the bridge runtime cycle, separate
+from outbound publishing.
+
+Changed:
+
+- `bridge/scripts/bridge_cycle.py`
+- `body/bridge/scripts/bridge_cycle.py`
+
+Behavior now:
+
+- `bridge_cycle.py` checks `/home/fiste/Noema/bridge/logs/bridge.log` before
+  writing the first line of a new cycle;
+- if the log has more than `5000` lines, older lines are archived under
+  `/home/fiste/Noema/bridge/logs/archive/YYYY-MM/`;
+- the newest `3000` lines are retained in the active runtime log;
+- the rotation archive remains local and is not mirrored to `symnozein`;
+- outbound sync remains responsible only for publishing allowed repository
+  outputs, not for runtime log maintenance.
+
+Verified:
+
+- runtime and mirrored `bridge_cycle.py` copies match;
+- Python syntax compilation passes for both copies;
+- rotation is scoped to `/home/fiste/Noema/bridge/logs/bridge.log` under the
+  bridge runtime root.
+
 ### Stop Re-Logging Bridge Agent Stdout
 
 Reduced duplication in `/home/fiste/Noema/bridge/logs/bridge.log` by stopping

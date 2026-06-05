@@ -24,6 +24,10 @@ from bridge_sync_common import (
 SCRIPT_DIR = Path(__file__).resolve().parent
 AGENT_ID = "rpi5-bridge-cycle"
 CYCLE_ERROR_STATE = "cycle_error_state.json"
+RUNTIME_LOG_NAME = "bridge.log"
+LOG_ROTATE_MAX_LINES = 5000
+LOG_ROTATE_RETAIN_LINES = 3000
+LOG_ARCHIVE_DIR = "archive"
 
 
 def utc_now() -> datetime:
@@ -34,13 +38,46 @@ def utc_iso(value: datetime | None = None) -> str:
     return (value or utc_now()).isoformat().replace("+00:00", "Z")
 
 
+def utc_stamp() -> str:
+    return utc_now().strftime("%Y%m%dT%H%M%SZ")
+
+
+def utc_month() -> str:
+    return utc_now().strftime("%Y-%m")
+
+
+def bridge_log_path(runtime_root: Path) -> Path:
+    return runtime_root / "logs" / RUNTIME_LOG_NAME
+
+
 def cycle_log(runtime_root: Path, message: str, level: str = "INFO") -> None:
     line = f"[{utc_iso()}] [{level}] [cycle] {message}"
-    log_path = runtime_root / "logs" / "bridge.log"
+    log_path = bridge_log_path(runtime_root)
     log_path.parent.mkdir(parents=True, exist_ok=True)
     with log_path.open("a", encoding="utf-8") as handle:
         handle.write(line + "\n")
     print(line)
+
+
+def rotate_runtime_log_if_needed(runtime_root: Path) -> int:
+    log_path = bridge_log_path(runtime_root)
+    ensure_inside(log_path, runtime_root)
+    if not log_path.exists():
+        return 0
+
+    lines = log_path.read_text(encoding="utf-8", errors="replace").splitlines()
+    if len(lines) <= LOG_ROTATE_MAX_LINES:
+        return 0
+
+    retain = lines[-LOG_ROTATE_RETAIN_LINES:]
+    archived = lines[: len(lines) - len(retain)]
+    archive_dir = log_path.parent / LOG_ARCHIVE_DIR / utc_month()
+    archive_path = archive_dir / f"bridge-{utc_stamp()}-{len(archived)}-lines.log"
+    ensure_inside(archive_path, runtime_root)
+    archive_path.parent.mkdir(parents=True, exist_ok=True)
+    archive_path.write_text("\n".join(archived) + "\n", encoding="utf-8")
+    log_path.write_text("\n".join(retain) + "\n", encoding="utf-8")
+    return len(archived)
 
 
 def atomic_write_text(path: Path, text: str, root: Path) -> None:
@@ -282,6 +319,12 @@ def main() -> int:
     try:
         ensure_inside(runtime_root, runtime_root)
         with bridge_cycle_lock(runtime_root, ttl_seconds=args.lock_ttl_seconds) as lock_path:
+            archived_lines = rotate_runtime_log_if_needed(runtime_root)
+            if archived_lines:
+                cycle_log(
+                    runtime_root,
+                    f"Rotated runtime bridge log: archived_lines={archived_lines} retain_lines={LOG_ROTATE_RETAIN_LINES}",
+                )
             cycle_log(runtime_root, f"Bridge cycle lock acquired: {lock_path}")
             write_cycle_state(runtime_root, state)
             state["last_step"] = "inbound sync"
