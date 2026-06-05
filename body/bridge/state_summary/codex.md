@@ -8,6 +8,21 @@ messages. Keep the newest items at the top.
 
 ## Latest Implementations
 
+### PC-Codex Postman Quick Rule
+
+Added a short quick-reference version of the PC-Codex postman rules.
+
+Changed:
+
+- `body/bridge/instructions/pc_codex_postman_quick.md`
+
+Behavior:
+
+- summarizes the one-file inbox delivery rule, clean checkout checks, allowed
+  envelope fixes, narrow commit scope, reporting requirements, and stop
+  conditions;
+- no runtime bridge behavior was changed.
+
 ### Block Bridge Script Bytecode Publishing
 
 Removed an accidentally tracked Python bytecode cache file from the bridge

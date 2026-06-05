@@ -1,6 +1,6 @@
 # Bridge State Summary
 
-- Generated at: `2026-06-05T19:37:21.271342Z`
+- Generated at: `2026-06-05T19:37:51.494412Z`
 - Inbox messages: `2`; latest: `msg-20260527-task-sync-body-001.md`
 - Codex inbox files: `21`; latest: `msg-20260605-codex-save-pc-postman-instructions-001.md`
 - Outbox messages: `42`; latest: `2026-06-05T192109Z_rpi5_cycle-error-outbound-sync.md`
@@ -12,38 +12,29 @@
 - Last error: `(none)`
 - Body awake: `True`
 - Body status: `normal_operation`
-- Body last heartbeat: `2026-06-05T19:37:14.556880+00:00`
-- Heartbeat count: `16079`
-- Heartbeat last gap seconds: `10.007177`
+- Body last heartbeat: `2026-06-05T19:37:44.622416+00:00`
+- Heartbeat count: `16082`
+- Heartbeat last gap seconds: `10.008066`
 - Heartbeat max gap seconds: `88.126733`
 - Heartbeat service started at: `Thu 2026-06-04 00:52:02 CEST`
-- Heartbeat uptime seconds: `161118`
+- Heartbeat uptime seconds: `161148`
 - Heartbeat restart count: `0`
 - Heartbeat uptime source: `systemd`
 - Heartbeat log starts count: `17`
 - Heartbeat log latest start: `2026-06-03T22:52:02.965137Z`
 - Heartbeat log max start gap seconds: `675295`
 - Last heartbeat gap seconds: `6`
-- Watchdog last heartbeat age seconds: `5.832261`
+- Watchdog last heartbeat age seconds: `6.007629`
 - Watchdog heartbeat timeout threshold seconds: `45`
 - Watchdog heartbeat timeout count: `0`
 - Watchdog heartbeat timeout required count: `2`
-- Body watchdog last check: `2026-06-05T19:37:20.389163+00:00`
+- Body watchdog last check: `2026-06-05T19:37:50.630061+00:00`
 
 ## Bridge Log Tail
 
 Filtered runtime tail, max 60 lines.
 
 ```text
-[2026-06-05T19:34:20.274574Z] [INFO] [cycle] == inbound sync ==
-[2026-06-05T19:34:20.724124Z] [INFO] [cycle] == bridge agent ==
-[2026-06-05T19:34:20.791630Z] [INFO] Body state unchanged: awake=True status=normal_operation
-[2026-06-05T19:34:20.801615Z] [INFO] Pending message count remaining: 0
-[2026-06-05T19:34:20.801746Z] [INFO] Processed message count: 0
-[2026-06-05T19:34:20.820226Z] [INFO] [cycle] == write bridge summary ==
-[2026-06-05T19:34:20.885765Z] [INFO] [cycle] == outbound sync ==
-[2026-06-05T19:34:21.372836Z] [INFO] [cycle] Bridge cycle complete.
-[2026-06-05T19:34:50.299408Z] [INFO] [cycle] Bridge cycle lock acquired: /home/fiste/Noema/bridge/state/bridge_cycle.lock.json
 [2026-06-05T19:34:50.303465Z] [INFO] [cycle] == inbound sync ==
 [2026-06-05T19:34:50.729032Z] [INFO] [cycle] == bridge agent ==
 [2026-06-05T19:34:50.795471Z] [INFO] Body state unchanged: awake=True status=normal_operation
@@ -95,4 +86,13 @@ Filtered runtime tail, max 60 lines.
 [2026-06-05T19:37:21.205231Z] [INFO] Pending message count remaining: 0
 [2026-06-05T19:37:21.205379Z] [INFO] Processed message count: 0
 [2026-06-05T19:37:21.225892Z] [INFO] [cycle] == write bridge summary ==
+[2026-06-05T19:37:21.295666Z] [INFO] [cycle] == outbound sync ==
+[2026-06-05T19:37:23.129941Z] [INFO] [cycle] Bridge cycle complete.
+[2026-06-05T19:37:50.727796Z] [INFO] [cycle] Bridge cycle lock acquired: /home/fiste/Noema/bridge/state/bridge_cycle.lock.json
+[2026-06-05T19:37:50.729930Z] [INFO] [cycle] == inbound sync ==
+[2026-06-05T19:37:51.355893Z] [INFO] [cycle] == bridge agent ==
+[2026-06-05T19:37:51.424892Z] [INFO] Body state unchanged: awake=True status=normal_operation
+[2026-06-05T19:37:51.432402Z] [INFO] Pending message count remaining: 0
+[2026-06-05T19:37:51.432500Z] [INFO] Processed message count: 0
+[2026-06-05T19:37:51.451324Z] [INFO] [cycle] == write bridge summary ==
 ```
