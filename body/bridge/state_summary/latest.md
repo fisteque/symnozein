@@ -1,6 +1,6 @@
 # Bridge State Summary
 
-- Generated at: `2026-06-05T19:29:20.574759Z`
+- Generated at: `2026-06-05T19:37:21.271342Z`
 - Inbox messages: `2`; latest: `msg-20260527-task-sync-body-001.md`
 - Codex inbox files: `21`; latest: `msg-20260605-codex-save-pc-postman-instructions-001.md`
 - Outbox messages: `42`; latest: `2026-06-05T192109Z_rpi5_cycle-error-outbound-sync.md`
@@ -12,87 +12,87 @@
 - Last error: `(none)`
 - Body awake: `True`
 - Body status: `normal_operation`
-- Body last heartbeat: `2026-06-05T19:29:14.199622+00:00`
-- Heartbeat count: `16031`
-- Heartbeat last gap seconds: `10.007978`
+- Body last heartbeat: `2026-06-05T19:37:14.556880+00:00`
+- Heartbeat count: `16079`
+- Heartbeat last gap seconds: `10.007177`
 - Heartbeat max gap seconds: `88.126733`
 - Heartbeat service started at: `Thu 2026-06-04 00:52:02 CEST`
-- Heartbeat uptime seconds: `160637`
+- Heartbeat uptime seconds: `161118`
 - Heartbeat restart count: `0`
 - Heartbeat uptime source: `systemd`
 - Heartbeat log starts count: `17`
 - Heartbeat log latest start: `2026-06-03T22:52:02.965137Z`
 - Heartbeat log max start gap seconds: `675295`
 - Last heartbeat gap seconds: `6`
-- Watchdog last heartbeat age seconds: `5.522523`
+- Watchdog last heartbeat age seconds: `5.832261`
 - Watchdog heartbeat timeout threshold seconds: `45`
 - Watchdog heartbeat timeout count: `0`
 - Watchdog heartbeat timeout required count: `2`
-- Body watchdog last check: `2026-06-05T19:29:19.722159+00:00`
+- Body watchdog last check: `2026-06-05T19:37:20.389163+00:00`
 
 ## Bridge Log Tail
 
 Filtered runtime tail, max 60 lines.
 
 ```text
-[2026-06-05T19:26:19.419835Z] [INFO] [cycle] == inbound sync ==
-[2026-06-05T19:26:19.949550Z] [INFO] [cycle] == bridge agent ==
-[2026-06-05T19:26:20.016952Z] [INFO] Body state unchanged: awake=True status=normal_operation
-[2026-06-05T19:26:20.023967Z] [INFO] Pending message count remaining: 0
-[2026-06-05T19:26:20.024064Z] [INFO] Processed message count: 0
-[2026-06-05T19:26:20.042208Z] [INFO] [cycle] == write bridge summary ==
-[2026-06-05T19:26:20.106731Z] [INFO] [cycle] == outbound sync ==
-[2026-06-05T19:26:20.581530Z] [INFO] [cycle] Bridge cycle complete.
-[2026-06-05T19:26:49.453581Z] [INFO] [cycle] Bridge cycle lock acquired: /home/fiste/Noema/bridge/state/bridge_cycle.lock.json
-[2026-06-05T19:26:49.456645Z] [INFO] [cycle] == inbound sync ==
-[2026-06-05T19:26:49.944379Z] [INFO] [cycle] == bridge agent ==
-[2026-06-05T19:26:50.012857Z] [INFO] Body state unchanged: awake=True status=normal_operation
-[2026-06-05T19:26:50.019922Z] [INFO] Pending message count remaining: 0
-[2026-06-05T19:26:50.020019Z] [INFO] Processed message count: 0
-[2026-06-05T19:26:50.038880Z] [INFO] [cycle] == write bridge summary ==
-[2026-06-05T19:26:50.103574Z] [INFO] [cycle] == outbound sync ==
-[2026-06-05T19:26:50.579366Z] [INFO] [cycle] Bridge cycle complete.
-[2026-06-05T19:27:19.490562Z] [INFO] [cycle] Bridge cycle lock acquired: /home/fiste/Noema/bridge/state/bridge_cycle.lock.json
-[2026-06-05T19:27:19.492944Z] [INFO] [cycle] == inbound sync ==
-[2026-06-05T19:27:19.954964Z] [INFO] [cycle] == bridge agent ==
-[2026-06-05T19:27:20.025258Z] [INFO] Body state unchanged: awake=True status=normal_operation
-[2026-06-05T19:27:20.032370Z] [INFO] Pending message count remaining: 0
-[2026-06-05T19:27:20.032470Z] [INFO] Processed message count: 0
-[2026-06-05T19:27:20.050773Z] [INFO] [cycle] == write bridge summary ==
-[2026-06-05T19:27:20.115089Z] [INFO] [cycle] == outbound sync ==
-[2026-06-05T19:27:20.616576Z] [INFO] [cycle] Bridge cycle complete.
-[2026-06-05T19:27:49.533483Z] [INFO] [cycle] Bridge cycle lock acquired: /home/fiste/Noema/bridge/state/bridge_cycle.lock.json
-[2026-06-05T19:27:49.538469Z] [INFO] [cycle] == inbound sync ==
-[2026-06-05T19:27:49.998083Z] [INFO] [cycle] == bridge agent ==
-[2026-06-05T19:27:50.068007Z] [INFO] Body state unchanged: awake=True status=normal_operation
-[2026-06-05T19:27:50.074647Z] [INFO] Pending message count remaining: 0
-[2026-06-05T19:27:50.074745Z] [INFO] Processed message count: 0
-[2026-06-05T19:27:50.092436Z] [INFO] [cycle] == write bridge summary ==
-[2026-06-05T19:27:50.157697Z] [INFO] [cycle] == outbound sync ==
-[2026-06-05T19:27:50.676927Z] [INFO] [cycle] Bridge cycle complete.
-[2026-06-05T19:28:19.627075Z] [INFO] [cycle] Bridge cycle lock acquired: /home/fiste/Noema/bridge/state/bridge_cycle.lock.json
-[2026-06-05T19:28:19.629497Z] [INFO] [cycle] == inbound sync ==
-[2026-06-05T19:28:20.095610Z] [INFO] [cycle] == bridge agent ==
-[2026-06-05T19:28:20.164582Z] [INFO] Body state unchanged: awake=True status=normal_operation
-[2026-06-05T19:28:20.171676Z] [INFO] Pending message count remaining: 0
-[2026-06-05T19:28:20.171783Z] [INFO] Processed message count: 0
-[2026-06-05T19:28:20.191010Z] [INFO] [cycle] == write bridge summary ==
-[2026-06-05T19:28:20.259270Z] [INFO] [cycle] == outbound sync ==
-[2026-06-05T19:28:20.764135Z] [INFO] [cycle] Bridge cycle complete.
-[2026-06-05T19:28:49.786907Z] [INFO] [cycle] Bridge cycle lock acquired: /home/fiste/Noema/bridge/state/bridge_cycle.lock.json
-[2026-06-05T19:28:49.790839Z] [INFO] [cycle] == inbound sync ==
-[2026-06-05T19:28:50.303162Z] [INFO] [cycle] == bridge agent ==
-[2026-06-05T19:28:50.370980Z] [INFO] Body state unchanged: awake=True status=normal_operation
-[2026-06-05T19:28:50.377513Z] [INFO] Pending message count remaining: 0
-[2026-06-05T19:28:50.377608Z] [INFO] Processed message count: 0
-[2026-06-05T19:28:50.395913Z] [INFO] [cycle] == write bridge summary ==
-[2026-06-05T19:28:50.462130Z] [INFO] [cycle] == outbound sync ==
-[2026-06-05T19:28:53.075951Z] [INFO] [cycle] Bridge cycle complete.
-[2026-06-05T19:29:19.812778Z] [INFO] [cycle] Bridge cycle lock acquired: /home/fiste/Noema/bridge/state/bridge_cycle.lock.json
-[2026-06-05T19:29:19.816129Z] [INFO] [cycle] == inbound sync ==
-[2026-06-05T19:29:20.437511Z] [INFO] [cycle] == bridge agent ==
-[2026-06-05T19:29:20.505688Z] [INFO] Body state unchanged: awake=True status=normal_operation
-[2026-06-05T19:29:20.512922Z] [INFO] Pending message count remaining: 0
-[2026-06-05T19:29:20.513023Z] [INFO] Processed message count: 0
-[2026-06-05T19:29:20.532411Z] [INFO] [cycle] == write bridge summary ==
+[2026-06-05T19:34:20.274574Z] [INFO] [cycle] == inbound sync ==
+[2026-06-05T19:34:20.724124Z] [INFO] [cycle] == bridge agent ==
+[2026-06-05T19:34:20.791630Z] [INFO] Body state unchanged: awake=True status=normal_operation
+[2026-06-05T19:34:20.801615Z] [INFO] Pending message count remaining: 0
+[2026-06-05T19:34:20.801746Z] [INFO] Processed message count: 0
+[2026-06-05T19:34:20.820226Z] [INFO] [cycle] == write bridge summary ==
+[2026-06-05T19:34:20.885765Z] [INFO] [cycle] == outbound sync ==
+[2026-06-05T19:34:21.372836Z] [INFO] [cycle] Bridge cycle complete.
+[2026-06-05T19:34:50.299408Z] [INFO] [cycle] Bridge cycle lock acquired: /home/fiste/Noema/bridge/state/bridge_cycle.lock.json
+[2026-06-05T19:34:50.303465Z] [INFO] [cycle] == inbound sync ==
+[2026-06-05T19:34:50.729032Z] [INFO] [cycle] == bridge agent ==
+[2026-06-05T19:34:50.795471Z] [INFO] Body state unchanged: awake=True status=normal_operation
+[2026-06-05T19:34:50.803492Z] [INFO] Pending message count remaining: 0
+[2026-06-05T19:34:50.803591Z] [INFO] Processed message count: 0
+[2026-06-05T19:34:50.824743Z] [INFO] [cycle] == write bridge summary ==
+[2026-06-05T19:34:50.894225Z] [INFO] [cycle] == outbound sync ==
+[2026-06-05T19:34:51.391716Z] [INFO] [cycle] Bridge cycle complete.
+[2026-06-05T19:35:20.337945Z] [INFO] [cycle] Bridge cycle lock acquired: /home/fiste/Noema/bridge/state/bridge_cycle.lock.json
+[2026-06-05T19:35:20.340318Z] [INFO] [cycle] == inbound sync ==
+[2026-06-05T19:35:20.814364Z] [INFO] [cycle] == bridge agent ==
+[2026-06-05T19:35:20.881672Z] [INFO] Body state unchanged: awake=True status=normal_operation
+[2026-06-05T19:35:20.888951Z] [INFO] Pending message count remaining: 0
+[2026-06-05T19:35:20.889046Z] [INFO] Processed message count: 0
+[2026-06-05T19:35:20.908057Z] [INFO] [cycle] == write bridge summary ==
+[2026-06-05T19:35:20.973943Z] [INFO] [cycle] == outbound sync ==
+[2026-06-05T19:35:21.444698Z] [INFO] [cycle] Bridge cycle complete.
+[2026-06-05T19:35:50.376720Z] [INFO] [cycle] Bridge cycle lock acquired: /home/fiste/Noema/bridge/state/bridge_cycle.lock.json
+[2026-06-05T19:35:50.379893Z] [INFO] [cycle] == inbound sync ==
+[2026-06-05T19:35:50.861483Z] [INFO] [cycle] == bridge agent ==
+[2026-06-05T19:35:50.931004Z] [INFO] Body state unchanged: awake=True status=normal_operation
+[2026-06-05T19:35:50.939470Z] [INFO] Pending message count remaining: 0
+[2026-06-05T19:35:50.939634Z] [INFO] Processed message count: 0
+[2026-06-05T19:35:50.958730Z] [INFO] [cycle] == write bridge summary ==
+[2026-06-05T19:35:51.022923Z] [INFO] [cycle] == outbound sync ==
+[2026-06-05T19:35:51.521576Z] [INFO] [cycle] Bridge cycle complete.
+[2026-06-05T19:36:20.413954Z] [INFO] [cycle] Bridge cycle lock acquired: /home/fiste/Noema/bridge/state/bridge_cycle.lock.json
+[2026-06-05T19:36:20.419956Z] [INFO] [cycle] == inbound sync ==
+[2026-06-05T19:36:20.891524Z] [INFO] [cycle] == bridge agent ==
+[2026-06-05T19:36:20.960316Z] [INFO] Body state unchanged: awake=True status=normal_operation
+[2026-06-05T19:36:20.967684Z] [INFO] Pending message count remaining: 0
+[2026-06-05T19:36:20.967840Z] [INFO] Processed message count: 0
+[2026-06-05T19:36:20.986596Z] [INFO] [cycle] == write bridge summary ==
+[2026-06-05T19:36:21.051661Z] [INFO] [cycle] == outbound sync ==
+[2026-06-05T19:36:21.549804Z] [INFO] [cycle] Bridge cycle complete.
+[2026-06-05T19:36:50.458460Z] [INFO] [cycle] Bridge cycle lock acquired: /home/fiste/Noema/bridge/state/bridge_cycle.lock.json
+[2026-06-05T19:36:50.460483Z] [INFO] [cycle] == inbound sync ==
+[2026-06-05T19:36:50.917196Z] [INFO] [cycle] == bridge agent ==
+[2026-06-05T19:36:50.985052Z] [INFO] Body state unchanged: awake=True status=normal_operation
+[2026-06-05T19:36:50.992194Z] [INFO] Pending message count remaining: 0
+[2026-06-05T19:36:50.992293Z] [INFO] Processed message count: 0
+[2026-06-05T19:36:51.011361Z] [INFO] [cycle] == write bridge summary ==
+[2026-06-05T19:36:51.077916Z] [INFO] [cycle] == outbound sync ==
+[2026-06-05T19:36:51.577843Z] [INFO] [cycle] Bridge cycle complete.
+[2026-06-05T19:37:20.600274Z] [INFO] [cycle] Bridge cycle lock acquired: /home/fiste/Noema/bridge/state/bridge_cycle.lock.json
+[2026-06-05T19:37:20.605345Z] [INFO] [cycle] == inbound sync ==
+[2026-06-05T19:37:21.097759Z] [INFO] [cycle] == bridge agent ==
+[2026-06-05T19:37:21.193626Z] [INFO] Body state unchanged: awake=True status=normal_operation
+[2026-06-05T19:37:21.205231Z] [INFO] Pending message count remaining: 0
+[2026-06-05T19:37:21.205379Z] [INFO] Processed message count: 0
+[2026-06-05T19:37:21.225892Z] [INFO] [cycle] == write bridge summary ==
 ```
