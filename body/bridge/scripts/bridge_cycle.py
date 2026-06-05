@@ -12,7 +12,7 @@ import traceback
 from datetime import UTC, datetime
 from pathlib import Path
 
-from bridge_cycle_lock import DEFAULT_LOCK_TTL_SECONDS, bridge_cycle_lock
+from bridge_cycle_lock import DEFAULT_LOCK_TTL_SECONDS, bridge_cycle_lock, update_lock_progress
 from bridge_sync_common import (
     DEFAULT_PROJECT_ROOT,
     SyncError,
@@ -285,9 +285,11 @@ def main() -> int:
             write_cycle_state(runtime_root, state)
             state["last_step"] = "inbound sync"
             write_cycle_state(runtime_root, state)
+            update_lock_progress(lock_path, runtime_root, "inbound sync")
             run_step(runtime_root, "inbound sync", [str(SCRIPT_DIR / "bridge_sync_inbound.py"), *common])
             state["last_step"] = "bridge agent"
             write_cycle_state(runtime_root, state)
+            update_lock_progress(lock_path, runtime_root, "bridge agent")
             run_step(
                 runtime_root,
                 "bridge agent",
@@ -296,6 +298,7 @@ def main() -> int:
             )
             state["last_step"] = "write bridge summary"
             write_cycle_state(runtime_root, state)
+            update_lock_progress(lock_path, runtime_root, "write bridge summary")
             run_step(
                 runtime_root,
                 "write bridge summary",
@@ -308,6 +311,7 @@ def main() -> int:
             )
             state["last_step"] = "outbound sync"
             write_cycle_state(runtime_root, state)
+            update_lock_progress(lock_path, runtime_root, "outbound sync")
             run_step(runtime_root, "outbound sync", outbound)
             cycle_log(runtime_root, "Bridge cycle complete.")
             if not args.commit_and_push:
