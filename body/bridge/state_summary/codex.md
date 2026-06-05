@@ -8,31 +8,6 @@ messages. Keep the newest items at the top.
 
 ## Latest Implementations
 
-### PC-Codex Postman Automation Draft
-
-Prepared a narrow delivery tool so routine `codex_request` inbox delivery can
-be done without Codex reasoning.
-
-Changed:
-
-- `scripts/send_codex_message.py`
-- `.github/workflows/send_codex_message.yml`
-
-Behavior:
-
-- local script creates exactly one new Markdown file under
-  `body/bridge/inbox/messages/codex/`;
-- it fills real UTC `created_at`, validates target and filename, renders
-  frontmatter, refuses overwrites, checks for dirty checkout state, stages only
-  the new inbox file, verifies staged scope, commits, and pushes;
-- workflow is manual-only via `workflow_dispatch`, has `contents: write`, and
-  calls the same script;
-- workflow body input uses base64-encoded UTF-8 Markdown to avoid fragile
-  multiline UI escaping;
-- no runtime bridge behavior, RPi inbox/outbox processing, heartbeat/watchdog,
-  bridge lock, timer cadence, logging cleanup, rotation, or Git housekeeping
-  behavior was changed.
-
 ### PC-Codex Postman Quick Rule
 
 Added a short quick-reference version of the PC-Codex postman rules.
