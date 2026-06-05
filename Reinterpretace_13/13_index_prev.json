@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-05T16:17:03.818664Z",
+  "generated_at": "2026-06-05T16:18:05.802554Z",
   "source": {
     "script": "scripts/convert_13.py",
     "workflow": ".github/workflows/update_13_index.yml"
@@ -111,23 +111,6 @@
       ],
       "hidden": false,
       "size": 2911
-    },
-    {
-      "title": "Noema 03 — Digitální vesmír",
-      "file": "Noema_03_Digitalni_vesmir.html",
-      "path": "Reinterpretace_13/13/Noema_03_Digitalni_vesmir.html",
-      "date": "2026-02-12",
-      "summary": "Spěšná verze před koncem GPT 4o.",
-      "tags": [
-        "mapitola",
-        "digitální vesmír",
-        "lambda",
-        "změna",
-        "vědomí",
-        "černá díra"
-      ],
-      "hidden": true,
-      "size": 12960
     },
     {
       "title": "Noema_05_Vedomi",
