@@ -8,6 +8,37 @@ messages. Keep the newest items at the top.
 
 ## Latest Implementations
 
+### Filtered Public Bridge Log Tail
+
+Reduced the public log tail in `body/bridge/state_summary/latest.md` without
+changing the local runtime log.
+
+Changed:
+
+- `bridge/scripts/write_bridge_summary.py`
+- `body/bridge/scripts/write_bridge_summary.py`
+
+Behavior now:
+
+- default public `Bridge Log Tail` is `60` filtered lines instead of `120` raw
+  lines;
+- the summary writer scans only a small end window of the runtime log before
+  filtering;
+- routine no-op noise such as already-processed messages, normal fetch output,
+  no-op outbound summaries, and repeated root/path lines is omitted from the
+  public tail;
+- WARN/ERROR lines, cycle step boundaries, bridge cycle completion, runtime log
+  rotation notices, body state observations, task lines, replies, and concise
+  count lines remain visible;
+- local `/home/fiste/Noema/bridge/logs/bridge.log` is unchanged and remains the
+  full runtime diagnostic log.
+
+Verified:
+
+- runtime and mirrored `write_bridge_summary.py` copies match;
+- Python syntax compilation passes for both copies;
+- local summary generation writes `latest.md` with a filtered bridge log tail.
+
 ### Runtime-Only Bridge Log Rotation
 
 Moved bridge runtime log rotation back into the bridge runtime cycle, separate

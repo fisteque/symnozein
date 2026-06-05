@@ -7,11 +7,50 @@ import json
 import subprocess
 import sys
 import time
+from collections import deque
 from datetime import UTC, datetime
 from pathlib import Path
 from typing import Any
 
 from bridge_sync_common import DEFAULT_PROJECT_ROOT, STATE_SUMMARY, SyncError, add_common_args, ensure_inside, ensure_repo
+
+
+LOG_TAIL_SCAN_MULTIPLIER = 4
+PUBLIC_LOG_INCLUDE_MARKERS = (
+    "[WARN]",
+    "[ERROR]",
+    "== inbound sync ==",
+    "== bridge agent ==",
+    "== write bridge summary ==",
+    "== outbound sync ==",
+    "Bridge cycle lock acquired",
+    "Bridge cycle complete.",
+    "Rotated runtime bridge log",
+    "Body state unchanged",
+    "Body state change",
+    "Pending message count remaining",
+    "Processed message count",
+    "Reply written",
+    "Task run",
+    "Cycle error",
+)
+PUBLIC_LOG_EXCLUDE_MARKERS = (
+    "Already processed:",
+    "Bridge root:",
+    "Body root:",
+    "Fetching origin main",
+    "From https://github.com/",
+    "No inbound changes for",
+    "Optional source missing, skipped:",
+    "Log tail mirror disabled",
+    "Scripts mirror complete.",
+    "Staged outbound changes:",
+    "Commit message in code:",
+    "Local branch is not behind remote",
+    "Only logs/state_summary changed",
+    "* branch            main       -> FETCH_HEAD",
+    "Wrote bridge summary:",
+)
 
 
 def utc_iso() -> str:
@@ -31,7 +70,7 @@ def parse_args() -> argparse.Namespace:
         default=DEFAULT_PROJECT_ROOT,
         help=f"Project root containing state/body_state.json. Default: {DEFAULT_PROJECT_ROOT}",
     )
-    parser.add_argument("--log-lines", type=int, default=120, help="Number of bridge.log tail lines to include.")
+    parser.add_argument("--log-lines", type=int, default=60, help="Number of filtered bridge.log tail lines to include.")
     return parser.parse_args()
 
 
@@ -65,7 +104,30 @@ def load_json(path: Path, *, tolerate_invalid: bool = False) -> dict[str, Any]:
 def tail_lines(path: Path, limit: int) -> list[str]:
     if limit <= 0 or not path.exists():
         return []
-    return path.read_text(encoding="utf-8", errors="replace").splitlines()[-limit:]
+    tail: deque[str] = deque(maxlen=limit)
+    with path.open("r", encoding="utf-8", errors="replace") as handle:
+        for line in handle:
+            tail.append(line.rstrip("\n"))
+    return list(tail)
+
+
+def include_public_log_line(line: str) -> bool:
+    if any(marker in line for marker in PUBLIC_LOG_INCLUDE_MARKERS):
+        return True
+    if any(marker in line for marker in PUBLIC_LOG_EXCLUDE_MARKERS):
+        return False
+    return line.startswith("[") and "[cycle]" in line
+
+
+def public_log_tail(path: Path, limit: int) -> list[str]:
+    if limit <= 0:
+        return []
+    scan_limit = max(limit, limit * LOG_TAIL_SCAN_MULTIPLIER)
+    raw_tail = tail_lines(path, scan_limit)
+    filtered = [line for line in raw_tail if include_public_log_line(line)]
+    if filtered:
+        return filtered[-limit:]
+    return raw_tail[-min(limit, 10):]
 
 
 def count_markdown_files(path: Path) -> int:
@@ -230,7 +292,7 @@ def render_summary(runtime_root: Path, repo_root: Path, project_root: Path, log_
     codex_inbox_dir = inbox_dir / "codex"
     outbox_dir = repo_root / "body/bridge/outbox/messages"
     codex_outbox_dir = repo_root / "body/bridge/outbox/codex"
-    log_tail = tail_lines(runtime_root / "logs" / "bridge.log", log_lines)
+    log_tail = public_log_tail(runtime_root / "logs" / "bridge.log", log_lines)
 
     body_awake = body_state.get("awake", "(unknown)") if body_state else "(missing)"
     body_status = body_state.get("status", "(unknown)") if body_state else "(missing)"
@@ -282,7 +344,7 @@ def render_summary(runtime_root: Path, repo_root: Path, project_root: Path, log_
                 f"- Body watchdog last check: `{body_state.get('watchdog_last_check', '(unknown)')}`",
             ]
         )
-    lines.extend(["", "## Bridge Log Tail", "", "```text"])
+    lines.extend(["", "## Bridge Log Tail", "", f"Filtered runtime tail, max {log_lines} lines.", "", "```text"])
     lines.extend(log_tail or ["(no log lines)"])
     lines.extend(["```", ""])
     return "\n".join(lines)
