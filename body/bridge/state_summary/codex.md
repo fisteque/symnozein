@@ -8,6 +8,41 @@ messages. Keep the newest items at the top.
 
 ## Latest Implementations
 
+### Bridge Logging Cleanup Final State
+
+Closed the bridge logging cleanup pass after removing duplicate publication,
+restoring local-only rotation, reducing duplicate runtime log writes, and
+filtering the public summary tail.
+
+Current behavior:
+
+- raw `/home/fiste/Noema/bridge/logs/bridge.log` remains local-only;
+- standalone `body/bridge/logs/bridge_tail.log` is no longer created,
+  published, or tracked;
+- `body/bridge/logs/` is absent from the repository checkout because Git does
+  not track empty directories;
+- bridge agent stdout is no longer re-logged by `bridge_cycle.py`;
+- runtime `bridge.log` rotates locally after `8000` lines and retains `3000`
+  active lines;
+- rotation archives stay local under
+  `/home/fiste/Noema/bridge/logs/archive/YYYY-MM/`;
+- public `body/bridge/state_summary/latest.md` keeps a filtered `Bridge Log
+  Tail` with a default maximum of `60` lines;
+- the summary writer reads the runtime log tail backwards in small byte chunks,
+  avoiding full-file log reads during normal summary generation.
+
+Observed after rollout:
+
+- `latest.md` was reduced to a small public summary, about 86-95 lines during
+  normal operation;
+- runtime `bridge.log` continued as the full diagnostic log and was about
+  3.4k-3.6k active lines after rotation;
+- the only recurring dirty file after cycles is the expected generated
+  `body/bridge/state_summary/latest.md`;
+- no heartbeat/watchdog, bridge lock semantics, timer cadence, inbox/outbox
+  processing, task allowlist, or Git housekeeping behavior was intentionally
+  changed.
+
 ### Filtered Public Bridge Log Tail
 
 Reduced the public log tail in `body/bridge/state_summary/latest.md` without
