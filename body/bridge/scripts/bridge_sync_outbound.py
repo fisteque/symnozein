@@ -6,7 +6,6 @@ import argparse
 import os
 import shutil
 import sys
-from datetime import UTC, datetime
 from pathlib import Path
 
 from bridge_sync_common import (
@@ -35,20 +34,9 @@ REPO_LOG_TAIL_NAME = "bridge_tail.log"
 LOG_TAIL = LOGS / REPO_LOG_TAIL_NAME
 LEGACY_REPO_LOG = LOGS / RUNTIME_LOG_NAME
 STATE_SUMMARY_LATEST = STATE_SUMMARY / "latest.md"
-ALLOWED_REPO_PATHS = (OUTBOX_MESSAGES, OUTBOX_CODEX, LOG_TAIL, STATE_SUMMARY, SCRIPTS, LEGACY_REPO_LOG)
+ALLOWED_REPO_PATHS = (OUTBOX_MESSAGES, OUTBOX_CODEX, STATE_SUMMARY, SCRIPTS)
+REMOVED_REPO_PATHS = (LOG_TAIL,)
 LOCAL_ONLY_REPO_PATHS = (INBOX_MESSAGES,)
-LOG_ROTATE_MAX_LINES = 5000
-LOG_ROTATE_RETAIN_LINES = 3000
-LOG_TAIL_LINES = 500
-LOG_ARCHIVE_DIR = "archive"
-
-
-def utc_stamp() -> str:
-    return datetime.now(UTC).strftime("%Y%m%dT%H%M%SZ")
-
-
-def utc_month() -> str:
-    return datetime.now(UTC).strftime("%Y-%m")
 
 
 def parse_args() -> argparse.Namespace:
@@ -88,66 +76,6 @@ def copy_tree_without_delete(source_root: Path, target_root: Path, *, dry_run: b
     return changed
 
 
-def write_if_changed(path: Path, text: str, *, dry_run: bool) -> bool:
-    if path.exists() and path.read_text(encoding="utf-8", errors="replace") == text:
-        return False
-    print(f"{'Would write' if dry_run else 'Writing'} {path}")
-    if not dry_run:
-        path.parent.mkdir(parents=True, exist_ok=True)
-        path.write_text(text, encoding="utf-8")
-    return True
-
-
-def rotate_runtime_log(runtime_root: Path, *, dry_run: bool) -> int:
-    log_path = runtime_root / "logs" / RUNTIME_LOG_NAME
-    ensure_inside(log_path, runtime_root)
-    if not log_path.exists():
-        return 0
-
-    lines = log_path.read_text(encoding="utf-8", errors="replace").splitlines()
-    if len(lines) <= LOG_ROTATE_MAX_LINES:
-        return 0
-
-    retain = lines[-LOG_ROTATE_RETAIN_LINES:]
-    archived = lines[: len(lines) - len(retain)]
-    archive_dir = log_path.parent / LOG_ARCHIVE_DIR / utc_month()
-    archive_path = archive_dir / f"bridge-{utc_stamp()}-{len(archived)}-lines.log"
-    ensure_inside(archive_path, runtime_root)
-    print(
-        f"{'Would rotate' if dry_run else 'Rotating'} {log_path}: "
-        f"archive={archive_path} archive_lines={len(archived)} retain_lines={len(retain)}"
-    )
-    if not dry_run:
-        archive_path.parent.mkdir(parents=True, exist_ok=True)
-        archive_path.write_text("\n".join(archived) + "\n", encoding="utf-8")
-        log_path.write_text("\n".join(retain) + "\n", encoding="utf-8")
-    return len(archived)
-
-
-def mirror_log_tail(runtime_root: Path, repo_root: Path, *, dry_run: bool) -> int:
-    rotate_runtime_log(runtime_root, dry_run=dry_run)
-    source = runtime_root / "logs" / RUNTIME_LOG_NAME
-    target_dir = ensure_inside(repo_root / LOGS, repo_root)
-    target = ensure_inside(target_dir / REPO_LOG_TAIL_NAME, target_dir)
-    if not source.exists():
-        print(f"Optional source missing, skipped: {source}")
-        return 0
-    lines = source.read_text(encoding="utf-8", errors="replace").splitlines()
-    tail = lines[-LOG_TAIL_LINES:]
-    text = "\n".join(tail) + ("\n" if tail else "")
-    changed = write_if_changed(target, text, dry_run=dry_run)
-    legacy_repo_log = ensure_inside(repo_root / LEGACY_REPO_LOG, repo_root)
-    if legacy_repo_log.exists():
-        print(f"{'Would depublish' if dry_run else 'Depublishing'} legacy repo log {legacy_repo_log}")
-        if not dry_run:
-            legacy_repo_log.unlink()
-        changed = True
-    if changed:
-        return 1
-    print(f"Log tail unchanged: {target}")
-    return 0
-
-
 def mirror_outbound(runtime_root: Path, repo_root: Path, *, dry_run: bool) -> None:
     pairs = (
         (runtime_root / "outbox/messages", repo_root / OUTBOX_MESSAGES),
@@ -161,10 +89,9 @@ def mirror_outbound(runtime_root: Path, repo_root: Path, *, dry_run: bool) -> No
         else:
             print(f"Optional source missing, skipped: {source}")
 
-    changed = mirror_log_tail(runtime_root, repo_root, dry_run=dry_run)
     print(
-        f"Mirrored log tail {runtime_root / 'logs' / RUNTIME_LOG_NAME} -> "
-        f"{repo_root / LOGS / REPO_LOG_TAIL_NAME}. Changed files: {changed}"
+        "Log tail mirror disabled; runtime log remains local and public tail is "
+        f"available through {repo_root / STATE_SUMMARY_LATEST}."
     )
     mirror_scripts(runtime_root, repo_root, dry_run=dry_run)
 
@@ -177,7 +104,7 @@ def ensure_no_forbidden_status(repo_root: Path) -> None:
 
 def is_allowed_staged_path(name: str) -> bool:
     path = Path(name)
-    return any(path == allowed or allowed in path.parents for allowed in ALLOWED_REPO_PATHS)
+    return any(path == allowed or allowed in path.parents for allowed in ALLOWED_REPO_PATHS) or is_removed_repo_path(name)
 
 
 def ensure_no_disallowed_staged_paths(repo_root: Path) -> None:
@@ -208,18 +135,26 @@ def working_tree_status_for_paths(repo_root: Path, paths: tuple[Path, ...]) -> s
     ).stdout.strip()
 
 
-def is_allowed_worktree_status_line(line: str) -> bool:
-    name = line[3:] if len(line) > 2 and line[2] == " " else line[2:]
-    if " -> " in name:
-        old_name, new_name = name.split(" -> ", 1)
-        return is_allowed_worktree_path(old_name) and is_allowed_worktree_path(new_name)
-    return is_allowed_worktree_path(name)
-
-
 def is_allowed_worktree_path(name: str) -> bool:
     path = Path(name)
     allowed_paths = (*ALLOWED_REPO_PATHS, *LOCAL_ONLY_REPO_PATHS)
     return any(path == allowed or allowed in path.parents for allowed in allowed_paths)
+
+
+def is_removed_repo_path(name: str) -> bool:
+    path = Path(name)
+    return any(path == removed for removed in REMOVED_REPO_PATHS)
+
+
+def is_allowed_worktree_status_line(line: str) -> bool:
+    status = line[:2]
+    name = line[3:] if len(line) > 2 and line[2] == " " else line[2:]
+    if " -> " in name:
+        old_name, new_name = name.split(" -> ", 1)
+        return is_allowed_worktree_path(old_name) and is_allowed_worktree_path(new_name)
+    if "D" in status and is_removed_repo_path(name):
+        return True
+    return is_allowed_worktree_path(name)
 
 
 def ensure_only_allowed_worktree_changes(repo_root: Path) -> None:
@@ -242,10 +177,21 @@ def stage_allowed_paths(repo_root: Path) -> None:
     existing = [path for path in ALLOWED_REPO_PATHS if path_exists_or_tracked(repo_root, path)]
     if existing:
         run_git(repo_root, ["add", "--", *[repo_rel(path) for path in existing]])
+    removed = [
+        path
+        for path in REMOVED_REPO_PATHS
+        if not (repo_root / path).exists() and path_exists_or_tracked(repo_root, path)
+    ]
+    if removed:
+        run_git(repo_root, ["add", "--", *[repo_rel(path) for path in removed]])
 
 
 def show_pending(repo_root: Path) -> str:
-    existing = [path for path in ALLOWED_REPO_PATHS if path_exists_or_tracked(repo_root, path)]
+    existing = [
+        path
+        for path in (*ALLOWED_REPO_PATHS, *REMOVED_REPO_PATHS)
+        if path_exists_or_tracked(repo_root, path)
+    ]
     if not existing:
         return ""
     return run_git(
@@ -255,7 +201,11 @@ def show_pending(repo_root: Path) -> str:
 
 
 def staged_allowed_paths(repo_root: Path) -> list[str]:
-    existing = [path for path in ALLOWED_REPO_PATHS if path_exists_or_tracked(repo_root, path)]
+    existing = [
+        path
+        for path in (*ALLOWED_REPO_PATHS, *REMOVED_REPO_PATHS)
+        if path_exists_or_tracked(repo_root, path)
+    ]
     if not existing:
         return []
     output = run_git(
@@ -266,7 +216,7 @@ def staged_allowed_paths(repo_root: Path) -> list[str]:
 
 
 def has_substantive_staged_change(repo_root: Path) -> bool:
-    quiet_paths = (repo_rel(LOG_TAIL), repo_rel(LEGACY_REPO_LOG), repo_rel(STATE_SUMMARY_LATEST))
+    quiet_paths = (repo_rel(STATE_SUMMARY_LATEST),)
     for path in staged_allowed_paths(repo_root):
         if not any(path == quiet or path.startswith(f"{quiet}/") for quiet in quiet_paths):
             return True
@@ -280,7 +230,11 @@ def unstage_allowed_paths(repo_root: Path) -> None:
 
 
 def existing_allowed_paths(repo_root: Path) -> list[Path]:
-    return [path for path in ALLOWED_REPO_PATHS if path_exists_or_tracked(repo_root, path)]
+    return [
+        path
+        for path in (*ALLOWED_REPO_PATHS, *REMOVED_REPO_PATHS)
+        if path_exists_or_tracked(repo_root, path)
+    ]
 
 
 def local_only_untracked_paths(repo_root: Path) -> list[Path]:
