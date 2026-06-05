@@ -222,6 +222,7 @@ def run_step(
     args: list[str],
     *,
     env: dict[str, str] | None = None,
+    log_stdout: bool = True,
 ) -> None:
     cycle_log(runtime_root, f"== {name} ==")
     result = subprocess.run(
@@ -231,7 +232,7 @@ def run_step(
         stderr=subprocess.PIPE,
         env=env,
     )
-    if result.stdout:
+    if result.stdout and log_stdout:
         cycle_log(runtime_root, result.stdout.rstrip())
     if result.stderr:
         cycle_log(runtime_root, result.stderr.rstrip(), level="ERROR")
@@ -295,6 +296,7 @@ def main() -> int:
                 "bridge agent",
                 [sys.executable, str(SCRIPT_DIR / "bridge_agent_v2.py")],
                 env=agent_env,
+                log_stdout=False,
             )
             state["last_step"] = "write bridge summary"
             write_cycle_state(runtime_root, state)

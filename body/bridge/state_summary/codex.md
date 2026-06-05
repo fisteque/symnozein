@@ -8,6 +8,34 @@ messages. Keep the newest items at the top.
 
 ## Latest Implementations
 
+### Stop Re-Logging Bridge Agent Stdout
+
+Reduced duplication in `/home/fiste/Noema/bridge/logs/bridge.log` by stopping
+`bridge_cycle.py` from writing the bridge agent's stdout back into the same
+runtime log.
+
+Changed:
+
+- `bridge/scripts/bridge_cycle.py`
+- `body/bridge/scripts/bridge_cycle.py`
+
+Behavior now:
+
+- `run_step(...)` accepts `log_stdout`, defaulting to `True` for existing child
+  steps;
+- the `bridge agent` step calls `run_step(..., log_stdout=False)`;
+- `bridge_agent_v2.py` still writes its own lines directly to `bridge.log`;
+- bridge agent stderr remains captured and logged by the cycle wrapper;
+- inbound sync, summary writer, and outbound sync stdout logging remain
+  unchanged.
+
+Verified:
+
+- runtime and mirrored `bridge_cycle.py` copies match;
+- Python syntax compilation passes for both copies;
+- no heartbeat/watchdog, bridge lock, timer cadence, inbox/outbox processing,
+  outbound sync, or Git housekeeping behavior was changed.
+
 ### Stop Publishing Bridge Tail Log
 
 Removed the standalone repository mirror of the runtime bridge log tail because
