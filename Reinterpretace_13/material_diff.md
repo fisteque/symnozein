@@ -5,6 +5,26 @@ Uchovává posledních **50** záznamů.
 
 ---
 
+## 2026-06-05T16:18:02.019581Z
+
+Zdroj změn:
+- skript: `scripts/update_material_index.py`
+- workflow: `.github/workflows/update_material_index.yml`
+
+➕ přidáno: **4**
+- `Clovek.md`
+- `Noema_01_Cesta.md`
+- `Noema_02_Vira.md`
+- `Noema_03_Digitalni_vesmir.md`
+
+🔄 změněno: **0**
+- nic
+
+❌ odebráno: **0**
+- nic
+
+---
+
 ## 2026-06-05T16:06:20.758444Z
 
 Zdroj změn:

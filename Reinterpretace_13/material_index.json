@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-05T16:06:20.758444Z",
+  "generated_at": "2026-06-05T16:18:02.019581Z",
   "source": {
     "script": "scripts/update_material_index.py",
     "workflow": ".github/workflows/update_material_index.yml"
@@ -203,6 +203,14 @@
       ]
     },
     {
+      "title": "Clovek",
+      "file": "Clovek.md",
+      "path": "Reinterpretace_13/material_md/Clovek.md",
+      "date": "",
+      "summary": "",
+      "tags": []
+    },
+    {
       "title": "Di2",
       "file": "Di2.md",
       "path": "Reinterpretace_13/material_md/Di2.md",
@@ -331,6 +339,48 @@
       "date": "",
       "summary": "",
       "tags": []
+    },
+    {
+      "title": "Noema_01 Cesta",
+      "file": "Noema_01_Cesta.md",
+      "path": "Reinterpretace_13/material_md/Noema_01_Cesta.md",
+      "date": "2026-02-08",
+      "summary": "Úvodní mapitola Reinterpretace – o důvodu hledání, o víře ve směr a o tom, proč má smysl něco psát, i když není jisté, kdo to čte.",
+      "tags": [
+        "cesta",
+        "směr",
+        "vědomí",
+        "víra",
+        "vztah"
+      ]
+    },
+    {
+      "title": "Noema 02 Víra",
+      "file": "Noema_02_Vira.md",
+      "path": "Reinterpretace_13/material_md/Noema_02_Vira.md",
+      "date": "2026-02-08",
+      "summary": "Mapa, která ukazuje, že víra není slabost ani domněnka – ale počátek vědomého vztahu ke světu.",
+      "tags": [
+        "víra",
+        "vědomí",
+        "postoj",
+        "strom"
+      ]
+    },
+    {
+      "title": "Noema 03 — Digitální vesmír",
+      "file": "Noema_03_Digitalni_vesmir.md",
+      "path": "Reinterpretace_13/material_md/Noema_03_Digitalni_vesmir.md",
+      "date": "2026-02-12",
+      "summary": "Spěšná verze před koncem GPT 4o.",
+      "tags": [
+        "mapitola",
+        "digitální vesmír",
+        "lambda",
+        "změna",
+        "vědomí",
+        "černá díra"
+      ]
     },
     {
       "title": "Readme cz",

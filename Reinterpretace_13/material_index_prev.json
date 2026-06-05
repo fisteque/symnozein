@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-02T11:02:44.931238Z",
+  "generated_at": "2026-06-05T16:06:20.758444Z",
   "source": {
     "script": "scripts/update_material_index.py",
     "workflow": ".github/workflows/update_material_index.yml"
@@ -90,6 +90,14 @@
         "rodimo",
         "společnost"
       ]
+    },
+    {
+      "title": "07 Veci a deje",
+      "file": "07_Veci_a_deje.md",
+      "path": "Reinterpretace_13/material_md/07_Veci_a_deje.md",
+      "date": "",
+      "summary": "",
+      "tags": []
     },
     {
       "title": "1.1 Vira",
