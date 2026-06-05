@@ -5,6 +5,23 @@ Uchovává posledních **50** záznamů.
 
 ---
 
+## 2026-06-05T16:06:21.725822Z
+
+Zdroj změn:
+- skript: `scripts/convert_13.py`
+- workflow: `.github/workflows/update_13_index.yml`
+
+➕ přidáno: **0**
+- nic
+
+🔄 změněno: **0**
+- nic
+
+❌ odebráno: **1**
+- `07_Veci_a_deje.html`
+
+---
+
 ## 2026-06-02T11:14:13.542566Z
 
 Zdroj změn:
@@ -846,37 +863,6 @@ Zdroj změn:
 
 🔄 změněno: **1**
 - `Clovek.html`
-
-❌ odebráno: **0**
-- nic
-
----
-
-## 2026-03-30T21:45:59.759243Z
-
-Zdroj změn:
-- skript: `scripts/convert_13.py`
-- workflow: `.github/workflows/update_13_index.yml`
-
-➕ přidáno: **0**
-- nic
-
-🔄 změněno: **15**
-- `01_Cesta.html`
-- `02_Vira.html`
-- `03_Digitalni_vesmir.html`
-- `04_Dualita_pravdy.html`
-- `05_Vedomi.html`
-- `06_Inspirace.html`
-- `07_Veci_a_deje.html`
-- `Clovek.html`
-- `Noema_00_Predmluva.html`
-- `Noema_01_Cesta.html`
-- `Noema_02_Vira.html`
-- `Noema_03_Digitalni_vesmir.html`
-- `Noema_05_Vedomi.html`
-- `Osnova.html`
-- `Test.html`
 
 ❌ odebráno: **0**
 - nic
