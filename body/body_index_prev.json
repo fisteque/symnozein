@@ -1,11 +1,11 @@
 {
-  "generated_at": "2026-06-05T12:04:01.413144Z",
+  "generated_at": "2026-06-05T12:21:10.897141Z",
   "source": {
     "script": "scripts/update_body_index.py",
     "workflow": ".github/workflows/update_body_index.yml"
   },
   "kind": "state",
-  "count": 123,
+  "count": 124,
   "files": [
     {
       "path": "Prvni_kroky.md",
@@ -131,6 +131,11 @@
       "path": "bridge/inbox/messages/codex/msg-20260605-codex-bridge-cycle-lock-audit-001.md",
       "size": 2086,
       "sha256": "2b46604f79c72a454cb595fa8890d5fa4ae20a5c005271a4bf6c61f8123e1a45"
+    },
+    {
+      "path": "bridge/inbox/messages/codex/msg-20260605-codex-lock-diagnostics-design-001.md",
+      "size": 2399,
+      "sha256": "a120c2a4f063baf32d9d5f58feac0d5906709549c9f3c23a4a71ce3830e4b9b3"
     },
     {
       "path": "bridge/inbox/messages/msg-20260524-task-001.md",
