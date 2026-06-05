@@ -1,11 +1,11 @@
 {
-  "generated_at": "2026-06-05T11:50:37.915765Z",
+  "generated_at": "2026-06-05T12:04:01.413144Z",
   "source": {
     "script": "scripts/update_body_index.py",
     "workflow": ".github/workflows/update_body_index.yml"
   },
   "kind": "state",
-  "count": 122,
+  "count": 123,
   "files": [
     {
       "path": "Prvni_kroky.md",
@@ -144,8 +144,8 @@
     },
     {
       "path": "bridge/logs/bridge_tail.log",
-      "size": 42753,
-      "sha256": "8508cc1b95c00047190fe215f7a3d669b89906f1cfa019167a48d8796ff3dc7b"
+      "size": 36228,
+      "sha256": "d7c6df060ce7038cf8b5f5a8906dfb5d66dc505b4eb0af4bb985a75b5e19f300"
     },
     {
       "path": "bridge/outbox/codex/2026-05-27T182640Z_codex-response-msg-20260527-codex-inbox-write-task-001.md",
@@ -201,6 +201,11 @@
       "path": "bridge/outbox/codex/2026-06-04T141638Z_codex-response-msg-20260604-codex-body-status-ping-001.md",
       "size": 1866,
       "sha256": "3f85288d3f5f53f8a075bdcddd33c90fe4fc0e93e4475408c96a731aee34598a"
+    },
+    {
+      "path": "bridge/outbox/codex/2026-06-05T120322Z_codex-response-msg-20260605-codex-bridge-cycle-lock-audit-001.md",
+      "size": 3168,
+      "sha256": "9ac84f5b5f2637fb7cc4d2126fc173a84e6de76e30bc1d76b9ba88d96beaa81e"
     },
     {
       "path": "bridge/outbox/codex/20260601T182419.805294_codex-reader-stub-msg-20260601-codex-reader-stub-test-safe-001.md",
@@ -544,8 +549,8 @@
     },
     {
       "path": "bridge/state_summary/latest.md",
-      "size": 11803,
-      "sha256": "9f25384c0a737bd014f1cd04edd9bae145bed466285d1f75df3e262e72bd47a0"
+      "size": 10002,
+      "sha256": "279cb97e51060894da0d748368f1267aa69d99adf2e25cd03f74865d21172859"
     },
     {
       "path": "bridge_protocol_v1.md",
