@@ -4,6 +4,7 @@ from __future__ import annotations
 
 import json
 import os
+import socket
 from contextlib import contextmanager
 from datetime import UTC, datetime, timedelta
 from pathlib import Path
@@ -48,6 +49,56 @@ def lock_is_active(lock_data: dict[str, object], now: datetime) -> bool:
         return False
 
 
+def pid_is_alive(pid: object) -> bool | None:
+    if not isinstance(pid, int) or pid <= 0:
+        return None
+    try:
+        os.kill(pid, 0)
+    except ProcessLookupError:
+        return False
+    except PermissionError:
+        return True
+    return True
+
+
+def lock_age_seconds(lock_data: dict[str, object], now: datetime) -> float | None:
+    created_at = lock_data.get("created_at")
+    if not isinstance(created_at, str):
+        return None
+    try:
+        return max(0.0, (now - parse_utc(created_at)).total_seconds())
+    except ValueError:
+        return None
+
+
+def lock_progress_age_seconds(lock_data: dict[str, object], now: datetime) -> float | None:
+    last_progress_at = lock_data.get("last_progress_at")
+    if not isinstance(last_progress_at, str):
+        return None
+    try:
+        return max(0.0, (now - parse_utc(last_progress_at)).total_seconds())
+    except ValueError:
+        return None
+
+
+def describe_lock(lock_data: dict[str, object], now: datetime) -> str:
+    active = lock_is_active(lock_data, now)
+    return ", ".join(
+        [
+            f"state={'active' if active else 'expired'}",
+            f"pid={lock_data.get('pid')}",
+            f"pid_alive={pid_is_alive(lock_data.get('pid'))}",
+            f"age_seconds={lock_age_seconds(lock_data, now)}",
+            f"current_step={lock_data.get('current_step')}",
+            f"last_progress_at={lock_data.get('last_progress_at')}",
+            f"progress_age_seconds={lock_progress_age_seconds(lock_data, now)}",
+            f"expires_at={lock_data.get('expires_at')}",
+            f"owner={lock_data.get('owner')}",
+            f"host={lock_data.get('host')}",
+        ]
+    )
+
+
 def write_lock(lock_path: Path, runtime_root: Path, ttl_seconds: int) -> None:
     ensure_inside(lock_path, runtime_root)
     lock_path.parent.mkdir(parents=True, exist_ok=True)
@@ -56,6 +107,11 @@ def write_lock(lock_path: Path, runtime_root: Path, ttl_seconds: int) -> None:
         "pid": os.getpid(),
         "created_at": utc_iso(now),
         "expires_at": utc_iso(now + timedelta(seconds=ttl_seconds)),
+        "status": "active",
+        "current_step": "starting",
+        "last_progress_at": utc_iso(now),
+        "owner": "rpi5-bridge-cycle",
+        "host": socket.gethostname(),
     }
     tmp_path = lock_path.with_name(f".{lock_path.name}.tmp-{os.getpid()}")
     ensure_inside(tmp_path, runtime_root)
@@ -63,15 +119,33 @@ def write_lock(lock_path: Path, runtime_root: Path, ttl_seconds: int) -> None:
     tmp_path.replace(lock_path)
 
 
+def update_lock_progress(lock_path: Path, runtime_root: Path, step: str) -> None:
+    ensure_inside(lock_path, runtime_root)
+    current = read_lock(lock_path, runtime_root) or {}
+    if current.get("pid") != os.getpid():
+        return
+    current["status"] = "active"
+    current["current_step"] = step
+    current["last_progress_at"] = utc_iso()
+    tmp_path = lock_path.with_name(f".{lock_path.name}.tmp-{os.getpid()}")
+    ensure_inside(tmp_path, runtime_root)
+    tmp_path.write_text(json.dumps(current, indent=2, sort_keys=True) + "\n", encoding="utf-8")
+    tmp_path.replace(lock_path)
+
+
 def release_lock(lock_path: Path, runtime_root: Path) -> None:
     ensure_inside(lock_path, runtime_root)
     now = utc_now()
-    data = {
-        "pid": os.getpid(),
-        "released_at": utc_iso(now),
-        "expires_at": utc_iso(now),
-        "status": "released",
-    }
+    data = read_lock(lock_path, runtime_root) or {}
+    data["pid"] = os.getpid()
+    data.setdefault("created_at", utc_iso(now))
+    data.setdefault("owner", "rpi5-bridge-cycle")
+    data.setdefault("host", socket.gethostname())
+    data["released_at"] = utc_iso(now)
+    data["expires_at"] = utc_iso(now)
+    data["status"] = "released"
+    data["current_step"] = "released"
+    data["last_progress_at"] = utc_iso(now)
     tmp_path = lock_path.with_name(f".{lock_path.name}.tmp-{os.getpid()}")
     ensure_inside(tmp_path, runtime_root)
     tmp_path.write_text(json.dumps(data, indent=2, sort_keys=True) + "\n", encoding="utf-8")
@@ -88,7 +162,7 @@ def bridge_cycle_lock(
     existing = read_lock(lock_path, runtime_root)
     now = utc_now()
     if existing and lock_is_active(existing, now):
-        raise SyncError(f"Bridge cycle lock is active until {existing.get('expires_at')}: {lock_path}")
+        raise SyncError(f"Bridge cycle lock is active: {lock_path}; {describe_lock(existing, now)}")
 
     write_lock(lock_path, runtime_root, ttl_seconds)
     try:
