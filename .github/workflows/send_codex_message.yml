@@ -1,0 +1,79 @@
+name: Send Codex Bridge Message
+
+on:
+  workflow_dispatch:
+    inputs:
+      filename:
+        description: "New .md filename under body/bridge/inbox/messages/codex/"
+        required: true
+        type: string
+      message_id:
+        description: "YAML id, usually matching the filename stem"
+        required: true
+        type: string
+      target:
+        description: "Bridge target"
+        required: true
+        type: choice
+        options:
+          - rpi5-bridge-agent
+          - rpi5-bridge
+      purpose:
+        description: "meta.purpose"
+        required: true
+        type: string
+      write_scope:
+        description: "meta.write_scope"
+        required: true
+        default: audit-only
+        type: choice
+        options:
+          - audit-only
+          - outbox-only
+          - proposed-patch
+      question:
+        description: "codex.question"
+        required: true
+        type: string
+      body_base64:
+        description: "Base64-encoded UTF-8 Markdown body"
+        required: true
+        type: string
+
+permissions:
+  contents: write
+
+jobs:
+  deliver:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout main
+        uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 0
+
+      - name: Configure Git identity
+        run: |
+          git config user.name "PC-Codex Postman"
+          git config user.email "pc-codex-postman@users.noreply.github.com"
+
+      - name: Deliver one Codex inbox message
+        env:
+          POSTMAN_FILENAME: ${{ inputs.filename }}
+          POSTMAN_MESSAGE_ID: ${{ inputs.message_id }}
+          POSTMAN_TARGET: ${{ inputs.target }}
+          POSTMAN_PURPOSE: ${{ inputs.purpose }}
+          POSTMAN_WRITE_SCOPE: ${{ inputs.write_scope }}
+          POSTMAN_QUESTION: ${{ inputs.question }}
+          POSTMAN_BODY_BASE64: ${{ inputs.body_base64 }}
+        run: |
+          python3 scripts/send_codex_message.py \
+            --filename "$POSTMAN_FILENAME" \
+            --id "$POSTMAN_MESSAGE_ID" \
+            --target "$POSTMAN_TARGET" \
+            --purpose "$POSTMAN_PURPOSE" \
+            --write-scope "$POSTMAN_WRITE_SCOPE" \
+            --question "$POSTMAN_QUESTION" \
+            --body-base64 "$POSTMAN_BODY_BASE64" \
+            --commit-message "Deliver Codex bridge message: $POSTMAN_MESSAGE_ID"
