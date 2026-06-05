@@ -1,11 +1,11 @@
 {
-  "generated_at": "2026-06-05T12:40:47.655709Z",
+  "generated_at": "2026-06-05T12:41:56.588928Z",
   "source": {
     "script": "scripts/update_body_index.py",
     "workflow": ".github/workflows/update_body_index.yml"
   },
   "kind": "state",
-  "count": 126,
+  "count": 127,
   "files": [
     {
       "path": "Prvni_kroky.md",
@@ -154,8 +154,8 @@
     },
     {
       "path": "bridge/logs/bridge_tail.log",
-      "size": 35792,
-      "sha256": "e9d211c1eed03552184978ce19550b785b86a4d3f4cf0acdb8fb340411fc0db0"
+      "size": 34785,
+      "sha256": "fa3ff9383486fa9a59f6edaf66cc7301b5710246b9162e37519fbd51876fc6a8"
     },
     {
       "path": "bridge/outbox/codex/2026-05-27T182640Z_codex-response-msg-20260527-codex-inbox-write-task-001.md",
@@ -221,6 +221,11 @@
       "path": "bridge/outbox/codex/2026-06-05T122700Z_codex-response-msg-20260605-codex-lock-diagnostics-design-001.md",
       "size": 8921,
       "sha256": "903081e366dbb50d6e2f67cfa60043d2c55a620d7c8d7d2a3b5e9085f62d9585"
+    },
+    {
+      "path": "bridge/outbox/codex/2026-06-05T124116Z_codex-response-msg-20260605-codex-apply-lock-diagnostics-eyes-001.md",
+      "size": 2620,
+      "sha256": "6bb66c4e306e1ad0f69a74e7f055881a18bca170a432782198321db065af4b65"
     },
     {
       "path": "bridge/outbox/codex/20260601T182419.805294_codex-reader-stub-msg-20260601-codex-reader-stub-test-safe-001.md",
@@ -564,8 +569,8 @@
     },
     {
       "path": "bridge/state_summary/latest.md",
-      "size": 10051,
-      "sha256": "ce215477aa62cea00121ea31542d9e1c7861905108bdc179a1b1a68c3c880fb7"
+      "size": 9850,
+      "sha256": "aa1c3ab8d0bc952e9f23198d45e2cf2cd3c00b7f8237003a6774c98fa0e69d25"
     },
     {
       "path": "bridge_protocol_v1.md",
