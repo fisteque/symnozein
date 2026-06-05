@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-05T16:18:05.802554Z",
+  "generated_at": "2026-06-05T16:18:39.540335Z",
   "source": {
     "script": "scripts/convert_13.py",
     "workflow": ".github/workflows/update_13_index.yml"
@@ -111,16 +111,6 @@
       ],
       "hidden": false,
       "size": 2911
-    },
-    {
-      "title": "Noema_05_Vedomi",
-      "file": "Noema_05_Vedomi.html",
-      "path": "Reinterpretace_13/13/Noema_05_Vedomi.html",
-      "date": "",
-      "summary": "",
-      "tags": [],
-      "hidden": false,
-      "size": 4198
     },
     {
       "title": "Osnova",
