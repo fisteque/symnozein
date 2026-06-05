@@ -38,6 +38,8 @@ INSTRUCTIONS = Path("body/bridge/instructions")
 ALLOWED_REPO_PATHS = (OUTBOX_MESSAGES, OUTBOX_CODEX, STATE_SUMMARY, SCRIPTS, INSTRUCTIONS)
 REMOVED_REPO_PATHS = (LOG_TAIL,)
 LOCAL_ONLY_REPO_PATHS = (INBOX_MESSAGES,)
+BLOCKED_SCRIPT_CACHE_PARTS = {"__pycache__"}
+BLOCKED_SCRIPT_CACHE_SUFFIXES = {".pyc", ".pyo", ".pyd"}
 
 
 def parse_args() -> argparse.Namespace:
@@ -105,6 +107,8 @@ def ensure_no_forbidden_status(repo_root: Path) -> None:
 
 def is_allowed_staged_change(status: str, name: str) -> bool:
     path = Path(name)
+    if is_blocked_script_cache_path(path):
+        return status.startswith("D")
     if any(path == allowed or allowed in path.parents for allowed in ALLOWED_REPO_PATHS):
         return True
     return status.startswith("D") and is_removed_repo_path(name)
@@ -148,8 +152,20 @@ def working_tree_status_for_paths(repo_root: Path, paths: tuple[Path, ...]) -> s
 
 def is_allowed_worktree_path(name: str) -> bool:
     path = Path(name)
+    if is_blocked_script_cache_path(path):
+        return False
     allowed_paths = (*ALLOWED_REPO_PATHS, *LOCAL_ONLY_REPO_PATHS)
     return any(path == allowed or allowed in path.parents for allowed in allowed_paths)
+
+
+def is_blocked_script_cache_path(path: Path) -> bool:
+    return (
+        (path == SCRIPTS or SCRIPTS in path.parents)
+        and (
+            any(part in BLOCKED_SCRIPT_CACHE_PARTS for part in path.parts)
+            or path.suffix in BLOCKED_SCRIPT_CACHE_SUFFIXES
+        )
+    )
 
 
 def is_removed_repo_path(name: str) -> bool:
@@ -163,6 +179,8 @@ def is_allowed_worktree_status_line(line: str) -> bool:
     if " -> " in name:
         old_name, new_name = name.split(" -> ", 1)
         return is_allowed_worktree_path(old_name) and is_allowed_worktree_path(new_name)
+    if "D" in status and is_blocked_script_cache_path(Path(name)):
+        return True
     if "D" in status and is_removed_repo_path(name):
         return True
     return is_allowed_worktree_path(name)
