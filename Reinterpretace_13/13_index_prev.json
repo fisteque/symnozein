@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-05T16:18:39.540335Z",
+  "generated_at": "2026-06-05T16:19:10.657294Z",
   "source": {
     "script": "scripts/convert_13.py",
     "workflow": ".github/workflows/update_13_index.yml"
@@ -111,16 +111,6 @@
       ],
       "hidden": false,
       "size": 2911
-    },
-    {
-      "title": "Osnova",
-      "file": "Osnova.html",
-      "path": "Reinterpretace_13/13/Osnova.html",
-      "date": "",
-      "summary": "",
-      "tags": [],
-      "hidden": false,
-      "size": 1890
     }
   ]
 }
