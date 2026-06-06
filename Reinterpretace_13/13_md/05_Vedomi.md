@@ -1,5 +1,4 @@
 ---
-
 title: "05 — Vědomí: když se dění vrací k sobě"
 date: "2026-06-06"
 summary: "Vědomí není hotová vlastnost, ale vztah dění k sobě samému. Vzniká tam, kde se uvědomění neztratí v proudu, ale začne se vztahovat k paměti, významu, směru a následku."
