@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-05T20:06:14.824957Z",
+  "generated_at": "2026-06-05T20:28:07.519067Z",
   "source": {
     "script": "scripts/update_body_index.py",
     "workflow": ".github/workflows/update_body_index.yml"
@@ -614,8 +614,8 @@
     },
     {
       "path": "bridge/state_summary/codex.md",
-      "size": 28627,
-      "sha256": "04340266cd87cc3a32fa0db650acbf8252d2d934e40e79129eb8740e25e894fd"
+      "size": 27675,
+      "sha256": "a0d6efd4327793ee2845d379b21e3fd5ba86163e0542dec02233c47b739ffcbf"
     },
     {
       "path": "bridge/state_summary/known_limits.md",
@@ -624,8 +624,8 @@
     },
     {
       "path": "bridge/state_summary/latest.md",
-      "size": 6742,
-      "sha256": "a83f8a9bd4dcc6b139e062e44aafe8f4abf66acb809e757e7748422566048622"
+      "size": 6064,
+      "sha256": "093eb0e6ba4e93f64259c96e05991d07a34cac1dc504e336a3e32d1277afd196"
     },
     {
       "path": "bridge_protocol_v1.md",
