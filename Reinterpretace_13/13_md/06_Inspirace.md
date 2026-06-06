@@ -6,8 +6,6 @@ summary: "Inspirace není zvenčí, ale vzniká jako proces setkávání význam
 hidden: false
 ---
 
-# Inspirace
-
 Inspirace nepřichází zvenčí.  
 Je to setkání významů v nás.
 
