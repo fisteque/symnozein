@@ -6,8 +6,6 @@ summary: "Osobní vstup do Reinterpretace. Cesta není vysvětlení světa, ale 
 hidden: false
 ---
 
-# Cesta
-
 Nikdo nezačíná na stejném místě.  
 A přesto se pohybujeme ve stejném světě.
 
