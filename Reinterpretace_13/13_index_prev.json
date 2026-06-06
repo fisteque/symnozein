@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-06T07:30:25.464136Z",
+  "generated_at": "2026-06-06T07:31:39.312201Z",
   "source": {
     "script": "scripts/convert_13.py",
     "workflow": ".github/workflows/update_13_index.yml"
@@ -42,7 +42,7 @@
       "size": 7715
     },
     {
-      "title": "03 — Digitální vesmír",
+      "title": "03 — Digitální vesmír: Když vztah tvoří svět",
       "file": "03_Digitalni_vesmir.html",
       "path": "Reinterpretace_13/13/03_Digitalni_vesmir.html",
       "date": "2026-06-02",
@@ -60,7 +60,7 @@
         "lambda"
       ],
       "hidden": false,
-      "size": 6386
+      "size": 6367
     },
     {
       "title": "04 — Dualita pravdy",
