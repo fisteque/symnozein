@@ -6,6 +6,8 @@ summary: "Vědomí není hotová vlastnost, ale vztah dění k sobě samému. Vz
 tags: ["mapitola", "vědomí", "vztah", "pozornost", "víra", "pravdivost", "odpovědnost"]
 hidden: false
 
+---
+
 # 05 — Vědomí: když se dění vrací k sobě
 
 > Poznámka k rozepsanosti:
