@@ -1,14 +1,10 @@
 ---
-
 title: "02 — Víra"
 summary: "Víra není přesvědčení, ale způsob, jak jednáme v nejistotě. Vzniká ze zkušenosti, vede naše rozhodování, umožňuje učení a propojuje prožitek s povahou reality."
 tags: ["mapitola", "víra", "vědomí", "rozhodování", "nejistota", "pravda", "digitální vesmír"]
 date: "2026-04-13"
 hidden: false
-
 ---
-
-# Víra
 
 Sedíme a rozhodujeme se, co udělat.
 
