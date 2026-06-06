@@ -18,7 +18,7 @@ Ale ve skutečnosti se vždy odehrává uvnitř.
 Když dostaneme nápad, v mysli se skládají významy. Musí to být významy složené z toho, co už chápeme.
 
 To, co nás „inspirovalo“, může být pro druhého bezvýznamné.  
-Protože inspirace není objekt, je do proces.
+Protože inspirace není objekt, je to proces.
 
 Je to rezonance mezi dvěma významy, kterou si všimneme, protože jsme si jí mohli všimnout.
 
