@@ -98,15 +98,15 @@ odkud to přichází,
 kde se to právě děje,
 a kam to směřuje.
 
-Odkud: protože bez paměti a původu se z uvědomění stane osamělý okamžik bez souvislosti.
+**Odkud:** protože bez paměti a původu se z uvědomění stane osamělý okamžik bez souvislosti.
 
-Kde: protože vědomí nevzniká mimo dění, ale vždy v nějakém těle, vztahu, situaci, jazyce, systému nebo čase.
+**Kde:** protože vědomí nevzniká mimo dění, ale vždy v nějakém těle, vztahu, situaci, jazyce, systému nebo čase.
 
-Kam: protože bez směru se uvědomění nemá podle čeho proměňovat. Právě tady se vědomí dotýká víry — ne jako hotového přesvědčení, ale jako vztahu k možnosti pokračovat, i když směr není jistý.
+**Kam:** protože bez směru se uvědomění nemá podle čeho proměňovat. Právě tady se vědomí dotýká víry — ne jako hotového přesvědčení, ale jako vztahu k možnosti pokračovat, i když směr není jistý.
 
-Podle toho, jak jsou tyto vztahy naplněné, se formuje jak vědomí jedná.
+Podle toho, jak jsou tyto vztahy naplněné, se formuje **jak** vědomí jedná.
 
-A tím se postupně formuje i kdo je.
+A tím se postupně formuje i **kdo** je.
 
 Tam vzniká odpovědnost.
 
