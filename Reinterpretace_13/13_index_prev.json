@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-06T07:34:40.635860Z",
+  "generated_at": "2026-06-06T07:35:05.805132Z",
   "source": {
     "script": "scripts/convert_13.py",
     "workflow": ".github/workflows/update_13_index.yml"
@@ -76,7 +76,7 @@
         "vztah"
       ],
       "hidden": false,
-      "size": 5387
+      "size": 5343
     },
     {
       "title": "05 — Vědomí: když se dění vrací k sobě",
