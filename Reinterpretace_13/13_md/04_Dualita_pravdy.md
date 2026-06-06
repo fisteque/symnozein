@@ -6,8 +6,6 @@ summary: "Pravda má dvě strany pokaždé, když je komu se jevit. Pro nás pak
 hidden: false
 ---
 
-# Dualita pravdy
-
 Kdykoli někdo řekne: „To je pravda“, měl by zároveň říct: „Z jakého pohledu?“
 
 Protože pravda není jedna — ale pravdivost je možná právě proto.
