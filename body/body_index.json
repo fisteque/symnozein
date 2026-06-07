@@ -1,11 +1,11 @@
 {
-  "generated_at": "2026-06-06T15:40:46.861694Z",
+  "generated_at": "2026-06-07T21:14:39.293547Z",
   "source": {
     "script": "scripts/update_body_index.py",
     "workflow": ".github/workflows/update_body_index.yml"
   },
   "kind": "state",
-  "count": 167,
+  "count": 196,
   "files": [
     {
       "path": "Prvni_kroky.md",
@@ -633,6 +633,151 @@
       "sha256": "ecdc0805a1b6d237a234feea0170419d25fc277ced28286c6e6b86d63eaadc55"
     },
     {
+      "path": "bridge/outbox/messages/2026-06-07T205935Z_rpi5_cycle-error-unknown.md",
+      "size": 568,
+      "sha256": "d1b426165c6ba7cd55c46e3746d55cf5ac0b6cec2d819f76ebd772bf38df9521"
+    },
+    {
+      "path": "bridge/outbox/messages/2026-06-07T210005Z_rpi5_cycle-error-unknown.md",
+      "size": 568,
+      "sha256": "fa5ab65e9890cbba6c2a27e1d9a758c88fc6df34481d8e8dd77ca1e5e92c5442"
+    },
+    {
+      "path": "bridge/outbox/messages/2026-06-07T210035Z_rpi5_cycle-error-unknown.md",
+      "size": 568,
+      "sha256": "66b0b5b9fecadf606b8404a29409e44edc08ed49924222eed28e65ea6e39e6dc"
+    },
+    {
+      "path": "bridge/outbox/messages/2026-06-07T210105Z_rpi5_cycle-error-unknown.md",
+      "size": 570,
+      "sha256": "10de123f161e9d625dc9e3e7fa6a27a756f40a31e99129dfea93366190215799"
+    },
+    {
+      "path": "bridge/outbox/messages/2026-06-07T210135Z_rpi5_cycle-error-unknown.md",
+      "size": 570,
+      "sha256": "7c7bea0f23f26d6e68a7a494d3ad3c4734ed1abd4a8b3a335549a7cc98add019"
+    },
+    {
+      "path": "bridge/outbox/messages/2026-06-07T210205Z_rpi5_cycle-error-unknown.md",
+      "size": 570,
+      "sha256": "0ad65274bb79ceef996a587e617dab89ddfd3ef3a64e0a25ff3d87655b62df7d"
+    },
+    {
+      "path": "bridge/outbox/messages/2026-06-07T210235Z_rpi5_cycle-error-unknown.md",
+      "size": 570,
+      "sha256": "3bf8656cc1fa0845ef4addd9a323385a03cc22381d14d043112bebf7132c8b83"
+    },
+    {
+      "path": "bridge/outbox/messages/2026-06-07T210305Z_rpi5_cycle-error-unknown.md",
+      "size": 568,
+      "sha256": "a9dc300d4f418699f4207dfbb25172b9748e3c46cc6d621b7321ac7547ebdf62"
+    },
+    {
+      "path": "bridge/outbox/messages/2026-06-07T210335Z_rpi5_cycle-error-unknown.md",
+      "size": 570,
+      "sha256": "9267a541c4a2838b11fec0158fed962439ed7a85f5f2fcb6d641b2c75a7bd040"
+    },
+    {
+      "path": "bridge/outbox/messages/2026-06-07T210405Z_rpi5_cycle-error-unknown.md",
+      "size": 570,
+      "sha256": "e5c84915dd956b1807b5aff25a6237a52772ab565d46f988277f7cb1a5740bb0"
+    },
+    {
+      "path": "bridge/outbox/messages/2026-06-07T210435Z_rpi5_cycle-error-unknown.md",
+      "size": 570,
+      "sha256": "6214c4fe9b4e2416ccd2c80edabe97373ea7574b151d1e0b24c01d1310f17f58"
+    },
+    {
+      "path": "bridge/outbox/messages/2026-06-07T210505Z_rpi5_cycle-error-unknown.md",
+      "size": 570,
+      "sha256": "79010d0fb9085ae9f2b5220ffe75779c702b859d555defaa8ffc3947da074bf6"
+    },
+    {
+      "path": "bridge/outbox/messages/2026-06-07T210535Z_rpi5_cycle-error-unknown.md",
+      "size": 570,
+      "sha256": "954850d94d0b54a6c22737f18d4139e3b1acab5262bbfcc28337fd2daf184501"
+    },
+    {
+      "path": "bridge/outbox/messages/2026-06-07T210605Z_rpi5_cycle-error-unknown.md",
+      "size": 570,
+      "sha256": "4e3526aab95e233de5fc9d3874bc4be004e8d81d828c157eb15caed0a1ffbe70"
+    },
+    {
+      "path": "bridge/outbox/messages/2026-06-07T210635Z_rpi5_cycle-error-unknown.md",
+      "size": 570,
+      "sha256": "7ad7ccce98259b224aff418aead9583c7ecce3c7f35e3b7790f6bd63ac87a5ed"
+    },
+    {
+      "path": "bridge/outbox/messages/2026-06-07T210705Z_rpi5_cycle-error-unknown.md",
+      "size": 570,
+      "sha256": "66fbad1e972e221ac5fb073b393e1ed0b47341cf5c005f51fc6f96fc3d5e5ad2"
+    },
+    {
+      "path": "bridge/outbox/messages/2026-06-07T210735Z_rpi5_cycle-error-unknown.md",
+      "size": 570,
+      "sha256": "0ba5e98ab311e9c8b8b1c8c02f612b9b44e81aa2d161f632d518bacbc4330559"
+    },
+    {
+      "path": "bridge/outbox/messages/2026-06-07T210805Z_rpi5_cycle-error-unknown.md",
+      "size": 570,
+      "sha256": "aed42a56e564b42c34db38c8ddcf6c913e469c42b6db647eb961932b6efaa140"
+    },
+    {
+      "path": "bridge/outbox/messages/2026-06-07T210836Z_rpi5_cycle-error-unknown.md",
+      "size": 570,
+      "sha256": "756e3c1d79d44bcdc12c2b048d18506ad39355af20512c855795a0d8db63bec6"
+    },
+    {
+      "path": "bridge/outbox/messages/2026-06-07T210910Z_rpi5_cycle-error-unknown.md",
+      "size": 570,
+      "sha256": "bc81d5bc0dc666a14bb5b9b1af9909f94fd0870a304efecd556b717619f3a9b6"
+    },
+    {
+      "path": "bridge/outbox/messages/2026-06-07T210944Z_rpi5_cycle-error-unknown.md",
+      "size": 570,
+      "sha256": "4d4882ba5981e51cb1c7c250b01d916e050082766c0fd65df33455c0a4e10053"
+    },
+    {
+      "path": "bridge/outbox/messages/2026-06-07T211016Z_rpi5_cycle-error-unknown.md",
+      "size": 570,
+      "sha256": "bacdcb4c4640dd795a64f3586c4c205c3d57b11d896096bbad4eff6e36ee854c"
+    },
+    {
+      "path": "bridge/outbox/messages/2026-06-07T211046Z_rpi5_cycle-error-unknown.md",
+      "size": 570,
+      "sha256": "67abdb65b1b0dfd47cc78ce50425732333c641b353da2f4e17d94563e9461d34"
+    },
+    {
+      "path": "bridge/outbox/messages/2026-06-07T211121Z_rpi5_cycle-error-unknown.md",
+      "size": 570,
+      "sha256": "34ac982427cdedcaccc4aea53e21d3bf922c6e01a39a3138920db7069f1c702f"
+    },
+    {
+      "path": "bridge/outbox/messages/2026-06-07T211154Z_rpi5_cycle-error-unknown.md",
+      "size": 567,
+      "sha256": "1a1361d9e73dca29dc9e8e41db93c7d2921ea0eb9f9b1809850209c63685f366"
+    },
+    {
+      "path": "bridge/outbox/messages/2026-06-07T211226Z_rpi5_cycle-error-unknown.md",
+      "size": 570,
+      "sha256": "8e3a97ff05ada84e3e36b7dea706c76990556576e9747a3407150114d92eabc5"
+    },
+    {
+      "path": "bridge/outbox/messages/2026-06-07T211256Z_rpi5_cycle-error-unknown.md",
+      "size": 570,
+      "sha256": "ace2654cdd533a1d09cfcce4185aad6f766a07367ac5ded406c9f0be1b0df150"
+    },
+    {
+      "path": "bridge/outbox/messages/2026-06-07T211326Z_rpi5_cycle-error-unknown.md",
+      "size": 568,
+      "sha256": "abd3fbe1bc49cfe471348c2e57898dc7bec1ff66e2b5662bc12dc818cea384e6"
+    },
+    {
+      "path": "bridge/outbox/messages/2026-06-07T211356Z_rpi5_cycle-error-unknown.md",
+      "size": 570,
+      "sha256": "771c83af291ea38bfa98cab55ca241faaca8cf01b099e46693256e9a69d81ef0"
+    },
+    {
       "path": "bridge/outbox/outbox.json",
       "size": 472,
       "sha256": "e20fe977adeb942811cf1d222b3056a8c561c25bbcaa297e0332f428276f9a48"
@@ -769,8 +914,8 @@
     },
     {
       "path": "bridge/state_summary/latest.md",
-      "size": 13094,
-      "sha256": "cb3e6a88948e6a21e2635815b657dd402aa87f116b5cdbceff6460c41bfa4391"
+      "size": 13093,
+      "sha256": "be2f6acf00eb19152bf6eacaceaf329c3e182c3c99393a3eda54c9e3206087dc"
     },
     {
       "path": "bridge_protocol_v1.md",
