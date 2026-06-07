@@ -33,14 +33,19 @@ S je celý uzavřený obsah včetně obvodu a prázdných pozic.
 Další slupky:
 
 > D(n) = D(n-1) + 2
+
 > O(n) = O(n-1) × 2
+
 > S(n) = S(n-1) + O(n)
 
 Tedy:
 
 > R1: D=3, O=6,  S=7
+
 > R2: D=5, O=12, S=19
+
 > R3: D=7, O=24, S=43
+
 > R4: D=9, O=48, S=91
 
 Z toho plyne, že v digitálně chápané vzdálenosti neroste kružnice jako plynulý geometrický tvar. Průměr roste po diskrétních krocích, ale obvod se při ontologickém opsání zdvojuje. Každá nová slupka totiž neobaluje jen střed, ale celý dosavadní vztahový tvar.
