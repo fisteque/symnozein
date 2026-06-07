@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-07T01:29:05.636804Z",
+  "generated_at": "2026-06-07T01:29:59.401297Z",
   "source": {
     "script": "scripts/update_material_index.py",
     "workflow": ".github/workflows/update_material_index.yml"
