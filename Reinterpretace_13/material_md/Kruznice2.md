@@ -59,3 +59,27 @@ Kružnice tedy není ideální čára, které se digitální síť snaží přib
 
 Krátce:
 Kružnice není tvar kolem středu. Je to způsob, jak vztah opsáním drží prázdno jako rozpoznatelný obsah.
+
+kružnice podle metriky
+
+Pokud bychom byli uvnitř plástvové sítě, její kružnice by se nám nemusela jevit jako šestiúhelník.
+
+Z vnější eukleidovské perspektivy vidíme šest stran, rohy a pravidelný hexagon. Ale bytost, která by vzdálenost vnímala digitálně jako počet sousedských skoků, by viděla něco jiného: všechny pozice na stejné slupce jsou stejně daleko od středu.
+
+A právě to je definice kružnice podle vzdálenosti.
+
+Hexagonální slupka je tedy kružnice v metrice plástve.
+
+Kruhovost tím přestává být absolutní vlastností tvaru. Závisí na tom, jaký druh vzdálenosti svět používá. V eukleidovské metrice je kruh hladký. V plástvové metrice je kruh hexagonální slupka. V digitálním vesmíru by kruh nebyl původně hladká čára, ale množina pozic se stejnou vzdáleností podle pravidel sousedství.
+
+To, co zvenčí vidíme jako šestiúhelník, by se bytosti uvnitř plástvové metriky mohlo jevit jako kruh.
+
+Tím se propojuje i úvaha o stuze: kruh není jen obvod, ale vztah mezi dotykem, orientací a rámcem měření. Stuha ukazuje vztahový rámec plynule; plástvová kružnice jej ukazuje diskrétně. Každá další slupka je nový rámec sousedství, nové opsání prázdného obsahu a další krok v tom, jak síť rozpoznává vzdálenost jako tvar.
+
+Krátce:
+
+Kruh není absolutní tvar.
+Kruh je tvar, který vzniká vzhledem k metrice.
+
+A pokud je metrika digitální, pak i kružnice roste digitálně: po slupkách, po sousedstvích, po diskrétních možnostech návratu.
+
