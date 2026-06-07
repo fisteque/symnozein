@@ -5,6 +5,51 @@ Uchovává posledních **50** záznamů.
 
 ---
 
+## 2026-06-07T22:31:55.104811Z
+
+Zdroj změn:
+- skript: `scripts/update_body_index.py`
+- workflow: `.github/workflows/update_body_index.yml`
+
+➕ přidáno: **29**
+- `bridge/outbox/messages/2026-06-07T221711Z_rpi5_cycle-error-unknown.md`
+- `bridge/outbox/messages/2026-06-07T221741Z_rpi5_cycle-error-unknown.md`
+- `bridge/outbox/messages/2026-06-07T221811Z_rpi5_cycle-error-unknown.md`
+- `bridge/outbox/messages/2026-06-07T221841Z_rpi5_cycle-error-unknown.md`
+- `bridge/outbox/messages/2026-06-07T221911Z_rpi5_cycle-error-unknown.md`
+- `bridge/outbox/messages/2026-06-07T221941Z_rpi5_cycle-error-unknown.md`
+- `bridge/outbox/messages/2026-06-07T222011Z_rpi5_cycle-error-unknown.md`
+- `bridge/outbox/messages/2026-06-07T222041Z_rpi5_cycle-error-unknown.md`
+- `bridge/outbox/messages/2026-06-07T222111Z_rpi5_cycle-error-unknown.md`
+- `bridge/outbox/messages/2026-06-07T222141Z_rpi5_cycle-error-unknown.md`
+- `bridge/outbox/messages/2026-06-07T222211Z_rpi5_cycle-error-unknown.md`
+- `bridge/outbox/messages/2026-06-07T222241Z_rpi5_cycle-error-unknown.md`
+- `bridge/outbox/messages/2026-06-07T222311Z_rpi5_cycle-error-unknown.md`
+- `bridge/outbox/messages/2026-06-07T222342Z_rpi5_cycle-error-unknown.md`
+- `bridge/outbox/messages/2026-06-07T222412Z_rpi5_cycle-error-unknown.md`
+- `bridge/outbox/messages/2026-06-07T222442Z_rpi5_cycle-error-unknown.md`
+- `bridge/outbox/messages/2026-06-07T222512Z_rpi5_cycle-error-unknown.md`
+- `bridge/outbox/messages/2026-06-07T222542Z_rpi5_cycle-error-unknown.md`
+- `bridge/outbox/messages/2026-06-07T222612Z_rpi5_cycle-error-unknown.md`
+- `bridge/outbox/messages/2026-06-07T222642Z_rpi5_cycle-error-unknown.md`
+- `bridge/outbox/messages/2026-06-07T222712Z_rpi5_cycle-error-unknown.md`
+- `bridge/outbox/messages/2026-06-07T222742Z_rpi5_cycle-error-unknown.md`
+- `bridge/outbox/messages/2026-06-07T222812Z_rpi5_cycle-error-unknown.md`
+- `bridge/outbox/messages/2026-06-07T222842Z_rpi5_cycle-error-unknown.md`
+- `bridge/outbox/messages/2026-06-07T222912Z_rpi5_cycle-error-unknown.md`
+- `bridge/outbox/messages/2026-06-07T222942Z_rpi5_cycle-error-unknown.md`
+- `bridge/outbox/messages/2026-06-07T223012Z_rpi5_cycle-error-unknown.md`
+- `bridge/outbox/messages/2026-06-07T223042Z_rpi5_cycle-error-unknown.md`
+- `bridge/outbox/messages/2026-06-07T223112Z_rpi5_cycle-error-unknown.md`
+
+🔄 změněno: **1**
+- `bridge/state_summary/latest.md`
+
+❌ odebráno: **0**
+- nic
+
+---
+
 ## 2026-06-07T21:14:39.293547Z
 
 Zdroj změn:
@@ -940,26 +985,6 @@ Zdroj změn:
 
 🔄 změněno: **2**
 - `bridge/logs/bridge_tail.log`
-- `bridge/state_summary/latest.md`
-
-❌ odebráno: **0**
-- nic
-
----
-
-## 2026-06-03T21:46:02.134937Z
-
-Zdroj změn:
-- skript: `scripts/update_body_index.py`
-- workflow: `.github/workflows/update_body_index.yml`
-
-➕ přidáno: **1**
-- `bridge/outbox/codex/2026-06-03T214500Z_codex-response-msg-20260603-codex-extend-bridge-tail-001.md`
-
-🔄 změněno: **4**
-- `bridge/logs/bridge_tail.log`
-- `bridge/scripts/bridge_sync_outbound.py`
-- `bridge/scripts/write_bridge_summary.py`
 - `bridge/state_summary/latest.md`
 
 ❌ odebráno: **0**
