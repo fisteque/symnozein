@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-05T16:18:02.019581Z",
+  "generated_at": "2026-06-06T23:37:45.845305Z",
   "source": {
     "script": "scripts/update_material_index.py",
     "workflow": ".github/workflows/update_material_index.yml"
@@ -308,6 +308,14 @@
       ]
     },
     {
+      "title": "Kruznice2",
+      "file": "Kruznice2.md",
+      "path": "Reinterpretace_13/material_md/Kruznice2.md",
+      "date": "",
+      "summary": "",
+      "tags": []
+    },
+    {
       "title": "Kružnice před slovem",
       "file": "Kruznice_pred_slovem.md",
       "path": "Reinterpretace_13/material_md/Kruznice_pred_slovem.md",
@@ -381,6 +389,14 @@
         "vědomí",
         "černá díra"
       ]
+    },
+    {
+      "title": "Noema 05 Vedomi",
+      "file": "Noema_05_Vedomi.md",
+      "path": "Reinterpretace_13/material_md/Noema_05_Vedomi.md",
+      "date": "",
+      "summary": "",
+      "tags": []
     },
     {
       "title": "Readme cz",
