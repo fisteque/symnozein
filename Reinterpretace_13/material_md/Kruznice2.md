@@ -25,24 +25,28 @@ S = 7
 
 Kde:
 D je digitální průměr celého kruhu včetně obvodových jedniček,
+
 O je obvod jako počet plných pozic 1,
+
 S je celý uzavřený obsah včetně obvodu a prázdných pozic.
 
 Další slupky:
 
 > D(n) = D(n-1) + 2
-O(n) = O(n-1) × 2
-S(n) = S(n-1) + O(n)
+> O(n) = O(n-1) × 2
+> S(n) = S(n-1) + O(n)
 
 Tedy:
 
 > R1: D=3, O=6,  S=7
-R2: D=5, O=12, S=19
-R3: D=7, O=24, S=43
-R4: D=9, O=48, S=91
+> R2: D=5, O=12, S=19
+> R3: D=7, O=24, S=43
+> R4: D=9, O=48, S=91
 
 Z toho plyne, že v digitálně chápané vzdálenosti neroste kružnice jako plynulý geometrický tvar. Průměr roste po diskrétních krocích, ale obvod se při ontologickém opsání zdvojuje. Každá nová slupka totiž neobaluje jen střed, ale celý dosavadní vztahový tvar.
+
 Tím se kružnice liší od běžné geometrické kružnice. V eukleidovském prostoru je poměr obvodu a průměru stabilizovaný v čísle π. V digitální ontologii plástvové sítě ale π není původní vlastnost kružnice. Může být až výsledkem vyhlazení, projekce nebo měření diskrétních vztahových skoků jako spojitého tvaru.
+
 Kružnice tedy není ideální čára, které se digitální síť snaží přiblížit. Je to jedna z možných stabilních konfigurací sítě: opsaný vztah plných pozic kolem prázdného obsahu, kde každá další slupka nese a uzavírá celý předchozí vztah.
 
 Krátce:
