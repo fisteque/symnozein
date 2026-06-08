@@ -1,11 +1,11 @@
 {
-  "generated_at": "2026-06-08T18:10:32.976757Z",
+  "generated_at": "2026-06-08T18:20:39.121472Z",
   "source": {
     "script": "scripts/update_body_index.py",
     "workflow": ".github/workflows/update_body_index.yml"
   },
   "kind": "state",
-  "count": 226,
+  "count": 227,
   "files": [
     {
       "path": "Prvni_kroky.md",
@@ -181,6 +181,11 @@
       "path": "bridge/instructions/pc_codex_postman_quick.md",
       "size": 801,
       "sha256": "511d266b57c65e8461f74fd835a7821bbe5c7e6a8e82d3e6278e5475d1df0095"
+    },
+    {
+      "path": "bridge/instructions/pc_codex_postman_smart.md",
+      "size": 1385,
+      "sha256": "947b919cdf3f4d899c38d2642069fef568fb0308f249ffccf7f724375542e3c8"
     },
     {
       "path": "bridge/outbox/codex/2026-05-27T182640Z_codex-response-msg-20260527-codex-inbox-write-task-001.md",
