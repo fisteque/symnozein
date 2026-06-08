@@ -1,11 +1,11 @@
 {
-  "generated_at": "2026-06-08T21:06:47.362741Z",
+  "generated_at": "2026-06-08T21:11:29.407557Z",
   "source": {
     "script": "scripts/update_body_index.py",
     "workflow": ".github/workflows/update_body_index.yml"
   },
   "kind": "state",
-  "count": 99,
+  "count": 97,
   "files": [
     {
       "path": "Prvni_kroky.md",
@@ -51,11 +51,6 @@
       "path": "bridge/docs/MOST_A_NERVY.md",
       "size": 366,
       "sha256": "4bdfc93d9aeb9926d1c0f8015f6d742b0e4878aefdbe957748cb7c5cd8801216"
-    },
-    {
-      "path": "bridge/inbox/inbox.json",
-      "size": 290,
-      "sha256": "eca090a19a20ab65cf6fcb5f07ddec88820c97a96bdb5b7c45f26844b99323cf"
     },
     {
       "path": "bridge/inbox/messages/2026-06-08T194555Z_runtime-inbox-e2e-codex-request.md",
@@ -286,11 +281,6 @@
       "path": "bridge/outbox/messages/2026-06-08T184856Z_rpi5_test-runtime-outbox-lifecycle.md",
       "size": 425,
       "sha256": "10d8bda36e095674e30ad5e0556bc0af137d867763d525b14ed0bd74a4251c88"
-    },
-    {
-      "path": "bridge/outbox/outbox.json",
-      "size": 472,
-      "sha256": "e20fe977adeb942811cf1d222b3056a8c561c25bbcaa297e0332f428276f9a48"
     },
     {
       "path": "bridge/scripts/.gitignore",

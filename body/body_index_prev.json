@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-08T21:06:27.974305Z",
+  "generated_at": "2026-06-08T21:06:47.362741Z",
   "source": {
     "script": "scripts/update_body_index.py",
     "workflow": ".github/workflows/update_body_index.yml"
@@ -49,8 +49,8 @@
     },
     {
       "path": "bridge/docs/MOST_A_NERVY.md",
-      "size": 470,
-      "sha256": "2202200759df8194f619e619561cd75cec71aa322d8f4f475e20eae6be80ab5d"
+      "size": 366,
+      "sha256": "4bdfc93d9aeb9926d1c0f8015f6d742b0e4878aefdbe957748cb7c5cd8801216"
     },
     {
       "path": "bridge/inbox/inbox.json",
