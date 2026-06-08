@@ -10,8 +10,7 @@ Most dnes umí:
 - chránit cyklus lockem;
 - zapisovat ledger změn.
 
-- heartbeat = srdce těla
-- body watchdog = dohled nad stavem těla / awake / heartbeat
+
 - bridge watchdog = dohled nad průchodem mostu
 - ledger = paměť změn
 - latest.md = poslední stav
