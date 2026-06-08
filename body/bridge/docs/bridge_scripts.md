@@ -1,0 +1,260 @@
+# Bridge Scripts
+
+This document describes the bridge scripts mirrored under:
+
+```text
+body/bridge/scripts/
+```
+
+Runtime source lives on the RPi under:
+
+```text
+/home/fiste/Noema/bridge/scripts/
+```
+
+The bridge is intentionally narrow: it moves messages between the local runtime,
+the GitHub tape, and local state files. Body heartbeat/watchdog is separate.
+
+## Main Cycle
+
+### `bridge_cycle.py`
+
+Runs one complete bridge cycle:
+
+```text
+inbound sync -> bridge agent -> write bridge summary -> outbound sync
+```
+
+It is the systemd `bridge-cycle.service` entrypoint. The service is oneshot and
+is normally triggered by `bridge-cycle.timer`.
+
+Important behavior:
+
+- acquires `bridge/state/bridge_cycle.lock.json`;
+- writes `bridge/state/bridge_cycle_state.json`;
+- updates lock progress before each step;
+- rotates the runtime bridge log;
+- deduplicates repeated cycle errors through `cycle_error_state.json`;
+- writes cycle error messages to outbox when needed.
+
+It only commits/pushes when called with:
+
+```text
+--commit-and-push
+```
+
+### `bridge_cycle_lock.py`
+
+Owns the cycle lock helper used by `bridge_cycle.py`.
+
+Important behavior:
+
+- creates an active lock with PID, owner, host, current step, and expiry;
+- updates `current_step` and `last_progress_at`;
+- releases the lock at the end of the cycle;
+- may reclaim a stale active local bridge-cycle lock only when the PID is dead;
+- never overwrites a live PID lock.
+
+## Sync
+
+### `bridge_sync_inbound.py`
+
+Fetches GitHub `body/bridge/inbox/messages/` into the local repo mirror and
+hydrates the runtime inbox:
+
+```text
+symnozein/body/bridge/inbox/messages/ -> bridge/inbox/messages/
+```
+
+Important behavior:
+
+- mirrors inbound deletions from GitHub into the repo mirror;
+- copies only new/unprocessed Markdown messages into the runtime inbox;
+- uses `bridge/state/processed_messages.json` to avoid replaying messages that
+  remain on the GitHub tape;
+- treats `pending` as retryable and terminal statuses as already handled.
+
+Inbound is copy-only toward runtime. It does not publish anything.
+
+### `bridge_sync_outbound.py`
+
+Mirrors outbound runtime state to the GitHub tape and optionally commits/pushes.
+
+Important behavior:
+
+- publishes runtime outbox messages from `bridge/outbox/messages/` to
+  `body/bridge/outbox/messages/`;
+- after successful push, archives published runtime outbox messages under
+  `bridge/outbox/published/YYYY-MM/`;
+- mirrors bridge scripts and state summary;
+- rejects forbidden paths and Python bytecode cache files;
+- safely rebases before push without force-push;
+- stashes allowed outbound paths and local-only inbox paths during pre-push
+  rebase, so GitHub-side inbox deletions do not block sync;
+- does not push runtime state JSON, locks, logs, or inbox mirror changes.
+
+Use `--dry-run` to inspect without writing. Use `--commit-and-push` for the
+normal bridge cycle publish path.
+
+### `bridge_sync_common.py`
+
+Shared constants and helpers for sync scripts.
+
+Includes:
+
+- default roots and remote/branch names;
+- bridge repo path constants;
+- git command wrapper;
+- path safety helpers;
+- status parsing helpers.
+
+It is not intended as a standalone entrypoint.
+
+### `mirror_scripts_to_repo.py`
+
+Copies local runtime scripts into the repo mirror:
+
+```text
+bridge/scripts/ -> symnozein/body/bridge/scripts/
+```
+
+It does not delete repo files. Outbound sync uses this helper.
+
+## Agent And Messages
+
+### `bridge_agent_v2.py`
+
+Processes runtime inbox messages from:
+
+```text
+bridge/inbox/messages/
+```
+
+Important behavior:
+
+- validates Markdown frontmatter;
+- checks target against `rpi5-bridge-agent` / `rpi5-bridge`;
+- records message state in `bridge/state/processed_messages.json`;
+- writes replies or task results to runtime outbox;
+- turns `codex_request` into a local Codex queue item under
+  `/home/fiste/Noema/codex/inbox/`;
+- archives processed runtime inbox files under
+  `bridge/inbox/processed/YYYY-MM/`;
+- archives invalid runtime inbox files with an `invalid-` prefix after recording
+  an error.
+
+`pending_codex` is terminal for the bridge agent after the request is written to
+the local Codex queue.
+
+### `codex_inbox_reader.py`
+
+Reads local Codex request files from:
+
+```text
+/home/fiste/Noema/codex/inbox/
+```
+
+It does not call Codex automatically in the current bridge design. It can emit a
+dry-run JSON report and can write manual stub responses with `--write-stub`.
+
+Stub responses go to:
+
+```text
+bridge/outbox/messages/
+```
+
+Reader state is runtime-local:
+
+```text
+bridge/state/codex_reader_state.json
+```
+
+## Summary And Watchdog
+
+### `write_bridge_summary.py`
+
+Writes the public bridge summary:
+
+```text
+body/bridge/state_summary/latest.md
+```
+
+It summarizes selected local state without publishing internal runtime JSON.
+It also includes a filtered bridge log tail. The full runtime log remains local.
+
+### `bridge_watchdog.py`
+
+Local observer for bridge health. It watches the bridge as a cycle path, not
+body liveness:
+
+```text
+bridge-cycle.timer -> bridge_cycle.py -> inbound sync -> agent -> summary -> outbound sync
+```
+
+Important behavior:
+
+- reads `bridge_cycle_state.json`, `bridge_cycle.lock.json`, and
+  `cycle_error_state.json`;
+- may read a small safe subset of systemd status fields;
+- detects missing cycles, stale summaries, stuck running cycles, stale locks,
+  stalled steps, and active cycle errors;
+- writes primary local incident records under `bridge/incidents/YYYY-MM/`;
+- may write a runtime outbox message as a best-effort publish attempt;
+- does not restart services, delete locks, reclaim locks, change timers, or do
+  git housekeeping.
+
+## Utility Scripts
+
+### `git_askpass.py`
+
+Small helper for git authentication when `GITHUB_USER` and `GITHUB_TOKEN` are
+available in the environment.
+
+It is used by outbound push logic through `GIT_ASKPASS`.
+
+### `sync_body_without_bridge.py`
+
+Fetches and restores `body/` content except `body/bridge/`.
+
+This is a narrow maintenance helper, not part of the normal bridge cycle.
+
+### `sync_symnozein_without_bridge.py`
+
+Fetches and restores repo content except `body/bridge/`.
+
+This is a narrow maintenance helper, not part of the normal bridge cycle.
+
+## Task Scripts
+
+Task scripts live under:
+
+```text
+bridge/scripts/tasks/
+```
+
+They are invoked only through `task_request` messages and the allowlist:
+
+```text
+bridge/scripts/tasks/allowlist.json
+```
+
+Current allowlisted tasks:
+
+- `example_task`
+- `mirror_scripts_to_repo`
+- `sync_body_without_bridge`
+- `sync_symnozein_without_bridge`
+
+Task execution is constrained by the bridge agent: no shell invocation, explicit
+string arguments, timeout, stdout/stderr capture, and local task run state.
+
+## Legacy Scripts
+
+Legacy scripts under:
+
+```text
+bridge/scripts/legacy/
+```
+
+are retained for history and reference. They are not the current bridge cycle
+path.
