@@ -1,11 +1,11 @@
 {
-  "generated_at": "2026-06-08T18:35:28.389397Z",
+  "generated_at": "2026-06-08T18:49:33.625121Z",
   "source": {
     "script": "scripts/update_body_index.py",
     "workflow": ".github/workflows/update_body_index.yml"
   },
   "kind": "state",
-  "count": 227,
+  "count": 228,
   "files": [
     {
       "path": "Prvni_kroky.md",
@@ -933,6 +933,11 @@
       "sha256": "eaabeb18c72d6ddb937bc4467eac011d01652f03ff489fe7f5095b0b8ce2073e"
     },
     {
+      "path": "bridge/outbox/messages/2026-06-08T184856Z_rpi5_test-runtime-outbox-lifecycle.md",
+      "size": 425,
+      "sha256": "10d8bda36e095674e30ad5e0556bc0af137d867763d525b14ed0bd74a4251c88"
+    },
+    {
       "path": "bridge/outbox/outbox.json",
       "size": 472,
       "sha256": "e20fe977adeb942811cf1d222b3056a8c561c25bbcaa297e0332f428276f9a48"
@@ -1069,8 +1074,8 @@
     },
     {
       "path": "bridge/state_summary/latest.md",
-      "size": 4874,
-      "sha256": "0fd9dd5fe66162556392f4caad69592cafd6074f98eb05d1ca61f2c31a0848e0"
+      "size": 4885,
+      "sha256": "e8820b78bf95f68fc78b5acf358f5fade8de96eb540e3888619333b5302d9fd8"
     },
     {
       "path": "bridge_protocol_v1.md",

@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-08T18:31:04.611474Z",
+  "generated_at": "2026-06-08T18:35:28.389397Z",
   "source": {
     "script": "scripts/update_body_index.py",
     "workflow": ".github/workflows/update_body_index.yml"
@@ -184,8 +184,8 @@
     },
     {
       "path": "bridge/instructions/pc_codex_postman_smart.md",
-      "size": 3374,
-      "sha256": "4c8558d8d044f5bf7a7f76e9a624a22c4b7a0f6abc4215c2b29d1113a1407681"
+      "size": 3375,
+      "sha256": "d42139c974f2a46043b6718d1b3eb24931eaa2aee37b2c5f6434d09e55932683"
     },
     {
       "path": "bridge/outbox/codex/2026-05-27T182640Z_codex-response-msg-20260527-codex-inbox-write-task-001.md",
