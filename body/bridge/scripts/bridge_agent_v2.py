@@ -23,9 +23,7 @@ if not BODY_ROOT.exists():
     BODY_ROOT = PROJECT_ROOT / "body"
 
 INBOX_DIR = BODY_ROOT / "bridge" / "inbox" / "messages"
-CODEX_INBOX_DIR = INBOX_DIR / "codex"
 OUTBOX_DIR = BODY_ROOT / "bridge" / "outbox" / "messages"
-CODEX_OUTBOX_DIR = BODY_ROOT / "bridge" / "outbox" / "codex"
 CODEX_RUNTIME_INBOX_DIR = Path(os.environ.get("NOEMA_CODEX_INBOX", PROJECT_ROOT / "codex" / "inbox")).resolve()
 STATE_DIR = BRIDGE_ROOT / "state"
 LOG_FILE = BRIDGE_ROOT / "logs" / "bridge.log"
@@ -861,15 +859,10 @@ def process_inbox() -> int:
     pending_count = 0
     message_paths = list_inbox_messages()
     log(f"Inbox message files found: {len(message_paths)}")
-    codex_inbox_paths = list_observed_files(CODEX_INBOX_DIR)
-    codex_outbox_paths = list_observed_files(CODEX_OUTBOX_DIR)
+    codex_inbox_paths = list_observed_files(CODEX_RUNTIME_INBOX_DIR)
     log(
-        "Codex inbox message files observed: "
+        "Codex runtime inbox files observed: "
         f"{len(codex_inbox_paths)} latest={latest_file_name(codex_inbox_paths)}"
-    )
-    log(
-        "Codex outbox message files observed: "
-        f"{len(codex_outbox_paths)} latest={latest_file_name(codex_outbox_paths)}"
     )
 
     for message_path in message_paths:

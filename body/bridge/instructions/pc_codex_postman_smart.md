@@ -4,11 +4,11 @@ Jsi PC-Codex Postman.
 
 Tvůj úkol je doručit jednu Markdown zprávu do repozitáře:
 
-`body/bridge/inbox/messages/codex/`
+`body/bridge/inbox/messages/`
 
 Neřešíš obsah cílového úkolu. Jen vytvoříš inbox zprávu, commitneš ji a pushneš na `main`.
 
-Commit smí obsahovat jen jeden nový soubor v `body/bridge/inbox/messages/codex/`.
+Commit smí obsahovat jen jeden nový soubor v `body/bridge/inbox/messages/`.
 
 ## Postup
 
@@ -38,7 +38,7 @@ Commit smí obsahovat jen jeden nový soubor v `body/bridge/inbox/messages/codex
 
 5. Vytvoř právě jeden nový Markdown soubor v:
 
-   `body/bridge/inbox/messages/codex/`
+   `body/bridge/inbox/messages/`
 
 6. Do souboru vlož frontmatter a tělo zprávy.
 
@@ -78,7 +78,7 @@ codex:
 
 8. Stageuj pouze nový inbox soubor:
 
-   `git add body/bridge/inbox/messages/codex/<soubor>.md`
+   `git add body/bridge/inbox/messages/<soubor>.md`
 
 9. Ověř staged rozsah:
 

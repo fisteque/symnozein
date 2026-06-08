@@ -296,9 +296,8 @@ def render_summary(runtime_root: Path, repo_root: Path, project_root: Path, log_
     last_error = errors[-1] if errors else None
 
     inbox_dir = repo_root / "body/bridge/inbox/messages"
-    codex_inbox_dir = inbox_dir / "codex"
+    codex_inbox_dir = project_root / "codex/inbox"
     outbox_dir = repo_root / "body/bridge/outbox/messages"
-    codex_outbox_dir = repo_root / "body/bridge/outbox/codex"
     log_tail = public_log_tail(runtime_root / "logs" / "bridge.log", log_lines)
 
     body_awake = body_state.get("awake", "(unknown)") if body_state else "(missing)"
@@ -314,9 +313,8 @@ def render_summary(runtime_root: Path, repo_root: Path, project_root: Path, log_
         "",
         f"- Generated at: `{generated_at.isoformat().replace('+00:00', 'Z')}`",
         f"- Inbox messages: `{count_markdown_files(inbox_dir)}`; latest: `{latest_markdown_file(inbox_dir)}`",
-        f"- Codex inbox files: `{count_files(codex_inbox_dir)}`; latest: `{latest_file(codex_inbox_dir)}`",
+        f"- Codex runtime inbox files: `{count_files(codex_inbox_dir)}`; latest: `{latest_file(codex_inbox_dir)}`",
         f"- Outbox messages: `{count_markdown_files(outbox_dir)}`; latest: `{latest_markdown_file(outbox_dir)}`",
-        f"- Codex outbox files: `{count_files(codex_outbox_dir)}`; latest: `{latest_file(codex_outbox_dir)}`",
         f"- Last processed message: `{last_message_id}`",
         f"- Last processed status: `{last_message.get('status', '(unknown)') if last_message else '(none)'}`",
         f"- Processed count: `{processed_count}`",

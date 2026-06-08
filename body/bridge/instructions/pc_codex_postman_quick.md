@@ -2,7 +2,7 @@
 
 Deliver exactly one new message file to:
 
-`body/bridge/inbox/messages/codex/`
+`body/bridge/inbox/messages/`
 
 ## Before
 
