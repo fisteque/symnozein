@@ -5,6 +5,24 @@ Uchovává posledních **50** záznamů.
 
 ---
 
+## 2026-06-08T22:41:14.925322Z
+
+Zdroj změn:
+- skript: `scripts/update_body_index.py`
+- workflow: `.github/workflows/update_body_index.yml`
+
+➕ přidáno: **0**
+- nic
+
+🔄 změněno: **2**
+- `bridge/scripts/bridge_cycle.py`
+- `bridge/state_summary/latest.md`
+
+❌ odebráno: **0**
+- nic
+
+---
+
 ## 2026-06-08T22:38:05.146686Z
 
 Zdroj změn:
@@ -1080,23 +1098,6 @@ Zdroj změn:
 
 🔄 změněno: **2**
 - `bridge/state_summary/codex.md`
-- `bridge/state_summary/latest.md`
-
-❌ odebráno: **0**
-- nic
-
----
-
-## 2026-06-05T20:06:14.824957Z
-
-Zdroj změn:
-- skript: `scripts/update_body_index.py`
-- workflow: `.github/workflows/update_body_index.yml`
-
-➕ přidáno: **1**
-- `bridge/outbox/messages/2026-06-05T200233Z_rpi5_cycle-error-outbound-sync.md`
-
-🔄 změněno: **1**
 - `bridge/state_summary/latest.md`
 
 ❌ odebráno: **0**
