@@ -6,6 +6,7 @@ import argparse
 import os
 import shutil
 import sys
+from datetime import UTC, datetime
 from pathlib import Path
 
 from bridge_sync_common import (
@@ -40,6 +41,7 @@ REMOVED_REPO_PATHS = (LOG_TAIL,)
 LOCAL_ONLY_REPO_PATHS = (INBOX_MESSAGES,)
 BLOCKED_SCRIPT_CACHE_PARTS = {"__pycache__"}
 BLOCKED_SCRIPT_CACHE_SUFFIXES = {".pyc", ".pyo", ".pyd"}
+PUBLISHED_OUTBOX_DIR = Path("outbox/published")
 
 
 def parse_args() -> argparse.Namespace:
@@ -79,24 +81,118 @@ def copy_tree_without_delete(source_root: Path, target_root: Path, *, dry_run: b
     return changed
 
 
-def mirror_outbound(runtime_root: Path, repo_root: Path, *, dry_run: bool) -> None:
-    pairs = (
-        (runtime_root / "outbox/messages", repo_root / OUTBOX_MESSAGES),
-        (runtime_root / "state_summary", repo_root / STATE_SUMMARY),
+def snapshot_runtime_outbox_messages(runtime_root: Path) -> list[Path]:
+    source_root = ensure_inside(runtime_root / "outbox/messages", runtime_root)
+    if not source_root.exists():
+        return []
+    paths: list[Path] = []
+    for source in sorted(source_root.rglob("*")):
+        if source.is_file():
+            paths.append(source.relative_to(source_root))
+    return paths
+
+
+def mirror_outbox_messages(
+    runtime_root: Path,
+    repo_root: Path,
+    *,
+    dry_run: bool,
+    snapshot: list[Path],
+) -> tuple[int, list[Path]]:
+    source_root = ensure_inside(runtime_root / "outbox/messages", runtime_root)
+    target_root = ensure_inside(repo_root / OUTBOX_MESSAGES, repo_root)
+    if not source_root.exists():
+        print(f"Optional source missing, skipped: {source_root}")
+        return 0, []
+
+    changed = 0
+    published: list[Path] = []
+    for rel in snapshot:
+        source = ensure_inside(source_root / rel, source_root)
+        if not source.is_file():
+            continue
+        target = ensure_inside(target_root / rel, target_root)
+        if target.exists() and target.read_bytes() == source.read_bytes():
+            published.append(rel)
+            continue
+        print(f"{'Would copy' if dry_run else 'Copying'} {source} -> {target}")
+        if not dry_run:
+            target.parent.mkdir(parents=True, exist_ok=True)
+            shutil.copy2(source, target)
+        changed += 1
+        published.append(rel)
+
+    print(f"Mirrored {source_root} -> {target_root}. Changed files: {changed}")
+    return changed, published
+
+
+def unique_archive_path(archive_root: Path, rel: Path) -> Path:
+    candidate = ensure_inside(archive_root / rel, archive_root)
+    if not candidate.exists():
+        return candidate
+    index = 1
+    while True:
+        suffixed = candidate.with_name(f"{candidate.stem}-{index}{candidate.suffix}")
+        suffixed = ensure_inside(suffixed, archive_root)
+        if not suffixed.exists():
+            return suffixed
+        index += 1
+
+
+def prune_empty_dirs(root: Path) -> None:
+    if not root.exists():
+        return
+    for item in sorted(root.rglob("*"), reverse=True):
+        if item.is_dir() and not any(item.iterdir()):
+            item.rmdir()
+
+
+def archive_published_outbox_messages(runtime_root: Path, published: list[Path]) -> int:
+    if not published:
+        return 0
+    source_root = ensure_inside(runtime_root / "outbox/messages", runtime_root)
+    archive_root = ensure_inside(
+        runtime_root / PUBLISHED_OUTBOX_DIR / datetime.now(UTC).strftime("%Y-%m"),
+        runtime_root,
     )
-    for source, target in pairs:
-        ensure_inside(target, repo_root)
-        changed = copy_tree_without_delete(source, target, dry_run=dry_run)
-        if source.exists():
-            print(f"Mirrored {source} -> {target}. Changed files: {changed}")
-        else:
-            print(f"Optional source missing, skipped: {source}")
+    archived = 0
+    for rel in published:
+        source = ensure_inside(source_root / rel, source_root)
+        if not source.is_file():
+            continue
+        target = unique_archive_path(archive_root, rel)
+        target.parent.mkdir(parents=True, exist_ok=True)
+        print(f"Archiving published runtime outbox message: {source} -> {target}")
+        shutil.move(str(source), str(target))
+        archived += 1
+    prune_empty_dirs(source_root)
+    return archived
+
+
+def mirror_outbound(runtime_root: Path, repo_root: Path, *, dry_run: bool) -> list[Path]:
+    outbox_snapshot = snapshot_runtime_outbox_messages(runtime_root)
+    _, published_outbox = mirror_outbox_messages(
+        runtime_root,
+        repo_root,
+        dry_run=dry_run,
+        snapshot=outbox_snapshot,
+    )
+
+    state_source = runtime_root / "state_summary"
+    state_target = repo_root / STATE_SUMMARY
+    ensure_inside(state_target, repo_root)
+    changed = copy_tree_without_delete(state_source, state_target, dry_run=dry_run)
+    if state_source.exists():
+        print(f"Mirrored {state_source} -> {state_target}. Changed files: {changed}")
+    else:
+        print(f"Optional source missing, skipped: {state_source}")
 
     print(
         "Log tail mirror disabled; runtime log remains local and public tail is "
         f"available through {repo_root / STATE_SUMMARY_LATEST}."
     )
     mirror_scripts(runtime_root, repo_root, dry_run=dry_run)
+    return published_outbox
 
 
 def ensure_no_forbidden_status(repo_root: Path) -> None:
@@ -358,13 +454,17 @@ def main() -> int:
         ensure_no_forbidden_status(repo_root)
         ensure_no_disallowed_staged_paths(repo_root)
 
-        mirror_outbound(runtime_root, repo_root, dry_run=args.dry_run)
+        published_outbox = mirror_outbound(runtime_root, repo_root, dry_run=args.dry_run)
 
         if args.dry_run:
             status = porcelain_status(repo_root, ALLOWED_REPO_PATHS)
             print("Dry run only; repo was not staged.")
             print("Current allowed-path git status:")
             print(status or "(clean)")
+            if published_outbox:
+                print("Runtime outbox messages that would be archived after a successful push:")
+                for rel in published_outbox:
+                    print(f"  {rel.as_posix()}")
             return 0
 
         stage_allowed_paths(repo_root)
@@ -408,6 +508,9 @@ def main() -> int:
             env=git_push_env(),
         )
         print_git_output(push)
+        archived = archive_published_outbox_messages(runtime_root, published_outbox)
+        if archived:
+            print(f"Archived published runtime outbox messages: {archived}")
         return 0
     except SyncError as exc:
         print(f"ERROR: {exc}", file=sys.stderr)
