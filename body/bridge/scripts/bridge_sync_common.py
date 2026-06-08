@@ -17,7 +17,6 @@ DEFAULT_BRANCH = "main"
 BRIDGE_REPO_ROOT = Path("body/bridge")
 INBOX_MESSAGES = BRIDGE_REPO_ROOT / "inbox/messages"
 OUTBOX_MESSAGES = BRIDGE_REPO_ROOT / "outbox/messages"
-OUTBOX_CODEX = BRIDGE_REPO_ROOT / "outbox/codex"
 LOGS = BRIDGE_REPO_ROOT / "logs"
 STATE_SUMMARY = BRIDGE_REPO_ROOT / "state_summary"
 SCRIPTS = BRIDGE_REPO_ROOT / "scripts"
