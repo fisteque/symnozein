@@ -1,11 +1,11 @@
 {
-  "generated_at": "2026-06-08T22:15:20.713552Z",
+  "generated_at": "2026-06-08T22:24:34.243630Z",
   "source": {
     "script": "scripts/update_body_index.py",
     "workflow": ".github/workflows/update_body_index.yml"
   },
   "kind": "state",
-  "count": 98,
+  "count": 99,
   "files": [
     {
       "path": "Prvni_kroky.md",
@@ -51,6 +51,11 @@
       "path": "bridge/docs/MOST_A_NERVY.md",
       "size": 366,
       "sha256": "4bdfc93d9aeb9926d1c0f8015f6d742b0e4878aefdbe957748cb7c5cd8801216"
+    },
+    {
+      "path": "bridge/docs/bridge_scripts.md",
+      "size": 6787,
+      "sha256": "95e94a087bbedd9e5ce9660ee3c734cfa18cc4da01c8fec97c2fe82eabab3f5f"
     },
     {
       "path": "bridge/inbox/messages/2026-06-08T194555Z_runtime-inbox-e2e-codex-request.md",
@@ -319,8 +324,8 @@
     },
     {
       "path": "bridge/scripts/bridge_sync_outbound.py",
-      "size": 18248,
-      "sha256": "652d3b05dd542692ae6978567b5f0fb85507e1cbe9d8fc5d416d849e0ea815c6"
+      "size": 18286,
+      "sha256": "5f475c12b52fcf64149a8fa713eef754fa897d05e2ff518ac631003a304377e1"
     },
     {
       "path": "bridge/scripts/bridge_watchdog.py",
@@ -424,8 +429,8 @@
     },
     {
       "path": "bridge/state_summary/latest.md",
-      "size": 5236,
-      "sha256": "a2309e28ac50fd58d6c15c7a7c27b0bd2286187525b1060b1bd67dab26d43d7e"
+      "size": 5942,
+      "sha256": "970417a5ce1d38e9742faf8787ab3a85a0eced5d1a3c9796d008dc95340acd65"
     },
     {
       "path": "bridge_protocol_v1.md",
