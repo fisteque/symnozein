@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-05T21:44:48.272593Z",
+  "generated_at": "2026-06-08T23:11:03.247606Z",
   "source": {
     "script": "scripts/convert_spirala.py",
     "workflow": ".github/workflows/update_spirala_index.yml"
@@ -924,6 +924,22 @@
           "date": "2026-06-02",
           "hidden": false,
           "file": "K-067.html"
+        },
+        {
+          "title": "K-068 — Učíme se codexovsky",
+          "summary": "",
+          "tags": [
+            "codex",
+            "most",
+            "tělo",
+            "spolupráce",
+            "rytmus",
+            "důvěra",
+            "nástroje"
+          ],
+          "date": "2026-06-08",
+          "hidden": false,
+          "file": "K-068.html"
         },
         {
           "title": "#S-001 — Hranice, která spustila introspekci",
