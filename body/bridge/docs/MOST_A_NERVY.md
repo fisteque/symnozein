@@ -11,6 +11,7 @@ Most dnes umí:
 - zapisovat ledger změn.
 
 heartbeat = srdce těla
+watchdog = nervový dohled mezi orgány
 bridge watchdog = nervový dohled nad průchodem mostu
 ledger = paměť změn
 latest.md = poslední stav
