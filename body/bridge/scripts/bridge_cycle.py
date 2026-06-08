@@ -6,6 +6,7 @@ import argparse
 import hashlib
 import json
 import os
+import re
 import subprocess
 import sys
 import traceback
@@ -119,9 +120,39 @@ def save_cycle_error_state(runtime_root: Path, state: dict[str, object]) -> None
     atomic_write_text(path, text, runtime_root)
 
 
+def lock_error_field(error: str, field: str) -> str | None:
+    match = re.search(rf"(?:^|[,;] )({re.escape(field)})=([^,]+)", error)
+    if not match:
+        return None
+    value = match.group(2).strip()
+    return value or None
+
+
+def infer_error_step(error: str, last_step: object) -> str:
+    if isinstance(last_step, str) and last_step.strip():
+        return last_step
+    current_step = lock_error_field(error, "current_step")
+    if current_step:
+        return current_step
+    return "unknown"
+
+
 def cycle_error_fingerprint(error: str, step: str | None) -> str:
+    if error.startswith("Bridge cycle lock is active:"):
+        payload_data = {
+            "kind": "bridge_cycle_lock_active",
+            "step": step or "unknown",
+            "state": lock_error_field(error, "state"),
+            "pid": lock_error_field(error, "pid"),
+            "pid_alive": lock_error_field(error, "pid_alive"),
+            "current_step": lock_error_field(error, "current_step"),
+            "owner": lock_error_field(error, "owner"),
+            "host": lock_error_field(error, "host"),
+        }
+    else:
+        payload_data = {"step": step or "unknown", "error": error}
     payload = json.dumps(
-        {"step": step or "unknown", "error": error},
+        payload_data,
         ensure_ascii=False,
         sort_keys=True,
     )
@@ -374,12 +405,14 @@ def main() -> int:
         state["finished_at"] = utc_iso()
         state["error"] = error
         try:
+            error_step = infer_error_step(error, state.get("last_step"))
+            state["last_step"] = error_step
             write_cycle_state(runtime_root, state)
             outbox_path = report_cycle_error_once(
                 runtime_root,
                 repo_root,
                 error,
-                str(state.get("last_step") or "unknown"),
+                error_step,
             )
             if outbox_path is not None:
                 cycle_log(runtime_root, f"Cycle error outbox written: {outbox_path}")
