@@ -203,6 +203,12 @@ def main() -> int:
             if local_status:
                 print("Local inbound files are already present and match FETCH_HEAD:")
                 print(local_status)
+                if args.dry_run:
+                    print(f"Would restore local inbound mirror from FETCH_HEAD under {path}.")
+                else:
+                    run_git(repo_root, ["restore", "--source", "FETCH_HEAD", "--worktree", "--", path])
+                    prune_empty_dirs(repo_root / path)
+                    print(f"Restored local inbound mirror from FETCH_HEAD under {path}.")
             print(f"No inbound changes for {path}.")
             hydrate_runtime_inbox(repo_root, args.runtime_root.resolve(), dry_run=args.dry_run)
             return 0
