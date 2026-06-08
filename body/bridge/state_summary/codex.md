@@ -686,7 +686,7 @@ remained, and no test stash was left behind.
 Cleanup: removed an accidentally mirrored Python bytecode file from
 `body/bridge/scripts/__pycache__/` after syntax verification generated it.
 
-### 1. Git Maintenance Review And Local GC
+### Git Maintenance Review And Local GC
 
 Reviewed the repeated Git maintenance warning from `.git/gc.log` and the
 transient outbound sync error. The repository had many unreachable loose
@@ -720,7 +720,7 @@ Verified:
   `body/bridge/logs/bridge_tail.log` and
   `body/bridge/state_summary/latest.md`.
 
-### 2. Known Bridge Limits Anchor
+### Known Bridge Limits Anchor
 
 Added an operational anchor for known bridge limits:
 
@@ -742,7 +742,7 @@ Verified: the files exist in the repo mirror under `symnozein/body/bridge/`,
 the task guide link matches the body-relative path used by bridge docs, and no
 runtime task was needed or started.
 
-### 3. Body State Atomic Writes And Bridge Cycle Recovery
+### Body State Atomic Writes And Bridge Cycle Recovery
 
 Fixed a race where `state/body_state.json` could be observed as empty while it
 was being rewritten by heartbeat/watchdog. The public bridge summary now also
@@ -780,7 +780,7 @@ Published as:
 46dc635 Sync RPi bridge outbound state
 ```
 
-### 4. Passive Codex Request Queue
+### Passive Codex Request Queue
 
 Added a passive `codex_request` path. Noema can send a request to the bridge
 inbox, and the bridge agent creates a pending Codex item in:
@@ -808,7 +808,7 @@ Published as:
 e99d8e7 Sync RPi bridge outbound state
 ```
 
-### 5. One-Time Cycle Error Reporting
+### One-Time Cycle Error Reporting
 
 Fixed repeated cycle error spam. The cycle now fingerprints the active error
 and writes only one outbox error for the same failure. Repeats update local
@@ -818,7 +818,7 @@ Changed:
 
 - `bridge/scripts/bridge_cycle.py`
 
-### 6. Safe Inbound Handling For Existing Inbox Files
+### Safe Inbound Handling For Existing Inbox Files
 
 Adjusted inbound sync so an identical local inbox file and remote inbox file are
 accepted as the same message. A real content conflict still stops the cycle.
@@ -827,7 +827,7 @@ Changed:
 
 - `bridge/scripts/bridge_sync_inbound.py`
 
-### 7. Outbound Rebase Tolerance For Local Inbox
+### Outbound Rebase Tolerance For Local Inbox
 
 Allowed local inbox files to exist during outbound rebase checks without being
 treated as forbidden outbound changes. Inbox is still not staged or pushed by
@@ -843,7 +843,7 @@ Published with the first successful task result as:
 9b4df4c Sync RPi bridge outbound state
 ```
 
-### 8. Task Request Guide
+### Task Request Guide
 
 Added a task invocation guide beside the allowlist and wrappers:
 
@@ -860,7 +860,7 @@ Published as:
 5036923 Sync RPi bridge outbound state
 ```
 
-### 9. Runtime Log Tail And Rotation
+### Runtime Log Tail And Rotation
 
 Stopped publishing the full bridge log to GitHub. Outbound sync now publishes:
 
@@ -882,7 +882,7 @@ Published across:
 aade471 Sync RPi bridge outbound state
 ```
 
-### 10. Safe Pre-Push Rebase
+### Safe Pre-Push Rebase
 
 Outbound sync now fetches and safely rebases before commit/push when local
 changes are limited to bridge-owned paths. It uses no force push and refuses
@@ -892,7 +892,7 @@ Changed:
 
 - `bridge/scripts/bridge_sync_outbound.py`
 
-### 11. Systemd Bridge Cycle
+### Systemd Bridge Cycle
 
 Installed and validated a one-shot bridge cycle controlled by a systemd timer.
 The service runs the sequence:
@@ -905,7 +905,7 @@ The service runs the sequence:
 The timer fires every 30 seconds. There is no daemon loop inside the bridge
 scripts.
 
-### 12. Allowlisted Task Runner
+### Allowlisted Task Runner
 
 Added `task_request` support to the bridge agent. Tasks run only from:
 
@@ -917,7 +917,7 @@ Execution is controlled by `allowlist.json`, uses `shell=False`, enforces string
 arguments, timeout, non-root execution, stdout/stderr capture, and task run
 state in local `task_runs.json`.
 
-### 13. Bridge Cycle Stale Lock Handling
+### Bridge Cycle Stale Lock Handling
 
 Investigated repeated `rpi5_cycle-error-unknown` outbox spam. Root cause was a
 systemd `TimeoutStartSec=25` kill during `inbound sync`, leaving an active
