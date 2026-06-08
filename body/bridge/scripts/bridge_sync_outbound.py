@@ -361,6 +361,14 @@ def existing_allowed_paths(repo_root: Path) -> list[Path]:
     ]
 
 
+def existing_pre_rebase_stash_paths(repo_root: Path) -> list[Path]:
+    return [
+        path
+        for path in (*ALLOWED_REPO_PATHS, *REMOVED_REPO_PATHS, *LOCAL_ONLY_REPO_PATHS)
+        if path_exists_or_tracked(repo_root, path)
+    ]
+
+
 def local_only_untracked_paths(repo_root: Path) -> list[Path]:
     status = working_tree_status_for_paths(repo_root, LOCAL_ONLY_REPO_PATHS)
     paths: list[Path] = []
@@ -409,7 +417,8 @@ def safe_rebase_onto_fetch_head(repo_root: Path, remote: str, branch: str) -> No
 
     print(f"Local branch divergence before push: ahead={ahead} behind={behind}")
     clear_matching_local_only_untracked_files(repo_root)
-    allowed_dirty = bool(working_tree_status_for_paths(repo_root, ALLOWED_REPO_PATHS))
+    rebase_stash_paths = existing_pre_rebase_stash_paths(repo_root)
+    allowed_dirty = bool(working_tree_status_for_paths(repo_root, tuple(rebase_stash_paths)))
     stash_ref = None
     if allowed_dirty:
         stash = run_git(
@@ -420,7 +429,7 @@ def safe_rebase_onto_fetch_head(repo_root: Path, remote: str, branch: str) -> No
                 "-m",
                 "bridge-outbound-pre-rebase",
                 "--",
-                *[repo_rel(path) for path in existing_allowed_paths(repo_root)],
+                *[repo_rel(path) for path in rebase_stash_paths],
             ],
         )
         print_git_output(stash)
