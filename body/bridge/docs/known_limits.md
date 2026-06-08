@@ -9,8 +9,10 @@ verified bridge behavior from proposals, transport gaps, and UI impressions.
 - Heartbeat and watchdog work after the last atomic write fix.
 - `body/bridge/state_summary/latest.md` is the current operational summary.
 - `body/bridge/docs/implementation_ledger.md` is the implementation ledger.
-- A `codex_request` message can be handled by the bridge agent and can create a
-  Codex response item under `body/bridge/outbox/codex/`.
+- A `codex_request` message can be handled by the bridge agent and creates a
+  local Codex request item under `/home/fiste/Noema/codex/inbox/`.
+- Codex reader responses or stubs use the normal runtime outbox path:
+  `/home/fiste/Noema/bridge/outbox/messages/`.
 - The atomic write issue around `body_state.json` was fixed and verified.
 - The current verified transport proxy is Ondra through a manual GitHub commit.
 - Ondra currently holds the human safety, relationship, and rhythm control
