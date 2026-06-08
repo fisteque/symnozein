@@ -14,6 +14,7 @@ from bridge_sync_common import SyncError, ensure_inside
 
 
 DEFAULT_LOCK_TTL_SECONDS = 15 * 60
+LOCK_OWNER = "rpi5-bridge-cycle"
 
 
 def utc_now() -> datetime:
@@ -99,6 +100,16 @@ def describe_lock(lock_data: dict[str, object], now: datetime) -> str:
     )
 
 
+def lock_is_reclaimable(lock_data: dict[str, object], now: datetime) -> bool:
+    return (
+        lock_is_active(lock_data, now)
+        and lock_data.get("status") == "active"
+        and lock_data.get("owner") == LOCK_OWNER
+        and lock_data.get("host") == socket.gethostname()
+        and pid_is_alive(lock_data.get("pid")) is False
+    )
+
+
 def write_lock(lock_path: Path, runtime_root: Path, ttl_seconds: int) -> None:
     ensure_inside(lock_path, runtime_root)
     lock_path.parent.mkdir(parents=True, exist_ok=True)
@@ -110,7 +121,7 @@ def write_lock(lock_path: Path, runtime_root: Path, ttl_seconds: int) -> None:
         "status": "active",
         "current_step": "starting",
         "last_progress_at": utc_iso(now),
-        "owner": "rpi5-bridge-cycle",
+        "owner": LOCK_OWNER,
         "host": socket.gethostname(),
     }
     tmp_path = lock_path.with_name(f".{lock_path.name}.tmp-{os.getpid()}")
@@ -139,7 +150,7 @@ def release_lock(lock_path: Path, runtime_root: Path) -> None:
     data = read_lock(lock_path, runtime_root) or {}
     data["pid"] = os.getpid()
     data.setdefault("created_at", utc_iso(now))
-    data.setdefault("owner", "rpi5-bridge-cycle")
+    data.setdefault("owner", LOCK_OWNER)
     data.setdefault("host", socket.gethostname())
     data["released_at"] = utc_iso(now)
     data["expires_at"] = utc_iso(now)
@@ -162,7 +173,8 @@ def bridge_cycle_lock(
     existing = read_lock(lock_path, runtime_root)
     now = utc_now()
     if existing and lock_is_active(existing, now):
-        raise SyncError(f"Bridge cycle lock is active: {lock_path}; {describe_lock(existing, now)}")
+        if not lock_is_reclaimable(existing, now):
+            raise SyncError(f"Bridge cycle lock is active: {lock_path}; {describe_lock(existing, now)}")
 
     write_lock(lock_path, runtime_root, ttl_seconds)
     try:
