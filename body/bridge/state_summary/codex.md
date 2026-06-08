@@ -864,3 +864,83 @@ Published across:
 54b1cfc Sync RPi bridge outbound state
 0b16638 Sync RPi bridge outbound state
 ```
+
+### 15. Bridge Watchdog V1
+
+Added a local bridge watchdog observer:
+
+```text
+bridge/scripts/bridge_watchdog.py
+```
+
+It checks the bridge as a cycle path, not body liveness:
+
+```text
+bridge-cycle.timer -> bridge_cycle.py -> inbound sync -> agent -> summary -> outbound sync
+```
+
+The watchdog reads local bridge state:
+
+- `bridge/state/bridge_cycle_state.json`
+- `bridge/state/bridge_cycle.lock.json`
+- `bridge/state/cycle_error_state.json`
+- a safe `systemctl show` subset when available
+
+Primary incident records are local JSON files under:
+
+```text
+bridge/incidents/YYYY-MM/
+```
+
+`bridge/outbox/messages/` is only a best-effort publish attempt for later
+GitHub delivery. If outbox write fails, the local JSON incident remains the
+source of truth.
+
+V1 is observation-only. It does not restart services, delete locks, reclaim
+locks, change heartbeat/watchdog body behavior, change timers, or perform git
+housekeeping.
+
+Manual real runtime test returned `incident_count=0`. Isolated tests covered
+healthy cycle, cycle missing, summary stale, stuck running, stale lock, stalled
+step, active cycle error, deduplication, and outbox write failure.
+
+A false `bridge_service_failed` incident caused by sandboxed `systemctl`
+unavailability was removed; unavailable `systemctl` is now recorded as a safe
+snapshot field, not as an incident.
+
+Published across:
+
+```text
+b53ae61 Sync RPi bridge outbound state
+568e568 Sync RPi bridge outbound state
+ae64254 Sync RPi bridge outbound state
+```
+
+### 16. Outbound Rebase With Local-Only Inbox Deletions
+
+Fixed outbound sync after GitHub-side inbox cleanup. When remote inbox files are
+deleted, inbound sync mirrors those deletions locally under:
+
+```text
+body/bridge/inbox/messages/
+```
+
+Those paths are local-only for outbound publish, but they still made the working
+tree dirty and blocked safe pre-push rebase.
+
+`bridge_sync_outbound.py` now includes `LOCAL_ONLY_REPO_PATHS` in the temporary
+pre-rebase stash. This lets rebase proceed while preserving the rule that
+inbound mirror changes are not pushed as outbound changes.
+
+Verified by:
+
+- temp git reproduction of local delete + remote delete
+- `py_compile`
+- real outbound sync from `behind 14`
+- follow-up outbound sync without rebase failure
+
+Published as:
+
+```text
+1de76e3 Sync RPi bridge outbound state
+```
