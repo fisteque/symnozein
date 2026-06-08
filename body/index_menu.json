@@ -1,7 +1,7 @@
 {
   "source": "manual",
   "description": "Rozcestník indexů a orientačních vrstev systému body.",
-  "structure_path": "body/structura_body.md",
+  "structure_path": "body/struktura_body.md",
 
   "kind_description": {
     "state": "stavová vrstva systému (co existuje právě teď)",
@@ -17,7 +17,9 @@
     "navsteva_rules": "body/shared/anchors/navsteva_body.md",
     "navsteva_log": "body/navsteva/navsteva.log",
     "state_summary_latest": "body/bridge/state_summary/latest.md",
-    "state_summary_codex": "body/bridge/state_summary/codex.md"
+    "implementation_ledger": "body/bridge/docs/implementation_ledger.md",
+    "known_limits": "body/bridge/docs/known_limits.md",
+    "bridge_scripts": "body/bridge/docs/bridge_scripts.md"
   },
 
   "runtime_focus": {
@@ -39,7 +41,9 @@
         "body/navsteva/navsteva.log",
         "body/shared/anchors/navsteva_body.md",
         "body/bridge/state_summary/latest.md",
-        "body/bridge/state_summary/codex.md"
+        "body/bridge/docs/implementation_ledger.md",
+        "body/bridge/docs/known_limits.md",
+        "body/bridge/docs/bridge_scripts.md"
       ]
     },
 
@@ -51,6 +55,7 @@
         "inbox": "body/bridge/inbox/messages/",
         "outbox": "body/bridge/outbox/messages/",
         "logs": "body/bridge/logs/",
+        "docs": "body/bridge/docs/",
         "summary": "body/bridge/state_summary/",
         "scripts": "body/bridge/scripts/",
         "tasks": "body/bridge/scripts/tasks/"

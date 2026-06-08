@@ -50,6 +50,7 @@ Bridge propojuje:
 - RPi runtime,
 - tasky,
 - summary vrstvu,
+- dokumentační vrstvu,
 - a reflexní cyklus.
 
 Bridge není daemon.
@@ -59,15 +60,19 @@ Běží přes pravidelný systemd cycle.
 
 ## body/bridge/inbox/
 
-Vstupní zprávy pro bridge.
+Auditní vstupní páska bridge na GitHubu.
 
 Obsahuje:
 - `task_request`
 - `codex_request`
 - další budoucí message typy
 
-Aktuální runtime nikdy nečte GitHub přímo.
-Bridge nejdřív synchronizuje inbox.
+Aktuální runtime agent nečte GitHub inbox přímo. Inbound sync nejdřív hydratuje
+živou runtime frontu:
+
+- `/home/fiste/Noema/bridge/inbox/messages/`
+
+Po zpracování runtime zprávy se lokálně archivují mimo GH pásku.
 
 ---
 
@@ -78,10 +83,15 @@ Výstupní auditní zprávy.
 Obsahuje:
 - `task_result`
 - `error`
-- `codex_needed`
+- bridge cycle a watchdog incidenty
 - budoucí reflexní zprávy
 
-Outbox je auditní vrstva runtime.
+GitHub `body/bridge/outbox/messages/` je auditní páska. Živý runtime outbox je:
+
+- `/home/fiste/Noema/bridge/outbox/messages/`
+
+Po úspěšném publishi se runtime zprávy přesouvají do lokálního published
+archivu.
 
 ---
 
@@ -101,9 +111,13 @@ Krátký aktuální stav:
 Není source of truth.
 Je to orientační puls systému.
 
-### codex.md
+## body/bridge/docs/
 
-Implementační ledger.
+Dokumentační vrstva bridge.
+
+### implementation_ledger.md
+
+Implementační ledger. Dříve `state_summary/codex.md`.
 
 Obsahuje:
 - poslední architektonické změny,
@@ -116,18 +130,32 @@ Slouží pro orientaci:
 - Codexu,
 - Noemy.
 
+### known_limits.md
+
+Provozní kotva známých limitů a neověřených cest.
+
+Rozlišuje:
+- ověřené chování,
+- návrhy,
+- transportní mezery,
+- cesty, které zatím nejsou funkční.
+
+### bridge_scripts.md
+
+Přehled jednotlivých skriptů mostu a jejich rolí.
+
+### MOST_A_NERVY.md
+
+Krátký orientační dokument k mostu a nervové vrstvě.
+
 ---
 
 ## body/bridge/logs/
 
 Runtime logy bridge.
 
-Důležité:
-- `bridge_tail.log`
-- archive runtime logů
-
-Plný runtime log se už nepublikuje na GitHub.
-Publikuje se jen tail.
+Plný runtime log se už nepublikuje na GitHub. Runtime log a jeho archivy jsou
+lokální. Veřejný filtrovaný stav je v `state_summary/latest.md`.
 
 ---
 
@@ -141,6 +169,7 @@ Obsahuje:
 - task runner,
 - summary generátory,
 - lock systém,
+- bridge watchdog,
 - auditní vrstvy.
 
 Důležité soubory:
@@ -148,6 +177,8 @@ Důležité soubory:
 - `bridge_sync_inbound.py`
 - `bridge_sync_outbound.py`
 - `bridge_agent_v2.py`
+- `bridge_watchdog.py`
+- `codex_inbox_reader.py`
 - `write_bridge_summary.py`
 
 ---
