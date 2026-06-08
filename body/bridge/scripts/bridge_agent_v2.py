@@ -26,6 +26,7 @@ INBOX_DIR = BODY_ROOT / "bridge" / "inbox" / "messages"
 CODEX_INBOX_DIR = INBOX_DIR / "codex"
 OUTBOX_DIR = BODY_ROOT / "bridge" / "outbox" / "messages"
 CODEX_OUTBOX_DIR = BODY_ROOT / "bridge" / "outbox" / "codex"
+CODEX_RUNTIME_INBOX_DIR = Path(os.environ.get("NOEMA_CODEX_INBOX", PROJECT_ROOT / "codex" / "inbox")).resolve()
 STATE_DIR = BRIDGE_ROOT / "state"
 LOG_FILE = BRIDGE_ROOT / "logs" / "bridge.log"
 PROCESSED_FILE = STATE_DIR / "processed_messages.json"
@@ -233,6 +234,17 @@ def relative_to_body(path: Path) -> str:
     return path.resolve().relative_to(BODY_ROOT.resolve()).as_posix()
 
 
+def audit_path(path: Path) -> str:
+    resolved = path.resolve()
+    body_root = BODY_ROOT.resolve()
+    project_root = PROJECT_ROOT.resolve()
+    if resolved == body_root or body_root in resolved.parents:
+        return resolved.relative_to(body_root).as_posix()
+    if resolved == project_root or project_root in resolved.parents:
+        return resolved.relative_to(project_root).as_posix()
+    return str(resolved)
+
+
 def message_sort_key(path: Path) -> tuple[str, str]:
     try:
         message = parse_markdown_message(path)
@@ -323,8 +335,8 @@ def write_outbox_message(
 
 
 def write_codex_needed(message: Message) -> Path:
-    ensure_dir(CODEX_OUTBOX_DIR)
-    assert_inside(CODEX_OUTBOX_DIR, BODY_ROOT)
+    ensure_dir(CODEX_RUNTIME_INBOX_DIR)
+    assert_inside(CODEX_RUNTIME_INBOX_DIR, PROJECT_ROOT)
 
     now = utc_now()
     message_id = message.message_id
@@ -338,8 +350,8 @@ def write_codex_needed(message: Message) -> Path:
         raise ValueError("codex_request requires codex.question or non-empty message body")
 
     frontmatter = {
-        "id": f"codex-needed-{now.strftime('%Y%m%d-%H%M%S')}-{sanitize_filename_part(message_id)}",
-        "type": "codex_needed",
+        "id": f"codex-request-{now.strftime('%Y%m%d-%H%M%S')}-{sanitize_filename_part(message_id)}",
+        "type": "codex_request",
         "created_at": utc_iso(now),
         "sender": AGENT_ID,
         "target": "codex",
@@ -365,13 +377,13 @@ def write_codex_needed(message: Message) -> Path:
     ]
 
     stamp = now.strftime("%Y-%m-%dT%H%M%SZ")
-    path = CODEX_OUTBOX_DIR / f"{stamp}_codex-needed-{sanitize_filename_part(message_id)}.md"
+    path = CODEX_RUNTIME_INBOX_DIR / f"{stamp}_codex-request-{sanitize_filename_part(message_id)}.md"
     counter = 1
     while path.exists():
-        path = CODEX_OUTBOX_DIR / f"{path.stem}-{counter}{path.suffix}"
+        path = CODEX_RUNTIME_INBOX_DIR / f"{path.stem}-{counter}{path.suffix}"
         counter += 1
-    assert_inside(path, CODEX_OUTBOX_DIR)
-    atomic_write_text(path, render_markdown_message(frontmatter, "\n".join(body_lines)), CODEX_OUTBOX_DIR)
+    assert_inside(path, CODEX_RUNTIME_INBOX_DIR)
+    atomic_write_text(path, render_markdown_message(frontmatter, "\n".join(body_lines)), CODEX_RUNTIME_INBOX_DIR)
     return path
 
 
@@ -481,7 +493,7 @@ def record_processed(
         "status": status,
     }
     if reply_path is not None:
-        entry["reply_path"] = relative_to_body(reply_path)
+        entry["reply_path"] = audit_path(reply_path)
     if error is not None:
         entry["error"] = error
     processed["messages"][message.message_id] = entry
@@ -917,7 +929,7 @@ def process_inbox() -> int:
             record_processed(processed, message, status, reply_path=reply_path)
             clear_pending(processed, message.message_id)
             handled += 1
-            log(f"Reply written for {message.message_id}: {relative_to_body(reply_path)}")
+            log(f"Reply written for {message.message_id}: {audit_path(reply_path)}")
             save_processed(processed)
         except Exception as exc:
             log(f"Failed to process {message.message_id}: {exc}", level="ERROR")
