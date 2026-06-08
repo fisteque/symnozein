@@ -17,9 +17,10 @@ import yaml
 DEFAULT_PROJECT_ROOT = Path("/home/fiste/Noema")
 DEFAULT_REPO_ROOT = DEFAULT_PROJECT_ROOT / "symnozein"
 DEFAULT_RUNTIME_ROOT = DEFAULT_PROJECT_ROOT / "bridge"
+DEFAULT_CODEX_INBOX_ROOT = DEFAULT_PROJECT_ROOT / "codex" / "inbox"
 DEFAULT_MAX_BYTES = 64 * 1024
 STATE_RELATIVE_PATH = Path("state/codex_reader_state.json")
-OUTBOX_RELATIVE_DIR = Path("body/bridge/outbox/codex")
+OUTBOX_RELATIVE_DIR = Path("outbox/messages")
 SAFE_STUB_CLASSES = {
     "design_review",
     "documentation_review",
@@ -85,6 +86,14 @@ def atomic_write_text(path: Path, text: str) -> None:
     tmp_path = path.with_name(f".{path.name}.tmp")
     tmp_path.write_text(text, encoding="utf-8")
     tmp_path.replace(path)
+
+
+def project_relative(path: Path) -> str:
+    resolved = path.resolve()
+    project_root = DEFAULT_PROJECT_ROOT.resolve()
+    if resolved == project_root or project_root in resolved.parents:
+        return resolved.relative_to(project_root).as_posix()
+    return str(resolved)
 
 
 def load_state(state_path: Path) -> dict[str, Any]:
@@ -173,7 +182,7 @@ def message_paths(inbox_dir: Path) -> list[Path]:
 
 def inspect_message(path: Path, inbox_dir: Path, max_bytes: int) -> dict[str, Any]:
     safe_path = ensure_inside(path, inbox_dir)
-    rel_path = f"body/bridge/inbox/messages/codex/{safe_path.name}"
+    rel_path = project_relative(safe_path)
     size = safe_path.stat().st_size
     if size > max_bytes:
         return {
@@ -224,8 +233,8 @@ def state_spec(runtime_root: Path) -> dict[str, Any]:
                     "status": "stub_written|needs_human|invalid|conflict",
                     "task_class": "design_review|documentation_review|status_summary|safety_review|needs_human|invalid",
                     "read_at": "UTC ISO-8601 timestamp",
-                    "response_path": "body/bridge/outbox/codex/<file>.md or null",
-                    "source_path": "body/bridge/inbox/messages/codex/<file>.md",
+                    "response_path": "bridge/outbox/messages/<file>.md or null",
+                    "source_path": "codex/inbox/<file>.md",
                 }
             },
             "errors": [
@@ -306,11 +315,10 @@ def unique_response_path(outbox_dir: Path, message_id: str, timestamp: str) -> P
 
 def process_messages(
     messages: list[dict[str, Any]],
-    repo_root: Path,
     runtime_root: Path,
 ) -> dict[str, Any]:
     state_path = ensure_inside(runtime_root / STATE_RELATIVE_PATH, runtime_root)
-    outbox_dir = ensure_inside(repo_root / OUTBOX_RELATIVE_DIR, repo_root)
+    outbox_dir = ensure_inside(runtime_root / OUTBOX_RELATIVE_DIR, runtime_root)
     state = load_state(state_path)
     processed = state["processed"]
     errors = state["errors"]
@@ -371,8 +379,9 @@ def process_messages(
         if status in {"stub_written", "needs_human", "invalid"}:
             timestamp = read_at.replace("+00:00", "Z").replace("Z", "")
             response_path = unique_response_path(outbox_dir, message_id, timestamp)
-            response_rel_path = response_path.relative_to(repo_root).as_posix()
-            if not response_rel_path.startswith(f"{OUTBOX_RELATIVE_DIR.as_posix()}/"):
+            response_rel_path = project_relative(response_path)
+            expected_prefix = f"{project_relative(outbox_dir)}/"
+            if not response_rel_path.startswith(expected_prefix):
                 raise ValueError(f"Generated response outside allowed outbox: {response_rel_path}")
             atomic_write_text(response_path, render_stub_response(item, status, read_at))
 
@@ -399,6 +408,11 @@ def parse_args() -> argparse.Namespace:
     parser = argparse.ArgumentParser(description="Codex inbox reader.")
     parser.add_argument("--repo-root", type=Path, default=Path(os.environ.get("NOEMA_REPO_ROOT", DEFAULT_REPO_ROOT)))
     parser.add_argument(
+        "--inbox-root",
+        type=Path,
+        default=Path(os.environ.get("NOEMA_CODEX_INBOX", DEFAULT_CODEX_INBOX_ROOT)),
+    )
+    parser.add_argument(
         "--runtime-root",
         type=Path,
         default=Path(os.environ.get("NOEMA_BRIDGE_ROOT", DEFAULT_RUNTIME_ROOT)),
@@ -413,15 +427,14 @@ def main() -> int:
     args = parse_args()
     repo_root = args.repo_root.resolve()
     runtime_root = args.runtime_root.resolve()
-    body_root = ensure_inside(repo_root / "body", repo_root)
-    inbox_dir = ensure_inside(body_root / "bridge" / "inbox" / "messages" / "codex", body_root)
+    inbox_dir = ensure_inside(args.inbox_root.resolve(), DEFAULT_PROJECT_ROOT)
 
     messages = [inspect_message(path, inbox_dir, args.max_bytes) for path in message_paths(inbox_dir)]
     result = {
         "version": 1,
         "mode": "write_stub" if args.write_stub else "dry_run",
         "generated_at": utc_iso(),
-        "inbox_dir": inbox_dir.relative_to(repo_root).as_posix(),
+        "inbox_dir": project_relative(inbox_dir),
         "state_spec": state_spec(runtime_root),
         "allowed_classes": sorted(ALLOWED_CLASSES),
         "messages": messages,
@@ -434,7 +447,7 @@ def main() -> int:
     }
 
     if args.write_stub:
-        write_result = process_messages(messages, repo_root, runtime_root)
+        write_result = process_messages(messages, runtime_root)
         result["messages"] = write_result["messages"]
         result["state_path"] = write_result["state_path"]
 
@@ -445,7 +458,7 @@ def main() -> int:
     print(f"Codex inbox reader {result['mode']}: {result['inbox_dir']}")
     print(f"State path spec: {result['state_spec']['path']}")
     if args.write_stub:
-        print("Side effects: writes runtime-local state and codex outbox stubs only")
+        print("Side effects: writes runtime-local state and runtime outbox stubs only")
     else:
         print("Side effects: none")
     for item in result["messages"]:
