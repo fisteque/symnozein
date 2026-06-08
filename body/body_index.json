@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-08T19:24:06.144095Z",
+  "generated_at": "2026-06-08T19:24:37.444488Z",
   "source": {
     "script": "scripts/update_body_index.py",
     "workflow": ".github/workflows/update_body_index.yml"
@@ -974,8 +974,8 @@
     },
     {
       "path": "bridge/scripts/bridge_sync_outbound.py",
-      "size": 17980,
-      "sha256": "2a7a49f27f400457bdb945f5f049aa1c7da2f46b3df5850e8201f907db5b2759"
+      "size": 17948,
+      "sha256": "5dd268405dc1cbafc52ac69e1582126f1a8f72b46035a1fc198512dc7cc7b623"
     },
     {
       "path": "bridge/scripts/codex_inbox_reader.py",
@@ -1029,8 +1029,8 @@
     },
     {
       "path": "bridge/scripts/tasks/TASK_REQUESTS.md",
-      "size": 7095,
-      "sha256": "088d8de8ea85a528ac3da3bed81798db331b116a86241a78651127449878a559"
+      "size": 7096,
+      "sha256": "f56fdc63b14587cb68a5a709a8c1744edeb922e11233ce512e4a9ec016e1e7db"
     },
     {
       "path": "bridge/scripts/tasks/allowlist.json",
@@ -1074,8 +1074,8 @@
     },
     {
       "path": "bridge/state_summary/latest.md",
-      "size": 4544,
-      "sha256": "40978ef89af5faa20343972037a48880f2b5312b4aa9065a359f097b56754c8a"
+      "size": 4545,
+      "sha256": "2e0e611bbd2a159dc7fbad13adfea5af468b4b2dd9a28ecbb99c699c9968e7a9"
     },
     {
       "path": "bridge_protocol_v1.md",
