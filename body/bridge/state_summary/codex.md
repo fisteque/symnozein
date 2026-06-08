@@ -792,3 +792,31 @@ Added `task_request` support to the bridge agent. Tasks run only from:
 Execution is controlled by `allowlist.json`, uses `shell=False`, enforces string
 arguments, timeout, non-root execution, stdout/stderr capture, and task run
 state in local `task_runs.json`.
+
+### 13. Bridge Cycle Stale Lock Handling
+
+Investigated repeated `rpi5_cycle-error-unknown` outbox spam. Root cause was a
+systemd `TimeoutStartSec=25` kill during `inbound sync`, leaving an active
+15-minute lock with a dead PID. Subsequent 30-second timer runs treated the lock
+as active until expiry and published one error file per tick.
+
+Narrow fix applied:
+
+- `bridge_cycle_lock.py` reclaims only local bridge-cycle locks with
+  `status=active`, matching owner/host, and `pid_alive is False`.
+- Live PIDs are never overwritten.
+- `bridge_cycle.py` infers `step` from `current_step=...` in lock errors when
+  `last_step` is not set yet.
+- Lock-error dedup fingerprints ignore volatile age/progress values, so repeated
+  stale-lock reports do not create a new outbox file every timer tick.
+
+Runtime behavior intentionally unchanged outside lock/error reporting: no
+heartbeat/watchdog, timer cadence, `TimeoutStartSec`, inbox/outbox processing,
+logging cleanup, or git housekeeping changes.
+
+Published by bridge cycle as:
+
+```text
+ee4db0b Sync RPi bridge outbound state
+e882369 Sync RPi bridge outbound state
+```
