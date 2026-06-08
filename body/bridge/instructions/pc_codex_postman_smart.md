@@ -137,4 +137,4 @@ Zastav hlavně když:
 * checkout je dirty mimo očekávaný nový inbox soubor,
 * staged diff obsahuje víc než jeden soubor,
 * požadavek chce, aby PC-Codex implementoval runtime práci místo doručení zprávy,
-* fetch/rebase/push vede ke konfliktu nebo nejasnému stavu.
+* fetch/ff-only/push vede ke konfliktu nebo nejasnému stavu.
