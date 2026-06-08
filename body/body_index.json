@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-08T19:23:35.084702Z",
+  "generated_at": "2026-06-08T19:24:06.144095Z",
   "source": {
     "script": "scripts/update_body_index.py",
     "workflow": ".github/workflows/update_body_index.yml"
@@ -174,8 +174,8 @@
     },
     {
       "path": "bridge/instructions/pc_codex_postman.md",
-      "size": 10941,
-      "sha256": "d94b67e03cd6dcb9fee66133f9ff04427679ca50f6e4fdf45d53df0e4f0ec949"
+      "size": 10923,
+      "sha256": "18fde107b12085e7c8ff34414d0bbfa06c5fa3179f5ab8834d8244c3f1fd46cd"
     },
     {
       "path": "bridge/instructions/pc_codex_postman_quick.md",
@@ -1029,8 +1029,8 @@
     },
     {
       "path": "bridge/scripts/tasks/TASK_REQUESTS.md",
-      "size": 7105,
-      "sha256": "0592b23a9547fbcc5cd2b5432b2af3b2e69982058e3e8d6133fd00968ad030e7"
+      "size": 7095,
+      "sha256": "088d8de8ea85a528ac3da3bed81798db331b116a86241a78651127449878a559"
     },
     {
       "path": "bridge/scripts/tasks/allowlist.json",
@@ -1074,8 +1074,8 @@
     },
     {
       "path": "bridge/state_summary/latest.md",
-      "size": 4545,
-      "sha256": "eae5eed7cfb814ca6a513b09742430d6ca551d6f943e9611dbd1a23331977df5"
+      "size": 4544,
+      "sha256": "40978ef89af5faa20343972037a48880f2b5312b4aa9065a359f097b56754c8a"
     },
     {
       "path": "bridge_protocol_v1.md",
