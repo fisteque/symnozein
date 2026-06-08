@@ -178,8 +178,8 @@ def render_markdown_message(frontmatter: dict[str, object], body: str) -> str:
 
 
 def write_cycle_error_outbox(runtime_root: Path, repo_root: Path, error: str, step: str | None) -> Path:
-    outbox_dir = repo_root / "body" / "bridge" / "outbox" / "messages"
-    ensure_inside(outbox_dir, repo_root)
+    outbox_dir = runtime_root / "outbox" / "messages"
+    ensure_inside(outbox_dir, runtime_root)
     outbox_dir.mkdir(parents=True, exist_ok=True)
     now = utc_now()
     filename = f"{now.strftime('%Y-%m-%dT%H%M%SZ')}_rpi5_cycle-error-{sanitize_filename_part(step or 'unknown')}.md"
@@ -206,7 +206,7 @@ def write_cycle_error_outbox(runtime_root: Path, repo_root: Path, error: str, st
             f"- error: `{error}`",
         ]
     )
-    atomic_write_text(path, render_markdown_message(frontmatter, body), repo_root)
+    atomic_write_text(path, render_markdown_message(frontmatter, body), runtime_root)
     return path
 
 
