@@ -1,11 +1,11 @@
 {
-  "generated_at": "2026-06-08T18:01:48.284237Z",
+  "generated_at": "2026-06-08T18:10:32.976757Z",
   "source": {
     "script": "scripts/update_body_index.py",
     "workflow": ".github/workflows/update_body_index.yml"
   },
   "kind": "state",
-  "count": 225,
+  "count": 226,
   "files": [
     {
       "path": "Prvni_kroky.md",
@@ -156,6 +156,11 @@
       "path": "bridge/inbox/messages/codex/msg-20260605-codex-stop-bridge-tail-log-001.md",
       "size": 2646,
       "sha256": "8d6ae4171dcd00a724266ff35133fd653c46e19369127c44e9eb6dc0a6cfe632"
+    },
+    {
+      "path": "bridge/inbox/messages/codex/msg-20260608-codex-test-runtime-outbox-published-lifecycle-001.md",
+      "size": 1386,
+      "sha256": "5b31578d6486ca83f3ef04d219c3906c691143dd2d39528bcc5444137646b570"
     },
     {
       "path": "bridge/inbox/messages/msg-20260524-task-001.md",
