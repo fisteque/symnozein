@@ -15,9 +15,10 @@ import yaml
 
 
 DEFAULT_PROJECT_ROOT = Path("/home/fiste/Noema")
-DEFAULT_REPO_ROOT = DEFAULT_PROJECT_ROOT / "symnozein"
-DEFAULT_RUNTIME_ROOT = DEFAULT_PROJECT_ROOT / "bridge"
-DEFAULT_CODEX_INBOX_ROOT = DEFAULT_PROJECT_ROOT / "codex" / "inbox"
+PROJECT_ROOT = Path(os.environ.get("NOEMA_PROJECT_ROOT", DEFAULT_PROJECT_ROOT)).resolve()
+DEFAULT_REPO_ROOT = PROJECT_ROOT / "symnozein"
+DEFAULT_RUNTIME_ROOT = PROJECT_ROOT / "bridge"
+DEFAULT_CODEX_INBOX_ROOT = PROJECT_ROOT / "codex" / "inbox"
 DEFAULT_MAX_BYTES = 64 * 1024
 STATE_RELATIVE_PATH = Path("state/codex_reader_state.json")
 OUTBOX_RELATIVE_DIR = Path("outbox/messages")
@@ -90,7 +91,7 @@ def atomic_write_text(path: Path, text: str) -> None:
 
 def project_relative(path: Path) -> str:
     resolved = path.resolve()
-    project_root = DEFAULT_PROJECT_ROOT.resolve()
+    project_root = PROJECT_ROOT.resolve()
     if resolved == project_root or project_root in resolved.parents:
         return resolved.relative_to(project_root).as_posix()
     return str(resolved)
@@ -427,7 +428,7 @@ def main() -> int:
     args = parse_args()
     repo_root = args.repo_root.resolve()
     runtime_root = args.runtime_root.resolve()
-    inbox_dir = ensure_inside(args.inbox_root.resolve(), DEFAULT_PROJECT_ROOT)
+    inbox_dir = ensure_inside(args.inbox_root.resolve(), PROJECT_ROOT)
 
     messages = [inspect_message(path, inbox_dir, args.max_bytes) for path in message_paths(inbox_dir)]
     result = {
