@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-08T19:24:37.444488Z",
+  "generated_at": "2026-06-08T19:25:35.238243Z",
   "source": {
     "script": "scripts/update_body_index.py",
     "workflow": ".github/workflows/update_body_index.yml"
@@ -979,8 +979,8 @@
     },
     {
       "path": "bridge/scripts/codex_inbox_reader.py",
-      "size": 16993,
-      "sha256": "36f5ac15ce81c69726bed418b82eace0df81e698b40679486388eb1cd03b71ee"
+      "size": 17043,
+      "sha256": "6d1c1b18a2a2267d03ed963da206ca682c2bee95093e4c3fc9973cd7298b7d61"
     },
     {
       "path": "bridge/scripts/git_askpass.py",
@@ -1074,8 +1074,8 @@
     },
     {
       "path": "bridge/state_summary/latest.md",
-      "size": 4545,
-      "sha256": "2e0e611bbd2a159dc7fbad13adfea5af468b4b2dd9a28ecbb99c699c9968e7a9"
+      "size": 4284,
+      "sha256": "e086a3e8693fe71c40c2bce55379c6b1ce429557f7ea4de7eb7159a9c2cf8841"
     },
     {
       "path": "bridge_protocol_v1.md",
