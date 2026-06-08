@@ -5,6 +5,53 @@ Uchovává posledních **50** záznamů.
 
 ---
 
+## 2026-06-08T20:19:33.615983Z
+
+Zdroj změn:
+- skript: `scripts/update_body_index.py`
+- workflow: `.github/workflows/update_body_index.yml`
+
+➕ přidáno: **0**
+- nic
+
+🔄 změněno: **1**
+- `bridge/state_summary/latest.md`
+
+❌ odebráno: **31**
+- `bridge/outbox/messages/2026-05-24T195155Z_rpi5_cycle-error-outbound-sync.md`
+- `bridge/outbox/messages/2026-05-24T195601Z_rpi5_cycle-error-outbound-sync.md`
+- `bridge/outbox/messages/2026-05-24T201113Z_rpi5_cycle-error-outbound-sync.md`
+- `bridge/outbox/messages/2026-05-24T213714Z_rpi5_task-result-msg-20260524-task-001.md`
+- `bridge/outbox/messages/2026-05-24T213715Z_rpi5_cycle-error-outbound-sync.md`
+- `bridge/outbox/messages/2026-05-24T213745Z_rpi5_cycle-error-inbound-sync.md`
+- `bridge/outbox/messages/2026-05-24T223803Z_rpi5_cycle-error-outbound-sync.md`
+- `bridge/outbox/messages/2026-05-27T034224Z_rpi5_cycle-error-write-bridge-summary.md`
+- `bridge/outbox/messages/2026-05-27T080735Z_rpi5_cycle-error-outbound-sync.md`
+- `bridge/outbox/messages/2026-05-27T080735Z_rpi5_task-result-msg-20260527-task-sync-body-001.md`
+- `bridge/outbox/messages/2026-05-27T122655Z_rpi5_cycle-error-outbound-sync.md`
+- `bridge/outbox/messages/2026-05-27T125856Z_rpi5_cycle-error-outbound-sync.md`
+- `bridge/outbox/messages/2026-05-27T181736Z_rpi5_cycle-error-outbound-sync.md`
+- `bridge/outbox/messages/2026-05-27T182137Z_rpi5_cycle-error-outbound-sync.md`
+- `bridge/outbox/messages/2026-05-27T182707Z_rpi5_cycle-error-outbound-sync.md`
+- `bridge/outbox/messages/2026-05-28T163618Z_rpi5_cycle-error-outbound-sync.md`
+- `bridge/outbox/messages/2026-05-28T171314Z_rpi5_cycle-error-outbound-sync.md`
+- `bridge/outbox/messages/2026-05-28T173836Z_rpi5_cycle-error-outbound-sync.md`
+- `bridge/outbox/messages/2026-05-29T134512Z_rpi5_cycle-error-outbound-sync.md`
+- `bridge/outbox/messages/2026-06-01T155451Z_rpi5_cycle-error-outbound-sync.md`
+- `bridge/outbox/messages/2026-06-01T182147Z_rpi5_cycle-error-outbound-sync.md`
+- `bridge/outbox/messages/2026-06-03T074654Z_rpi5_state-ffd49c9ab75d.md`
+- `bridge/outbox/messages/2026-06-03T074724Z_rpi5_state-905cf306876a.md`
+- `bridge/outbox/messages/2026-06-03T214651Z_rpi5_state-201c037fed52.md`
+- `bridge/outbox/messages/2026-06-03T214721Z_rpi5_state-3f6e2e3f941f.md`
+- `bridge/outbox/messages/2026-06-03T225047Z_rpi5_state-85229c3d4e86.md`
+- `bridge/outbox/messages/2026-06-03T225217Z_rpi5_state-77425ec0e466.md`
+- `bridge/outbox/messages/2026-06-05T174359Z_rpi5_cycle-error-outbound-sync.md`
+- `bridge/outbox/messages/2026-06-05T192109Z_rpi5_cycle-error-outbound-sync.md`
+- `bridge/outbox/messages/2026-06-05T200233Z_rpi5_cycle-error-outbound-sync.md`
+- `bridge/outbox/messages/2026-06-08T184856Z_rpi5_test-runtime-outbox-lifecycle.md`
+
+---
+
 ## 2026-06-08T20:17:33.964982Z
 
 Zdroj změn:
@@ -1062,21 +1109,3 @@ Zdroj změn:
 
 ❌ odebráno: **0**
 - nic
-
----
-
-## 2026-06-05T17:44:39.934426Z
-
-Zdroj změn:
-- skript: `scripts/update_body_index.py`
-- workflow: `.github/workflows/update_body_index.yml`
-
-➕ přidáno: **1**
-- `bridge/outbox/messages/2026-06-05T174359Z_rpi5_cycle-error-outbound-sync.md`
-
-🔄 změněno: **2**
-- `bridge/scripts/bridge_sync_outbound.py`
-- `bridge/state_summary/latest.md`
-
-❌ odebráno: **1**
-- `bridge/logs/bridge_tail.log`
