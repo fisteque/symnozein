@@ -725,7 +725,7 @@ Verified:
 Added an operational anchor for known bridge limits:
 
 ```text
-body/bridge/state_summary/known_limits.md
+body/bridge/docs/known_limits.md
 ```
 
 Updated the task request guide to link that anchor before proposing new tasks or

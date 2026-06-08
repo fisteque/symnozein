@@ -128,7 +128,7 @@ without a separate implementation request and safety review.
 Before proposing a new task or input layer, read:
 
 ```text
-body/bridge/state_summary/known_limits.md
+body/bridge/docs/known_limits.md
 ```
 
 Separate Noema as the source of a request from the transport that actually
@@ -139,7 +139,7 @@ control layer.
 Do not expand the safety model for a problem that is actually a transport gap.
 Do not assume the ChatGPT GitHub connector can write until that is verified by a
 real commit. Record every implementation change in
-`body/bridge/state_summary/codex.md`.
+`body/bridge/docs/implementation_ledger.md`.
 
 ## Execution Rules
 

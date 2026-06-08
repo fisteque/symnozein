@@ -8,7 +8,7 @@ verified bridge behavior from proposals, transport gaps, and UI impressions.
 - The Raspberry Pi bridge runs through an inbox/outbox model.
 - Heartbeat and watchdog work after the last atomic write fix.
 - `body/bridge/state_summary/latest.md` is the current operational summary.
-- `body/bridge/state_summary/codex.md` is the implementation ledger.
+- `body/bridge/docs/implementation_ledger.md` is the implementation ledger.
 - A `codex_request` message can be handled by the bridge agent and can create a
   Codex response item under `body/bridge/outbox/codex/`.
 - The atomic write issue around `body_state.json` was fixed and verified.
