@@ -820,3 +820,47 @@ Published by bridge cycle as:
 ee4db0b Sync RPi bridge outbound state
 e882369 Sync RPi bridge outbound state
 ```
+
+### 14. Runtime Inbox Lifecycle
+
+Introduced a runtime-only live inbox for bridge work:
+
+```text
+/home/fiste/Noema/bridge/inbox/messages/
+```
+
+The GitHub inbox remains the audit input tape:
+
+```text
+body/bridge/inbox/messages/
+```
+
+Inbound sync now hydrates the runtime inbox copy-only from the GH mirror. It
+skips messages already recorded in `bridge/state/processed_messages.json` with
+terminal bridge-agent statuses: `ok`, `ignored`, `pending_codex`, or `error`.
+`pending` is not terminal and can be retried after a crash.
+
+The bridge agent now reads runtime inbox messages and archives processed files
+locally under:
+
+```text
+/home/fiste/Noema/bridge/inbox/processed/YYYY-MM/
+```
+
+Invalid runtime inbox messages are error-reported, recorded by sha256, and
+archived with an `invalid-` filename prefix so the live inbox does not stay
+dirty. The processed archive is runtime-local and is not mirrored or pushed.
+
+Real e2e test:
+
+- input: `body/bridge/inbox/messages/2026-06-08T194555Z_runtime-inbox-e2e-codex-request.md`
+- local Codex request: `codex/inbox/2026-06-08T194906Z_codex-request-runtime-inbox-e2e-20260608T194555Z.md`
+- archived runtime input: `bridge/inbox/processed/2026-06/2026-06-08T194555Z_runtime-inbox-e2e-codex-request.md`
+- second inbound sync rehydrated `0` files.
+
+Published across:
+
+```text
+54b1cfc Sync RPi bridge outbound state
+0b16638 Sync RPi bridge outbound state
+```
