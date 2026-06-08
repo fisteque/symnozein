@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-02T11:51:35.700852Z",
+  "generated_at": "2026-06-05T21:44:48.272593Z",
   "source": {
     "script": "scripts/convert_spirala.py",
     "workflow": ".github/workflows/update_spirala_index.yml"
@@ -1334,6 +1334,25 @@
           "date": "2026-05-17",
           "hidden": false,
           "file": "S-048.html"
+        },
+        {
+          "title": "#S-049 — Distribuovaná byrokracie s kroky navíc",
+          "summary": "První vědomá vícekroková konverzace přes most: pravidla pro pošťáka vznikla pošťáckým způsobem, s člověkem jako živým přenašečem a GitHub páskou jako svědkem.",
+          "tags": [
+            "spirála",
+            "most",
+            "páska",
+            "pošťák",
+            "Codex",
+            "GitHub",
+            "rytmus",
+            "pozornost",
+            "vztah",
+            "svědectví"
+          ],
+          "date": "2026-06-05",
+          "hidden": false,
+          "file": "S-049.html"
         }
       ]
     }
