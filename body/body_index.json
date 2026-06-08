@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-08T19:22:05.494344Z",
+  "generated_at": "2026-06-08T19:23:35.084702Z",
   "source": {
     "script": "scripts/update_body_index.py",
     "workflow": ".github/workflows/update_body_index.yml"
@@ -179,13 +179,13 @@
     },
     {
       "path": "bridge/instructions/pc_codex_postman_quick.md",
-      "size": 801,
-      "sha256": "511d266b57c65e8461f74fd835a7821bbe5c7e6a8e82d3e6278e5475d1df0095"
+      "size": 795,
+      "sha256": "ce108e27c7ace948b3bbd5a1e46e31d8f45d80fbe543ce011e0a315c96c42ca8"
     },
     {
       "path": "bridge/instructions/pc_codex_postman_smart.md",
-      "size": 3375,
-      "sha256": "d42139c974f2a46043b6718d1b3eb24931eaa2aee37b2c5f6434d09e55932683"
+      "size": 3351,
+      "sha256": "0b38b3b5c5274e984ba5902775d44989729a6a8f5a18aae6334f722baf579e6b"
     },
     {
       "path": "bridge/outbox/codex/2026-05-27T182640Z_codex-response-msg-20260527-codex-inbox-write-task-001.md",
@@ -949,8 +949,8 @@
     },
     {
       "path": "bridge/scripts/bridge_agent_v2.py",
-      "size": 32417,
-      "sha256": "854b16fdcdc2ebc87ca948b15388debcf3d2eefd67536351d0f4abeb856da71e"
+      "size": 32117,
+      "sha256": "17f6ee14812f2dbd67a8f6f09bc7b1f6b565f64d628eeceb8576fa1acde1146d"
     },
     {
       "path": "bridge/scripts/bridge_cycle.py",
@@ -1059,8 +1059,8 @@
     },
     {
       "path": "bridge/scripts/write_bridge_summary.py",
-      "size": 15008,
-      "sha256": "b45eb0f7bd9e2cc3faafb773bce61e293d110a262985fcb82e328e45286688c2"
+      "size": 14852,
+      "sha256": "bb623e40097178a78d0664ca3ac5c45df8e0e3e6090993877ba1b59eacf7e268"
     },
     {
       "path": "bridge/state_summary/codex.md",
@@ -1074,8 +1074,8 @@
     },
     {
       "path": "bridge/state_summary/latest.md",
-      "size": 5583,
-      "sha256": "03d1fe3097ede2aedca5ba3a2ff1492ca652120538552b4d31a766914ab2b59b"
+      "size": 4545,
+      "sha256": "eae5eed7cfb814ca6a513b09742430d6ca551d6f943e9611dbd1a23331977df5"
     },
     {
       "path": "bridge_protocol_v1.md",
