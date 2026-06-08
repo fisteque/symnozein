@@ -22,7 +22,7 @@ The postman must not expand a delivery request into implementation work. If a me
 
 For normal Codex message delivery, PC-Codex may create exactly one new Markdown file under:
 
-`body/bridge/inbox/messages/codex/`
+`body/bridge/inbox/messages/`
 
 No other inbox path is part of normal postman mode unless Ondra or Noema explicitly requests and confirms it.
 
@@ -90,7 +90,7 @@ If the target file already exists, PC-Codex must stop and ask Ondra. It must not
 
 5. Create exactly one new Markdown file under:
 
-   `body/bridge/inbox/messages/codex/`
+   `body/bridge/inbox/messages/`
 
 6. Fill `created_at` with the real current UTC time unless Ondra or Noema explicitly requires a fixed timestamp as part of the message content.
 
@@ -106,7 +106,7 @@ If the target file already exists, PC-Codex must stop and ask Ondra. It must not
 
 10. Stage only the new inbox message file:
 
-    `git add body/bridge/inbox/messages/codex/<filename>.md`
+    `git add body/bridge/inbox/messages/<filename>.md`
 
 11. Verify staged scope:
 

@@ -53,7 +53,7 @@ The bridge agent does not call Codex and does not execute a task. It only create
 a pending item in:
 
 ```text
-/home/fiste/Noema/symnozein/body/bridge/outbox/codex/
+/home/fiste/Noema/codex/inbox/
 ```
 
 Example:
@@ -92,7 +92,7 @@ The standalone reader lives at:
 ```
 
 Default mode is still dry-run. It scans only
-`body/bridge/inbox/messages/codex/`, validates Markdown frontmatter, computes
+`/home/fiste/Noema/codex/inbox/`, validates Markdown frontmatter, computes
 `sha256(content)`, classifies the request, and prints what it would do. Dry-run
 mode does not write `codex_response` files, does not update local state, does
 not commit, and does not push.
@@ -106,7 +106,7 @@ The optional manual writer-stub mode is:
 Writer-stub mode is not automated. It writes only:
 
 - runtime-local state at `/home/fiste/Noema/bridge/state/codex_reader_state.json`;
-- stub `codex_response` files under `body/bridge/outbox/codex/`.
+- stub `codex_response` files under `/home/fiste/Noema/bridge/outbox/messages/`.
 
 The state key is `message_id + sha256(content)`. Repeated runs do not duplicate
 the same message/hash. A repeated `message_id` with different content hash is
