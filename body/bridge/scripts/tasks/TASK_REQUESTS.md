@@ -75,7 +75,7 @@ Kontext pro Codex muze byt tady v tele zpravy.
 The generated pending item uses:
 
 ```yaml
-type: codex_needed
+type: codex_request
 target: codex
 status: pending_codex
 ```
