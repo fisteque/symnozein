@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-08T20:19:33.615983Z",
+  "generated_at": "2026-06-08T20:21:24.458420Z",
   "source": {
     "script": "scripts/update_body_index.py",
     "workflow": ".github/workflows/update_body_index.yml"
@@ -293,9 +293,9 @@
       "sha256": "60eb094aaa257f061652170638cf97993b604e3f2d037d890f15536b962e5a3a"
     },
     {
-      "path": "bridge/outbox/messages/2026-06-08T194616Z_rpi5_cycle-error-outbound-sync.md",
-      "size": 295,
-      "sha256": "ab31dda27f51f6120c27d66026c8e1cd128ca634a4a6d2da9df5de874350a83c"
+      "path": "bridge/outbox/messages/2026-06-08T184856Z_rpi5_test-runtime-outbox-lifecycle.md",
+      "size": 425,
+      "sha256": "10d8bda36e095674e30ad5e0556bc0af137d867763d525b14ed0bd74a4251c88"
     },
     {
       "path": "bridge/outbox/outbox.json",
@@ -434,8 +434,8 @@
     },
     {
       "path": "bridge/state_summary/latest.md",
-      "size": 5494,
-      "sha256": "216d66da94ec8fff36903aa152c4b8b5fa2a27f9a1f601c89a23521802103f53"
+      "size": 4314,
+      "sha256": "502792552a8d229f4f5197a9539cfa6bf68e625431c0acad1cc2461a58309b7e"
     },
     {
       "path": "bridge_protocol_v1.md",
