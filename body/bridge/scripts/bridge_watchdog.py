@@ -124,7 +124,7 @@ def sanitized_systemctl_status(unit: str) -> dict[str, str]:
     )
     status: dict[str, str] = {}
     if result.returncode != 0:
-        status["Result"] = "systemctl_unavailable"
+        status["Unavailable"] = "true"
         return status
     for line in result.stdout.splitlines():
         if "=" not in line:
@@ -221,12 +221,14 @@ def detect_incidents(
     snapshot = safe_snapshot(cycle_state, lock_state, cycle_error_state, systemd, now)
     incidents: list[dict[str, Any]] = []
 
-    timer_state = systemd.get("bridge-cycle.timer", {}).get("ActiveState")
+    timer_status = systemd.get("bridge-cycle.timer", {})
+    service_status = systemd.get("bridge-cycle.service", {})
+    timer_state = timer_status.get("ActiveState")
     if include_systemctl and timer_state and timer_state != "active":
         incidents.append({"kind": "bridge_timer_inactive", "severity": "error", "step": None})
 
-    service_result = systemd.get("bridge-cycle.service", {}).get("Result")
-    service_active = systemd.get("bridge-cycle.service", {}).get("ActiveState")
+    service_result = service_status.get("Result")
+    service_active = service_status.get("ActiveState")
     if include_systemctl and service_result not in (None, "", "success") and service_active != "active":
         incidents.append({"kind": "bridge_service_failed", "severity": "error", "step": None})
 
