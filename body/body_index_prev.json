@@ -1,11 +1,11 @@
 {
-  "generated_at": "2026-06-08T20:32:33.084376Z",
+  "generated_at": "2026-06-08T20:35:04.660446Z",
   "source": {
     "script": "scripts/update_body_index.py",
     "workflow": ".github/workflows/update_body_index.yml"
   },
   "kind": "state",
-  "count": 102,
+  "count": 101,
   "files": [
     {
       "path": "Prvni_kroky.md",
@@ -298,11 +298,6 @@
       "sha256": "10d8bda36e095674e30ad5e0556bc0af137d867763d525b14ed0bd74a4251c88"
     },
     {
-      "path": "bridge/outbox/messages/2026-06-08T203138Z_rpi5_bridge-watchdog-bridge_service_failed.md",
-      "size": 647,
-      "sha256": "f095f19e51c0e60ee83a065571e53ab7a3c3d00a6f2751f860d6293a22b93403"
-    },
-    {
       "path": "bridge/outbox/outbox.json",
       "size": 472,
       "sha256": "e20fe977adeb942811cf1d222b3056a8c561c25bbcaa297e0332f428276f9a48"
@@ -444,8 +439,8 @@
     },
     {
       "path": "bridge/state_summary/latest.md",
-      "size": 5201,
-      "sha256": "559537a7f23b4b5b44b03c40041387b6418191865a5dd58c8fa68f30106149fe"
+      "size": 5499,
+      "sha256": "9b93fa1cc62c836a41d3c7b206e5c97cb891b629714c8aa2c0529b0ff1fc333e"
     },
     {
       "path": "bridge_protocol_v1.md",
