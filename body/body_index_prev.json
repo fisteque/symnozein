@@ -1,11 +1,11 @@
 {
-  "generated_at": "2026-06-08T20:21:24.458420Z",
+  "generated_at": "2026-06-08T20:31:03.092358Z",
   "source": {
     "script": "scripts/update_body_index.py",
     "workflow": ".github/workflows/update_body_index.yml"
   },
   "kind": "state",
-  "count": 100,
+  "count": 101,
   "files": [
     {
       "path": "Prvni_kroky.md",
@@ -338,6 +338,11 @@
       "sha256": "5dd268405dc1cbafc52ac69e1582126f1a8f72b46035a1fc198512dc7cc7b623"
     },
     {
+      "path": "bridge/scripts/bridge_watchdog.py",
+      "size": 19153,
+      "sha256": "65e0d2db6c7b0ea02e3d2eb095efa79d7567de7612cb4c22e79fec0d5933fe43"
+    },
+    {
       "path": "bridge/scripts/codex_inbox_reader.py",
       "size": 17043,
       "sha256": "6d1c1b18a2a2267d03ed963da206ca682c2bee95093e4c3fc9973cd7298b7d61"
@@ -434,8 +439,8 @@
     },
     {
       "path": "bridge/state_summary/latest.md",
-      "size": 4314,
-      "sha256": "502792552a8d229f4f5197a9539cfa6bf68e625431c0acad1cc2461a58309b7e"
+      "size": 5944,
+      "sha256": "05bbcc6f68cb22167507bf1837995fd4b4ecad079130e617eb4cf62d66ce1a25"
     },
     {
       "path": "bridge_protocol_v1.md",
