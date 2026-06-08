@@ -4,6 +4,7 @@ import hashlib
 import json
 import os
 import re
+import shutil
 import subprocess
 import sys
 from dataclasses import dataclass
@@ -22,7 +23,8 @@ BODY_ROOT = Path(os.environ.get("NOEMA_BODY_ROOT", PROJECT_ROOT / "symnozein" / 
 if not BODY_ROOT.exists():
     BODY_ROOT = PROJECT_ROOT / "body"
 
-INBOX_DIR = BODY_ROOT / "bridge" / "inbox" / "messages"
+INBOX_DIR = BRIDGE_ROOT / "inbox" / "messages"
+PROCESSED_INBOX_DIR = BRIDGE_ROOT / "inbox" / "processed"
 OUTBOX_DIR = BODY_ROOT / "bridge" / "outbox" / "messages"
 CODEX_RUNTIME_INBOX_DIR = Path(os.environ.get("NOEMA_CODEX_INBOX", PROJECT_ROOT / "codex" / "inbox")).resolve()
 STATE_DIR = BRIDGE_ROOT / "state"
@@ -57,6 +59,7 @@ FORBIDDEN_TASK_SCRIPT_PATTERNS = (
     "eval(",
     "exec(",
 )
+TERMINAL_MESSAGE_STATUSES = {"ok", "ignored", "pending_codex", "error"}
 
 
 @dataclass(frozen=True)
@@ -77,6 +80,10 @@ def utc_now() -> datetime:
 
 def utc_iso(dt: datetime | None = None) -> str:
     return (dt or utc_now()).isoformat().replace("+00:00", "Z")
+
+
+def utc_month(dt: datetime | None = None) -> str:
+    return (dt or utc_now()).strftime("%Y-%m")
 
 
 def ensure_dir(path: Path) -> None:
@@ -257,7 +264,7 @@ def list_inbox_messages() -> list[Path]:
         log(f"Inbox messages directory does not exist: {INBOX_DIR}", level="WARN")
         return []
 
-    assert_inside(INBOX_DIR, BODY_ROOT)
+    assert_inside(INBOX_DIR, BRIDGE_ROOT)
     return sorted(
         (
             path
@@ -271,7 +278,7 @@ def list_inbox_messages() -> list[Path]:
 def list_observed_files(path: Path) -> list[Path]:
     if not path.exists():
         return []
-    assert_inside(path, BODY_ROOT)
+    assert_inside(path, PROJECT_ROOT)
     return sorted(
         (
             item
@@ -356,7 +363,7 @@ def write_codex_needed(message: Message) -> Path:
         "reply_to": message_id,
         "status": "pending_codex",
         "requested_by": str(message.frontmatter.get("sender") or "noema"),
-        "source_message": relative_to_body(message.path),
+        "source_message": audit_path(message.path),
     }
     body_lines = [
         "# Codex Needed",
@@ -469,7 +476,11 @@ def write_task_result(message: Message, run: dict[str, Any]) -> Path:
 
 def is_already_processed(processed: dict[str, Any], message: Message) -> bool:
     entry = processed["messages"].get(message.message_id)
-    return isinstance(entry, dict) and entry.get("sha256") == message.sha256
+    return (
+        isinstance(entry, dict)
+        and entry.get("sha256") == message.sha256
+        and entry.get("status") in TERMINAL_MESSAGE_STATUSES
+    )
 
 
 def has_conflicting_processed_id(processed: dict[str, Any], message: Message) -> bool:
@@ -485,7 +496,7 @@ def record_processed(
     error: str | None = None,
 ) -> None:
     entry: dict[str, Any] = {
-        "path": relative_to_body(message.path),
+        "path": audit_path(message.path),
         "sha256": message.sha256,
         "processed_at": utc_iso(),
         "status": status,
@@ -505,13 +516,13 @@ def record_task_run(run: dict[str, Any]) -> None:
 
 def record_pending(processed: dict[str, Any], message: Message) -> None:
     processed.setdefault("pending", {})[message.message_id] = {
-        "path": relative_to_body(message.path),
+        "path": audit_path(message.path),
         "sha256": message.sha256,
         "detected_at": utc_iso(),
         "status": "pending",
     }
     processed["messages"][message.message_id] = {
-        "path": relative_to_body(message.path),
+        "path": audit_path(message.path),
         "sha256": message.sha256,
         "processed_at": None,
         "status": "pending",
@@ -531,7 +542,7 @@ def record_error(
 ) -> dict[str, Any]:
     error_text = str(error)
     error_entry: dict[str, Any] = {
-        "path": relative_to_body(message_path),
+        "path": audit_path(message_path),
         "error": error_text,
         "error_at": utc_iso(),
     }

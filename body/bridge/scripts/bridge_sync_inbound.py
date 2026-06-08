@@ -3,7 +3,11 @@
 from __future__ import annotations
 
 import argparse
+import hashlib
+import json
+import shutil
 import sys
+from pathlib import Path
 
 from bridge_sync_common import (
     INBOX_MESSAGES,
@@ -16,6 +20,11 @@ from bridge_sync_common import (
     repo_rel,
     run_git,
 )
+
+
+RUNTIME_INBOX_MESSAGES = Path("inbox/messages")
+PROCESSED_FILE = Path("state/processed_messages.json")
+TERMINAL_AGENT_STATUSES = {"ok", "ignored", "pending_codex", "error"}
 
 
 def parse_args() -> argparse.Namespace:
@@ -69,6 +78,98 @@ def prune_empty_dirs(root) -> None:
             item.rmdir()
 
 
+def sha256_file(path: Path) -> str:
+    digest = hashlib.sha256()
+    with path.open("rb") as handle:
+        for chunk in iter(lambda: handle.read(1024 * 1024), b""):
+            digest.update(chunk)
+    return digest.hexdigest()
+
+
+def parse_message_id(path: Path) -> str | None:
+    text = path.read_text(encoding="utf-8")
+    if not text.startswith("---\n"):
+        return None
+    try:
+        frontmatter_block, _body = text[4:].split("\n---\n", 1)
+    except ValueError:
+        return None
+    try:
+        import yaml
+
+        frontmatter = yaml.safe_load(frontmatter_block) or {}
+    except Exception:
+        return None
+    if not isinstance(frontmatter, dict):
+        return None
+    message_id = frontmatter.get("id")
+    if message_id is None:
+        return None
+    return str(message_id)
+
+
+def load_processed(runtime_root: Path) -> dict:
+    path = ensure_inside(runtime_root / PROCESSED_FILE, runtime_root)
+    if not path.exists():
+        return {"version": 1, "messages": {}, "pending": {}, "errors": []}
+    with path.open("r", encoding="utf-8") as handle:
+        data = json.load(handle)
+    if not isinstance(data, dict):
+        raise SyncError(f"Invalid processed state: {path}")
+    data.setdefault("messages", {})
+    data.setdefault("pending", {})
+    data.setdefault("errors", [])
+    return data
+
+
+def is_terminal_processed(processed: dict, message_id: str | None, sha256: str) -> bool:
+    if message_id:
+        entry = processed.get("messages", {}).get(message_id)
+        if (
+            isinstance(entry, dict)
+            and entry.get("sha256") == sha256
+            and entry.get("status") in TERMINAL_AGENT_STATUSES
+        ):
+            return True
+    for error in processed.get("errors", []):
+        if isinstance(error, dict) and error.get("sha256") == sha256:
+            return True
+    return False
+
+
+def hydrate_runtime_inbox(repo_root: Path, runtime_root: Path, *, dry_run: bool) -> int:
+    mirror_root = ensure_inside(repo_root / INBOX_MESSAGES, repo_root)
+    runtime_inbox = ensure_inside(runtime_root / RUNTIME_INBOX_MESSAGES, runtime_root)
+    processed = load_processed(runtime_root)
+    if not mirror_root.exists():
+        print(f"Runtime inbox hydration skipped; mirror source missing: {mirror_root}")
+        return 0
+
+    copied = 0
+    for source in sorted(mirror_root.glob("*.md")):
+        if not source.is_file() or source.name.startswith("."):
+            continue
+        sha256 = sha256_file(source)
+        message_id = parse_message_id(source)
+        if is_terminal_processed(processed, message_id, sha256):
+            continue
+
+        target = ensure_inside(runtime_inbox / source.name, runtime_inbox)
+        if target.exists():
+            if target.read_bytes() == source.read_bytes():
+                continue
+            raise SyncError(f"Runtime inbox already has different content for {target}")
+
+        print(f"{'Would hydrate' if dry_run else 'Hydrating'} runtime inbox: {source} -> {target}")
+        if not dry_run:
+            target.parent.mkdir(parents=True, exist_ok=True)
+            shutil.copy2(source, target)
+        copied += 1
+
+    print(f"Runtime inbox hydration complete. New files: {copied}")
+    return copied
+
+
 def main() -> int:
     args = parse_args()
     try:
@@ -96,12 +197,14 @@ def main() -> int:
                 remove_stale_local_files(repo_root, stale_local_paths, dry_run=args.dry_run)
                 if not args.dry_run:
                     prune_empty_dirs(repo_root / path)
+                hydrate_runtime_inbox(repo_root, args.runtime_root.resolve(), dry_run=args.dry_run)
                 print(f"Local inbound mirror pruned under {path}.")
                 return 0
             if local_status:
                 print("Local inbound files are already present and match FETCH_HEAD:")
                 print(local_status)
             print(f"No inbound changes for {path}.")
+            hydrate_runtime_inbox(repo_root, args.runtime_root.resolve(), dry_run=args.dry_run)
             return 0
 
         print("Inbound changes detected:")
@@ -120,6 +223,7 @@ def main() -> int:
             run_git(repo_root, ["restore", "--source", "FETCH_HEAD", "--worktree", "--", path])
         prune_empty_dirs(repo_root / path)
         print(f"Updated inbound mirror to match FETCH_HEAD under {path}.")
+        hydrate_runtime_inbox(repo_root, args.runtime_root.resolve(), dry_run=False)
         return 0
     except SyncError as exc:
         print(f"ERROR: {exc}", file=sys.stderr)
