@@ -124,6 +124,36 @@ def sha256_file(path: Path) -> str:
     return digest.hexdigest()
 
 
+def unique_archive_path(archive_root: Path, filename: str, sha256: str) -> Path:
+    candidate = assert_inside(archive_root / filename, archive_root)
+    if not candidate.exists():
+        return candidate
+    suffixed = candidate.with_name(f"{candidate.stem}.{sha256[:12]}{candidate.suffix}")
+    suffixed = assert_inside(suffixed, archive_root)
+    if not suffixed.exists():
+        return suffixed
+    counter = 1
+    while True:
+        numbered = suffixed.with_name(f"{suffixed.stem}-{counter}{suffixed.suffix}")
+        numbered = assert_inside(numbered, archive_root)
+        if not numbered.exists():
+            return numbered
+        counter += 1
+
+
+def archive_runtime_inbox_message(message_path: Path, *, invalid: bool = False) -> Path | None:
+    if not message_path.exists():
+        return None
+    assert_inside(message_path, INBOX_DIR)
+    sha256 = sha256_file(message_path)
+    archive_root = assert_inside(PROCESSED_INBOX_DIR / utc_month(), BRIDGE_ROOT)
+    prefix = "invalid-" if invalid and not message_path.name.startswith("invalid-") else ""
+    target = unique_archive_path(archive_root, f"{prefix}{message_path.name}", sha256)
+    ensure_dir(target.parent)
+    shutil.move(str(message_path), str(target))
+    return target
+
+
 def parse_frontmatter_block(block: str) -> dict[str, Any]:
     data = yaml.safe_load(block) or {}
     if not isinstance(data, dict):
@@ -885,10 +915,16 @@ def process_inbox() -> int:
             report_error_outbox(event_state, error_entry)
             save_processed(processed)
             save_event_state(event_state)
+            archived_path = archive_runtime_inbox_message(message_path, invalid=True)
+            if archived_path is not None:
+                log(f"Invalid runtime inbox message archived: {audit_path(archived_path)}")
             continue
 
         if is_already_processed(processed, message):
             log(f"Already processed: {message.message_id}")
+            archived_path = archive_runtime_inbox_message(message_path)
+            if archived_path is not None:
+                log(f"Processed runtime inbox message archived: {audit_path(archived_path)}")
             continue
 
         if has_conflicting_processed_id(processed, message):
@@ -903,6 +939,9 @@ def process_inbox() -> int:
             report_error_outbox(event_state, error_entry)
             save_processed(processed)
             save_event_state(event_state)
+            archived_path = archive_runtime_inbox_message(message_path, invalid=True)
+            if archived_path is not None:
+                log(f"Rejected runtime inbox message archived: {audit_path(archived_path)}")
             continue
 
         record_pending(processed, message)
@@ -916,6 +955,9 @@ def process_inbox() -> int:
             clear_pending(processed, message.message_id)
             handled += 1
             save_processed(processed)
+            archived_path = archive_runtime_inbox_message(message_path)
+            if archived_path is not None:
+                log(f"Processed runtime inbox message archived: {audit_path(archived_path)}")
             continue
 
         try:
@@ -935,12 +977,18 @@ def process_inbox() -> int:
             handled += 1
             log(f"Reply written for {message.message_id}: {audit_path(reply_path)}")
             save_processed(processed)
+            archived_path = archive_runtime_inbox_message(message_path)
+            if archived_path is not None:
+                log(f"Processed runtime inbox message archived: {audit_path(archived_path)}")
         except Exception as exc:
             log(f"Failed to process {message.message_id}: {exc}", level="ERROR")
             error_entry = record_error(processed, message_path, exc, message=message)
             report_error_outbox(event_state, error_entry)
             save_processed(processed)
             save_event_state(event_state)
+            archived_path = archive_runtime_inbox_message(message_path)
+            if archived_path is not None:
+                log(f"Errored runtime inbox message archived: {audit_path(archived_path)}")
 
     save_processed(processed)
     save_event_state(event_state)
