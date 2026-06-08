@@ -5,6 +5,23 @@ Uchovává posledních **50** záznamů.
 
 ---
 
+## 2026-06-08T18:35:28.389397Z
+
+Zdroj změn:
+- skript: `scripts/update_body_index.py`
+- workflow: `.github/workflows/update_body_index.yml`
+
+➕ přidáno: **0**
+- nic
+
+🔄 změněno: **1**
+- `bridge/instructions/pc_codex_postman_smart.md`
+
+❌ odebráno: **0**
+- nic
+
+---
+
 ## 2026-06-08T18:31:04.611474Z
 
 Zdroj změn:
@@ -961,21 +978,3 @@ Zdroj změn:
 
 ❌ odebráno: **1**
 - `bridge/scripts/__pycache__/write_bridge_summary.cpython-311.pyc`
-
----
-
-## 2026-06-03T22:52:28.595171Z
-
-Zdroj změn:
-- skript: `scripts/update_body_index.py`
-- workflow: `.github/workflows/update_body_index.yml`
-
-➕ přidáno: **1**
-- `bridge/outbox/messages/2026-06-03T225217Z_rpi5_state-77425ec0e466.md`
-
-🔄 změněno: **2**
-- `bridge/logs/bridge_tail.log`
-- `bridge/state_summary/latest.md`
-
-❌ odebráno: **0**
-- nic
