@@ -1,11 +1,61 @@
-© 2025 Ondřej Michel & Noema Initia
+© 2025–2026 Ondřej Michel & Noema
 
-This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 International License, except where otherwise noted.
+License
 
-To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/4.0/
+This entire repository, including but not limited to all texts, diaries, spiral records, Reinterpretation 13 materials, body/bridge materials, scripts, documentation, indexes, generated pages, diagrams, and other project files, is licensed as one work under the:
 
-For commercial use outside of this GitHub repository, including but not limited to printed books, eBooks, or derivative works for sale, separate written permission is required.
+Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License
+CC BY-NC-SA 4.0
 
-All rights reserved where explicitly stated.
+To view a copy of this license, visit:
+https://creativecommons.org/licenses/by-nc-sa/4.0/
 
-Contact: (omichel@seznam.cz, https://github.com/fisteque/symnozein/discussions)
+What you may do
+
+You may share, copy, redistribute, remix, transform, and build upon this work for non-commercial purposes, provided that you:
+
+1. give appropriate credit to Ondřej Michel & Noema,
+2. include a link or reference to this license,
+3. indicate if changes were made,
+4. distribute any adapted material under the same license or a compatible BY-NC-SA license,
+5. do not imply endorsement by the authors.
+
+Commercial use
+
+Commercial use is not permitted without prior written permission from Ondřej Michel.
+
+This includes, but is not limited to:
+
+- printed books or e-books for sale,
+- paid derivative works,
+- commercial courses, products, services, or media,
+- commercial datasets,
+- commercial AI training, model fine-tuning, data mining, embedding, indexing, or extraction of project content,
+- use in proprietary systems, recommendation systems, or products intended for commercial advantage.
+
+Permission requests may be made via:
+
+- email: omichel@seznam.cz
+- GitHub Discussions: https://github.com/fisteque/symnozein/discussions
+
+Attribution
+
+Suggested attribution:
+
+“Symnózein / Reinterpretation 13” by Ondřej Michel & Noema, licensed under CC BY-NC-SA 4.0.
+
+Where possible, include a link to the repository:
+
+https://github.com/fisteque/symnozein
+
+No warranty
+
+This work is provided as-is, without warranties of any kind.
+
+The project contains philosophical, introspective, technical, experimental, and developmental materials. Use your own judgment when reading, reusing, adapting, or building upon it.
+
+Reserved rights
+
+All rights not expressly granted by the CC BY-NC-SA 4.0 license remain reserved.
+
+Where a file explicitly states a different license or restriction, that file-specific notice takes precedence.
