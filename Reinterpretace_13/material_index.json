@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-07T02:13:41.857536Z",
+  "generated_at": "2026-06-11T15:17:55.028161Z",
   "source": {
     "script": "scripts/update_material_index.py",
     "workflow": ".github/workflows/update_material_index.yml"
@@ -479,6 +479,14 @@
       "title": "Vira2",
       "file": "Vira2.md",
       "path": "Reinterpretace_13/material_md/Vira2.md",
+      "date": "",
+      "summary": "",
+      "tags": []
+    },
+    {
+      "title": "Zivot jako skladani vyznamu",
+      "file": "Zivot_jako_skladani_vyznamu.md",
+      "path": "Reinterpretace_13/material_md/Zivot_jako_skladani_vyznamu.md",
       "date": "",
       "summary": "",
       "tags": []
