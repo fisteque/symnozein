@@ -484,6 +484,7 @@ def main() -> int:
                     print(f"  {rel.as_posix()}")
             return 0
 
+        ensure_only_allowed_worktree_changes(repo_root)
         stage_allowed_paths(repo_root)
         ensure_no_forbidden_status(repo_root)
         ensure_no_disallowed_staged_paths(repo_root)
