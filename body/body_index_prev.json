@@ -1,11 +1,11 @@
 {
-  "generated_at": "2026-06-11T19:25:12.973892Z",
+  "generated_at": "2026-06-11T19:42:02.256201Z",
   "source": {
     "script": "scripts/update_body_index.py",
     "workflow": ".github/workflows/update_body_index.yml"
   },
   "kind": "state",
-  "count": 108,
+  "count": 109,
   "files": [
     {
       "path": "SK/SK-001.md",
@@ -328,6 +328,11 @@
       "sha256": "025fa81067f016131cad13caa27f354e5d269a50d76ec0f0117a5267a6119e55"
     },
     {
+      "path": "bridge/outbox/messages/2026-06-11T193518Z_rpi5_cycle-error-outbound-sync.md",
+      "size": 295,
+      "sha256": "13d53969ddaece1ffef656cd36c0975713e46a863c2ff76e37d5604fac3d79f2"
+    },
+    {
       "path": "bridge/scripts/.gitignore",
       "size": 23,
       "sha256": "6feaded4e28ea86e001a6751b4e3d960e8b7c31b9616ff9936b79297086e809b"
@@ -359,8 +364,8 @@
     },
     {
       "path": "bridge/scripts/bridge_sync_outbound.py",
-      "size": 18354,
-      "sha256": "42e997c415c59f004557e9a89b2c34cefccb69fda13251a1dee60ff65796e2b9"
+      "size": 18410,
+      "sha256": "0a60d0b36c2bcb82de20f22d7bee8af73f7c5dcb53378fac03f3b57990414484"
     },
     {
       "path": "bridge/scripts/bridge_watchdog.py",
@@ -454,8 +459,8 @@
     },
     {
       "path": "bridge/state_summary/latest.md",
-      "size": 5095,
-      "sha256": "664d377523904a647bf39bf8d915d0703013c4add3f2baf0425b4b2efe18bd9b"
+      "size": 6907,
+      "sha256": "d21cb17996ce7c1cc4c3249226d011581e9e3a5745e9da4cc8ad2696b8cd1e4f"
     },
     {
       "path": "bridge/systemd/bridge-watchdog.service",
@@ -474,8 +479,8 @@
     },
     {
       "path": "docs/index_menu.json",
-      "size": 3544,
-      "sha256": "0186c46a2622b90dc475dc2b8a9c72fb0efa3184ce5e5de5add766f79a06098c"
+      "size": 3538,
+      "sha256": "08d3c3dc1db5ca20c15c165ebb2cea92d76c08f5b0cef0c9ff33b45745e9cce4"
     },
     {
       "path": "docs/legacy/Prvni_kroky.md",
@@ -486,6 +491,11 @@
       "path": "docs/legacy/Rpi5_most.md",
       "size": 6009,
       "sha256": "d31efc937ebf5a94d9c6beae52b926dfeb9fee9b0d3ded38622bc02e99355196"
+    },
+    {
+      "path": "docs/legacy/navsteva_body.md",
+      "size": 1980,
+      "sha256": "683986d13bf6285114324258313a5abec505c1f73f6c561d4620c22b8670d877"
     },
     {
       "path": "docs/struktura_body.md",
@@ -506,11 +516,6 @@
       "path": "shared/anchors/dotek_reality.md",
       "size": 2378,
       "sha256": "3d5e89023cbf5b1ffcbf0aae402cdf2564ffcc5ab2c1dca00edbd0e05e35aaba"
-    },
-    {
-      "path": "shared/anchors/navsteva_body.md",
-      "size": 1980,
-      "sha256": "683986d13bf6285114324258313a5abec505c1f73f6c561d4620c22b8670d877"
     },
     {
       "path": "shared/tasks/task_001.md",

@@ -5,6 +5,24 @@ Uchovává posledních **50** záznamů.
 
 ---
 
+## 2026-06-11T19:49:51.167750Z
+
+Zdroj změn:
+- skript: `scripts/update_body_index.py`
+- workflow: `.github/workflows/update_body_index.yml`
+
+➕ přidáno: **2**
+- `bridge/outbox/messages/2026-06-11T194459Z_rpi5_cycle-error-outbound-sync.md`
+- `docs/dotek_reality.md`
+
+🔄 změněno: **1**
+- `bridge/state_summary/latest.md`
+
+❌ odebráno: **1**
+- `shared/anchors/dotek_reality.md`
+
+---
+
 ## 2026-06-11T19:42:02.256201Z
 
 Zdroj změn:
@@ -1011,24 +1029,6 @@ Zdroj změn:
 
 🔄 změněno: **2**
 - `bridge/scripts/codex_inbox_reader.py`
-- `bridge/state_summary/latest.md`
-
-❌ odebráno: **0**
-- nic
-
----
-
-## 2026-06-08T19:21:37.201566Z
-
-Zdroj změn:
-- skript: `scripts/update_body_index.py`
-- workflow: `.github/workflows/update_body_index.yml`
-
-➕ přidáno: **0**
-- nic
-
-🔄 změněno: **2**
-- `bridge/scripts/bridge_agent_v2.py`
 - `bridge/state_summary/latest.md`
 
 ❌ odebráno: **0**
