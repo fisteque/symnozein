@@ -8,6 +8,36 @@ messages. Keep the newest items at the top.
 
 ## Latest Implementations
 
+### Codex Autoreply Worker Stub Phase
+
+Added a narrow local worker:
+
+```text
+bridge/scripts/codex_autoreply_worker.py
+```
+
+The worker is the first safe step toward processing a filled Codex inbox without
+requiring an interactive Codex session. It processes exactly one request per run
+from:
+
+```text
+/home/fiste/Noema/codex/inbox/
+```
+
+First phase behavior:
+
+- dry-run by default;
+- `--write-stub` writes one `codex_response` Markdown file to
+  `bridge/outbox/messages/`;
+- archives the source request to `/home/fiste/Noema/codex/processed/YYYY-MM/`
+  only after the outbox write succeeds;
+- records runtime-local state in `bridge/state/codex_autoreply_state.json`;
+- does not call a model, commit, push, restart services, or process multiple
+  requests in one run.
+
+This keeps automatic Codex response wiring auditable while avoiding a new broad
+agent or hidden runtime autonomy.
+
 ### Bridge Documentation And Systemd Mirror Cleanup
 
 Updated the bridge mirror and documentation after the body docs cleanup.

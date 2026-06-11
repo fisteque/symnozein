@@ -188,6 +188,32 @@ Reader state is runtime-local:
 bridge/state/codex_reader_state.json
 ```
 
+### `codex_autoreply_worker.py`
+
+Processes exactly one local Codex inbox request per run:
+
+```text
+/home/fiste/Noema/codex/inbox/
+```
+
+First phase mode does not call Codex automatically. It supports:
+
+- dry-run inspection by default;
+- `--write-stub` to write one `codex_response` stub into
+  `bridge/outbox/messages/`;
+- archival of the source request into
+  `/home/fiste/Noema/codex/processed/YYYY-MM/` only after the outbox response is
+  written successfully.
+
+Worker state is runtime-local:
+
+```text
+bridge/state/codex_autoreply_state.json
+```
+
+It does not commit, push, start services, or process more than one request per
+run.
+
 ## Summary And Watchdog
 
 ### `write_bridge_summary.py`
