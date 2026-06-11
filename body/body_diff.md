@@ -5,6 +5,31 @@ Uchovává posledních **50** záznamů.
 
 ---
 
+## 2026-06-11T19:54:26.394054Z
+
+Zdroj změn:
+- skript: `scripts/update_body_index.py`
+- workflow: `.github/workflows/update_body_index.yml`
+
+➕ přidáno: **0**
+- nic
+
+🔄 změněno: **2**
+- `bridge/scripts/bridge_sync_outbound.py`
+- `bridge/state_summary/latest.md`
+
+❌ odebráno: **8**
+- `shared/anchors/anchors.md`
+- `shared/tasks/task_001.md`
+- `shared/tasks/task_002.md`
+- `shared/tasks/task_003.md`
+- `shared/tasks/task_004.md`
+- `shared/tasks/task_005.md`
+- `shared/tasks/task_006.md`
+- `shared/tasks/task_sprcha.md`
+
+---
+
 ## 2026-06-11T19:51:56.469799Z
 
 Zdroj změn:
@@ -1008,27 +1033,6 @@ Zdroj změn:
 🔄 změněno: **3**
 - `bridge/instructions/pc_codex_postman.md`
 - `bridge/scripts/tasks/TASK_REQUESTS.md`
-- `bridge/state_summary/latest.md`
-
-❌ odebráno: **0**
-- nic
-
----
-
-## 2026-06-08T19:23:35.084702Z
-
-Zdroj změn:
-- skript: `scripts/update_body_index.py`
-- workflow: `.github/workflows/update_body_index.yml`
-
-➕ přidáno: **0**
-- nic
-
-🔄 změněno: **5**
-- `bridge/instructions/pc_codex_postman_quick.md`
-- `bridge/instructions/pc_codex_postman_smart.md`
-- `bridge/scripts/bridge_agent_v2.py`
-- `bridge/scripts/write_bridge_summary.py`
 - `bridge/state_summary/latest.md`
 
 ❌ odebráno: **0**

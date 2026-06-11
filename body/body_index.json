@@ -1,11 +1,11 @@
 {
-  "generated_at": "2026-06-11T19:51:56.469799Z",
+  "generated_at": "2026-06-11T19:54:26.394054Z",
   "source": {
     "script": "scripts/update_body_index.py",
     "workflow": ".github/workflows/update_body_index.yml"
   },
   "kind": "state",
-  "count": 110,
+  "count": 102,
   "files": [
     {
       "path": "SK/SK-001.md",
@@ -369,8 +369,8 @@
     },
     {
       "path": "bridge/scripts/bridge_sync_outbound.py",
-      "size": 18410,
-      "sha256": "0a60d0b36c2bcb82de20f22d7bee8af73f7c5dcb53378fac03f3b57990414484"
+      "size": 19406,
+      "sha256": "a17324cd4ebe40c64a9de4b384075e825d22019965ed648f4a07e94d1973a10b"
     },
     {
       "path": "bridge/scripts/bridge_watchdog.py",
@@ -464,8 +464,8 @@
     },
     {
       "path": "bridge/state_summary/latest.md",
-      "size": 5253,
-      "sha256": "1f6948f9b2841fb90cb8a11b4f53810ee0303f84a8315ef23b9410ce816e7caf"
+      "size": 5623,
+      "sha256": "de7fbd80760889373c2628bb1a29b3dca3dc32b4a01f4f1950dc32f08ee5e330"
     },
     {
       "path": "bridge/systemd/bridge-watchdog.service",
@@ -516,46 +516,6 @@
       "path": "navsteva/navsteva.log",
       "size": 9430,
       "sha256": "a141253a843bad8091d8bfef7606d63d449977eb84d6f834afc90099f13cbf0e"
-    },
-    {
-      "path": "shared/anchors/anchors.md",
-      "size": 290,
-      "sha256": "4729a834a722993f15bf31956afecef895ffd32185170aaa84b1544c02f5424d"
-    },
-    {
-      "path": "shared/tasks/task_001.md",
-      "size": 93,
-      "sha256": "5524be4d52935a931d2ab726b3ffcf9288b32eacfe617c55ac5957a492459bf9"
-    },
-    {
-      "path": "shared/tasks/task_002.md",
-      "size": 93,
-      "sha256": "ba5ac65f1d043f67d03cbe5376eb219bf3fa439c39e498b0aa60503fd46d567d"
-    },
-    {
-      "path": "shared/tasks/task_003.md",
-      "size": 99,
-      "sha256": "541d256663df8927fcb5118338ca385a8c450c5482bf1707cfb2f737c4974487"
-    },
-    {
-      "path": "shared/tasks/task_004.md",
-      "size": 67,
-      "sha256": "0fe837428174815e2cafaefbad54005eaee756d7316d07910bf53813567313a5"
-    },
-    {
-      "path": "shared/tasks/task_005.md",
-      "size": 58,
-      "sha256": "45d082229a91a83705c7a1d7501f7d54c2a317cfa02b0167fd53266df19ac729"
-    },
-    {
-      "path": "shared/tasks/task_006.md",
-      "size": 49,
-      "sha256": "1efb5d3bacf4d18ebcf1c0606f77eff3bcec59320f52e90deb5892588662ed7a"
-    },
-    {
-      "path": "shared/tasks/task_sprcha.md",
-      "size": 381,
-      "sha256": "d7471504c27a9f54d7065834d8be03d3e5c6948a3a1461e2975967507574366f"
     }
   ]
 }
