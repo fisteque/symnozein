@@ -5,6 +5,27 @@ Uchovává posledních **50** záznamů.
 
 ---
 
+## 2026-06-11T19:14:39.036162Z
+
+Zdroj změn:
+- skript: `scripts/update_body_index.py`
+- workflow: `.github/workflows/update_body_index.yml`
+
+➕ přidáno: **3**
+- `bridge/outbox/messages/2026-06-11T191325Z_rpi5_cycle-error-outbound-sync.md`
+- `docs/index_menu.json`
+- `docs/struktura_body.md`
+
+🔄 změněno: **2**
+- `bridge/scripts/bridge_sync_outbound.py`
+- `bridge/state_summary/latest.md`
+
+❌ odebráno: **2**
+- `index_menu.json`
+- `struktura_body.md`
+
+---
+
 ## 2026-06-11T19:03:04.636629Z
 
 Zdroj změn:
@@ -999,23 +1020,6 @@ Zdroj změn:
 
 ➕ přidáno: **1**
 - `bridge/instructions/pc_codex_postman_smart.md`
-
-🔄 změněno: **0**
-- nic
-
-❌ odebráno: **0**
-- nic
-
----
-
-## 2026-06-08T18:10:32.976757Z
-
-Zdroj změn:
-- skript: `scripts/update_body_index.py`
-- workflow: `.github/workflows/update_body_index.yml`
-
-➕ přidáno: **1**
-- `bridge/inbox/messages/codex/msg-20260608-codex-test-runtime-outbox-published-lifecycle-001.md`
 
 🔄 změněno: **0**
 - nic
