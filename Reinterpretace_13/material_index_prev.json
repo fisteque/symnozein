@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-11T16:49:06.915279Z",
+  "generated_at": "2026-06-11T22:06:26.467155Z",
   "source": {
     "script": "scripts/update_material_index.py",
     "workflow": ".github/workflows/update_material_index.yml"
@@ -439,6 +439,14 @@
       "title": "Test3",
       "file": "Test3.md",
       "path": "Reinterpretace_13/material_md/Test3.md",
+      "date": "",
+      "summary": "",
+      "tags": []
+    },
+    {
+      "title": "Toroid nul",
+      "file": "Toroid_nul.md",
+      "path": "Reinterpretace_13/material_md/Toroid_nul.md",
       "date": "",
       "summary": "",
       "tags": []
