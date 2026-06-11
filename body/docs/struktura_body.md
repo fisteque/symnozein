@@ -254,21 +254,15 @@ Jde o:
 
 ---
 
-# Shared
+# Přesunuté legacy vrstvy
 
-## body/shared/
+Dřívější `body/shared/` bylo vyklizeno z aktivního stromu.
 
-Sdílené vrstvy mezi:
-- runtime,
-- bridge,
-- návštěvou,
-- a dalšími částmi systému.
+Živé orientační dokumenty jsou teď pod:
+- `body/docs/`
 
-Může obsahovat:
-- anchors,
-- protokoly,
-- společné konfigurace,
-- orientační vrstvy.
+Starší orientační a historické soubory jsou pod:
+- `body/docs/legacy/`
 
 ---
 
