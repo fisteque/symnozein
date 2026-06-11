@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-11T19:22:43.867462Z",
+  "generated_at": "2026-06-11T19:23:09.231147Z",
   "source": {
     "script": "scripts/update_body_index.py",
     "workflow": ".github/workflows/update_body_index.yml"
@@ -454,8 +454,8 @@
     },
     {
       "path": "bridge/state_summary/latest.md",
-      "size": 5955,
-      "sha256": "3b20fa24f342e8949f93bb7bcd66164bbd76e4fbba875abc2869a0c7899a2f68"
+      "size": 5512,
+      "sha256": "cd46a470e3c907854f95238a267cfa57207092d32bbcf210e950c6e7fed34b13"
     },
     {
       "path": "bridge/systemd/bridge-watchdog.service",
@@ -466,6 +466,11 @@
       "path": "bridge/systemd/bridge-watchdog.timer",
       "size": 200,
       "sha256": "bf9b19b37c8c9d47655ee5781f78f0a5c25a3aa21335a082e8b0d2a5618d6827"
+    },
+    {
+      "path": "docs/Rpi5_most.md",
+      "size": 6009,
+      "sha256": "d31efc937ebf5a94d9c6beae52b926dfeb9fee9b0d3ded38622bc02e99355196"
     },
     {
       "path": "docs/bridge_protocol_v1.md",
@@ -481,11 +486,6 @@
       "path": "docs/legacy/Prvni_kroky.md",
       "size": 2067,
       "sha256": "a64f2a0faa0bd9816711902d8de0d84e1723c45163fe5b33c756e38597d5356a"
-    },
-    {
-      "path": "docs/legacy/Rpi5_most.md",
-      "size": 6009,
-      "sha256": "d31efc937ebf5a94d9c6beae52b926dfeb9fee9b0d3ded38622bc02e99355196"
     },
     {
       "path": "docs/struktura_body.md",
