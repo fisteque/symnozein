@@ -33,8 +33,8 @@ Důležité soubory:
 
 - `body/body_index.json`
 - `body/body_diff.md`
-- `body/index_menu.json`
-- `body/struktura_body.md`
+- `body/docs/index_menu.json`
+- `body/docs/struktura_body.md`
 
 ---
 

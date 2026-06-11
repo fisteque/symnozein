@@ -1,7 +1,7 @@
 {
   "source": "manual",
   "description": "Rozcestník indexů a orientačních vrstev systému body.",
-  "structure_path": "body/struktura_body.md",
+  "structure_path": "body/docs/struktura_body.md",
 
   "kind_description": {
     "state": "stavová vrstva systému (co existuje právě teď)",
