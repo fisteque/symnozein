@@ -8,6 +8,7 @@ import json
 import os
 import re
 import shutil
+import subprocess
 from datetime import UTC, datetime
 from pathlib import Path
 from typing import Any
@@ -23,6 +24,7 @@ DEFAULT_CODEX_PROCESSED_ROOT = PROJECT_ROOT / "codex" / "processed"
 STATE_RELATIVE_PATH = Path("state/codex_autoreply_state.json")
 OUTBOX_RELATIVE_DIR = Path("outbox/messages")
 MAX_BYTES = 64 * 1024
+MAX_CODEX_RESPONSE_BYTES = 128 * 1024
 REQUIRED_FIELDS = {"id", "type", "created_at", "sender", "target"}
 VALID_TARGETS = {"codex"}
 RISKY_TERMS = (
@@ -210,10 +212,9 @@ def response_path(outbox_dir: Path, message_id: str, now: datetime) -> Path:
     return candidate
 
 
-def render_stub_response(request: dict[str, Any], now: datetime) -> str:
+def response_frontmatter(request: dict[str, Any], now: datetime, *, status: str, mode: str) -> dict[str, Any]:
     message_id = str(request["message_id"])
-    status = str(request["status"])
-    frontmatter = {
+    return {
         "id": f"codex-autoreply-{now.strftime('%Y%m%d-%H%M%S')}-{slug(message_id)}",
         "type": "codex_response",
         "created_at": utc_iso(now),
@@ -223,8 +224,14 @@ def render_stub_response(request: dict[str, Any], now: datetime) -> str:
         "status": status,
         "source_path": request["path_rel"],
         "source_sha256": request["sha256"],
-        "mode": "stub",
+        "mode": mode,
     }
+
+
+def render_stub_response(request: dict[str, Any], now: datetime) -> str:
+    message_id = str(request["message_id"])
+    status = str(request["status"])
+    frontmatter = response_frontmatter(request, now, status=status, mode="stub")
     if status == "stub_written":
         body = [
             f"Codex request `{message_id}` was received by the autoreply worker.",
@@ -241,6 +248,108 @@ def render_stub_response(request: dict[str, Any], now: datetime) -> str:
             "",
             f"Reason: `{request['reason']}`",
         ]
+    return render_markdown(frontmatter, "\n".join(body))
+
+
+def codex_prompt(request: dict[str, Any]) -> str:
+    frontmatter = request["frontmatter"]
+    body = str(request["body"]).strip()
+    return "\n".join(
+        [
+            "You are Codex running as a constrained Noema bridge autoreply worker.",
+            "",
+            "Task:",
+            "- Answer the single codex_request below.",
+            "- Do not edit files.",
+            "- Do not run commands.",
+            "- Do not commit, push, delete, install, restart services, or change runtime state.",
+            "- Return only the answer text that should be delivered to Noema.",
+            "- Keep the answer concise and audit-friendly.",
+            "",
+            "Request frontmatter:",
+            "```yaml",
+            yaml.safe_dump(frontmatter, allow_unicode=True, sort_keys=False).strip(),
+            "```",
+            "",
+            "Request body:",
+            "```markdown",
+            body or "(empty)",
+            "```",
+        ]
+    )
+
+
+def run_codex_exec(
+    request: dict[str, Any],
+    runtime_root: Path,
+    *,
+    codex_bin: str,
+    model: str | None,
+    timeout_seconds: int,
+) -> str:
+    state_dir = ensure_inside(runtime_root / "state", runtime_root)
+    state_dir.mkdir(parents=True, exist_ok=True)
+    output_path = ensure_inside(
+        state_dir / f".codex-autoreply-output-{os.getpid()}-{slug(str(request['message_id']), 32)}.md",
+        runtime_root,
+    )
+    prompt = codex_prompt(request)
+    cmd = [
+        codex_bin,
+        "exec",
+        "--sandbox",
+        "read-only",
+        "--ask-for-approval",
+        "never",
+        "--cd",
+        str(PROJECT_ROOT),
+        "--output-last-message",
+        str(output_path),
+    ]
+    if model:
+        cmd.extend(["--model", model])
+    cmd.append("-")
+    try:
+        result = subprocess.run(
+            cmd,
+            input=prompt,
+            text=True,
+            stdout=subprocess.PIPE,
+            stderr=subprocess.PIPE,
+            timeout=timeout_seconds,
+            check=False,
+        )
+        if result.returncode != 0:
+            detail = (result.stderr or result.stdout or "").strip()
+            raise WorkerError(f"codex_exec_failed:{result.returncode}: {detail[:1000]}")
+        if not output_path.exists():
+            raise WorkerError("codex_exec_missing_output")
+        response_bytes = output_path.read_bytes()
+        if len(response_bytes) > MAX_CODEX_RESPONSE_BYTES:
+            raise WorkerError(f"codex_response_too_large:{len(response_bytes)}>{MAX_CODEX_RESPONSE_BYTES}")
+        response = response_bytes.decode("utf-8").strip()
+        if not response:
+            raise WorkerError("codex_response_empty")
+        return response
+    except subprocess.TimeoutExpired as exc:
+        raise WorkerError(f"codex_exec_timeout:{timeout_seconds}") from exc
+    finally:
+        try:
+            output_path.unlink()
+        except FileNotFoundError:
+            pass
+
+
+def render_codex_response(request: dict[str, Any], now: datetime, answer: str) -> str:
+    frontmatter = response_frontmatter(request, now, status="answered", mode="codex_exec")
+    body = [
+        answer.strip(),
+        "",
+        "---",
+        "",
+        f"source_request: `{request['message_id']}`",
+        f"source_sha256: `{request['sha256']}`",
+    ]
     return render_markdown(frontmatter, "\n".join(body))
 
 
@@ -271,6 +380,11 @@ def process_once(
     processed_root: Path,
     *,
     write_stub: bool,
+    run_codex: bool,
+    allow_needs_human: bool,
+    codex_bin: str,
+    model: str | None,
+    timeout_seconds: int,
 ) -> dict[str, Any]:
     now = utc_now()
     state_path = ensure_inside(runtime_root / STATE_RELATIVE_PATH, runtime_root)
@@ -293,7 +407,7 @@ def process_once(
     if existing and existing.get("sha256") != request["sha256"]:
         raise WorkerError("message_id_sha256_conflict")
 
-    if not write_stub:
+    if not write_stub and not run_codex:
         return {
             "status": "would_process",
             "message_id": message_id,
@@ -304,18 +418,35 @@ def process_once(
         }
 
     outbox_path = response_path(outbox_dir, message_id, now)
-    atomic_write_text(outbox_path, render_stub_response(request, now), outbox_dir)
+    mode = "stub"
+    final_status = request["status"]
+    if run_codex:
+        if request["status"] == "needs_human" and not allow_needs_human:
+            raise WorkerError("request_needs_human; rerun with --allow-needs-human after review")
+        answer = run_codex_exec(
+            request,
+            runtime_root,
+            codex_bin=codex_bin,
+            model=model,
+            timeout_seconds=timeout_seconds,
+        )
+        rendered = render_codex_response(request, now, answer)
+        mode = "codex_exec"
+        final_status = "answered"
+    else:
+        rendered = render_stub_response(request, now)
+    atomic_write_text(outbox_path, rendered, outbox_dir)
     archive_path = archive_request(request, processed_root, now)
     entry = {
         "message_id": message_id,
         "sha256": request["sha256"],
-        "status": request["status"],
+        "status": final_status,
         "reason": request["reason"],
         "processed_at": utc_iso(now),
         "source_path": request["path_rel"],
         "response_path": project_relative(outbox_path),
         "archive_path": project_relative(archive_path),
-        "mode": "stub",
+        "mode": mode,
     }
     state["processed"][message_id] = entry
     save_json(state_path, state, runtime_root)
@@ -333,6 +464,11 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument("--runtime-root", type=Path, default=Path(os.environ.get("NOEMA_BRIDGE_ROOT", DEFAULT_RUNTIME_ROOT)))
     parser.add_argument("--file", type=Path, help="Process a specific inbox file. Relative paths are resolved inside inbox-root.")
     parser.add_argument("--write-stub", action="store_true", help="Write one stub response and archive the request.")
+    parser.add_argument("--run-codex", action="store_true", help="Run codex exec read-only and write its final answer.")
+    parser.add_argument("--allow-needs-human", action="store_true", help="Allow codex exec for requests classified as needs_human.")
+    parser.add_argument("--codex-bin", default=os.environ.get("NOEMA_CODEX_BIN", "codex"))
+    parser.add_argument("--model", default=os.environ.get("NOEMA_CODEX_MODEL"))
+    parser.add_argument("--timeout-seconds", type=int, default=int(os.environ.get("NOEMA_CODEX_TIMEOUT_SECONDS", "300")))
     parser.add_argument("--json", action="store_true", help="Emit machine-readable JSON.")
     return parser.parse_args()
 
@@ -343,11 +479,23 @@ def main() -> int:
     runtime_root = args.runtime_root.resolve()
     processed_root = args.processed_root.resolve()
     try:
+        if args.write_stub and args.run_codex:
+            raise WorkerError("--write-stub and --run-codex are mutually exclusive")
         request = select_one_request(inbox_dir, args.file)
-        result = process_once(request, runtime_root, processed_root, write_stub=args.write_stub)
+        result = process_once(
+            request,
+            runtime_root,
+            processed_root,
+            write_stub=args.write_stub,
+            run_codex=args.run_codex,
+            allow_needs_human=args.allow_needs_human,
+            codex_bin=args.codex_bin,
+            model=args.model,
+            timeout_seconds=args.timeout_seconds,
+        )
         output = {
             "version": 1,
-            "mode": "write_stub" if args.write_stub else "dry_run",
+            "mode": "run_codex" if args.run_codex else ("write_stub" if args.write_stub else "dry_run"),
             "generated_at": utc_iso(),
             "request": {
                 "path": request["path_rel"],
@@ -358,8 +506,8 @@ def main() -> int:
             },
             "result": result,
             "side_effects": {
-                "writes_outbox": bool(args.write_stub),
-                "archives_request": bool(args.write_stub),
+                "writes_outbox": bool(args.write_stub or args.run_codex),
+                "archives_request": bool(args.write_stub or args.run_codex),
                 "commits": False,
                 "pushes": False,
             },
