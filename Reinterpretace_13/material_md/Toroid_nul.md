@@ -34,3 +34,8 @@ A když přestane vědomí,
 není kdo by řekl, co bylo mimo rytmus.
 
 Dokud se dějeme, svět ještě neřekl poslední slovo.
+
+temná energie = proud nul vracených Tokem k dispozici Tiku
+bílá díra = čistě nulový střed toroidu
+nekonečno = ne v prostoru, ale v pokračování cyklů změny
+smrskávání ≠ čas pozpátku
