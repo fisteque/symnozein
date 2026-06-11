@@ -56,9 +56,11 @@
         "outbox": "body/bridge/outbox/messages/",
         "logs": "body/bridge/logs/",
         "docs": "body/bridge/docs/",
+        "systemd": "body/bridge/systemd/",
         "summary": "body/bridge/state_summary/",
         "scripts": "body/bridge/scripts/",
-        "tasks": "body/bridge/scripts/tasks/"
+        "tasks": "body/bridge/scripts/tasks/",
+        "local_incidents": "/home/fiste/Noema/bridge/incidents/"
       }
     },
 

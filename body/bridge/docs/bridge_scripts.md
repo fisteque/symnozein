@@ -12,6 +12,18 @@ Runtime source lives on the RPi under:
 /home/fiste/Noema/bridge/scripts/
 ```
 
+Related runtime systemd units live under:
+
+```text
+/home/fiste/Noema/bridge/systemd/
+```
+
+The GitHub mirror keeps bridge-facing unit files under:
+
+```text
+body/bridge/systemd/
+```
+
 The bridge is intentionally narrow: it moves messages between the local runtime,
 the GitHub tape, and local state files. Body heartbeat/watchdog is separate.
 
@@ -199,9 +211,36 @@ Important behavior:
 - detects missing cycles, stale summaries, stuck running cycles, stale locks,
   stalled steps, and active cycle errors;
 - writes primary local incident records under `bridge/incidents/YYYY-MM/`;
-- may write a runtime outbox message as a best-effort publish attempt;
+- may write a runtime outbox message as a best-effort publish attempt when
+  outbox publication is enabled;
 - does not restart services, delete locks, reclaim locks, change timers, or do
   git housekeeping.
+
+Current installed first-phase service mode is:
+
+```text
+bridge_watchdog.py --no-outbox --json
+```
+
+In this mode the service writes only local state and incident records. It does
+not write `bridge/outbox/messages/`.
+
+## Systemd Units
+
+### `bridge-watchdog.service`
+
+Runs the bridge watchdog as a oneshot observer. The installed service uses a
+narrow writable scope:
+
+- `/home/fiste/Noema/bridge/state`
+- `/home/fiste/Noema/bridge/incidents`
+
+### `bridge-watchdog.timer`
+
+Triggers `bridge-watchdog.service` every 60 seconds.
+
+The watchdog timer is separate from `bridge-cycle.timer` and does not change
+bridge cycle cadence.
 
 ## Utility Scripts
 

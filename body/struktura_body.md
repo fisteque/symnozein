@@ -111,6 +111,19 @@ Krátký aktuální stav:
 Není source of truth.
 Je to orientační puls systému.
 
+## body/bridge/systemd/
+
+Auditní kopie systemd jednotek, které patří k bridge vrstvě.
+
+Aktuálně obsahuje watchdog jednotky:
+- `bridge-watchdog.service`
+- `bridge-watchdog.timer`
+
+Instalované runtime jednotky žijí v `/etc/systemd/system/`. Lokální pracovní
+kopie jednotek je v:
+
+- `/home/fiste/Noema/bridge/systemd/`
+
 ## body/bridge/docs/
 
 Dokumentační vrstva bridge.
@@ -156,6 +169,13 @@ Runtime logy bridge.
 
 Plný runtime log se už nepublikuje na GitHub. Runtime log a jeho archivy jsou
 lokální. Veřejný filtrovaný stav je v `state_summary/latest.md`.
+
+## /home/fiste/Noema/bridge/incidents/
+
+Lokální incident log bridge watchdogu.
+
+Není součást GH mirroru a není auditní páskou. Slouží jako lokální černá
+skříňka, aby incident existoval i tehdy, když most právě neumí publikovat ven.
 
 ---
 
