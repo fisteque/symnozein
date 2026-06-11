@@ -39,7 +39,7 @@ First phase behavior:
 
 Safety boundary for model execution:
 
-- `codex exec` runs with `--sandbox read-only` and `--ask-for-approval never`;
+- `codex exec` runs with `--sandbox read-only` and `approval_policy="never"`;
 - the prompt explicitly forbids file edits, commands, commits, pushes, deletes,
   installs, service restarts, and runtime state changes;
 - requests classified as `needs_human` require explicit `--allow-needs-human`;

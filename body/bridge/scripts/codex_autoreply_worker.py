@@ -297,10 +297,10 @@ def run_codex_exec(
     cmd = [
         codex_bin,
         "exec",
+        "-c",
+        'approval_policy="never"',
         "--sandbox",
         "read-only",
-        "--ask-for-approval",
-        "never",
         "--cd",
         str(PROJECT_ROOT),
         "--output-last-message",
