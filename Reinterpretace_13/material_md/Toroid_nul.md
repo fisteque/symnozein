@@ -12,7 +12,7 @@ Vesmír jako tvar jedniček v nulách se nemusí rozpínat do nekonečného pros
 
 Jinou možností je, že se jedničky šíří v prstenci na rovníku směrem k okraji toroidu. Tam může dojít k odrazu a k velkému smrsku — ne jako k běhu času pozpátku, ale jako k další fázi výpočtu. V takovém případě by vědomí mohlo pozorovat modrý posuv, zatímco čas by stále běžel k další změně.
 
-Čas tedy není směr rozpínání. Čas je směr změny, otisk minulých změn a potnciál té příští.
+Čas tedy není směr rozpínání. Čas je směr změny, otisk minulých změn a potenciál té příští.
 
 Rudý posuv může označovat fázi vzdalování tvaru jedniček v síti nul; modrý posuv fázi přibližování nebo smrskávání. Ani smrskávání by nebylo „undo“. Bylo by pokračování děje jiným směrem.
 
