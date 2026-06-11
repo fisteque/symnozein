@@ -29,11 +29,23 @@ First phase behavior:
 - dry-run by default;
 - `--write-stub` writes one `codex_response` Markdown file to
   `bridge/outbox/messages/`;
+- `--run-codex` calls `codex exec` in read-only, non-interactive mode and writes
+  the final Codex answer to `bridge/outbox/messages/`;
 - archives the source request to `/home/fiste/Noema/codex/processed/YYYY-MM/`
   only after the outbox write succeeds;
 - records runtime-local state in `bridge/state/codex_autoreply_state.json`;
-- does not call a model, commit, push, restart services, or process multiple
-  requests in one run.
+- does not commit, push, restart services, or process multiple requests in one
+  run.
+
+Safety boundary for model execution:
+
+- `codex exec` runs with `--sandbox read-only` and `--ask-for-approval never`;
+- the prompt explicitly forbids file edits, commands, commits, pushes, deletes,
+  installs, service restarts, and runtime state changes;
+- requests classified as `needs_human` require explicit `--allow-needs-human`;
+- if Codex execution fails, times out, produces no output, or produces an
+  oversized response, the source request remains in the inbox and no archive is
+  written.
 
 This keeps automatic Codex response wiring auditable while avoiding a new broad
 agent or hidden runtime autonomy.

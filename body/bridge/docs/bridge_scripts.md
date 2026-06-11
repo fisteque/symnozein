@@ -201,6 +201,8 @@ First phase mode does not call Codex automatically. It supports:
 - dry-run inspection by default;
 - `--write-stub` to write one `codex_response` stub into
   `bridge/outbox/messages/`;
+- `--run-codex` to call `codex exec` in read-only, non-interactive mode and
+  write the final Codex answer into `bridge/outbox/messages/`;
 - archival of the source request into
   `/home/fiste/Noema/codex/processed/YYYY-MM/` only after the outbox response is
   written successfully.
@@ -212,7 +214,8 @@ bridge/state/codex_autoreply_state.json
 ```
 
 It does not commit, push, start services, or process more than one request per
-run.
+run. Requests classified as `needs_human` require explicit
+`--allow-needs-human` before `--run-codex` will execute.
 
 ## Summary And Watchdog
 
