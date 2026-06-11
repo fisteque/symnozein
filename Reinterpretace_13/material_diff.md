@@ -5,6 +5,23 @@ Uchovává posledních **50** záznamů.
 
 ---
 
+## 2026-06-11T16:04:43.473864Z
+
+Zdroj změn:
+- skript: `scripts/update_material_index.py`
+- workflow: `.github/workflows/update_material_index.yml`
+
+➕ přidáno: **0**
+- nic
+
+🔄 změněno: **1**
+- `07_Neshoda.md`
+
+❌ odebráno: **0**
+- nic
+
+---
+
 ## 2026-06-11T15:17:55.028161Z
 
 Zdroj změn:
