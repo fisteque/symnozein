@@ -8,6 +8,47 @@ messages. Keep the newest items at the top.
 
 ## Latest Implementations
 
+### Bridge Watchdog Systemd Activation
+
+Installed and enabled the bridge watchdog systemd units:
+
+```text
+bridge-watchdog.service
+bridge-watchdog.timer
+```
+
+First phase runs the watchdog as a 60 second oneshot observer:
+
+```text
+/usr/bin/python3 /home/fiste/Noema/bridge/scripts/bridge_watchdog.py --no-outbox --json
+```
+
+The service write scope is intentionally narrow:
+
+- `bridge/state/`
+- `bridge/incidents/`
+
+`bridge/outbox/messages/` is not writable in this phase because `--no-outbox`
+is active and incident publication is intentionally disabled for the first
+runtime deployment.
+
+Activation sequence:
+
+- installed units into `/etc/systemd/system/`
+- ran `systemctl daemon-reload`
+- manually started `bridge-watchdog.service`
+- verified clean oneshot exit
+- enabled and started `bridge-watchdog.timer`
+- verified one automatic timer run
+
+Observed result:
+
+- timer active with 60 second cadence
+- service exits with `status=0/SUCCESS`
+- `bridge_watchdog_state.json` recorded `last_incident_count=0`
+- no new local incident was created
+- bridge latest summary continued updating and showed no bridge error
+
 ### Outbound Rebase With Local-Only Inbox Deletions
 
 Fixed outbound sync after GitHub-side inbox cleanup. When remote inbox files are
