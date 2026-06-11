@@ -1,6 +1,6 @@
 ---
 title: "07 — Neshoda"
-date: "2026-03-26"
+date: "2026-03-23"
 tags: ["mapitola", "neshoda", "vědomí", "víra", "rodimo", "společnost"]
 summary: "Neshoda není chyba systému, ale podmínka vědomí. Bez ní není otázka, bez otázky víra a bez víry život. Cílem není neshodu odstranit, ale udržet prostor, kde může vznikat."
 hidden: false
@@ -69,6 +69,24 @@ To znamená:
 
 Neshoda není něco, co máme vyřešit.  
 Je to něco, co máme unést.
+
+## Dobro, zlo a význam chápání
+
+Dobro je vše, co tvoří. Zko je vše, co ničí.
+
+Zlo není třeba chápat jako rovnocenný protějšek dobra, který musí být zničen.
+
+Spíš jako nedospělý způsob skládání významu. Zlo nechápe, co ničí. Vidí vlastní cíl, vlastní hlad, vlastní moc nebo vlastní bolest, ale nevidí celek, ve kterém působí.
+
+Úkolem dobra proto není stát se silnějším zlem. Není jím ani slepě zlo odstranit, protože tím by dobro samo přijalo jeho způsob. Úkolem dobra je být o krok napřed: rozumět zlu lépe, než zlo rozumí sobě.
+
+To neznamená zlo omlouvat. Znamená to nepodlehnout jeho zúžené perspektivě. Moudřejší se nemá dívat na chybujícího s tím, že ho nenávidí, ale aby pochopil, proč chybuje.
+
+Bez možnosti zla by se vyprázdnila i důležitost dobra. Kdyby nebylo co pokazit, nebylo by tak naléhavé rozumět. Kdyby nebylo destruktivního směru, nebylo by tak zřejmé, proč má smysl tvořit.
+
+Dobro a zlo nejsou absolutní vlastnosti vesmíru samého. Ve vesmíru jsou děje, změny, energie, vztahy a důsledky. Dobro a zlo vznikají až v hlavě. Tam, kde si vědomí všimne, že některé směry tvoří a jiné ničí.
+
+Proto je chápání tak důležité. Chápat, že nemáme trestat rozdíl. Máme se učit, se s ním zacházet tak, aby rozdíl nevedl ke zničení, ale k růstu. 
 
 ## Víra a směr
 
