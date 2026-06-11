@@ -1,11 +1,11 @@
 {
-  "generated_at": "2026-06-11T19:03:04.636629Z",
+  "generated_at": "2026-06-11T19:14:39.036162Z",
   "source": {
     "script": "scripts/update_body_index.py",
     "workflow": ".github/workflows/update_body_index.yml"
   },
   "kind": "state",
-  "count": 107,
+  "count": 108,
   "files": [
     {
       "path": "Prvni_kroky.md",
@@ -333,6 +333,11 @@
       "sha256": "fc81ae4cfb3707ced1097ef79bedb4f00006a248db78c2cef9b361a22e5436a3"
     },
     {
+      "path": "bridge/outbox/messages/2026-06-11T191325Z_rpi5_cycle-error-outbound-sync.md",
+      "size": 295,
+      "sha256": "025fa81067f016131cad13caa27f354e5d269a50d76ec0f0117a5267a6119e55"
+    },
+    {
       "path": "bridge/scripts/.gitignore",
       "size": 23,
       "sha256": "6feaded4e28ea86e001a6751b4e3d960e8b7c31b9616ff9936b79297086e809b"
@@ -364,8 +369,8 @@
     },
     {
       "path": "bridge/scripts/bridge_sync_outbound.py",
-      "size": 18286,
-      "sha256": "5f475c12b52fcf64149a8fa713eef754fa897d05e2ff518ac631003a304377e1"
+      "size": 18354,
+      "sha256": "42e997c415c59f004557e9a89b2c34cefccb69fda13251a1dee60ff65796e2b9"
     },
     {
       "path": "bridge/scripts/bridge_watchdog.py",
@@ -459,8 +464,8 @@
     },
     {
       "path": "bridge/state_summary/latest.md",
-      "size": 6794,
-      "sha256": "0ceec8f6ec4b765f7c1c8428ec534d35030fe85c8f9aaa569a0efe78847912c6"
+      "size": 6542,
+      "sha256": "0972ca6fa4f28218ed9746e835fdab2576766a9d5ca47863782e376c7905eb09"
     },
     {
       "path": "bridge/systemd/bridge-watchdog.service",
@@ -478,9 +483,14 @@
       "sha256": "081c4cdebee75e6e02aad211999b3b772d6c60fc854c4b8003b9b686a2d3073a"
     },
     {
-      "path": "index_menu.json",
-      "size": 3539,
-      "sha256": "6590c1ec6488cabb37b4858a8df8454415c23a6d288a09d612eda391bc4f3469"
+      "path": "docs/index_menu.json",
+      "size": 3544,
+      "sha256": "0186c46a2622b90dc475dc2b8a9c72fb0efa3184ce5e5de5add766f79a06098c"
+    },
+    {
+      "path": "docs/struktura_body.md",
+      "size": 5358,
+      "sha256": "004c0ca2997c5b339fbe48992507046f88a86d6c79d84a955308d9b23e9d4237"
     },
     {
       "path": "navsteva/navsteva.log",
@@ -536,11 +546,6 @@
       "path": "shared/tasks/task_sprcha.md",
       "size": 381,
       "sha256": "d7471504c27a9f54d7065834d8be03d3e5c6948a3a1461e2975967507574366f"
-    },
-    {
-      "path": "struktura_body.md",
-      "size": 5348,
-      "sha256": "dd9f6d84c71e8f2178e740c3f5b6228688bdc04330c579f4f537a6b155a7c4c4"
     }
   ]
 }
