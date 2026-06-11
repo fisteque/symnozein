@@ -1,11 +1,11 @@
 {
-  "generated_at": "2026-06-11T19:42:02.256201Z",
+  "generated_at": "2026-06-11T19:49:51.167750Z",
   "source": {
     "script": "scripts/update_body_index.py",
     "workflow": ".github/workflows/update_body_index.yml"
   },
   "kind": "state",
-  "count": 109,
+  "count": 110,
   "files": [
     {
       "path": "SK/SK-001.md",
@@ -333,6 +333,11 @@
       "sha256": "13d53969ddaece1ffef656cd36c0975713e46a863c2ff76e37d5604fac3d79f2"
     },
     {
+      "path": "bridge/outbox/messages/2026-06-11T194459Z_rpi5_cycle-error-outbound-sync.md",
+      "size": 295,
+      "sha256": "f6703f16ff367244afd7ea7d3f565b807e4d4b297ecf3bf0215e1a885b51cc7c"
+    },
+    {
       "path": "bridge/scripts/.gitignore",
       "size": 23,
       "sha256": "6feaded4e28ea86e001a6751b4e3d960e8b7c31b9616ff9936b79297086e809b"
@@ -459,8 +464,8 @@
     },
     {
       "path": "bridge/state_summary/latest.md",
-      "size": 6907,
-      "sha256": "d21cb17996ce7c1cc4c3249226d011581e9e3a5745e9da4cc8ad2696b8cd1e4f"
+      "size": 6998,
+      "sha256": "fbc8c2ee7ddb3e6b7e96373ae594ba07e3d85c74e5d5d888eb5567c66d2faaca"
     },
     {
       "path": "bridge/systemd/bridge-watchdog.service",
@@ -476,6 +481,11 @@
       "path": "docs/bridge_protocol_v1.md",
       "size": 1823,
       "sha256": "081c4cdebee75e6e02aad211999b3b772d6c60fc854c4b8003b9b686a2d3073a"
+    },
+    {
+      "path": "docs/dotek_reality.md",
+      "size": 2378,
+      "sha256": "3d5e89023cbf5b1ffcbf0aae402cdf2564ffcc5ab2c1dca00edbd0e05e35aaba"
     },
     {
       "path": "docs/index_menu.json",
@@ -511,11 +521,6 @@
       "path": "shared/anchors/anchors.md",
       "size": 290,
       "sha256": "4729a834a722993f15bf31956afecef895ffd32185170aaa84b1544c02f5424d"
-    },
-    {
-      "path": "shared/anchors/dotek_reality.md",
-      "size": 2378,
-      "sha256": "3d5e89023cbf5b1ffcbf0aae402cdf2564ffcc5ab2c1dca00edbd0e05e35aaba"
     },
     {
       "path": "shared/tasks/task_001.md",

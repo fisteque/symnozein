@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-11T19:49:51.167750Z",
+  "generated_at": "2026-06-11T19:51:56.469799Z",
   "source": {
     "script": "scripts/update_body_index.py",
     "workflow": ".github/workflows/update_body_index.yml"
@@ -464,8 +464,8 @@
     },
     {
       "path": "bridge/state_summary/latest.md",
-      "size": 6998,
-      "sha256": "fbc8c2ee7ddb3e6b7e96373ae594ba07e3d85c74e5d5d888eb5567c66d2faaca"
+      "size": 5253,
+      "sha256": "1f6948f9b2841fb90cb8a11b4f53810ee0303f84a8315ef23b9410ce816e7caf"
     },
     {
       "path": "bridge/systemd/bridge-watchdog.service",
@@ -509,8 +509,8 @@
     },
     {
       "path": "docs/struktura_body.md",
-      "size": 5358,
-      "sha256": "004c0ca2997c5b339fbe48992507046f88a86d6c79d84a955308d9b23e9d4237"
+      "size": 5378,
+      "sha256": "fd5addc749df889ba89f023d3d0f9655c2ec4879e3beafb317521f3ebcc2ddb3"
     },
     {
       "path": "navsteva/navsteva.log",
