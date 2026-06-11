@@ -462,6 +462,22 @@ def git_push_env() -> dict[str, str]:
     return env
 
 
+def push_existing_local_commits(repo_root: Path, remote: str, branch: str) -> bool:
+    ahead, behind = branch_divergence(repo_root)
+    if behind != 0:
+        raise SyncError(f"Refusing to push while branch is still behind FETCH_HEAD: ahead={ahead} behind={behind}")
+    if ahead == 0:
+        return False
+    print(f"Pushing existing local commits to {remote} {branch}: ahead={ahead}")
+    push = run_git(
+        repo_root,
+        ["push", remote, f"HEAD:{branch}"],
+        env=git_push_env(),
+    )
+    print_git_output(push)
+    return True
+
+
 def main() -> int:
     args = parse_args()
     try:
@@ -494,6 +510,10 @@ def main() -> int:
         print(pending or "(none)")
 
         if not pending:
+            if args.commit_and_push:
+                safe_rebase_onto_fetch_head(repo_root, args.remote, args.branch)
+                if push_existing_local_commits(repo_root, args.remote, args.branch):
+                    return 0
             print("Nothing to commit or push.")
             return 0
 
@@ -509,10 +529,14 @@ def main() -> int:
         ensure_no_disallowed_staged_paths(repo_root)
         pending = show_pending(repo_root)
         if not pending:
+            if push_existing_local_commits(repo_root, args.remote, args.branch):
+                return 0
             print("Nothing to commit or push after pre-push rebase.")
             return 0
         if not has_substantive_staged_change(repo_root):
             unstage_allowed_paths(repo_root)
+            if push_existing_local_commits(repo_root, args.remote, args.branch):
+                return 0
             print("Only logs/state_summary changed; not committing this cycle.")
             return 0
 
