@@ -1,11 +1,11 @@
 {
-  "generated_at": "2026-06-11T17:17:09.958065Z",
+  "generated_at": "2026-06-11T17:31:58.550844Z",
   "source": {
     "script": "scripts/update_body_index.py",
     "workflow": ".github/workflows/update_body_index.yml"
   },
   "kind": "state",
-  "count": 101,
+  "count": 102,
   "files": [
     {
       "path": "Prvni_kroky.md",
@@ -181,6 +181,11 @@
       "path": "bridge/inbox/messages/codex/msg-20260608-codex-test-runtime-outbox-published-lifecycle-001.md",
       "size": 1386,
       "sha256": "5b31578d6486ca83f3ef04d219c3906c691143dd2d39528bcc5444137646b570"
+    },
+    {
+      "path": "bridge/inbox/messages/msg-20260611-codex-diagnose-bridge-rhythm-001.md",
+      "size": 1220,
+      "sha256": "81d5482ddfeab690d9c8bc6da34334d49c3e4015a26b07c7804a7d8aed7a0687"
     },
     {
       "path": "bridge/inbox/messages/msg-20260611-codex-postman-test-001.md",
