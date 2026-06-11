@@ -85,7 +85,7 @@ Tento záznam slouží jako kompaktní shrnutí dosavadního vývoje a výchozí
 
 ---
 
-## Update 2026-06-11, pridan Mac a Codex
+## Update 2026-06-11, přidán Mac a Codex
 
 RPi5:
   tělo, senzory, heartbeat, lokální stav, jednoduché reflexy
