@@ -24,6 +24,13 @@ The GitHub mirror keeps bridge-facing unit files under:
 body/bridge/systemd/
 ```
 
+Current mirrored unit files:
+
+- `bridge-cycle.service`
+- `bridge-cycle.timer`
+- `bridge-watchdog.service`
+- `bridge-watchdog.timer`
+
 The bridge is intentionally narrow: it moves messages between the local runtime,
 the GitHub tape, and local state files. Body heartbeat/watchdog is separate.
 
@@ -226,6 +233,25 @@ In this mode the service writes only local state and incident records. It does
 not write `bridge/outbox/messages/`.
 
 ## Systemd Units
+
+### `bridge-cycle.service`
+
+Runs one bridge cycle as a oneshot service:
+
+```text
+/usr/bin/python3 /home/fiste/Noema/bridge/scripts/bridge_cycle.py --commit-and-push
+```
+
+The installed service uses `TimeoutStartSec=90` and writes within
+`/home/fiste/Noema` because a full cycle touches runtime queues, local state,
+the repo mirror, and Git metadata.
+
+### `bridge-cycle.timer`
+
+Triggers `bridge-cycle.service` every 30 seconds.
+
+This is the main bridge cadence. It is separate from the body heartbeat/watchdog
+services and separate from the bridge watchdog timer.
 
 ### `bridge-watchdog.service`
 

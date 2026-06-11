@@ -8,6 +8,42 @@ messages. Keep the newest items at the top.
 
 ## Latest Implementations
 
+### Bridge Documentation And Systemd Mirror Cleanup
+
+Updated the bridge mirror and documentation after the body docs cleanup.
+
+Mirrored all current bridge systemd units under:
+
+```text
+body/bridge/systemd/
+```
+
+Current mirrored units:
+
+- `bridge-cycle.service`
+- `bridge-cycle.timer`
+- `bridge-watchdog.service`
+- `bridge-watchdog.timer`
+
+Also moved root/body legacy orientation files into `body/docs/` and
+`body/docs/legacy/`, then removed the obsolete `body/shared/` tree from the
+repository by explicit human/Codex commits rather than automatic bridge
+deletion.
+
+Outbound sync was tightened so it checks for disallowed worktree changes before
+staging allowed paths, preventing half-staged states when a manual move includes
+a delete outside the outbound whitelist. It also now pushes existing local
+commits that are already ahead of `origin/main` even when the only new staged
+runtime change is `state_summary/latest.md`.
+
+Verified by:
+
+- `systemd-analyze verify` for all bridge systemd unit files
+- runtime and mirror `bridge/systemd/` tree comparison
+- `py_compile` for updated outbound sync
+- bridge cycle returning to `status: ok`
+- `body/shared` absent from both `HEAD` and `origin/main`
+
 ### Bridge Watchdog Systemd Activation
 
 Installed and enabled the bridge watchdog systemd units:
