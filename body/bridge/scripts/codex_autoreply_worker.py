@@ -473,6 +473,14 @@ def parse_args() -> argparse.Namespace:
     return parser.parse_args()
 
 
+def mode_name(args: argparse.Namespace) -> str:
+    if args.run_codex:
+        return "run_codex"
+    if args.write_stub:
+        return "write_stub"
+    return "dry_run"
+
+
 def main() -> int:
     args = parse_args()
     inbox_dir = args.inbox_root.resolve()
@@ -495,7 +503,7 @@ def main() -> int:
         )
         output = {
             "version": 1,
-            "mode": "run_codex" if args.run_codex else ("write_stub" if args.write_stub else "dry_run"),
+            "mode": mode_name(args),
             "generated_at": utc_iso(),
             "request": {
                 "path": request["path_rel"],
@@ -523,7 +531,7 @@ def main() -> int:
     except WorkerError as exc:
         output = {
             "version": 1,
-            "mode": "write_stub" if args.write_stub else "dry_run",
+            "mode": mode_name(args),
             "generated_at": utc_iso(),
             "error": str(exc),
         }
