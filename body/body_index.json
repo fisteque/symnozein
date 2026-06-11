@@ -1,11 +1,11 @@
 {
-  "generated_at": "2026-06-11T18:58:27.379435Z",
+  "generated_at": "2026-06-11T19:03:04.636629Z",
   "source": {
     "script": "scripts/update_body_index.py",
     "workflow": ".github/workflows/update_body_index.yml"
   },
   "kind": "state",
-  "count": 106,
+  "count": 107,
   "files": [
     {
       "path": "Prvni_kroky.md",
@@ -54,8 +54,8 @@
     },
     {
       "path": "bridge/docs/bridge_scripts.md",
-      "size": 6787,
-      "sha256": "95e94a087bbedd9e5ce9660ee3c734cfa18cc4da01c8fec97c2fe82eabab3f5f"
+      "size": 7629,
+      "sha256": "25717dcad2bf1a3f0607d95f38b6cae057c143aa7417f8af67918eadb352b44d"
     },
     {
       "path": "bridge/docs/implementation_ledger.md",
@@ -328,6 +328,11 @@
       "sha256": "b8672310a4d6315b9e8d1f8c602faaaa23915dc514d46ae6b6cc82d02d9917a9"
     },
     {
+      "path": "bridge/outbox/messages/2026-06-11T190144Z_rpi5_cycle-error-outbound-sync.md",
+      "size": 295,
+      "sha256": "fc81ae4cfb3707ced1097ef79bedb4f00006a248db78c2cef9b361a22e5436a3"
+    },
+    {
       "path": "bridge/scripts/.gitignore",
       "size": 23,
       "sha256": "6feaded4e28ea86e001a6751b4e3d960e8b7c31b9616ff9936b79297086e809b"
@@ -454,8 +459,8 @@
     },
     {
       "path": "bridge/state_summary/latest.md",
-      "size": 5957,
-      "sha256": "bf6f9aa240dad5626d9d14d46fa9a0249641eab88637c99039ee58b4e219def0"
+      "size": 6794,
+      "sha256": "0ceec8f6ec4b765f7c1c8428ec534d35030fe85c8f9aaa569a0efe78847912c6"
     },
     {
       "path": "bridge/systemd/bridge-watchdog.service",
@@ -474,8 +479,8 @@
     },
     {
       "path": "index_menu.json",
-      "size": 3430,
-      "sha256": "17f57fd965869e12578cb3d8a1bfa950447f70a9a42f413da34aae6450d6e0c2"
+      "size": 3539,
+      "sha256": "6590c1ec6488cabb37b4858a8df8454415c23a6d288a09d612eda391bc4f3469"
     },
     {
       "path": "navsteva/navsteva.log",
@@ -534,8 +539,8 @@
     },
     {
       "path": "struktura_body.md",
-      "size": 4764,
-      "sha256": "97136afd0296deddf6c0e8db187c3b51f1bb3a2cd0de79b12dbb7cefd2e1cba5"
+      "size": 5348,
+      "sha256": "dd9f6d84c71e8f2178e740c3f5b6228688bdc04330c579f4f537a6b155a7c4c4"
     }
   ]
 }

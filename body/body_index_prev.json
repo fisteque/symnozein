@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-11T18:32:14.241169Z",
+  "generated_at": "2026-06-11T18:58:27.379435Z",
   "source": {
     "script": "scripts/update_body_index.py",
     "workflow": ".github/workflows/update_body_index.yml"
@@ -59,8 +59,8 @@
     },
     {
       "path": "bridge/docs/implementation_ledger.md",
-      "size": 32424,
-      "sha256": "ccb82b8cd4d789719f32de8b2d3b8f1f7edbf098d5a2f5d852d81296e0b496f5"
+      "size": 33535,
+      "sha256": "9139e5d59744faa7880d0a1ab8888dd660c9b18d050ee9aa01058ba2931460a8"
     },
     {
       "path": "bridge/docs/known_limits.md",
@@ -454,8 +454,8 @@
     },
     {
       "path": "bridge/state_summary/latest.md",
-      "size": 6356,
-      "sha256": "4ccffc09d49b1b6fab00d4128d8525247be9bf6f96547d3d4912a983852f5a8a"
+      "size": 5957,
+      "sha256": "bf6f9aa240dad5626d9d14d46fa9a0249641eab88637c99039ee58b4e219def0"
     },
     {
       "path": "bridge/systemd/bridge-watchdog.service",
