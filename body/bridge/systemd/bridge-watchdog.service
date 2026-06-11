@@ -18,7 +18,6 @@ PrivateTmp=true
 ProtectSystem=full
 ReadWritePaths=/home/fiste/Noema/bridge/state
 ReadWritePaths=/home/fiste/Noema/bridge/incidents
-ReadWritePaths=/home/fiste/Noema/bridge/outbox/messages
 
 [Install]
 WantedBy=multi-user.target
