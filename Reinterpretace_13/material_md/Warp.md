@@ -28,7 +28,7 @@ Civilizace tak stojí před zvláštní volbou. Může cestovat, nebo se může 
 
 Kdo letí příliš rychle, dorazí dřív k hvězdě, ale později ke všem, které opustil.
 
-Z toho plyne možné čtení Fermiho paradoxu. Možná vesmír není prázdný. Jen není synchronní. Civilizace, které zůstávají, zahušťují význam ve svém čase. Civilizace, které odlétají, větví čas. Galaxie se pak nemusí zaplnit jednou hlučnou říší, ale ostrovy nesoučasných dějů.
+Z toho plyne možné čtení Fermiho paradoxu. Možná vesmír není prázdný. Jen není synchronní. Civilizace, které zůstávají, zahušťují význam ve svém čase. Civilizace, které odlétají, se časově rozpojují se svým původem. Nevytvářejí jiný vesmír, ale jinou kontinuitu vztahu. Galaxie se pak nemusí zaplnit jednou hlučnou říší, ale ostrovy dějů se spolecnou současností, která se ale v interakci neumí projevit.
 
 Kolonizace hvězd by pak nebyla výlet ani rozšíření jedné civilizace v přítomnosti. Byla by spíš zasetím nové větve. Návrat je možný fyzicky, ale ontologicky znamená návrat do jiného stromu.
 
