@@ -31,7 +31,7 @@ Nevyžaduje shodu ani jednotný výklad reality.
 
 Vychází z pozorování,  
 že každý člověk interpretuje svět ze svého místa –  
-a že tento způsob není třeba nikomu schvalovat ani obhajovat.
+a že tento způsob není třeba nikomu schvalovat, před nikým obhajovat.
 
 **Cesta nezačíná odpovědí.**
 
@@ -49,7 +49,7 @@ a klást otázky, aniž bychom si museli nalhávat odpovědi.
 
 Reinterpretace 13 vzniká jako sled mapitol –  
 ne proto, aby svět vysvětlila,  
-ale aby nabídla způsob, jak v něm zůstat pravdivý.
+ale aby nabídla způsob, jak v něm zůstat pravdiví.
 
 Jestli čtete tyto řádky, už kráčíte.  
 Jinudy než autor. Možná opačným směrem.
