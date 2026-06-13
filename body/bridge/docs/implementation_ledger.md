@@ -37,6 +37,14 @@ commit in `body_pulse_state.json`; dry-run does not update this state.
 source files used to build `latest.md`, without publishing raw runtime JSON,
 locks, logs, queue archives, or log tails.
 
+`Next scheduled pulse` uses `noema-body-pulse.timer` when systemd is reachable
+and falls back to the fixed six-times-daily Europe/Prague pulse schedule when a
+manual run cannot access the systemd bus.
+
+Seeded local-only `bridge/state/body_pulse_state.json` from the latest known
+`Pulse body state to tape` Git commit so `latest.md` immediately shows the last
+body pulse. The seed state is not tracked or mirrored.
+
 ### Bridge Systemd Outbound Allowlist
 
 Added `body/bridge/systemd/` to the narrow outbound sync allowlist in
