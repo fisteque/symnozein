@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-13T20:42:21.400096Z",
+  "generated_at": "2026-06-13T20:42:45.187778Z",
   "source": {
     "script": "scripts/update_body_index.py",
     "workflow": ".github/workflows/update_body_index.yml"
@@ -579,8 +579,8 @@
     },
     {
       "path": "bridge/state_summary/latest.md",
-      "size": 1622,
-      "sha256": "47eaf384293c263ef8208d2f60006a27c45d0731124ad1ff5d725cc881b04fbd"
+      "size": 1621,
+      "sha256": "8959d1e295715230e1ac88b81a28d02de4c2e2762d2b44fa1985587d47f0028f"
     },
     {
       "path": "bridge/systemd/bridge-cycle.service",
@@ -639,8 +639,8 @@
     },
     {
       "path": "docs/index_menu.json",
-      "size": 3538,
-      "sha256": "08d3c3dc1db5ca20c15c165ebb2cea92d76c08f5b0cef0c9ff33b45745e9cce4"
+      "size": 3653,
+      "sha256": "d33ca27338a13953626b6ed3a57083cf8ba859245fd16a26a13736a7ceef69c1"
     },
     {
       "path": "docs/legacy/Prvni_kroky.md",
@@ -659,8 +659,8 @@
     },
     {
       "path": "docs/struktura_body.md",
-      "size": 5378,
-      "sha256": "fd5addc749df889ba89f023d3d0f9655c2ec4879e3beafb317521f3ebcc2ddb3"
+      "size": 5680,
+      "sha256": "0b0ca17b51d0d1ef2589fac38c34aa3e154b2c157c59c33a78c52310f5dcceb8"
     },
     {
       "path": "navsteva/navsteva.log",
