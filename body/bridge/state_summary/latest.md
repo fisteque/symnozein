@@ -1,6 +1,6 @@
 # Bridge State Summary
 
-- Generated at: `2026-06-13T20:42:35.057769Z`
+- Generated at: `2026-06-13T20:47:05.278648Z`
 - Inbox messages: `9`; latest: `msg-20260613-cli-setup-body-pulse-001.md`
 - Codex runtime inbox files: `0`; latest: `(none)`
 - Outbox messages: `21`; latest: `2026-06-13T191636Z_rpi5_reply-body-pulse-to-tape.md`
@@ -11,23 +11,23 @@
 - Last error: `(none)`
 - Body awake: `True`
 - Body status: `normal_operation`
-- Body last heartbeat: `2026-06-13T20:42:32.718760+00:00`
-- Heartbeat count: `85430`
-- Heartbeat last gap seconds: `10.059618`
+- Body last heartbeat: `2026-06-13T20:47:03.017070+00:00`
+- Heartbeat count: `85457`
+- Heartbeat last gap seconds: `10.004702`
 - Heartbeat max gap seconds: `88.126733`
 - Heartbeat service started at: `Thu 2026-06-04 00:52:02 CEST`
-- Heartbeat uptime seconds: `856232`
+- Heartbeat uptime seconds: `856502`
 - Heartbeat restart count: `0`
 - Heartbeat uptime source: `systemd`
 - Heartbeat log starts count: `17`
 - Heartbeat log latest start: `2026-06-03T22:52:02.965137Z`
 - Heartbeat log max start gap seconds: `675295`
 - Last heartbeat gap seconds: `2`
-- Watchdog last heartbeat age seconds: `1.46103`
+- Watchdog last heartbeat age seconds: `1.531713`
 - Watchdog heartbeat timeout threshold seconds: `45`
 - Watchdog heartbeat timeout count: `0`
 - Watchdog heartbeat timeout required count: `2`
-- Body watchdog last check: `2026-06-13T20:42:34.179806+00:00`
+- Body watchdog last check: `2026-06-13T20:47:04.548798+00:00`
 
 ## Body Health
 

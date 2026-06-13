@@ -36,6 +36,7 @@ LEGACY_REPO_LOG = LOGS / RUNTIME_LOG_NAME
 STATE_SUMMARY_LATEST = STATE_SUMMARY / "latest.md"
 INSTRUCTIONS = Path("body/bridge/instructions")
 DOCS = Path("body/bridge/docs")
+SYSTEMD = Path("body/bridge/systemd")
 BODY_DOCS = Path("body/docs")
 ALLOWED_REPO_PATHS = (
     OUTBOX_MESSAGES,
@@ -43,6 +44,7 @@ ALLOWED_REPO_PATHS = (
     SCRIPTS,
     INSTRUCTIONS,
     DOCS,
+    SYSTEMD,
     BODY_DOCS,
 )
 REMOVED_REPO_PATHS = (LOG_TAIL,)

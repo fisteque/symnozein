@@ -8,6 +8,18 @@ messages. Keep the newest items at the top.
 
 ## Latest Implementations
 
+### Bridge Systemd Outbound Allowlist
+
+Added `body/bridge/systemd/` to the narrow outbound sync allowlist in
+`bridge_sync_outbound.py`.
+
+This lets bridge-facing service and timer file updates publish through the
+normal bridge outbound path, alongside scripts, instructions, docs, state
+summary, and outbox messages. The allowlist still does not include whole
+`body/`, runtime state JSON, locks, logs, or local inbox/processed queues.
+
+Runtime and mirrored copies of `bridge_sync_outbound.py` were kept identical.
+
 ### Body Pulse To Tape
 
 Added a scheduled body pulse publisher for the public bridge summary.

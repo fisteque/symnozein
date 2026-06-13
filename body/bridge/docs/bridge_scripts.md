@@ -24,6 +24,9 @@ The GitHub mirror keeps bridge-facing unit files under:
 body/bridge/systemd/
 ```
 
+This directory is included in the outbound sync allowlist so service/timer file
+updates do not need a manual commit path.
+
 Current mirrored unit files:
 
 - `codex-autoreply.service`
@@ -110,6 +113,7 @@ Important behavior:
 - after successful push, archives published runtime outbox messages under
   `bridge/outbox/published/YYYY-MM/`;
 - mirrors bridge scripts and state summary;
+- mirrors bridge-facing systemd unit files under `body/bridge/systemd/`;
 - rejects forbidden paths and Python bytecode cache files;
 - safely rebases before push without force-push;
 - stashes allowed outbound paths and local-only inbox paths during pre-push
