@@ -5,6 +5,23 @@ Uchovává posledních **50** záznamů.
 
 ---
 
+## 2026-06-13T22:00:15.406428Z
+
+Zdroj změn:
+- skript: `scripts/update_body_index.py`
+- workflow: `.github/workflows/update_body_index.yml`
+
+➕ přidáno: **0**
+- nic
+
+🔄 změněno: **1**
+- `bridge/state_summary/latest.md`
+
+❌ odebráno: **0**
+- nic
+
+---
+
 ## 2026-06-13T21:03:54.232378Z
 
 Zdroj změn:
@@ -886,20 +903,3 @@ Zdroj změn:
 
 ❌ odebráno: **1**
 - `shared/anchors/navsteva_body.md`
-
----
-
-## 2026-06-11T19:25:12.973892Z
-
-Zdroj změn:
-- skript: `scripts/update_body_index.py`
-- workflow: `.github/workflows/update_body_index.yml`
-
-➕ přidáno: **1**
-- `docs/legacy/Rpi5_most.md`
-
-🔄 změněno: **1**
-- `bridge/state_summary/latest.md`
-
-❌ odebráno: **1**
-- `docs/Rpi5_most.md`
