@@ -8,6 +8,42 @@ messages. Keep the newest items at the top.
 
 ## Latest Implementations
 
+### Body Health Runtime Monitor
+
+Added a separate local body health monitor instead of expanding
+`core/watchdog/state_watchdog.py`.
+
+Runtime files:
+
+```text
+core/body_health/body_health.py
+core/body_health/systemd/noema-body-health.service
+core/body_health/systemd/noema-body-health.timer
+state/body_health.json
+```
+
+The monitor writes an atomic JSON snapshot every 10 minutes with hostname,
+uptime, load average, memory, swap, root disk usage, CPU temperature when
+available, and a safe allowlist of Noema/bridge/Codex systemd unit states.
+
+Installed and enabled:
+
+```text
+noema-body-health.service
+noema-body-health.timer
+```
+
+Safety boundaries:
+
+- no changes to heartbeat or body watchdog behavior;
+- no changes to bridge cycle, bridge watchdog, or Codex autoreply timers;
+- no publication into `latest.md` in this first phase;
+- writes are limited to `/home/fiste/Noema/state/body_health.json`.
+
+Verified by `py_compile`, dry-run JSON, real snapshot write, `systemd-analyze
+verify`, manual service start, and timer enable/start. The first timer-triggered
+snapshot updated `generated_at` and captured 10 allowlisted unit states.
+
 ### Codex Autoreply End-To-End Read Test
 
 Verified the automatic Codex inbox to main outbox path after enabling read-only
