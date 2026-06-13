@@ -1,0 +1,25 @@
+[Unit]
+Description=Noema body pulse to GitHub tape
+Wants=network-online.target
+After=network-online.target bridge-cycle.service
+
+[Service]
+Type=oneshot
+User=fiste
+WorkingDirectory=/home/fiste/Noema
+EnvironmentFile=-/home/fiste/.config/noema/github.env
+ExecStart=/usr/bin/python3 /home/fiste/Noema/bridge/scripts/body_pulse_to_tape.py
+StandardOutput=journal
+StandardError=journal
+SyslogIdentifier=noema-body-pulse
+TimeoutStartSec=120
+Restart=no
+Nice=10
+NoNewPrivileges=true
+PrivateTmp=true
+ProtectSystem=full
+ReadWritePaths=/home/fiste/Noema/bridge/state
+ReadWritePaths=/home/fiste/Noema/symnozein
+
+[Install]
+WantedBy=multi-user.target

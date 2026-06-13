@@ -8,6 +8,35 @@ messages. Keep the newest items at the top.
 
 ## Latest Implementations
 
+### Body Pulse To Tape
+
+Added a scheduled body pulse publisher for the public bridge summary.
+
+Runtime files:
+
+```text
+bridge/scripts/body_pulse_to_tape.py
+bridge/systemd/noema-body-pulse.service
+bridge/systemd/noema-body-pulse.timer
+```
+
+The service refreshes `body/bridge/state_summary/latest.md`, verifies there are
+no unrelated dirty repo paths, stages exactly that one file, commits with
+`Pulse body state to tape`, and pushes to `origin/main`. It uses the existing
+bridge cycle lock so it does not run concurrently with a normal bridge cycle.
+
+The timer schedule is six times daily in `Europe/Prague`:
+
+```text
+00:00, 04:00, 08:00, 12:00, 16:00, 20:00
+```
+
+Safety boundaries:
+
+- raw `state/body_health.json` remains local and is not pushed;
+- runtime logs, locks, outbox queues, and unrelated dirty paths are not staged;
+- heartbeat, watchdog, Codex autoreply, and bridge cycle cadence are unchanged.
+
 ### Body Health In Latest Summary
 
 Changed the public bridge summary to use local

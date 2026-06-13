@@ -28,6 +28,8 @@ Current mirrored unit files:
 
 - `codex-autoreply.service`
 - `codex-autoreply.timer`
+- `noema-body-pulse.service`
+- `noema-body-pulse.timer`
 - `bridge-cycle.service`
 - `bridge-cycle.timer`
 - `bridge-watchdog.service`
@@ -299,6 +301,27 @@ Writable paths are limited to:
 Triggers `codex-autoreply.service` every 60 seconds.
 
 The timer is prepared but should be manually tested before enable/start.
+
+### `noema-body-pulse.service`
+
+Runs a scheduled public body pulse by refreshing
+`body/bridge/state_summary/latest.md`, committing exactly that file, and pushing
+it to the GitHub tape with:
+
+```text
+Pulse body state to tape
+```
+
+It does not mirror runtime logs, locks, raw `state/body_health.json`, outbox
+messages, or unrelated dirty paths.
+
+### `noema-body-pulse.timer`
+
+Triggers `noema-body-pulse.service` six times daily in `Europe/Prague`:
+
+```text
+00:00, 04:00, 08:00, 12:00, 16:00, 20:00
+```
 
 ### `bridge-cycle.service`
 
