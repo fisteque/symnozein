@@ -1,11 +1,11 @@
 {
-  "generated_at": "2026-06-13T19:17:30.627752Z",
+  "generated_at": "2026-06-13T19:53:30.573799Z",
   "source": {
     "script": "scripts/update_body_index.py",
     "workflow": ".github/workflows/update_body_index.yml"
   },
   "kind": "state",
-  "count": 131,
+  "count": 132,
   "files": [
     {
       "path": "SK/SK-001.md",
@@ -41,6 +41,11 @@
       "path": "SK/SK-007.md",
       "size": 4538,
       "sha256": "eb39ed744c5fe07db49471d43eab996f826245d4e3050ad7993084e4a2403146"
+    },
+    {
+      "path": "SK/SK-008.md",
+      "size": 6022,
+      "sha256": "86efef5abf375d804dd311d3672767cba1e08f36f6aef278ae8fd1da6cf8e1c8"
     },
     {
       "path": "bridge/docs/MOST_A_NERVY.md",
