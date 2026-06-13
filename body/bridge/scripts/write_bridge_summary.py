@@ -7,9 +7,10 @@ import json
 import subprocess
 import sys
 import time
-from datetime import UTC, datetime
+from datetime import UTC, datetime, timedelta
 from pathlib import Path
 from typing import Any
+from zoneinfo import ZoneInfo
 
 from bridge_sync_common import DEFAULT_PROJECT_ROOT, STATE_SUMMARY, SyncError, add_common_args, ensure_inside, ensure_repo
 
@@ -312,6 +313,19 @@ def extend_body_health_lines(lines: list[str], body_health: dict[str, Any]) -> N
     )
 
 
+def next_body_pulse_fallback() -> str:
+    prague = ZoneInfo("Europe/Prague")
+    now = datetime.now(prague)
+    for day_offset in range(2):
+        day = (now + timedelta(days=day_offset)).date()
+        for hour in (0, 4, 8, 12, 16, 20):
+            candidate = datetime.combine(day, datetime.min.time(), tzinfo=prague)
+            candidate = candidate.replace(hour=hour)
+            if candidate > now:
+                return candidate.isoformat()
+    return "(unknown)"
+
+
 def next_timer_elapse(unit: str) -> str:
     result = subprocess.run(
         [
@@ -326,6 +340,8 @@ def next_timer_elapse(unit: str) -> str:
         stderr=subprocess.PIPE,
     )
     if result.returncode != 0:
+        if unit == "noema-body-pulse.timer":
+            return next_body_pulse_fallback()
         return "(unknown)"
     for line in result.stdout.splitlines():
         if not line.startswith("NextElapseUSecRealtime="):

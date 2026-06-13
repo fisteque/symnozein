@@ -1,28 +1,28 @@
 # Bridge State Summary
 
-- Generated at: `2026-06-13T22:06:53.798809Z`
+- Generated at: `2026-06-13T22:07:54.237579Z`
 - Body awake: `True`
 - Body status: `normal_operation`
 
 ## Body Heartbeat
 
-- Body last heartbeat: `2026-06-13T22:06:48.360066+00:00`
-- Heartbeat count: `85935`
-- Heartbeat last gap seconds: `10.0066`
+- Body last heartbeat: `2026-06-13T22:07:48.579668+00:00`
+- Heartbeat count: `85941`
+- Heartbeat last gap seconds: `10.008304`
 - Heartbeat max gap seconds: `88.126733`
 - Heartbeat service started at: `Thu 2026-06-04 00:52:02 CEST`
-- Heartbeat uptime seconds: `861290`
+- Heartbeat uptime seconds: `861351`
 - Heartbeat restart count: `0`
 - Heartbeat uptime source: `systemd`
 - Heartbeat log starts count: `17`
 - Heartbeat log latest start: `2026-06-03T22:52:02.965137Z`
 - Heartbeat log max start gap seconds: `675295`
 - Last heartbeat gap seconds: `5`
-- Watchdog last heartbeat age seconds: `4.643722`
+- Watchdog last heartbeat age seconds: `4.643858`
 - Watchdog heartbeat timeout threshold seconds: `45`
 - Watchdog heartbeat timeout count: `0`
 - Watchdog heartbeat timeout required count: `2`
-- Body watchdog last check: `2026-06-13T22:06:53.003804+00:00`
+- Body watchdog last check: `2026-06-13T22:07:53.223540+00:00`
 
 ## Body Health
 
@@ -35,10 +35,10 @@
 
 ## Bridge Sync
 
-- Last inbound sync: `2026-06-13T22:06:53.638013Z`
-- Last outbound sync: `2026-06-13T22:06:24.555308Z`
+- Last inbound sync: `2026-06-13T22:07:54.064379Z`
+- Last outbound sync: `2026-06-13T22:07:24.941374Z`
 - Last outbound sync status: `latest_only_skipped`
-- Last outbound commit: `da420abb`
+- Last outbound commit: `b8f4b1af`
 
 ## Queues
 
@@ -60,8 +60,8 @@
 
 ## Source Freshness
 
-- Body state: `ok`; path: `state/body_state.json`; timestamp: `2026-06-13T22:06:53.003804Z`; age seconds: `0`
-- Body health: `ok`; path: `state/body_health.json`; timestamp: `2026-06-13T21:58:01.648573Z`; age seconds: `532`
-- Processed messages: `ok`; path: `bridge/state/processed_messages.json`; timestamp: `2026-06-13T19:01:34.718722Z`; age seconds: `11119`
-- Bridge sync state: `ok`; path: `bridge/state/bridge_sync_state.json`; timestamp: `2026-06-13T22:06:53.638013Z`; age seconds: `0`
+- Body state: `ok`; path: `state/body_state.json`; timestamp: `2026-06-13T22:07:53.223540Z`; age seconds: `1`
+- Body health: `ok`; path: `state/body_health.json`; timestamp: `2026-06-13T21:58:01.648573Z`; age seconds: `592`
+- Processed messages: `ok`; path: `bridge/state/processed_messages.json`; timestamp: `2026-06-13T19:01:34.718722Z`; age seconds: `11179`
+- Bridge sync state: `ok`; path: `bridge/state/bridge_sync_state.json`; timestamp: `2026-06-13T22:07:54.064379Z`; age seconds: `0`
 - Body pulse state: `missing`; path: `bridge/state/body_pulse_state.json`; timestamp: `(unknown)`; age seconds: `(unknown)`
