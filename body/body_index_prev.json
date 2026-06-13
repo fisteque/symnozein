@@ -1,11 +1,11 @@
 {
-  "generated_at": "2026-06-13T18:10:30.081457Z",
+  "generated_at": "2026-06-13T18:18:48.924969Z",
   "source": {
     "script": "scripts/update_body_index.py",
     "workflow": ".github/workflows/update_body_index.yml"
   },
   "kind": "state",
-  "count": 122,
+  "count": 123,
   "files": [
     {
       "path": "SK/SK-001.md",
@@ -201,6 +201,11 @@
       "path": "bridge/inbox/messages/msg-20260613-codex-check-agents-md-autoreply-003.md",
       "size": 784,
       "sha256": "6516559872292c09ac789359347edd15816e24b31d6424c33cc6bc100ee0f990"
+    },
+    {
+      "path": "bridge/inbox/messages/msg-20260613-codex-forward-body-health-json-001.md",
+      "size": 950,
+      "sha256": "571882b8bf1d8a421871b23c46e2f742e4d47d9999b0c6948e74ac596b3cf519"
     },
     {
       "path": "bridge/inbox/messages/msg-20260613-codex-review-agents-md-proposal-001.md",
