@@ -244,9 +244,14 @@ Writes the public bridge summary:
 body/bridge/state_summary/latest.md
 ```
 
-It summarizes selected local state without publishing internal runtime JSON.
-It includes a short body health block derived from local `state/body_health.json`.
-The full runtime log remains local and is not included in `latest.md`.
+It renders stable public sections for body heartbeat, body health, bridge sync,
+queues, pulse, and source freshness. The summary is derived from selected local
+state files such as `state/body_state.json`, `state/body_health.json`,
+`bridge/state/processed_messages.json`, `bridge/state/bridge_sync_state.json`,
+and `bridge/state/body_pulse_state.json`.
+
+The full runtime log remains local and is not included in `latest.md`. Raw
+runtime JSON, locks, queue archives, and log tails are not published.
 
 ### `bridge_watchdog.py`
 

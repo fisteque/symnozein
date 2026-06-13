@@ -8,6 +8,35 @@ messages. Keep the newest items at the top.
 
 ## Latest Implementations
 
+### Structured Latest Summary And Source Freshness
+
+Restructured `body/bridge/state_summary/latest.md` into stable public sections:
+
+```text
+Bridge State Summary
+Body Heartbeat
+Body Health
+Bridge Sync
+Queues
+Pulse
+Source Freshness
+```
+
+The summary now reads local-only sync and pulse state:
+
+```text
+bridge/state/bridge_sync_state.json
+bridge/state/body_pulse_state.json
+```
+
+Inbound and outbound sync scripts update `bridge_sync_state.json` outside dry-run
+mode. `body_pulse_to_tape.py` records pulse status and the last successful pulse
+commit in `body_pulse_state.json`; dry-run does not update this state.
+
+`Source Freshness` shows compact public freshness diagnostics for the local
+source files used to build `latest.md`, without publishing raw runtime JSON,
+locks, logs, queue archives, or log tails.
+
 ### Bridge Systemd Outbound Allowlist
 
 Added `body/bridge/systemd/` to the narrow outbound sync allowlist in
