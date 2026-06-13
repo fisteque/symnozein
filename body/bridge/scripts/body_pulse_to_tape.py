@@ -68,15 +68,25 @@ def run_step(name: str, args: list[str], *, env: dict[str, str] | None = None) -
 
 
 def porcelain(repo_root: Path, args: list[str]) -> str:
-    return run_git(repo_root, ["status", "--porcelain", *args]).stdout.strip()
+    return run_git(repo_root, ["status", "--porcelain", *args]).stdout.rstrip()
+
+
+def status_line_path(line: str) -> str:
+    name = line[3:] if len(line) > 3 and line[2] == " " else line[2:]
+    if " -> " in name:
+        return name.split(" -> ", 1)[-1]
+    return name
 
 
 def ensure_no_unrelated_dirty(repo_root: Path) -> None:
     status = porcelain(repo_root, ["--untracked-files=all"])
     if not status:
         return
-    allowed = {f" M {repo_rel(LATEST)}", f"M  {repo_rel(LATEST)}", f"MM {repo_rel(LATEST)}"}
-    disallowed = [line for line in status.splitlines() if line not in allowed]
+    disallowed = [
+        line
+        for line in status.splitlines()
+        if status_line_path(line) != repo_rel(LATEST)
+    ]
     if disallowed:
         raise SyncError(
             "Refusing body pulse because repo has unrelated dirty paths:\n"
