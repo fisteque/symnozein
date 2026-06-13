@@ -8,6 +8,34 @@ messages. Keep the newest items at the top.
 
 ## Latest Implementations
 
+### Codex Autoreply End-To-End Read Test
+
+Verified the automatic Codex inbox to main outbox path after enabling read-only
+local file inspection.
+
+Observed flow:
+
+```text
+codex/processed/2026-06/2026-06-13T165822Z_codex-request-codex-request-20260613-check-agents-md-autoreply-003.md
+bridge/outbox/published/2026-06/2026-06-13T165831Z_codex-autoreply-codex-request-20260613-165822-codex-request-20260613-check-agents-md-autoreply-0.md
+body/bridge/outbox/messages/2026-06-13T165831Z_codex-autoreply-codex-request-20260613-165822-codex-request-20260613-check-agents-md-autoreply-0.md
+```
+
+The request asked Codex to read
+`/home/fiste/Noema/symnozein/body/docs/AGENTS.md` and summarize it. The
+automatic response confirmed the file exists, identified its purpose as a short
+agent orientation document, listed the mirror/runtime/Codex queue boundaries and
+bridge safety anchors, and judged it suitable as a concise agent entry sheet.
+
+This confirmed:
+
+- bridge agent delivered the `codex_request` into the local Codex inbox;
+- `codex-autoreply.timer` ran the worker automatically;
+- `codex exec` used read-only local inspection successfully;
+- the wrapper wrote one `codex_response` into runtime outbox;
+- the source request was archived into `codex/processed/YYYY-MM/`;
+- outbound sync published the response to the GH main outbox tape.
+
 ### Codex Autoreply Read-Only Inspection
 
 Relaxed the autoreply Codex prompt so automatic replies can inspect local files
