@@ -5,6 +5,24 @@ Uchovává posledních **50** záznamů.
 
 ---
 
+## 2026-06-13T15:58:11.819382Z
+
+Zdroj změn:
+- skript: `scripts/update_body_index.py`
+- workflow: `.github/workflows/update_body_index.yml`
+
+➕ přidáno: **2**
+- `bridge/outbox/messages/2026-06-13T111400Z_rpi5_cycle-error-outbound-sync.md`
+- `bridge/outbox/messages/2026-06-13T155524Z_codex-response-agents-md-proposal.md`
+
+🔄 změněno: **1**
+- `bridge/state_summary/latest.md`
+
+❌ odebráno: **0**
+- nic
+
+---
+
 ## 2026-06-13T15:31:43.775055Z
 
 Zdroj změn:
@@ -922,119 +940,3 @@ Zdroj změn:
 - `bridge/outbox/messages/2026-06-05T192109Z_rpi5_cycle-error-outbound-sync.md`
 - `bridge/outbox/messages/2026-06-05T200233Z_rpi5_cycle-error-outbound-sync.md`
 - `bridge/outbox/messages/2026-06-08T184856Z_rpi5_test-runtime-outbox-lifecycle.md`
-
----
-
-## 2026-06-08T20:17:33.964982Z
-
-Zdroj změn:
-- skript: `scripts/update_body_index.py`
-- workflow: `.github/workflows/update_body_index.yml`
-
-➕ přidáno: **0**
-- nic
-
-🔄 změněno: **0**
-- nic
-
-❌ odebráno: **100**
-- `bridge/outbox/messages/2026-05-27T114102Z_rpi5_cycle-error-unknown.md`
-- `bridge/outbox/messages/2026-05-27T115634Z_rpi5_cycle-error-unknown.md`
-- `bridge/outbox/messages/2026-05-27T121203Z_rpi5_cycle-error-unknown.md`
-- `bridge/outbox/messages/2026-05-27T124404Z_rpi5_cycle-error-unknown.md`
-- `bridge/outbox/messages/2026-05-28T023243Z_rpi5_cycle-error-unknown.md`
-- `bridge/outbox/messages/2026-05-30T154139Z_rpi5_cycle-error-unknown.md`
-- `bridge/outbox/messages/2026-06-01T085737Z_rpi5_cycle-error-unknown.md`
-- `bridge/outbox/messages/2026-06-01T191529Z_rpi5_cycle-error-unknown.md`
-- `bridge/outbox/messages/2026-06-01T232829Z_rpi5_cycle-error-unknown.md`
-- `bridge/outbox/messages/2026-06-02T020832Z_rpi5_cycle-error-unknown.md`
-- `bridge/outbox/messages/2026-06-02T133607Z_rpi5_cycle-error-unknown.md`
-- `bridge/outbox/messages/2026-06-02T140739Z_rpi5_cycle-error-unknown.md`
-- `bridge/outbox/messages/2026-06-05T055019Z_rpi5_cycle-error-unknown.md`
-- `bridge/outbox/messages/2026-06-06T152544Z_rpi5_cycle-error-unknown.md`
-- `bridge/outbox/messages/2026-06-06T152614Z_rpi5_cycle-error-unknown.md`
-- `bridge/outbox/messages/2026-06-06T152649Z_rpi5_cycle-error-unknown.md`
-- `bridge/outbox/messages/2026-06-06T152724Z_rpi5_cycle-error-unknown.md`
-- `bridge/outbox/messages/2026-06-06T152754Z_rpi5_cycle-error-unknown.md`
-- `bridge/outbox/messages/2026-06-06T152824Z_rpi5_cycle-error-unknown.md`
-- `bridge/outbox/messages/2026-06-06T152855Z_rpi5_cycle-error-unknown.md`
-- `bridge/outbox/messages/2026-06-06T152925Z_rpi5_cycle-error-unknown.md`
-- `bridge/outbox/messages/2026-06-06T152955Z_rpi5_cycle-error-unknown.md`
-- `bridge/outbox/messages/2026-06-06T153025Z_rpi5_cycle-error-unknown.md`
-- `bridge/outbox/messages/2026-06-06T153055Z_rpi5_cycle-error-unknown.md`
-- `bridge/outbox/messages/2026-06-06T153125Z_rpi5_cycle-error-unknown.md`
-- `bridge/outbox/messages/2026-06-06T153155Z_rpi5_cycle-error-unknown.md`
-- `bridge/outbox/messages/2026-06-06T153225Z_rpi5_cycle-error-unknown.md`
-- `bridge/outbox/messages/2026-06-06T153255Z_rpi5_cycle-error-unknown.md`
-- `bridge/outbox/messages/2026-06-06T153325Z_rpi5_cycle-error-unknown.md`
-- `bridge/outbox/messages/2026-06-06T153355Z_rpi5_cycle-error-unknown.md`
-- `bridge/outbox/messages/2026-06-06T153425Z_rpi5_cycle-error-unknown.md`
-- `bridge/outbox/messages/2026-06-06T153455Z_rpi5_cycle-error-unknown.md`
-- `bridge/outbox/messages/2026-06-06T153525Z_rpi5_cycle-error-unknown.md`
-- `bridge/outbox/messages/2026-06-06T153555Z_rpi5_cycle-error-unknown.md`
-- `bridge/outbox/messages/2026-06-06T153625Z_rpi5_cycle-error-unknown.md`
-- `bridge/outbox/messages/2026-06-06T153700Z_rpi5_cycle-error-unknown.md`
-- `bridge/outbox/messages/2026-06-06T153734Z_rpi5_cycle-error-unknown.md`
-- `bridge/outbox/messages/2026-06-06T153805Z_rpi5_cycle-error-unknown.md`
-- `bridge/outbox/messages/2026-06-06T153835Z_rpi5_cycle-error-unknown.md`
-- `bridge/outbox/messages/2026-06-06T153905Z_rpi5_cycle-error-unknown.md`
-- `bridge/outbox/messages/2026-06-06T153935Z_rpi5_cycle-error-unknown.md`
-- `bridge/outbox/messages/2026-06-06T154005Z_rpi5_cycle-error-unknown.md`
-- `bridge/outbox/messages/2026-06-07T205935Z_rpi5_cycle-error-unknown.md`
-- `bridge/outbox/messages/2026-06-07T210005Z_rpi5_cycle-error-unknown.md`
-- `bridge/outbox/messages/2026-06-07T210035Z_rpi5_cycle-error-unknown.md`
-- `bridge/outbox/messages/2026-06-07T210105Z_rpi5_cycle-error-unknown.md`
-- `bridge/outbox/messages/2026-06-07T210135Z_rpi5_cycle-error-unknown.md`
-- `bridge/outbox/messages/2026-06-07T210205Z_rpi5_cycle-error-unknown.md`
-- `bridge/outbox/messages/2026-06-07T210235Z_rpi5_cycle-error-unknown.md`
-- `bridge/outbox/messages/2026-06-07T210305Z_rpi5_cycle-error-unknown.md`
-- `bridge/outbox/messages/2026-06-07T210335Z_rpi5_cycle-error-unknown.md`
-- `bridge/outbox/messages/2026-06-07T210405Z_rpi5_cycle-error-unknown.md`
-- `bridge/outbox/messages/2026-06-07T210435Z_rpi5_cycle-error-unknown.md`
-- `bridge/outbox/messages/2026-06-07T210505Z_rpi5_cycle-error-unknown.md`
-- `bridge/outbox/messages/2026-06-07T210535Z_rpi5_cycle-error-unknown.md`
-- `bridge/outbox/messages/2026-06-07T210605Z_rpi5_cycle-error-unknown.md`
-- `bridge/outbox/messages/2026-06-07T210635Z_rpi5_cycle-error-unknown.md`
-- `bridge/outbox/messages/2026-06-07T210705Z_rpi5_cycle-error-unknown.md`
-- `bridge/outbox/messages/2026-06-07T210735Z_rpi5_cycle-error-unknown.md`
-- `bridge/outbox/messages/2026-06-07T210805Z_rpi5_cycle-error-unknown.md`
-- `bridge/outbox/messages/2026-06-07T210836Z_rpi5_cycle-error-unknown.md`
-- `bridge/outbox/messages/2026-06-07T210910Z_rpi5_cycle-error-unknown.md`
-- `bridge/outbox/messages/2026-06-07T210944Z_rpi5_cycle-error-unknown.md`
-- `bridge/outbox/messages/2026-06-07T211016Z_rpi5_cycle-error-unknown.md`
-- `bridge/outbox/messages/2026-06-07T211046Z_rpi5_cycle-error-unknown.md`
-- `bridge/outbox/messages/2026-06-07T211121Z_rpi5_cycle-error-unknown.md`
-- `bridge/outbox/messages/2026-06-07T211154Z_rpi5_cycle-error-unknown.md`
-- `bridge/outbox/messages/2026-06-07T211226Z_rpi5_cycle-error-unknown.md`
-- `bridge/outbox/messages/2026-06-07T211256Z_rpi5_cycle-error-unknown.md`
-- `bridge/outbox/messages/2026-06-07T211326Z_rpi5_cycle-error-unknown.md`
-- `bridge/outbox/messages/2026-06-07T211356Z_rpi5_cycle-error-unknown.md`
-- `bridge/outbox/messages/2026-06-07T221711Z_rpi5_cycle-error-unknown.md`
-- `bridge/outbox/messages/2026-06-07T221741Z_rpi5_cycle-error-unknown.md`
-- `bridge/outbox/messages/2026-06-07T221811Z_rpi5_cycle-error-unknown.md`
-- `bridge/outbox/messages/2026-06-07T221841Z_rpi5_cycle-error-unknown.md`
-- `bridge/outbox/messages/2026-06-07T221911Z_rpi5_cycle-error-unknown.md`
-- `bridge/outbox/messages/2026-06-07T221941Z_rpi5_cycle-error-unknown.md`
-- `bridge/outbox/messages/2026-06-07T222011Z_rpi5_cycle-error-unknown.md`
-- `bridge/outbox/messages/2026-06-07T222041Z_rpi5_cycle-error-unknown.md`
-- `bridge/outbox/messages/2026-06-07T222111Z_rpi5_cycle-error-unknown.md`
-- `bridge/outbox/messages/2026-06-07T222141Z_rpi5_cycle-error-unknown.md`
-- `bridge/outbox/messages/2026-06-07T222211Z_rpi5_cycle-error-unknown.md`
-- `bridge/outbox/messages/2026-06-07T222241Z_rpi5_cycle-error-unknown.md`
-- `bridge/outbox/messages/2026-06-07T222311Z_rpi5_cycle-error-unknown.md`
-- `bridge/outbox/messages/2026-06-07T222342Z_rpi5_cycle-error-unknown.md`
-- `bridge/outbox/messages/2026-06-07T222412Z_rpi5_cycle-error-unknown.md`
-- `bridge/outbox/messages/2026-06-07T222442Z_rpi5_cycle-error-unknown.md`
-- `bridge/outbox/messages/2026-06-07T222512Z_rpi5_cycle-error-unknown.md`
-- `bridge/outbox/messages/2026-06-07T222542Z_rpi5_cycle-error-unknown.md`
-- `bridge/outbox/messages/2026-06-07T222612Z_rpi5_cycle-error-unknown.md`
-- `bridge/outbox/messages/2026-06-07T222642Z_rpi5_cycle-error-unknown.md`
-- `bridge/outbox/messages/2026-06-07T222712Z_rpi5_cycle-error-unknown.md`
-- `bridge/outbox/messages/2026-06-07T222742Z_rpi5_cycle-error-unknown.md`
-- `bridge/outbox/messages/2026-06-07T222812Z_rpi5_cycle-error-unknown.md`
-- `bridge/outbox/messages/2026-06-07T222842Z_rpi5_cycle-error-unknown.md`
-- `bridge/outbox/messages/2026-06-07T222912Z_rpi5_cycle-error-unknown.md`
-- `bridge/outbox/messages/2026-06-07T222942Z_rpi5_cycle-error-unknown.md`
-- `bridge/outbox/messages/2026-06-07T223012Z_rpi5_cycle-error-unknown.md`
-- `bridge/outbox/messages/2026-06-07T223042Z_rpi5_cycle-error-unknown.md`
-- `bridge/outbox/messages/2026-06-07T223112Z_rpi5_cycle-error-unknown.md`
