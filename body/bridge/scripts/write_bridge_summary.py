@@ -62,6 +62,13 @@ def load_json(path: Path, *, tolerate_invalid: bool = False) -> dict[str, Any]:
     return data
 
 
+def project_relative(path: Path, project_root: Path) -> str:
+    try:
+        return path.resolve().relative_to(project_root.resolve()).as_posix()
+    except ValueError:
+        return path.name
+
+
 def count_markdown_files(path: Path) -> int:
     if not path.exists():
         return 0
@@ -104,6 +111,55 @@ def parse_iso_datetime(value: Any) -> datetime | None:
     if parsed.tzinfo is None:
         return parsed.replace(tzinfo=UTC)
     return parsed.astimezone(UTC)
+
+
+def source_timestamp(data: dict[str, Any], keys: tuple[str, ...]) -> datetime | None:
+    for key in keys:
+        parsed = parse_iso_datetime(data.get(key))
+        if parsed is not None:
+            return parsed
+    return None
+
+
+def newest_processed_timestamp(processed: dict[str, Any]) -> datetime | None:
+    candidates: list[datetime] = []
+    messages = processed.get("messages")
+    if isinstance(messages, dict):
+        for entry in messages.values():
+            if isinstance(entry, dict):
+                parsed = parse_iso_datetime(entry.get("processed_at"))
+                if parsed is not None:
+                    candidates.append(parsed)
+    errors = processed.get("errors")
+    if isinstance(errors, list):
+        for entry in errors:
+            if isinstance(entry, dict):
+                parsed = parse_iso_datetime(entry.get("processed_at") or entry.get("created_at"))
+                if parsed is not None:
+                    candidates.append(parsed)
+    return max(candidates) if candidates else None
+
+
+def source_freshness_line(
+    label: str,
+    path: Path,
+    project_root: Path,
+    data: dict[str, Any],
+    timestamp: datetime | None,
+    now: datetime,
+) -> str:
+    if not path.exists():
+        status = "missing"
+    elif data.get("_load_error"):
+        status = "invalid"
+    else:
+        status = "ok"
+    timestamp_text = timestamp.isoformat().replace("+00:00", "Z") if timestamp is not None else "(unknown)"
+    age_text = str(max(0, int((now - timestamp).total_seconds()))) if timestamp is not None else "(unknown)"
+    return (
+        f"- {label}: `{status}`; path: `{project_relative(path, project_root)}`; "
+        f"timestamp: `{timestamp_text}`; age seconds: `{age_text}`"
+    )
 
 
 def read_proc_uptime_seconds() -> float | None:
@@ -251,18 +307,82 @@ def extend_body_health_lines(lines: list[str], body_health: dict[str, Any]) -> N
             f"- RAM used percent: `{nested_get(body_health, ('memory', 'used_percent'))}`",
             f"- Swap used percent: `{nested_get(body_health, ('swap', 'used_percent'))}`",
             f"- Root disk used percent: `{nested_get(body_health, ('disk', 'root', 'used_percent'))}`",
-            f"- Body health timer: `{unit_state(body_health, 'noema-body-health.timer')}`",
-            f"- Bridge cycle timer: `{unit_state(body_health, 'bridge-cycle.timer')}`",
-            f"- Codex autoreply timer: `{unit_state(body_health, 'codex-autoreply.timer')}`",
         ]
     )
 
 
+def next_timer_elapse(unit: str) -> str:
+    result = subprocess.run(
+        [
+            "systemctl",
+            "show",
+            unit,
+            "--property=NextElapseUSecRealtime",
+            "--no-pager",
+        ],
+        text=True,
+        stdout=subprocess.PIPE,
+        stderr=subprocess.PIPE,
+    )
+    if result.returncode != 0:
+        return "(unknown)"
+    for line in result.stdout.splitlines():
+        if not line.startswith("NextElapseUSecRealtime="):
+            continue
+        value = line.split("=", 1)[1].strip()
+        return value or "(unknown)"
+    return "(unknown)"
+
+
+def parse_frontmatter(text: str) -> tuple[dict[str, Any], str]:
+    if not text.startswith("---\n"):
+        raise ValueError("missing_frontmatter")
+    try:
+        frontmatter_block, body = text[4:].split("\n---\n", 1)
+    except ValueError as exc:
+        raise ValueError("unclosed_frontmatter") from exc
+    import yaml
+
+    data = yaml.safe_load(frontmatter_block) or {}
+    if not isinstance(data, dict):
+        raise ValueError("frontmatter_not_object")
+    return data, body
+
+
+def count_needs_human_codex_requests(codex_inbox_dir: Path) -> int:
+    if not codex_inbox_dir.exists():
+        return 0
+    try:
+        from codex_autoreply_worker import classify
+    except Exception:
+        classify = None
+
+    count = 0
+    for path in sorted(codex_inbox_dir.glob("*.md")):
+        if path.name.startswith(".") or not path.is_file():
+            continue
+        try:
+            frontmatter, body = parse_frontmatter(path.read_text(encoding="utf-8"))
+            status = classify(frontmatter, body)[0] if classify is not None else "needs_human"
+        except Exception:
+            status = "needs_human"
+        if status == "needs_human":
+            count += 1
+    return count
+
+
 def render_summary(runtime_root: Path, repo_root: Path, project_root: Path, log_lines: int) -> str:
     generated_at = utc_now()
-    processed = load_json(runtime_root / "state" / "processed_messages.json")
-    body_state = load_json(project_root / "state" / "body_state.json", tolerate_invalid=True)
-    body_health = load_json(project_root / "state" / "body_health.json", tolerate_invalid=True)
+    processed_path = runtime_root / "state" / "processed_messages.json"
+    body_state_path = project_root / "state" / "body_state.json"
+    body_health_path = project_root / "state" / "body_health.json"
+    sync_state_path = runtime_root / "state" / "bridge_sync_state.json"
+    pulse_state_path = runtime_root / "state" / "body_pulse_state.json"
+    processed = load_json(processed_path, tolerate_invalid=True)
+    body_state = load_json(body_state_path, tolerate_invalid=True)
+    body_health = load_json(body_health_path, tolerate_invalid=True)
+    sync_state = load_json(sync_state_path, tolerate_invalid=True)
+    pulse_state = load_json(pulse_state_path, tolerate_invalid=True)
     errors = processed.get("errors")
     if not isinstance(errors, list):
         errors = []
@@ -272,9 +392,9 @@ def render_summary(runtime_root: Path, repo_root: Path, project_root: Path, log_
     processed_count = len(messages) if isinstance(messages, dict) else 0
     last_error = errors[-1] if errors else None
 
-    inbox_dir = repo_root / "body/bridge/inbox/messages"
+    inbox_dir = runtime_root / "inbox/messages"
     codex_inbox_dir = project_root / "codex/inbox"
-    outbox_dir = repo_root / "body/bridge/outbox/messages"
+    outbox_dir = runtime_root / "outbox/messages"
 
     body_awake = body_state.get("awake", "(unknown)") if body_state else "(missing)"
     body_status = body_state.get("status", "(unknown)") if body_state else "(missing)"
@@ -288,14 +408,6 @@ def render_summary(runtime_root: Path, repo_root: Path, project_root: Path, log_
         "# Bridge State Summary",
         "",
         f"- Generated at: `{generated_at.isoformat().replace('+00:00', 'Z')}`",
-        f"- Inbox messages: `{count_markdown_files(inbox_dir)}`; latest: `{latest_markdown_file(inbox_dir)}`",
-        f"- Codex runtime inbox files: `{count_files(codex_inbox_dir)}`; latest: `{latest_file(codex_inbox_dir)}`",
-        f"- Outbox messages: `{count_markdown_files(outbox_dir)}`; latest: `{latest_markdown_file(outbox_dir)}`",
-        f"- Last processed message: `{last_message_id}`",
-        f"- Last processed status: `{last_message.get('status', '(unknown)') if last_message else '(none)'}`",
-        f"- Processed count: `{processed_count}`",
-        f"- Error count: `{len(errors)}`",
-        f"- Last error: `{last_error.get('error', '(none)') if isinstance(last_error, dict) else '(none)'}`",
         f"- Body awake: `{body_awake}`",
         f"- Body status: `{body_status}`",
     ]
@@ -306,6 +418,9 @@ def render_summary(runtime_root: Path, repo_root: Path, project_root: Path, log_
     if body_state:
         lines.extend(
             [
+                "",
+                "## Body Heartbeat",
+                "",
                 f"- Body last heartbeat: `{body_state.get('last_hb', '(unknown)')}`",
                 f"- Heartbeat count: `{body_state.get('heartbeat_count', '(unknown)')}`",
                 f"- Heartbeat last gap seconds: `{body_state.get('heartbeat_last_gap_seconds', '(unknown)')}`",
@@ -325,7 +440,81 @@ def render_summary(runtime_root: Path, repo_root: Path, project_root: Path, log_
                 f"- Body watchdog last check: `{body_state.get('watchdog_last_check', '(unknown)')}`",
             ]
         )
+    else:
+        lines.extend(["", "## Body Heartbeat", "", "- Body heartbeat: `(missing)`"])
     extend_body_health_lines(lines, body_health)
+    lines.extend(
+        [
+            "",
+            "## Bridge Sync",
+            "",
+            f"- Last inbound sync: `{sync_state.get('last_inbound_sync', '(missing)')}`",
+            f"- Last outbound sync: `{sync_state.get('last_outbound_sync', '(missing)')}`",
+            f"- Last outbound sync status: `{sync_state.get('last_outbound_sync_status', '(missing)')}`",
+            f"- Last outbound commit: `{sync_state.get('last_outbound_commit', '(missing)')}`",
+            "",
+            "## Queues",
+            "",
+            f"- Bridge inbox pending: `{count_markdown_files(inbox_dir)}`",
+            f"- Bridge outbox pending: `{count_markdown_files(outbox_dir)}`",
+            f"- Codex runtime inbox files: `{count_files(codex_inbox_dir)}`",
+            f"- Needs human count: `{count_needs_human_codex_requests(codex_inbox_dir)}`",
+            f"- Last processed message: `{last_message_id}`",
+            f"- Last processed status: `{last_message.get('status', '(unknown)') if last_message else '(none)'}`",
+            f"- Processed count: `{processed_count}`",
+            f"- Error count: `{len(errors)}`",
+            f"- Last error: `{last_error.get('error', '(none)') if isinstance(last_error, dict) else '(none)'}`",
+            "",
+            "## Pulse",
+            "",
+            f"- Last body pulse: `{pulse_state.get('last_body_pulse', '(missing)')}`",
+            f"- Last pulse commit: `{pulse_state.get('last_pulse_commit', '(missing)')}`",
+            f"- Next scheduled pulse: `{next_timer_elapse('noema-body-pulse.timer')}`",
+            "",
+            "## Source Freshness",
+            "",
+            source_freshness_line(
+                "Body state",
+                body_state_path,
+                project_root,
+                body_state,
+                source_timestamp(body_state, ("last_hb", "watchdog_last_check")),
+                generated_at,
+            ),
+            source_freshness_line(
+                "Body health",
+                body_health_path,
+                project_root,
+                body_health,
+                source_timestamp(body_health, ("generated_at",)),
+                generated_at,
+            ),
+            source_freshness_line(
+                "Processed messages",
+                processed_path,
+                project_root,
+                processed,
+                newest_processed_timestamp(processed),
+                generated_at,
+            ),
+            source_freshness_line(
+                "Bridge sync state",
+                sync_state_path,
+                project_root,
+                sync_state,
+                source_timestamp(sync_state, ("last_outbound_sync", "last_inbound_sync")),
+                generated_at,
+            ),
+            source_freshness_line(
+                "Body pulse state",
+                pulse_state_path,
+                project_root,
+                pulse_state,
+                source_timestamp(pulse_state, ("last_body_pulse", "last_pulse_check")),
+                generated_at,
+            ),
+        ]
+    )
     lines.append("")
     return "\n".join(lines)
 
