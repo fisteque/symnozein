@@ -1,11 +1,11 @@
 {
-  "generated_at": "2026-06-13T18:38:13.855082Z",
+  "generated_at": "2026-06-13T19:01:27.114047Z",
   "source": {
     "script": "scripts/update_body_index.py",
     "workflow": ".github/workflows/update_body_index.yml"
   },
   "kind": "state",
-  "count": 124,
+  "count": 125,
   "files": [
     {
       "path": "SK/SK-001.md",
@@ -186,6 +186,11 @@
       "path": "bridge/inbox/messages/msg-20260611-codex-postman-test-001.md",
       "size": 781,
       "sha256": "ec6871a2f9562bf132a7099f53dcdc7bc5f28adb22e11b6670924c73f81d03e2"
+    },
+    {
+      "path": "bridge/inbox/messages/msg-20260613-cli-setup-body-pulse-001.md",
+      "size": 1859,
+      "sha256": "7ba27f8e9e02660fa48b210dce3b4a79585b05d453b6903c5eda25690485a483"
     },
     {
       "path": "bridge/inbox/messages/msg-20260613-codex-check-agents-md-autoreply-001.md",
