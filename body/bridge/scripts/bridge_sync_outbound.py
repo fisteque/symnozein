@@ -196,7 +196,7 @@ def mirror_outbound(runtime_root: Path, repo_root: Path, *, dry_run: bool) -> li
         print(f"Optional source missing, skipped: {state_source}")
 
     print(
-        "Log tail mirror disabled; runtime log remains local and public tail is "
+        "Log tail mirror disabled; runtime log remains local and public summary is "
         f"available through {repo_root / STATE_SUMMARY_LATEST}."
     )
     mirror_scripts(runtime_root, repo_root, dry_run=dry_run)

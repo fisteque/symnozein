@@ -239,7 +239,8 @@ body/bridge/state_summary/latest.md
 ```
 
 It summarizes selected local state without publishing internal runtime JSON.
-It also includes a filtered bridge log tail. The full runtime log remains local.
+It includes a short body health block derived from local `state/body_health.json`.
+The full runtime log remains local and is not included in `latest.md`.
 
 ### `bridge_watchdog.py`
 
