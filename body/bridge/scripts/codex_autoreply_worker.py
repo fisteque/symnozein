@@ -469,6 +469,7 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument("--codex-bin", default=os.environ.get("NOEMA_CODEX_BIN", "codex"))
     parser.add_argument("--model", default=os.environ.get("NOEMA_CODEX_MODEL"))
     parser.add_argument("--timeout-seconds", type=int, default=int(os.environ.get("NOEMA_CODEX_TIMEOUT_SECONDS", "300")))
+    parser.add_argument("--quiet-empty", action="store_true", help="Exit 0 when the Codex inbox has no pending request.")
     parser.add_argument("--json", action="store_true", help="Emit machine-readable JSON.")
     return parser.parse_args()
 
@@ -529,6 +530,25 @@ def main() -> int:
             print(f"result={result}")
         return 0
     except WorkerError as exc:
+        if args.quiet_empty and str(exc) == "no_pending_codex_requests":
+            output = {
+                "version": 1,
+                "mode": mode_name(args),
+                "generated_at": utc_iso(),
+                "status": "idle",
+                "message": "no_pending_codex_requests",
+                "side_effects": {
+                    "writes_outbox": False,
+                    "archives_request": False,
+                    "commits": False,
+                    "pushes": False,
+                },
+            }
+            if args.json:
+                print(json.dumps(output, ensure_ascii=False, indent=2, sort_keys=True))
+            else:
+                print("codex_autoreply_worker idle: no pending Codex requests")
+            return 0
         output = {
             "version": 1,
             "mode": mode_name(args),
