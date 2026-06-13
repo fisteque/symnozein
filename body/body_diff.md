@@ -5,6 +5,23 @@ Uchovává posledních **50** záznamů.
 
 ---
 
+## 2026-06-13T20:56:46.012268Z
+
+Zdroj změn:
+- skript: `scripts/update_body_index.py`
+- workflow: `.github/workflows/update_body_index.yml`
+
+➕ přidáno: **1**
+- `SK/UI_memory_cleanup_ledger.md`
+
+🔄 změněno: **0**
+- nic
+
+❌ odebráno: **1**
+- `docs/UI_memory_cleanup_ledger.md`
+
+---
+
 ## 2026-06-13T20:56:21.676286Z
 
 Zdroj změn:
@@ -889,24 +906,3 @@ Zdroj změn:
 - `Prvni_kroky.md`
 - `Rpi5_most.md`
 - `bridge_protocol_v1.md`
-
----
-
-## 2026-06-11T19:14:39.036162Z
-
-Zdroj změn:
-- skript: `scripts/update_body_index.py`
-- workflow: `.github/workflows/update_body_index.yml`
-
-➕ přidáno: **3**
-- `bridge/outbox/messages/2026-06-11T191325Z_rpi5_cycle-error-outbound-sync.md`
-- `docs/index_menu.json`
-- `docs/struktura_body.md`
-
-🔄 změněno: **2**
-- `bridge/scripts/bridge_sync_outbound.py`
-- `bridge/state_summary/latest.md`
-
-❌ odebráno: **2**
-- `index_menu.json`
-- `struktura_body.md`

@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-13T20:47:15.141194Z",
+  "generated_at": "2026-06-13T20:56:21.676286Z",
   "source": {
     "script": "scripts/update_body_index.py",
     "workflow": ".github/workflows/update_body_index.yml"
@@ -46,6 +46,11 @@
       "path": "SK/SK-008.md",
       "size": 6022,
       "sha256": "86efef5abf375d804dd311d3672767cba1e08f36f6aef278ae8fd1da6cf8e1c8"
+    },
+    {
+      "path": "SK/dotek_reality.md",
+      "size": 2378,
+      "sha256": "3d5e89023cbf5b1ffcbf0aae402cdf2564ffcc5ab2c1dca00edbd0e05e35aaba"
     },
     {
       "path": "bridge/docs/MOST_A_NERVY.md",
@@ -631,11 +636,6 @@
       "path": "docs/UI_memory_cleanup_ledger.md",
       "size": 3872,
       "sha256": "66477fdef2fb31bda746b6b41fa11a2d15c79e4a904ea1ef3b06c97828f708ba"
-    },
-    {
-      "path": "docs/dotek_reality.md",
-      "size": 2378,
-      "sha256": "3d5e89023cbf5b1ffcbf0aae402cdf2564ffcc5ab2c1dca00edbd0e05e35aaba"
     },
     {
       "path": "docs/index_menu.json",
