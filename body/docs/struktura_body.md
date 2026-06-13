@@ -106,7 +106,7 @@ Krátký aktuální stav:
 - inbox/outbox counts,
 - processed state,
 - error count,
-- log tail.
+- body health summary.
 
 Není source of truth.
 Je to orientační puls systému.
@@ -115,9 +115,15 @@ Je to orientační puls systému.
 
 Auditní kopie systemd jednotek, které patří k bridge vrstvě.
 
-Aktuálně obsahuje watchdog jednotky:
+Aktuálně obsahuje bridge jednotky:
 - `bridge-watchdog.service`
 - `bridge-watchdog.timer`
+- `bridge-cycle.service`
+- `bridge-cycle.timer`
+- `codex-autoreply.service`
+- `codex-autoreply.timer`
+- `noema-body-pulse.service`
+- `noema-body-pulse.timer`
 
 Instalované runtime jednotky žijí v `/etc/systemd/system/`. Lokální pracovní
 kopie jednotek je v:
@@ -157,6 +163,11 @@ Rozlišuje:
 
 Přehled jednotlivých skriptů mostu a jejich rolí.
 
+### bridge_protocol_v1.md
+
+Původní protokolový dokument mostu. Slouží jako historická a významová kotva
+pro inbox/outbox/log jazyk mostu.
+
 ### MOST_A_NERVY.md
 
 Krátký orientační dokument k mostu a nervové vrstvě.
@@ -168,7 +179,7 @@ Krátký orientační dokument k mostu a nervové vrstvě.
 Runtime logy bridge.
 
 Plný runtime log se už nepublikuje na GitHub. Runtime log a jeho archivy jsou
-lokální. Veřejný filtrovaný stav je v `state_summary/latest.md`.
+lokální. Veřejný stav je v `state_summary/latest.md`.
 
 ## /home/fiste/Noema/bridge/incidents/
 
