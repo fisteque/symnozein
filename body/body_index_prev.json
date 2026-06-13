@@ -1,11 +1,11 @@
 {
-  "generated_at": "2026-06-13T16:05:06.729004Z",
+  "generated_at": "2026-06-13T16:08:14.030912Z",
   "source": {
     "script": "scripts/update_body_index.py",
     "workflow": ".github/workflows/update_body_index.yml"
   },
   "kind": "state",
-  "count": 110,
+  "count": 113,
   "files": [
     {
       "path": "SK/SK-001.md",
@@ -44,13 +44,13 @@
     },
     {
       "path": "bridge/docs/bridge_scripts.md",
-      "size": 9209,
-      "sha256": "26fcd7df99ba27064635945a80d2281301b87a901b8fad873961d4c11e03e09c"
+      "size": 10099,
+      "sha256": "0a846ec7d94123ff747edb78ff2909a01f3e5b8545554919df594d4774d1b4d4"
     },
     {
       "path": "bridge/docs/implementation_ledger.md",
-      "size": 36234,
-      "sha256": "86d8451b6ded91aaaf4087416782bbc1383edad80a2cfe199a36a746a2ea6c8d"
+      "size": 37263,
+      "sha256": "57ace6d9099b2d4d9fc4857b2fc0ae725058c86299baa66f1a95d294f267636e"
     },
     {
       "path": "bridge/docs/known_limits.md",
@@ -358,6 +358,11 @@
       "sha256": "7bd3e35464cc3c446d9597dcb153fee784b4077538a57dff73c2e66e69c15294"
     },
     {
+      "path": "bridge/outbox/messages/2026-06-13T160526Z_rpi5_cycle-error-outbound-sync.md",
+      "size": 295,
+      "sha256": "9d5045f63b9c45c4487d4e67c2c684d76c3c860d6f60523925efd5c6b0bfc0ba"
+    },
+    {
       "path": "bridge/scripts/.gitignore",
       "size": 23,
       "sha256": "6feaded4e28ea86e001a6751b4e3d960e8b7c31b9616ff9936b79297086e809b"
@@ -489,8 +494,8 @@
     },
     {
       "path": "bridge/state_summary/latest.md",
-      "size": 5892,
-      "sha256": "a85746b3415b846c07895600e0b7c9fe10f1d6d796e3c8262f17573f3ba48e3a"
+      "size": 7068,
+      "sha256": "da858df5a3e801c40268e8808986e0ddad9e8867deb31508c1dcc587151376cb"
     },
     {
       "path": "bridge/systemd/bridge-cycle.service",
@@ -511,6 +516,16 @@
       "path": "bridge/systemd/bridge-watchdog.timer",
       "size": 200,
       "sha256": "bf9b19b37c8c9d47655ee5781f78f0a5c25a3aa21335a082e8b0d2a5618d6827"
+    },
+    {
+      "path": "bridge/systemd/codex-autoreply.service",
+      "size": 761,
+      "sha256": "02c844711a5ce187324e2654d763dae5d33c6a2fdadd8e60da3c584c9cc7ea4c"
+    },
+    {
+      "path": "bridge/systemd/codex-autoreply.timer",
+      "size": 207,
+      "sha256": "9abb89d331c0f0fd17ccf3a67c3d47bf12977b452e162fd3a32394735da648b1"
     },
     {
       "path": "docs/UI_memory_cleanup_ledger.md",
