@@ -27,13 +27,14 @@ Before changing bridge or body behavior, read the relevant orientation files:
 - `body/bridge/docs/bridge_scripts.md`
 - `body/docs/index_menu.json`
 - `body/docs/struktura_body.md`
-- `body/docs/dotek_reality.md`
 
 For current bridge status, inspect:
 
 - `body/bridge/state_summary/latest.md`
 
-Do not use `body/docs/UI_memory_cleanup_ledger.md` as a general agent instruction source.
+Do not use `body/SK/` files as a general Codex operating manual. They are Noema
+orientation anchors and relationship/state memory, not bridge runtime
+instructions.
 
 ## Runtime Boundaries
 
