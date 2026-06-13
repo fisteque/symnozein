@@ -3,6 +3,7 @@
 from __future__ import annotations
 
 import argparse
+import json
 import os
 import subprocess
 import sys
@@ -25,6 +26,7 @@ from bridge_sync_common import (
 SCRIPT_DIR = Path(__file__).resolve().parent
 LATEST = STATE_SUMMARY / "latest.md"
 COMMIT_MESSAGE = "Pulse body state to tape"
+PULSE_STATE_FILE = Path("state/body_pulse_state.json")
 
 
 def parse_args() -> argparse.Namespace:
@@ -47,6 +49,59 @@ def git_push_env() -> dict[str, str]:
     if env.get("GITHUB_USER") and env.get("GITHUB_TOKEN"):
         env["GIT_ASKPASS"] = str(SCRIPT_DIR / "git_askpass.py")
     return env
+
+
+def utc_iso() -> str:
+    from datetime import UTC, datetime
+
+    return datetime.now(UTC).isoformat().replace("+00:00", "Z")
+
+
+def load_json(path: Path) -> dict[str, object]:
+    if not path.exists():
+        return {"version": 1}
+    try:
+        with path.open("r", encoding="utf-8") as handle:
+            data = json.load(handle)
+    except (OSError, json.JSONDecodeError):
+        return {"version": 1}
+    if not isinstance(data, dict):
+        return {"version": 1}
+    data.setdefault("version", 1)
+    return data
+
+
+def atomic_write_json(path: Path, data: dict[str, object], runtime_root: Path) -> None:
+    safe_path = ensure_inside(path, runtime_root)
+    safe_path.parent.mkdir(parents=True, exist_ok=True)
+    tmp_path = ensure_inside(safe_path.with_name(f".{safe_path.name}.tmp-{os.getpid()}"), runtime_root)
+    with tmp_path.open("w", encoding="utf-8") as handle:
+        json.dump(data, handle, ensure_ascii=False, indent=2, sort_keys=True)
+        handle.write("\n")
+        handle.flush()
+        os.fsync(handle.fileno())
+    tmp_path.replace(safe_path)
+
+
+def record_pulse_state(
+    runtime_root: Path,
+    *,
+    status: str,
+    commit_hash: str | None = None,
+    error: str | None = None,
+) -> None:
+    path = ensure_inside(runtime_root / PULSE_STATE_FILE, runtime_root)
+    state = load_json(path)
+    state["last_pulse_status"] = status
+    state["last_pulse_check"] = utc_iso()
+    if commit_hash:
+        state["last_body_pulse"] = state["last_pulse_check"]
+        state["last_pulse_commit"] = commit_hash
+    if error:
+        state["last_pulse_error"] = error
+    else:
+        state.pop("last_pulse_error", None)
+    atomic_write_json(path, state, runtime_root)
 
 
 def run_step(name: str, args: list[str], *, env: dict[str, str] | None = None) -> None:
@@ -163,6 +218,8 @@ def pulse(args: argparse.Namespace) -> dict[str, object]:
         status = porcelain(repo_root, ["--", repo_rel(LATEST)])
         if not status:
             print("No latest.md change to pulse.")
+            if not args.dry_run:
+                record_pulse_state(runtime_root, status="no_change")
             return {"status": "no_change", "path": repo_rel(LATEST)}
 
         if args.dry_run:
@@ -187,6 +244,7 @@ def pulse(args: argparse.Namespace) -> dict[str, object]:
             env=git_push_env(),
         )
         print_git_output(push)
+        record_pulse_state(runtime_root, status="pushed", commit_hash=commit_hash)
         return {
             "status": "pushed",
             "path": str(latest_path),
@@ -202,6 +260,11 @@ def main() -> int:
         print(result)
         return 0
     except SyncError as exc:
+        try:
+            if not args.dry_run:
+                record_pulse_state(args.runtime_root.resolve(), status="error", error=str(exc))
+        except Exception as state_exc:
+            print(f"WARN: failed to write body pulse state: {state_exc}", file=sys.stderr)
         print(f"ERROR: {exc}", file=sys.stderr)
         return 2
 
