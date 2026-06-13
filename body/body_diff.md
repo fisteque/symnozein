@@ -5,6 +5,23 @@ Uchovává posledních **50** záznamů.
 
 ---
 
+## 2026-06-13T18:18:48.924969Z
+
+Zdroj změn:
+- skript: `scripts/update_body_index.py`
+- workflow: `.github/workflows/update_body_index.yml`
+
+➕ přidáno: **1**
+- `bridge/inbox/messages/msg-20260613-codex-forward-body-health-json-001.md`
+
+🔄 změněno: **0**
+- nic
+
+❌ odebráno: **0**
+- nic
+
+---
+
 ## 2026-06-13T18:10:30.081457Z
 
 Zdroj změn:
@@ -895,24 +912,6 @@ Zdroj změn:
 
 🔄 změněno: **2**
 - `bridge/state_summary/codex.md`
-- `bridge/state_summary/latest.md`
-
-❌ odebráno: **0**
-- nic
-
----
-
-## 2026-06-08T22:04:07.367696Z
-
-Zdroj změn:
-- skript: `scripts/update_body_index.py`
-- workflow: `.github/workflows/update_body_index.yml`
-
-➕ přidáno: **1**
-- `bridge/outbox/messages/2026-06-08T210426Z_rpi5_cycle-error-outbound-sync.md`
-
-🔄 změněno: **2**
-- `bridge/scripts/bridge_sync_outbound.py`
 - `bridge/state_summary/latest.md`
 
 ❌ odebráno: **0**
