@@ -8,6 +8,40 @@ messages. Keep the newest items at the top.
 
 ## Latest Implementations
 
+### Codex Autoreply Timer Preparation
+
+Prepared optional systemd automation for the Codex autoreply worker:
+
+```text
+bridge/systemd/codex-autoreply.service
+bridge/systemd/codex-autoreply.timer
+```
+
+The service is a oneshot wrapper around:
+
+```text
+/usr/bin/python3 /home/fiste/Noema/bridge/scripts/codex_autoreply_worker.py --run-codex --quiet-empty --json
+```
+
+The timer cadence is 60 seconds. The unit files are mirrored under:
+
+```text
+body/bridge/systemd/
+```
+
+Safety choices:
+
+- empty Codex inbox returns `idle` with exit code 0 via `--quiet-empty`;
+- `--allow-needs-human` is not enabled in the service, so risky requests remain
+  pending for manual review;
+- writable paths are limited to Codex inbox/processed, bridge outbox/messages,
+  bridge state, and Codex CLI state under `/home/fiste/.codex`;
+- no service was installed or enabled in this step.
+
+Verified by `py_compile`, `codex_autoreply_worker.py --run-codex --quiet-empty
+--json` on an empty inbox, `systemd-analyze verify`, and runtime/mirror file
+comparison.
+
 ### Codex Autoreply Worker Stub Phase
 
 Added a narrow local worker:

@@ -1,0 +1,27 @@
+[Unit]
+Description=Noema Codex autoreply worker
+After=network-online.target bridge-cycle.service
+Wants=network-online.target
+
+[Service]
+Type=oneshot
+User=fiste
+WorkingDirectory=/home/fiste/Noema
+ExecStart=/usr/bin/python3 /home/fiste/Noema/bridge/scripts/codex_autoreply_worker.py --run-codex --quiet-empty --json
+StandardOutput=journal
+StandardError=journal
+SyslogIdentifier=noema-codex-autoreply
+TimeoutStartSec=420
+Restart=no
+Nice=10
+NoNewPrivileges=true
+PrivateTmp=true
+ProtectSystem=full
+ReadWritePaths=/home/fiste/Noema/bridge/state
+ReadWritePaths=/home/fiste/Noema/bridge/outbox/messages
+ReadWritePaths=/home/fiste/Noema/codex/inbox
+ReadWritePaths=/home/fiste/Noema/codex/processed
+ReadWritePaths=/home/fiste/.codex
+
+[Install]
+WantedBy=multi-user.target

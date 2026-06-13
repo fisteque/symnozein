@@ -1,0 +1,12 @@
+[Unit]
+Description=Run Noema Codex autoreply worker every 60 seconds
+
+[Timer]
+OnBootSec=60s
+OnUnitActiveSec=60s
+AccuracySec=5s
+Unit=codex-autoreply.service
+Persistent=false
+
+[Install]
+WantedBy=timers.target

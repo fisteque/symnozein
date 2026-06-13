@@ -26,6 +26,8 @@ body/bridge/systemd/
 
 Current mirrored unit files:
 
+- `codex-autoreply.service`
+- `codex-autoreply.timer`
 - `bridge-cycle.service`
 - `bridge-cycle.timer`
 - `bridge-watchdog.service`
@@ -217,6 +219,9 @@ It does not commit, push, start services, or process more than one request per
 run. Requests classified as `needs_human` require explicit
 `--allow-needs-human` before `--run-codex` will execute.
 
+For timer use it also supports `--quiet-empty`, where an empty Codex inbox exits
+successfully with an idle JSON result.
+
 ## Summary And Watchdog
 
 ### `write_bridge_summary.py`
@@ -262,6 +267,31 @@ In this mode the service writes only local state and incident records. It does
 not write `bridge/outbox/messages/`.
 
 ## Systemd Units
+
+### `codex-autoreply.service`
+
+Runs the Codex autoreply worker as a oneshot service:
+
+```text
+/usr/bin/python3 /home/fiste/Noema/bridge/scripts/codex_autoreply_worker.py --run-codex --quiet-empty --json
+```
+
+The installed command intentionally does not include `--allow-needs-human`, so
+riskier requests remain in the Codex inbox for manual review.
+
+Writable paths are limited to:
+
+- `/home/fiste/Noema/bridge/state`
+- `/home/fiste/Noema/bridge/outbox/messages`
+- `/home/fiste/Noema/codex/inbox`
+- `/home/fiste/Noema/codex/processed`
+- `/home/fiste/.codex`
+
+### `codex-autoreply.timer`
+
+Triggers `codex-autoreply.service` every 60 seconds.
+
+The timer is prepared but should be manually tested before enable/start.
 
 ### `bridge-cycle.service`
 
