@@ -14,45 +14,6 @@ from typing import Any
 from bridge_sync_common import DEFAULT_PROJECT_ROOT, STATE_SUMMARY, SyncError, add_common_args, ensure_inside, ensure_repo
 
 
-LOG_TAIL_SCAN_MULTIPLIER = 4
-LOG_TAIL_READ_CHUNK_BYTES = 8192
-PUBLIC_LOG_INCLUDE_MARKERS = (
-    "[WARN]",
-    "[ERROR]",
-    "== inbound sync ==",
-    "== bridge agent ==",
-    "== write bridge summary ==",
-    "== outbound sync ==",
-    "Bridge cycle lock acquired",
-    "Bridge cycle complete.",
-    "Rotated runtime bridge log",
-    "Body state unchanged",
-    "Body state change",
-    "Pending message count remaining",
-    "Processed message count",
-    "Reply written",
-    "Task run",
-    "Cycle error",
-)
-PUBLIC_LOG_EXCLUDE_MARKERS = (
-    "Already processed:",
-    "Bridge root:",
-    "Body root:",
-    "Fetching origin main",
-    "From https://github.com/",
-    "No inbound changes for",
-    "Optional source missing, skipped:",
-    "Log tail mirror disabled",
-    "Scripts mirror complete.",
-    "Staged outbound changes:",
-    "Commit message in code:",
-    "Local branch is not behind remote",
-    "Only logs/state_summary changed",
-    "* branch            main       -> FETCH_HEAD",
-    "Wrote bridge summary:",
-)
-
-
 def utc_iso() -> str:
     return datetime.now(UTC).isoformat().replace("+00:00", "Z")
 
@@ -70,7 +31,7 @@ def parse_args() -> argparse.Namespace:
         default=DEFAULT_PROJECT_ROOT,
         help=f"Project root containing state/body_state.json. Default: {DEFAULT_PROJECT_ROOT}",
     )
-    parser.add_argument("--log-lines", type=int, default=60, help="Number of filtered bridge.log tail lines to include.")
+    parser.add_argument("--log-lines", type=int, default=60, help="Deprecated no-op kept for compatibility.")
     return parser.parse_args()
 
 
@@ -99,42 +60,6 @@ def load_json(path: Path, *, tolerate_invalid: bool = False) -> dict[str, Any]:
             return {"_load_error": f"JSON file must contain an object: {path}"}
         raise SyncError(f"JSON file must contain an object: {path}")
     return data
-
-
-def tail_lines(path: Path, limit: int) -> list[str]:
-    if limit <= 0 or not path.exists():
-        return []
-    with path.open("rb") as handle:
-        handle.seek(0, 2)
-        position = handle.tell()
-        buffer = b""
-        lines: list[bytes] = []
-        while position > 0 and len(lines) <= limit:
-            read_size = min(LOG_TAIL_READ_CHUNK_BYTES, position)
-            position -= read_size
-            handle.seek(position)
-            buffer = handle.read(read_size) + buffer
-            lines = buffer.splitlines()
-    return [line.decode("utf-8", errors="replace") for line in lines[-limit:]]
-
-
-def include_public_log_line(line: str) -> bool:
-    if any(marker in line for marker in PUBLIC_LOG_INCLUDE_MARKERS):
-        return True
-    if any(marker in line for marker in PUBLIC_LOG_EXCLUDE_MARKERS):
-        return False
-    return line.startswith("[") and "[cycle]" in line
-
-
-def public_log_tail(path: Path, limit: int) -> list[str]:
-    if limit <= 0:
-        return []
-    scan_limit = max(limit, limit * LOG_TAIL_SCAN_MULTIPLIER)
-    raw_tail = tail_lines(path, scan_limit)
-    filtered = [line for line in raw_tail if include_public_log_line(line)]
-    if filtered:
-        return filtered[-limit:]
-    return raw_tail[-min(limit, 10):]
 
 
 def count_markdown_files(path: Path) -> int:
@@ -282,10 +207,62 @@ def last_processed_message(processed: dict[str, Any]) -> tuple[str, dict[str, An
     return entries[-1]
 
 
+def nested_get(data: dict[str, Any], path: tuple[str, ...], default: Any = "(unknown)") -> Any:
+    current: Any = data
+    for key in path:
+        if not isinstance(current, dict):
+            return default
+        current = current.get(key)
+    if current is None:
+        return default
+    return current
+
+
+def unit_state(body_health: dict[str, Any], unit: str) -> str:
+    item = nested_get(body_health, ("units", "items", unit), {})
+    if not isinstance(item, dict):
+        return "(unknown)"
+    active = item.get("ActiveState") or "(unknown)"
+    sub = item.get("SubState")
+    return f"{active}/{sub}" if sub else str(active)
+
+
+def extend_body_health_lines(lines: list[str], body_health: dict[str, Any]) -> None:
+    lines.extend(["", "## Body Health", ""])
+    if not body_health:
+        lines.append("- Body health: `(missing)`")
+        return
+
+    load_avg = body_health.get("load_average")
+    if isinstance(load_avg, dict):
+        load_text = f"{load_avg.get('1m', '(unknown)')} / {load_avg.get('5m', '(unknown)')} / {load_avg.get('15m', '(unknown)')}"
+    else:
+        load_text = "(unknown)"
+
+    health_load_error = body_health.get("_load_error")
+    if health_load_error:
+        lines.append(f"- Body health read warning: `{health_load_error}`")
+
+    lines.extend(
+        [
+            f"- Health generated at: `{body_health.get('generated_at', '(unknown)')}`",
+            f"- CPU temperature C: `{body_health.get('cpu_temperature_c', '(unknown)')}`",
+            f"- Load average 1m / 5m / 15m: `{load_text}`",
+            f"- RAM used percent: `{nested_get(body_health, ('memory', 'used_percent'))}`",
+            f"- Swap used percent: `{nested_get(body_health, ('swap', 'used_percent'))}`",
+            f"- Root disk used percent: `{nested_get(body_health, ('disk', 'root', 'used_percent'))}`",
+            f"- Body health timer: `{unit_state(body_health, 'noema-body-health.timer')}`",
+            f"- Bridge cycle timer: `{unit_state(body_health, 'bridge-cycle.timer')}`",
+            f"- Codex autoreply timer: `{unit_state(body_health, 'codex-autoreply.timer')}`",
+        ]
+    )
+
+
 def render_summary(runtime_root: Path, repo_root: Path, project_root: Path, log_lines: int) -> str:
     generated_at = utc_now()
     processed = load_json(runtime_root / "state" / "processed_messages.json")
     body_state = load_json(project_root / "state" / "body_state.json", tolerate_invalid=True)
+    body_health = load_json(project_root / "state" / "body_health.json", tolerate_invalid=True)
     errors = processed.get("errors")
     if not isinstance(errors, list):
         errors = []
@@ -298,7 +275,6 @@ def render_summary(runtime_root: Path, repo_root: Path, project_root: Path, log_
     inbox_dir = repo_root / "body/bridge/inbox/messages"
     codex_inbox_dir = project_root / "codex/inbox"
     outbox_dir = repo_root / "body/bridge/outbox/messages"
-    log_tail = public_log_tail(runtime_root / "logs" / "bridge.log", log_lines)
 
     body_awake = body_state.get("awake", "(unknown)") if body_state else "(missing)"
     body_status = body_state.get("status", "(unknown)") if body_state else "(missing)"
@@ -349,9 +325,8 @@ def render_summary(runtime_root: Path, repo_root: Path, project_root: Path, log_
                 f"- Body watchdog last check: `{body_state.get('watchdog_last_check', '(unknown)')}`",
             ]
         )
-    lines.extend(["", "## Bridge Log Tail", "", f"Filtered runtime tail, max {log_lines} lines.", "", "```text"])
-    lines.extend(log_tail or ["(no log lines)"])
-    lines.extend(["```", ""])
+    extend_body_health_lines(lines, body_health)
+    lines.append("")
     return "\n".join(lines)
 
 
