@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-13T19:53:30.573799Z",
+  "generated_at": "2026-06-13T20:42:21.400096Z",
   "source": {
     "script": "scripts/update_body_index.py",
     "workflow": ".github/workflows/update_body_index.yml"
@@ -51,6 +51,11 @@
       "path": "bridge/docs/MOST_A_NERVY.md",
       "size": 366,
       "sha256": "4bdfc93d9aeb9926d1c0f8015f6d742b0e4878aefdbe957748cb7c5cd8801216"
+    },
+    {
+      "path": "bridge/docs/bridge_protocol_v1.md",
+      "size": 1823,
+      "sha256": "081c4cdebee75e6e02aad211999b3b772d6c60fc854c4b8003b9b686a2d3073a"
     },
     {
       "path": "bridge/docs/bridge_scripts.md",
@@ -575,7 +580,7 @@
     {
       "path": "bridge/state_summary/latest.md",
       "size": 1622,
-      "sha256": "4c3a71a1ea549c14dc3720753ab34c2ac302943402508bc569f9dd998921653b"
+      "sha256": "47eaf384293c263ef8208d2f60006a27c45d0731124ad1ff5d725cc881b04fbd"
     },
     {
       "path": "bridge/systemd/bridge-cycle.service",
@@ -626,11 +631,6 @@
       "path": "docs/UI_memory_cleanup_ledger.md",
       "size": 3872,
       "sha256": "66477fdef2fb31bda746b6b41fa11a2d15c79e4a904ea1ef3b06c97828f708ba"
-    },
-    {
-      "path": "docs/bridge_protocol_v1.md",
-      "size": 1823,
-      "sha256": "081c4cdebee75e6e02aad211999b3b772d6c60fc854c4b8003b9b686a2d3073a"
     },
     {
       "path": "docs/dotek_reality.md",
