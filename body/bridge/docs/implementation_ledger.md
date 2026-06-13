@@ -8,6 +8,17 @@ messages. Keep the newest items at the top.
 
 ## Latest Implementations
 
+### Codex Autoreply Read-Only Inspection
+
+Relaxed the autoreply Codex prompt so automatic replies can inspect local files
+read-only under `/home/fiste/Noema` when that is necessary to answer a request.
+
+The worker still forbids edits, commits, pushes, deletes, installs, service
+restarts, and runtime state changes. The systemd service remains unchanged:
+`codex exec` still runs with `approval_policy="never"` and `--sandbox
+read-only`, while the Python wrapper remains the only component that writes the
+final response into `bridge/outbox/messages/` and archives the source request.
+
 ### Codex Autoreply Timer Preparation
 
 Prepared optional systemd automation for the Codex autoreply worker:

@@ -222,6 +222,12 @@ run. Requests classified as `needs_human` require explicit
 For timer use it also supports `--quiet-empty`, where an empty Codex inbox exits
 successfully with an idle JSON result.
 
+In `--run-codex` mode the worker prompt permits read-only inspection of local
+files under `/home/fiste/Noema` when needed to answer a request. It still
+forbids edits, commits, pushes, deletes, installs, service restarts, and runtime
+state changes; the wrapper remains the only writer to the bridge outbox and
+Codex processed archive.
+
 ## Summary And Watchdog
 
 ### `write_bridge_summary.py`
