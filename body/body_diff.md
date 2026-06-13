@@ -5,6 +5,23 @@ Uchovává posledních **50** záznamů.
 
 ---
 
+## 2026-06-13T16:49:50.704878Z
+
+Zdroj změn:
+- skript: `scripts/update_body_index.py`
+- workflow: `.github/workflows/update_body_index.yml`
+
+➕ přidáno: **1**
+- `bridge/inbox/messages/msg-20260613-codex-check-agents-md-autoreply-002.md`
+
+🔄 změněno: **0**
+- nic
+
+❌ odebráno: **0**
+- nic
+
+---
+
 ## 2026-06-13T16:43:21.233488Z
 
 Zdroj změn:
@@ -884,23 +901,6 @@ Zdroj změn:
 ---
 
 ## 2026-06-08T21:00:58.522626Z
-
-Zdroj změn:
-- skript: `scripts/update_body_index.py`
-- workflow: `.github/workflows/update_body_index.yml`
-
-➕ přidáno: **0**
-- nic
-
-🔄 změněno: **1**
-- `bridge/docs/MOST_A_NERVY.md`
-
-❌ odebráno: **0**
-- nic
-
----
-
-## 2026-06-08T20:39:38.832709Z
 
 Zdroj změn:
 - skript: `scripts/update_body_index.py`
