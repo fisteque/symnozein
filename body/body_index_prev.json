@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-13T16:50:52.050138Z",
+  "generated_at": "2026-06-13T16:55:08.163115Z",
   "source": {
     "script": "scripts/update_body_index.py",
     "workflow": ".github/workflows/update_body_index.yml"
@@ -44,13 +44,13 @@
     },
     {
       "path": "bridge/docs/bridge_scripts.md",
-      "size": 10099,
-      "sha256": "0a846ec7d94123ff747edb78ff2909a01f3e5b8545554919df594d4774d1b4d4"
+      "size": 10434,
+      "sha256": "3550a87d70c017a00d5676319217b7b8f0f78f52a1d626e5b9d6b7e67f50095e"
     },
     {
       "path": "bridge/docs/implementation_ledger.md",
-      "size": 37263,
-      "sha256": "57ace6d9099b2d4d9fc4857b2fc0ae725058c86299baa66f1a95d294f267636e"
+      "size": 37848,
+      "sha256": "c22ced5e2bee86b0d3d99c5cb8e3dbed24d9dabeddef6b8404c038ca64cf62f7"
     },
     {
       "path": "bridge/docs/known_limits.md",
@@ -429,8 +429,8 @@
     },
     {
       "path": "bridge/scripts/codex_autoreply_worker.py",
-      "size": 20253,
-      "sha256": "c10a16e8c97446ce487d6a29487a6107e79f66d6b677f28e118374c54c81a697"
+      "size": 20406,
+      "sha256": "fbd0056651235ee88dc895c5402845be4460980177995478ecc871fb7cab8cdd"
     },
     {
       "path": "bridge/scripts/codex_inbox_reader.py",
@@ -519,8 +519,8 @@
     },
     {
       "path": "bridge/state_summary/latest.md",
-      "size": 5465,
-      "sha256": "16dbdde0f79fc11560c9ab416f606450588226dd80d7e57cdefa71e2ca5bda14"
+      "size": 5959,
+      "sha256": "d606252d2e6cf33a671ac80c1bda04cc9e2045d4501771af907118bdb6f74f38"
     },
     {
       "path": "bridge/systemd/bridge-cycle.service",
