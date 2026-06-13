@@ -1,11 +1,11 @@
 {
-  "generated_at": "2026-06-13T16:19:55.205156Z",
+  "generated_at": "2026-06-13T16:21:48.097054Z",
   "source": {
     "script": "scripts/update_body_index.py",
     "workflow": ".github/workflows/update_body_index.yml"
   },
   "kind": "state",
-  "count": 114,
+  "count": 115,
   "files": [
     {
       "path": "SK/SK-001.md",
@@ -531,6 +531,11 @@
       "path": "bridge/systemd/codex-autoreply.timer",
       "size": 207,
       "sha256": "9abb89d331c0f0fd17ccf3a67c3d47bf12977b452e162fd3a32394735da648b1"
+    },
+    {
+      "path": "docs/AGENTS.md",
+      "size": 2840,
+      "sha256": "e4326cce29f7fae4bee08786ffe3a3660fc43803f837db52c36cc9dc9c8a9630"
     },
     {
       "path": "docs/UI_memory_cleanup_ledger.md",

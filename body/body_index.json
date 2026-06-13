@@ -1,11 +1,11 @@
 {
-  "generated_at": "2026-06-13T16:21:48.097054Z",
+  "generated_at": "2026-06-13T16:41:32.397942Z",
   "source": {
     "script": "scripts/update_body_index.py",
     "workflow": ".github/workflows/update_body_index.yml"
   },
   "kind": "state",
-  "count": 115,
+  "count": 116,
   "files": [
     {
       "path": "SK/SK-001.md",
@@ -181,6 +181,11 @@
       "path": "bridge/inbox/messages/msg-20260611-codex-postman-test-001.md",
       "size": 781,
       "sha256": "ec6871a2f9562bf132a7099f53dcdc7bc5f28adb22e11b6670924c73f81d03e2"
+    },
+    {
+      "path": "bridge/inbox/messages/msg-20260613-codex-check-agents-md-autoreply-001.md",
+      "size": 755,
+      "sha256": "a63ca61e2f56c3771f971a515fc07681a04f481e343892fa978f6f7a558b1404"
     },
     {
       "path": "bridge/inbox/messages/msg-20260613-codex-review-agents-md-proposal-001.md",

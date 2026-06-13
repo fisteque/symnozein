@@ -5,6 +5,23 @@ Uchovává posledních **50** záznamů.
 
 ---
 
+## 2026-06-13T16:41:32.397942Z
+
+Zdroj změn:
+- skript: `scripts/update_body_index.py`
+- workflow: `.github/workflows/update_body_index.yml`
+
+➕ přidáno: **1**
+- `bridge/inbox/messages/msg-20260613-codex-check-agents-md-autoreply-001.md`
+
+🔄 změněno: **0**
+- nic
+
+❌ odebráno: **0**
+- nic
+
+---
+
 ## 2026-06-13T16:21:48.097054Z
 
 Zdroj změn:
@@ -897,21 +914,3 @@ Zdroj změn:
 
 ❌ odebráno: **1**
 - `bridge/outbox/messages/2026-06-08T203138Z_rpi5_bridge-watchdog-bridge_service_failed.md`
-
----
-
-## 2026-06-08T20:32:33.084376Z
-
-Zdroj změn:
-- skript: `scripts/update_body_index.py`
-- workflow: `.github/workflows/update_body_index.yml`
-
-➕ přidáno: **0**
-- nic
-
-🔄 změněno: **2**
-- `bridge/scripts/bridge_watchdog.py`
-- `bridge/state_summary/latest.md`
-
-❌ odebráno: **0**
-- nic
