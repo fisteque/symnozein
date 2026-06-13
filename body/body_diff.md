@@ -5,6 +5,23 @@ Uchovává posledních **50** záznamů.
 
 ---
 
+## 2026-06-13T15:31:43.775055Z
+
+Zdroj změn:
+- skript: `scripts/update_body_index.py`
+- workflow: `.github/workflows/update_body_index.yml`
+
+➕ přidáno: **1**
+- `bridge/inbox/messages/msg-20260613-codex-review-agents-md-proposal-001.md`
+
+🔄 změněno: **0**
+- nic
+
+❌ odebráno: **0**
+- nic
+
+---
+
 ## 2026-06-13T14:48:34.257197Z
 
 Zdroj změn:
@@ -1021,20 +1038,3 @@ Zdroj změn:
 - `bridge/outbox/messages/2026-06-07T223012Z_rpi5_cycle-error-unknown.md`
 - `bridge/outbox/messages/2026-06-07T223042Z_rpi5_cycle-error-unknown.md`
 - `bridge/outbox/messages/2026-06-07T223112Z_rpi5_cycle-error-unknown.md`
-
----
-
-## 2026-06-08T20:07:53.095176Z
-
-Zdroj změn:
-- skript: `scripts/update_body_index.py`
-- workflow: `.github/workflows/update_body_index.yml`
-
-➕ přidáno: **1**
-- `bridge/docs/MOST_A_NERVY.md`
-
-🔄 změněno: **0**
-- nic
-
-❌ odebráno: **0**
-- nic
