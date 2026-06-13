@@ -1,11 +1,11 @@
 {
-  "generated_at": "2026-06-11T20:38:38.054911Z",
+  "generated_at": "2026-06-13T14:48:34.257197Z",
   "source": {
     "script": "scripts/update_body_index.py",
     "workflow": ".github/workflows/update_body_index.yml"
   },
   "kind": "state",
-  "count": 106,
+  "count": 107,
   "files": [
     {
       "path": "SK/SK-001.md",
@@ -496,6 +496,11 @@
       "path": "bridge/systemd/bridge-watchdog.timer",
       "size": 200,
       "sha256": "bf9b19b37c8c9d47655ee5781f78f0a5c25a3aa21335a082e8b0d2a5618d6827"
+    },
+    {
+      "path": "docs/UI_memory_cleanup_ledger.md",
+      "size": 3872,
+      "sha256": "66477fdef2fb31bda746b6b41fa11a2d15c79e4a904ea1ef3b06c97828f708ba"
     },
     {
       "path": "docs/bridge_protocol_v1.md",
