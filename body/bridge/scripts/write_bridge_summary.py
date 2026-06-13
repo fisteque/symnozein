@@ -114,11 +114,12 @@ def parse_iso_datetime(value: Any) -> datetime | None:
 
 
 def source_timestamp(data: dict[str, Any], keys: tuple[str, ...]) -> datetime | None:
+    candidates: list[datetime] = []
     for key in keys:
         parsed = parse_iso_datetime(data.get(key))
         if parsed is not None:
-            return parsed
-    return None
+            candidates.append(parsed)
+    return max(candidates) if candidates else None
 
 
 def newest_processed_timestamp(processed: dict[str, Any]) -> datetime | None:
