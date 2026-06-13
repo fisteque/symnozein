@@ -5,8 +5,10 @@ from __future__ import annotations
 import argparse
 import hashlib
 import json
+import os
 import shutil
 import sys
+from datetime import UTC, datetime
 from pathlib import Path
 
 from bridge_sync_common import (
@@ -24,7 +26,52 @@ from bridge_sync_common import (
 
 RUNTIME_INBOX_MESSAGES = Path("inbox/messages")
 PROCESSED_FILE = Path("state/processed_messages.json")
+SYNC_STATE_FILE = Path("state/bridge_sync_state.json")
 TERMINAL_AGENT_STATUSES = {"ok", "ignored", "pending_codex", "error"}
+
+
+def utc_iso() -> str:
+    return datetime.now(UTC).isoformat().replace("+00:00", "Z")
+
+
+def load_json(path: Path) -> dict:
+    if not path.exists():
+        return {"version": 1}
+    try:
+        with path.open("r", encoding="utf-8") as handle:
+            data = json.load(handle)
+    except (OSError, json.JSONDecodeError):
+        return {"version": 1}
+    if not isinstance(data, dict):
+        return {"version": 1}
+    data.setdefault("version", 1)
+    return data
+
+
+def atomic_write_json(path: Path, data: dict, runtime_root: Path) -> None:
+    safe_path = ensure_inside(path, runtime_root)
+    safe_path.parent.mkdir(parents=True, exist_ok=True)
+    tmp_path = ensure_inside(safe_path.with_name(f".{safe_path.name}.tmp-{os.getpid()}"), runtime_root)
+    with tmp_path.open("w", encoding="utf-8") as handle:
+        json.dump(data, handle, ensure_ascii=False, indent=2, sort_keys=True)
+        handle.write("\n")
+        handle.flush()
+        os.fsync(handle.fileno())
+    tmp_path.replace(safe_path)
+
+
+def record_inbound_sync(runtime_root: Path, *, status: str, hydrated: int | None = None, error: str | None = None) -> None:
+    path = ensure_inside(runtime_root / SYNC_STATE_FILE, runtime_root)
+    state = load_json(path)
+    state["last_inbound_sync"] = utc_iso()
+    state["last_inbound_sync_status"] = status
+    if hydrated is not None:
+        state["last_inbound_hydrated_count"] = hydrated
+    if error:
+        state["last_inbound_error"] = error
+    else:
+        state.pop("last_inbound_error", None)
+    atomic_write_json(path, state, runtime_root)
 
 
 def parse_args() -> argparse.Namespace:
@@ -172,6 +219,7 @@ def hydrate_runtime_inbox(repo_root: Path, runtime_root: Path, *, dry_run: bool)
 
 def main() -> int:
     args = parse_args()
+    runtime_root = args.runtime_root.resolve()
     try:
         repo_root = ensure_repo(args.repo_root)
         local_status = porcelain_status(repo_root, [INBOX_MESSAGES])
@@ -197,7 +245,9 @@ def main() -> int:
                 remove_stale_local_files(repo_root, stale_local_paths, dry_run=args.dry_run)
                 if not args.dry_run:
                     prune_empty_dirs(repo_root / path)
-                hydrate_runtime_inbox(repo_root, args.runtime_root.resolve(), dry_run=args.dry_run)
+                hydrated = hydrate_runtime_inbox(repo_root, runtime_root, dry_run=args.dry_run)
+                if not args.dry_run:
+                    record_inbound_sync(runtime_root, status="ok", hydrated=hydrated)
                 print(f"Local inbound mirror pruned under {path}.")
                 return 0
             if local_status:
@@ -210,7 +260,9 @@ def main() -> int:
                     prune_empty_dirs(repo_root / path)
                     print(f"Restored local inbound mirror from FETCH_HEAD under {path}.")
             print(f"No inbound changes for {path}.")
-            hydrate_runtime_inbox(repo_root, args.runtime_root.resolve(), dry_run=args.dry_run)
+            hydrated = hydrate_runtime_inbox(repo_root, runtime_root, dry_run=args.dry_run)
+            if not args.dry_run:
+                record_inbound_sync(runtime_root, status="ok", hydrated=hydrated)
             return 0
 
         print("Inbound changes detected:")
@@ -229,9 +281,15 @@ def main() -> int:
             run_git(repo_root, ["restore", "--source", "FETCH_HEAD", "--worktree", "--", path])
         prune_empty_dirs(repo_root / path)
         print(f"Updated inbound mirror to match FETCH_HEAD under {path}.")
-        hydrate_runtime_inbox(repo_root, args.runtime_root.resolve(), dry_run=False)
+        hydrated = hydrate_runtime_inbox(repo_root, runtime_root, dry_run=False)
+        record_inbound_sync(runtime_root, status="ok", hydrated=hydrated)
         return 0
     except SyncError as exc:
+        try:
+            if not args.dry_run:
+                record_inbound_sync(runtime_root, status="error", error=str(exc))
+        except Exception as state_exc:
+            print(f"WARN: failed to write inbound sync state: {state_exc}", file=sys.stderr)
         print(f"ERROR: {exc}", file=sys.stderr)
         return 2
 

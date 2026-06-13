@@ -3,6 +3,7 @@
 from __future__ import annotations
 
 import argparse
+import json
 import os
 import shutil
 import sys
@@ -52,6 +53,7 @@ LOCAL_ONLY_REPO_PATHS = (INBOX_MESSAGES,)
 BLOCKED_SCRIPT_CACHE_PARTS = {"__pycache__"}
 BLOCKED_SCRIPT_CACHE_SUFFIXES = {".pyc", ".pyo", ".pyd"}
 PUBLISHED_OUTBOX_DIR = Path("outbox/published")
+SYNC_STATE_FILE = Path("state/bridge_sync_state.json")
 
 
 def parse_args() -> argparse.Namespace:
@@ -70,6 +72,59 @@ def parse_args() -> argparse.Namespace:
         help="Show what would be mirrored, staged, committed, and pushed without writing.",
     )
     return parser.parse_args()
+
+
+def utc_iso() -> str:
+    return datetime.now(UTC).isoformat().replace("+00:00", "Z")
+
+
+def load_json(path: Path) -> dict:
+    if not path.exists():
+        return {"version": 1}
+    try:
+        with path.open("r", encoding="utf-8") as handle:
+            data = json.load(handle)
+    except (OSError, json.JSONDecodeError):
+        return {"version": 1}
+    if not isinstance(data, dict):
+        return {"version": 1}
+    data.setdefault("version", 1)
+    return data
+
+
+def atomic_write_json(path: Path, data: dict, runtime_root: Path) -> None:
+    safe_path = ensure_inside(path, runtime_root)
+    safe_path.parent.mkdir(parents=True, exist_ok=True)
+    tmp_path = ensure_inside(safe_path.with_name(f".{safe_path.name}.tmp-{os.getpid()}"), runtime_root)
+    with tmp_path.open("w", encoding="utf-8") as handle:
+        json.dump(data, handle, ensure_ascii=False, indent=2, sort_keys=True)
+        handle.write("\n")
+        handle.flush()
+        os.fsync(handle.fileno())
+    tmp_path.replace(safe_path)
+
+
+def record_outbound_sync(
+    runtime_root: Path,
+    *,
+    status: str,
+    commit_hash: str | None = None,
+    archived: int | None = None,
+    error: str | None = None,
+) -> None:
+    path = ensure_inside(runtime_root / SYNC_STATE_FILE, runtime_root)
+    state = load_json(path)
+    state["last_outbound_sync"] = utc_iso()
+    state["last_outbound_sync_status"] = status
+    if commit_hash:
+        state["last_outbound_commit"] = commit_hash
+    if archived is not None:
+        state["last_outbound_archived_count"] = archived
+    if error:
+        state["last_outbound_error"] = error
+    else:
+        state.pop("last_outbound_error", None)
+    atomic_write_json(path, state, runtime_root)
 
 
 def copy_tree_without_delete(source_root: Path, target_root: Path, *, dry_run: bool) -> int:
@@ -515,8 +570,10 @@ def main() -> int:
             if args.commit_and_push:
                 safe_rebase_onto_fetch_head(repo_root, args.remote, args.branch)
                 if push_existing_local_commits(repo_root, args.remote, args.branch):
+                    record_outbound_sync(runtime_root, status="pushed_existing")
                     return 0
             print("Nothing to commit or push.")
+            record_outbound_sync(runtime_root, status="no_changes")
             return 0
 
         print(f"Commit message in code: {COMMIT_MESSAGE}")
@@ -532,19 +589,24 @@ def main() -> int:
         pending = show_pending(repo_root)
         if not pending:
             if push_existing_local_commits(repo_root, args.remote, args.branch):
+                record_outbound_sync(runtime_root, status="pushed_existing")
                 return 0
             print("Nothing to commit or push after pre-push rebase.")
+            record_outbound_sync(runtime_root, status="no_changes")
             return 0
         if not has_substantive_staged_change(repo_root):
             unstage_allowed_paths(repo_root)
             if push_existing_local_commits(repo_root, args.remote, args.branch):
+                record_outbound_sync(runtime_root, status="pushed_existing")
                 return 0
             print("Only logs/state_summary changed; not committing this cycle.")
+            record_outbound_sync(runtime_root, status="latest_only_skipped")
             return 0
 
         print("Committing outbound changes...")
         commit = run_git(repo_root, ["commit", "-m", COMMIT_MESSAGE])
         print_git_output(commit)
+        commit_hash = run_git(repo_root, ["rev-parse", "--short", "HEAD"]).stdout.strip()
         print(f"Pushing to {args.remote} {args.branch}...")
         push = run_git(
             repo_root,
@@ -555,8 +617,14 @@ def main() -> int:
         archived = archive_published_outbox_messages(runtime_root, published_outbox)
         if archived:
             print(f"Archived published runtime outbox messages: {archived}")
+        record_outbound_sync(runtime_root, status="pushed", commit_hash=commit_hash, archived=archived)
         return 0
     except SyncError as exc:
+        try:
+            if not args.dry_run:
+                record_outbound_sync(args.runtime_root.resolve(), status="error", error=str(exc))
+        except Exception as state_exc:
+            print(f"WARN: failed to write outbound sync state: {state_exc}", file=sys.stderr)
         print(f"ERROR: {exc}", file=sys.stderr)
         return 2
 
