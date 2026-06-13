@@ -1,11 +1,11 @@
 {
-  "generated_at": "2026-06-13T19:11:28.292405Z",
+  "generated_at": "2026-06-13T19:13:27.946406Z",
   "source": {
     "script": "scripts/update_body_index.py",
     "workflow": ".github/workflows/update_body_index.yml"
   },
   "kind": "state",
-  "count": 127,
+  "count": 130,
   "files": [
     {
       "path": "SK/SK-001.md",
@@ -49,13 +49,13 @@
     },
     {
       "path": "bridge/docs/bridge_scripts.md",
-      "size": 10507,
-      "sha256": "716c078e925cd223db050e77866a5015ee3fc22c0850e64b89e2a57bdffa1c74"
+      "size": 11063,
+      "sha256": "3ac4b233aed38c9cf830ad5efbcf83af6a829bc0bafa0508e74d5e5a36858b46"
     },
     {
       "path": "bridge/docs/implementation_ledger.md",
-      "size": 40959,
-      "sha256": "2082799442a4c6b0662bb9166a1fc3cf21c987c7c35ae096dd6a88829518de5e"
+      "size": 41867,
+      "sha256": "bc757fbc9c5be039eba907f249c7134e84ce5c5cf20fc63295f76a3f4cce2cfd"
     },
     {
       "path": "bridge/docs/known_limits.md",
@@ -423,6 +423,11 @@
       "sha256": "0cbdf92fb266ffdae75fba5162d5745a60e59b3d55e6bcc99be0a88cc61614d9"
     },
     {
+      "path": "bridge/outbox/messages/2026-06-13T191216Z_rpi5_cycle-error-outbound-sync.md",
+      "size": 295,
+      "sha256": "6b92741defc6dd59949c7c30d9901e03a6f7ea5e2201dd3fe7e5489d1703cba2"
+    },
+    {
       "path": "bridge/scripts/.gitignore",
       "size": 23,
       "sha256": "6feaded4e28ea86e001a6751b4e3d960e8b7c31b9616ff9936b79297086e809b"
@@ -559,8 +564,8 @@
     },
     {
       "path": "bridge/state_summary/latest.md",
-      "size": 1641,
-      "sha256": "ed891fb67394c21c0c16bcf605bfc8a67632176beccea9a1feb23cb7881ebd92"
+      "size": 1642,
+      "sha256": "497c8b4b87b728868d484737016cf48a548d045fe8a7f78fe671d7351d1932b3"
     },
     {
       "path": "bridge/systemd/bridge-cycle.service",
@@ -591,6 +596,16 @@
       "path": "bridge/systemd/codex-autoreply.timer",
       "size": 207,
       "sha256": "9abb89d331c0f0fd17ccf3a67c3d47bf12977b452e162fd3a32394735da648b1"
+    },
+    {
+      "path": "bridge/systemd/noema-body-pulse.service",
+      "size": 635,
+      "sha256": "172807ce72f0adacd2ca15a8ede2417f567bf61543da015b1f16e077700317df"
+    },
+    {
+      "path": "bridge/systemd/noema-body-pulse.timer",
+      "size": 233,
+      "sha256": "920986605948e5a848a89d977e9cc2ac8dbdad63e35074d995698654a71f4a21"
     },
     {
       "path": "docs/AGENTS.md",
