@@ -8,6 +8,21 @@ messages. Keep the newest items at the top.
 
 ## Latest Implementations
 
+### Body Health In Latest Summary
+
+Changed the public bridge summary to use local
+`/home/fiste/Noema/state/body_health.json` as an input only.
+
+`latest.md` now includes a short `Body Health` section with the last health
+snapshot timestamp, CPU temperature, load average, RAM/swap/root disk usage, and
+selected timer states. The full `body_health.json` remains local runtime state
+and is not mirrored to the repository.
+
+Removed the `Bridge Log Tail` section from `latest.md`, so summary generation no
+longer reads and filters `bridge/logs/bridge.log` on every bridge cycle.
+
+The `--log-lines` option remains accepted as a compatibility no-op.
+
 ### Body Health Runtime Monitor
 
 Added a separate local body health monitor instead of expanding
