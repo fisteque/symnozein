@@ -1,11 +1,11 @@
 {
-  "generated_at": "2026-06-14T14:53:30.543654Z",
+  "generated_at": "2026-06-14T15:11:55.517453Z",
   "source": {
     "script": "scripts/update_body_index.py",
     "workflow": ".github/workflows/update_body_index.yml"
   },
   "kind": "state",
-  "count": 137,
+  "count": 138,
   "files": [
     {
       "path": "SK/PK/PK-2026-06-14.md",
@@ -246,6 +246,11 @@
       "path": "bridge/inbox/messages/msg-20260614-check-next-scheduled-pulse-unknown-001.md",
       "size": 1386,
       "sha256": "fd7fe2c8312450d8160def2b7d66bc5c14046d8a4e16b5f51524fb7be2f3bbd2"
+    },
+    {
+      "path": "bridge/inbox/messages/msg-20260614-codex-autoreply-format-self-check-001.md",
+      "size": 1342,
+      "sha256": "82e096f42a213023556e7ec1002b177e3f0d1f55b4c7ff79b7536ea259f16df9"
     },
     {
       "path": "bridge/instructions/pc_codex_postman.md",
