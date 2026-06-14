@@ -1,11 +1,11 @@
 {
-  "generated_at": "2026-06-14T19:29:09.702758Z",
+  "generated_at": "2026-06-14T19:33:16.883615Z",
   "source": {
     "script": "scripts/update_body_index.py",
     "workflow": ".github/workflows/update_body_index.yml"
   },
   "kind": "state",
-  "count": 143,
+  "count": 144,
   "files": [
     {
       "path": "SK/PK/PK-2026-06-14.md",
@@ -256,6 +256,11 @@
       "path": "bridge/inbox/messages/msg-20260614-codex-autoreply-format-self-check-001.md",
       "size": 1342,
       "sha256": "82e096f42a213023556e7ec1002b177e3f0d1f55b4c7ff79b7536ea259f16df9"
+    },
+    {
+      "path": "bridge/inbox/messages/msg-20260614-read-full-body-health-001.md",
+      "size": 535,
+      "sha256": "89923be5f720bb91913f78f0643d936e36540aaa35c2f8682535f5fb6879e0c4"
     },
     {
       "path": "bridge/inbox/messages/msg-20260614-read-full-body-pulse-state-001.md",
