@@ -88,17 +88,30 @@ def record_pulse_state(
     *,
     status: str,
     commit_hash: str | None = None,
+    started_at: str | None = None,
     error: str | None = None,
 ) -> None:
     path = ensure_inside(runtime_root / PULSE_STATE_FILE, runtime_root)
     state = load_json(path)
+    now = utc_iso()
     state["last_pulse_status"] = status
-    state["last_pulse_check"] = utc_iso()
+    state["last_pulse_check"] = now
+    if status == "running":
+        state["current_pulse_status"] = "running"
+        state["current_pulse_started_at"] = started_at or now
+        state.pop("current_pulse_finished_at", None)
+    else:
+        state["current_pulse_status"] = status
+        state["current_pulse_finished_at"] = now
     if commit_hash:
         state["last_body_pulse"] = state["last_pulse_check"]
         state["last_pulse_commit"] = commit_hash
+        state["current_pulse_status"] = "pushed"
+        state["current_pulse_finished_at"] = state["last_pulse_check"]
     if error:
         state["last_pulse_error"] = error
+        state["current_pulse_status"] = "error"
+        state["current_pulse_finished_at"] = state["last_pulse_check"]
     else:
         state.pop("last_pulse_error", None)
     atomic_write_json(path, state, runtime_root)
@@ -207,11 +220,14 @@ def pulse(args: argparse.Namespace) -> dict[str, object]:
     latest_path = ensure_inside(repo_root / LATEST, repo_root)
 
     with bridge_cycle_lock(runtime_root, ttl_seconds=args.lock_ttl_seconds) as lock_path:
+        pulse_started_at = utc_iso()
         print(f"Bridge lock acquired: {lock_path}")
         update_lock_progress(lock_path, runtime_root, "body pulse fetch")
         fetch_and_rebase(repo_root, args.remote, args.branch)
 
         update_lock_progress(lock_path, runtime_root, "body pulse summary")
+        if not args.dry_run:
+            record_pulse_state(runtime_root, status="running", started_at=pulse_started_at)
         refresh_latest(runtime_root, repo_root, project_root)
         ensure_no_unrelated_dirty(repo_root)
 
