@@ -8,6 +8,23 @@ messages. Keep the newest items at the top.
 
 ## Latest Implementations
 
+### Codex Autoreply Safety-Negation Filter
+
+Adjusted `codex_autoreply_worker.py` classification so explicit safety
+prohibitions do not trigger `needs_human` by themselves.
+
+The worker still treats actual requests for risky actions such as commits,
+pushes, installs, deletes, restarts, and runtime logic changes as
+`needs_human`. It now filters negated safety-boundary lines such as "do not
+commit" and "does not require edits, commits, pushes..." before scanning for
+risky terms.
+
+This fixed a false positive where a read-only self-check request stayed in
+`codex/inbox/` because it listed forbidden actions as things not to do. After
+the change, the request classified as `stub_written`, was processed by
+`codex-autoreply.service`, archived under `codex/processed/YYYY-MM/`, and the
+response was published to the main outbox tape.
+
 ### Structured Latest Summary And Source Freshness
 
 Restructured `body/bridge/state_summary/latest.md` into stable public sections:
