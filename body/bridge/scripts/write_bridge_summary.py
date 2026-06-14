@@ -327,6 +327,7 @@ def next_body_pulse_fallback() -> str:
 
 
 def next_timer_elapse(unit: str) -> str:
+    fallback = next_body_pulse_fallback() if unit == "noema-body-pulse.timer" else "(unknown)"
     result = subprocess.run(
         [
             "systemctl",
@@ -340,15 +341,13 @@ def next_timer_elapse(unit: str) -> str:
         stderr=subprocess.PIPE,
     )
     if result.returncode != 0:
-        if unit == "noema-body-pulse.timer":
-            return next_body_pulse_fallback()
-        return "(unknown)"
+        return fallback
     for line in result.stdout.splitlines():
         if not line.startswith("NextElapseUSecRealtime="):
             continue
         value = line.split("=", 1)[1].strip()
-        return value or "(unknown)"
-    return "(unknown)"
+        return value or fallback
+    return fallback
 
 
 def parse_frontmatter(text: str) -> tuple[dict[str, Any], str]:
