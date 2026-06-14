@@ -100,9 +100,13 @@ def record_pulse_state(
         state["current_pulse_status"] = "running"
         state["current_pulse_started_at"] = started_at or now
         state.pop("current_pulse_finished_at", None)
-    else:
+    elif status == "error":
         state["current_pulse_status"] = status
         state["current_pulse_finished_at"] = now
+    else:
+        state.pop("current_pulse_status", None)
+        state.pop("current_pulse_started_at", None)
+        state.pop("current_pulse_finished_at", None)
     if commit_hash:
         state["last_body_pulse"] = state["last_pulse_check"]
         state["last_pulse_commit"] = commit_hash
