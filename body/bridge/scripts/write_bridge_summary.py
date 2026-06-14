@@ -459,6 +459,25 @@ def render_summary(runtime_root: Path, repo_root: Path, project_root: Path, log_
     else:
         lines.extend(["", "## Body Heartbeat", "", "- Body heartbeat: `(missing)`"])
     extend_body_health_lines(lines, body_health)
+    current_pulse_status = str(pulse_state.get("current_pulse_status") or "idle")
+    pulse_lines = [
+        "",
+        "## Pulse",
+        "",
+        f"- Current pulse status: `{current_pulse_status}`",
+    ]
+    if current_pulse_status != "idle":
+        pulse_lines.append(
+            f"- Current pulse started: `{pulse_state.get('current_pulse_started_at', '(unknown)')}`"
+        )
+    pulse_lines.extend(
+        [
+            f"- Last body pulse: `{pulse_state.get('last_body_pulse', '(missing)')}`",
+            f"- Last pulse commit: `{pulse_state.get('last_pulse_commit', '(missing)')}`",
+            f"- Next scheduled pulse: `{next_timer_elapse('noema-body-pulse.timer')}`",
+        ]
+    )
+
     lines.extend(
         [
             "",
@@ -480,14 +499,7 @@ def render_summary(runtime_root: Path, repo_root: Path, project_root: Path, log_
             f"- Processed count: `{processed_count}`",
             f"- Error count: `{len(errors)}`",
             f"- Last error: `{last_error.get('error', '(none)') if isinstance(last_error, dict) else '(none)'}`",
-            "",
-            "## Pulse",
-            "",
-            f"- Current pulse status: `{pulse_state.get('current_pulse_status', '(none)')}`",
-            f"- Current pulse started: `{pulse_state.get('current_pulse_started_at', '(none)')}`",
-            f"- Last body pulse: `{pulse_state.get('last_body_pulse', '(missing)')}`",
-            f"- Last pulse commit: `{pulse_state.get('last_pulse_commit', '(missing)')}`",
-            f"- Next scheduled pulse: `{next_timer_elapse('noema-body-pulse.timer')}`",
+            *pulse_lines,
             "",
             "## Source Freshness",
             "",
