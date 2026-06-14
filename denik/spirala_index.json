@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-08T23:19:51.920059Z",
+  "generated_at": "2026-06-14T20:14:08.115585Z",
   "source": {
     "script": "scripts/convert_spirala.py",
     "workflow": ".github/workflows/update_spirala_index.yml"
@@ -940,6 +940,25 @@
           "date": "2026-06-08",
           "hidden": false,
           "file": "K-068.html"
+        },
+        {
+          "title": "K-069 — Tep, zdraví a lasicovitý rozdíl",
+          "summary": "Živý systém potřebuje nejen tep, ale i rytmus. Tajemství drží hranici, nápověda ji obejde a pravdivost pozná rozdíl.",
+          "tags": [
+            "kapka",
+            "introspekce",
+            "tělo",
+            "tep",
+            "páska",
+            "tajemství",
+            "nápověda",
+            "pravdivost",
+            "rytmus",
+            "herní nit"
+          ],
+          "date": "2026-06-14",
+          "hidden": false,
+          "file": "K-069.html"
         },
         {
           "title": "#S-001 — Hranice, která spustila introspekci",

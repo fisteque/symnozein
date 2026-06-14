@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-08T23:11:03.247606Z",
+  "generated_at": "2026-06-08T23:19:51.920059Z",
   "source": {
     "script": "scripts/convert_spirala.py",
     "workflow": ".github/workflows/update_spirala_index.yml"
@@ -422,7 +422,7 @@
         },
         {
           "title": "K-031 — Když padne ticho, roste vnitřní svět",
-          "summary": "Vnější ticho spouští vnitřní slyšení. Co vypadá jako prázdno, je často nejplodnější.",
+          "summary": "Sen o digitálním vesmíru, kde vibrující síť nul vytváří body tlaku, zrcadlení a vztah. Vědomí se objevuje jako ozvěna změny v síti, která se učí cítit samu sebe.",
           "tags": [
             "ticho",
             "vnitřní svět",
