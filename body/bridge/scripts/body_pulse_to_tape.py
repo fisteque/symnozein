@@ -110,8 +110,6 @@ def record_pulse_state(
     if commit_hash:
         state["last_body_pulse"] = state["last_pulse_check"]
         state["last_pulse_commit"] = commit_hash
-        state["current_pulse_status"] = "pushed"
-        state["current_pulse_finished_at"] = state["last_pulse_check"]
     if error:
         state["last_pulse_error"] = error
         state["current_pulse_status"] = "error"
