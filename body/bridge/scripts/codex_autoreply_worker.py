@@ -44,8 +44,10 @@ RISKY_TERMS = (
 )
 NEGATION_MARKERS = (
     "do not",
+    "does not",
     "don't",
     "dont",
+    "not require",
     "nesmi",
     "nesmí",
     "nemen",
