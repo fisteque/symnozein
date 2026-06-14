@@ -42,6 +42,20 @@ RISKY_TERMS = (
     "commit",
     "runtime logic",
 )
+NEGATION_MARKERS = (
+    "do not",
+    "don't",
+    "dont",
+    "nesmi",
+    "nesmí",
+    "nemen",
+    "neměň",
+    "nemaz",
+    "neinstal",
+    "nerestart",
+    "necommit",
+    "nepush",
+)
 
 
 class WorkerError(RuntimeError):
@@ -146,6 +160,16 @@ def codex_inbox_paths(inbox_dir: Path) -> list[Path]:
     return paths
 
 
+def safety_filtered_payload(payload: str) -> str:
+    lines: list[str] = []
+    for line in payload.splitlines():
+        stripped = line.strip()
+        if any(marker in stripped for marker in NEGATION_MARKERS):
+            continue
+        lines.append(line)
+    return "\n".join(lines)
+
+
 def classify(frontmatter: dict[str, Any], body: str) -> tuple[str, str]:
     if str(frontmatter.get("type") or "") != "codex_request":
         return "invalid", "type_is_not_codex_request"
@@ -160,7 +184,7 @@ def classify(frontmatter: dict[str, Any], body: str) -> tuple[str, str]:
             body,
         ]
     ).lower()
-    if any(term in payload for term in RISKY_TERMS):
+    if any(term in safety_filtered_payload(payload) for term in RISKY_TERMS):
         return "needs_human", "contains_runtime_or_write_risk_terms"
     return "stub_written", "safe_stub_only_phase"
 
