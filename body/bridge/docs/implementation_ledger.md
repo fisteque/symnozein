@@ -8,6 +8,21 @@ messages. Keep the newest items at the top.
 
 ## Latest Implementations
 
+### Current Pulse State Before Summary Refresh
+
+Adjusted `body_pulse_to_tape.py` so a real pulse records local
+`current_pulse_status: running` and `current_pulse_started_at` before
+`write_bridge_summary.py` refreshes `latest.md`.
+
+This lets the pulse commit's own public `latest.md` show that the current pulse
+is in progress, instead of only showing the previous completed pulse from
+`body_pulse_state.json`. After a successful push, the script records
+`last_body_pulse`, `last_pulse_commit`, and `current_pulse_status: pushed`.
+
+The pulse still uses a one-commit model: the current commit hash cannot be
+included in the same `latest.md` that creates that commit, so it appears in the
+next summary. Dry-run mode does not update persistent pulse state.
+
 ### Codex Autoreply Safety-Negation Filter
 
 Adjusted `codex_autoreply_worker.py` classification so explicit safety

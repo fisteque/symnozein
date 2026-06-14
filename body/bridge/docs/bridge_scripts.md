@@ -329,6 +329,11 @@ it to the GitHub tape with:
 Pulse body state to tape
 ```
 
+Before refreshing `latest.md`, a real pulse records local
+`bridge/state/body_pulse_state.json` fields showing the current pulse is
+running. After a successful push it records the resulting pulse commit hash.
+Dry-run mode does not update persistent pulse state.
+
 It does not mirror runtime logs, locks, raw `state/body_health.json`, outbox
 messages, or unrelated dirty paths.
 
