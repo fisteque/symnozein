@@ -483,6 +483,8 @@ def render_summary(runtime_root: Path, repo_root: Path, project_root: Path, log_
             "",
             "## Pulse",
             "",
+            f"- Current pulse status: `{pulse_state.get('current_pulse_status', '(none)')}`",
+            f"- Current pulse started: `{pulse_state.get('current_pulse_started_at', '(none)')}`",
             f"- Last body pulse: `{pulse_state.get('last_body_pulse', '(missing)')}`",
             f"- Last pulse commit: `{pulse_state.get('last_pulse_commit', '(missing)')}`",
             f"- Next scheduled pulse: `{next_timer_elapse('noema-body-pulse.timer')}`",
