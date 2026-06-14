@@ -1,11 +1,11 @@
 {
-  "generated_at": "2026-06-14T18:36:47.976008Z",
+  "generated_at": "2026-06-14T19:21:45.127014Z",
   "source": {
     "script": "scripts/update_body_index.py",
     "workflow": ".github/workflows/update_body_index.yml"
   },
   "kind": "state",
-  "count": 139,
+  "count": 140,
   "files": [
     {
       "path": "SK/PK/PK-2026-06-14.md",
@@ -241,6 +241,11 @@
       "path": "bridge/inbox/messages/msg-20260613-codex-review-agents-md-proposal-001.md",
       "size": 2466,
       "sha256": "96be797495d15906349a331f26d8d887f1ae9f9eba94a1a0971f57d6aa34a60a"
+    },
+    {
+      "path": "bridge/inbox/messages/msg-20260614-check-body-pulse-state-001.md",
+      "size": 719,
+      "sha256": "1c34d6bc7295c0c17370383c34dd67ca322942e78c55d50c4352a05c42ce7200"
     },
     {
       "path": "bridge/inbox/messages/msg-20260614-check-next-scheduled-pulse-unknown-001.md",
