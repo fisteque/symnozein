@@ -5,6 +5,23 @@ Uchovává posledních **50** záznamů.
 
 ---
 
+## 2026-06-14T09:16:08.953072Z
+
+Zdroj změn:
+- skript: `scripts/update_body_index.py`
+- workflow: `.github/workflows/update_body_index.yml`
+
+➕ přidáno: **1**
+- `SK/PK/PK-2026-06-14.md`
+
+🔄 změněno: **0**
+- nic
+
+❌ odebráno: **0**
+- nic
+
+---
+
 ## 2026-06-14T08:29:16.687674Z
 
 Zdroj změn:
@@ -864,23 +881,6 @@ Zdroj změn:
 
 ➕ přidáno: **1**
 - `bridge/inbox/messages/msg-20260613-codex-review-agents-md-proposal-001.md`
-
-🔄 změněno: **0**
-- nic
-
-❌ odebráno: **0**
-- nic
-
----
-
-## 2026-06-13T14:48:34.257197Z
-
-Zdroj změn:
-- skript: `scripts/update_body_index.py`
-- workflow: `.github/workflows/update_body_index.yml`
-
-➕ přidáno: **1**
-- `docs/UI_memory_cleanup_ledger.md`
 
 🔄 změněno: **0**
 - nic
