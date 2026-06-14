@@ -181,8 +181,9 @@ Reads local Codex request files from:
 /home/fiste/Noema/codex/inbox/
 ```
 
-It does not call Codex automatically in the current bridge design. It can emit a
-dry-run JSON report and can write manual stub responses with `--write-stub`.
+This reader does not call Codex automatically. It can emit a dry-run JSON report
+and can write manual stub responses with `--write-stub`. Automatic Codex
+execution is handled separately by `codex_autoreply_worker.py`.
 
 Stub responses go to:
 
@@ -204,7 +205,7 @@ Processes exactly one local Codex inbox request per run:
 /home/fiste/Noema/codex/inbox/
 ```
 
-First phase mode does not call Codex automatically. It supports:
+It supports:
 
 - dry-run inspection by default;
 - `--write-stub` to write one `codex_response` stub into
@@ -224,6 +225,13 @@ bridge/state/codex_autoreply_state.json
 It does not commit, push, start services, or process more than one request per
 run. Requests classified as `needs_human` require explicit
 `--allow-needs-human` before `--run-codex` will execute.
+
+The safety classifier treats real requests for risky actions such as commits,
+pushes, installs, deletes, restarts, and runtime logic changes as
+`needs_human`. Explicit negative safety instructions such as "do not commit" or
+"does not require edits, commits, pushes..." are filtered before that risky-term
+check, so read-only orientation requests are not blocked just because they state
+their safety boundaries.
 
 For timer use it also supports `--quiet-empty`, where an empty Codex inbox exits
 successfully with an idle JSON result.
