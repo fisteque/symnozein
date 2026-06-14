@@ -41,6 +41,11 @@ locks, logs, queue archives, or log tails.
 and falls back to the fixed six-times-daily Europe/Prague pulse schedule when a
 manual run cannot access the systemd bus.
 
+Follow-up diagnosis found a second systemd edge case: `systemctl show` can
+return successfully with an empty `NextElapseUSecRealtime=` value. The summary
+writer now treats that empty value the same as a failed systemd lookup and uses
+the fixed pulse schedule fallback instead of publishing `(unknown)`.
+
 Seeded local-only `bridge/state/body_pulse_state.json` from the latest known
 `Pulse body state to tape` Git commit so `latest.md` immediately shows the last
 body pulse. The seed state is not tracked or mirrored.
