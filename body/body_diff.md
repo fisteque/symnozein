@@ -5,6 +5,23 @@ Uchovává posledních **50** záznamů.
 
 ---
 
+## 2026-06-14T19:34:05.358345Z
+
+Zdroj změn:
+- skript: `scripts/update_body_index.py`
+- workflow: `.github/workflows/update_body_index.yml`
+
+➕ přidáno: **1**
+- `bridge/outbox/messages/2026-06-14T193333Z_codex-autoreply-codex-request-20260614-193324-msg-20260614-read-full-body-health-001.md`
+
+🔄 změněno: **1**
+- `bridge/state_summary/latest.md`
+
+❌ odebráno: **0**
+- nic
+
+---
+
 ## 2026-06-14T19:33:16.883615Z
 
 Zdroj změn:
@@ -861,27 +878,6 @@ Zdroj změn:
 
 🔄 změněno: **2**
 - `bridge/scripts/body_pulse_to_tape.py`
-- `bridge/state_summary/latest.md`
-
-❌ odebráno: **0**
-- nic
-
----
-
-## 2026-06-13T19:13:27.946406Z
-
-Zdroj změn:
-- skript: `scripts/update_body_index.py`
-- workflow: `.github/workflows/update_body_index.yml`
-
-➕ přidáno: **3**
-- `bridge/outbox/messages/2026-06-13T191216Z_rpi5_cycle-error-outbound-sync.md`
-- `bridge/systemd/noema-body-pulse.service`
-- `bridge/systemd/noema-body-pulse.timer`
-
-🔄 změněno: **3**
-- `bridge/docs/bridge_scripts.md`
-- `bridge/docs/implementation_ledger.md`
 - `bridge/state_summary/latest.md`
 
 ❌ odebráno: **0**
