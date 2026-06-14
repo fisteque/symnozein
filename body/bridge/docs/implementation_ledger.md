@@ -17,7 +17,7 @@ Adjusted `body_pulse_to_tape.py` so a real pulse records local
 This lets the pulse commit's own public `latest.md` show that the current pulse
 is in progress, instead of only showing the previous completed pulse from
 `body_pulse_state.json`. After a successful push, the script records
-`last_body_pulse`, `last_pulse_commit`, and `current_pulse_status: pushed`.
+`last_body_pulse` and `last_pulse_commit`, then clears the current-pulse fields.
 
 The pulse still uses a one-commit model: the current commit hash cannot be
 included in the same `latest.md` that creates that commit, so it appears in the
