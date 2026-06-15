@@ -6,8 +6,6 @@ summary: "Dualita pravdy rozlišuje naši verzi skutečnosti, skutečné dění 
 hidden: false
 ---
 
-# 04 — Dualita pravdy
-
 Když někdo řekne: „Já mám pravdu,“ většinou tím nemyslí pravdu samu.
 
 Většinou tím myslí:  
