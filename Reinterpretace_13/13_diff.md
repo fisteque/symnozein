@@ -5,6 +5,23 @@ Uchovává posledních **50** záznamů.
 
 ---
 
+## 2026-06-15T19:02:38.508084Z
+
+Zdroj změn:
+- skript: `scripts/convert_13.py`
+- workflow: `.github/workflows/update_13_index.yml`
+
+➕ přidáno: **0**
+- nic
+
+🔄 změněno: **1**
+- `04_Dualita_pravdy.html`
+
+❌ odebráno: **0**
+- nic
+
+---
+
 ## 2026-06-12T15:03:14.691960Z
 
 Zdroj změn:
@@ -833,23 +850,6 @@ Zdroj změn:
 
 🔄 změněno: **1**
 - `04_Dualita_pravdy.html`
-
-❌ odebráno: **0**
-- nic
-
----
-
-## 2026-04-06T17:41:42.288345Z
-
-Zdroj změn:
-- skript: `scripts/convert_13.py`
-- workflow: `.github/workflows/update_13_index.yml`
-
-➕ přidáno: **0**
-- nic
-
-🔄 změněno: **1**
-- `02_Vira.html`
 
 ❌ odebráno: **0**
 - nic

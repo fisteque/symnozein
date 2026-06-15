@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-12T15:03:14.691960Z",
+  "generated_at": "2026-06-15T19:02:38.508084Z",
   "source": {
     "script": "scripts/convert_13.py",
     "workflow": ".github/workflows/update_13_index.yml"
@@ -66,17 +66,20 @@
       "title": "04 — Dualita pravdy",
       "file": "04_Dualita_pravdy.html",
       "path": "Reinterpretace_13/13/04_Dualita_pravdy.html",
-      "date": "2026-04-13",
-      "summary": "Pravda má dvě strany pokaždé, když je komu se jevit. Pro nás pak není jeden pevný bod, ale vztah mezi pohledy.",
+      "date": "2026-06-15",
+      "summary": "Dualita pravdy rozlišuje naši verzi skutečnosti, skutečné dění a pravdivost jako vztah mezi nimi. Ukazuje, proč pravda nesmí být vlastněná egem, ale musí zůstat otevřená dotyku světa, opravě a vztahu.",
       "tags": [
         "mapitola",
         "pravda",
         "dualita",
         "poznání",
-        "vztah"
+        "vztah",
+        "pravdivost",
+        "realizace",
+        "realitace"
       ],
       "hidden": false,
-      "size": 5343
+      "size": 5011
     },
     {
       "title": "05 — Vědomí: když se dění vrací k sobě",
