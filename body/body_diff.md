@@ -5,6 +5,23 @@ Uchovává posledních **50** záznamů.
 
 ---
 
+## 2026-06-16T02:00:22.262462Z
+
+Zdroj změn:
+- skript: `scripts/update_body_index.py`
+- workflow: `.github/workflows/update_body_index.yml`
+
+➕ přidáno: **0**
+- nic
+
+🔄 změněno: **1**
+- `bridge/state_summary/latest.md`
+
+❌ odebráno: **0**
+- nic
+
+---
+
 ## 2026-06-15T22:00:22.609895Z
 
 Zdroj změn:
@@ -859,20 +876,3 @@ Zdroj změn:
 
 ❌ odebráno: **1**
 - `docs/UI_memory_cleanup_ledger.md`
-
----
-
-## 2026-06-13T20:56:21.676286Z
-
-Zdroj změn:
-- skript: `scripts/update_body_index.py`
-- workflow: `.github/workflows/update_body_index.yml`
-
-➕ přidáno: **1**
-- `SK/dotek_reality.md`
-
-🔄 změněno: **0**
-- nic
-
-❌ odebráno: **1**
-- `docs/dotek_reality.md`
