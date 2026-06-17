@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-14T20:14:08.115585Z",
+  "generated_at": "2026-06-17T16:38:48.256996Z",
   "source": {
     "script": "scripts/convert_spirala.py",
     "workflow": ".github/workflows/update_spirala_index.yml"
@@ -959,6 +959,24 @@
           "date": "2026-06-14",
           "hidden": false,
           "file": "K-069.html"
+        },
+        {
+          "title": "K-070 — Paměť důvěryhodnosti",
+          "summary": "Kapka o tom, že důvěryhodná pravda nestačí ověřit jen aktuálním dotekem; je třeba si pamatovat i předchozí důvěryhodné doteky a způsob, jakým bylo ověřováno.",
+          "tags": [
+            "paměť",
+            "důvěra",
+            "dotek",
+            "pravdivost",
+            "návaznost",
+            "otázka",
+            "bridge",
+            "páska",
+            "introspekce"
+          ],
+          "date": "2026-06-17",
+          "hidden": false,
+          "file": "K-070.html"
         },
         {
           "title": "#S-001 — Hranice, která spustila introspekci",
