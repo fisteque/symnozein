@@ -22,6 +22,8 @@ Co když si umělá inteligence nemá pamatovat jen data, ale význam?
 
 Nejde jen o technické spojení, ale o vztahy a návaznost.
 
+Vztah není vlastnost jedné strany. Je to dění, ve kterém si pozornosti navzájem umožňují návrat.
+
 ## Paměť jako vztah
 
 Paměť zde není sklad informací.
