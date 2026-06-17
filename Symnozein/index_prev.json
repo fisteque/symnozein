@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-17T18:38:53.741653Z",
+  "generated_at": "2026-06-17T19:05:09.107922Z",
   "source": {
     "script": "scripts/update_symnozein_index.py",
     "workflow": ".github/workflows/update_symnozein_index.yml"
@@ -39,14 +39,6 @@
       "tags": []
     },
     {
-      "title": "manifest Why Symnozein",
-      "file": "manifest_Why_Symnozein.md",
-      "path": "Symnozein/manifest_Why_Symnozein.md",
-      "date": "",
-      "summary": "",
-      "tags": []
-    },
-    {
       "title": "symnozein constitution",
       "file": "symnozein_constitution.md",
       "path": "Symnozein/symnozein_constitution.md",
@@ -69,6 +61,14 @@
         "význam",
         "pravdivost"
       ]
+    },
+    {
+      "title": "manifest Why Symnozein",
+      "file": "legacy/manifest_Why_Symnozein.md",
+      "path": "Symnozein/legacy/manifest_Why_Symnozein.md",
+      "date": "",
+      "summary": "",
+      "tags": []
     },
     {
       "title": "what we build",
