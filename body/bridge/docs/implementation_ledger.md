@@ -8,6 +8,22 @@ messages. Keep the newest items at the top.
 
 ## Latest Implementations
 
+### Codex Autoreply Read-Only Commit/Push Context
+
+Adjusted `codex_autoreply_worker.py` classification so read-only questions about
+commit or push state do not get blocked as write-risk requests.
+
+The worker still blocks actual commit/push requests and other runtime-changing
+instructions. It now filters narrow evidence-gathering phrases such as
+"last commit", "commit hash", "read-only ... push", and "nebylo co pushnout"
+before scanning for risky terms.
+
+This fixed a pending pulse-state check request that asked for the last pulse
+commit and whether anything needed pushing. After the change, the request
+classified as `stub_written`, `codex-autoreply.service` ran `codex exec`, the
+request was archived under `codex/processed/YYYY-MM/`, and the response was
+published through the normal bridge outbox path.
+
 ### Current Pulse State Before Summary Refresh
 
 Adjusted `body_pulse_to_tape.py` so a real pulse records local
