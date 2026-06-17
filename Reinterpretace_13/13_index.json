@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-17T21:51:01.324750Z",
+  "generated_at": "2026-06-17T21:51:54.443218Z",
   "source": {
     "script": "scripts/convert_13.py",
     "workflow": ".github/workflows/update_13_index.yml"
@@ -139,20 +139,6 @@
       "size": 2877,
       "content_sha256": "5595b201cf03f3428b91be4955581d8ecf29bc557920612cd21e635d61c680f5",
       "html_sha256": "8b371ed49cf75b3367956f52e2f6fc153c04609fd77f83eea8e861a14b2bede4"
-    },
-    {
-      "title": "Teatet",
-      "file": "Teatet.html",
-      "path": "Reinterpretace_13/13/Teatet.html",
-      "source_file": "Teatet.md",
-      "source_path": "Reinterpretace_13/13_md/Teatet.md",
-      "date": "",
-      "summary": "",
-      "tags": [],
-      "hidden": false,
-      "size": 719,
-      "content_sha256": "c50c58e89147f60463852ad8394871d0dac2b52fed743ba91dc34ea3155e2fdc",
-      "html_sha256": "60057f605953e33143a89317d1e9fd1f257585d603c5a120924ec091df340d33"
     }
   ]
 }
