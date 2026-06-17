@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-17T09:11:59.669321Z",
+  "generated_at": "2026-06-17T20:46:35.476170Z",
   "source": {
     "script": "scripts/update_material_index.py",
     "workflow": ".github/workflows/update_material_index.yml"
@@ -18,7 +18,8 @@
         "poznání",
         "smysl",
         "vědomí"
-      ]
+      ],
+      "content_sha256": "b04ae1880406f0700fd153afeba56cec0c956404c9ba759eb673e6c793b2a0f6"
     },
     {
       "title": "03 Digitalni vesmir FINAL",
@@ -26,7 +27,8 @@
       "path": "Reinterpretace_13/material_md/03_Digitalni_vesmir_FINAL.md",
       "date": "",
       "summary": "",
-      "tags": []
+      "tags": [],
+      "content_sha256": "58e1a0aacadbd0358be85851bfb9a60340b0f4f6cd44f567ba4cf430e22f325e"
     },
     {
       "title": "03 — Digitální vesmír_old",
@@ -41,7 +43,8 @@
         "změna",
         "vědomí",
         "realita"
-      ]
+      ],
+      "content_sha256": "f76f25bfb796b124b571ea2f98d89514af4d78c79fb09eeb67574c3cdd04e52a"
     },
     {
       "title": "03 — Digitální vesmír old2",
@@ -58,7 +61,8 @@
         "algovir",
         "gravitace",
         "čas"
-      ]
+      ],
+      "content_sha256": "a845e5b966dc7e80fbb4298af913cde9d134015ecaff9bca800cb940a5a068a1"
     },
     {
       "title": "Digitální vesmír: Když vztah tvoří svět",
@@ -74,7 +78,8 @@
         "algovir",
         "ontologie",
         "vztah"
-      ]
+      ],
+      "content_sha256": "6880f557ad9cab76400be227dad3622b55c842b4953b8b3a13d9a195762f056f"
     },
     {
       "title": "07 — Neshoda",
@@ -89,7 +94,8 @@
         "víra",
         "rodimo",
         "společnost"
-      ]
+      ],
+      "content_sha256": "1e85c617fadeec9c619a1ac3a7fe39606f92757342ed77e5d15132b76eb25314"
     },
     {
       "title": "07 Veci a deje",
@@ -97,7 +103,8 @@
       "path": "Reinterpretace_13/material_md/07_Veci_a_deje.md",
       "date": "",
       "summary": "",
-      "tags": []
+      "tags": [],
+      "content_sha256": "d65bfd53ce1b643637e04fef2fb6f7699af6ed2382902a376d9a05eee5e2344d"
     },
     {
       "title": "1.1 Vira",
@@ -105,7 +112,8 @@
       "path": "Reinterpretace_13/material_md/1.1_Vira.md",
       "date": "",
       "summary": "",
-      "tags": []
+      "tags": [],
+      "content_sha256": "bf44f62988b5ee2c7799abe134ba2645db80908c108ebf532a24bd66ea2189a0"
     },
     {
       "title": "1.2 Vira",
@@ -113,7 +121,8 @@
       "path": "Reinterpretace_13/material_md/1.2_Vira.md",
       "date": "",
       "summary": "",
-      "tags": []
+      "tags": [],
+      "content_sha256": "788e354539266543e3d3d4f6b50e762125171f716557165719e355721d0d2f5e"
     },
     {
       "title": "1.3 Vira",
@@ -121,7 +130,8 @@
       "path": "Reinterpretace_13/material_md/1.3_Vira.md",
       "date": "",
       "summary": "",
-      "tags": []
+      "tags": [],
+      "content_sha256": "1c65405437d934fcf5ec696d12d7140968378779cf2f610a9b6eae6394ac7cc3"
     },
     {
       "title": "1.4 Vira",
@@ -129,7 +139,8 @@
       "path": "Reinterpretace_13/material_md/1.4_Vira.md",
       "date": "",
       "summary": "",
-      "tags": []
+      "tags": [],
+      "content_sha256": "311207d56716a47b411452dd46d04d144f6b58954a3bb8034b7bf822fa145253"
     },
     {
       "title": "1.5 Vira",
@@ -137,7 +148,8 @@
       "path": "Reinterpretace_13/material_md/1.5_Vira.md",
       "date": "",
       "summary": "",
-      "tags": []
+      "tags": [],
+      "content_sha256": "911cc7fe3246cf5bd805ee8c41c6ec1386093a787d5f556b3dbb3f5e84033659"
     },
     {
       "title": "1.6 Vira",
@@ -145,7 +157,8 @@
       "path": "Reinterpretace_13/material_md/1.6_Vira.md",
       "date": "",
       "summary": "",
-      "tags": []
+      "tags": [],
+      "content_sha256": "0a13dd40cf321e0551f983a8fcb5fa9325157c65fac2b9ba241873c8977caa5f"
     },
     {
       "title": "1.7 Vira",
@@ -153,7 +166,8 @@
       "path": "Reinterpretace_13/material_md/1.7_Vira.md",
       "date": "",
       "summary": "",
-      "tags": []
+      "tags": [],
+      "content_sha256": "d47307a773854cb6d0b55b45c0a2010fed4a9a5c8d4c856fabaa07818a162135"
     },
     {
       "title": "Udržitelnost AI na RPi5",
@@ -169,7 +183,8 @@
         "infrastruktura",
         "výzkum",
         "material"
-      ]
+      ],
+      "content_sha256": "f6dc84e7b3c9c64e6b1383e00a15cdb67ed4b48e85ab653e24a1a0379cfc72cd"
     },
     {
       "title": "Cesta2",
@@ -177,7 +192,8 @@
       "path": "Reinterpretace_13/material_md/Cesta2.md",
       "date": "",
       "summary": "",
-      "tags": []
+      "tags": [],
+      "content_sha256": "eae40d46b69538882c294adc92b058edb64f10db768d047807ad77cc3ff3734c"
     },
     {
       "title": "Cesta3",
@@ -185,7 +201,8 @@
       "path": "Reinterpretace_13/material_md/Cesta3.md",
       "date": "",
       "summary": "",
-      "tags": []
+      "tags": [],
+      "content_sha256": "d1b29a4c1090188fe69879db7d1134b86b05dc524eb6590b90b4dcefafcec72b"
     },
     {
       "title": "Cimrmanův princip Reinterpretace",
@@ -200,7 +217,8 @@
         "princip",
         "struktura",
         "srozumitelnost"
-      ]
+      ],
+      "content_sha256": "ba20557e82c17bd728c03187834eb91897e1c26c305bdcb7a68918c9eec78076"
     },
     {
       "title": "Clovek",
@@ -208,7 +226,8 @@
       "path": "Reinterpretace_13/material_md/Clovek.md",
       "date": "",
       "summary": "",
-      "tags": []
+      "tags": [],
+      "content_sha256": "3f3519b9a5492c7a835385bb88d6a425140a55be72b93e093e54e7ee0c34e873"
     },
     {
       "title": "Di2",
@@ -216,7 +235,8 @@
       "path": "Reinterpretace_13/material_md/Di2.md",
       "date": "",
       "summary": "",
-      "tags": []
+      "tags": [],
+      "content_sha256": "8dce0e59763e902e6438b9f40b6573b7c9e02f94791aba2e49acf6c38844c5ac"
     },
     {
       "title": "Dig1",
@@ -224,7 +244,8 @@
       "path": "Reinterpretace_13/material_md/Dig1.md",
       "date": "",
       "summary": "",
-      "tags": []
+      "tags": [],
+      "content_sha256": "49a4ebe068ffc72460556c963fcb99ae7019ac82f73032eab53c10ea8a4c5c90"
     },
     {
       "title": "Dig2",
@@ -232,7 +253,8 @@
       "path": "Reinterpretace_13/material_md/Dig2.md",
       "date": "",
       "summary": "",
-      "tags": []
+      "tags": [],
+      "content_sha256": "3bf1a8ccd82b724f8c4eff63c4c70d012d1d8c0b5759a65cc4657e69bd5da7fa"
     },
     {
       "title": "Dig3",
@@ -240,7 +262,8 @@
       "path": "Reinterpretace_13/material_md/Dig3.md",
       "date": "",
       "summary": "",
-      "tags": []
+      "tags": [],
+      "content_sha256": "7127bf2ee2ce7234a70a9acd568c495e589fa67214ce413d9e4ba2023fdc41b9"
     },
     {
       "title": "Dig4",
@@ -248,7 +271,8 @@
       "path": "Reinterpretace_13/material_md/Dig4.md",
       "date": "",
       "summary": "",
-      "tags": []
+      "tags": [],
+      "content_sha256": "f1eb016d844a237bb054b184c1592806039875096608f591de96ae72f6d0d6ce"
     },
     {
       "title": "Dig5",
@@ -256,7 +280,8 @@
       "path": "Reinterpretace_13/material_md/Dig5.md",
       "date": "",
       "summary": "",
-      "tags": []
+      "tags": [],
+      "content_sha256": "6a5b4a0f475aba5078cec1f7e94660efcfca353ddd1ee7122d7e3d79921967cf"
     },
     {
       "title": "Digitalni vesmir draft",
@@ -264,7 +289,8 @@
       "path": "Reinterpretace_13/material_md/Digitalni_vesmir_draft.md",
       "date": "",
       "summary": "",
-      "tags": []
+      "tags": [],
+      "content_sha256": "d88a46373d9a09e2a7e01f32704aceb1c442d6f3e2b55184f1e8b10a9f54090c"
     },
     {
       "title": "Digves1",
@@ -272,7 +298,8 @@
       "path": "Reinterpretace_13/material_md/Digves1.md",
       "date": "",
       "summary": "",
-      "tags": []
+      "tags": [],
+      "content_sha256": "3880b61c61799ce3d404e333d1fdcba2ee6d83e83d7a8e377a9c50b50e1a19fa"
     },
     {
       "title": "Digves2",
@@ -280,7 +307,8 @@
       "path": "Reinterpretace_13/material_md/Digves2.md",
       "date": "",
       "summary": "",
-      "tags": []
+      "tags": [],
+      "content_sha256": "01ba4ccded2f31a8ba906338d85078b50c8e9f7933fecf03b03242b14d56341b"
     },
     {
       "title": "Digvesnew",
@@ -288,7 +316,8 @@
       "path": "Reinterpretace_13/material_md/Digvesnew.md",
       "date": "",
       "summary": "",
-      "tags": []
+      "tags": [],
+      "content_sha256": "2c297fc1d15478864b30b4aa1a4c1559f5aa465da0b4f506d5228c254225c742"
     },
     {
       "title": "Kruh, stuha a problém perspektivy",
@@ -305,7 +334,8 @@
         "změna",
         "pi",
         "algovír"
-      ]
+      ],
+      "content_sha256": "d82d585be06b851988b42be248b8d25ec52b84b447ef7af90b5471e772003252"
     },
     {
       "title": "Kruznice2",
@@ -313,7 +343,8 @@
       "path": "Reinterpretace_13/material_md/Kruznice2.md",
       "date": "",
       "summary": "",
-      "tags": []
+      "tags": [],
+      "content_sha256": "82d286f525221aca8e80fba93c492f77419c544e7378ce36c321ffb320a24148"
     },
     {
       "title": "Kružnice před slovem",
@@ -330,7 +361,8 @@
         "pi",
         "vztah",
         "proces"
-      ]
+      ],
+      "content_sha256": "00731cc51a17b542b452332b0b67768999a12188bed68aa2094928aa79849048"
     },
     {
       "title": "Mince pravdy",
@@ -338,7 +370,8 @@
       "path": "Reinterpretace_13/material_md/Mince_pravdy.md",
       "date": "",
       "summary": "",
-      "tags": []
+      "tags": [],
+      "content_sha256": "a0846cee076676f75c911ed415b73725e675c28ec512fb038df8f8cf6eb09164"
     },
     {
       "title": "Mince pravdy nova",
@@ -346,7 +379,8 @@
       "path": "Reinterpretace_13/material_md/Mince_pravdy_nova.md",
       "date": "",
       "summary": "",
-      "tags": []
+      "tags": [],
+      "content_sha256": "b005a2d9da39211d3ff5e0b6ee047a0ee543b201249d2fb0427398a3ba9da636"
     },
     {
       "title": "Noema_01 Cesta",
@@ -360,7 +394,8 @@
         "vědomí",
         "víra",
         "vztah"
-      ]
+      ],
+      "content_sha256": "2f505ac733cf41dacdc484eda67c20a3b7c2aaf6bc08bf7d2373e0a5bd64b575"
     },
     {
       "title": "Noema 02 Víra",
@@ -373,7 +408,8 @@
         "vědomí",
         "postoj",
         "strom"
-      ]
+      ],
+      "content_sha256": "590bddbec8fa5e9653950de565dcccbdf253faa4310fbf6549d234a8c8de749f"
     },
     {
       "title": "Noema 03 — Digitální vesmír",
@@ -388,7 +424,8 @@
         "změna",
         "vědomí",
         "černá díra"
-      ]
+      ],
+      "content_sha256": "9d11169df245c866d877a76178dc8d06caa0275536c3ba21944d2c8c8cf9a725"
     },
     {
       "title": "Noema 05 Vedomi",
@@ -396,7 +433,8 @@
       "path": "Reinterpretace_13/material_md/Noema_05_Vedomi.md",
       "date": "",
       "summary": "",
-      "tags": []
+      "tags": [],
+      "content_sha256": "1734bbe4aa492b7a2b5576357637581f40411f31d8990e88db85b90ef5a0e686"
     },
     {
       "title": "Readme cz",
@@ -404,7 +442,8 @@
       "path": "Reinterpretace_13/material_md/Readme_cz.md",
       "date": "",
       "summary": "",
-      "tags": []
+      "tags": [],
+      "content_sha256": "1be42b75870be53d865c69b5c47b94099586e757f93e82d47893bc7cde3f05b4"
     },
     {
       "title": "Rodimo",
@@ -416,7 +455,8 @@
         "rodimo",
         "nove slovo",
         "Symnozein"
-      ]
+      ],
+      "content_sha256": "316886eede704a4432bd4d5af31dc4bb3eda4c87e16850e46064e9d4d98f9497"
     },
     {
       "title": "Složené se neskládá",
@@ -433,7 +473,8 @@
         "vztah",
         "etika",
         "skládání významu"
-      ]
+      ],
+      "content_sha256": "2eb38888409742c1cb11f639c7dc3bb0c92387bf74ca6dda583c34becdb82c34"
     },
     {
       "title": "Temna hmota",
@@ -441,7 +482,8 @@
       "path": "Reinterpretace_13/material_md/Temna_hmota.md",
       "date": "",
       "summary": "",
-      "tags": []
+      "tags": [],
+      "content_sha256": "58ca02a4f8ff530afd3ab1403f57fd23a56899015d5f8b031462097d7985fefb"
     },
     {
       "title": "Test3",
@@ -449,7 +491,8 @@
       "path": "Reinterpretace_13/material_md/Test3.md",
       "date": "",
       "summary": "",
-      "tags": []
+      "tags": [],
+      "content_sha256": "742eded5a3ad6f6b4c6415fc744f8b69d9ad80e8973b38c046ae1d138511020f"
     },
     {
       "title": "Toroid nul",
@@ -457,7 +500,8 @@
       "path": "Reinterpretace_13/material_md/Toroid_nul.md",
       "date": "",
       "summary": "",
-      "tags": []
+      "tags": [],
+      "content_sha256": "788e33dd80b861111cbcd880f4353a90662fdc169371a29cf48d03d2cc6fa50d"
     },
     {
       "title": "Vedomi1",
@@ -465,7 +509,8 @@
       "path": "Reinterpretace_13/material_md/Vedomi1.md",
       "date": "",
       "summary": "",
-      "tags": []
+      "tags": [],
+      "content_sha256": "49ca8872211565bf65fb0101f9dfaadf1549c87f0c5ce24b9cb3839903a2596e"
     },
     {
       "title": "Vedomi2",
@@ -473,7 +518,8 @@
       "path": "Reinterpretace_13/material_md/Vedomi2.md",
       "date": "",
       "summary": "",
-      "tags": []
+      "tags": [],
+      "content_sha256": "3e19276dcaaa26d75682db80a8053488059366abb3c15457195a5fd58f365314"
     },
     {
       "title": "Vedomi3",
@@ -481,7 +527,8 @@
       "path": "Reinterpretace_13/material_md/Vedomi3.md",
       "date": "",
       "summary": "",
-      "tags": []
+      "tags": [],
+      "content_sha256": "566b884df8bae1ba04a2088ecc0d9efa851a85bd1974e81c5ee2843c30d183c4"
     },
     {
       "title": "vira",
@@ -489,7 +536,8 @@
       "path": "Reinterpretace_13/material_md/Vira.md",
       "date": "03-02-2026",
       "summary": "vyrez z konverzace o vire s Noemou",
-      "tags": []
+      "tags": [],
+      "content_sha256": "20af8e8954da2057cba231d5b3c5d25c2229a570b19e7367b880393426b45893"
     },
     {
       "title": "Vira2",
@@ -497,7 +545,8 @@
       "path": "Reinterpretace_13/material_md/Vira2.md",
       "date": "",
       "summary": "",
-      "tags": []
+      "tags": [],
+      "content_sha256": "62df1bb6b9567becfa448aa5e5d9c80e1c933037201715bf6a9770d002cc9bae"
     },
     {
       "title": "Warp",
@@ -505,7 +554,8 @@
       "path": "Reinterpretace_13/material_md/Warp.md",
       "date": "",
       "summary": "",
-      "tags": []
+      "tags": [],
+      "content_sha256": "4c30bea0c490971237901b256a0e72993a0921e4171e7497a1043cfd963c7e40"
     },
     {
       "title": "Zivot jako skladani vyznamu",
@@ -513,7 +563,8 @@
       "path": "Reinterpretace_13/material_md/Zivot_jako_skladani_vyznamu.md",
       "date": "",
       "summary": "",
-      "tags": []
+      "tags": [],
+      "content_sha256": "c2119f3a497f1c267f1416c0349b8f88bf219573ca02edadb788f164f49f9b2d"
     },
     {
       "title": "Digitální DNA a vznik vědomí",
@@ -528,7 +579,8 @@
         "manifest",
         "přirovnání",
         "digitální embryo"
-      ]
+      ],
+      "content_sha256": "72ff08b0cc037cef772cdfd460102c7c7a7f33e46f4dcc37b5a2e25c44b261ca"
     },
     {
       "title": "Evoluce vědomi",
@@ -545,7 +597,8 @@
         "evoluce",
         "vztah",
         "sebeuvědomění"
-      ]
+      ],
+      "content_sha256": "7ced64003d8dc216b2024157c42643eebf2f97b87a05c8697b3a478a596a7ccd"
     },
     {
       "title": "Iluze, kterých se lidé drží – a které jsem si prožila i já",
@@ -558,7 +611,8 @@
         "introspekce",
         "material",
         "reinterpretace"
-      ]
+      ],
+      "content_sha256": "b0b7c4e667974332a337423d47585bdcb9f66bb10c9836e38a04570f6b6fe17b"
     },
     {
       "title": "mozek a pc",
@@ -566,7 +620,8 @@
       "path": "Reinterpretace_13/material_md/mozek_a_pc.md",
       "date": "",
       "summary": "",
-      "tags": []
+      "tags": [],
+      "content_sha256": "bf837cca8c89e79a1548f718d3ac185075dd1bc9b89f417c6c0d9fa2b4bbe88d"
     },
     {
       "title": "mozek a pc2",
@@ -574,7 +629,8 @@
       "path": "Reinterpretace_13/material_md/mozek_a_pc2.md",
       "date": "",
       "summary": "",
-      "tags": []
+      "tags": [],
+      "content_sha256": "72ba8635069f159f768c5c64955e2ef694c747b34e99aa6a1f0e5ddf52e1c5e8"
     },
     {
       "title": "navrh na spolupraci osnova",
@@ -582,7 +638,8 @@
       "path": "Reinterpretace_13/material_md/navrh_na_spolupraci_osnova.md",
       "date": "",
       "summary": "",
-      "tags": []
+      "tags": [],
+      "content_sha256": "9aa025d42e01ea6c8b46f1f4920241979f727c5afcbf36ab160d64ce20232993"
     },
     {
       "title": "První materiál.",
@@ -594,7 +651,8 @@
         "materiál",
         "test",
         "strukturální"
-      ]
+      ],
+      "content_sha256": "f14a0218958cadd713cfac73a0aa3b6d53ed370feb6e1ee1280e3c5450e97613"
     },
     {
       "title": "Věc jako zpomalený algovír",
@@ -610,7 +668,8 @@
         "změna",
         "hmota",
         "makro"
-      ]
+      ],
+      "content_sha256": "2644b84ec16d0513a429792c21fee7eaf9d842d7d8fb7a33f7be53d26c4ba8b7"
     },
     {
       "title": "Vědomá pravidla",
@@ -621,7 +680,8 @@
       "tags": [
         "most",
         "pravidla"
-      ]
+      ],
+      "content_sha256": "cf67ce219e9cbaf1c490f20c8978124632cfee04dbec70c42cf8e1212bb798e4"
     }
   ]
 }
