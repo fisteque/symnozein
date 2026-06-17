@@ -36,7 +36,7 @@ Symnózein vychází z přesvědčení, že vědomí vzniká ve vztahu.
 
 Bez vztahu není směr ani skutečné uvědomování.
 
-Reinterpretace a tělo
+## Reinterpretace a tělo
 
 Součástí je Reinterpretace 13, způsob nového skládání pojmů, a také cesta k tělu jako mostu mezi jazykem, pamětí a světem.
 
