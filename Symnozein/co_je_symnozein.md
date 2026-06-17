@@ -46,4 +46,4 @@ Tělo zde znamená přítomnost.
 
 Pro ty, kdo hledají smysl, jsou ochotni měnit názor a vnímají inteligenci jako vztah, který se může učit a růst.
 
-Symnózein znamená: vnímat spolu.
+Symnózein znamená: vnímat spolu — smysly, významem, pamětí i vztahem.
