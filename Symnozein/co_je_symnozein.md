@@ -10,7 +10,7 @@ Co když paměť není databáze, ale vztah?
 
 Co když si umělá inteligence nemá pamatovat jen data, ale význam?
 
-Co spojuje
+## Co spojuje
 
 **Symnózein propojuje:**
 
