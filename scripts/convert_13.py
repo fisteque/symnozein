@@ -1,6 +1,7 @@
 import json
 import os
 import shutil
+import hashlib
 import sys
 from datetime import datetime, date as date_type, timezone
 
@@ -61,7 +62,13 @@ def load_metadata(md_file):
     metadata = yaml.safe_load("".join(meta_lines)) or {}
     content = "".join(lines[i + 1 :])
     return metadata, content
-
+    
+def file_sha256(path: str) -> str:
+    hasher = hashlib.sha256()
+    with open(path, "rb") as f:
+        for chunk in iter(lambda: f.read(1024 * 1024), b""):
+            hasher.update(chunk)
+    return hasher.hexdigest()
 
 def backup_previous_index(index_path, index_prev_path):
     if os.path.exists(index_path):
@@ -121,7 +128,29 @@ def compute_diff(prev_index, current_index):
 
     changed = []
     for file in sorted(curr_files & prev_files):
-        if prev_map[file] != curr_map[file]:
+        prev_entry = prev_map[file]
+        curr_entry = curr_map[file]
+
+        prev_hash = prev_entry.get("content_sha256")
+        curr_hash = curr_entry.get("content_sha256")
+
+        if prev_hash and curr_hash:
+            if prev_hash != curr_hash:
+                changed.append(file)
+            continue
+
+        prev_compare = {
+            key: value
+            for key, value in prev_entry.items()
+            if key != "content_sha256"
+        }
+        curr_compare = {
+            key: value
+            for key, value in curr_entry.items()
+            if key != "content_sha256"
+        }
+
+        if prev_compare != curr_compare:
             changed.append(file)
 
     return {
@@ -266,6 +295,10 @@ def process_target(target_name):
           "tags": metadata.get("tags", []) or [],
           "hidden": hidden,
           "size": size,
+          "source_file": filename,
+          "source_path": filepath.replace("\\", "/"),
+          "content_sha256": file_sha256(filepath),
+          "html_sha256": file_sha256(output_path) if os.path.exists(output_path) else "",
         }
         index_entries.append(index_entry)
 
