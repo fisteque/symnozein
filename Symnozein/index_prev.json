@@ -1,19 +1,11 @@
 {
-  "generated_at": "2026-06-17T18:34:56.739522Z",
+  "generated_at": "2026-06-17T18:38:53.741653Z",
   "source": {
     "script": "scripts/update_symnozein_index.py",
     "workflow": ".github/workflows/update_symnozein_index.yml"
   },
   "kind": "content",
   "entries": [
-    {
-      "title": "Co stavime",
-      "file": "Co_stavime.md",
-      "path": "Symnozein/Co_stavime.md",
-      "date": "",
-      "summary": "",
-      "tags": []
-    },
     {
       "title": "Symnozein bridge navrh",
       "file": "Symnozein_bridge_navrh.md",
@@ -26,6 +18,14 @@
       "title": "What is symnozein",
       "file": "What_is_symnozein.md",
       "path": "Symnozein/What_is_symnozein.md",
+      "date": "",
+      "summary": "",
+      "tags": []
+    },
+    {
+      "title": "co stavime",
+      "file": "co_stavime.md",
+      "path": "Symnozein/co_stavime.md",
       "date": "",
       "summary": "",
       "tags": []
