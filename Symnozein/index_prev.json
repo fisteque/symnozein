@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-17T20:35:54.604047Z",
+  "generated_at": "2026-06-17T20:36:51.881437Z",
   "source": {
     "script": "scripts/update_symnozein_index.py",
     "workflow": ".github/workflows/update_symnozein_index.yml"
@@ -75,7 +75,7 @@
       "date": "",
       "summary": "",
       "tags": [],
-      "content_sha256": "6edc586d1d9f9816f01d1ab54aadf2d66938070594b8a7e7c171ac20adc66e6c"
+      "content_sha256": "22e28d25f32a5c802a55afec26915f4b62de706ac67519f7920d72aaff89c21e"
     },
     {
       "title": "What is symnozein",
