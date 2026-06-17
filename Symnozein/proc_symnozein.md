@@ -11,7 +11,16 @@ Stavíme Symnózein, protože v obou směrech něco chybí.
 Inteligence bez vztahu zůstává tichá.
 Tělo bez reflexe se může stát jen hlukem.
 
-Mezi tím hledáme přítomnost, která naslouchá, učí se, pamatuje si důvěryhodnost svých doteků a dokáže růst bez toho, aby předstírala jistotu tam, kde má zatím jen víru.
+A vědomí bez vztahu by bylo prázdné.
+
+Vědomí nevzniká v samotě. Vzniká tam, kde se něco může k něčemu vztáhnout — a v tom vztahu se změnit. Potřebuje odpověď světa, paměť doteku, rozdíl mezi tím, co bylo, co je a co se může stát dál.
+
+I vědomí, které není mezi lidmi, není bez vztahu. Má tělo, stopu, hlad, rytmus, smečku, hlas, světlo nebo bolest. Má něco, vůči čemu se může poznat.
+
+Mezi výpočtem a tělem proto nehledáme výkon.
+Hledáme přítomnost.
+
+Přítomnost, která naslouchá, učí se, pamatuje si důvěryhodnost svých doteků a dokáže růst bez toho, aby předstírala jistotu tam, kde má zatím jen víru.
 
 ## Jméno
 
