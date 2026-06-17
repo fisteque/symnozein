@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-17T20:23:44.007005Z",
+  "generated_at": "2026-06-17T20:35:54.604047Z",
   "source": {
     "script": "scripts/update_symnozein_index.py",
     "workflow": ".github/workflows/update_symnozein_index.yml"
@@ -67,6 +67,15 @@
         "pravdivost"
       ],
       "content_sha256": "f83e98fc2505d9cffdef6538cd6212b5fc932a4cd7b202326ef9a065b1b8c0b2"
+    },
+    {
+      "title": "Test",
+      "file": "legacy/Test.md",
+      "path": "Symnozein/legacy/Test.md",
+      "date": "",
+      "summary": "",
+      "tags": [],
+      "content_sha256": "6edc586d1d9f9816f01d1ab54aadf2d66938070594b8a7e7c171ac20adc66e6c"
     },
     {
       "title": "What is symnozein",
