@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-12T08:40:19.294305Z",
+  "generated_at": "2026-06-17T09:11:12.316603Z",
   "source": {
     "script": "scripts/update_material_index.py",
     "workflow": ".github/workflows/update_material_index.yml"
@@ -434,6 +434,14 @@
         "etika",
         "skládání významu"
       ]
+    },
+    {
+      "title": "Temna hmota",
+      "file": "Temna_hmota.md",
+      "path": "Reinterpretace_13/material_md/Temna_hmota.md",
+      "date": "",
+      "summary": "",
+      "tags": []
     },
     {
       "title": "Test3",

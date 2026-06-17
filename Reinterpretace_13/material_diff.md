@@ -5,6 +5,23 @@ Uchovává posledních **50** záznamů.
 
 ---
 
+## 2026-06-17T09:11:12.316603Z
+
+Zdroj změn:
+- skript: `scripts/update_material_index.py`
+- workflow: `.github/workflows/update_material_index.yml`
+
+➕ přidáno: **1**
+- `Temna_hmota.md`
+
+🔄 změněno: **0**
+- nic
+
+❌ odebráno: **0**
+- nic
+
+---
+
 ## 2026-06-12T08:40:19.294305Z
 
 Zdroj změn:
@@ -826,23 +843,6 @@ Zdroj změn:
 ---
 
 ## 2026-04-05T11:46:17.768722Z
-
-Zdroj změn:
-- skript: `scripts/update_material_index.py`
-- workflow: `.github/workflows/update_material_index.yml`
-
-➕ přidáno: **0**
-- nic
-
-🔄 změněno: **0**
-- nic
-
-❌ odebráno: **0**
-- nic
-
----
-
-## 2026-04-05T11:40:14.272789Z
 
 Zdroj změn:
 - skript: `scripts/update_material_index.py`
