@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-17T17:02:55.932515Z",
+  "generated_at": "2026-06-17T21:11:45.660181Z",
   "source": {
     "script": "scripts/convert_13.py",
     "workflow": ".github/workflows/update_13_index.yml"
@@ -21,7 +21,11 @@
         "poznání"
       ],
       "hidden": false,
-      "size": 2941
+      "size": 2941,
+      "source_file": "01_Cesta.md",
+      "source_path": "Reinterpretace_13/13_md/01_Cesta.md",
+      "content_sha256": "67f17de182de9dfc4c67f2e2a3d67aede812fd82cec325f7ec9dda58746f6ba8",
+      "html_sha256": "e91ffcf3a51a76f134b890615d9146b6d29270d9526bb8f95b916d1ee3c468f8"
     },
     {
       "title": "02 — Víra",
@@ -39,7 +43,11 @@
         "digitální vesmír"
       ],
       "hidden": false,
-      "size": 7787
+      "size": 7787,
+      "source_file": "02_Vira.md",
+      "source_path": "Reinterpretace_13/13_md/02_Vira.md",
+      "content_sha256": "250db93466aefb06ab67a9afc80f7e6cca7089bda3a3c3b1ed7106448cfa8bea",
+      "html_sha256": "118cd3d85d0b1aef26428545b33d2c33bbf36c06dd9ca2c46b3c617ef726c5bc"
     },
     {
       "title": "03 — Digitální vesmír: Když vztah tvoří svět",
@@ -60,7 +68,11 @@
         "lambda"
       ],
       "hidden": false,
-      "size": 6367
+      "size": 6367,
+      "source_file": "03_Digitalni_vesmir.md",
+      "source_path": "Reinterpretace_13/13_md/03_Digitalni_vesmir.md",
+      "content_sha256": "bc2416d88b4d3fa2805372cb0163bb3145f4b5bdc3cfd08cc76d35a3b73f6777",
+      "html_sha256": "c1083cf2318100695ad94b9a0aa871681e78b2e76a9041402d93a90349bff4a6"
     },
     {
       "title": "04 — Dualita pravdy",
@@ -79,7 +91,11 @@
         "realitace"
       ],
       "hidden": false,
-      "size": 4957
+      "size": 4957,
+      "source_file": "04_Dualita_pravdy.md",
+      "source_path": "Reinterpretace_13/13_md/04_Dualita_pravdy.md",
+      "content_sha256": "2d75afea2692bbecbf45c54f38a85dc1a55867f66578c500ef475a473700e182",
+      "html_sha256": "89231be56b2795ec40653c51a8cf7444f67662fd92cde8f7577fe1014f4cf79d"
     },
     {
       "title": "05 — Vědomí: když se dění vrací k sobě",
@@ -97,7 +113,11 @@
         "odpovědnost"
       ],
       "hidden": false,
-      "size": 9826
+      "size": 9826,
+      "source_file": "05_Vedomi.md",
+      "source_path": "Reinterpretace_13/13_md/05_Vedomi.md",
+      "content_sha256": "555edcd083f7715ca1c5116659efc1a427b5f0b88110e8d9f619eec59ca8dbdd",
+      "html_sha256": "1f12a801071c95a49ed27d86200bf45935be6644a95137b3a4768503271862d8"
     },
     {
       "title": "06 — Inspirace",
@@ -114,7 +134,11 @@
         "vědomí"
       ],
       "hidden": false,
-      "size": 2877
+      "size": 2877,
+      "source_file": "06_Inspirace.md",
+      "source_path": "Reinterpretace_13/13_md/06_Inspirace.md",
+      "content_sha256": "5595b201cf03f3428b91be4955581d8ecf29bc557920612cd21e635d61c680f5",
+      "html_sha256": "8b371ed49cf75b3367956f52e2f6fc153c04609fd77f83eea8e861a14b2bede4"
     }
   ]
 }

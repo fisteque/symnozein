@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-15T19:10:25.560802Z",
+  "generated_at": "2026-06-17T17:02:55.932515Z",
   "source": {
     "script": "scripts/convert_13.py",
     "workflow": ".github/workflows/update_13_index.yml"
@@ -39,7 +39,7 @@
         "digitální vesmír"
       ],
       "hidden": false,
-      "size": 7690
+      "size": 7787
     },
     {
       "title": "03 — Digitální vesmír: Když vztah tvoří svět",
