@@ -1,7 +1,6 @@
-Cimrman by možná řekl:
+### Cimrman by možná řekl:
 
 „Temnou hmotu jsme neobjevili.
-
 Ale objevili jsme, že nevíme přesněji než dosud.“
 
 A publikum by se zasmálo, protože je to blbost — a pak by zjistilo, že to vůbec není blbost.
