@@ -5,6 +5,23 @@ Uchovává posledních **50** záznamů.
 
 ---
 
+## 2026-06-17T18:38:53.741653Z
+
+Zdroj změn:
+- skript: `scripts/update_symnozein_index.py`
+- workflow: `.github/workflows/update_symnozein_index.yml`
+
+➕ přidáno: **1**
+- `co_stavime.md`
+
+🔄 změněno: **0**
+- nic
+
+❌ odebráno: **1**
+- `Co_stavime.md`
+
+---
+
 ## 2026-06-17T18:34:56.739522Z
 
 Zdroj změn:
