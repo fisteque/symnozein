@@ -98,21 +98,47 @@ def get_entries_map(index_data):
     if not index_data:
         return {}
 
-    # starý formát: index je přímo list entries
     if isinstance(index_data, list):
         entries = index_data
-
-    # nový formát: objekt s klíčem "entries"
     elif isinstance(index_data, dict):
         entries = index_data.get("entries", [])
-
     else:
         return {}
 
+    result = {}
+
+    for entry in entries:
+        if not isinstance(entry, dict) or "file" not in entry:
+            continue
+
+        key = entry.get("source_file") or entry["file"]
+        result[key] = entry
+
+    return result
+
+def display_name(entry, key):
+    source = entry.get("source_file")
+    output = entry.get("file")
+
+    if source and output and source != output:
+        return f"`{source}` → `{output}`"
+
+    name = source or output or key
+    return f"`{name}`"
+
+
+def comparable_entry(entry):
+    ignored_keys = {
+        "content_sha256",
+        "html_sha256",
+        "source_file",
+        "source_path",
+    }
+
     return {
-        entry["file"]: entry
-        for entry in entries
-        if isinstance(entry, dict) and "file" in entry
+        key: value
+        for key, value in entry.items()
+        if key not in ignored_keys
     }
 
 
@@ -123,35 +149,45 @@ def compute_diff(prev_index, current_index):
     prev_files = set(prev_map.keys())
     curr_files = set(curr_map.keys())
 
-    added = sorted(curr_files - prev_files)
-    removed = sorted(prev_files - curr_files)
+    added = [
+        display_name(curr_map[file], file)
+        for file in sorted(curr_files - prev_files)
+    ]
+
+    removed = [
+        display_name(prev_map[file], file)
+        for file in sorted(prev_files - curr_files)
+    ]
 
     changed = []
+
     for file in sorted(curr_files & prev_files):
         prev_entry = prev_map[file]
         curr_entry = curr_map[file]
 
-        prev_hash = prev_entry.get("content_sha256")
-        curr_hash = curr_entry.get("content_sha256")
+        prev_content_hash = prev_entry.get("content_sha256")
+        curr_content_hash = curr_entry.get("content_sha256")
 
-        if prev_hash and curr_hash:
-            if prev_hash != curr_hash:
-                changed.append(file)
+        prev_html_hash = prev_entry.get("html_sha256")
+        curr_html_hash = curr_entry.get("html_sha256")
+
+        if prev_content_hash and curr_content_hash:
+            if prev_content_hash != curr_content_hash:
+                changed.append(display_name(curr_entry, file))
+                continue
+
+            if prev_html_hash and curr_html_hash and prev_html_hash != curr_html_hash:
+                changed.append(display_name(curr_entry, file))
+                continue
+
+            if prev_entry.get("size") != curr_entry.get("size"):
+                changed.append(display_name(curr_entry, file))
+                continue
+
             continue
 
-        prev_compare = {
-            key: value
-            for key, value in prev_entry.items()
-            if key != "content_sha256"
-        }
-        curr_compare = {
-            key: value
-            for key, value in curr_entry.items()
-            if key != "content_sha256"
-        }
-
-        if prev_compare != curr_compare:
-            changed.append(file)
+        if comparable_entry(prev_entry) != comparable_entry(curr_entry):
+            changed.append(display_name(curr_entry, file))
 
     return {
         "generated_at": current_index.get("generated_at", utc_now_iso()),
@@ -190,7 +226,8 @@ def parse_existing_diff_entries(path, diff_title):
 def format_list(items, empty_text="nic"):
     if not items:
         return [f"- {empty_text}"]
-    return [f"- `{item}`" for item in items]
+
+    return [f"- {item}" for item in items]
 
 
 def format_diff_entry(diff, config):
@@ -285,18 +322,17 @@ def process_target(target_name):
             f.write(final_html)
 
         size = os.path.getsize(output_path) if os.path.exists(output_path) else 0
-
         index_entry = {
           "title": metadata.get("title", base_name),
           "file": html_filename,
           "path": os.path.join(output_dir, html_filename).replace("\\", "/"),
+          "source_file": filename,
+          "source_path": filepath.replace("\\", "/"),
           "date": normalize_date(metadata.get("date")),
           "summary": metadata.get("summary", "") or "",
           "tags": metadata.get("tags", []) or [],
           "hidden": hidden,
           "size": size,
-          "source_file": filename,
-          "source_path": filepath.replace("\\", "/"),
           "content_sha256": file_sha256(filepath),
           "html_sha256": file_sha256(output_path) if os.path.exists(output_path) else "",
         }
