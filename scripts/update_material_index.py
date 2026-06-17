@@ -1,6 +1,7 @@
 import json
 import os
 import shutil
+import hashlib
 from datetime import date as date_type
 from datetime import datetime, timezone
 
@@ -55,7 +56,13 @@ def load_metadata(md_file: str):
     content = "".join(lines[i + 1 :])
     return metadata, content
 
-
+def file_sha256(path: str) -> str:
+    hasher = hashlib.sha256()
+    with open(path, "rb") as f:
+        for chunk in iter(lambda: f.read(1024 * 1024), b""):
+            hasher.update(chunk)
+    return hasher.hexdigest()
+    
 def backup_previous_index(index_path: str, index_prev_path: str):
     if os.path.exists(index_path):
         shutil.copy2(index_path, index_prev_path)
@@ -110,7 +117,29 @@ def compute_diff(prev_index, current_index):
 
     changed = []
     for file in sorted(curr_files & prev_files):
-        if prev_map[file] != curr_map[file]:
+        prev_entry = prev_map[file]
+        curr_entry = curr_map[file]
+
+        prev_hash = prev_entry.get("content_sha256")
+        curr_hash = curr_entry.get("content_sha256")
+
+        if prev_hash and curr_hash:
+            if prev_hash != curr_hash:
+                changed.append(file)
+            continue
+
+        prev_compare = {
+            key: value
+            for key, value in prev_entry.items()
+            if key != "content_sha256"
+        }
+        curr_compare = {
+            key: value
+            for key, value in curr_entry.items()
+            if key != "content_sha256"
+        }
+
+        if prev_compare != curr_compare:
             changed.append(file)
 
     return {
@@ -224,13 +253,13 @@ def build_entry(filename: str):
 
     return {
         "title": title,
-        "file": filename,
+        "file": filename.replace("\\", "/"),
         "path": filepath.replace("\\", "/"),
         "date": date_value,
         "summary": summary,
-        "tags": tags
+        "tags": tags,
+        "content_sha256": file_sha256(filepath),
     }
-
 
 def main():
     input_dir = CONFIG["input_dir"]
@@ -241,10 +270,20 @@ def main():
     backup_previous_index(index_path, index_prev_path)
 
     index_entries = []
-    for filename in sorted(os.listdir(input_dir)):
-        if not filename.endswith(".md"):
-            continue
-        index_entries.append(build_entry(filename))
+    skip_files = {"material_diff.md"}
+
+    for root, _dirs, files in os.walk(input_dir):
+        for filename in sorted(files):
+            if not filename.endswith(".md"):
+                continue
+
+            full_path = os.path.join(root, filename)
+            rel_path = os.path.relpath(full_path, input_dir).replace("\\", "/")
+
+            if rel_path in skip_files:
+                continue
+
+            index_entries.append(build_entry(rel_path))
 
     index_data = build_index_data(index_entries)
 
