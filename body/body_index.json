@@ -1,11 +1,11 @@
 {
-  "generated_at": "2026-06-17T13:18:41.378372Z",
+  "generated_at": "2026-06-17T13:20:52.696312Z",
   "source": {
     "script": "scripts/update_body_index.py",
     "workflow": ".github/workflows/update_body_index.yml"
   },
   "kind": "state",
-  "count": 152,
+  "count": 153,
   "files": [
     {
       "path": "SK/PK/PK-2026-06-14.md",
@@ -56,6 +56,11 @@
       "path": "SK/SK-008.md",
       "size": 6022,
       "sha256": "86efef5abf375d804dd311d3672767cba1e08f36f6aef278ae8fd1da6cf8e1c8"
+    },
+    {
+      "path": "SK/SK-009.md",
+      "size": 1954,
+      "sha256": "4e044231ce14f9beb2ad313edee8d9ee0fac41cf345e9fbd911ae370157a49fb"
     },
     {
       "path": "SK/UI_memory_cleanup_ledger.md",
