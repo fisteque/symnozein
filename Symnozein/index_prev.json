@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-17T19:26:40.846520Z",
+  "generated_at": "2026-06-17T19:35:15.565430Z",
   "source": {
     "script": "scripts/update_symnozein_index.py",
     "workflow": ".github/workflows/update_symnozein_index.yml"
@@ -10,6 +10,14 @@
       "title": "Symnozein bridge navrh",
       "file": "Symnozein_bridge_navrh.md",
       "path": "Symnozein/Symnozein_bridge_navrh.md",
+      "date": "",
+      "summary": "",
+      "tags": []
+    },
+    {
+      "title": "co je symnozein",
+      "file": "co_je_symnozein.md",
+      "path": "Symnozein/co_je_symnozein.md",
       "date": "",
       "summary": "",
       "tags": []
