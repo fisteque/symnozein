@@ -1,11 +1,19 @@
 {
-  "generated_at": "2026-05-29T09:09:59.925875Z",
+  "generated_at": "2026-06-17T18:23:49.443996Z",
   "source": {
     "script": "scripts/update_symnozein_index.py",
     "workflow": ".github/workflows/update_symnozein_index.yml"
   },
   "kind": "content",
   "entries": [
+    {
+      "title": "Co stavime",
+      "file": "Co_stavime.md",
+      "path": "Symnozein/Co_stavime.md",
+      "date": "",
+      "summary": "",
+      "tags": []
+    },
     {
       "title": "Symnozein bridge navrh",
       "file": "Symnozein_bridge_navrh.md",
@@ -61,14 +69,6 @@
         "význam",
         "pravdivost"
       ]
-    },
-    {
-      "title": "what we build",
-      "file": "what_we_build.md",
-      "path": "Symnozein/what_we_build.md",
-      "date": "",
-      "summary": "",
-      "tags": []
     }
   ]
 }
