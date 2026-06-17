@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-17T21:13:39.481085Z",
+  "generated_at": "2026-06-17T21:15:04.088497Z",
   "source": {
     "script": "scripts/convert_13.py",
     "workflow": ".github/workflows/update_13_index.yml"
@@ -139,20 +139,6 @@
       "source_path": "Reinterpretace_13/13_md/06_Inspirace.md",
       "content_sha256": "5595b201cf03f3428b91be4955581d8ecf29bc557920612cd21e635d61c680f5",
       "html_sha256": "8b371ed49cf75b3367956f52e2f6fc153c04609fd77f83eea8e861a14b2bede4"
-    },
-    {
-      "title": "Tester",
-      "file": "Tester.html",
-      "path": "Reinterpretace_13/13/Tester.html",
-      "date": "",
-      "summary": "",
-      "tags": [],
-      "hidden": false,
-      "size": 692,
-      "source_file": "Tester.md",
-      "source_path": "Reinterpretace_13/13_md/Tester.md",
-      "content_sha256": "4da89d3e88cd9cac1d2b2216558f56a590bd73d0bb6ded17913e114be798bf1a",
-      "html_sha256": "02f54e148e764a9a3f6ac7a24659284b782361474327113348ef4f0f48b6373f"
     }
   ]
 }
