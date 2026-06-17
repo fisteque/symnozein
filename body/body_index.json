@@ -1,11 +1,11 @@
 {
-  "generated_at": "2026-06-17T14:00:26.061910Z",
+  "generated_at": "2026-06-17T14:24:26.656865Z",
   "source": {
     "script": "scripts/update_body_index.py",
     "workflow": ".github/workflows/update_body_index.yml"
   },
   "kind": "state",
-  "count": 153,
+  "count": 154,
   "files": [
     {
       "path": "SK/PK/PK-2026-06-14.md",
@@ -286,6 +286,11 @@
       "path": "bridge/inbox/messages/msg-20260617-codex-readonly-autoreply-path-test-001.md",
       "size": 1076,
       "sha256": "3d3eebdc0bbe974ebe9d1311f5743586bf5af85336f4d52b7ee6edac163041cc"
+    },
+    {
+      "path": "bridge/inbox/messages/msg-20260617-codex-readonly-pulse-state-check-001.md",
+      "size": 847,
+      "sha256": "83f9059ae1d549917610abaa1ce57f9c19702ce1ecfbd514764bde5dde2c4336"
     },
     {
       "path": "bridge/instructions/pc_codex_postman.md",

@@ -5,6 +5,23 @@ Uchovává posledních **50** záznamů.
 
 ---
 
+## 2026-06-17T14:24:26.656865Z
+
+Zdroj změn:
+- skript: `scripts/update_body_index.py`
+- workflow: `.github/workflows/update_body_index.yml`
+
+➕ přidáno: **1**
+- `bridge/inbox/messages/msg-20260617-codex-readonly-pulse-state-check-001.md`
+
+🔄 změněno: **0**
+- nic
+
+❌ odebráno: **0**
+- nic
+
+---
+
 ## 2026-06-17T14:00:26.061910Z
 
 Zdroj změn:
@@ -846,23 +863,6 @@ Zdroj změn:
 
 🔄 změněno: **1**
 - `SK/PK/PK-2026-06-14.md`
-
-❌ odebráno: **0**
-- nic
-
----
-
-## 2026-06-14T09:16:08.953072Z
-
-Zdroj změn:
-- skript: `scripts/update_body_index.py`
-- workflow: `.github/workflows/update_body_index.yml`
-
-➕ přidáno: **1**
-- `SK/PK/PK-2026-06-14.md`
-
-🔄 změněno: **0**
-- nic
 
 ❌ odebráno: **0**
 - nic
