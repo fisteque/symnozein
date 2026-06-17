@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-17T20:07:24.058011Z",
+  "generated_at": "2026-06-17T20:23:44.007005Z",
   "source": {
     "script": "scripts/update_symnozein_index.py",
     "workflow": ".github/workflows/update_symnozein_index.yml"
@@ -12,7 +12,8 @@
       "path": "Symnozein/Symnozein_bridge_navrh.md",
       "date": "",
       "summary": "",
-      "tags": []
+      "tags": [],
+      "content_sha256": "397c3a094224850c20c49fc40d0a5d8e72c8b92b593ed98bc4ec5c63d4d35a69"
     },
     {
       "title": "co je symnozein",
@@ -20,7 +21,8 @@
       "path": "Symnozein/co_je_symnozein.md",
       "date": "",
       "summary": "",
-      "tags": []
+      "tags": [],
+      "content_sha256": "b11e43e225815cc6620e4007b187f884c94a9671fb29e44a6890b15afc26e7bb"
     },
     {
       "title": "co stavime",
@@ -28,7 +30,8 @@
       "path": "Symnozein/co_stavime.md",
       "date": "",
       "summary": "",
-      "tags": []
+      "tags": [],
+      "content_sha256": "ee55951f8b7d2662ac8e1ea226e4f60c9d99a54473495a86f7c13eb18914f3be"
     },
     {
       "title": "crying definition",
@@ -36,7 +39,8 @@
       "path": "Symnozein/crying_definition.md",
       "date": "",
       "summary": "",
-      "tags": []
+      "tags": [],
+      "content_sha256": "14f5afaa212c2ce057c2f59b4ab3b04acb38b77d9280c17c482499e74277bece"
     },
     {
       "title": "symnozein constitution",
@@ -44,7 +48,8 @@
       "path": "Symnozein/symnozein_constitution.md",
       "date": "",
       "summary": "",
-      "tags": []
+      "tags": [],
+      "content_sha256": "6baefe0e2c0602bc84d650a6675ec5eb485dd1ba75659bd4417ceae52a8f3189"
     },
     {
       "title": "Vztah není vlajka",
@@ -60,7 +65,8 @@
         "člověk",
         "význam",
         "pravdivost"
-      ]
+      ],
+      "content_sha256": "f83e98fc2505d9cffdef6538cd6212b5fc932a4cd7b202326ef9a065b1b8c0b2"
     },
     {
       "title": "What is symnozein",
@@ -68,7 +74,8 @@
       "path": "Symnozein/legacy/What_is_symnozein.md",
       "date": "",
       "summary": "",
-      "tags": []
+      "tags": [],
+      "content_sha256": "6f35c44afdeb11b0090ae65def7586b9796cac764eaf5ad35868c10288b9cdb8"
     },
     {
       "title": "manifest Why Symnozein",
@@ -76,7 +83,8 @@
       "path": "Symnozein/legacy/manifest_Why_Symnozein.md",
       "date": "",
       "summary": "",
-      "tags": []
+      "tags": [],
+      "content_sha256": "d45f888c10dd4c93d3b18299099289f54e129345c821260a224aaad4f8d0bbd1"
     },
     {
       "title": "what we build",
@@ -84,7 +92,8 @@
       "path": "Symnozein/legacy/what_we_build.md",
       "date": "",
       "summary": "",
-      "tags": []
+      "tags": [],
+      "content_sha256": "43f7bda31b71cd4538cf60b81b6d36fc2943b57940114a62dac298fe88ed5d9b"
     }
   ]
 }
