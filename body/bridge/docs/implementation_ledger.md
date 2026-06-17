@@ -8,6 +8,20 @@ messages. Keep the newest items at the top.
 
 ## Latest Implementations
 
+### Codex Autoreply Czech Safety Negation
+
+Extended `codex_autoreply_worker.py` safety filtering with Czech
+`neprovadej` / `neprováděj` negation markers.
+
+This keeps actual risky requests blocked, but prevents read-only requests from
+being marked `needs_human` only because they include a Czech safety sentence
+such as "Neprovadej zadne upravy, commit, push, pull, delete, restart...".
+
+The pending read-only root web check request then classified as
+`stub_written`, `codex-autoreply.service` ran `codex exec`, archived the request
+under `codex/processed/YYYY-MM/`, and wrote the response through the normal
+bridge outbox path.
+
 ### Codex Autoreply Read-Only Commit/Push Context
 
 Adjusted `codex_autoreply_worker.py` classification so read-only questions about
