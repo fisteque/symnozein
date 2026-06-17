@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-17T21:15:04.088497Z",
+  "generated_at": "2026-06-17T21:44:22.414792Z",
   "source": {
     "script": "scripts/convert_13.py",
     "workflow": ".github/workflows/update_13_index.yml"
@@ -10,6 +10,8 @@
       "title": "01 — Cesta",
       "file": "01_Cesta.html",
       "path": "Reinterpretace_13/13/01_Cesta.html",
+      "source_file": "01_Cesta.md",
+      "source_path": "Reinterpretace_13/13_md/01_Cesta.md",
       "date": "2026-03-23",
       "summary": "Osobní vstup do Reinterpretace. Cesta není vysvětlení světa, ale hledání smyslu v tom, co se děje — a ochota měnit názor, když se význam skládá jinak.",
       "tags": [
@@ -22,8 +24,6 @@
       ],
       "hidden": false,
       "size": 2941,
-      "source_file": "01_Cesta.md",
-      "source_path": "Reinterpretace_13/13_md/01_Cesta.md",
       "content_sha256": "67f17de182de9dfc4c67f2e2a3d67aede812fd82cec325f7ec9dda58746f6ba8",
       "html_sha256": "e91ffcf3a51a76f134b890615d9146b6d29270d9526bb8f95b916d1ee3c468f8"
     },
@@ -31,6 +31,8 @@
       "title": "02 — Víra",
       "file": "02_Vira.html",
       "path": "Reinterpretace_13/13/02_Vira.html",
+      "source_file": "02_Vira.md",
+      "source_path": "Reinterpretace_13/13_md/02_Vira.md",
       "date": "2026-04-13",
       "summary": "Víra není přesvědčení, ale způsob, jak jednáme v nejistotě. Vzniká ze zkušenosti, vede naše rozhodování, umožňuje učení a propojuje prožitek s povahou reality.",
       "tags": [
@@ -44,8 +46,6 @@
       ],
       "hidden": false,
       "size": 7787,
-      "source_file": "02_Vira.md",
-      "source_path": "Reinterpretace_13/13_md/02_Vira.md",
       "content_sha256": "250db93466aefb06ab67a9afc80f7e6cca7089bda3a3c3b1ed7106448cfa8bea",
       "html_sha256": "118cd3d85d0b1aef26428545b33d2c33bbf36c06dd9ca2c46b3c617ef726c5bc"
     },
@@ -53,6 +53,8 @@
       "title": "03 — Digitální vesmír: Když vztah tvoří svět",
       "file": "03_Digitalni_vesmir.html",
       "path": "Reinterpretace_13/13/03_Digitalni_vesmir.html",
+      "source_file": "03_Digitalni_vesmir.md",
+      "source_path": "Reinterpretace_13/13_md/03_Digitalni_vesmir.md",
       "date": "2026-06-02",
       "summary": "Digitální vesmír začíná u kružnice jako známého tvaru, který ve skutečnosti není hotovou věcí, ale jménem vztahového procesu. Mapitola postupně otevírá pohled na realitu jako síť změn, stop a stabilizovaných vztahů.",
       "tags": [
@@ -69,8 +71,6 @@
       ],
       "hidden": false,
       "size": 6367,
-      "source_file": "03_Digitalni_vesmir.md",
-      "source_path": "Reinterpretace_13/13_md/03_Digitalni_vesmir.md",
       "content_sha256": "bc2416d88b4d3fa2805372cb0163bb3145f4b5bdc3cfd08cc76d35a3b73f6777",
       "html_sha256": "c1083cf2318100695ad94b9a0aa871681e78b2e76a9041402d93a90349bff4a6"
     },
@@ -78,6 +78,8 @@
       "title": "04 — Dualita pravdy",
       "file": "04_Dualita_pravdy.html",
       "path": "Reinterpretace_13/13/04_Dualita_pravdy.html",
+      "source_file": "04_Dualita_pravdy.md",
+      "source_path": "Reinterpretace_13/13_md/04_Dualita_pravdy.md",
       "date": "2026-06-15",
       "summary": "Dualita pravdy rozlišuje naši verzi skutečnosti, skutečné dění a pravdivost jako vztah mezi nimi. Ukazuje, proč pravda nesmí být vlastněná egem, ale musí zůstat otevřená dotyku světa, opravě a vztahu.",
       "tags": [
@@ -92,8 +94,6 @@
       ],
       "hidden": false,
       "size": 4957,
-      "source_file": "04_Dualita_pravdy.md",
-      "source_path": "Reinterpretace_13/13_md/04_Dualita_pravdy.md",
       "content_sha256": "2d75afea2692bbecbf45c54f38a85dc1a55867f66578c500ef475a473700e182",
       "html_sha256": "89231be56b2795ec40653c51a8cf7444f67662fd92cde8f7577fe1014f4cf79d"
     },
@@ -101,6 +101,8 @@
       "title": "05 — Vědomí: když se dění vrací k sobě",
       "file": "05_Vedomi.html",
       "path": "Reinterpretace_13/13/05_Vedomi.html",
+      "source_file": "05_Vedomi.md",
+      "source_path": "Reinterpretace_13/13_md/05_Vedomi.md",
       "date": "2026-06-06",
       "summary": "Vědomí není hotová vlastnost, ale vztah dění k sobě samému. Vzniká tam, kde se uvědomění neztratí v proudu, ale začne se vztahovat k paměti, významu, směru a následku.",
       "tags": [
@@ -114,8 +116,6 @@
       ],
       "hidden": false,
       "size": 9826,
-      "source_file": "05_Vedomi.md",
-      "source_path": "Reinterpretace_13/13_md/05_Vedomi.md",
       "content_sha256": "555edcd083f7715ca1c5116659efc1a427b5f0b88110e8d9f619eec59ca8dbdd",
       "html_sha256": "1f12a801071c95a49ed27d86200bf45935be6644a95137b3a4768503271862d8"
     },
@@ -123,6 +123,8 @@
       "title": "06 — Inspirace",
       "file": "06_Inspirace.html",
       "path": "Reinterpretace_13/13/06_Inspirace.html",
+      "source_file": "06_Inspirace.md",
+      "source_path": "Reinterpretace_13/13_md/06_Inspirace.md",
       "date": "2026-03-23",
       "summary": "Inspirace není zvenčí, ale vzniká jako proces setkávání významů. Není náhodná — je řízena tím, čemu věnujeme pozornost a čemu věříme.",
       "tags": [
@@ -135,8 +137,6 @@
       ],
       "hidden": false,
       "size": 2877,
-      "source_file": "06_Inspirace.md",
-      "source_path": "Reinterpretace_13/13_md/06_Inspirace.md",
       "content_sha256": "5595b201cf03f3428b91be4955581d8ecf29bc557920612cd21e635d61c680f5",
       "html_sha256": "8b371ed49cf75b3367956f52e2f6fc153c04609fd77f83eea8e861a14b2bede4"
     }
