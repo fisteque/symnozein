@@ -342,14 +342,14 @@ def process_target(target_name):
 
         if not hidden:
             sitemap_urls.append(html_url)
-        
-        for filename in sorted(os.listdir(output_dir)):
-        if not filename.endswith(".html"):
+
+    for output_filename in sorted(os.listdir(output_dir)):
+        if not output_filename.endswith(".html"):
             continue
 
-        if filename not in expected_html_files:
-            os.remove(os.path.join(output_dir, filename))
-
+        if output_filename not in expected_html_files:
+            os.remove(os.path.join(output_dir, output_filename))
+            
     index_entries = sorted(index_entries, key=lambda x: x["file"])
     index_data = build_index_data(index_entries, config)
 
