@@ -280,6 +280,7 @@ def process_target(target_name):
         print(f"Unknown target: {target_name}")
         return
 
+    expected_html_files = set()
     config = TARGETS[target_name]
     input_dir = config["input_dir"]
     output_dir = config["output_dir"]
@@ -310,6 +311,7 @@ def process_target(target_name):
 
         base_name = os.path.splitext(filename)[0]
         html_filename = base_name + ".html"
+        expected_html_files.add(html_filename)
         html_url = url_prefix + html_filename
 
         html_body = markdown.markdown(content, extensions=["extra", "codehilite", "toc"])
@@ -340,6 +342,13 @@ def process_target(target_name):
 
         if not hidden:
             sitemap_urls.append(html_url)
+        
+        for filename in sorted(os.listdir(output_dir)):
+        if not filename.endswith(".html"):
+            continue
+
+        if filename not in expected_html_files:
+            os.remove(os.path.join(output_dir, filename))
 
     index_entries = sorted(index_entries, key=lambda x: x["file"])
     index_data = build_index_data(index_entries, config)
