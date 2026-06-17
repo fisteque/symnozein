@@ -42,7 +42,7 @@ jobs:
           git config user.name "github-actions"
           git config user.email "github-actions@github.com"
 
-          git add Reinterpretace_13/13/*.html
+          git add -A Reinterpretace_13/13
           git add Reinterpretace_13/13_index.json
           git add Reinterpretace_13/13_index_prev.json
           git add Reinterpretace_13/13_diff.md
