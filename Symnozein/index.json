@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-17T19:21:40.173696Z",
+  "generated_at": "2026-06-17T19:26:28.372072Z",
   "source": {
     "script": "scripts/update_symnozein_index.py",
     "workflow": ".github/workflows/update_symnozein_index.yml"
@@ -10,14 +10,6 @@
       "title": "Symnozein bridge navrh",
       "file": "Symnozein_bridge_navrh.md",
       "path": "Symnozein/Symnozein_bridge_navrh.md",
-      "date": "",
-      "summary": "",
-      "tags": []
-    },
-    {
-      "title": "What is symnozein",
-      "file": "What_is_symnozein.md",
-      "path": "Symnozein/What_is_symnozein.md",
       "date": "",
       "summary": "",
       "tags": []
@@ -34,14 +26,6 @@
       "title": "crying definition",
       "file": "crying_definition.md",
       "path": "Symnozein/crying_definition.md",
-      "date": "",
-      "summary": "",
-      "tags": []
-    },
-    {
-      "title": "proc symnozein",
-      "file": "proc_symnozein.md",
-      "path": "Symnozein/proc_symnozein.md",
       "date": "",
       "summary": "",
       "tags": []
@@ -69,6 +53,14 @@
         "význam",
         "pravdivost"
       ]
+    },
+    {
+      "title": "What is symnozein",
+      "file": "legacy/What_is_symnozein.md",
+      "path": "Symnozein/legacy/What_is_symnozein.md",
+      "date": "",
+      "summary": "",
+      "tags": []
     },
     {
       "title": "manifest Why Symnozein",
