@@ -49,6 +49,9 @@ Všechno by bylo jasné předem.
 Nebyl by prostor pro volbu, jen pro průběh.
 A bez možnosti volit v nejistotě by nebylo ani vědomí — jen výpočet.
 
+Vědění není opak víry.
+Je to víra v návaznost, která prošla ověřením dotekem.
+
 ---
 
 ## Jak roste víra
