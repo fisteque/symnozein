@@ -58,6 +58,13 @@ NEGATION_MARKERS = (
     "necommit",
     "nepush",
 )
+READ_ONLY_RISK_CONTEXT_PATTERNS = (
+    re.compile(r"\bread[- ]only\b.*\b(commit|push|pushnout|pushed)\b"),
+    re.compile(r"\b(last|latest|posledni|poslední)\b.*\bcommit\b"),
+    re.compile(r"\bcommit\b.*\b(hash|available|dostupn)\b"),
+    re.compile(r"\bnebylo co pushnout\b"),
+    re.compile(r"\bwhether anything needed push\b"),
+)
 
 
 class WorkerError(RuntimeError):
@@ -167,6 +174,8 @@ def safety_filtered_payload(payload: str) -> str:
     for line in payload.splitlines():
         stripped = line.strip()
         if any(marker in stripped for marker in NEGATION_MARKERS):
+            continue
+        if any(pattern.search(stripped) for pattern in READ_ONLY_RISK_CONTEXT_PATTERNS):
             continue
         lines.append(line)
     return "\n".join(lines)
