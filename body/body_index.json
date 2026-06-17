@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-17T14:35:36.887720Z",
+  "generated_at": "2026-06-17T15:45:00.822892Z",
   "source": {
     "script": "scripts/update_body_index.py",
     "workflow": ".github/workflows/update_body_index.yml"
@@ -14,8 +14,8 @@
     },
     {
       "path": "SK/PK/PK-2026-06-17.md",
-      "size": 1633,
-      "sha256": "2f9ecfde1597480c82bc5778d4c158da0d6e5505bb5d630ecfa02fbe53c33773"
+      "size": 3064,
+      "sha256": "8af409d3b18d2795fc1d50bede3792bbdc5b189d7a778687a55ff7284e96b6a1"
     },
     {
       "path": "SK/SK-001.md",
