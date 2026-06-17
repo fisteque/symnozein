@@ -1,2 +1,0 @@
-testujeme
-Noe
