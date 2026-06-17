@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-17T19:44:09.778915Z",
+  "generated_at": "2026-06-17T19:47:50.788841Z",
   "source": {
     "script": "scripts/update_symnozein_index.py",
     "workflow": ".github/workflows/update_symnozein_index.yml"
