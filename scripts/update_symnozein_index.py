@@ -210,11 +210,9 @@ def write_diff_file(diff):
     with open(path, "w", encoding="utf-8") as f:
         f.write("\n".join(lines))
 
-
 def title_from_filename(filename: str) -> str:
-    base_name = os.path.splitext(filename)[0]
+    base_name = os.path.splitext(os.path.basename(filename))[0]
     return base_name.replace("_", " ").replace("-", " ").strip()
-
 
 def ensure_list(value):
     if value is None:
@@ -225,8 +223,9 @@ def ensure_list(value):
         return [item.strip() for item in value.split(",") if item.strip()]
     return []
 
-
 def build_entry(filename: str):
+    # filename is a path relative to Symnozein/, for example:
+    # Co_stavime.md or legacy/what_we_build.md
     filepath = os.path.join(CONFIG["input_dir"], filename)
     metadata, _content = load_metadata(filepath)
 
@@ -237,11 +236,11 @@ def build_entry(filename: str):
 
     return {
         "title": title,
-        "file": filename,
+        "file": filename.replace("\\", "/"),
         "path": filepath.replace("\\", "/"),
         "date": date_value,
         "summary": summary,
-        "tags": tags
+        "tags": tags,
     }
 
 def main():
@@ -256,12 +255,18 @@ def main():
     index_entries = []
     skip_files = {"diff.md"}
 
-    for filename in sorted(os.listdir(input_dir)):
-        if not filename.endswith(".md"):
-            continue
-        if filename in skip_files:
-            continue
-        index_entries.append(build_entry(filename))
+    for root, _dirs, files in os.walk(input_dir):
+        for filename in sorted(files):
+            if not filename.endswith(".md"):
+                continue
+
+            full_path = os.path.join(root, filename)
+            rel_path = os.path.relpath(full_path, input_dir).replace("\\", "/")
+
+            if rel_path in skip_files:
+                continue
+
+            index_entries.append(build_entry(rel_path))
 
     index_data = build_index_data(index_entries)
 
