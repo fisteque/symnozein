@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-17T20:46:35.476170Z",
+  "generated_at": "2026-06-17T20:48:01.521832Z",
   "source": {
     "script": "scripts/update_material_index.py",
     "workflow": ".github/workflows/update_material_index.yml"
@@ -486,13 +486,13 @@
       "content_sha256": "58ca02a4f8ff530afd3ab1403f57fd23a56899015d5f8b031462097d7985fefb"
     },
     {
-      "title": "Test3",
-      "file": "Test3.md",
-      "path": "Reinterpretace_13/material_md/Test3.md",
+      "title": "Testik",
+      "file": "Testik.md",
+      "path": "Reinterpretace_13/material_md/Testik.md",
       "date": "",
       "summary": "",
       "tags": [],
-      "content_sha256": "742eded5a3ad6f6b4c6415fc744f8b69d9ad80e8973b38c046ae1d138511020f"
+      "content_sha256": "6333d4faaa73bc3c50ab33e3d500adcd948390cec0e6ce2bc6a2619fbec74d0a"
     },
     {
       "title": "Toroid nul",
