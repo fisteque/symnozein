@@ -1,11 +1,11 @@
 {
-  "generated_at": "2026-06-18T07:58:54.150963Z",
+  "generated_at": "2026-06-18T08:00:58.275506Z",
   "source": {
     "script": "scripts/update_body_index.py",
     "workflow": ".github/workflows/update_body_index.yml"
   },
   "kind": "state",
-  "count": 158,
+  "count": 159,
   "files": [
     {
       "path": "SK/PK/PK-2026-06-14.md",
@@ -583,6 +583,11 @@
       "sha256": "b48f5a82a1e402d54a02219f8942ba034a2d0b46506520cf7d02824b896c16ec"
     },
     {
+      "path": "bridge/outbox/messages/2026-06-18T075924Z_codex-autoreply-codex-request-20260618-075845-msg-20260618-codex-diagnose-missing-sender-frontma.md",
+      "size": 3468,
+      "sha256": "3190c1d3450448099c31a93576c7a8e969b8a0936433bbb091978f2cc8e03cee"
+    },
+    {
       "path": "bridge/scripts/.gitignore",
       "size": 23,
       "sha256": "6feaded4e28ea86e001a6751b4e3d960e8b7c31b9616ff9936b79297086e809b"
@@ -719,8 +724,8 @@
     },
     {
       "path": "bridge/state_summary/latest.md",
-      "size": 2576,
-      "sha256": "c0c7b5506e4e2f7115b8dcc4bb2c186d78df12eb0b1d4818d9c72dbaf22c9506"
+      "size": 2536,
+      "sha256": "6e2f540097fb98e13206635c5f84de00d8be322bc8f139fd5b4416cec55159db"
     },
     {
       "path": "bridge/systemd/bridge-cycle.service",

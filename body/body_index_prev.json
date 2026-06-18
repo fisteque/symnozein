@@ -1,11 +1,11 @@
 {
-  "generated_at": "2026-06-18T06:00:19.125161Z",
+  "generated_at": "2026-06-18T07:58:54.150963Z",
   "source": {
     "script": "scripts/update_body_index.py",
     "workflow": ".github/workflows/update_body_index.yml"
   },
   "kind": "state",
-  "count": 157,
+  "count": 158,
   "files": [
     {
       "path": "SK/PK/PK-2026-06-14.md",
@@ -296,6 +296,11 @@
       "path": "bridge/inbox/messages/msg-20260617-codex-readonly-root-web-check-001.md",
       "size": 1186,
       "sha256": "832a9b32b4fc268e2f4f43389f2d6569ec7ebb606e59f3603c13cb9266da4a7c"
+    },
+    {
+      "path": "bridge/inbox/messages/msg-20260618-codex-diagnose-missing-sender-frontmatter-001.md",
+      "size": 908,
+      "sha256": "a759499e9eeb2d24d737013588b09a162ec43ac5a956d7b90acf932cfea3ab8c"
     },
     {
       "path": "bridge/instructions/pc_codex_postman.md",
