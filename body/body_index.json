@@ -1,11 +1,11 @@
 {
-  "generated_at": "2026-06-21T06:00:19.383909Z",
+  "generated_at": "2026-06-21T07:51:42.350924Z",
   "source": {
     "script": "scripts/update_body_index.py",
     "workflow": ".github/workflows/update_body_index.yml"
   },
   "kind": "state",
-  "count": 160,
+  "count": 161,
   "files": [
     {
       "path": "SK/PK/PK-2026-06-14.md",
@@ -306,6 +306,11 @@
       "path": "bridge/inbox/messages/msg-20260618-codex-diagnose-missing-sender-frontmatter-001.md",
       "size": 908,
       "sha256": "a759499e9eeb2d24d737013588b09a162ec43ac5a956d7b90acf932cfea3ab8c"
+    },
+    {
+      "path": "bridge/inbox/messages/msg-20260620-codex-inspect-task-github-write-test-001.md",
+      "size": 1429,
+      "sha256": "d921dc46baebf8d41596292d78ccbef15693ded7d23335dbd4e121f569c74ad6"
     },
     {
       "path": "bridge/instructions/pc_codex_postman.md",
