@@ -1,11 +1,11 @@
 {
-  "generated_at": "2026-06-22T16:05:04.936730Z",
+  "generated_at": "2026-06-22T16:29:15.000039Z",
   "source": {
     "script": "scripts/update_body_index.py",
     "workflow": ".github/workflows/update_body_index.yml"
   },
   "kind": "state",
-  "count": 144,
+  "count": 122,
   "files": [
     {
       "path": "SK/PK/PK-2026-06-14.md",
@@ -106,116 +106,6 @@
       "path": "bridge/inbox/messages/2026-06-08T194555Z_runtime-inbox-e2e-codex-request.md",
       "size": 309,
       "sha256": "04075df9165da874781f1b216e4bf0d42f0d2e8ff1698d337b0761985479ced7"
-    },
-    {
-      "path": "bridge/inbox/messages/codex/msg-20260527-codex-inbox-write-task-001",
-      "size": 1377,
-      "sha256": "d38cdb034d3e7c4e9c0210d0765eb63c5d0dd07b94030541ed81021fd8f40dab"
-    },
-    {
-      "path": "bridge/inbox/messages/codex/msg-20260528-codex-bridge-known-limits-001",
-      "size": 7915,
-      "sha256": "a1e599e537aaaa6ce0643d417f542dcc83e7e519b955a79494f8fc721cc93230"
-    },
-    {
-      "path": "bridge/inbox/messages/codex/msg-20260528-codex-bridge-simplification-review-001",
-      "size": 3555,
-      "sha256": "e08161c573baf0a77cd5a85b0fbdf26f6e7b4e8babfa7e630671125c78936579"
-    },
-    {
-      "path": "bridge/inbox/messages/codex/msg-20260528-codex-git-maintenance-review-001",
-      "size": 1538,
-      "sha256": "d904c7b024629177f2d7ea1b5083ba40e98e4e413e4eebdfb06ecf6728b07bab"
-    },
-    {
-      "path": "bridge/inbox/messages/codex/msg-20260529-codex-auto-inbox-reader-design-001.md",
-      "size": 2877,
-      "sha256": "cfe4d7023fc106eda7e3addb29af3f7fa0d4244563ccebed5cd05fbbc449d637"
-    },
-    {
-      "path": "bridge/inbox/messages/codex/msg-20260601-codex-bridge-test-001.md",
-      "size": 357,
-      "sha256": "9c732b653480dd1fcc783f5589c60d8f21bf9783b7742bcd4d9b1d7e847f6d3d"
-    },
-    {
-      "path": "bridge/inbox/messages/codex/msg-20260601-codex-bridge-test-002.md",
-      "size": 720,
-      "sha256": "e905b32fdae777d9605ed307c85c5b43ff5d4ec482500bb4f261ed18a99733b4"
-    },
-    {
-      "path": "bridge/inbox/messages/codex/msg-20260601-codex-heartbeat-uptime-summary-001.md",
-      "size": 2752,
-      "sha256": "0241807cfc19f04ffa2ae32666a5be591b3a974e43e0d47dbc5001199488a2b2"
-    },
-    {
-      "path": "bridge/inbox/messages/codex/msg-20260601-codex-inbox-reader-dry-run-001.md",
-      "size": 3655,
-      "sha256": "6e65e5a5ed62dab1a8c4044516df51541e0a1ab1be621199c577692a4d650b3f"
-    },
-    {
-      "path": "bridge/inbox/messages/codex/msg-20260601-codex-reader-stub-test-risky-001.md",
-      "size": 785,
-      "sha256": "37690bfbe982dfd2d61e5d9a2035a52676e02b1460979a22368aff174b7d1af7"
-    },
-    {
-      "path": "bridge/inbox/messages/codex/msg-20260601-codex-reader-stub-test-safe-001.md",
-      "size": 691,
-      "sha256": "36381708d2be68b3d37e9d8b92a7c5863f4705a4cb1bc771ce4bd7eac8ed7d67"
-    },
-    {
-      "path": "bridge/inbox/messages/codex/msg-20260601-codex-reader-writer-stub-001.md",
-      "size": 3878,
-      "sha256": "32eacfd567a5b09abd6d01eb78cb04a62796e265cb6f0b4021b171ac6a8d9242"
-    },
-    {
-      "path": "bridge/inbox/messages/codex/msg-20260603-codex-extend-bridge-tail-001.md",
-      "size": 1953,
-      "sha256": "169584fcf6cb1c3cd12841f67bf7fb9511e597f9d646e2e44141cb7b2ff8ada9"
-    },
-    {
-      "path": "bridge/inbox/messages/codex/msg-20260603-codex-heartbeat-watchdog-audit-001.md",
-      "size": 2074,
-      "sha256": "7b09020e6a1b6e13284159ca93f8392e10871ba52e4f41905b00263451824483"
-    },
-    {
-      "path": "bridge/inbox/messages/codex/msg-20260604-codex-body-status-ping-001.md",
-      "size": 1761,
-      "sha256": "f2d9a38135e797fd32569e90155f577b762b3731c0210ac15f5371344c1023e4"
-    },
-    {
-      "path": "bridge/inbox/messages/codex/msg-20260605-codex-apply-lock-diagnostics-eyes-001.md",
-      "size": 2478,
-      "sha256": "26b156741e36b5ffd4b87d1f90a2ac77825eaf59f07f4d333c100be45d487f00"
-    },
-    {
-      "path": "bridge/inbox/messages/codex/msg-20260605-codex-audit-bridge-logging-001.md",
-      "size": 2260,
-      "sha256": "c88b7e30ef8ea066e6a475d12925c3e2a77e12b9d89c08530d27f3c48034de54"
-    },
-    {
-      "path": "bridge/inbox/messages/codex/msg-20260605-codex-bridge-cycle-lock-audit-001.md",
-      "size": 2086,
-      "sha256": "2b46604f79c72a454cb595fa8890d5fa4ae20a5c005271a4bf6c61f8123e1a45"
-    },
-    {
-      "path": "bridge/inbox/messages/codex/msg-20260605-codex-lock-diagnostics-design-001.md",
-      "size": 2399,
-      "sha256": "a120c2a4f063baf32d9d5f58feac0d5906709549c9f3c23a4a71ce3830e4b9b3"
-    },
-    {
-      "path": "bridge/inbox/messages/codex/msg-20260605-codex-save-pc-postman-instructions-001.md",
-      "size": 12534,
-      "sha256": "018ebf66375764c62b672277434062813947b2f933ff54e9de76d6e793e77a2a"
-    },
-    {
-      "path": "bridge/inbox/messages/codex/msg-20260605-codex-stop-bridge-tail-log-001.md",
-      "size": 2646,
-      "sha256": "8d6ae4171dcd00a724266ff35133fd653c46e19369127c44e9eb6dc0a6cfe632"
-    },
-    {
-      "path": "bridge/inbox/messages/codex/msg-20260608-codex-test-runtime-outbox-published-lifecycle-001.md",
-      "size": 1386,
-      "sha256": "5b31578d6486ca83f3ef04d219c3906c691143dd2d39528bcc5444137646b570"
     },
     {
       "path": "bridge/inbox/messages/msg-20260611-codex-diagnose-bridge-rhythm-001.md",
