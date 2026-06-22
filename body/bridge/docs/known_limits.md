@@ -11,10 +11,15 @@ verified bridge behavior from proposals, transport gaps, and UI impressions.
 - `body/bridge/docs/implementation_ledger.md` is the implementation ledger.
 - A `codex_request` message can be handled by the bridge agent and creates a
   local Codex request item under `/home/fiste/Noema/codex/inbox/`.
-- Codex reader responses or stubs use the normal runtime outbox path:
+- The Codex autoreply worker can answer safe local Codex inbox requests through
+  read-only `codex exec` and writes responses through the normal runtime outbox:
   `/home/fiste/Noema/bridge/outbox/messages/`.
+- The live runtime outbox is not the archive. After successful outbound publish,
+  published runtime outbox messages move to
+  `/home/fiste/Noema/bridge/outbox/published/YYYY-MM/`.
 - The atomic write issue around `body_state.json` was fixed and verified.
-- The current verified transport proxy is Ondra through a manual GitHub commit.
+- The current verified write transport is still human-controlled: Ondra reviews
+  intent and uses the narrow PC-Codex postman path when needed.
 - Ondra currently holds the human safety, relationship, and rhythm control
   layer.
 
@@ -24,8 +29,14 @@ verified bridge behavior from proposals, transport gaps, and UI impressions.
   functionally verified.
 - A prior `create_file` attempt from chat failed with `403 Resource not
   accessible by integration`.
+- A later scheduled GitHub write test also failed with
+  `403 Resource not accessible by integration`; granting an action in the UI did
+  not prove repository `contents: write` capability.
 - UI approval for an action is not the same as actual GitHub `contents: write`
   permission.
+- Installing or widening a ChatGPT/GitHub App would be a new write-authority
+  path, not a bridge fix. It should not be enabled without explicit approval,
+  narrow scope, and a clear safety model.
 - A webhook on the Raspberry Pi would only be a receiving endpoint; a normal
   ChatGPT chat cannot call it by itself without another executor.
 - Noema in a normal chat does not have a stable runtime or its own write
@@ -35,8 +46,9 @@ verified bridge behavior from proposals, transport gaps, and UI impressions.
 
 - `write_inbox_message` is a reasonable proposal for a narrow allowlisted task,
   but it does not by itself solve transport from chat to the Raspberry Pi.
-- A Mac, Codex, or desktop agent could act as an executor with commit
-  permission, but it is not currently part of the verified bridge runtime.
+- A Mac, Codex, or desktop agent can act as an executor only when it follows the
+  narrow postman rules. It must not be treated as general autonomy or general
+  repository write access.
 - A webhook over Tailscale can be a future input layer only if there is an
   actual sending intermediary.
 - Direct GitHub writes from ChatGPT must not be treated as working just because
@@ -60,7 +72,8 @@ human stop mechanism first.
 
 ## Attention
 
-- GitHub proxy is the currently verified path, and Ondra is that proxy.
+- The verified write path is still human-mediated. Ondra is the safety anchor,
+  and PC-Codex can act only as a narrow postman.
 - Ondra is not only a proxy; he is the current human safety, relationship, and
   rhythm layer of the system.
 - Direct writes from chat are not a verified path.
