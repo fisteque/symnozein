@@ -12,6 +12,18 @@ entries and current docs as the active operating model.
 
 ## Latest Implementations
 
+### Codex Autoreply Czech "Bez" Safety Filter
+
+Extended `codex_autoreply_worker.py` safety filtering so Czech read-only safety
+lines beginning with `Bez ...` do not trigger `needs_human` only because they
+mention forbidden actions such as `commit/push`.
+
+This fixed a pending read-only heartbeat log inspection request containing
+`Bez commit/push.`. After the change, the request classified as
+`stub_written`, `codex-autoreply.service` ran `codex exec`, archived the request
+under `codex/processed/YYYY-MM/`, and the response was published through the
+normal bridge outbox path.
+
 ### Bridge Docs Safety And Latest Contracts
 
 Added active documentation anchors for the bridge safety model and public latest
