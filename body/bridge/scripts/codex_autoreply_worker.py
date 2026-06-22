@@ -59,6 +59,7 @@ NEGATION_MARKERS = (
     "nepush",
     "neprovadej",
     "neprováděj",
+    "bez ",
 )
 READ_ONLY_RISK_CONTEXT_PATTERNS = (
     re.compile(r"\bread[- ]only\b.*\b(commit|push|pushnout|pushed)\b"),
