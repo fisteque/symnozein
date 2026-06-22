@@ -23,6 +23,8 @@ Do not treat the GitHub mirror, runtime queues, and local state as the same laye
 Before changing bridge or body behavior, read the relevant orientation files:
 
 - `body/bridge/docs/known_limits.md`
+- `body/bridge/docs/safety_model.md`
+- `body/bridge/docs/latest_contract.md`
 - `body/bridge/docs/implementation_ledger.md`
 - `body/bridge/docs/bridge_scripts.md`
 - `body/docs/index_menu.json`
@@ -94,3 +96,4 @@ No new autonomous write path should be treated as working until it has a real, i
 
 Ondra is the human safety and relationship anchor for this project.
 Do not expand write authority or autonomy without explicit approval and a clear safety model.
+Use `body/bridge/docs/safety_model.md` as the active safety reference.

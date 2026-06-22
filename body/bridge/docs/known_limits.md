@@ -9,6 +9,8 @@ verified bridge behavior from proposals, transport gaps, and UI impressions.
 - Heartbeat and watchdog work after the last atomic write fix.
 - `body/bridge/state_summary/latest.md` is the current operational summary.
 - `body/bridge/docs/implementation_ledger.md` is the implementation ledger.
+- `body/bridge/docs/safety_model.md` is the active bridge safety model.
+- `body/bridge/docs/latest_contract.md` defines what belongs in `latest.md`.
 - A `codex_request` message can be handled by the bridge agent and creates a
   local Codex request item under `/home/fiste/Noema/codex/inbox/`.
 - The Codex autoreply worker can answer safe local Codex inbox requests through
@@ -68,7 +70,8 @@ Until then, the path is only a proposal or possibility.
 
 Any path that would let Noema or another AI layer write into the body without
 Ondra's control needs its own safety model, audit trail, scope limits, and a
-human stop mechanism first.
+human stop mechanism first. The active safety model lives in
+`body/bridge/docs/safety_model.md`.
 
 ## Attention
 

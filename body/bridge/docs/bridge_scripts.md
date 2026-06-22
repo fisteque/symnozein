@@ -41,6 +41,9 @@ Current mirrored unit files:
 The bridge is intentionally narrow: it moves messages between the local runtime,
 the GitHub tape, and local state files. Body heartbeat/watchdog is separate.
 
+Safety boundaries are summarized in `body/bridge/docs/safety_model.md`.
+The public summary contract is in `body/bridge/docs/latest_contract.md`.
+
 ## Main Cycle
 
 ### `bridge_cycle.py`
@@ -257,6 +260,10 @@ queues, pulse, and source freshness. The summary is derived from selected local
 state files such as `state/body_state.json`, `state/body_health.json`,
 `bridge/state/processed_messages.json`, `bridge/state/bridge_sync_state.json`,
 and `bridge/state/body_pulse_state.json`.
+
+`latest.md` is intentionally a compact public status panel. It must not become a
+log dump, raw runtime export, or historical archive; see
+`body/bridge/docs/latest_contract.md`.
 
 The full runtime log remains local and is not included in `latest.md`. Raw
 runtime JSON, locks, queue archives, and log tails are not published.

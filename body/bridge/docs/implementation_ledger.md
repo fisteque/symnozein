@@ -12,6 +12,26 @@ entries and current docs as the active operating model.
 
 ## Latest Implementations
 
+### Bridge Docs Safety And Latest Contracts
+
+Added active documentation anchors for the bridge safety model and public latest
+summary contract.
+
+New docs:
+
+```text
+body/bridge/docs/safety_model.md
+body/bridge/docs/latest_contract.md
+```
+
+`safety_model.md` consolidates current write authority, role boundaries,
+autoreply limits, the human safety anchor, and the closed direct GitHub write
+path. `latest_contract.md` defines `latest.md` as a compact public status panel,
+not a log dump, raw runtime export, or historical archive.
+
+Updated active orientation docs and menu entries to point at these contracts.
+Historical ledger entries remain unchanged.
+
 ### Legacy Codex Inbox/Outbox Folders Removed
 
 Slozky `body/bridge/inbox/messages/codex/` a `body/bridge/outbox/codex/` byly
