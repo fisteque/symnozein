@@ -6,6 +6,10 @@ This file is a human-readable implementation ledger. It is not the runtime
 source of truth; runtime state remains in local bridge state files and bridge
 messages. Keep the newest items at the top.
 
+Historical entries are not retroactively rewritten. Older entries may mention
+paths, designs, or constraints that have since been replaced. Use the newest
+entries and current docs as the active operating model.
+
 ## Latest Implementations
 
 ### Legacy Codex Inbox/Outbox Folders Removed
