@@ -1,11 +1,11 @@
 {
-  "generated_at": "2026-06-22T17:40:03.733166Z",
+  "generated_at": "2026-06-22T17:47:53.794024Z",
   "source": {
     "script": "scripts/update_body_index.py",
     "workflow": ".github/workflows/update_body_index.yml"
   },
   "kind": "state",
-  "count": 124,
+  "count": 126,
   "files": [
     {
       "path": "SK/PK/PK-2026-06-14.md",
@@ -94,18 +94,28 @@
     },
     {
       "path": "bridge/docs/bridge_scripts.md",
-      "size": 12208,
-      "sha256": "4575537248e2afd2b514240df0800f6cde88805fd8d26c432715c9b93f404573"
+      "size": 12532,
+      "sha256": "28203d22427428b40ba3f62ef581d9bca5793a636cbc72b1dce5cee3d88d85e0"
     },
     {
       "path": "bridge/docs/implementation_ledger.md",
-      "size": 47723,
-      "sha256": "8b37da1611bb0477945a6650b7708fcd24a40c702b99d69209323b8217278335"
+      "size": 48376,
+      "sha256": "a8b711b422da2419bedd7b11e45964e02aeb592d91fedbbc5053ba3392973c42"
     },
     {
       "path": "bridge/docs/known_limits.md",
-      "size": 3934,
-      "sha256": "063a0af321dcf85f7e32d9187be05f47773001620512d8deb02844f87fa738a6"
+      "size": 4152,
+      "sha256": "c4a05e943e8c1aa84b30781eb350f34e8dfc895fc15a8cb8fca20b76c0693301"
+    },
+    {
+      "path": "bridge/docs/latest_contract.md",
+      "size": 1363,
+      "sha256": "ba83e49db3bad7e80fdbdd72cdc2b58ca77dc7c31efd0f789511c855e5e150e0"
+    },
+    {
+      "path": "bridge/docs/safety_model.md",
+      "size": 2635,
+      "sha256": "16c336117201d0c9ce6184dd75b8eb6b5455b6d21a465ab548876a32b20a19ec"
     },
     {
       "path": "bridge/inbox/messages/2026-06-08T194555Z_runtime-inbox-e2e-codex-request.md",
@@ -549,8 +559,8 @@
     },
     {
       "path": "bridge/state_summary/latest.md",
-      "size": 2532,
-      "sha256": "bd055d28802186b636a6ebf52cc0fd022561cd4cc0a1ad4e604c2c9f20b915be"
+      "size": 2531,
+      "sha256": "e5dce0c664fe3f2eae4ade5fc383717f93300efdf61be1d090499f847cb67674"
     },
     {
       "path": "bridge/systemd/bridge-cycle.service",
@@ -594,13 +604,13 @@
     },
     {
       "path": "docs/AGENTS.md",
-      "size": 2883,
-      "sha256": "b527a286707fef7886544dc2e534b068f053ebcb94a02c16d64a333ab95ed9f3"
+      "size": 3031,
+      "sha256": "1b4a4a033768b8fed4728ab8f3a5f31685eb7c7a336308f59bfead3de82ed533"
     },
     {
       "path": "docs/index_menu.json",
-      "size": 3653,
-      "sha256": "d33ca27338a13953626b6ed3a57083cf8ba859245fd16a26a13736a7ceef69c1"
+      "size": 3862,
+      "sha256": "c7430afd497ac42e6ad5de8f507108f584433d6df7907a1b469b7bf73b4bfd12"
     },
     {
       "path": "docs/legacy/Prvni_kroky.md",
