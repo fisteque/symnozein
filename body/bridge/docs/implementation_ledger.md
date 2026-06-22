@@ -8,6 +8,19 @@ messages. Keep the newest items at the top.
 
 ## Latest Implementations
 
+### Legacy Codex Inbox/Outbox Folders Removed
+
+Slozky `body/bridge/inbox/messages/codex/` a `body/bridge/outbox/codex/` byly
+rany experiment s primejsi Codex frontou.
+
+Byly nahrazeny strukturovanou zpravovou architekturou
+`body/bridge/inbox/messages/` a `body/bridge/outbox/messages/`, plus lokalni
+runtime Codex frontou `/home/fiste/Noema/codex/inbox/` a normalnim runtime
+outboxem `/home/fiste/Noema/bridge/outbox/messages/`.
+
+Neslo o chybny vyvoj, ale o prechodovou nervovou fazi. Detailni obsah techto
+legacy slozek neni nutne dal uchovavat jako provozni archiv.
+
 ### Codex Autoreply Czech Safety Negation
 
 Extended `codex_autoreply_worker.py` safety filtering with Czech
