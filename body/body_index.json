@@ -1,11 +1,11 @@
 {
-  "generated_at": "2026-06-22T15:17:10.790302Z",
+  "generated_at": "2026-06-22T16:05:04.936730Z",
   "source": {
     "script": "scripts/update_body_index.py",
     "workflow": ".github/workflows/update_body_index.yml"
   },
   "kind": "state",
-  "count": 162,
+  "count": 144,
   "files": [
     {
       "path": "SK/PK/PK-2026-06-14.md",
@@ -94,8 +94,8 @@
     },
     {
       "path": "bridge/docs/implementation_ledger.md",
-      "size": 46943,
-      "sha256": "dd3b5c24e0fbc206f1fd69892b924dd73c34d03373e6c6ad71152308337b88cc"
+      "size": 47511,
+      "sha256": "9f8f80360402ef6e9c61fd429d794464975f9187e65e7bb766d9f8e367dfd906"
     },
     {
       "path": "bridge/docs/known_limits.md",
@@ -328,101 +328,6 @@
       "sha256": "0b38b3b5c5274e984ba5902775d44989729a6a8f5a18aae6334f722baf579e6b"
     },
     {
-      "path": "bridge/outbox/codex/2026-05-27T182640Z_codex-response-msg-20260527-codex-inbox-write-task-001.md",
-      "size": 4587,
-      "sha256": "f166fed970c884439735c3315e5c3eeaa2c93cbac65e5adade924c057ef928b3"
-    },
-    {
-      "path": "bridge/outbox/codex/2026-05-28T165231Z_codex-response-msg-20260528-codex-bridge-known-limits-001.md",
-      "size": 1247,
-      "sha256": "65ef51607f833fac08c279cd7cf23422099ff8bd6b63c74cb2ba5a5cc5c86fdd"
-    },
-    {
-      "path": "bridge/outbox/codex/2026-05-28T171524Z_codex-response-msg-20260528-codex-bridge-simplification-review-001.md",
-      "size": 6982,
-      "sha256": "928f888616a8ab474eb8b04820885f887610b2ac449c25bf431f575de47dde9b"
-    },
-    {
-      "path": "bridge/outbox/codex/2026-05-28T174614Z_codex-response-msg-20260528-codex-git-maintenance-review-001.md",
-      "size": 2477,
-      "sha256": "28008b71903262f17a3484c495315b5c6a7231cf5b4a9b3ffe219824bdd712ca"
-    },
-    {
-      "path": "bridge/outbox/codex/2026-06-01T153903Z_codex-response-msg-20260529-codex-auto-inbox-reader-design-001.md",
-      "size": 8774,
-      "sha256": "80b311b5060ff148f5b97e7dbba243dca3ae93fcad9ccfd3eaaa8f00edfd9483"
-    },
-    {
-      "path": "bridge/outbox/codex/2026-06-01T165450Z_codex-response-msg-20260601-codex-inbox-reader-dry-run-001.md",
-      "size": 2830,
-      "sha256": "56b8bbba5c461a307854a583026579112e30e56cfb57bf76d9cb3b80a5019b3e"
-    },
-    {
-      "path": "bridge/outbox/codex/2026-06-01T172220Z_codex-response-msg-20260601-codex-heartbeat-uptime-summary-001.md",
-      "size": 2266,
-      "sha256": "2602f9fc1336d1590fd01f2a2aab640d04ca14f53152150cfbcddd71d6940f78"
-    },
-    {
-      "path": "bridge/outbox/codex/2026-06-01T180234Z_codex-response-msg-20260601-codex-reader-writer-stub-001.md",
-      "size": 1570,
-      "sha256": "f5491d0c4b4257eed50514c7a6218b8aa8e4587074f3b05894083018222d2353"
-    },
-    {
-      "path": "bridge/outbox/codex/2026-06-03T201637Z_codex-response-msg-20260603-codex-heartbeat-watchdog-audit-001.md",
-      "size": 5366,
-      "sha256": "a96c9761e219ff35a4297f6d6545e5baa3b8ec723cb37b8eda34855aa18a9cf3"
-    },
-    {
-      "path": "bridge/outbox/codex/2026-06-03T214500Z_codex-response-msg-20260603-codex-extend-bridge-tail-001.md",
-      "size": 1102,
-      "sha256": "52d68ff98c9962c21eb5e953f69fe7ee8851f613f81e93b06d9dc561ccfb48e7"
-    },
-    {
-      "path": "bridge/outbox/codex/2026-06-04T141638Z_codex-response-msg-20260604-codex-body-status-ping-001.md",
-      "size": 1866,
-      "sha256": "3f85288d3f5f53f8a075bdcddd33c90fe4fc0e93e4475408c96a731aee34598a"
-    },
-    {
-      "path": "bridge/outbox/codex/2026-06-05T120322Z_codex-response-msg-20260605-codex-bridge-cycle-lock-audit-001.md",
-      "size": 3168,
-      "sha256": "9ac84f5b5f2637fb7cc4d2126fc173a84e6de76e30bc1d76b9ba88d96beaa81e"
-    },
-    {
-      "path": "bridge/outbox/codex/2026-06-05T122700Z_codex-response-msg-20260605-codex-lock-diagnostics-design-001.md",
-      "size": 8921,
-      "sha256": "903081e366dbb50d6e2f67cfa60043d2c55a620d7c8d7d2a3b5e9085f62d9585"
-    },
-    {
-      "path": "bridge/outbox/codex/2026-06-05T124116Z_codex-response-msg-20260605-codex-apply-lock-diagnostics-eyes-001.md",
-      "size": 2620,
-      "sha256": "6bb66c4e306e1ad0f69a74e7f055881a18bca170a432782198321db065af4b65"
-    },
-    {
-      "path": "bridge/outbox/codex/2026-06-05T174609Z_codex-response-msg-20260605-codex-stop-bridge-tail-log-001.md",
-      "size": 1856,
-      "sha256": "c4c3587a8f49f3cdc50139d4234b70d7881aef71b6c0cafb1cbe2741732af11b"
-    },
-    {
-      "path": "bridge/outbox/codex/2026-06-05T180759Z_codex-response-msg-20260605-codex-audit-bridge-logging-001.md",
-      "size": 7402,
-      "sha256": "3480160488d676e012c2579287ada4073dfbe370fa8b47e87221b6dc4fb60ed1"
-    },
-    {
-      "path": "bridge/outbox/codex/2026-06-05T192110Z_codex-response-msg-20260605-codex-save-pc-postman-instructions-001.md",
-      "size": 1428,
-      "sha256": "53c1432de5f8848d8ae2e20dc3b6d8f5bb9def6e57e57281a99fb2b9cf14fe5f"
-    },
-    {
-      "path": "bridge/outbox/codex/20260601T182419.805294_codex-reader-stub-msg-20260601-codex-reader-stub-test-safe-001.md",
-      "size": 650,
-      "sha256": "e4fc6be67253a5c09cda4776c58d98e1b02964b209783168685a657097e1c4a7"
-    },
-    {
-      "path": "bridge/outbox/codex/20260601T185617.750073_codex-reader-stub-msg-20260601-codex-reader-stub-test-risky-001.md",
-      "size": 638,
-      "sha256": "60eb094aaa257f061652170638cf97993b604e3f2d037d890f15536b962e5a3a"
-    },
-    {
       "path": "bridge/outbox/messages/2026-06-08T184856Z_rpi5_test-runtime-outbox-lifecycle.md",
       "size": 425,
       "sha256": "10d8bda36e095674e30ad5e0556bc0af137d867763d525b14ed0bd74a4251c88"
@@ -603,6 +508,11 @@
       "sha256": "3e7585fd044237254f917f8efef4ef76b5ead73a48f5a658a10d37fedb9d2056"
     },
     {
+      "path": "bridge/outbox/messages/2026-06-22T155819Z_rpi5_cycle-error-outbound-sync.md",
+      "size": 295,
+      "sha256": "28dadb38ebbfa0769b963370569768c89ed206fbbc6a3c4498005290576aeff4"
+    },
+    {
       "path": "bridge/scripts/.gitignore",
       "size": 23,
       "sha256": "6feaded4e28ea86e001a6751b4e3d960e8b7c31b9616ff9936b79297086e809b"
@@ -739,8 +649,8 @@
     },
     {
       "path": "bridge/state_summary/latest.md",
-      "size": 2530,
-      "sha256": "dab9b2bc0b60b9442d5b3c00509910bb3c9a4ee0745c998f8782fa5464f581f6"
+      "size": 2516,
+      "sha256": "fdf8fa318b5d4e1596777cf51209eaa4d828faf2a66928ca07fa2377460dd6e4"
     },
     {
       "path": "bridge/systemd/bridge-cycle.service",

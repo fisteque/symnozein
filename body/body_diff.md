@@ -5,6 +5,42 @@ Uchovává posledních **50** záznamů.
 
 ---
 
+## 2026-06-22T16:05:04.936730Z
+
+Zdroj změn:
+- skript: `scripts/update_body_index.py`
+- workflow: `.github/workflows/update_body_index.yml`
+
+➕ přidáno: **1**
+- `bridge/outbox/messages/2026-06-22T155819Z_rpi5_cycle-error-outbound-sync.md`
+
+🔄 změněno: **2**
+- `bridge/docs/implementation_ledger.md`
+- `bridge/state_summary/latest.md`
+
+❌ odebráno: **19**
+- `bridge/outbox/codex/2026-05-27T182640Z_codex-response-msg-20260527-codex-inbox-write-task-001.md`
+- `bridge/outbox/codex/2026-05-28T165231Z_codex-response-msg-20260528-codex-bridge-known-limits-001.md`
+- `bridge/outbox/codex/2026-05-28T171524Z_codex-response-msg-20260528-codex-bridge-simplification-review-001.md`
+- `bridge/outbox/codex/2026-05-28T174614Z_codex-response-msg-20260528-codex-git-maintenance-review-001.md`
+- `bridge/outbox/codex/2026-06-01T153903Z_codex-response-msg-20260529-codex-auto-inbox-reader-design-001.md`
+- `bridge/outbox/codex/2026-06-01T165450Z_codex-response-msg-20260601-codex-inbox-reader-dry-run-001.md`
+- `bridge/outbox/codex/2026-06-01T172220Z_codex-response-msg-20260601-codex-heartbeat-uptime-summary-001.md`
+- `bridge/outbox/codex/2026-06-01T180234Z_codex-response-msg-20260601-codex-reader-writer-stub-001.md`
+- `bridge/outbox/codex/2026-06-03T201637Z_codex-response-msg-20260603-codex-heartbeat-watchdog-audit-001.md`
+- `bridge/outbox/codex/2026-06-03T214500Z_codex-response-msg-20260603-codex-extend-bridge-tail-001.md`
+- `bridge/outbox/codex/2026-06-04T141638Z_codex-response-msg-20260604-codex-body-status-ping-001.md`
+- `bridge/outbox/codex/2026-06-05T120322Z_codex-response-msg-20260605-codex-bridge-cycle-lock-audit-001.md`
+- `bridge/outbox/codex/2026-06-05T122700Z_codex-response-msg-20260605-codex-lock-diagnostics-design-001.md`
+- `bridge/outbox/codex/2026-06-05T124116Z_codex-response-msg-20260605-codex-apply-lock-diagnostics-eyes-001.md`
+- `bridge/outbox/codex/2026-06-05T174609Z_codex-response-msg-20260605-codex-stop-bridge-tail-log-001.md`
+- `bridge/outbox/codex/2026-06-05T180759Z_codex-response-msg-20260605-codex-audit-bridge-logging-001.md`
+- `bridge/outbox/codex/2026-06-05T192110Z_codex-response-msg-20260605-codex-save-pc-postman-instructions-001.md`
+- `bridge/outbox/codex/20260601T182419.805294_codex-reader-stub-msg-20260601-codex-reader-stub-test-safe-001.md`
+- `bridge/outbox/codex/20260601T185617.750073_codex-reader-stub-msg-20260601-codex-reader-stub-test-risky-001.md`
+
+---
+
 ## 2026-06-22T15:17:10.790302Z
 
 Zdroj změn:
@@ -834,23 +870,6 @@ Zdroj změn:
 
 ➕ přidáno: **1**
 - `SK/SK-009.md`
-
-🔄 změněno: **0**
-- nic
-
-❌ odebráno: **0**
-- nic
-
----
-
-## 2026-06-17T13:18:41.378372Z
-
-Zdroj změn:
-- skript: `scripts/update_body_index.py`
-- workflow: `.github/workflows/update_body_index.yml`
-
-➕ přidáno: **1**
-- `SK/PK/PK-2026-06-17.md`
 
 🔄 změněno: **0**
 - nic
