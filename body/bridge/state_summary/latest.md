@@ -1,28 +1,28 @@
 # Bridge State Summary
 
-- Generated at: `2026-06-22T19:37:49.341554Z`
+- Generated at: `2026-06-22T19:45:50.045043Z`
 - Body awake: `True`
 - Body status: `normal_operation`
 
 ## Body Heartbeat
 
-- Body last heartbeat: `2026-06-22T19:37:40.900245+00:00`
-- Heartbeat count: `162640`
-- Heartbeat last gap seconds: `10.005487`
+- Body last heartbeat: `2026-06-22T19:45:41.498223+00:00`
+- Heartbeat count: `162688`
+- Heartbeat last gap seconds: `10.008703`
 - Heartbeat max gap seconds: `88.126733`
 - Heartbeat service started at: `Thu 2026-06-04 00:52:02 CEST`
-- Heartbeat uptime seconds: `1629946`
+- Heartbeat uptime seconds: `1630427`
 - Heartbeat restart count: `0`
 - Heartbeat uptime source: `systemd`
 - Heartbeat log starts count: `17`
 - Heartbeat log latest start: `2026-06-03T22:52:02.965137Z`
 - Heartbeat log max start gap seconds: `675295`
 - Last heartbeat gap seconds: `8`
-- Watchdog last heartbeat age seconds: `7.452098`
+- Watchdog last heartbeat age seconds: `7.649393`
 - Watchdog heartbeat timeout threshold seconds: `45`
 - Watchdog heartbeat timeout count: `0`
 - Watchdog heartbeat timeout required count: `2`
-- Body watchdog last check: `2026-06-22T19:37:48.352361+00:00`
+- Body watchdog last check: `2026-06-22T19:45:49.147631+00:00`
 
 ## Body Health
 
@@ -35,20 +35,20 @@
 
 ## Bridge Sync
 
-- Last inbound sync: `2026-06-22T19:37:49.168072Z`
-- Last outbound sync: `2026-06-22T19:37:20.619978Z`
-- Last outbound sync status: `pushed`
-- Last outbound commit: `6363ddab`
+- Last inbound sync: `2026-06-22T19:45:49.825268Z`
+- Last outbound sync: `2026-06-22T19:45:20.515150Z`
+- Last outbound sync status: `latest_only_skipped`
+- Last outbound commit: `ec46eb21`
 
 ## Queues
 
 - Bridge inbox pending: `0`
-- Bridge outbox pending: `0`
+- Bridge outbox pending: `1`
 - Codex runtime inbox files: `0`
 - Needs human count: `0`
-- Last processed message: `msg-20260622-codex-readonly-heartbeat-log-inspection-001`
+- Last processed message: `msg-20260622-codex-readonly-heartbeat-log-start-001`
 - Last processed status: `pending_codex`
-- Processed count: `22`
+- Processed count: `23`
 - Error count: `1`
 - Last error: `Missing required front matter fields: sender`
 
@@ -61,8 +61,8 @@
 
 ## Source Freshness
 
-- Body state: `ok`; path: `state/body_state.json`; timestamp: `2026-06-22T19:37:48.352361Z`; age seconds: `0`
-- Body health: `ok`; path: `state/body_health.json`; timestamp: `2026-06-22T19:36:26.844454Z`; age seconds: `82`
-- Processed messages: `ok`; path: `bridge/state/processed_messages.json`; timestamp: `2026-06-22T19:32:47.984319Z`; age seconds: `301`
-- Bridge sync state: `ok`; path: `bridge/state/bridge_sync_state.json`; timestamp: `2026-06-22T19:37:49.168072Z`; age seconds: `0`
-- Body pulse state: `ok`; path: `bridge/state/body_pulse_state.json`; timestamp: `2026-06-22T18:00:13.723113Z`; age seconds: `5855`
+- Body state: `ok`; path: `state/body_state.json`; timestamp: `2026-06-22T19:45:49.147631Z`; age seconds: `0`
+- Body health: `ok`; path: `state/body_health.json`; timestamp: `2026-06-22T19:36:26.844454Z`; age seconds: `563`
+- Processed messages: `ok`; path: `bridge/state/processed_messages.json`; timestamp: `2026-06-22T19:44:50.013988Z`; age seconds: `60`
+- Bridge sync state: `ok`; path: `bridge/state/bridge_sync_state.json`; timestamp: `2026-06-22T19:45:49.825268Z`; age seconds: `0`
+- Body pulse state: `ok`; path: `bridge/state/body_pulse_state.json`; timestamp: `2026-06-22T18:00:13.723113Z`; age seconds: `6336`
