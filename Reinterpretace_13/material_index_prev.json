@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-24T17:34:36.775120Z",
+  "generated_at": "2026-06-24T17:39:59.024998Z",
   "source": {
     "script": "scripts/update_material_index.py",
     "workflow": ".github/workflows/update_material_index.yml"
@@ -95,7 +95,7 @@
         "rodimo",
         "společnost"
       ],
-      "content_sha256": "1365b303b464f49315d6d23e39a2f30c96a3dc5f0f971403e62813cc15cc29af"
+      "content_sha256": "d0234ee68f25ddfd90e4f8917907f1e8211f263dcbe87cfb6007fe32c5328152"
     },
     {
       "title": "07 Veci a deje",
