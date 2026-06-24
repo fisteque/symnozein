@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-24T18:00:15.400505Z",
+  "generated_at": "2026-06-24T18:09:09.955059Z",
   "source": {
     "script": "scripts/update_body_index.py",
     "workflow": ".github/workflows/update_body_index.yml"
@@ -119,8 +119,8 @@
     },
     {
       "path": "bridge/docs/podatelna_contract.md",
-      "size": 671,
-      "sha256": "f0cfebf9c724143f585ee0e036e12736ec8f459eb20990480e3450fcf858c922"
+      "size": 1129,
+      "sha256": "f7f7952ed2101b55f500bc716a3172d8fed325bc8214627add1dcaef428b1b97"
     },
     {
       "path": "bridge/docs/safety_model.md",
