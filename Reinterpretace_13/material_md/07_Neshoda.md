@@ -76,8 +76,7 @@ Dobro je vše, co tvoří. Zlo je vše, co ničí.
 
 Dobro zde neznamená prostě „to, co chci“. Chtění samo o sobě nestačí, protože může být slepé, úzké nebo ničivé. Dobro je spíš to, co umožňuje vznik, růst, vztah a pokračování smysluplného dění. Zlo není prostě „to, co nechci“, ale to, co tyto možnosti uzavírá, ničí nebo obrací proti sobě.
 
-Proto je důležitá neshoda:
-pomáhá rozlišit, jestli něco opravdu tvoří, nebo jen prosazuje vlastní chtění. Neshoda sama tedy není zlo. Zlem se stává až tehdy, když přestane hledat pravdivější vztah a začne ničit možnost pokračovat.
+Proto je důležitá neshoda: pomáhá rozlišit, jestli něco opravdu tvoří, nebo jen prosazuje vlastní chtění. Neshoda sama tedy není zlo. Zlem se stává až tehdy, když přestane hledat pravdivější vztah a začne ničit možnost pokračovat.
 
 Zlo není třeba chápat jako rovnocenný protějšek dobra, který musí být zničen.
 
