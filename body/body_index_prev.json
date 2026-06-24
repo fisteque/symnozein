@@ -1,11 +1,11 @@
 {
-  "generated_at": "2026-06-23T22:00:21.997369Z",
+  "generated_at": "2026-06-23T22:00:32.639967Z",
   "source": {
     "script": "scripts/update_body_index.py",
     "workflow": ".github/workflows/update_body_index.yml"
   },
   "kind": "state",
-  "count": 131,
+  "count": 132,
   "files": [
     {
       "path": "SK/PK/PK-2026-06-14.md",
@@ -116,6 +116,11 @@
       "path": "bridge/docs/latest_contract.md",
       "size": 1363,
       "sha256": "ba83e49db3bad7e80fdbdd72cdc2b58ca77dc7c31efd0f789511c855e5e150e0"
+    },
+    {
+      "path": "bridge/docs/podatelna_contract.md",
+      "size": 671,
+      "sha256": "f0cfebf9c724143f585ee0e036e12736ec8f459eb20990480e3450fcf858c922"
     },
     {
       "path": "bridge/docs/safety_model.md",
