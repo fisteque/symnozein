@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-17T20:48:01.521832Z",
+  "generated_at": "2026-06-17T20:48:17.285187Z",
   "source": {
     "script": "scripts/update_material_index.py",
     "workflow": ".github/workflows/update_material_index.yml"
@@ -492,7 +492,7 @@
       "date": "",
       "summary": "",
       "tags": [],
-      "content_sha256": "6333d4faaa73bc3c50ab33e3d500adcd948390cec0e6ce2bc6a2619fbec74d0a"
+      "content_sha256": "e39a5a2f7f53bd7fed373fb37ee55faa408e25e570bc918688489948d1b238b3"
     },
     {
       "title": "Toroid nul",
