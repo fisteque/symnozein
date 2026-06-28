@@ -5,6 +5,23 @@ Uchovává posledních **50** záznamů.
 
 ---
 
+## 2026-06-28T18:00:15.039352Z
+
+Zdroj změn:
+- skript: `scripts/update_body_index.py`
+- workflow: `.github/workflows/update_body_index.yml`
+
+➕ přidáno: **0**
+- nic
+
+🔄 změněno: **1**
+- `bridge/state_summary/latest.md`
+
+❌ odebráno: **0**
+- nic
+
+---
+
 ## 2026-06-28T14:00:14.231391Z
 
 Zdroj změn:
@@ -844,41 +861,3 @@ Zdroj změn:
 
 ❌ odebráno: **0**
 - nic
-
----
-
-## 2026-06-22T16:29:15.000039Z
-
-Zdroj změn:
-- skript: `scripts/update_body_index.py`
-- workflow: `.github/workflows/update_body_index.yml`
-
-➕ přidáno: **0**
-- nic
-
-🔄 změněno: **0**
-- nic
-
-❌ odebráno: **22**
-- `bridge/inbox/messages/codex/msg-20260527-codex-inbox-write-task-001`
-- `bridge/inbox/messages/codex/msg-20260528-codex-bridge-known-limits-001`
-- `bridge/inbox/messages/codex/msg-20260528-codex-bridge-simplification-review-001`
-- `bridge/inbox/messages/codex/msg-20260528-codex-git-maintenance-review-001`
-- `bridge/inbox/messages/codex/msg-20260529-codex-auto-inbox-reader-design-001.md`
-- `bridge/inbox/messages/codex/msg-20260601-codex-bridge-test-001.md`
-- `bridge/inbox/messages/codex/msg-20260601-codex-bridge-test-002.md`
-- `bridge/inbox/messages/codex/msg-20260601-codex-heartbeat-uptime-summary-001.md`
-- `bridge/inbox/messages/codex/msg-20260601-codex-inbox-reader-dry-run-001.md`
-- `bridge/inbox/messages/codex/msg-20260601-codex-reader-stub-test-risky-001.md`
-- `bridge/inbox/messages/codex/msg-20260601-codex-reader-stub-test-safe-001.md`
-- `bridge/inbox/messages/codex/msg-20260601-codex-reader-writer-stub-001.md`
-- `bridge/inbox/messages/codex/msg-20260603-codex-extend-bridge-tail-001.md`
-- `bridge/inbox/messages/codex/msg-20260603-codex-heartbeat-watchdog-audit-001.md`
-- `bridge/inbox/messages/codex/msg-20260604-codex-body-status-ping-001.md`
-- `bridge/inbox/messages/codex/msg-20260605-codex-apply-lock-diagnostics-eyes-001.md`
-- `bridge/inbox/messages/codex/msg-20260605-codex-audit-bridge-logging-001.md`
-- `bridge/inbox/messages/codex/msg-20260605-codex-bridge-cycle-lock-audit-001.md`
-- `bridge/inbox/messages/codex/msg-20260605-codex-lock-diagnostics-design-001.md`
-- `bridge/inbox/messages/codex/msg-20260605-codex-save-pc-postman-instructions-001.md`
-- `bridge/inbox/messages/codex/msg-20260605-codex-stop-bridge-tail-log-001.md`
-- `bridge/inbox/messages/codex/msg-20260608-codex-test-runtime-outbox-published-lifecycle-001.md`
