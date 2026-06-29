@@ -5,6 +5,23 @@ Uchovává posledních **50** záznamů.
 
 ---
 
+## 2026-06-29T22:00:18.972712Z
+
+Zdroj změn:
+- skript: `scripts/update_body_index.py`
+- workflow: `.github/workflows/update_body_index.yml`
+
+➕ přidáno: **0**
+- nic
+
+🔄 změněno: **1**
+- `bridge/state_summary/latest.md`
+
+❌ odebráno: **0**
+- nic
+
+---
+
 ## 2026-06-29T18:00:17.791877Z
 
 Zdroj změn:
@@ -832,24 +849,6 @@ Zdroj změn:
 - `bridge/outbox/messages/2026-06-22T193557Z_codex-autoreply-codex-request-20260622-193247-msg-20260622-codex-readonly-heartbeat-log-inspecti.md`
 
 🔄 změněno: **1**
-- `bridge/state_summary/latest.md`
-
-❌ odebráno: **0**
-- nic
-
----
-
-## 2026-06-22T19:36:00.301332Z
-
-Zdroj změn:
-- skript: `scripts/update_body_index.py`
-- workflow: `.github/workflows/update_body_index.yml`
-
-➕ přidáno: **0**
-- nic
-
-🔄 změněno: **2**
-- `bridge/scripts/codex_autoreply_worker.py`
 - `bridge/state_summary/latest.md`
 
 ❌ odebráno: **0**
