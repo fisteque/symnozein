@@ -1,11 +1,11 @@
 {
-  "generated_at": "2026-06-30T19:12:54.475183Z",
+  "generated_at": "2026-06-30T20:05:04.764309Z",
   "source": {
     "script": "scripts/update_body_index.py",
     "workflow": ".github/workflows/update_body_index.yml"
   },
   "kind": "state",
-  "count": 135,
+  "count": 136,
   "files": [
     {
       "path": "SK/PK/PK-2026-06-14.md",
@@ -236,6 +236,11 @@
       "path": "bridge/inbox/messages/msg-20260622-codex-readonly-heartbeat-log-start-001.md",
       "size": 951,
       "sha256": "8ef046851fa8812e3667ae6f3ceec30f4140b9344ec53014c507c2412250748a"
+    },
+    {
+      "path": "bridge/inbox/messages/msg-20260630-codex-check-timer-overlap-around-inbound-sync-error-001.md",
+      "size": 911,
+      "sha256": "f07baee9111d3d89193ab7e5db92b64eceffbf3ebfc7f49f16ea5a4b1947d8db"
     },
     {
       "path": "bridge/inbox/messages/msg-20260630-codex-diagnose-inbound-sync-exit2-001.md",
