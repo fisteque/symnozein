@@ -1,11 +1,11 @@
 {
-  "generated_at": "2026-06-30T19:10:32.598837Z",
+  "generated_at": "2026-06-30T19:12:54.475183Z",
   "source": {
     "script": "scripts/update_body_index.py",
     "workflow": ".github/workflows/update_body_index.yml"
   },
   "kind": "state",
-  "count": 134,
+  "count": 135,
   "files": [
     {
       "path": "SK/PK/PK-2026-06-14.md",
@@ -463,6 +463,11 @@
       "sha256": "7d662c1d13666c91ef0071e8728ee121dc7fe7be4897d1894e300f9ef4056fe9"
     },
     {
+      "path": "bridge/outbox/messages/2026-06-30T191114Z_codex-autoreply-codex-request-20260630-191043-msg-20260630-codex-diagnose-inbound-sync-exit2-001.md",
+      "size": 3087,
+      "sha256": "223e9184f2ca0a43d795312563f200c9e5ee67707ec52c6d1ecf010895fb34ef"
+    },
+    {
       "path": "bridge/scripts/.gitignore",
       "size": 23,
       "sha256": "6feaded4e28ea86e001a6751b4e3d960e8b7c31b9616ff9936b79297086e809b"
@@ -599,8 +604,8 @@
     },
     {
       "path": "bridge/state_summary/latest.md",
-      "size": 2585,
-      "sha256": "5a641e5895e7153620d06b8fa2671c6def18a351597e5cae373be303d3331bf4"
+      "size": 2530,
+      "sha256": "a611db2a2f7d7543d7ef3050f9a5f4ecfa1fe95ce9ea1956ab2cb90f80e45ad3"
     },
     {
       "path": "bridge/systemd/bridge-cycle.service",
