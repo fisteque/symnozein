@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-01T18:00:13.236422Z",
+  "generated_at": "2026-07-01T22:00:15.313007Z",
   "source": {
     "script": "scripts/update_body_index.py",
     "workflow": ".github/workflows/update_body_index.yml"
@@ -619,8 +619,8 @@
     },
     {
       "path": "bridge/state_summary/latest.md",
-      "size": 2591,
-      "sha256": "1be0519cad0ecf7610e4f93c58b310f024a7c271a01b64fe4e4348c1e70a7fe7"
+      "size": 2590,
+      "sha256": "094f8689b8620d8a661a8e2265931389c968fbf1b2b3e6a054691ea247741f9b"
     },
     {
       "path": "bridge/systemd/bridge-cycle.service",
