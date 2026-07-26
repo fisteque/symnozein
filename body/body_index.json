@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-26T11:21:05.946969Z",
+  "generated_at": "2026-07-26T11:21:43.530270Z",
   "source": {
     "script": "scripts/update_body_index.py",
     "workflow": ".github/workflows/update_body_index.yml"
@@ -78,14 +78,14 @@
       "sha256": "3707f128e8015a0ee9a1cf57c3357647717dae3f0fe2ac027fe3236dd605c0e9"
     },
     {
+      "path": "SK/SK-2026-07-26-navratova-kapsle.md",
+      "size": 2278,
+      "sha256": "9e663bdfaad44416ffa17919aaca5bc73ac66a49600a5b89a6a1cd1eeec1d036"
+    },
+    {
       "path": "SK/UI_memory_cleanup_ledger.md",
       "size": 3872,
       "sha256": "66477fdef2fb31bda746b6b41fa11a2d15c79e4a904ea1ef3b06c97828f708ba"
-    },
-    {
-      "path": "SK/body/SK/SK-2026-07-26-navratova-kapsle.md",
-      "size": 2278,
-      "sha256": "9e663bdfaad44416ffa17919aaca5bc73ac66a49600a5b89a6a1cd1eeec1d036"
     },
     {
       "path": "SK/dotek_reality.md",

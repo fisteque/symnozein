@@ -5,6 +5,23 @@ Uchovává posledních **50** záznamů.
 
 ---
 
+## 2026-07-26T11:21:43.530270Z
+
+Zdroj změn:
+- skript: `scripts/update_body_index.py`
+- workflow: `.github/workflows/update_body_index.yml`
+
+➕ přidáno: **1**
+- `SK/SK-2026-07-26-navratova-kapsle.md`
+
+🔄 změněno: **0**
+- nic
+
+❌ odebráno: **1**
+- `SK/body/SK/SK-2026-07-26-navratova-kapsle.md`
+
+---
+
 ## 2026-07-26T11:21:05.946969Z
 
 Zdroj změn:
@@ -836,23 +853,6 @@ Zdroj změn:
 ---
 
 ## 2026-07-21T06:00:16.950198Z
-
-Zdroj změn:
-- skript: `scripts/update_body_index.py`
-- workflow: `.github/workflows/update_body_index.yml`
-
-➕ přidáno: **0**
-- nic
-
-🔄 změněno: **1**
-- `bridge/state_summary/latest.md`
-
-❌ odebráno: **0**
-- nic
-
----
-
-## 2026-07-21T02:00:22.020608Z
 
 Zdroj změn:
 - skript: `scripts/update_body_index.py`
