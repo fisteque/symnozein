@@ -8,6 +8,7 @@ import json
 import os
 import re
 import shutil
+import socket
 import subprocess
 from datetime import UTC, datetime
 from pathlib import Path
@@ -23,6 +24,7 @@ DEFAULT_CODEX_INBOX_ROOT = PROJECT_ROOT / "codex" / "inbox"
 DEFAULT_CODEX_PROCESSED_ROOT = PROJECT_ROOT / "codex" / "processed"
 DEFAULT_CODEX_IGNORED_ROOT = PROJECT_ROOT / "codex" / "ignored"
 STATE_RELATIVE_PATH = Path("state/codex_autoreply_state.json")
+LOCK_RELATIVE_PATH = Path("state/codex_autoreply.lock.json")
 OUTBOX_RELATIVE_DIR = Path("outbox/messages")
 MAX_BYTES = 64 * 1024
 MAX_CODEX_RESPONSE_BYTES = 128 * 1024
@@ -131,6 +133,72 @@ def load_json(path: Path, default: dict[str, Any]) -> dict[str, Any]:
 
 def save_json(path: Path, data: dict[str, Any], allowed_root: Path) -> None:
     atomic_write_text(path, json.dumps(data, ensure_ascii=False, indent=2, sort_keys=True) + "\n", allowed_root)
+
+
+def pid_is_alive(pid: object) -> bool | None:
+    if not isinstance(pid, int) or pid <= 0:
+        return None
+    try:
+        os.kill(pid, 0)
+    except ProcessLookupError:
+        return False
+    except PermissionError:
+        return True
+    return True
+
+
+def load_lock(path: Path, runtime_root: Path) -> dict[str, Any] | None:
+    ensure_inside(path, runtime_root)
+    if not path.exists():
+        return None
+    try:
+        data = json.loads(path.read_text(encoding="utf-8"))
+    except json.JSONDecodeError as exc:
+        raise WorkerError(f"invalid_worker_lock:{exc}") from exc
+    if not isinstance(data, dict):
+        raise WorkerError("invalid_worker_lock:not_object")
+    return data
+
+
+def acquire_worker_lock(runtime_root: Path) -> Path:
+    lock_path = ensure_inside(runtime_root / LOCK_RELATIVE_PATH, runtime_root)
+    lock_path.parent.mkdir(parents=True, exist_ok=True)
+    existing = load_lock(lock_path, runtime_root)
+    if existing:
+        alive = pid_is_alive(existing.get("pid"))
+        if alive is not False:
+            raise WorkerError(
+                "worker_lock_active:"
+                f"pid={existing.get('pid')} "
+                f"started_at={existing.get('started_at')} "
+                f"host={existing.get('host')}"
+            )
+        lock_path.unlink()
+
+    data = {
+        "pid": os.getpid(),
+        "started_at": utc_iso(),
+        "host": socket.gethostname(),
+        "status": "active",
+    }
+    flags = os.O_CREAT | os.O_EXCL | os.O_WRONLY
+    try:
+        fd = os.open(lock_path, flags, 0o644)
+    except FileExistsError as exc:
+        raise WorkerError("worker_lock_active") from exc
+    with os.fdopen(fd, "w", encoding="utf-8") as handle:
+        json.dump(data, handle, ensure_ascii=False, indent=2, sort_keys=True)
+        handle.write("\n")
+    return lock_path
+
+
+def release_worker_lock(lock_path: Path, runtime_root: Path) -> None:
+    try:
+        current = load_lock(lock_path, runtime_root)
+    except WorkerError:
+        return
+    if current and current.get("pid") == os.getpid():
+        lock_path.unlink(missing_ok=True)
 
 
 def parse_frontmatter(text: str) -> tuple[dict[str, Any], str]:
@@ -566,9 +634,11 @@ def main() -> int:
     runtime_root = args.runtime_root.resolve()
     processed_root = args.processed_root.resolve()
     ignored_root = args.ignored_root.resolve()
+    lock_path: Path | None = None
     try:
         if args.write_stub and args.run_codex:
             raise WorkerError("--write-stub and --run-codex are mutually exclusive")
+        lock_path = acquire_worker_lock(runtime_root)
         try:
             request = select_one_request(inbox_dir, args.file)
             archive_root = processed_root
@@ -619,6 +689,25 @@ def main() -> int:
             print(f"result={result}")
         return 0
     except WorkerError as exc:
+        if str(exc).startswith("worker_lock_active"):
+            output = {
+                "version": 1,
+                "mode": mode_name(args),
+                "generated_at": utc_iso(),
+                "status": "busy",
+                "message": str(exc),
+                "side_effects": {
+                    "writes_outbox": False,
+                    "archives_request": False,
+                    "commits": False,
+                    "pushes": False,
+                },
+            }
+            if args.json:
+                print(json.dumps(output, ensure_ascii=False, indent=2, sort_keys=True))
+            else:
+                print(f"codex_autoreply_worker busy: {exc}")
+            return 0
         if args.quiet_empty and str(exc) == "no_pending_codex_requests":
             output = {
                 "version": 1,
@@ -649,6 +738,9 @@ def main() -> int:
         else:
             print(f"ERROR: {exc}")
         return 2
+    finally:
+        if lock_path is not None:
+            release_worker_lock(lock_path, runtime_root)
 
 
 if __name__ == "__main__":
