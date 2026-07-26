@@ -1,11 +1,11 @@
 {
-  "generated_at": "2026-07-26T14:00:13.424175Z",
+  "generated_at": "2026-07-26T16:31:16.482770Z",
   "source": {
     "script": "scripts/update_body_index.py",
     "workflow": ".github/workflows/update_body_index.yml"
   },
   "kind": "state",
-  "count": 146,
+  "count": 147,
   "files": [
     {
       "path": "SK/PK/PK-2026-06-14.md",
@@ -256,6 +256,11 @@
       "path": "bridge/inbox/messages/msg-20260630-codex-diagnose-inbound-sync-exit2-001.md",
       "size": 1138,
       "sha256": "c04743ac68f262bed9851b3cda65a7020dd22537bbfe83a4ec52b20525839c91"
+    },
+    {
+      "path": "bridge/inbox/messages/msg-20260726-codex-read-runtime-agents-root-001.md",
+      "size": 713,
+      "sha256": "48aa91cb0e10d7f4758acc851dc389c909d8d293498486fe77df89d0a2290c7f"
     },
     {
       "path": "bridge/instructions/pc_codex_postman.md",
