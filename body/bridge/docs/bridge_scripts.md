@@ -166,6 +166,8 @@ Important behavior:
 - checks target against `rpi5-bridge-agent` / `rpi5-bridge`;
 - records message state in `bridge/state/processed_messages.json`;
 - writes replies or task results to runtime outbox;
+- does not write directly to `body/bridge/outbox/messages`; outbound sync publishes
+  runtime outbox messages to the GitHub tape;
 - turns `codex_request` into a local Codex queue item under
   `/home/fiste/Noema/codex/inbox/`;
 - archives processed runtime inbox files under
