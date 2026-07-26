@@ -82,6 +82,20 @@ def count_files(path: Path) -> int:
     return sum(1 for item in path.iterdir() if item.is_file() and not item.name.startswith("."))
 
 
+def oldest_markdown_file_age_seconds(path: Path, now: datetime) -> int | None:
+    if not path.exists():
+        return None
+    files = [
+        item
+        for item in path.glob("*.md")
+        if item.is_file() and not item.name.startswith(".")
+    ]
+    if not files:
+        return None
+    oldest_mtime = min(item.stat().st_mtime for item in files)
+    return max(0, int(now.timestamp() - oldest_mtime))
+
+
 def latest_markdown_file(path: Path) -> str:
     if not path.exists():
         return "(missing)"
@@ -265,6 +279,46 @@ def last_processed_message(processed: dict[str, Any]) -> tuple[str, dict[str, An
     return entries[-1]
 
 
+def last_codex_worker_result(state: dict[str, Any]) -> tuple[str, str]:
+    candidates: list[tuple[str, str, str]] = []
+    processed = state.get("processed")
+    if isinstance(processed, dict):
+        for request_id, entry in processed.items():
+            if not isinstance(entry, dict):
+                continue
+            candidates.append(
+                (
+                    str(entry.get("processed_at") or ""),
+                    str(request_id),
+                    str(entry.get("status") or "(unknown)"),
+                )
+            )
+
+    errors = state.get("errors")
+    if isinstance(errors, list):
+        for entry in errors:
+            if not isinstance(entry, dict):
+                continue
+            candidates.append(
+                (
+                    str(entry.get("processed_at") or entry.get("created_at") or ""),
+                    str(entry.get("message_id") or entry.get("request_id") or "(unknown)"),
+                    "error",
+                )
+            )
+
+    if not candidates:
+        return "(none)", "(unknown)"
+    _, request_id, status = max(candidates, key=lambda item: item[0])
+    return request_id, status
+
+
+def bridge_agent_status_label(status: Any) -> str:
+    if status == "pending_codex":
+        return "pending_codex (terminal handoff to Codex layer)"
+    return str(status or "(unknown)")
+
+
 def nested_get(data: dict[str, Any], path: tuple[str, ...], default: Any = "(unknown)") -> Any:
     current: Any = data
     for key in path:
@@ -390,11 +444,13 @@ def count_needs_human_codex_requests(codex_inbox_dir: Path) -> int:
 def render_summary(runtime_root: Path, repo_root: Path, project_root: Path, log_lines: int) -> str:
     generated_at = utc_now()
     processed_path = runtime_root / "state" / "processed_messages.json"
+    codex_worker_state_path = runtime_root / "state" / "codex_autoreply_state.json"
     body_state_path = project_root / "state" / "body_state.json"
     body_health_path = project_root / "state" / "body_health.json"
     sync_state_path = runtime_root / "state" / "bridge_sync_state.json"
     pulse_state_path = runtime_root / "state" / "body_pulse_state.json"
     processed = load_json(processed_path, tolerate_invalid=True)
+    codex_worker_state = load_json(codex_worker_state_path, tolerate_invalid=True)
     body_state = load_json(body_state_path, tolerate_invalid=True)
     body_health = load_json(body_health_path, tolerate_invalid=True)
     sync_state = load_json(sync_state_path, tolerate_invalid=True)
@@ -404,6 +460,7 @@ def render_summary(runtime_root: Path, repo_root: Path, project_root: Path, log_
         errors = []
 
     last_message_id, last_message = last_processed_message(processed)
+    last_codex_worker_id, last_codex_worker_status = last_codex_worker_result(codex_worker_state)
     messages = processed.get("messages")
     processed_count = len(messages) if isinstance(messages, dict) else 0
     last_error = errors[-1] if errors else None
@@ -411,6 +468,11 @@ def render_summary(runtime_root: Path, repo_root: Path, project_root: Path, log_
     inbox_dir = runtime_root / "inbox/messages"
     codex_inbox_dir = project_root / "codex/inbox"
     outbox_dir = runtime_root / "outbox/messages"
+    runtime_outbox_count = count_markdown_files(outbox_dir)
+    runtime_outbox_oldest_age = oldest_markdown_file_age_seconds(outbox_dir, generated_at)
+    codex_inbox_count = count_files(codex_inbox_dir)
+    needs_human_count = count_needs_human_codex_requests(codex_inbox_dir)
+    active_codex_pending = max(0, codex_inbox_count - needs_human_count)
 
     body_awake = body_state.get("awake", "(unknown)") if body_state else "(missing)"
     body_status = body_state.get("status", "(unknown)") if body_state else "(missing)"
@@ -487,15 +549,26 @@ def render_summary(runtime_root: Path, repo_root: Path, project_root: Path, log_
             f"- Last outbound sync: `{sync_state.get('last_outbound_sync', '(missing)')}`",
             f"- Last outbound sync status: `{sync_state.get('last_outbound_sync_status', '(missing)')}`",
             f"- Last outbound commit: `{sync_state.get('last_outbound_commit', '(missing)')}`",
+            "- Summary snapshot phase: `pre-outbound`",
             "",
             "## Queues",
             "",
             f"- Bridge inbox pending: `{count_markdown_files(inbox_dir)}`",
-            f"- Bridge outbox pending: `{count_markdown_files(outbox_dir)}`",
-            f"- Codex runtime inbox files: `{count_files(codex_inbox_dir)}`",
-            f"- Needs human count: `{count_needs_human_codex_requests(codex_inbox_dir)}`",
+            f"- Bridge runtime outbox awaiting publish/archive: `{runtime_outbox_count}`",
+            f"- Oldest runtime outbox age seconds: "
+            f"`{runtime_outbox_oldest_age if runtime_outbox_oldest_age is not None else '(none)'}`",
+            "",
+            f"- Codex runtime inbox files: `{codex_inbox_count}`",
+            f"- Active Codex pending: `{active_codex_pending}`",
+            f"- Needs human count: `{needs_human_count}`",
+            "",
             f"- Last processed message: `{last_message_id}`",
-            f"- Last processed status: `{last_message.get('status', '(unknown)') if last_message else '(none)'}`",
+            f"- Last bridge-agent status: "
+            f"`{bridge_agent_status_label(last_message.get('status')) if last_message else '(none)'}`",
+            "",
+            f"- Last Codex worker request: `{last_codex_worker_id}`",
+            f"- Last Codex worker status: `{last_codex_worker_status}`",
+            "",
             f"- Processed count: `{processed_count}`",
             f"- Error count: `{len(errors)}`",
             f"- Last error: `{last_error.get('error', '(none)') if isinstance(last_error, dict) else '(none)'}`",
