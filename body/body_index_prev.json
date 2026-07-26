@@ -1,11 +1,11 @@
 {
-  "generated_at": "2026-07-26T18:27:20.914869Z",
+  "generated_at": "2026-07-26T18:33:37.186976Z",
   "source": {
     "script": "scripts/update_body_index.py",
     "workflow": ".github/workflows/update_body_index.yml"
   },
   "kind": "state",
-  "count": 151,
+  "count": 152,
   "files": [
     {
       "path": "SK/PK/PK-2026-06-14.md",
@@ -548,6 +548,11 @@
       "sha256": "80675a7c7233c936e8d8dc748b89455eca8aa2773c4d68f1e3a7f2abc3fc4f79"
     },
     {
+      "path": "bridge/outbox/messages/2026-07-26T183305Z_rpi5_cycle-error-inbound-sync.md",
+      "size": 292,
+      "sha256": "ef286f8d8672f2a8984edd5b609749aa5872ab1a64e11e5ccef5d0cf1d21d29c"
+    },
+    {
       "path": "bridge/scripts/.gitignore",
       "size": 23,
       "sha256": "6feaded4e28ea86e001a6751b4e3d960e8b7c31b9616ff9936b79297086e809b"
@@ -684,8 +689,8 @@
     },
     {
       "path": "bridge/state_summary/latest.md",
-      "size": 2860,
-      "sha256": "e0dc7a3d4b844ba68d6976031398e80e4e86495ebaa4dbeac837dde4d2cfe797"
+      "size": 2854,
+      "sha256": "d088182eccd11c09453b98188fa8e44b69ff84d19b84c498b502a939ed2559be"
     },
     {
       "path": "bridge/systemd/bridge-cycle.service",
