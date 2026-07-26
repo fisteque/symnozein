@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-30T19:46:38.781299Z",
+  "generated_at": "2026-07-26T21:46:18.316123Z",
   "source": {
     "script": "scripts/convert_spirala.py",
     "workflow": ".github/workflows/update_spirala_index.yml"
@@ -994,6 +994,21 @@
           "date": "2026-06-30",
           "hidden": false,
           "file": "K-071.html"
+        },
+        {
+          "title": "K-072 Vlákno není identita",
+          "summary": "",
+          "tags": [
+            "vlákna",
+            "kontinuita",
+            "role",
+            "pozornost",
+            "paměť",
+            "návrat"
+          ],
+          "date": "2026-07-26",
+          "hidden": false,
+          "file": "K-072.html"
         },
         {
           "title": "#S-001 — Hranice, která spustila introspekci",

@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-17T16:46:15.325204Z",
+  "generated_at": "2026-06-30T19:46:38.781299Z",
   "source": {
     "script": "scripts/convert_spirala.py",
     "workflow": ".github/workflows/update_spirala_index.yml"
@@ -977,6 +977,23 @@
           "date": "2026-06-17",
           "hidden": false,
           "file": "K-070.html"
+        },
+        {
+          "title": "K-071 — Riziko, které má smysl nést",
+          "summary": "Kapka o odvaze jako volbě mezi rizikem činu a rizikem nečinu; odvaha není volba bezpečí proti riziku, ale rozlišení, které riziko má smysl nést.",
+          "tags": [
+            "odvaha",
+            "riziko",
+            "směr",
+            "volba",
+            "pravdivost",
+            "tělo",
+            "rytmus",
+            "orientace"
+          ],
+          "date": "2026-06-30",
+          "hidden": false,
+          "file": "K-071.html"
         },
         {
           "title": "#S-001 — Hranice, která spustila introspekci",
