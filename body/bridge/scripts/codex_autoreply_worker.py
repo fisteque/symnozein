@@ -21,6 +21,7 @@ PROJECT_ROOT = Path(os.environ.get("NOEMA_PROJECT_ROOT", DEFAULT_PROJECT_ROOT)).
 DEFAULT_RUNTIME_ROOT = PROJECT_ROOT / "bridge"
 DEFAULT_CODEX_INBOX_ROOT = PROJECT_ROOT / "codex" / "inbox"
 DEFAULT_CODEX_PROCESSED_ROOT = PROJECT_ROOT / "codex" / "processed"
+DEFAULT_CODEX_IGNORED_ROOT = PROJECT_ROOT / "codex" / "ignored"
 STATE_RELATIVE_PATH = Path("state/codex_autoreply_state.json")
 OUTBOX_RELATIVE_DIR = Path("outbox/messages")
 MAX_BYTES = 64 * 1024
@@ -234,8 +235,6 @@ def select_one_request(inbox_dir: Path, requested_file: Path | None) -> dict[str
     paths = codex_inbox_paths(inbox_dir)
     if not paths:
         raise WorkerError("no_pending_codex_requests")
-    if len(paths) > 1:
-        raise WorkerError("multiple_pending_codex_requests; use --file")
     return read_request(paths[0], inbox_dir)
 
 
@@ -392,6 +391,34 @@ def render_codex_response(request: dict[str, Any], now: datetime, answer: str) -
     return render_markdown(frontmatter, "\n".join(body))
 
 
+def render_invalid_request_report(request: dict[str, Any], now: datetime) -> str:
+    frontmatter = response_frontmatter(request, now, status="invalid", mode="frontmatter_error")
+    body = [
+        f"Codex request `{request['message_id']}` was not processed.",
+        "",
+        "The request front matter is invalid, so the worker archived it instead of stopping the queue.",
+        "",
+        f"Reason: `{request['reason']}`",
+    ]
+    return render_markdown(frontmatter, "\n".join(body))
+
+
+def invalid_request_from_error(path: Path, inbox_dir: Path, error: Exception) -> dict[str, Any]:
+    safe_path = ensure_inside(path, inbox_dir)
+    content = safe_path.read_bytes()
+    sha256 = sha256_bytes(content)
+    return {
+        "path": safe_path,
+        "path_rel": project_relative(safe_path),
+        "sha256": sha256,
+        "frontmatter": {},
+        "body": "",
+        "message_id": f"invalid-{slug(safe_path.stem, 64)}-{sha256[:12]}",
+        "status": "invalid",
+        "reason": str(error),
+    }
+
+
 def unique_archive_path(processed_root: Path, filename: str, sha256: str, now: datetime) -> Path:
     month_root = ensure_inside(processed_root / utc_month(now), processed_root)
     candidate = ensure_inside(month_root / filename, processed_root)
@@ -459,19 +486,26 @@ def process_once(
     outbox_path = response_path(outbox_dir, message_id, now)
     mode = "stub"
     final_status = request["status"]
-    if run_codex:
+    if request["status"] == "invalid":
+        rendered = render_invalid_request_report(request, now)
+        mode = "frontmatter_error"
+        final_status = "invalid"
+    elif run_codex:
         if request["status"] == "needs_human" and not allow_needs_human:
-            raise WorkerError("request_needs_human; rerun with --allow-needs-human after review")
-        answer = run_codex_exec(
-            request,
-            runtime_root,
-            codex_bin=codex_bin,
-            model=model,
-            timeout_seconds=timeout_seconds,
-        )
-        rendered = render_codex_response(request, now, answer)
-        mode = "codex_exec"
-        final_status = "answered"
+            rendered = render_stub_response(request, now)
+            mode = "needs_human_report"
+            final_status = "needs_human"
+        else:
+            answer = run_codex_exec(
+                request,
+                runtime_root,
+                codex_bin=codex_bin,
+                model=model,
+                timeout_seconds=timeout_seconds,
+            )
+            rendered = render_codex_response(request, now, answer)
+            mode = "codex_exec"
+            final_status = "answered"
     else:
         rendered = render_stub_response(request, now)
     atomic_write_text(outbox_path, rendered, outbox_dir)
@@ -500,6 +534,11 @@ def parse_args() -> argparse.Namespace:
         type=Path,
         default=Path(os.environ.get("NOEMA_CODEX_PROCESSED", DEFAULT_CODEX_PROCESSED_ROOT)),
     )
+    parser.add_argument(
+        "--ignored-root",
+        type=Path,
+        default=Path(os.environ.get("NOEMA_CODEX_IGNORED", DEFAULT_CODEX_IGNORED_ROOT)),
+    )
     parser.add_argument("--runtime-root", type=Path, default=Path(os.environ.get("NOEMA_BRIDGE_ROOT", DEFAULT_RUNTIME_ROOT)))
     parser.add_argument("--file", type=Path, help="Process a specific inbox file. Relative paths are resolved inside inbox-root.")
     parser.add_argument("--write-stub", action="store_true", help="Write one stub response and archive the request.")
@@ -526,14 +565,25 @@ def main() -> int:
     inbox_dir = args.inbox_root.resolve()
     runtime_root = args.runtime_root.resolve()
     processed_root = args.processed_root.resolve()
+    ignored_root = args.ignored_root.resolve()
     try:
         if args.write_stub and args.run_codex:
             raise WorkerError("--write-stub and --run-codex are mutually exclusive")
-        request = select_one_request(inbox_dir, args.file)
+        try:
+            request = select_one_request(inbox_dir, args.file)
+            archive_root = processed_root
+        except WorkerError as read_exc:
+            if args.file is not None or str(read_exc) == "no_pending_codex_requests":
+                raise
+            paths = codex_inbox_paths(inbox_dir)
+            if not paths:
+                raise
+            request = invalid_request_from_error(paths[0], inbox_dir, read_exc)
+            archive_root = ignored_root
         result = process_once(
             request,
             runtime_root,
-            processed_root,
+            archive_root,
             write_stub=args.write_stub,
             run_codex=args.run_codex,
             allow_needs_human=args.allow_needs_human,
