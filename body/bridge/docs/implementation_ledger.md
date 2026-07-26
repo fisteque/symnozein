@@ -1424,3 +1424,62 @@ Verified:
 - both agent copies parse successfully with `ast.parse`;
 - `bridge_scripts.md` states that the agent writes to runtime outbox and does
   not write directly to `body/bridge/outbox/messages/`.
+
+### Codex Runtime Inbox Unblock And Queue Hardening
+
+Fixed a clogged local Codex runtime inbox.
+
+Observed:
+
+- `codex/inbox/` contained two pending Codex request files from 2026-06-30.
+- Both current files had valid `sender: rpi5-bridge-agent`; the historical
+  `Missing required front matter fields: sender` case was found in bridge logs
+  and prior processed state, not in the current active Codex inbox.
+- The active blockage was that `codex_autoreply_worker.py` refused multiple
+  pending files and the first current request classified as `needs_human`, which
+  stopped the second request from being handled in normal `--run-codex` mode.
+
+Changed:
+
+- `bridge/scripts/codex_autoreply_worker.py`
+- `body/bridge/scripts/codex_autoreply_worker.py`
+- `body/bridge/docs/bridge_scripts.md`
+- `body/bridge/docs/implementation_ledger.md`
+
+Runtime result:
+
+- The first queued request
+  `codex-request-20260630-200508-msg-20260630-codex-check-timer-overlap-around-inbound-sync-error-001`
+  was archived under `codex/processed/2026-07/` and received a runtime outbox
+  report with `status: needs_human`, `mode: needs_human_report`.
+- The next queued request
+  `codex-request-20260630-201909-msg-20260630-codex-check-last-message-processing-state-001`
+  was then processed and archived under `codex/processed/2026-07/` with
+  `status: answered`.
+- `codex/inbox/` is now empty and the worker returns `status: idle` with
+  `--quiet-empty --json`.
+
+Hardening:
+
+- Multiple pending files no longer stop selection; the worker processes the first
+  sorted request per run.
+- `needs_human` requests no longer block the queue in `--run-codex` mode: they
+  create a readable report and archive without running Codex unless
+  `--allow-needs-human` is explicit.
+- Invalid frontmatter on the next queued file creates a readable error report,
+  archives the source under `codex/ignored/YYYY-MM/`, and allows later files to
+  be handled by subsequent runs.
+- A runtime lock `bridge/state/codex_autoreply.lock.json` prevents overlapping
+  worker runs from writing duplicate responses; a second worker returns
+  `status: busy` without outbox/archive writes.
+
+Verified:
+
+- `ast.parse` passed for runtime and mirrored worker copies.
+- Runtime and mirrored worker copies match.
+- Temporary queue test: first file missing `sender` was archived under
+  `ignored/YYYY-MM/` with a frontmatter error report; second valid file was
+  processed on the next run.
+- Temporary lock test: an active live-PID lock produced `status: busy` and no
+  side effects.
+- Real queue check returned `no_pending_codex_requests`.

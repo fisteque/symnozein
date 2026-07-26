@@ -217,9 +217,18 @@ It supports:
   `bridge/outbox/messages/`;
 - `--run-codex` to call `codex exec` in read-only, non-interactive mode and
   write the final Codex answer into `bridge/outbox/messages/`;
-- archival of the source request into
+- safe `needs_human` handling: in normal `--run-codex` mode, requests classified
+  as `needs_human` produce a readable report and are archived without running
+  Codex unless `--allow-needs-human` is explicit;
+- safe invalid-frontmatter handling for the next queued file: malformed requests
+  produce a readable error report, are archived under
+  `/home/fiste/Noema/codex/ignored/YYYY-MM/`, and do not stop later queue
+  items from being handled by subsequent runs;
+- archival of successfully handled source requests into
   `/home/fiste/Noema/codex/processed/YYYY-MM/` only after the outbox response is
-  written successfully.
+  written successfully;
+- a runtime lock at `bridge/state/codex_autoreply.lock.json` so overlapping
+  worker runs return `busy` instead of writing duplicate responses.
 
 Worker state is runtime-local:
 
