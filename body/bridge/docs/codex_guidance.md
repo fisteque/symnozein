@@ -73,15 +73,67 @@ Before editing, inspect the current files and git status.
 
 ### Automatic Bridge Cycle During Edits
 
-The bridge cycle is an independent automatic writer. It can mirror runtime files into the GitHub tape, regenerate `latest.md`, commit, and push even when no manual Git command is running.
+The bridge cycle is an independent automatic writer. It can mirror runtime files
+into the GitHub tape, regenerate `latest.md`, commit, and push even when no
+manual Git command is running.
 
-Read-only analysis does not require stopping the cycle.
+Decide whether the timer must be stopped from both:
 
-Do not begin editing a file that the bridge cycle uses or publishes until the relevant automatic publisher is confirmed inactive and no cycle is currently running.
+- publication risk: whether the changed path is inside `ALLOWED_REPO_PATHS`;
+- runtime risk: whether the bridge cycle uses, executes, mirrors, or regenerates
+  the changed file.
 
-If stopping or resuming the publisher requires runtime authority not granted by the current request, pause before editing and ask Ondra to stop it or explicitly authorize stopping it.
+#### Read-Only Analysis
 
-After editing, run local validation without publishing, inspect the complete scoped diff, and publish or resume automation only after explicit human approval.
+Read-only inspection does not require stopping the bridge cycle.
+
+#### Changes Outside `ALLOWED_REPO_PATHS`
+
+Changes outside `ALLOWED_REPO_PATHS` normally do not require stopping the timer
+because the outbound sync will not stage or publish them.
+
+This does not apply when the change affects a live bridge mechanism or a file
+the cycle uses while running. Runtime bridge scripts, sync logic, agents,
+workers, summary generation, and bridge-facing systemd files require the timer
+to be stopped before editing, regardless of repository allowlist placement.
+
+#### Changes Inside `ALLOWED_REPO_PATHS`
+
+An approved edit inside `ALLOWED_REPO_PATHS` has two modes.
+
+1. Auto-publish mode
+
+   - The timer remains running.
+   - The CLI applies the approved change.
+   - The normal bridge cycle may stage, commit, and push it.
+   - Use this only for routine changes whose content and automatic publication
+     have already been explicitly approved.
+   - Before editing, inspect the scoped Git status and confirm that no unrelated
+     allowed-path changes could be included.
+
+2. Review-before-publish mode
+
+   - The relevant automatic publisher is confirmed inactive and no cycle is
+     running.
+   - The CLI applies the change and performs local validation without publishing.
+   - Ondra/Noema inspect the complete scoped diff.
+   - The timer resumes only after explicit approval to publish.
+   - Use this for rules, safety boundaries, bridge mechanisms, guidance, or any
+     change requiring review of the exact final wording or behavior.
+
+If the requested mode is unclear, use review-before-publish mode.
+
+#### Runtime Bridge Mechanisms
+
+Always stop the relevant automatic publisher before editing runtime bridge
+scripts, inbound or outbound sync logic, the bridge agent, Codex worker,
+summary generation, bridge-facing systemd files, or any other mechanism that
+the bridge cycle executes, mirrors, or may publish while the edit is in
+progress.
+
+If stopping or resuming the publisher requires runtime authority not granted by
+the current request, pause before editing and ask Ondra to stop it or explicitly
+authorize stopping it.
 
 Detailed stop/start commands belong in the bridge operations procedure.
 
@@ -108,7 +160,7 @@ When answering from current state, read files instead of relying on memory.
 
 GitHub is an audit tape and transport layer, not the live runtime.
 
-No new autonomous write path should be treated as working until it has a real, inspectable proof such as a commit, outbox message, updated summary, or other runtime artifact.
+No new autonomous write path should be treated as working until its intended artifact, destination, ownership, and failure behavior have been inspected through real evidence such as a commit, outbox message, updated summary, or other runtime artifact.
 
 Ondra is the human safety and relationship anchor for this project.
 Do not expand write authority or autonomy without explicit approval and a clear safety model.
