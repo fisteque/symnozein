@@ -24,15 +24,16 @@ into the bridge documentation layer:
 body/bridge/docs/codex_guidance.md
 ```
 
-The old path remains as a small redirect stub:
+The old redirect stub was removed after verifying that current hand-written
+orientation docs no longer depend on it:
 
 ```text
 body/docs/AGENTS.md
 ```
 
 Rationale: the content is project/bridge operating guidance, not general body
-content documentation. Keeping it under `body/bridge/docs/` places it beside the
-active bridge safety, scripts, known-limits, and ledger documents.
+content documentation. Keeping the active copy under `body/bridge/docs/` places
+it beside the active bridge safety, scripts, known-limits, and ledger documents.
 
 Changed:
 
@@ -44,8 +45,9 @@ Changed:
 
 Verified:
 
-- historical references to `body/docs/AGENTS.md` remain traceable through the
-  redirect stub;
+- current hand-written orientation docs point at `body/bridge/docs/codex_guidance.md`;
+- generated `body_index*.json` still mention the removed path until their normal
+  regeneration updates them;
 - `index_menu.json` parses as JSON;
 - `struktura_body.md` lists `codex_guidance.md` under `body/bridge/docs/`.
 
