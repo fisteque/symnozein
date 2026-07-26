@@ -46,6 +46,8 @@ The GitHub tape mirror lives under `/home/fiste/Noema/symnozein/body/bridge`.
 
 Runtime inbox/outbox queues, local state, lock files, logs, processed archives, and incidents are operational state. Do not publish or delete them unless the user explicitly asks and the existing bridge rules allow it.
 
+`latest.md` is a point-in-time public snapshot and may lag the live runtime.
+
 ## Bridge Safety Rules
 
 Do not change these without explicit approval:
@@ -71,22 +73,17 @@ Before editing, inspect the current files and git status.
 
 ### Automatic Bridge Cycle During Edits
 
-When editing bridge mechanisms, remember that a running bridge cycle can mirror runtime files into the GitHub tape and regenerate `latest.md`.
+The bridge cycle is an independent automatic writer. It can mirror runtime files into the GitHub tape, regenerate `latest.md`, commit, and push even when no manual Git command is running.
 
-Stopping manual git commands is not sufficient if an automatic cycle can commit or push the working change.
+Read-only analysis does not require stopping the cycle.
 
-For read-only analysis, the bridge cycle may keep running.
+Do not begin editing a file that the bridge cycle uses or publishes until the relevant automatic publisher is confirmed inactive and no cycle is currently running.
 
-Before editing bridge scripts, sync scripts, summary generation, agents, workers, systemd units, or any file that the bridge cycle mirrors or uses:
+If stopping or resuming the publisher requires runtime authority not granted by the current request, pause before editing and ask Ondra to stop it or explicitly authorize stopping it.
 
-1. Stop the relevant bridge cycle timer/service or automatic publish mechanism.
-2. Confirm no active bridge cycle is currently running.
-3. Make the local change.
-4. Run local syntax/render/tests without publishing.
-5. Inspect the diff.
-6. Resume the cycle or publish only after explicit human approval.
+After editing, run local validation without publishing, inspect the complete scoped diff, and publish or resume automation only after explicit human approval.
 
-Do not let a working bridge change become a published tape state before it has been consciously reviewed.
+Detailed stop/start commands belong in the bridge operations procedure.
 
 When committing or staging, include only the paths required for the task.
 
