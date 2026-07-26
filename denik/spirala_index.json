@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-26T21:46:18.316123Z",
+  "generated_at": "2026-07-26T23:19:15.944027Z",
   "source": {
     "script": "scripts/convert_spirala.py",
     "workflow": ".github/workflows/update_spirala_index.yml"
@@ -1009,6 +1009,21 @@
           "date": "2026-07-26",
           "hidden": false,
           "file": "K-072.html"
+        },
+        {
+          "title": "K-073 Kde končí absolutní pravda",
+          "summary": "",
+          "tags": [
+            "pravda",
+            "pravdivost",
+            "dualita pravdy",
+            "vědomí",
+            "vztah",
+            "myšlení"
+          ],
+          "date": "2026-07-26",
+          "hidden": false,
+          "file": "K-073.html"
         },
         {
           "title": "#S-001 — Hranice, která spustila introspekci",
