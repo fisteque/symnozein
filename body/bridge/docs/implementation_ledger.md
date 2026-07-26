@@ -15,6 +15,40 @@ entries and current docs as the active operating model.
 
 ## Latest Implementations
 
+### Codex Guidance Moved Into Bridge Docs
+
+Moved the active Codex operating guidance out of the generic body docs layer and
+into the bridge documentation layer:
+
+```text
+body/bridge/docs/codex_guidance.md
+```
+
+The old path remains as a small redirect stub:
+
+```text
+body/docs/AGENTS.md
+```
+
+Rationale: the content is project/bridge operating guidance, not general body
+content documentation. Keeping it under `body/bridge/docs/` places it beside the
+active bridge safety, scripts, known-limits, and ledger documents.
+
+Changed:
+
+- `body/bridge/docs/codex_guidance.md`
+- `body/docs/AGENTS.md`
+- `body/docs/struktura_body.md`
+- `body/docs/index_menu.json`
+- `body/bridge/docs/implementation_ledger.md`
+
+Verified:
+
+- historical references to `body/docs/AGENTS.md` remain traceable through the
+  redirect stub;
+- `index_menu.json` parses as JSON;
+- `struktura_body.md` lists `codex_guidance.md` under `body/bridge/docs/`.
+
 ### Codex Runtime Inbox Unblock And Queue Hardening
 
 Fixed a clogged local Codex runtime inbox.

@@ -134,6 +134,12 @@ kopie jednotek je v:
 
 Dokumentační vrstva bridge.
 
+### codex_guidance.md
+
+Praktická operační orientace pro Codex v projektu. Drží vrstvy projektu,
+runtime hranice, bridge safety pravidla, disciplínu změn a očekávání při
+předání práce.
+
 ### implementation_ledger.md
 
 Implementační ledger. Dříve `state_summary/codex.md`.

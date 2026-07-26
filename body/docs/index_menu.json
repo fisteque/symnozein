@@ -22,7 +22,8 @@
     "safety_model": "body/bridge/docs/safety_model.md",
     "latest_contract": "body/bridge/docs/latest_contract.md",
     "bridge_scripts": "body/bridge/docs/bridge_scripts.md",
-    "bridge_protocol": "body/bridge/docs/bridge_protocol_v1.md"
+    "bridge_protocol": "body/bridge/docs/bridge_protocol_v1.md",
+    "codex_guidance": "body/bridge/docs/codex_guidance.md"
   },
 
   "runtime_focus": {
@@ -49,7 +50,8 @@
         "body/bridge/docs/safety_model.md",
         "body/bridge/docs/latest_contract.md",
         "body/bridge/docs/bridge_scripts.md",
-        "body/bridge/docs/bridge_protocol_v1.md"
+        "body/bridge/docs/bridge_protocol_v1.md",
+        "body/bridge/docs/codex_guidance.md"
       ]
     },
 
