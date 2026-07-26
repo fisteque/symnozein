@@ -25,7 +25,7 @@ if not BODY_ROOT.exists():
 
 INBOX_DIR = BRIDGE_ROOT / "inbox" / "messages"
 PROCESSED_INBOX_DIR = BRIDGE_ROOT / "inbox" / "processed"
-OUTBOX_DIR = BODY_ROOT / "bridge" / "outbox" / "messages"
+OUTBOX_DIR = BRIDGE_ROOT / "outbox" / "messages"
 CODEX_RUNTIME_INBOX_DIR = Path(os.environ.get("NOEMA_CODEX_INBOX", PROJECT_ROOT / "codex" / "inbox")).resolve()
 STATE_DIR = BRIDGE_ROOT / "state"
 LOG_FILE = BRIDGE_ROOT / "logs" / "bridge.log"
@@ -353,7 +353,7 @@ def write_outbox_message(
     now: datetime | None = None,
 ) -> Path:
     ensure_dir(OUTBOX_DIR)
-    assert_inside(OUTBOX_DIR, BODY_ROOT)
+    assert_inside(OUTBOX_DIR, BRIDGE_ROOT)
 
     timestamp = now or utc_now()
     stamp = timestamp.strftime("%Y-%m-%dT%H%M%SZ")
@@ -643,7 +643,7 @@ def report_error_outbox(
     reported[key] = {
         "type": "error",
         "reported_at": utc_iso(),
-        "outbox_path": relative_to_body(outbox_path),
+        "outbox_path": audit_path(outbox_path),
     }
     return outbox_path
 
@@ -871,9 +871,9 @@ def observe_body_state(event_state: dict[str, Any]) -> Path | None:
     reported[key] = {
         "type": "body_state_change",
         "reported_at": utc_iso(),
-        "outbox_path": relative_to_body(outbox_path),
+        "outbox_path": audit_path(outbox_path),
     }
-    log(f"Body state change reported: {relative_to_body(outbox_path)}")
+    log(f"Body state change reported: {audit_path(outbox_path)}")
     return outbox_path
 
 
