@@ -1,11 +1,11 @@
 {
-  "generated_at": "2026-07-26T09:11:07.258309Z",
+  "generated_at": "2026-07-26T09:32:57.491403Z",
   "source": {
     "script": "scripts/update_body_index.py",
     "workflow": ".github/workflows/update_body_index.yml"
   },
   "kind": "state",
-  "count": 145,
+  "count": 146,
   "files": [
     {
       "path": "SK/PK/PK-2026-06-14.md",
@@ -103,9 +103,14 @@
       "sha256": "d8600f91d6e6c2cfca00d328072fab7cf5ce9837ee5cc10ea446ad14da2c89ad"
     },
     {
+      "path": "bridge/docs/codex_guidance.md",
+      "size": 3036,
+      "sha256": "13e0b16407ce941662d202f64268170ddf529d856ba374c128518f700c260501"
+    },
+    {
       "path": "bridge/docs/implementation_ledger.md",
-      "size": 52785,
-      "sha256": "67a04dc49c1a599b74c386a818b03eaed01fd81d54634409a0d941d00f53dabc"
+      "size": 53703,
+      "sha256": "6b531d507acd23fe746cdc1f2e91b35f4645eff920e36f603b6ecec64fa7d719"
     },
     {
       "path": "bridge/docs/known_limits.md",
@@ -654,8 +659,8 @@
     },
     {
       "path": "bridge/state_summary/latest.md",
-      "size": 2543,
-      "sha256": "a6284773e2060d3a4ed2868ac436d1438cfcf66459962de9233e4931ca9e9dba"
+      "size": 2542,
+      "sha256": "28e600744d28e4e4248cdebd5b3130ec7cb929dba57d1eb7a665af4618754499"
     },
     {
       "path": "bridge/systemd/bridge-cycle.service",
@@ -699,13 +704,13 @@
     },
     {
       "path": "docs/AGENTS.md",
-      "size": 3031,
-      "sha256": "1b4a4a033768b8fed4728ab8f3a5f31685eb7c7a336308f59bfead3de82ed533"
+      "size": 270,
+      "sha256": "42593b176ab82b52085d1323d59c298712853875fa6ff4b9aa4e7dc3fdbfd02b"
     },
     {
       "path": "docs/index_menu.json",
-      "size": 3862,
-      "sha256": "c7430afd497ac42e6ad5de8f507108f584433d6df7907a1b469b7bf73b4bfd12"
+      "size": 3968,
+      "sha256": "dcd6244213c8d62252c484244d290c225986e6ae8575175b93db0377f5f3d73a"
     },
     {
       "path": "docs/legacy/Prvni_kroky.md",
@@ -724,8 +729,8 @@
     },
     {
       "path": "docs/struktura_body.md",
-      "size": 5680,
-      "sha256": "0b0ca17b51d0d1ef2589fac38c34aa3e154b2c157c59c33a78c52310f5dcceb8"
+      "size": 5881,
+      "sha256": "5f879945b6bbe9446c1c210c4d483998ccc2563e5746b2de7dddf74008f0ed23"
     },
     {
       "path": "navsteva/navsteva.log",
