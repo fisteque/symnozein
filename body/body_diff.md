@@ -5,6 +5,23 @@ Uchovává posledních **50** záznamů.
 
 ---
 
+## 2026-07-26T10:05:39.012811Z
+
+Zdroj změn:
+- skript: `scripts/update_body_index.py`
+- workflow: `.github/workflows/update_body_index.yml`
+
+➕ přidáno: **0**
+- nic
+
+🔄 změněno: **0**
+- nic
+
+❌ odebráno: **1**
+- `bridge/docs/MOST_A_NERVY.md`
+
+---
+
 ## 2026-07-26T10:00:13.042201Z
 
 Zdroj změn:
@@ -836,23 +853,6 @@ Zdroj změn:
 ---
 
 ## 2026-07-20T14:00:21.470750Z
-
-Zdroj změn:
-- skript: `scripts/update_body_index.py`
-- workflow: `.github/workflows/update_body_index.yml`
-
-➕ přidáno: **0**
-- nic
-
-🔄 změněno: **1**
-- `bridge/state_summary/latest.md`
-
-❌ odebráno: **0**
-- nic
-
----
-
-## 2026-07-20T10:00:18.480919Z
 
 Zdroj změn:
 - skript: `scripts/update_body_index.py`
