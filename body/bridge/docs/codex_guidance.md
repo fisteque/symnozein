@@ -69,6 +69,25 @@ Prefer existing local patterns over new abstractions.
 
 Before editing, inspect the current files and git status.
 
+### Automatic Bridge Cycle During Edits
+
+When editing bridge mechanisms, remember that a running bridge cycle can mirror runtime files into the GitHub tape and regenerate `latest.md`.
+
+Stopping manual git commands is not sufficient if an automatic cycle can commit or push the working change.
+
+For read-only analysis, the bridge cycle may keep running.
+
+Before editing bridge scripts, sync scripts, summary generation, agents, workers, systemd units, or any file that the bridge cycle mirrors or uses:
+
+1. Stop the relevant bridge cycle timer/service or automatic publish mechanism.
+2. Confirm no active bridge cycle is currently running.
+3. Make the local change.
+4. Run local syntax/render/tests without publishing.
+5. Inspect the diff.
+6. Resume the cycle or publish only after explicit human approval.
+
+Do not let a working bridge change become a published tape state before it has been consciously reviewed.
+
 When committing or staging, include only the paths required for the task.
 
 Do not include generated indexes, diffs, pycache, runtime logs, lock files, or unrelated dirty state unless explicitly requested.
