@@ -1,11 +1,11 @@
 {
-  "generated_at": "2026-07-26T16:52:33.234820Z",
+  "generated_at": "2026-07-26T17:11:36.844164Z",
   "source": {
     "script": "scripts/update_body_index.py",
     "workflow": ".github/workflows/update_body_index.yml"
   },
   "kind": "state",
-  "count": 149,
+  "count": 150,
   "files": [
     {
       "path": "SK/PK/PK-2026-06-14.md",
@@ -266,6 +266,11 @@
       "path": "bridge/inbox/messages/msg-20260726-codex-read-runtime-agents-root-001.md",
       "size": 713,
       "sha256": "48aa91cb0e10d7f4758acc851dc389c909d8d293498486fe77df89d0a2290c7f"
+    },
+    {
+      "path": "bridge/inbox/messages/msg-20260726-codex-read-runtime-bridge-state-001.md",
+      "size": 1232,
+      "sha256": "8f886e1b076e7c93ebe242ffd96fc4c8253916e13399c5cab8f388e486c53865"
     },
     {
       "path": "bridge/instructions/pc_codex_postman.md",

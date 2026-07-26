@@ -1,11 +1,11 @@
 {
-  "generated_at": "2026-07-26T16:32:37.616326Z",
+  "generated_at": "2026-07-26T16:52:33.234820Z",
   "source": {
     "script": "scripts/update_body_index.py",
     "workflow": ".github/workflows/update_body_index.yml"
   },
   "kind": "state",
-  "count": 148,
+  "count": 149,
   "files": [
     {
       "path": "SK/PK/PK-2026-06-14.md",
@@ -91,6 +91,11 @@
       "path": "SK/dotek_reality.md",
       "size": 2378,
       "sha256": "3d5e89023cbf5b1ffcbf0aae402cdf2564ffcc5ab2c1dca00edbd0e05e35aaba"
+    },
+    {
+      "path": "anchors/ANCHOR-001-dynamicka-kontinuita.md",
+      "size": 1247,
+      "sha256": "248247a27e39b1b9ed96ac9d0455dc7dbadfc5ed2a48a3294f19d87ce3ab048e"
     },
     {
       "path": "bridge/docs/bridge_protocol_v1.md",
