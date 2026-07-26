@@ -1,11 +1,11 @@
 {
-  "generated_at": "2026-07-26T09:32:57.491403Z",
+  "generated_at": "2026-07-26T09:45:09.378435Z",
   "source": {
     "script": "scripts/update_body_index.py",
     "workflow": ".github/workflows/update_body_index.yml"
   },
   "kind": "state",
-  "count": 146,
+  "count": 145,
   "files": [
     {
       "path": "SK/PK/PK-2026-06-14.md",
@@ -109,8 +109,8 @@
     },
     {
       "path": "bridge/docs/implementation_ledger.md",
-      "size": 53703,
-      "sha256": "6b531d507acd23fe746cdc1f2e91b35f4645eff920e36f603b6ecec64fa7d719"
+      "size": 53888,
+      "sha256": "eeffdf58e3042419c79ffc54a66d147a5caaa03aa49bfe2ce701d369244f1e73"
     },
     {
       "path": "bridge/docs/known_limits.md",
@@ -659,8 +659,8 @@
     },
     {
       "path": "bridge/state_summary/latest.md",
-      "size": 2542,
-      "sha256": "28e600744d28e4e4248cdebd5b3130ec7cb929dba57d1eb7a665af4618754499"
+      "size": 2544,
+      "sha256": "233803a19dde7e783d8fec7e895d22017b0042d9da431c29cdf5081d634967c6"
     },
     {
       "path": "bridge/systemd/bridge-cycle.service",
@@ -701,11 +701,6 @@
       "path": "bridge/systemd/noema-body-pulse.timer",
       "size": 233,
       "sha256": "920986605948e5a848a89d977e9cc2ac8dbdad63e35074d995698654a71f4a21"
-    },
-    {
-      "path": "docs/AGENTS.md",
-      "size": 270,
-      "sha256": "42593b176ab82b52085d1323d59c298712853875fa6ff4b9aa4e7dc3fdbfd02b"
     },
     {
       "path": "docs/index_menu.json",
