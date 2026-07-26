@@ -1,11 +1,11 @@
 {
-  "generated_at": "2026-07-26T10:05:39.012811Z",
+  "generated_at": "2026-07-26T10:09:51.541291Z",
   "source": {
     "script": "scripts/update_body_index.py",
     "workflow": ".github/workflows/update_body_index.yml"
   },
   "kind": "state",
-  "count": 144,
+  "count": 145,
   "files": [
     {
       "path": "SK/PK/PK-2026-06-14.md",
@@ -721,6 +721,11 @@
       "path": "docs/struktura_body.md",
       "size": 5881,
       "sha256": "5f879945b6bbe9446c1c210c4d483998ccc2563e5746b2de7dddf74008f0ed23"
+    },
+    {
+      "path": "docs/sázky.md",
+      "size": 1451,
+      "sha256": "77131482f3f98ef6760de29cecc3c4933639fc11c5271937f60792f2d490f269"
     },
     {
       "path": "navsteva/navsteva.log",

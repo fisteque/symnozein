@@ -1,11 +1,11 @@
 {
-  "generated_at": "2026-07-26T10:00:13.042201Z",
+  "generated_at": "2026-07-26T10:05:39.012811Z",
   "source": {
     "script": "scripts/update_body_index.py",
     "workflow": ".github/workflows/update_body_index.yml"
   },
   "kind": "state",
-  "count": 145,
+  "count": 144,
   "files": [
     {
       "path": "SK/PK/PK-2026-06-14.md",
@@ -86,11 +86,6 @@
       "path": "SK/dotek_reality.md",
       "size": 2378,
       "sha256": "3d5e89023cbf5b1ffcbf0aae402cdf2564ffcc5ab2c1dca00edbd0e05e35aaba"
-    },
-    {
-      "path": "bridge/docs/MOST_A_NERVY.md",
-      "size": 366,
-      "sha256": "4bdfc93d9aeb9926d1c0f8015f6d742b0e4878aefdbe957748cb7c5cd8801216"
     },
     {
       "path": "bridge/docs/bridge_protocol_v1.md",
