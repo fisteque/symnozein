@@ -1382,3 +1382,45 @@ ee4db0b Sync RPi bridge outbound state
 e882369 Sync RPi bridge outbound state
 ```
 
+
+### Runtime Script Path And Agent Outbox Alignment
+
+Verified that runtime scripts live under:
+
+```text
+/home/fiste/Noema/bridge/scripts/
+```
+
+This matches the systemd `ExecStart=` paths in the bridge, watchdog, Codex
+autoreply, and body pulse unit files. The accidental `bridge/systemd/scripts/`
+layout is no longer present.
+
+Aligned `bridge_agent_v2.py` with the runtime outbox model. The bridge agent now
+writes ACKs, task results, errors, and body state event messages to:
+
+```text
+/home/fiste/Noema/bridge/outbox/messages/
+```
+
+Outbound sync remains responsible for publishing those runtime outbox messages to
+GitHub tape under:
+
+```text
+body/bridge/outbox/messages/
+```
+
+Changed:
+
+- `bridge/scripts/bridge_agent_v2.py`
+- `body/bridge/scripts/bridge_agent_v2.py`
+- `body/bridge/docs/bridge_scripts.md`
+- `body/bridge/docs/implementation_ledger.md`
+
+Verified:
+
+- `bridge/scripts/` exists;
+- `bridge/systemd/scripts/` is absent;
+- runtime and mirrored `bridge_agent_v2.py` copies match;
+- both agent copies parse successfully with `ast.parse`;
+- `bridge_scripts.md` states that the agent writes to runtime outbox and does
+  not write directly to `body/bridge/outbox/messages/`.
