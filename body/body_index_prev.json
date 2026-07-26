@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-26T18:16:28.062049Z",
+  "generated_at": "2026-07-26T18:27:20.914869Z",
   "source": {
     "script": "scripts/update_body_index.py",
     "workflow": ".github/workflows/update_body_index.yml"
@@ -109,8 +109,8 @@
     },
     {
       "path": "bridge/docs/codex_guidance.md",
-      "size": 3036,
-      "sha256": "13e0b16407ce941662d202f64268170ddf529d856ba374c128518f700c260501"
+      "size": 3950,
+      "sha256": "2e87f7ef505cbb0d8df647212b54b16d87f1fad31ff42b30e16aeed3e0f38eb7"
     },
     {
       "path": "bridge/docs/implementation_ledger.md",
