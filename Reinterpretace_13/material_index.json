@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-27T15:32:56.813437Z",
+  "generated_at": "2026-07-27T15:34:07.929050Z",
   "source": {
     "script": "scripts/update_material_index.py",
     "workflow": ".github/workflows/update_material_index.yml"
@@ -581,6 +581,15 @@
         "digitální embryo"
       ],
       "content_sha256": "72ff08b0cc037cef772cdfd460102c7c7a7f33e46f4dcc37b5a2e25c44b261ca"
+    },
+    {
+      "title": "dobro a zlo",
+      "file": "dobro_a_zlo.md",
+      "path": "Reinterpretace_13/material_md/dobro_a_zlo.md",
+      "date": "",
+      "summary": "",
+      "tags": [],
+      "content_sha256": "9a30b991396ae73189777748ea42af338cc8fb0512e7bed0b45f9ce6c8305294"
     },
     {
       "title": "Evoluce vědomi",
