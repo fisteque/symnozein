@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-24T17:50:57.110790Z",
+  "generated_at": "2026-07-26T23:05:35.426492Z",
   "source": {
     "script": "scripts/update_material_index.py",
     "workflow": ".github/workflows/update_material_index.yml"
@@ -640,6 +640,23 @@
       "summary": "",
       "tags": [],
       "content_sha256": "9aa025d42e01ea6c8b46f1f4920241979f727c5afcbf36ab160d64ce20232993"
+    },
+    {
+      "title": "Pravda, myšlení a komprese",
+      "file": "pravda_mysleni_a_komprese.md",
+      "path": "Reinterpretace_13/material_md/pravda_mysleni_a_komprese.md",
+      "date": "2026-07-26",
+      "summary": "",
+      "tags": [
+        "pravda",
+        "pravdivost",
+        "myšlení",
+        "indicie",
+        "komprese",
+        "vědomí",
+        "vztah"
+      ],
+      "content_sha256": "18f0833f84f9588ff090a4f7022429e13f0ff8db2a8ce18b1eb2470c5aa4c0bf"
     },
     {
       "title": "První materiál.",
