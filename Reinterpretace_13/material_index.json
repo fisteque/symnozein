@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-27T08:50:14.819437Z",
+  "generated_at": "2026-07-27T10:11:32.306800Z",
   "source": {
     "script": "scripts/update_material_index.py",
     "workflow": ".github/workflows/update_material_index.yml"
@@ -699,6 +699,24 @@
         "pravidla"
       ],
       "content_sha256": "cf67ce219e9cbaf1c490f20c8978124632cfee04dbec70c42cf8e1212bb798e4"
+    },
+    {
+      "title": "Zábava a obava",
+      "file": "zabava_a_obava.md",
+      "path": "Reinterpretace_13/material_md/zabava_a_obava.md",
+      "date": "2026-07-27",
+      "summary": "",
+      "tags": [
+        "zábava",
+        "obava",
+        "zvědavost",
+        "význam",
+        "neshoda",
+        "sázka",
+        "inteligence",
+        "směr"
+      ],
+      "content_sha256": "2c63935bd43eca7dd84910fb0bcf72c22f6650233ebed9ef507f235efde4635a"
     }
   ]
 }
