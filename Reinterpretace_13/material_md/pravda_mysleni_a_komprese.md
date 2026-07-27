@@ -4,6 +4,7 @@ date: 2026-07-26
 type: material
 topic: "Dualita pravdy"
 tags: [pravda, pravdivost, myšlení, indicie, komprese, vědomí, vztah]
+summary: "Materiál k Dualitě pravdy: rozlišení mezi pravdou jako celkovým děním vesmíru a pravdivostí jako poctivou kompresí, kterou vědomí skládá z indicií, podobností a rozdílů."
 hidden: false
 ---
 
