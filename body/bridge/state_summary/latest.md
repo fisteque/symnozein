@@ -1,42 +1,42 @@
 # Bridge State Summary
 
-- Generated at: `2026-07-27T22:00:02.219382Z`
+- Generated at: `2026-07-28T02:00:03.428775Z`
 - Body awake: `True`
 - Body status: `normal_operation`
 
 ## Body Heartbeat
 
-- Body last heartbeat: `2026-07-27T21:59:52.190524+00:00`
-- Heartbeat count: `465240`
-- Heartbeat last gap seconds: `10.008863`
+- Body last heartbeat: `2026-07-28T01:59:54.696497+00:00`
+- Heartbeat count: `466675`
+- Heartbeat last gap seconds: `10.007351`
 - Heartbeat max gap seconds: `88.126733`
 - Heartbeat service started at: `Thu 2026-06-04 00:52:02 CEST`
-- Heartbeat uptime seconds: `4662479`
+- Heartbeat uptime seconds: `4676880`
 - Heartbeat restart count: `0`
 - Heartbeat uptime source: `systemd`
 - Heartbeat log starts count: `17`
 - Heartbeat log latest start: `2026-06-03T22:52:02.965137Z`
 - Heartbeat log max start gap seconds: `675295`
-- Last heartbeat gap seconds: `10`
-- Watchdog last heartbeat age seconds: `9.259752`
+- Last heartbeat gap seconds: `8`
+- Watchdog last heartbeat age seconds: `8.009902`
 - Watchdog heartbeat timeout threshold seconds: `45`
 - Watchdog heartbeat timeout count: `0`
 - Watchdog heartbeat timeout required count: `2`
-- Body watchdog last check: `2026-07-27T22:00:01.450294+00:00`
+- Body watchdog last check: `2026-07-28T02:00:02.706415+00:00`
 
 ## Body Health
 
-- Health generated at: `2026-07-27T21:51:30.795724Z`
-- CPU temperature C: `44.65`
-- Load average 1m / 5m / 15m: `0.09 / 0.13 / 0.07`
-- RAM used percent: `12.23`
+- Health generated at: `2026-07-28T01:51:52.094021Z`
+- CPU temperature C: `44.1`
+- Load average 1m / 5m / 15m: `0.11 / 0.12 / 0.04`
+- RAM used percent: `12.17`
 - Swap used percent: `0.0`
-- Root disk used percent: `8.88`
+- Root disk used percent: `8.89`
 
 ## Bridge Sync
 
-- Last inbound sync: `2026-07-27T21:59:42.194527Z`
-- Last outbound sync: `2026-07-27T21:59:43.065206Z`
+- Last inbound sync: `2026-07-28T01:59:53.466982Z`
+- Last outbound sync: `2026-07-28T01:59:54.351004Z`
 - Last outbound sync status: `latest_only_skipped`
 - Last outbound commit: `1e23c9b6`
 - Summary snapshot phase: `pre-outbound`
@@ -64,15 +64,15 @@
 ## Pulse
 
 - Current pulse status: `running`
-- Current pulse started: `2026-07-27T22:00:01.585346Z`
-- Last body pulse: `2026-07-27T18:00:05.100938Z`
-- Last pulse commit: `d4eecb21`
-- Next scheduled pulse: `2026-07-28T04:00:00+02:00`
+- Current pulse started: `2026-07-28T02:00:02.823715Z`
+- Last body pulse: `2026-07-27T22:00:03.918312Z`
+- Last pulse commit: `51d36d1a`
+- Next scheduled pulse: `2026-07-28T08:00:00+02:00`
 
 ## Source Freshness
 
-- Body state: `ok`; path: `state/body_state.json`; timestamp: `2026-07-27T22:00:01.450294Z`; age seconds: `0`
-- Body health: `ok`; path: `state/body_health.json`; timestamp: `2026-07-27T21:51:30.795724Z`; age seconds: `511`
-- Processed messages: `ok`; path: `bridge/state/processed_messages.json`; timestamp: `2026-07-26T17:11:39.068722Z`; age seconds: `103703`
-- Bridge sync state: `ok`; path: `bridge/state/bridge_sync_state.json`; timestamp: `2026-07-27T21:59:43.065206Z`; age seconds: `19`
-- Body pulse state: `ok`; path: `bridge/state/body_pulse_state.json`; timestamp: `2026-07-27T22:00:02.164635Z`; age seconds: `0`
+- Body state: `ok`; path: `state/body_state.json`; timestamp: `2026-07-28T02:00:02.706415Z`; age seconds: `0`
+- Body health: `ok`; path: `state/body_health.json`; timestamp: `2026-07-28T01:51:52.094021Z`; age seconds: `491`
+- Processed messages: `ok`; path: `bridge/state/processed_messages.json`; timestamp: `2026-07-26T17:11:39.068722Z`; age seconds: `118104`
+- Bridge sync state: `ok`; path: `bridge/state/bridge_sync_state.json`; timestamp: `2026-07-28T01:59:54.351004Z`; age seconds: `9`
+- Body pulse state: `ok`; path: `bridge/state/body_pulse_state.json`; timestamp: `2026-07-28T02:00:03.372888Z`; age seconds: `0`
