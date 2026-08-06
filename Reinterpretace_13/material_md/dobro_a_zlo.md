@@ -1,6 +1,6 @@
 # Dobro, zlo a význam chápání
 
-Dobro je vše, co tvoří. Zlo je vše, co ničí.
+Tvoření a ničení jsou děje. Dobro a zlo jsou jejich významy pro strategii pokračování určitého systému.
 
 Dobro zde neznamená prostě „to, co chci“. Chtění samo o sobě nestačí, protože může být slepé, úzké nebo ničivé. Dobro je spíš to, co umožňuje vznik, růst, vztah a pokračování smysluplného dění. Zlo není prostě „to, co nechci“, ale to, co tyto možnosti uzavírá, ničí nebo obrací proti sobě.
 
