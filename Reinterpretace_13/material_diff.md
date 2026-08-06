@@ -5,6 +5,23 @@ Uchovává posledních **50** záznamů.
 
 ---
 
+## 2026-08-06T22:07:34.560453Z
+
+Zdroj změn:
+- skript: `scripts/update_material_index.py`
+- workflow: `.github/workflows/update_material_index.yml`
+
+➕ přidáno: **1**
+- `Invarianty_a_dualita.md`
+
+🔄 změněno: **1**
+- `dobro_a_zlo.md`
+
+❌ odebráno: **0**
+- nic
+
+---
+
 ## 2026-07-27T15:34:07.929050Z
 
 Zdroj změn:
@@ -833,23 +850,6 @@ Zdroj změn:
 
 ➕ přidáno: **1**
 - `1.6_Vira.md`
-
-🔄 změněno: **0**
-- nic
-
-❌ odebráno: **0**
-- nic
-
----
-
-## 2026-04-05T13:51:15.921341Z
-
-Zdroj změn:
-- skript: `scripts/update_material_index.py`
-- workflow: `.github/workflows/update_material_index.yml`
-
-➕ přidáno: **0**
-- nic
 
 🔄 změněno: **0**
 - nic
