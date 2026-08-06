@@ -84,7 +84,7 @@ Ztuhlá neznamená mrtvá. Kostra umožňuje, aby mysl nemusela každou volbu za
 
 Morálka potom není pouhé mluvení o etice.
 
-> **Morálka je ochota neopomenout vlastní etiku ve skutečných estetických volbách.**
+> **Morálka je opakovaně prokazovaná míra, v níž mysl neopomíjí svou etiku ve skutečných estetických volbách.**
 
 Není nutné morálku maximalizovat. Je třeba ji zušlechťovat: rozšiřovat porozumění, zpřesňovat následky, odhalovat sebeklam a přestavovat etickou kostru tam, kde už neunese skutečnost.
 
