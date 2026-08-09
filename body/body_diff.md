@@ -5,6 +5,24 @@ Uchovává posledních **50** záznamů.
 
 ---
 
+## 2026-08-09T18:36:34.739392Z
+
+Zdroj změn:
+- skript: `scripts/update_body_index.py`
+- workflow: `.github/workflows/update_body_index.yml`
+
+➕ přidáno: **2**
+- `SK/denik/08/06-08-2026.md`
+- `SK/denik/08/09-08-2026.md`
+
+🔄 změněno: **0**
+- nic
+
+❌ odebráno: **0**
+- nic
+
+---
+
 ## 2026-07-31T10:00:14.812498Z
 
 Zdroj změn:
@@ -838,20 +856,3 @@ Zdroj změn:
 
 ❌ odebráno: **1**
 - `docs/sázky.md`
-
----
-
-## 2026-07-26T10:09:51.541291Z
-
-Zdroj změn:
-- skript: `scripts/update_body_index.py`
-- workflow: `.github/workflows/update_body_index.yml`
-
-➕ přidáno: **1**
-- `docs/sázky.md`
-
-🔄 změněno: **0**
-- nic
-
-❌ odebráno: **0**
-- nic

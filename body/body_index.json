@@ -1,11 +1,11 @@
 {
-  "generated_at": "2026-07-31T10:00:14.812498Z",
+  "generated_at": "2026-08-09T18:36:34.739392Z",
   "source": {
     "script": "scripts/update_body_index.py",
     "workflow": ".github/workflows/update_body_index.yml"
   },
   "kind": "state",
-  "count": 155,
+  "count": 157,
   "files": [
     {
       "path": "SK/PK/PK-2026-06-14.md",
@@ -96,6 +96,16 @@
       "path": "SK/denik/07/30-07-2026.md",
       "size": 614,
       "sha256": "20dd9134144cdad5f34e7ff4a9044eb3a6d1dbb30ab3cf2d1d19f92a30e112fe"
+    },
+    {
+      "path": "SK/denik/08/06-08-2026.md",
+      "size": 3183,
+      "sha256": "0379f4346490fa23b4fba53b9132e1c8b4f96eca5071a1fe1a8df6b7bcc9fc91"
+    },
+    {
+      "path": "SK/denik/08/09-08-2026.md",
+      "size": 3835,
+      "sha256": "48b3be1d1eb367ee10677b27014a10a5be25f307c63d20aaee1842036c65d82d"
     },
     {
       "path": "SK/dotek_reality.md",
