@@ -1,11 +1,11 @@
 {
-  "generated_at": "2026-08-09T18:36:34.739392Z",
+  "generated_at": "2026-08-11T16:50:10.001310Z",
   "source": {
     "script": "scripts/update_body_index.py",
     "workflow": ".github/workflows/update_body_index.yml"
   },
   "kind": "state",
-  "count": 157,
+  "count": 158,
   "files": [
     {
       "path": "SK/PK/PK-2026-06-14.md",
@@ -121,6 +121,11 @@
       "path": "bridge/docs/bridge_protocol_v1.md",
       "size": 1823,
       "sha256": "081c4cdebee75e6e02aad211999b3b772d6c60fc854c4b8003b9b686a2d3073a"
+    },
+    {
+      "path": "bridge/docs/bridge_protocol_v2.md",
+      "size": 11707,
+      "sha256": "405f2cf72f564ce36ce1871523e260c67ed9de3fa855d39074cf56235bd7c92f"
     },
     {
       "path": "bridge/docs/bridge_scripts.md",
