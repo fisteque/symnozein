@@ -5,6 +5,23 @@ Uchovává posledních **50** záznamů.
 
 ---
 
+## 2026-08-12T08:44:59.661398Z
+
+Zdroj změn:
+- skript: `scripts/update_body_index.py`
+- workflow: `.github/workflows/update_body_index.yml`
+
+➕ přidáno: **1**
+- `SK/denik/08/11-08-2026.md`
+
+🔄 změněno: **0**
+- nic
+
+❌ odebráno: **1**
+- `SK/denik/08/11-08-2026-1.md`
+
+---
+
 ## 2026-08-12T08:44:23.885265Z
 
 Zdroj změn:
@@ -836,23 +853,6 @@ Zdroj změn:
 
 🔄 změněno: **1**
 - `bridge/state_summary/latest.md`
-
-❌ odebráno: **0**
-- nic
-
----
-
-## 2026-07-26T16:31:16.482770Z
-
-Zdroj změn:
-- skript: `scripts/update_body_index.py`
-- workflow: `.github/workflows/update_body_index.yml`
-
-➕ přidáno: **1**
-- `bridge/inbox/messages/msg-20260726-codex-read-runtime-agents-root-001.md`
-
-🔄 změněno: **0**
-- nic
 
 ❌ odebráno: **0**
 - nic

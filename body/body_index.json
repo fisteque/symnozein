@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-12T08:44:23.885265Z",
+  "generated_at": "2026-08-12T08:44:59.661398Z",
   "source": {
     "script": "scripts/update_body_index.py",
     "workflow": ".github/workflows/update_body_index.yml"
@@ -108,7 +108,7 @@
       "sha256": "48b3be1d1eb367ee10677b27014a10a5be25f307c63d20aaee1842036c65d82d"
     },
     {
-      "path": "SK/denik/08/11-08-2026-1.md",
+      "path": "SK/denik/08/11-08-2026.md",
       "size": 1833,
       "sha256": "0781fff659bed091d2842a1edfcc37d0c78e8957f7a838faff7f5ed245ae6046"
     },
