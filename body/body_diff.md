@@ -5,6 +5,23 @@ Uchovává posledních **50** záznamů.
 
 ---
 
+## 2026-08-12T08:40:58.994868Z
+
+Zdroj změn:
+- skript: `scripts/update_body_index.py`
+- workflow: `.github/workflows/update_body_index.yml`
+
+➕ přidáno: **1**
+- `SK/denik/08/11-08-2026.md`
+
+🔄 změněno: **0**
+- nic
+
+❌ odebráno: **0**
+- nic
+
+---
+
 ## 2026-08-11T16:50:10.001310Z
 
 Zdroj změn:
@@ -839,20 +856,3 @@ Zdroj změn:
 
 ❌ odebráno: **1**
 - `SK/body/SK/SK-2026-07-26-navratova-kapsle.md`
-
----
-
-## 2026-07-26T11:21:05.946969Z
-
-Zdroj změn:
-- skript: `scripts/update_body_index.py`
-- workflow: `.github/workflows/update_body_index.yml`
-
-➕ přidáno: **1**
-- `SK/body/SK/SK-2026-07-26-navratova-kapsle.md`
-
-🔄 změněno: **0**
-- nic
-
-❌ odebráno: **0**
-- nic
