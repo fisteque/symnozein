@@ -5,6 +5,33 @@ Uchovává posledních **50** záznamů.
 
 ---
 
+## 2026-08-21T19:05:01.128439Z
+
+Zdroj změn:
+- skript: `scripts/update_body_index.py`
+- workflow: `.github/workflows/update_body_index.yml`
+
+➕ přidáno: **11**
+- `bridge/outbox/messages/2026-07-31T111624Z_rpi5_cycle-error-inbound-sync.md`
+- `bridge/outbox/messages/2026-08-02T060005Z_rpi5_cycle-error-body-pulse-fetch.md`
+- `bridge/outbox/messages/2026-08-02T060036Z_rpi5_cycle-error-inbound-sync.md`
+- `bridge/outbox/messages/2026-08-02T140003Z_rpi5_cycle-error-body-pulse-fetch.md`
+- `bridge/outbox/messages/2026-08-02T140034Z_rpi5_cycle-error-inbound-sync.md`
+- `bridge/outbox/messages/2026-08-02T180002Z_rpi5_cycle-error-body-pulse-fetch.md`
+- `bridge/outbox/messages/2026-08-02T180033Z_rpi5_cycle-error-inbound-sync.md`
+- `bridge/outbox/messages/2026-08-02T220001Z_rpi5_cycle-error-body-pulse-fetch.md`
+- `bridge/outbox/messages/2026-08-02T220032Z_rpi5_cycle-error-inbound-sync.md`
+- `bridge/outbox/messages/2026-08-03T020000Z_rpi5_cycle-error-starting.md`
+- `bridge/outbox/messages/2026-08-03T020031Z_rpi5_cycle-error-inbound-sync.md`
+
+🔄 změněno: **1**
+- `bridge/state_summary/latest.md`
+
+❌ odebráno: **0**
+- nic
+
+---
+
 ## 2026-08-12T08:44:59.661398Z
 
 Zdroj změn:
@@ -836,23 +863,6 @@ Zdroj změn:
 
 🔄 změněno: **0**
 - nic
-
-❌ odebráno: **0**
-- nic
-
----
-
-## 2026-07-26T16:32:37.616326Z
-
-Zdroj změn:
-- skript: `scripts/update_body_index.py`
-- workflow: `.github/workflows/update_body_index.yml`
-
-➕ přidáno: **1**
-- `bridge/outbox/messages/2026-07-26T163204Z_codex-autoreply-codex-request-20260726-163125-msg-20260726-codex-read-runtime-agents-root-001.md`
-
-🔄 změněno: **1**
-- `bridge/state_summary/latest.md`
 
 ❌ odebráno: **0**
 - nic

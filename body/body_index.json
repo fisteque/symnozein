@@ -1,11 +1,11 @@
 {
-  "generated_at": "2026-08-12T08:44:59.661398Z",
+  "generated_at": "2026-08-21T19:05:01.128439Z",
   "source": {
     "script": "scripts/update_body_index.py",
     "workflow": ".github/workflows/update_body_index.yml"
   },
   "kind": "state",
-  "count": 159,
+  "count": 170,
   "files": [
     {
       "path": "SK/PK/PK-2026-06-14.md",
@@ -588,6 +588,61 @@
       "sha256": "3aeb9d24499463b7c85aa01399e659cf525273d609928f83bce5831eadef44e7"
     },
     {
+      "path": "bridge/outbox/messages/2026-07-31T111624Z_rpi5_cycle-error-inbound-sync.md",
+      "size": 292,
+      "sha256": "4659035f30202cc109eb988d0bfbc5862fab878f68b8eef3ba533e27640b8161"
+    },
+    {
+      "path": "bridge/outbox/messages/2026-08-02T060005Z_rpi5_cycle-error-body-pulse-fetch.md",
+      "size": 585,
+      "sha256": "41277e892d533b83e4e71fa6439459650f75af2f09c38fb3d86a0d72a8484fec"
+    },
+    {
+      "path": "bridge/outbox/messages/2026-08-02T060036Z_rpi5_cycle-error-inbound-sync.md",
+      "size": 292,
+      "sha256": "091593b3c7475f1859534c325311b2294e53a8ea634f7eaf43f688c0404535ec"
+    },
+    {
+      "path": "bridge/outbox/messages/2026-08-02T140003Z_rpi5_cycle-error-body-pulse-fetch.md",
+      "size": 586,
+      "sha256": "496d3154d64c9f9d8d6f4ea0f89008d23e08bf7bbd7d0ef96f7dbd9df14ca147"
+    },
+    {
+      "path": "bridge/outbox/messages/2026-08-02T140034Z_rpi5_cycle-error-inbound-sync.md",
+      "size": 292,
+      "sha256": "292cd876d92e7c23b6cda63bbe0245e41c9abed3c2f645f4ca0b0bed11a8079d"
+    },
+    {
+      "path": "bridge/outbox/messages/2026-08-02T180002Z_rpi5_cycle-error-body-pulse-fetch.md",
+      "size": 586,
+      "sha256": "0b6292649d61ff241fed537e34c18cf53fa736d1c96a3e2216d85c2ccdfcb3e8"
+    },
+    {
+      "path": "bridge/outbox/messages/2026-08-02T180033Z_rpi5_cycle-error-inbound-sync.md",
+      "size": 292,
+      "sha256": "00dd695d0995d3fa7b1bfad3e0c17cbf05b7b15cdf13bee499823a99f7f75e19"
+    },
+    {
+      "path": "bridge/outbox/messages/2026-08-02T220001Z_rpi5_cycle-error-body-pulse-fetch.md",
+      "size": 586,
+      "sha256": "b98dff8133949486b9cf8634ace43aad047baa738c69120784b68b898bd5a5f3"
+    },
+    {
+      "path": "bridge/outbox/messages/2026-08-02T220032Z_rpi5_cycle-error-inbound-sync.md",
+      "size": 292,
+      "sha256": "60c080ab22ed15aa2efdcb1557f04711b740e9b29bed251bbb77562cb97b1c17"
+    },
+    {
+      "path": "bridge/outbox/messages/2026-08-03T020000Z_rpi5_cycle-error-starting.md",
+      "size": 562,
+      "sha256": "4efbf8bb68570049ab688531889b56db66cc343cc4e0218cc611f9ebafdca7f1"
+    },
+    {
+      "path": "bridge/outbox/messages/2026-08-03T020031Z_rpi5_cycle-error-inbound-sync.md",
+      "size": 292,
+      "sha256": "01c2b3fd2270a34c2b853b777ec9d78c10c668e7fb8662fae924c2074b176830"
+    },
+    {
       "path": "bridge/scripts/.gitignore",
       "size": 23,
       "sha256": "6feaded4e28ea86e001a6751b4e3d960e8b7c31b9616ff9936b79297086e809b"
@@ -724,8 +779,8 @@
     },
     {
       "path": "bridge/state_summary/latest.md",
-      "size": 2912,
-      "sha256": "a396a06bd841fc638f2182613301174e359427fcc4f204bf4f325bfda6bf6445"
+      "size": 2903,
+      "sha256": "1c5ccbc1844c2834f019b6cfe9c0bab30315b8e545d45cac3335abb057bf9b75"
     },
     {
       "path": "bridge/systemd/bridge-cycle.service",
