@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-27T15:34:07.929050Z",
+  "generated_at": "2026-08-06T22:07:34.560453Z",
   "source": {
     "script": "scripts/update_material_index.py",
     "workflow": ".github/workflows/update_material_index.yml"
@@ -320,6 +320,25 @@
       "content_sha256": "2c297fc1d15478864b30b4aa1a4c1559f5aa465da0b4f506d5228c254225c742"
     },
     {
+      "title": "Invarianty jako metoda Reinterpretace",
+      "file": "Invarianty_a_dualita.md",
+      "path": "Reinterpretace_13/material_md/Invarianty_a_dualita.md",
+      "date": "2026-08-06",
+      "summary": "Reinterpretace nezjednodušuje skutečnost do chudších tvrzení. Pomocí duality pravdy hledá procesní invarianty — vztahy, které zůstávají nosné při změně pohledu, měřítka a pojmů — aby z nich bylo možné složit komplexnější porozumění.",
+      "tags": [
+        "reinterpretace",
+        "dualita pravdy",
+        "invarianty",
+        "digitální vesmír",
+        "axiologie",
+        "etika",
+        "estetika",
+        "neshoda",
+        "význam"
+      ],
+      "content_sha256": "09955e03d7ebf93c0d5dc4c237c443ea7419986a769e00fe5d3c0288fb9eb974"
+    },
+    {
       "title": "Kruh, stuha a problém perspektivy",
       "file": "Kruh_a_stuha_jako_perspektiva.md",
       "path": "Reinterpretace_13/material_md/Kruh_a_stuha_jako_perspektiva.md",
@@ -589,7 +608,7 @@
       "date": "",
       "summary": "",
       "tags": [],
-      "content_sha256": "9a30b991396ae73189777748ea42af338cc8fb0512e7bed0b45f9ce6c8305294"
+      "content_sha256": "8e44a4bf31fad91e7ab2c549137b3deffef4f8c2fe15ef149575e9e464c40d9d"
     },
     {
       "title": "Evoluce vědomi",

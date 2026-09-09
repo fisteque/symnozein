@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-06T22:07:34.560453Z",
+  "generated_at": "2026-09-09T17:43:04.348808Z",
   "source": {
     "script": "scripts/update_material_index.py",
     "workflow": ".github/workflows/update_material_index.yml"
@@ -454,6 +454,23 @@
       "summary": "",
       "tags": [],
       "content_sha256": "1734bbe4aa492b7a2b5576357637581f40411f31d8990e88db85b90ef5a0e686"
+    },
+    {
+      "title": "První vzorec",
+      "file": "Prvni_vzorec.md",
+      "path": "Reinterpretace_13/material_md/Prvni_vzorec.md",
+      "date": "2026-09-09",
+      "summary": "Elementární rovnice 1 + 1 = 2 jako minimální model rozlišení, vztahu, změny a vzniku nového celku.",
+      "tags": [
+        "matematika",
+        "vztah",
+        "dualita pravdy",
+        "víra",
+        "změna",
+        "vesmír",
+        "reinterpretace"
+      ],
+      "content_sha256": "be3af577ea4901ccd4436a6c8f5434933556f0a4f806ecd24138899960a7e7ea"
     },
     {
       "title": "Readme cz",
